@@ -1,3 +1,3 @@
-# ctclsite-v3
+# ctclsite-rust
 
-Version 3.0 (and higher) of the [CrazyblocksTechnologies Computer Laboratories website](crazyblockstech.com) is going to be written in the Rust programming language instead of Python. 
+This is the upcoming Rust version of the [CrazyblocksTechnologies Computer Laboratories website](crazyblockstech.com) planned to replace the current Python-based version.
