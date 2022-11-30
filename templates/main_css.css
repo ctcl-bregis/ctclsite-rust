@@ -1,0 +1,76 @@
+body {
+    background-color: #FFFFFF;
+    font-family: "arial";
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #009900;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    background-color: #009900;
+    border: 2pt solid;
+    border-color: #009900;
+    color: #FFFFFF;
+    padding: 6pt 8pt;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10pt;
+    cursor: pointer;
+}
+
+.navbar .active {
+    background-color: #FFFFFF;
+    color: #009900;
+}
+
+h1 {
+    color: #000000;
+}
+
+h6 {
+    text-align: center;
+}
+
+a {
+    color: #009900;
+    text-decoration: none;
+}
+
+p {
+    font-size: 12pt;
+}
+
+::selection {
+    background-color: #009900;
+    color: #FFFFFF;
+}
+
+::-moz-selection {
+    background-color: #009900;
+    color: #FFFFFF;
+}
+
+::-o-selection {
+    background-color: #009900;
+    color: #FFFFFF;
+}
+
+::-ms-selection {
+    background-color: #009900;
+    color: #FFFFFF;
+}
+
+::-webkit-selection {
+    background-color: #009900;
+    color: #FFFFFF;
+}
