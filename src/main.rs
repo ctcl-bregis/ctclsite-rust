@@ -29,20 +29,6 @@ async fn root() -> Result<HttpResponse, Error> {
     }
 }
 
-#[get("/")]
-async fn root() -> Result<HttpResponse, Error> {
-    let mut context = Context::new();
-    let title = String::from("CTCL Website");
-    context.insert("title", &title);
-    match TEMPLATES.render("main_content.html", &context) {
-        Ok(body) => Ok(HttpResponse::Ok().body(body)),
-        Err(err) => {
-            eprintln!("## Tera error: {}", err);
-            Err(error::ErrorInternalServerError(err))
-        },
-    }
-}
-
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
