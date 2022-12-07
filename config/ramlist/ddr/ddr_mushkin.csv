@@ -1,0 +1,28 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+PC2700,DIMM,Unbuffered,non-ECC,,,,,PC2700,2-3-3,,Winbond,,Winbond CH-6,N/A,,,"Non Level X, rated 2-3-3, Promo-Build)",https://forums.extremeoverclocking.com/showthread.php?t=91533 extremeoverclocking.com
+PC3200,DIMM,Unbuffered,non-ECC,,,,,PC3200,CL2.5,,Winbond or Samsung,,"Winbond BH-5, Samsung TCB3",N/A,,,"Non Level X, non Blue, non Green Series",https://forums.extremeoverclocking.com/showthread.php?t=91533 extremeoverclocking.com
+PC3200,DIMM,Unbuffered,non-ECC,,,,,PC3200,2-2-2,,Winbond,,Winbond BH-5,N/A,,,"Non Level X, rated 2-2-2, Promo-Build",https://forums.extremeoverclocking.com/showthread.php?t=91533 extremeoverclocking.com
+PC3200 Level I,DIMM,Unbuffered,non-ECC,,,,,PC3200,2-3-2,,Winbond,,Winbond CH-5,N/A,,,,https://forums.extremeoverclocking.com/showthread.php?t=91533 extremeoverclocking.com
+PC3200 Level II,DIMM,Unbuffered,non-ECC,,,,,PC3200,2-2-2,,Winbond,,Winbond BH-5 or BH-6,N/A,,,,https://forums.extremeoverclocking.com/showthread.php?t=91533 extremeoverclocking.com
+PC3200 Special,DIMM,Unbuffered,non-ECC,,,,,PC3200,2-2-2,,Winbond,,Winbond BH-6,N/A,,,,https://forums.extremeoverclocking.com/showthread.php?t=91533 extremeoverclocking.com
+PC3200 Level II V2,DIMM,Unbuffered,non-ECC,,,,,PC3200,2-2-2,,Samsung,,Samsung TCCD,N/A,,,,https://forums.extremeoverclocking.com/showthread.php?t=91533 extremeoverclocking.com
+PC3500 Level I,DIMM,Unbuffered,non-ECC,,,,,PC3500,2-3-3,,Winbond,,Winbond CH-5,N/A,,,,https://forums.extremeoverclocking.com/showthread.php?t=91533 extremeoverclocking.com
+PC3500 Level II,DIMM,Unbuffered,non-ECC,,,,,PC3500,2-2-2,,Winbond,,Winbond BH-5,N/A,,,,https://forums.extremeoverclocking.com/showthread.php?t=91533 extremeoverclocking.com
+"PC2700 (Non Level X, rated 2-3-3, Promo-Build)",DIMM,Unbuffered,non-ECC,,,,,PC2700,2-3-3,,Winbond,,Winbond  CH-6,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+"PC3200 CL2.5 (Non Level X, non Blue, non Green Series)",DIMM,Unbuffered,non-ECC,,,,,PC3200,CL2.5,,"Samsung, Winbond",,Winbond  BH-5  Samsung TCB3,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+"PC3200 (Non Level X, rated 2-2-2, Promo-Build)",DIMM,Unbuffered,non-ECC,,,,,PC3200,CL2-2-2,,Winbond,,Winbond  BH-5,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+PC3200 Level I (2.0-3-2),DIMM,Unbuffered,non-ECC,,,,,PC3200,2.0-3-2,,Winbond,,Winbond  CH-5,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+PC3200 Level II (2.0-2-2),DIMM,Unbuffered,non-ECC,,,,,PC3200,2.0-2-2,,Winbond,,Winbond  BH-5/BH-6,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+PC3200 Special (2.0-2-2),DIMM,Unbuffered,non-ECC,,,,,PC3200,2.0-2-2,,Winbond,,Winbond  BH-6,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+PC3200 Black Level II V2 (2.0-2-2),DIMM,Unbuffered,non-ECC,,,,,PC3200,2.0-2-2,,Samsung,,Samsung TCCD  Samsung  TCC5,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+PC3200 Blue CL2 (2.0-3-3-X-1T),DIMM,Unbuffered,non-ECC,,,,,PC3200,2.0-3-3-X-1T,,Winbond,,Winbond UTT,N/A,,Brainpower PCB,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+PC3500 Level I (2.0-3-3),DIMM,Unbuffered,non-ECC,,,,,PC3500,2.0-3-3,,Winbond,,Winbond  CH-5,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+PC3500 Level II (2.0-2-2),DIMM,Unbuffered,non-ECC,,,,,PC3500,2.0-2-2,,Winbond,,Winbond  BH-5,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+XP3500 Redline eXtreme (2.0-2-2-X-1T),DIMM,Unbuffered,non-ECC,,,,,,2.0-2-2-X-1T,,Winbond,,Winbond UTT,N/A,,Brainpower PCB,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+PC3700 (2.5-4-3-X-1T),DIMM,Unbuffered,non-ECC,,,,,,2.5-4-3-X-1T,,Samsung,,Samsung TCCD (rev. F),N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+XP4000 Redline eXtreme (2.0-2-2-X-1T),DIMM,Unbuffered,non-ECC,,,,,,2.0-2-2-X-1T,,Winbond,,Winbond UTT,N/A,,Brainpower PCB,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+PC4000 Hi Performance Level I (3.0-X-X-X-1T),DIMM,Unbuffered,non-ECC,,,,,PC4000,3.0-X-X-X-1T,,,,5ns memory tested on 4ns functionality  (overclocking not officially supported),N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+XP4000 Redline 1GB (3.0-3-2-8-1T),DIMM,Unbuffered,non-ECC,,,,,,3.0-3-2-8-1T,,Infineon,,Infineon  CE-6,N/A,,Brainpower PCB,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+XP4000 Redline 1GB (3.0-4-4-8-1T),DIMM,Unbuffered,non-ECC,,,,,,3.0-4-4-8-1T,,Samsung,,Samsung  UCCC,N/A,,Brainpower PCB,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+PC4400 (2.5-4-4-X-1T),DIMM,Unbuffered,non-ECC,,,,,,2.5-4-4-X-1T,,Samsung,,Samsung TCCD  (rev. F),N/A,,Brainpower PCB,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+PC4400 XP4400 (2.5-4-4-8-1T),DIMM,Unbuffered,non-ECC,,,,,,2.5-4-4-8-1T,,Samsung,,Samsung TCCD,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List

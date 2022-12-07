@@ -1,0 +1,97 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+D4SS56161SH21A-C,SODIMM,Unbuffered,non-ECC,2 GiByte,"1Rx16, 4 ICs",4 GiBit,1.2v,DDR4-2133,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SS56161SH24A-C,SODIMM,Unbuffered,non-ECC,2 GiByte,"1Rx16, 4 ICs",4 GiBit,1.2v,DDR4-2400,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SS56161SH26A-C,SODIMM,Unbuffered,non-ECC,2 GiByte,"1Rx16, 4 ICs",4 GiBit,1.2v,DDR4-2666,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SH12081SH21A-C,SODIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.2v,DDR4-2133,,,,SK hynix,SK hynix,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SS12161SH21A-C,SODIMM,Unbuffered,non-ECC,4 GiByte,"1Rx16, 4 ICs",8 GiBit,1.2v,DDR4-2133,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SS12081SH21A-C,SODIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.2v,DDR4-2133,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SS12161SH24A-C,SODIMM,Unbuffered,non-ECC,4 GiByte,"1Rx16, 4 ICs",8 GiBit,1.2v,DDR4-2400,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SS12081SH24A-C,SODIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.2v,DDR4-2400,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SS12161SH26A-C,SODIMM,Unbuffered,non-ECC,4 GiByte,"1Rx16, 4 ICs",8 GiBit,1.2v,DDR4-2666,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SS12081SH26A-C,SODIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.2v,DDR4-2666,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SH12082SH21A-C,SODIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.2v,DDR4-2133,,,,SK hynix,SK hynix,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SS12082SH21A-C,SODIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.2v,DDR4-2133,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SS12082SH24A-C,SODIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.2v,DDR4-2400,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SH1G081SH21A-C,SODIMM,Unbuffered,non-ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-2133,,,,SK hynix,SK hynix,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SS1G081SH21A-C,SODIMM,Unbuffered,non-ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-2133,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SH1G081SH24A-C,SODIMM,Unbuffered,non-ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-2400,,,,SK hynix,SK hynix,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SS1G081SH24A-C,SODIMM,Unbuffered,non-ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-2400,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SH1G081SH26A-C,SODIMM,Unbuffered,non-ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-2666,,,,SK hynix,SK hynix,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SS1G081SH26A-C,SODIMM,Unbuffered,non-ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-2666,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SS1G081SH32A-E,SODIMM,Unbuffered,non-ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-3200,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SH1G082SH21A-C,SODIMM,Unbuffered,non-ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-2133,,,,SK hynix,SK hynix,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SS1G082SH21A-C,SODIMM,Unbuffered,non-ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-2133,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SH1G082SH24A-C,SODIMM,Unbuffered,non-ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-2400,,,,SK hynix,SK hynix,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SS1G082SH24A-C,SODIMM,Unbuffered,non-ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-2400,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SH1G082SH26A-C,SODIMM,Unbuffered,non-ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-2666,,,,SK hynix,SK hynix,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SS1G082SH26A-C,SODIMM,Unbuffered,non-ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-2666,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SS1G082SH32A-E,SODIMM,Unbuffered,non-ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-3200,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SS2G082SH26A-E,SODIMM,Unbuffered,non-ECC,32 GiByte,"2Rx8, 16 ICs",16 GiBit,1.2v,DDR4-2666,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4SS2G082SH32A-E,SODIMM,Unbuffered,non-ECC,32 GiByte,"2Rx8, 16 ICs",16 GiBit,1.2v,DDR4-3200,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4UH12081SH21A-C,DIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.2v,DDR4-2133,,,,SK hynix,SK hynix,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4US12081SH21A-C,DIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.2v,DDR4-2133,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4US12081SH24A-C,DIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.2v,DDR4-2400,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4UH12082SH21A-C,DIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.2v,DDR4-2133,,,,SK hynix,SK hynix,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4US12082SH21A-C,DIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.2v,DDR4-2133,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4US12082SH24A-C,DIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.2v,DDR4-2400,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4UH1G081SH21A-C,DIMM,Unbuffered,non-ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-2133,,,,SK hynix,SK hynix,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4US1G081SH21A-C,DIMM,Unbuffered,non-ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-2133,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4UH1G081SH24A-C,DIMM,Unbuffered,non-ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-2400,,,,SK hynix,SK hynix,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4US1G081SH24A-C,DIMM,Unbuffered,non-ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-2400,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4UM1G081SH26A-C,DIMM,Unbuffered,non-ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-2666,,,,Micron,Micron,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4UN1G081SH26A-C,DIMM,Unbuffered,non-ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-2666,,,,Nanya,Nanya,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4US1G081SH26A-C,DIMM,Unbuffered,non-ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-2666,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4US1G081SH32A-E,DIMM,Unbuffered,non-ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-3200,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4UH1G082SH21A-C,DIMM,Unbuffered,non-ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-2133,,,,SK hynix,SK hynix,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4US1G082SH21A-C,DIMM,Unbuffered,non-ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-2133,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4UH1G082SH24A-C,DIMM,Unbuffered,non-ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-2400,,,,SK hynix,SK hynix,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4US1G082SH24A-C,DIMM,Unbuffered,non-ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-2400,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4UM1G082SH26A-C,DIMM,Unbuffered,non-ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-2666,,,,Micron,Micron,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4UN1G082SH26A-C,DIMM,Unbuffered,non-ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-2666,,,,Nanya,Nanya,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4US1G082SH26A-C,DIMM,Unbuffered,non-ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-2666,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4US1G082SH32A-E,DIMM,Unbuffered,non-ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-3200,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4US2G082SH26A-E,DIMM,Unbuffered,non-ECC,32 GiByte,"2Rx8, 16 ICs",16 GiBit,1.2v,DDR4-2666,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4US2G082SH32A-E,DIMM,Unbuffered,non-ECC,32 GiByte,"2Rx8, 16 ICs",16 GiBit,1.2v,DDR4-3200,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4XS12081SH21A-C,SODIMM,Unbuffered,ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.2v,DDR4-2133,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4XS12081SH24A-C,SODIMM,Unbuffered,ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.2v,DDR4-2400,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4XS12082SH21A-C,SODIMM,Unbuffered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.2v,DDR4-2133,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4XS12082SH24A-C,SODIMM,Unbuffered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.2v,DDR4-2400,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4XS1G081SH21A-C,SODIMM,Unbuffered,ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-2133,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4XS1G081SH24A-C,SODIMM,Unbuffered,ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-2400,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4XS1G081SH26A-C,SODIMM,Unbuffered,ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-2666,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4XS1G081SH32A-E,SODIMM,Unbuffered,ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-3200,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4XS1G082SH21A-C,SODIMM,Unbuffered,ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-2133,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4XS1G082SH24A-C,SODIMM,Unbuffered,ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-2400,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4XS1G082SH24A-C,SODIMM,Unbuffered,ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-2400,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4XS1G082SH26A-C,SODIMM,Unbuffered,ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-2666,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4XS1G082SH26A-E,SODIMM,Unbuffered,ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-2666,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4XS1G082SH32A-E,SODIMM,Unbuffered,ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-3200,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4XS2G082SH26A-E,SODIMM,Unbuffered,ECC,32 GiByte,"2Rx8, 16 ICs",16 GiBit,1.2v,DDR4-2666,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4XS2G082SH32A-E,SODIMM,Unbuffered,ECC,32 GiByte,"2Rx8, 16 ICs",16 GiBit,1.2v,DDR4-3200,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4ES12081SH21A-C,DIMM,Unbuffered,ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.2v,DDR4-2133,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4ES12081SH24A-C,DIMM,Unbuffered,ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.2v,DDR4-2400,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4ES12081SH26A-C,DIMM,Unbuffered,ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.2v,DDR4-2666,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4ES12082SH21A-C,DIMM,Unbuffered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.2v,DDR4-2133,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4ES12082SH24A-C,DIMM,Unbuffered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.2v,DDR4-2400,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4ES1G081SH21A-C,DIMM,Unbuffered,ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-2133,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4ES1G081SH24A-C,DIMM,Unbuffered,ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-2400,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4ES1G081SH26A-C,DIMM,Unbuffered,ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-2666,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4ES1G081SH32A-E,DIMM,Unbuffered,ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-3200,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4ES1G082SH21A-C,DIMM,Unbuffered,ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-2133,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4ES1G082SH24A-C,DIMM,Unbuffered,ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-2400,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4ES1G082SH24A-C,DIMM,Unbuffered,ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-2400,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4ES1G082SH26A-C,DIMM,Unbuffered,ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-2666,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4ES1G082SH32A-E,DIMM,Unbuffered,ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-3200,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4ES2G082SH26A-E,DIMM,Unbuffered,ECC,32 GiByte,"2Rx8, 16 ICs",16 GiBit,1.2v,DDR4-2666,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4ES2G082SH32A-E,DIMM,Unbuffered,ECC,32 GiByte,"2Rx8, 16 ICs",16 GiBit,1.2v,DDR4-3200,,,,Samsung,Samsung,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4RS12082SH21A-C,DIMM,Registered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.2v,DDR4-2133,,,,Samsung,Samsung,,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4RS12082SH24A-C,DIMM,Registered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.2v,DDR4-2400,,,,Samsung,Samsung,,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4RS1G081SH21A-C,DIMM,Registered,ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-2133,,,,Samsung,Samsung,,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4RS1G081SH24A-C,DIMM,Registered,ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-2400,,,,Samsung,Samsung,,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4RS1G081SH26A-C,DIMM,Registered,ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-2666,,,,Samsung,Samsung,,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4RS1G081SH32A-E,DIMM,Registered,ECC,8 GiByte,"1Rx8, 8 ICs",8 GiBit,1.2v,DDR4-3200,,,,Samsung,Samsung,,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4RS1G082SH21A-C,DIMM,Registered,ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-2133,,,,Samsung,Samsung,,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4RS1G082SH24A-C,DIMM,Registered,ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-2400,,,,Samsung,Samsung,,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4RS1G082SH26A-C,DIMM,Registered,ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-2666,,,,Samsung,Samsung,,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4RS1G082SH32A-E,DIMM,Registered,ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.2v,DDR4-3200,,,,Samsung,Samsung,,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/
+D4RS2G082SH26A-C,DIMM,Registered,ECC,32 GiByte,"2Rx8, 16 ICs",16 GiBit,1.2v,DDR4-2666,,,,Samsung,Samsung,,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr4-sdram/

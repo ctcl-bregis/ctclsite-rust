@@ -1,0 +1,19 @@
+- model: "ThinkPad T430s Integrated Nvidia Quadro NVS 5200M graphics"
+  gpvnd: "Nvidia"
+  gpmdl: "GF117 Fermi"
+  bustp: 
+  vidcn: N/A
+  memtp: "DDR3"
+  memtc: "1 GByte"
+  membw: "64-bit"
+  membs: "DDR3-1866"
+  memog: "4 ICs x 16-bit?"
+  memiv: "Hynix"
+  memib: "Hynix"
+  memic: "2 Gbit"
+  memim: 
+  memip: 
+  othic:
+  htsnk: 
+  notes: 
+  insrc: "CrazyblocksTechnologies (Confirmation using CPU-Z and lshw), NotebookCheck (GPU info) https://www.notebookcheck.net/NVIDIA-NVS-5200M.76732.0.html"

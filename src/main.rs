@@ -4,7 +4,7 @@ use once_cell::sync::Lazy;
 extern crate comrak;
 use comrak::{parse_document, format_html, Arena, ComrakOptions};
 use comrak::nodes::{AstNode, NodeValue};
-
+use csv::Reader;
 
 pub static TEMPLATES: Lazy<Tera> = Lazy::new(|| {
     let mut tera = match Tera::new("templates/**/*") {
@@ -45,6 +45,20 @@ async fn rl_main() -> impl Responder {
     }
 }
 
+async fn rl_list(list: web::Path<String>) -> impl Responder {
+    let mut context = Context::new();
+    let title = String::from(format!("RAMList  - CrazyblocksTechnologies Computer Laboratories"));
+    context.insert("title", &title);
+    match TEMPLATES.render("main_blog_menu.html", &context) {
+        Ok(body) => Ok(HttpResponse::Ok().body(body)),
+        Err(err) => {
+            eprintln!("## Tera error: {}", err);
+            Err(error::ErrorInternalServerError(err))
+        }, 
+    }
+}
+    
+
 
 async fn blog_main() -> impl Responder {
     let mut context = Context::new();
@@ -78,6 +92,7 @@ async fn main() -> std::io::Result<()> {
         App::new().service(root)
             // TODO: figure out how to redirect to page with / at the end
             .route("/ramlist/", web::get().to(rl_main))
+            .route("/ramlist/{list}/", web::get().to(rl_list))
             .route("/blog/", web::get().to(blog_main))
             .route("/blog/{post}/", web::get().to(blog_post))
     })

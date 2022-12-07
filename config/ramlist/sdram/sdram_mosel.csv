@@ -1,0 +1,2 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+OEM,DIMM,Unbuffered,non-ECC,128 MByte,"1Rx8, 8 ICs",128 Mbit,,PC133,,TSOP-54,Mosel Vitelic,,V54C3128804VAT7PC,N/A,,,Includes separate IBM Sticker,CrazyblocksTechnologies Computer Laboratories

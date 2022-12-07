@@ -1,0 +1,44 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+DDUP32081XH60AB,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx8, 8 ICs",256 Mbit,,PC2700,,,ProMOS,,ProMOS,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDUS32081XH60AB,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx8, 8 ICs",256 Mbit,,PC2700,,,Samsung,,Samsung,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDUP32081XH50AA,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx8, 8 ICs",256 Mbit,,PC3200,,,ProMOS,,ProMOS,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDUS32081XH50AA,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx8, 8 ICs",256 Mbit,,PC3200,,,Samsung,,Samsung,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDUP32082XH60AB,DIMM,Unbuffered,non-ECC,512 MByte,"2Rx8, 16 ICs",256 Mbit,,PC2700,,,ProMOS,,ProMOS,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDUS32082XH60AB,DIMM,Unbuffered,non-ECC,512 MByte,"2Rx8, 16 ICs",256 Mbit,,PC2700,,,Samsung,,Samsung,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDUP32082XH50AA,DIMM,Unbuffered,non-ECC,512 MByte,"2Rx8, 16 ICs",256 Mbit,,PC3200,,,ProMOS,,ProMOS,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDUS32082XH50AA,DIMM,Unbuffered,non-ECC,512 MByte,"2Rx8, 16 ICs",256 Mbit,,PC3200,,,Samsung,,Samsung,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDUP64081XH60AB,DIMM,Unbuffered,non-ECC,512 MByte,"1Rx8, 8 ICs",512 Mbit,,PC2700,,,ProMOS,,ProMOS,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDUS64081XH60AB,DIMM,Unbuffered,non-ECC,512 MByte,"1Rx8, 8 ICs",512 Mbit,,PC2700,,,Samsung,,Samsung,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDUP64081XH50AA,DIMM,Unbuffered,non-ECC,512 MByte,"1Rx8, 8 ICs",512 Mbit,,PC3200,,,ProMOS,,ProMOS,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDUS64081XH50AA,DIMM,Unbuffered,non-ECC,512 MByte,"1Rx8, 8 ICs",512 Mbit,,PC3200,,,Samsung,,Samsung,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDUP64082XH60AB,DIMM,Unbuffered,non-ECC,1 GByte,"2Rx8, 16 ICs",512 Mbit,,PC2700,,,ProMOS,,ProMOS,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDUS64082XH60AB,DIMM,Unbuffered,non-ECC,1 GByte,"2Rx8, 16 ICs",512 Mbit,,PC2700,,,Samsung,,Samsung,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDUP64082XH50AA,DIMM,Unbuffered,non-ECC,1 GByte,"2Rx8, 16 ICs",512 Mbit,,PC3200,,,ProMOS,,ProMOS,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDUS64082XH50AA,DIMM,Unbuffered,non-ECC,1 GByte,"2Rx8, 16 ICs",512 Mbit,,PC3200,,,Samsung,,Samsung,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDSP16161XH60AB,DIMM,Unbuffered,non-ECC,128 MByte,"1Rx16, 4 ICs",256 Mbit,,PC2700,,,ProMOS,,ProMOS,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDSP16161XH50AA,DIMM,Unbuffered,non-ECC,128 MByte,"1Rx16, 4 ICs",256 Mbit,,PC3200,,,ProMOS,,ProMOS,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDSP16162XH60AB,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx8, 8 ICs",256 Mbit,,PC2700,,,ProMOS,,ProMOS,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDSP16162XH50AA,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx8, 8 ICs",256 Mbit,,PC3200,,,ProMOS,,ProMOS,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDSP32161XH60AB,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx16, 4 ICs",512 Mbit,,PC2700,,,ProMOS,,ProMOS,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDSS32161XH60AB,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx16, 4 ICs",512 Mbit,,PC2700,,,Samsung,,Samsung,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDSP32161XH50AA,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx16, 4 ICs",512 Mbit,,PC3200,,,ProMOS,,ProMOS,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDSS32161XH50AA,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx16, 4 ICs",512 Mbit,,PC3200,,,Samsung,,Samsung,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDSP32162XH60AB,DIMM,Unbuffered,non-ECC,512 MByte,"1Rx8, 8 ICs",512 Mbit,,PC2700,,,ProMOS,,ProMOS,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDSS32162XH60AB,DIMM,Unbuffered,non-ECC,512 MByte,"1Rx8, 8 ICs",512 Mbit,,PC2700,,,Samsung,,Samsung,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDSP32162XH50AA,DIMM,Unbuffered,non-ECC,512 MByte,"1Rx8, 8 ICs",512 Mbit,,PC3200,,,ProMOS,,ProMOS,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDSS32162XH50AA,DIMM,Unbuffered,non-ECC,512 MByte,"1Rx8, 8 ICs",512 Mbit,,PC3200,,,Samsung,,Samsung,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDSP64082XH60AB,DIMM,Unbuffered,non-ECC,1 GByte,"2Rx8, 16 ICs",512 Mbit,,PC2700,,,ProMOS,,ProMOS,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDSP64082XH50AA,DIMM,Unbuffered,non-ECC,1 GByte,"2Rx8, 16 ICs",512 Mbit,,PC3200,,,ProMOS,,ProMOS,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDES64081XH60AB,DIMM,Unbuffered,ECC,512 MByte,"1Rx8, 9 ICs",512 Mbit,,PC2700,,,Samsung,,Samsung,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDES64081XH50AA,DIMM,Unbuffered,ECC,512 MByte,"1Rx8, 9 ICs",512 Mbit,,PC3200,,,Samsung,,Samsung,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDES64082XH60AB,DIMM,Unbuffered,ECC,1 GByte,"2Rx8, 18 ICs",512 Mbit,,PC2700,,,Samsung,,Samsung,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDES64082XH50AA,DIMM,Unbuffered,ECC,1 GByte,"2Rx8, 18 ICs",512 Mbit,,PC3200,,,Samsung,,Samsung,N/A,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDRS32082XH75AA,DIMM,Registered,ECC,512 MByte,"2Rx8, 18 ICs",256 Mbit,,PC2100,,,Samsung,,Samsung,,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDRS32082XH60AA,DIMM,Registered,ECC,512 MByte,"2Rx8, 18 ICs",256 Mbit,,PC2700,,,Samsung,,Samsung,,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDRS64082XH60AA,DIMM,Registered,ECC,1 GByte,"2Rx8, 18 ICs",512 Mbit,,PC2700,,,Samsung,,Samsung,,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDRS64082XH50AA,DIMM,Registered,ECC,1 GByte,"2Rx8, 18 ICs",512 Mbit,,PC3200,,,Samsung,,Samsung,,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDRS28042XH75AA,DIMM,Registered,ECC,2 GByte,"2Rx4, 36 ICs",512 Mbit,,PC2100,,,Samsung,,Samsung,,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDRS28042XH60AA,DIMM,Registered,ECC,2 GByte,"2Rx4, 36 ICs",512 Mbit,,PC2700,,,Samsung,,Samsung,,,,,http://www.dsltech.com.tw/products/ddr/ DSL's website
+DDUP32161XG50AAI,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx16, 4 ICs",512 Mbit,,PC3200,,,ProMOS,,ProMOS,N/A,,,Wide Temp,http://www.dsltech.com.tw/products/wide-temp-module/ DSL's website
+DDUP64081XG50AAI,DIMM,Unbuffered,non-ECC,512 MByte,"1Rx8, 8 ICs",512 Mbit,,PC3200,,,ProMOS,,ProMOS,N/A,,,Wide Temp,http://www.dsltech.com.tw/products/wide-temp-module/ DSL's website
+DDUP64082XG50AAI,DIMM,Unbuffered,non-ECC,1 GByte,"2Rx8, 16 ICs",512 Mbit,,PC3200,,,ProMOS,,ProMOS,N/A,,,Wide Temp,http://www.dsltech.com.tw/products/wide-temp-module/ DSL's website

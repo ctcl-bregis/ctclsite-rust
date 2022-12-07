@@ -1,0 +1,19 @@
+- model: "GT10C0"
+  gpvnd: "Zhaoxin Glenfly"
+  gpmdl: "Arise-GT10C0"
+  bustp: "PCIe x16, unknown version"
+  vidcn: "1x VGA, 1x HDMI"
+  memtp: 
+  memtc: "2 GByte"
+  membw: 
+  membs: 
+  memog: "4 ICs"
+  memiv: "Samsung"
+  memib: "Samsung"
+  memic: "4 Gbit"
+  memim: 
+  memip: 
+  othic:
+  htsnk: Heatsink with fan
+  notes: 
+  insrc: "Tom's Hardware; Hoki on Bilibili https://www.tomshardware.com/news/zhaoxin-glenfly-gt10C0-gpu"

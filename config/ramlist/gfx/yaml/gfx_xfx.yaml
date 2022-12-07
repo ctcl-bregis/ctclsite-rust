@@ -1,0 +1,19 @@
+- model: "GT 9500"
+  gpvnd: "Nvidia"
+  gpmdl: ""
+  bustp: "PCIe 2.0 x16"
+  vidcn: N/A
+  memtp: "DDR2"
+  memtc: "1 GByte"
+  membw: "64-bit"
+  membs: "DDR2-667"
+  memog: "8 ICs x 8-bit"
+  memiv: "Nanya"
+  memib: "elixir"
+  memic: "1 Gbit"
+  memim: 
+  memip: BGA
+  othic:
+  htsnk: 
+  notes: "Low-profile capable"
+  insrc: CrazyblocksTechnologies Computer Laboratories

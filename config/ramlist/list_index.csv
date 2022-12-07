@@ -1,0 +1,14 @@
+name,indc,tabc
+ddr,ddr/ddr_index.csv,ddr/ddr_tableinfo.csv
+ddr2,ddr2/ddr2_index.csv,ddr2/ddr2_tableinfo.csv
+ddr3,ddr3/ddr3_index.csv,ddr3/ddr3_tableinfo.csv
+ddr4,ddr4/ddr4_index.csv,ddr4/ddr4_tableinfo.csv
+ddr5,ddr5/ddr5_index.csv,ddr5/ddr5_tableinfo.csv
+embedded,embedded/embedded_index.csv,embedded/embedded_tableinfo.csv
+hdd,hdd/hdd_index.csv,hdd/hdd_tableinfo.csv
+gfx,gfx/gfx_index.csv,gfx/gfx_tableinfo.csv
+laptop,laptop/laptop_index.csv,laptop/laptop_tableinfo.csv
+mobile,mobile/mobile_index.csv,mobile/mobile_tableinfo.csv
+rdram,rdram/rdram_index.csv,rdram/rdram_tableinfo.csv
+sdram,sdram/sdram_index.csv,sdram/sdram_tableinfo.csv
+ssd,ssd/ssd_index.csv,ssd/ssd_tableinfo.csv

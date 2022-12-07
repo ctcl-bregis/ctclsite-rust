@@ -1,0 +1,2 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+HMA82GS7AFR8N-UH,SODIMM,Unbuffered,ECC,16 GByte,"2Rx8, 18 ICs",8 Gbit,1.2v,PC4-19200 (Label: PC4-2400),,,SK hynix,SK hynix,H5AN8G8NAFR (Die code: DTCCTS47WH1),N/A,,Unknown (Marked with SK hynix),"Module made in 2018 week 8, ICs made in 2017 week 52","CrazyblocksTech, tested in Xeon HP ZBook Studio G3 at PC4-17000"
