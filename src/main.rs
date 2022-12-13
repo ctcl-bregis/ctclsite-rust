@@ -4,7 +4,10 @@ use once_cell::sync::Lazy;
 extern crate comrak;
 use comrak::{parse_document, format_html, Arena, ComrakOptions};
 use comrak::nodes::{AstNode, NodeValue};
-use csv::Reader;
+use csv::{Reader, StringRecord};
+// lib.rs
+use ctclsite::readcsv;
+
 
 pub static TEMPLATES: Lazy<Tera> = Lazy::new(|| {
     let mut tera = match Tera::new("templates/**/*") {
@@ -18,6 +21,7 @@ pub static TEMPLATES: Lazy<Tera> = Lazy::new(|| {
     tera
 });
 
+// About
 #[get("/")]
 async fn root() -> impl Responder {
     let mut context = Context::new();
@@ -26,12 +30,13 @@ async fn root() -> impl Responder {
     match TEMPLATES.render("main_content.html", &context) {
         Ok(body) => Ok(HttpResponse::Ok().body(body)),
         Err(err) => {
-            eprintln!("## Tera error: {}", err);
+            eprintln!("Tera error: {}", err);
             Err(error::ErrorInternalServerError(err))
         },
     }
 }
 
+// RAMList main menu
 async fn rl_main() -> impl Responder {
     let mut context = Context::new();
     let title = String::from("RAMList Menu - CrazyblocksTechnologies Computer Laboratories");
@@ -39,27 +44,27 @@ async fn rl_main() -> impl Responder {
     match TEMPLATES.render("ramlist_menu.html", &context) {
         Ok(body) => Ok(HttpResponse::Ok().body(body)),
         Err(err) => {
-            eprintln!("## Tera error: {}", err);
+            eprintln!("Tera error: {}", err);
             Err(error::ErrorInternalServerError(err))
         }, 
     }
 }
 
+// RAMList List page; contents page
 async fn rl_list(list: web::Path<String>) -> impl Responder {
     let mut context = Context::new();
-    let title = String::from(format!("RAMList  - CrazyblocksTechnologies Computer Laboratories"));
+    let title = String::from(format!("RAMList - CrazyblocksTechnologies Computer Laboratories"));
     context.insert("title", &title);
     match TEMPLATES.render("main_blog_menu.html", &context) {
         Ok(body) => Ok(HttpResponse::Ok().body(body)),
         Err(err) => {
-            eprintln!("## Tera error: {}", err);
+            eprintln!("Tera error: {}", err);
             Err(error::ErrorInternalServerError(err))
         }, 
     }
 }
     
-
-
+// Blog post list
 async fn blog_main() -> impl Responder {
     let mut context = Context::new();
     let title = String::from("Blog Posts - CrazyblocksTechnologies Computer Laboratories");
@@ -67,12 +72,13 @@ async fn blog_main() -> impl Responder {
     match TEMPLATES.render("main_blog_menu.html", &context) {
         Ok(body) => Ok(HttpResponse::Ok().body(body)),
         Err(err) => {
-            eprintln!("## Tera error: {}", err);
+            eprintln!("Tera error: {}", err);
             Err(error::ErrorInternalServerError(err))
         }, 
     }
 }
 
+// Blog post content
 async fn blog_post() -> impl Responder {
     let mut context = Context::new();
     let title = String::from("Blog Posts - CrazyblocksTechnologies Computer Laboratories");
@@ -80,7 +86,7 @@ async fn blog_post() -> impl Responder {
     match TEMPLATES.render("main_blog_post.html", &context) {
         Ok(body) => Ok(HttpResponse::Ok().body(body)),
         Err(err) => {
-            eprintln!("## Tera error: {}", err);
+            eprintln!("Tera error: {}", err);
             Err(error::ErrorInternalServerError(err))
         }, 
     }
