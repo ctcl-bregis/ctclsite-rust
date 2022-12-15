@@ -4,7 +4,17 @@
 <!-- start content -->
     <h1><a href="..">CTCL's RAMList</a> - {{ pagetitle }}</h1>
     <h4><a href="..">Back to menu</a><br>Entries: {{ entries }}<br>List last updated: {{ updated }}</h4>
-{{ content|safe }}    
+    {% for table in tables %}
+    <h2>{{ table["name"] }}</h2>
+    <table>
+        <tr>{% for header in headers %}
+            <th width="{{ header["width"] }}">{{ header["title"] }}</th>
+        {% endfor %}</tr>
+        
+        
+    
+    </table>
+    {% endfor %}
 <!-- end content -->
 <!-- start footer -->
     <br>
