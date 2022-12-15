@@ -1,0 +1,16 @@
+{% include "rl_header.html" %}
+    <body>
+<!-- end header -->
+<!-- start content -->
+        <h1><a href="/">CTCL's</a> RAMList - {{ pagetitle }}</h1>
+        <h4><a href="/">Back to my website</a></h4>
+        <div class="btn-group-rlmenu">{% for item in menu %}
+            <a href="{{ item["link"] }}"><button style="background-color: {{ item["bclr"] }}; color: {{ item["tclr"] }}">{{ item["desc"] }}</button></a>{% endfor %}
+        </div>
+<!-- end content -->
+<!-- start footer -->
+        <br>
+        <!-- override hr width -->
+        <hr>
+{% include "rl_footer.html" %}
+<!-- end footer -->

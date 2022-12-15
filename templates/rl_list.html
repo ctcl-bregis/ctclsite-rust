@@ -1,0 +1,15 @@
+{% include "rl_header.html" %}
+    <body>
+<!-- end header -->
+<!-- start content -->
+    <h1><a href="..">CTCL's RAMList</a> - {{ pagetitle }}</h1>
+    <h4><a href="..">Back to menu</a><br>Entries: {{ entries }}<br>List last updated: {{ updated }}</h4>
+{{ content|safe }}    
+<!-- end content -->
+<!-- start footer -->
+    <br>
+    <!-- override hr width -->
+    <hr width="3000pt">
+{% include "rl_footer.html" %}
+<!-- end footer -->
+

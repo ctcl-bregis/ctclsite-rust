@@ -1,11 +1,17 @@
-use csv::{Reader, StringRecord};
-use std::{env, error::Error as stderr, ffi::OsString, fs::File, process};
-use std::io::Read;
+use std::{fs::File};
+use csv::{self, Error, Reader};
+use serde::{Deserialize, Deserializer};
+use std::collections::HashMap;
 
-pub fn readcsv(path: &str) -> Vec<String> {
-    let file = File::open(path);
-    let mut rdr = csv::Reader::from_reader(file);
-    let records = rdr.records();
+type Record = HashMap<String, String>;
+
+pub fn csv2hm(path: &str) -> Result<Vec<HashMap<String, String>>, Error> {
+    let mut records = Vec::new();
+    let rdr = csv::Reader::from_path(path);
     
-    records
+    for result in rdr.unwrap().deserialize() {
+        let record: Record = result?;
+        records.push(record);
+    }
+    Ok(records)
 }
