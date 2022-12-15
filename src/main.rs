@@ -1,10 +1,7 @@
-use actix_web::{App, web, get, error, Error, HttpResponse, HttpServer, http::StatusCode, Responder, web::Path};
+use actix_web::{App, web, get, error, HttpResponse, HttpServer, http::StatusCode, Responder, web::Path};
 use tera::{Tera, Context};
 use once_cell::sync::Lazy;
-extern crate comrak;
-use comrak::{parse_document, format_html, Arena, ComrakOptions};
-use comrak::nodes::{AstNode, NodeValue};
-use ctclsite::csv2hm;
+use ctclsite::{csv2hm, md2html};
 #[macro_use] extern crate serde_derive;
 
 #[derive(Deserialize)]
@@ -30,6 +27,10 @@ async fn root() -> impl Responder {
     let mut context = Context::new();
     let title = String::from("Welcome - CrazyblocksTechnologies Computer Laboratories");
     context.insert("title", &title);
+    
+    let content = md2html("./config/main_about.md");
+    context.insert("content", &content.unwrap());
+    
     match TEMPLATES.render("main_content.html", &context) {
         Ok(body) => Ok(HttpResponse::Ok().body(body)),
         Err(err) => {
@@ -103,9 +104,13 @@ async fn rl_list(list: Path<Info>) -> impl Responder {
             },
         }
     } else {
-        Ok(HttpResponse::build(StatusCode::NOT_FOUND)
-            .content_type("text/html; charset=utf-8")
-            .body("<h1>404 - Page Not Found</h1>"))
+        match TEMPLATES.render("err_404.html", &context) {
+            Ok(body) => Ok(HttpResponse::build(StatusCode::NOT_FOUND).content_type("text/html; charset=utf-8").body(body)),
+            Err(err) => {
+                eprintln!("Tera error: {}", err);
+                Err(error::ErrorInternalServerError(err))
+            }, 
+        }
     }
 }
     
