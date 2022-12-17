@@ -1,7 +1,7 @@
 use actix_web::{App, web, get, error, HttpResponse, HttpServer, http::StatusCode, Responder, web::Path};
-use tera::{Tera, Context};
+use tera::{Tera};
 use once_cell::sync::Lazy;
-use ctclsite::{csv2hm, md2html};
+use ctclsite::{csv2bt, md2html, mkcontext};
 #[macro_use] extern crate serde_derive;
 
 #[derive(Deserialize)]
@@ -24,9 +24,7 @@ pub static TEMPLATES: Lazy<Tera> = Lazy::new(|| {
 // About
 #[get("/")]
 async fn root() -> impl Responder {
-    let mut context = Context::new();
-    let title = String::from("Welcome - CrazyblocksTechnologies Computer Laboratories");
-    context.insert("title", &title);
+    let mut context = mkcontext("about").unwrap();
     
     let content = md2html("./config/main_about.md");
     context.insert("content", &content.unwrap());
@@ -42,17 +40,10 @@ async fn root() -> impl Responder {
 
 // RAMList main menu
 async fn rl_main() -> impl Responder {
-    let mut context = Context::new();
+    let mut context = mkcontext("ramlist").unwrap();
     
-    let title = String::from("RAMList Menu - CrazyblocksTechnologies Computer Laboratories");
-    context.insert("title", &title);
-    let pagetitle = String::from("Main Menu");
-    context.insert("pagetitle", &pagetitle);
-    let pagedesc = String::from("Main Menu of RAMList at CrazyblocksTechnologies Computer Laboratories");
-    context.insert("pagedesc", &pagedesc);
-    
-    let menu = csv2hm("./config/ramlist/menu.csv");
-    context.insert("menu", &menu.unwrap());
+    let menu = csv2bt("./config/ramlist/menu.csv").unwrap();
+    context.insert("menu", &menu);
     
     match TEMPLATES.render("rl_menu.html", &context) {
         Ok(body) => Ok(HttpResponse::Ok().body(body)),
@@ -65,14 +56,20 @@ async fn rl_main() -> impl Responder {
 
 // RAMList List page; contents page
 async fn rl_list(list: Path<Info>) -> impl Responder {
-    let mut context = Context::new();
-    let title = String::from(format!("RAMList - CrazyblocksTechnologies Computer Laboratories"));
-    context.insert("title", &title);
+    let mut context = mkcontext("ramlist").unwrap();
     
     let mut lists = Vec::new();
+    // Only add to "lists" what is a list page
+    for entry in csv2bt("./config/ramlist/menu.csv").unwrap() {
+        if entry["type"] == "list" {
+            lists.push(entry["name"].clone());
+        }
+    }
     
     // Other content page: about
     if list.page == "about" {
+        
+        
         match TEMPLATES.render("rl_about.html", &context) {
             Ok(body) => Ok(HttpResponse::Ok().body(body)),
             Err(err) => {
@@ -82,6 +79,7 @@ async fn rl_list(list: Path<Info>) -> impl Responder {
         }
     // Other content page: announcements
     } else if list.page == "log" {
+        
         match TEMPLATES.render("rl_log.html", &context) {
             Ok(body) => Ok(HttpResponse::Ok().body(body)),
             Err(err) => {
@@ -93,9 +91,7 @@ async fn rl_list(list: Path<Info>) -> impl Responder {
     // Test if the page is defined in menu.csv
     } else if lists.contains(&list.page) {
     // Get widths of table columns
-    
-    
-    
+        
         match TEMPLATES.render("rl_list.html", &context) {
             Ok(body) => Ok(HttpResponse::Ok().body(body)),
             Err(err) => {
@@ -116,10 +112,11 @@ async fn rl_list(list: Path<Info>) -> impl Responder {
     
 // Blog post list
 async fn blog_main() -> impl Responder {
-    let mut context = Context::new();
-    let title = String::from("Blog Posts - CrazyblocksTechnologies Computer Laboratories");
-    context.insert("title", &title);
-    match TEMPLATES.render("main_blog_menu.html", &context) {
+    let mut context = mkcontext("blog").unwrap();
+    
+    let posts = csv2bt("./config/blog/blog_index.csv").unwrap();
+    
+    match TEMPLATES.render("blog_menu.html", &context) {
         Ok(body) => Ok(HttpResponse::Ok().body(body)),
         Err(err) => {
             eprintln!("Tera error: {}", err);
@@ -130,10 +127,10 @@ async fn blog_main() -> impl Responder {
 
 // Blog post content
 async fn blog_post() -> impl Responder {
-    let mut context = Context::new();
-    let title = String::from("Blog Posts - CrazyblocksTechnologies Computer Laboratories");
-    context.insert("title", &title);
-    match TEMPLATES.render("main_blog_post.html", &context) {
+    // TODO: Read info for context from blog post index
+    let mut context = mkcontext("blog").unwrap();
+    
+    match TEMPLATES.render("blog_post.html", &context) {
         Ok(body) => Ok(HttpResponse::Ok().body(body)),
         Err(err) => {
             eprintln!("Tera error: {}", err);

@@ -1,5 +1,5 @@
 # Privacy Policy
-#### Date of last modification: June 23, 2022
+#### Date of last modification: December 16, 2022
 
 This website is optimized for security, privacy, performance and compatibility. To achieve this, the website does not contain or serve any JavaScript, plugins or other tracking technologies.
 

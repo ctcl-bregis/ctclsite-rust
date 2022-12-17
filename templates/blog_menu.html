@@ -1,0 +1,16 @@
+{% include "main_header.html" %}
+<!-- end header -->
+    <h2>Blog Posts</h2>{% for post in posts %}
+    <div class="blogpost">
+        <h2><a href="{{ post["numb"]}}/">{{ post["post"] }}</a></h2>
+        <h5>Date: {{ post["date"] }} - Category: {{ post["bcat"] }}</h5>
+        <p>{{ post["desc"] }}</p>
+    </div>
+    <hr>
+    {% endfor %}
+    
+<!-- end content -->
+<!-- start footer -->        
+{% include "main_footer.html" %}
+<!-- end footer -->
+

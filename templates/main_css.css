@@ -3,6 +3,17 @@ body {
     font-family: "arial";
 }
 
+hr {
+    color: #009900;
+    border-color: inherit;
+    display: block; 
+    height: 1px;
+    border: 0; 
+    border-top: 2pt solid #009900;
+    margin: 1em 0; 
+    padding: 0;
+}
+
 .navbar ul {
     list-style-type: none;
     margin: 0;
@@ -11,9 +22,7 @@ body {
     background-color: #009900;
 }
 
-.navbar li {
-    float: left;
-}
+.navbar li { float: left;}
 
 .navbar li a {
     background-color: #009900;
@@ -24,7 +33,7 @@ body {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 10pt;
+    font-size: 12pt;
     cursor: pointer;
 }
 
@@ -33,43 +42,31 @@ body {
     color: #009900;
 }
 
-h1 {
-    color: #000000;
-}
+h1 {color: #000000;}
 
-h6 {
-    text-align: center;
-}
+h6 {text-align: center;}
 
 a {
     color: #009900;
     text-decoration: none;
 }
-
-p {
-    font-size: 12pt;
-}
-
+p {font-size: 12pt;}
 ::selection {
     background-color: #009900;
     color: #FFFFFF;
 }
-
 ::-moz-selection {
     background-color: #009900;
     color: #FFFFFF;
 }
-
 ::-o-selection {
     background-color: #009900;
     color: #FFFFFF;
 }
-
 ::-ms-selection {
     background-color: #009900;
     color: #FFFFFF;
 }
-
 ::-webkit-selection {
     background-color: #009900;
     color: #FFFFFF;
