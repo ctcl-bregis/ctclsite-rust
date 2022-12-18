@@ -30,24 +30,19 @@ pub fn md2html(path: &str) -> Result<String, Error> {
 pub fn mkcontext(page: &str) -> Result<Context, Error> {
     let mut context = Context::new();
 
-    let pages = csv2bt("./config/pagemeta.csv").unwrap();
+    let pagemeta = csv2bt("./config/pagemeta.csv").unwrap();
     
-    let mut pagebt = BTreeMap::new();
-    for entry in pages {
+    let mut pagemetasrc = BTreeMap::new();
+    for entry in pagemeta {
         if entry["page"] == page {
-            pagebt = entry;
+            pagemetasrc = entry;
             break;
-        }
-        
+        } 
     }
-    if pagebt.is_empty() {
+    if pagemetasrc.is_empty() {
         panic!("Page not found");
     }
     
-    context.insert("title", &String::from(format!("{} - {}", pagebt["title"], "CrazyblocksTechnologies Computer Laboratories")));
-    context.insert("active", &String::from(&pagebt["page"]));
-    context.insert("desc", &String::from(format!("{} - {}", pagebt["desc"], "CrazyblocksTechnologies Computer Laboratories")));
-
     Ok(context)
 }
     
