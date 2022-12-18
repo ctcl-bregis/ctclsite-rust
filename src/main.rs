@@ -114,7 +114,7 @@ async fn rl_list(list: Path<Info>) -> impl Responder {
 async fn blog_main() -> impl Responder {
     let mut context = mkcontext("blog").unwrap();
     
-    let posts = csv2bt("./config/blog/blog_index.csv").unwrap();
+    context.insert("posts", &csv2bt("./config/blog/blog_index.csv").unwrap());
     
     match TEMPLATES.render("blog_menu.html", &context) {
         Ok(body) => Ok(HttpResponse::Ok().body(body)),

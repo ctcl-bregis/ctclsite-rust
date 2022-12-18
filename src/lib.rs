@@ -45,7 +45,7 @@ pub fn mkcontext(page: &str) -> Result<Context, Error> {
     }
     
     context.insert("title", &String::from(format!("{} - {}", pagebt["title"], "CrazyblocksTechnologies Computer Laboratories")));
-    context.insert("active", &String::from(&pagebt["title"]));
+    context.insert("active", &String::from(&pagebt["page"]));
     context.insert("desc", &String::from(format!("{} - {}", pagebt["desc"], "CrazyblocksTechnologies Computer Laboratories")));
 
     Ok(context)

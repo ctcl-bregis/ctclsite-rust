@@ -1,4 +1,4 @@
-page,title,desc,color
-about,Welcome,,#009900
-blog,Blog Posts,,#009900
-ramlist,RAMList,,#000099
+page,title,desc,color,index
+about,Welcome,,#009900,config/about/
+blog,Blog Posts,,#009900,config/blog/
+ramlist,RAMList,,#000099,config/ramlist/
