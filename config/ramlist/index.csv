@@ -1,0 +1,15 @@
+name,desc,link,bclr,tclr,type,indc,tabc
+sdram,SDRAM memory modules,sdram/,#996600,#FFFFFF,list,sdram/sdram_index.csv,sdram/sdram_tableinfo.csv
+ddr,DDR memory modules,ddr/,#000099,#FFFFFF,list,ddr/ddr_index.csv,ddr/ddr_tableinfo.csv
+ddr2,DDR2 memory modules,ddr2/,#999900,#FFFFFF,list,ddr2/ddr2_index.csv,ddr2/ddr2_tableinfo.csv
+ddr3,DDR3 memory modules,ddr3/,#990000,#FFFFFF,list,ddr3/ddr3_index.csv,ddr3/ddr3_tableinfo.csv
+ddr4,DDR4 memory modules,ddr4/,#009999,#FFFFFF,list,ddr4/ddr4_index.csv,ddr4/ddr4_tableinfo.csv
+ddr5,DDR5 memory modules,ddr5/,#990099,#FFFFFF,list,ddr5/ddr5_index.csv,ddr5/ddr5_tableinfo.csv
+gfx,Graphics Card Memory,gfx/,#009900,#FFFFFF,list,gfx/gfx_index.csv,gfx/gfx_tableinfo.csv
+ssd,Solid-State Drives,ssd/,#009900,#FFFFFF,list,ssd/ssd_index.csv,ssd/ssd_tableinfo.csv
+hdd,Hard Disk Drives and Solid-State Hybrid Drives,hdd/,#009900,#FFFFFF,list,hdd/hdd_index.csv,hdd/hdd_tableinfo.csv
+laptop,Laptop and Chromebook soldered memory,laptop/,#009900,#FFFFFF,list,laptop/laptop_index.csv,laptop/laptop_tableinfo.csv
+mobile,"Mobile devices (Phones, tablets, PMPs, etc.)",mobile/,#009900,#FFFFFF,list,mobile/mobile_index.csv,mobile/mobile_tableinfo.csv
+embedded,"Other embedded device, game console, single-board computer, system-on-module",embedded/,#009900,#FFFFFF,list,embedded/embedded_index.csv,embedded/embedded_tableinfo.csv
+log,Announcements & Updates,log/,#000000,#FFFFFF,log,,
+about,About RAMList,about/,#FFFFFF,#000000,about,,
