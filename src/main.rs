@@ -1,7 +1,7 @@
 use actix_web::{App, web, get, error, HttpResponse, HttpServer, http::StatusCode, Responder, web::Path};
 use tera::{Tera};
 use once_cell::sync::Lazy;
-use ctclsite::{csv2bt, md2html, mkcontext};
+use ctclsite::{csv2bt, md2html, mkcontext, rl_list_gen};
 #[macro_use] extern crate serde_derive;
 
 #[derive(Deserialize)]
@@ -24,9 +24,11 @@ pub static TEMPLATES: Lazy<Tera> = Lazy::new(|| {
 // About
 #[get("/")]
 async fn root() -> impl Responder {
-    let mut context = mkcontext("about").unwrap();
+    let mkcontext_res = mkcontext("about", "root").unwrap();
+    let mut context = mkcontext_res.0;
+    let pagemeta = mkcontext_res.1;
     
-    let content = md2html("./config/main_about.md");
+    let content = md2html(&pagemeta["content"]);
     context.insert("content", &content.unwrap());
     
     match TEMPLATES.render("main_content.html", &context) {
@@ -40,7 +42,7 @@ async fn root() -> impl Responder {
 
 // RAMList main menu
 async fn rl_main() -> impl Responder {
-    let mut context = mkcontext("ramlist").unwrap();
+    let mut context = mkcontext("ramlist", "root").unwrap().0;
     
     let menu = csv2bt("./config/ramlist/menu.csv").unwrap();
     context.insert("menu", &menu);
@@ -56,8 +58,6 @@ async fn rl_main() -> impl Responder {
 
 // RAMList List page; contents page
 async fn rl_list(list: Path<Info>) -> impl Responder {
-    let mut context = mkcontext("ramlist").unwrap();
-    
     let mut lists = Vec::new();
     // Only add to "lists" what is a list page
     for entry in csv2bt("./config/ramlist/menu.csv").unwrap() {
@@ -68,7 +68,7 @@ async fn rl_list(list: Path<Info>) -> impl Responder {
     
     // Other content page: about
     if list.page == "about" {
-        
+        let context = mkcontext("ramlist", "about").unwrap().0;
         
         match TEMPLATES.render("rl_about.html", &context) {
             Ok(body) => Ok(HttpResponse::Ok().body(body)),
@@ -79,6 +79,7 @@ async fn rl_list(list: Path<Info>) -> impl Responder {
         }
     // Other content page: announcements
     } else if list.page == "log" {
+        let context = mkcontext("ramlist", "log").unwrap().0;
         
         match TEMPLATES.render("rl_log.html", &context) {
             Ok(body) => Ok(HttpResponse::Ok().body(body)),
@@ -91,6 +92,10 @@ async fn rl_list(list: Path<Info>) -> impl Responder {
     // Test if the page is defined in menu.csv
     } else if lists.contains(&list.page) {
     // Get widths of table columns
+    
+        let context = mkcontext("ramlist", &list.page).unwrap().0;
+        
+        let content = rl_list_gen(&list.page);
         
         match TEMPLATES.render("rl_list.html", &context) {
             Ok(body) => Ok(HttpResponse::Ok().body(body)),
@@ -100,6 +105,8 @@ async fn rl_list(list: Path<Info>) -> impl Responder {
             },
         }
     } else {
+        let context = mkcontext("error", "404").unwrap().0;
+    
         match TEMPLATES.render("err_404.html", &context) {
             Ok(body) => Ok(HttpResponse::build(StatusCode::NOT_FOUND).content_type("text/html; charset=utf-8").body(body)),
             Err(err) => {
@@ -112,9 +119,9 @@ async fn rl_list(list: Path<Info>) -> impl Responder {
     
 // Blog post list
 async fn blog_main() -> impl Responder {
-    let mut context = mkcontext("blog").unwrap();
+    let mut context = mkcontext("blog", "root").unwrap().0;
     
-    context.insert("posts", &csv2bt("./config/blog/blog_index.csv").unwrap());
+    context.insert("posts", &csv2bt("./config/blog/posts.csv").unwrap());
     
     match TEMPLATES.render("blog_menu.html", &context) {
         Ok(body) => Ok(HttpResponse::Ok().body(body)),
@@ -126,9 +133,9 @@ async fn blog_main() -> impl Responder {
 }
 
 // Blog post content
-async fn blog_post() -> impl Responder {
+async fn blog_post(post: Path<Info>) -> impl Responder {
     // TODO: Read info for context from blog post index
-    let mut context = mkcontext("blog").unwrap();
+    let mut context = mkcontext("blog", &post.page).unwrap().0;
     
     match TEMPLATES.render("blog_post.html", &context) {
         Ok(body) => Ok(HttpResponse::Ok().body(body)),

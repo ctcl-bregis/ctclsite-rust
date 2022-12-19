@@ -1,1 +1,2 @@
-name
+content,desc,page,title
+./config/about/about_about.md,Welcome,root,Welcome

@@ -4,7 +4,7 @@
     <head lang="en">
         <!-- Windows meta tags -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="msapplication-TileColor" content="#009900">
+        <meta name="msapplication-TileColor" content="{{ color }}">
         <!-- Main tags -->
         <meta charset="UTF-8">
         <title>{{ title }}</title>
@@ -12,14 +12,14 @@
         <meta name="author" content="CrazyblocksTechnologies Computer Laboratories">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta name="description" content="CrazyblocksTechnologies Computer Laboratories - {{ desc }}">
+        <meta name="description" content="{{ desc }} - CrazyblocksTechnologies Computer Laboratories">
         <!-- OpenGraph meta tags -->
         <meta property="og:url" content="https://www.crazyblockstech.com">
         <meta property="og:site_name" content="CrazyblocksTechnologies">
         <meta property="og:title" content="CrazyblocksTechnologies">
         <meta property="og:locale" content="en_US">
-        <meta name="theme-color" content="#009900">
-        <meta property="og:description" content="CrazyblocksTechnologies Computer Laboratories - {{ desc }}">    
+        <meta name="theme-color" content="{{ color }}">
+        <meta property="og:description" content="{{ desc }} - CrazyblocksTechnologies Computer Laboratories">    
         <!-- Include CSS here -->
         <style>
 {% include "main_css.css" %}
