@@ -4,12 +4,12 @@ body {
 }
 
 hr {
-    color: #009900;
+    color: {{ color }};
     border-color: inherit;
     display: block; 
     height: 1px;
     border: 0; 
-    border-top: 2pt solid #009900;
+    border-top: 2pt solid {{ color }};
     margin: 1em 0; 
     padding: 0;
 }
@@ -19,15 +19,15 @@ hr {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #009900;
+    background-color: {{ color }};
 }
 
-.navbar li { float: left;}
+.navbar li {float: left;}
 
 .navbar li a {
-    background-color: #009900;
+    background-color: {{ color }};
     border: 2pt solid;
-    border-color: #009900;
+    border-color: {{ color }};
     color: #FFFFFF;
     padding: 6pt 8pt;
     text-align: center;
@@ -38,7 +38,7 @@ hr {
 }
 
 .btn-group-rlmenu button {
-    background-color: #009900; /* this is used unless overridden by in-line styling */
+    background-color: {{ color }}; /* this is used unless overridden by in-line styling */
     border: 1px solid #000000;
     margin: 1px;
     color: #FFFFFF;
@@ -59,7 +59,7 @@ table {
 
 .navbar .active {
     background-color: #FFFFFF;
-    color: #009900;
+    color: {{ color }};
 }
 
 h1 {color: #000000;}
@@ -67,27 +67,71 @@ h1 {color: #000000;}
 h6 {text-align: center;}
 
 a {
-    color: #009900;
+    color: {{ color }};
     text-decoration: none;
 }
 p {font-size: 12pt;}
 ::selection {
-    background-color: #009900;
+    background-color: {{ color }};
     color: #FFFFFF;
 }
 ::-moz-selection {
-    background-color: #009900;
+    background-color: {{ color }};
     color: #FFFFFF;
 }
 ::-o-selection {
-    background-color: #009900;
+    background-color: {{ color }};
     color: #FFFFFF;
 }
 ::-ms-selection {
-    background-color: #009900;
+    background-color: {{ color }};
     color: #FFFFFF;
 }
 ::-webkit-selection {
-    background-color: #009900;
+    background-color: {{ color }};
     color: #FFFFFF;
 }
+
+body {
+    background-color: #FFFFFF;
+    font-family: "arial";
+}
+
+h1 {
+    color: #000000;
+}
+
+h6 {
+    text-align: center;
+}
+
+.navbar .active {
+    background-color: #FFFFFF;
+    color: {{ color }};
+}
+
+a {
+    color: {{ color }};
+    text-decoration: none;
+}
+
+p {
+    font-size: 12pt;
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th, td {
+    padding: 2pt;
+    text-align: left;
+    border-bottom: 1px solid #666666;
+    font-size: 8pt;
+    word-wrap: break-word;
+}
+tr:nth-child(even) {
+    background-color: #CCCCCC;
+}
+

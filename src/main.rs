@@ -1,13 +1,17 @@
+use std::fmt;
+use std::error::Error;
+use std::collections::BTreeMap;
 use actix_web::{App, web, get, error, HttpResponse, HttpServer, http::StatusCode, Responder, web::Path};
 use tera::{Tera};
 use once_cell::sync::Lazy;
-use ctclsite::{csv2bt, md2html, mkcontext, rl_list_gen};
+use ctclsite::{csv2im, md2html, mkcontext, rl_list_gen};
 #[macro_use] extern crate serde_derive;
 
 #[derive(Deserialize)]
 struct Info {
     page: String,
 }
+
 
 pub static TEMPLATES: Lazy<Tera> = Lazy::new(|| {
     let mut tera = match Tera::new("templates/**/*") {
@@ -34,7 +38,7 @@ async fn root() -> impl Responder {
     match TEMPLATES.render("main_content.html", &context) {
         Ok(body) => Ok(HttpResponse::Ok().body(body)),
         Err(err) => {
-            eprintln!("Tera error: {}", err);
+            eprintln!("Tera error: {}", err.source().unwrap());
             Err(error::ErrorInternalServerError(err))
         },
     }
@@ -44,13 +48,13 @@ async fn root() -> impl Responder {
 async fn rl_main() -> impl Responder {
     let mut context = mkcontext("ramlist", "root").unwrap().0;
     
-    let menu = csv2bt("./config/ramlist/menu.csv").unwrap();
+    let menu = csv2im("./config/ramlist/menu.csv").unwrap();
     context.insert("menu", &menu);
     
     match TEMPLATES.render("rl_menu.html", &context) {
         Ok(body) => Ok(HttpResponse::Ok().body(body)),
         Err(err) => {
-            eprintln!("Tera error: {}", err);
+            eprintln!("Tera error: {}", err.source().unwrap());
             Err(error::ErrorInternalServerError(err))
         }, 
     }
@@ -60,7 +64,7 @@ async fn rl_main() -> impl Responder {
 async fn rl_list(list: Path<Info>) -> impl Responder {
     let mut lists = Vec::new();
     // Only add to "lists" what is a list page
-    for entry in csv2bt("./config/ramlist/menu.csv").unwrap() {
+    for entry in csv2im("./config/ramlist/menu.csv").unwrap() {
         if entry["type"] == "list" {
             lists.push(entry["name"].clone());
         }
@@ -73,34 +77,65 @@ async fn rl_list(list: Path<Info>) -> impl Responder {
         match TEMPLATES.render("rl_about.html", &context) {
             Ok(body) => Ok(HttpResponse::Ok().body(body)),
             Err(err) => {
-                eprintln!("Tera error: {}", err);
+                eprintln!("Tera error: {}", err.source().unwrap());
                 Err(error::ErrorInternalServerError(err))
             },
         }
     // Other content page: announcements
     } else if list.page == "log" {
-        let context = mkcontext("ramlist", "log").unwrap().0;
+        let mut context = mkcontext("ramlist", "log").unwrap().0;
+        
+        let entries = csv2im("./config/ramlist/log/posts.csv").unwrap();
+        context.insert("entries", &entries);
+        
+        for entry in entries {
+            let mut tmpim = BTreeMap::new();
+            tmpim.insert("path", md2html(&format!("./config/ramlist/log/{}", entry["path"].clone())));
+            tmpim.insert("date", Ok(entry["date"].clone()));
+        }
         
         match TEMPLATES.render("rl_log.html", &context) {
             Ok(body) => Ok(HttpResponse::Ok().body(body)),
             Err(err) => {
-                eprintln!("Tera error: {}", err);
+                eprintln!("Tera error: {}", err.source().unwrap());
                 Err(error::ErrorInternalServerError(err))
             },
         }
     // List pages
     // Test if the page is defined in menu.csv
     } else if lists.contains(&list.page) {
-    // Get widths of table columns
-    
-        let context = mkcontext("ramlist", &list.page).unwrap().0;
+        let mut context = mkcontext("ramlist", &list.page).unwrap().0;
         
-        let content = rl_list_gen(&list.page);
+        let content = rl_list_gen(&list.page).unwrap();
+        let tables = &content.0;
+        let headers = &content.1;
+        
+        context.insert("tables", &tables);
+        context.insert("headers", &headers);
+        context.insert("entries", &content.2);
+        
+        // Get vec of table keys; vendor names
+        let mut tables_keys = Vec::new();
+        for (key, value) in tables.iter() {
+            tables_keys.push(key);
+        }
+        context.insert("tables_keys", &tables_keys);
+        
+        // Get vec of header keys
+        let mut headers_keys = Vec::new();
+        for (key, value) in headers.iter() {
+            headers_keys.push(key);
+        }
+        context.insert("headers_keys", &headers_keys);
+        
+        context.insert("table_width", "3000pt");
         
         match TEMPLATES.render("rl_list.html", &context) {
             Ok(body) => Ok(HttpResponse::Ok().body(body)),
             Err(err) => {
-                eprintln!("Tera error: {}", err);
+            
+                
+                eprintln!("Tera error: {}", err.source().unwrap());
                 Err(error::ErrorInternalServerError(err))
             },
         }
@@ -110,7 +145,7 @@ async fn rl_list(list: Path<Info>) -> impl Responder {
         match TEMPLATES.render("err_404.html", &context) {
             Ok(body) => Ok(HttpResponse::build(StatusCode::NOT_FOUND).content_type("text/html; charset=utf-8").body(body)),
             Err(err) => {
-                eprintln!("Tera error: {}", err);
+                eprintln!("Tera error: {}", err.source().unwrap());
                 Err(error::ErrorInternalServerError(err))
             }, 
         }
@@ -121,12 +156,12 @@ async fn rl_list(list: Path<Info>) -> impl Responder {
 async fn blog_main() -> impl Responder {
     let mut context = mkcontext("blog", "root").unwrap().0;
     
-    context.insert("posts", &csv2bt("./config/blog/posts.csv").unwrap());
+    context.insert("posts", &csv2im("./config/blog/posts.csv").unwrap());
     
     match TEMPLATES.render("blog_menu.html", &context) {
         Ok(body) => Ok(HttpResponse::Ok().body(body)),
         Err(err) => {
-            eprintln!("Tera error: {}", err);
+            eprintln!("Tera error: {}", err.source().unwrap());
             Err(error::ErrorInternalServerError(err))
         }, 
     }
@@ -140,7 +175,7 @@ async fn blog_post(post: Path<Info>) -> impl Responder {
     match TEMPLATES.render("blog_post.html", &context) {
         Ok(body) => Ok(HttpResponse::Ok().body(body)),
         Err(err) => {
-            eprintln!("Tera error: {}", err);
+            eprintln!("Tera error: {}", err.source().unwrap());
             Err(error::ErrorInternalServerError(err))
         }, 
     }

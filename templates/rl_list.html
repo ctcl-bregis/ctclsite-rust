@@ -3,14 +3,16 @@
 <!-- end header -->
 <!-- start content -->
     <h1><a href="..">CTCL's RAMList</a> - {{ title }}</h1>
-    <h4><a href="..">Back to menu</a><br>Entries: {{ entries }}<br>List last updated: {{ updated }}</h4>
-    {% for table in tables %}
-    <h2>{{ table["name"] }}</h2>
-    <table>
-        <tr>{% for header in headers %}
-            <th width="{{ header["width"] }}">{{ header["title"] }}</th>
-        {% endfor %}</tr>
-        
+    <h4><a href="..">Back to menu</a><br>Entries: {{ entries }}</h4>
+    {% for vendor in tables_keys %}
+    <h2>{{ vendor }}</h2>
+    <table width="{{ table_width }}">
+        <tr>{% for header in headers_keys %}
+            <th width="{{ headers[header]["width"] }}">{{ headers[header]["title"] }}</th>{% endfor %}
+        </tr>{% for device in tables[vendor] %}
+        <tr>{% for header in headers_keys %}
+            <td>{{ device[header] }}</td>{% endfor %}
+        </tr>{% endfor %}
         
     
     </table>
@@ -19,7 +21,7 @@
 <!-- start footer -->
     <br>
     <!-- override hr width -->
-    <hr width="3000pt">
+    <hr width="{{ table_width }}">
 {% include "rl_footer.html" %}
 <!-- end footer -->
 

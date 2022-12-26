@@ -8,8 +8,8 @@
   membw: "64-bit"
   membs: "DDR3-1866"
   memog: "4 ICs x 16-bit?"
-  memiv: "Hynix"
-  memib: "Hynix"
+  memiv: "hynix"
+  memib: "hynix"
   memic: "2 Gbit"
   memim: 
   memip: 

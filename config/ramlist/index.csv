@@ -1,16 +1,16 @@
-content,desc,page,title
-,RAMList Main Menu,root,RAMList Main Menu
-,List of SDRAM memory modules and what components they use,sdram,SDRAM memory modules
-,List of DDR memory modules and memory modules and what components they use,ddr,DDR memory modules
-,List of DDR2 memory modules and memory modules and what components they use,ddr2,DDR2 memory modules
-,List of DDR3 memory modules and memory modules and what components they use,ddr3,DDR3 memory modules
-,List of DDR4 memory modules and memory modules and what components they use,ddr4,DDR4 memory modules
-,List of DDR5 memory modules and memory modules and what components they use,ddr5,DDR5 memory modules
-,List of Graphics Cards and what components they use,gfx,Graphics Card Memory
-,List of Solid-State Drives and what components they use,ssd,Solid-State Drives
-,List of Hard Disk Drives and Solid-State Hybrid Drives and what components they use,hdd,Hard Disk Drives and Solid-State Hybrid Drives
-,List of Laptop and Chromebooks and what components they use,laptop,Laptop and Chromebook soldered memory
-,"List of Mobile devices (Phones, tablets, PMPs, etc.) and what components they use",mobile,"Mobile devices (Phones, tablets, PMPs, etc.)"
-,"List of other embedded devices, game consoles, single-board computers, system-on-modules and what components they use",embedded,"Other embedded device, game console, single-board computer, system-on-module"
-,,log,Announcements & Updates
-./config/ramlist/about.md,,about,About RAMList
+content,desc,page,title,color
+,RAMList Main Menu,root,RAMList Main Menu,#009900
+,List of SDRAM memory modules and what components they use,sdram,SDRAM memory modules,#996600
+,List of DDR memory modules and memory modules and what components they use,ddr,DDR memory modules,#000099
+,List of DDR2 memory modules and memory modules and what components they use,ddr2,DDR2 memory modules,#999900
+,List of DDR3 memory modules and memory modules and what components they use,ddr3,DDR3 memory modules,#990000
+,List of DDR4 memory modules and memory modules and what components they use,ddr4,DDR4 memory modules,#009999
+,List of DDR5 memory modules and memory modules and what components they use,ddr5,DDR5 memory modules,#990099
+,List of Graphics Cards and what components they use,gfx,Graphics Card Memory,#009900
+,List of Solid-State Drives and what components they use,ssd,Solid-State Drives,#009900
+,List of Hard Disk Drives and Solid-State Hybrid Drives and what components they use,hdd,Hard Disk Drives and Solid-State Hybrid Drives,#009900
+,List of Laptop and Chromebooks and what components they use,laptop,Laptop and Chromebook soldered memory,#009900
+,"List of Mobile devices (Phones, tablets, PMPs, etc.) and what components they use",mobile,"Mobile devices (Phones, tablets, PMPs, etc.)",#009900
+,"List of other embedded devices, game consoles, single-board computers, system-on-modules and what components they use",embedded,"Other embedded device, game console, single-board computer, system-on-module",#009900
+,,log,Announcements & Updates,#009900
+./config/ramlist/about.md,,about,About RAMList,#009900

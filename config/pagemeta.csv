@@ -1,5 +1,5 @@
-page,title,color,index
-about,About,#009900,config/about/index.csv
-blog,Blog Posts,#009900,config/blog/index.csv
-ramlist,RAMList,#000099,config/ramlist/index.csv
-projects,Projects,#009900,config/projects/index.csv
+page,title,index
+about,About,config/about/index.csv
+blog,Blog Posts,config/blog/index.csv
+ramlist,RAMList,config/ramlist/index.csv
+projects,Projects,config/projects/index.csv
