@@ -11,7 +11,6 @@ struct Info {
     page: String,
 }
 
-
 pub static TEMPLATES: Lazy<Tera> = Lazy::new(|| {
     let mut tera = match Tera::new("templates/**/*") {
         Ok(t) => t,
@@ -127,7 +126,7 @@ async fn rl_list(list: Path<Info>) -> impl Responder {
         }
         context.insert("headers_keys", &headers_keys);
         
-        context.insert("table_width", "3000pt");
+        context.insert("table_width", "2750pt");
         
         match TEMPLATES.render("rl_list.html", &context) {
             Ok(body) => Ok(HttpResponse::Ok().body(body)),

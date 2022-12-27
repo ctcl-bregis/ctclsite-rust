@@ -3,8 +3,7 @@
 <!-- end header -->
 <!-- start content -->
     <h1><a href="..">CTCL's RAMList</a> - {{ title }}</h1>
-    <h4><a href="..">Back to menu</a><br>Entries: {{ entries }}</h4>
-    {% for vendor in tables_keys %}
+    <h4><a href="..">Back to menu</a><br>Entries: {{ entries }}</h4>{% for vendor in tables_keys %}
     <h2>{{ vendor }}</h2>
     <table width="{{ table_width }}">
         <tr>{% for header in headers_keys %}
@@ -13,10 +12,7 @@
         <tr>{% for header in headers_keys %}
             <td>{{ device[header] }}</td>{% endfor %}
         </tr>{% endfor %}
-        
-    
-    </table>
-    {% endfor %}
+    </table>{% endfor %}
 <!-- end content -->
 <!-- start footer -->
     <br>
