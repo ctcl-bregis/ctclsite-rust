@@ -1,4 +1,3 @@
-use std::fmt;
 use std::error::Error;
 use std::collections::BTreeMap;
 use actix_web::{App, web, get, error, HttpResponse, HttpServer, http::StatusCode, Responder, web::Path};
@@ -116,14 +115,14 @@ async fn rl_list(list: Path<Info>) -> impl Responder {
         
         // Get vec of table keys; vendor names
         let mut tables_keys = Vec::new();
-        for (key, value) in tables.iter() {
+        for (key, _value) in tables.iter() {
             tables_keys.push(key);
         }
         context.insert("tables_keys", &tables_keys);
         
         // Get vec of header keys
         let mut headers_keys = Vec::new();
-        for (key, value) in headers.iter() {
+        for (key, _value) in headers.iter() {
             headers_keys.push(key);
         }
         context.insert("headers_keys", &headers_keys);

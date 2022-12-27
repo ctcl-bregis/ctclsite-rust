@@ -1,7 +1,7 @@
 use csv::{self, Error};
 //use ::serde::{Deserialize, Deserializer};
 use indexmap::IndexMap;
-use serde_derive::{Deserialize, Serialize};
+//use serde_derive::{Deserialize, Serialize};
 use std::{fs, convert::TryFrom};
 use tera::Context;
 use comrak::{markdown_to_html, ComrakOptions};
@@ -95,7 +95,7 @@ pub fn rl_list_gen(list: &str) -> Result<(IndexMap<String, Vec<IndexMap<String, 
     let mut tables = IndexMap::new();
     for entry in listindex {
     
-        let mut entries = csv2im(&format!("./config/ramlist/lists/{}/{}", list, &entry["file"])).unwrap();
+        let entries = csv2im(&format!("./config/ramlist/lists/{}/{}", list, &entry["file"])).unwrap();
         entrycount = &entrycount + u32::try_from(entries.len()).unwrap();
         
         tables.insert(entry["brand"].clone(), entries);
