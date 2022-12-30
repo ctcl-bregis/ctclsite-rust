@@ -1,7 +1,5 @@
 use csv::{self, Error};
-//use ::serde::{Deserialize, Deserializer};
 use indexmap::IndexMap;
-//use serde_derive::{Deserialize, Serialize};
 use std::{fs, convert::TryFrom};
 use tera::Context;
 use comrak::{markdown_to_html, ComrakOptions};
@@ -21,7 +19,6 @@ pub fn csv2im(path: &str) -> Result<Vec<IndexMap<String, String>>, Error> {
 }
 
 pub fn md2html(path: &str) -> Result<String, IndexMap<String, Error>> {
-    dbg!(&path);
     let md = fs::read_to_string(path)
         .expect("md2html - File read error");
         

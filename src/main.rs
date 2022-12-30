@@ -1,3 +1,5 @@
+// ctclsite-rust
+// CrazyblocksTechnologies Computer Laboratories 2022-2023
 use std::error::Error;
 use std::collections::BTreeMap;
 use actix_web::{App, web, get, error, HttpResponse, HttpServer, http::StatusCode, Responder, web::Path};
@@ -182,7 +184,7 @@ async fn blog_post(post: Path<Info>) -> impl Responder {
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
-        App::new().service(root)
+         App::new().service(root)
             // TODO: figure out how to redirect to page with / at the end
             .route("/ramlist/", web::get().to(rl_main))
             .route("/ramlist/{page}/", web::get().to(rl_list))

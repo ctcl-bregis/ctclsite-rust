@@ -14,3 +14,6 @@ Cargo.lock
 
 # LibreOffice lock file
 *.~lock*
+
+# Make sure website access logs are not uploaded
+/log/*.*
