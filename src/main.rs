@@ -1,5 +1,5 @@
 // ctclsite-rust
-// CrazyblocksTechnologies Computer Laboratories 2022-2023
+// CrazyblocksTechnologies Computer Laboratories - Brayden Regis - 2022-2023
 use std::{error::Error, collections::BTreeMap};
 use actix_web::{App, web, get, error, HttpResponse, HttpServer, http::StatusCode, Responder, web::Path};
 use actix_files as fs;
@@ -37,22 +37,22 @@ async fn root() -> impl Responder {
     dbg!(&sections_index);
     
     // Sections would be vector of BTreeMap's 
-    let mut sections: Vec<BTreeMap<String, String>> = Vec::new();
+    let mut sections = Vec::new();
 
     for i in sections_index {
         let mut section = BTreeMap::new();
         
-        let bgimg = &i["bgimg"];
-        
         // Insert bgimg into section if empty or not
-        section.insert("bgimg", bgimg);
+        section.insert("bgimg", i["bgimg"].clone());
     
         let content = &i["content"];
         if !(content == "") {
-            section.insert("content", &md2html(&format!("./config/about/main/{}", &content)).unwrap());
+            section.insert("content", md2html(&format!("./config/about/main/{}", &content)).unwrap());
         } else {
-            section.insert("content", &String::from(""));
+            section.insert("content", String::from(""));
         }
+        
+        sections.push(section);
     }
     
     context.insert("sections", &sections);
@@ -76,7 +76,7 @@ async fn rl_main() -> impl Responder {
     match TEMPLATES.render("rl_menu.html", &context) {
         Ok(body) => Ok(HttpResponse::Ok().body(body)),
         Err(err) => {
-            eprintln!("Tera error: {}", err.source().unwrap());
+            eprintln!("Tera error: {}", err.source().unwrap().clone());
             Err(error::ErrorInternalServerError(err))
         }, 
     }
@@ -150,6 +150,7 @@ async fn rl_list(list: Path<Info>) -> impl Responder {
         }
         context.insert("headers_keys", &headers_keys);
         
+        // Width may be defined by an external config file later on
         context.insert("table_width", "2750pt");
         
         match TEMPLATES.render("rl_list.html", &context) {
@@ -163,7 +164,7 @@ async fn rl_list(list: Path<Info>) -> impl Responder {
         }
     } else {
         let context = mkcontext("error", "404").unwrap().0;
-    
+        
         match TEMPLATES.render("err_404.html", &context) {
             Ok(body) => Ok(HttpResponse::build(StatusCode::NOT_FOUND).content_type("text/html; charset=utf-8").body(body)),
             Err(err) => {

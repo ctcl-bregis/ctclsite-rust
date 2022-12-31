@@ -22,7 +22,10 @@ hr {
     background-color: {{ color }};
 }
 
-.navbar li {float: left;}
+.navbar li {
+    float: left;
+    list-style-type: none;
+}
 
 .navbar li a {
     background-color: {{ color }};
@@ -148,3 +151,11 @@ tr:nth-child(even) {
     background-color: #CCCCCC;
 }
 
+li::marker {
+    color: {{ color }};
+}
+
+li {
+    color: #000000;
+    list-style-type: square;
+}

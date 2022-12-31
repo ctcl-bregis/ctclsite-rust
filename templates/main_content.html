@@ -1,14 +1,10 @@
-{% include "main_header.html" %}
-<!-- end header -->
-<!-- start content -->
-    {% for section in sections %}
-    <section style="background-image:url(/static/bgimg/{{ section["bgimg"] }})">
-         
-         
-         
-    </section>
-    {% endfor %}
-
+{% include "main_header.html" %}<!-- end header -->
+<!-- start content -->{% for section in sections %}
+    <hr>{% if section["bgimg"] == "" %}
+    <section>{% else %}
+    <section style="background-image:url(/static/bgimg/{{ section["bgimg"] }})">{% endif %}
+         {{ section["content"]|safe }}
+    </section>{% endfor %}
 <!-- end content -->
 <!-- start footer -->        
 {% include "main_footer.html" %}
