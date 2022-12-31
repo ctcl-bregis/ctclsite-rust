@@ -1,9 +1,9 @@
 // ctclsite-rust
 // CrazyblocksTechnologies Computer Laboratories 2022-2023
-use std::error::Error;
-use std::collections::BTreeMap;
+use std::{error::Error, collections::BTreeMap};
 use actix_web::{App, web, get, error, HttpResponse, HttpServer, http::StatusCode, Responder, web::Path};
-use tera::{Tera};
+use actix_files as fs;
+use tera::Tera;
 use once_cell::sync::Lazy;
 use ctclsite::{csv2im, md2html, mkcontext, rl_list_gen};
 #[macro_use] extern crate serde_derive;
@@ -29,11 +29,33 @@ pub static TEMPLATES: Lazy<Tera> = Lazy::new(|| {
 #[get("/")]
 async fn root() -> impl Responder {
     let mkcontext_res = mkcontext("about", "root").unwrap();
+    // mkcontext result 0 is the context
     let mut context = mkcontext_res.0;
-    let pagemeta = mkcontext_res.1;
     
-    let content = md2html(&pagemeta["content"]);
-    context.insert("content", &content.unwrap());
+    // Get section info
+    let sections_index = csv2im("./config/about/main/sections.csv").unwrap();
+    dbg!(&sections_index);
+    
+    // Sections would be vector of BTreeMap's 
+    let mut sections: Vec<BTreeMap<String, String>> = Vec::new();
+
+    for i in sections_index {
+        let mut section = BTreeMap::new();
+        
+        let bgimg = &i["bgimg"];
+        
+        // Insert bgimg into section if empty or not
+        section.insert("bgimg", bgimg);
+    
+        let content = &i["content"];
+        if !(content == "") {
+            section.insert("content", &md2html(&format!("./config/about/main/{}", &content)).unwrap());
+        } else {
+            section.insert("content", &String::from(""));
+        }
+    }
+    
+    context.insert("sections", &sections);
     
     match TEMPLATES.render("main_content.html", &context) {
         Ok(body) => Ok(HttpResponse::Ok().body(body)),

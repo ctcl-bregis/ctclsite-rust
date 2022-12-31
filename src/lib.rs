@@ -3,7 +3,7 @@ use indexmap::IndexMap;
 use std::{fs, convert::TryFrom};
 use tera::Context;
 use comrak::{markdown_to_html, ComrakOptions};
-
+use minifier::css::minify;
 type Record = IndexMap<String, String>;
 
 // Input: file path, Output: Vector of IndexMap objects
@@ -20,7 +20,7 @@ pub fn csv2im(path: &str) -> Result<Vec<IndexMap<String, String>>, Error> {
 
 pub fn md2html(path: &str) -> Result<String, IndexMap<String, Error>> {
     let md = fs::read_to_string(path)
-        .expect("md2html - File read error");
+        .expect("## md2html: File read error");
         
     let content = markdown_to_html(&md, &ComrakOptions::default());
     
@@ -67,6 +67,16 @@ pub fn mkcontext(metapage: &str, subpage: &str) -> Result<(Context, IndexMap<Str
     context.insert("title", &subpage_entry["title"]);
     context.insert("desc", &subpage_entry["desc"]);
     context.insert("color", &subpage_entry["color"]);
+    
+    // Hardcode the path to the css file for now
+    let mut maincss = fs::read_to_string("./templates/styling.css")
+        .expect("## mkcontext: File read error");
+    
+    maincss = maincss.replace("{{ color }}", &subpage_entry["color"]);
+    
+    let css = minify(&maincss)
+        .expect("## mkcontext: CSS minification failed");
+    context.insert("css", &css.to_string());
     
     Ok((context, subpage_entry))
 }
