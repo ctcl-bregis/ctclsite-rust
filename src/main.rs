@@ -177,9 +177,11 @@ async fn rl_list(list: Path<Info>) -> impl Responder {
     
 // Blog post list
 async fn blog_main() -> impl Responder {
-    let mut context = mkcontext("blog", "root").unwrap().0;
+    let mut result = mkcontext("blog", "root").unwrap();
+    let mut context = result.0;
     
-    context.insert("posts", &csv2im("./config/blog/posts.csv").unwrap());
+    context.insert("posts", &csv2im("./config/blog/index.csv").unwrap());
+    
     
     match TEMPLATES.render("blog_menu.html", &context) {
         Ok(body) => Ok(HttpResponse::Ok().body(body)),
@@ -193,7 +195,11 @@ async fn blog_main() -> impl Responder {
 // Blog post content
 async fn blog_post(post: Path<Info>) -> impl Responder {
     // TODO: Read info for context from blog post index
-    let mut context = mkcontext("blog", &post.page).unwrap().0;
+    let mut result = mkcontext("blog", &post.page).unwrap();
+    let mut context = result.0;
+    let mut index = result.1;
+    
+    context.insert("content", &md2html(&format!("./config/blog/{}", &index["content"])).unwrap());
     
     match TEMPLATES.render("blog_post.html", &context) {
         Ok(body) => Ok(HttpResponse::Ok().body(body)),
@@ -209,6 +215,8 @@ async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
          App::new().service(root)
             // TODO: figure out how to redirect to page with / at the end
+            .service(fs::Files::new("/static/", "./static/")
+                .use_last_modified(true))
             .route("/ramlist/", web::get().to(rl_main))
             .route("/ramlist/{page}/", web::get().to(rl_list))
             .route("/blog/", web::get().to(blog_main))
