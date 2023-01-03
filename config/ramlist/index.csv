@@ -13,4 +13,4 @@ content,desc,page,title,color
 ,"List of Mobile devices (Phones, tablets, PMPs, etc.) and what components they use",mobile,"Mobile devices (Phones, tablets, PMPs, etc.)",#009900
 ,"List of other embedded devices, game consoles, single-board computers, system-on-modules and what components they use",embedded,"Other embedded device, game console, single-board computer, system-on-module",#009900
 ,,log,Announcements & Updates,#009900
-./config/ramlist/about.md,,about,About RAMList,#009900
+./config/ramlist/rl_about.md,,about,About RAMList,#009900

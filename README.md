@@ -5,7 +5,7 @@ This is the upcoming Rust version of the [CrazyblocksTechnologies Computer Labor
 
 
 ## RAMList
-As this is all of the website's source code that I've written, RAMList and its contents are included here.
+As this is all of the website's source code that I've written. RAMList and its contents are included here.
 
 ### Contributing
 Pull requests are welcome for adding more content to RAMList.

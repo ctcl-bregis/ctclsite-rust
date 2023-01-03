@@ -1,7 +1,0 @@
-# General configuration
-[site]
-themecolor = "#009900"
-
-# Configuration specific to RAMList
-[ramlist]
-tablewidth = "2750pt"

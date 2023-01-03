@@ -1,12 +1,12 @@
 # Privacy Policy
-#### Date of last modification: December 16, 2022
+#### Date of last modification: January 1, 2023
 
 This website is optimized for security, privacy, performance and compatibility. To achieve this, the website does not contain or serve any JavaScript, plugins or other tracking technologies.
 
-For more technical details, including source code, see [About](/about).
+This website is open source software, see About the Website at [About](/).
 
-### Information that is collected and why it is collected</h3>
-Information that is automatically collected when an user visits the webpage consists of:</p>
+### Information that is collected and why it is collected
+Information that is automatically collected when an user visits the webpage consists of:
 
 - Time and date of the request
 - IP address

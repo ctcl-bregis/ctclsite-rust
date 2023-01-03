@@ -11,7 +11,15 @@ body {
 
 h1, h2 {
     font-family: "pix5x5";
+    font-weight: normal;
 }
+
+/* Do not use pix5x5 on RAMList, chosen after poll */
+.nopix {
+    font-family: "arial";
+    font-weight: bold;
+}
+
 
 h6 {
     text-align: center;

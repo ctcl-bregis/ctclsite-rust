@@ -2,9 +2,9 @@
     <body>
 <!-- end header -->
 <!-- start content -->
-    <h1><a href="..">CTCL's RAMList</a> - {{ title }}</h1>
+    <h1 class="nopix"><a href="..">RAMList</a> - {{ title }}</h1>
     <h4><a href="..">Back to menu</a><br>Entries: {{ entries }}</h4>{% for vendor in tables_keys %}
-    <h2>{{ vendor }}</h2>
+    <h2 class="nopix">{{ vendor }}</h2>
     <table width="{{ table_width }}">
         <tr>{% for header in headers_keys %}
             <th width="{{ headers[header]["width"] }}">{{ headers[header]["title"] }}</th>{% endfor %}

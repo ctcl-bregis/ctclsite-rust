@@ -2,10 +2,10 @@
     <body>
 <!-- end header -->
 <!-- start content -->
-        <h1><a href="/">CTCL's</a> RAMList - {{ title }}</h1>
-        <p><a href="..">Back to menu</p>{% for entry in entries %}
-        <h2></h2>
-
+        <h1 class="nopix">RAMList - {{ title }}</h1>
+        <p><a href="..">Back to menu</a></p>{% for entry in content %}
+        <h2 class="nopix">{{ entry["date"] }}</h2>
+        {{ entry["content"]|safe }}
         {% endfor %}
 <!-- end content -->
 <!-- start footer -->

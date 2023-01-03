@@ -2,7 +2,7 @@
     <body>
 <!-- end header -->
 <!-- start content -->
-        <h1>RAMList - Main Menu</h1>
+        <h1 class="nopix">RAMList - Main Menu</h1>
         <h4><a href="/">Back to website</a></h4>
         <div class="btn-group-rlmenu">{% for item in menu %}
             <a href="{{ item["link"] }}"><button style="background-color: {{ item["bclr"] }}; color: {{ item["tclr"] }}">{{ item["desc"] }}</button></a>{% endfor %}

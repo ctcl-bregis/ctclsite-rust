@@ -1,3 +1,6 @@
+// Purpose: commonly used functions to organize main.rs code
+// Date: November 28, 2022 - January 1, 2023
+// CrazyblocksTechnologies Computer Laboratories, Brayden Regis - 2022-2023
 use csv::{self, Error};
 use indexmap::IndexMap;
 use std::{fs, convert::TryFrom};
@@ -64,6 +67,7 @@ pub fn mkcontext(metapage: &str, subpage: &str) -> Result<(Context, IndexMap<Str
         panic!("Subpage not found");
     }
     
+    // Prefill
     context.insert("title", &subpage_entry["title"]);
     context.insert("desc", &subpage_entry["desc"]);
     context.insert("color", &subpage_entry["color"]);
@@ -102,8 +106,8 @@ pub fn rl_list_gen(list: &str) -> Result<(IndexMap<String, Vec<IndexMap<String, 
     
     let mut tables = IndexMap::new();
     for entry in listindex {
-    
         let entries = csv2im(&format!("./config/ramlist/lists/{}/{}", list, &entry["file"])).unwrap();
+        // try_from to convert from usize to u32
         entrycount = &entrycount + u32::try_from(entries.len()).unwrap();
         
         tables.insert(entry["brand"].clone(), entries);

@@ -1,5 +1,6 @@
-// ctclsite-rust
-// CrazyblocksTechnologies Computer Laboratories - Brayden Regis - 2022-2023
+// Purpose: Main program code
+// Date: November 28, 2022 - January 1, 2023
+// CrazyblocksTechnologies Computer Laboratories, Brayden Regis - 2022-2023
 use std::{error::Error, collections::BTreeMap};
 use actix_web::{App, web, get, error, HttpResponse, HttpServer, http::StatusCode, Responder, web::Path};
 use actix_files as fs;
@@ -34,7 +35,6 @@ async fn root() -> impl Responder {
     
     // Get section info
     let sections_index = csv2im("./config/about/main/sections.csv").unwrap();
-    dbg!(&sections_index);
     
     // Sections would be vector of BTreeMap's 
     let mut sections = Vec::new();
@@ -66,6 +66,23 @@ async fn root() -> impl Responder {
     }
 }
 
+// Privacy Policy page just reads a Markdown file
+async fn privacy() -> impl Responder {
+    let result = mkcontext("about", "privacy").unwrap();
+    let mut context = result.0;
+    let index = result.1;
+    
+    context.insert("content", &md2html("./config/about/about_privacy.md").unwrap());
+    
+    match TEMPLATES.render("main_privacy.html", &context) {
+        Ok(body) => Ok(HttpResponse::Ok().body(body)),
+        Err(err) => {
+            eprintln!("Tera error: {}", err.source().unwrap().clone());
+            Err(error::ErrorInternalServerError(err))
+        }, 
+    }
+}
+
 // RAMList main menu
 async fn rl_main() -> impl Responder {
     let mut context = mkcontext("ramlist", "root").unwrap().0;
@@ -82,8 +99,8 @@ async fn rl_main() -> impl Responder {
     }
 }
 
-// RAMList List page; contents page
-async fn rl_list(list: Path<Info>) -> impl Responder {
+// RAMList non-menu pages
+async fn ramlist(list: Path<Info>) -> impl Responder {
     let mut lists = Vec::new();
     // Only add to "lists" what is a list page
     for entry in csv2im("./config/ramlist/menu.csv").unwrap() {
@@ -94,7 +111,16 @@ async fn rl_list(list: Path<Info>) -> impl Responder {
     
     // Other content page: about
     if list.page == "about" {
-        let context = mkcontext("ramlist", "about").unwrap().0;
+        let result = mkcontext("ramlist", "about").unwrap();
+        let mut context = result.0;
+        let index = result.1;
+        
+        let mut content = md2html(&index["content"]).unwrap();
+        
+        // Hacky solution until I find out how to have Comrak put the class there
+        content = content.replace("<h2>", "<h2 class=\"nopix\">");
+        
+        context.insert("content", &content);
         
         match TEMPLATES.render("rl_about.html", &context) {
             Ok(body) => Ok(HttpResponse::Ok().body(body)),
@@ -108,13 +134,16 @@ async fn rl_list(list: Path<Info>) -> impl Responder {
         let mut context = mkcontext("ramlist", "log").unwrap().0;
         
         let entries = csv2im("./config/ramlist/log/posts.csv").unwrap();
-        context.insert("entries", &entries);
         
+        let mut content = Vec::new();
         for entry in entries {
             let mut tmpim = BTreeMap::new();
-            tmpim.insert("path", md2html(&format!("./config/ramlist/log/{}", entry["path"].clone())));
-            tmpim.insert("date", Ok(entry["date"].clone()));
+            tmpim.insert("content", md2html(&format!("./config/ramlist/log/{}", entry["path"].clone())).unwrap());
+            tmpim.insert("date", entry["date"].clone());
+            content.push(tmpim); 
         }
+        
+        context.insert("content", &content);
         
         match TEMPLATES.render("rl_log.html", &context) {
             Ok(body) => Ok(HttpResponse::Ok().body(body)),
@@ -156,8 +185,6 @@ async fn rl_list(list: Path<Info>) -> impl Responder {
         match TEMPLATES.render("rl_list.html", &context) {
             Ok(body) => Ok(HttpResponse::Ok().body(body)),
             Err(err) => {
-            
-                
                 eprintln!("Tera error: {}", err.source().unwrap());
                 Err(error::ErrorInternalServerError(err))
             },
@@ -177,11 +204,10 @@ async fn rl_list(list: Path<Info>) -> impl Responder {
     
 // Blog post list
 async fn blog_main() -> impl Responder {
-    let mut result = mkcontext("blog", "root").unwrap();
+    let result = mkcontext("blog", "root").unwrap();
     let mut context = result.0;
     
     context.insert("posts", &csv2im("./config/blog/index.csv").unwrap());
-    
     
     match TEMPLATES.render("blog_menu.html", &context) {
         Ok(body) => Ok(HttpResponse::Ok().body(body)),
@@ -195,9 +221,9 @@ async fn blog_main() -> impl Responder {
 // Blog post content
 async fn blog_post(post: Path<Info>) -> impl Responder {
     // TODO: Read info for context from blog post index
-    let mut result = mkcontext("blog", &post.page).unwrap();
+    let result = mkcontext("blog", &post.page).unwrap();
     let mut context = result.0;
-    let mut index = result.1;
+    let index = result.1;
     
     context.insert("content", &md2html(&format!("./config/blog/{}", &index["content"])).unwrap());
     
@@ -218,9 +244,10 @@ async fn main() -> std::io::Result<()> {
             .service(fs::Files::new("/static/", "./static/")
                 .use_last_modified(true))
             .route("/ramlist/", web::get().to(rl_main))
-            .route("/ramlist/{page}/", web::get().to(rl_list))
+            .route("/ramlist/{page}/", web::get().to(ramlist))
             .route("/blog/", web::get().to(blog_main))
             .route("/blog/{page}/", web::get().to(blog_post))
+            .route("/privacy/", web::get().to(privacy))
     })
     .bind("127.0.0.1:5000")?
     .run()
