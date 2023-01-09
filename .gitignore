@@ -17,3 +17,6 @@ Cargo.lock
 
 # Make sure website access logs are not uploaded
 /log/*.*
+
+# Upload for files that should not be synced
+/noupload/*.*

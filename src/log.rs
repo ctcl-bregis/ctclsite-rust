@@ -1,15 +1,4 @@
-// ctclsite-rust
-// CrazyblocksTechnologies Computer Laboratories 2022-2023
-use std::{fs::OpenOptions, io::Write, path::Path};
-use colored::{Colorize, control};
-use chrono::Local;
+// Purpose: Access log code
+// Date: January 7, 2023 - 
+// CrazyblocksTechnologies Computer Laboratories, Brayden Regis - 2023
 
-const log_directory = "log/";
-const current_log = "current.csv";
-
-pub enum Header {
-    SUCCESS,
-    INFO,
-    WARNING,
-    ERROR
-}
