@@ -1,6 +1,9 @@
 ## About Me
 My name is Brayden Regis and I am currently 18 years old. 
 
+My main focus is on computer science and computer engineering with interests in the fields of **Electrical Engineering**, **Mechanical Engineering**, **Software Development** and more. 
+
+### Where am I
 Currently, I am located near the city of Richmond, Virginia, United States in Chesterfield County. 
 
-I was born in Syracuse, New York and lived in the city of Oneida, New York until 2011 where I moved to Jacksonville, Florida. After a year in Florida, I moved to Midlothian, Virginia. 
+

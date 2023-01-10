@@ -13,6 +13,7 @@ General changes from ctclsite (Python) 2.1.4:
 - Contact, About and Main pages merged
 - CSS and HTML minification to reduce the amount of data sent to the browser
 - More customization
+- Logging is removed and is now handled by the upstream webserver, may it be apache2 or nginx.
 
 RAMList changes:
 

@@ -1,6 +1,6 @@
 {% include "main_header.html" %}
 <!-- end header -->
-    <h2>Blog Posts</h2>{% for post in posts %}{% if post["content"] != "" %}
+    <h2 class="center">Blog Posts</h2>{% for post in posts %}{% if post["content"] != "" %}
     <div class="blogpost">
         <h2><a href="{{ post["page"]}}/">{{ post["title"] }}</a></h2>
         <h5>Date: {{ post["date"] }} - Category: {{ post["bcat"] }}</h5>
