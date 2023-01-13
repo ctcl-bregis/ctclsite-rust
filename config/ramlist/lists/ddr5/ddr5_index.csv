@@ -1,14 +1,16 @@
 file,brand
-"ddr5_adata.csv","ADATA"
-"ddr5_corsair.csv","Corsair"
-"ddr5_crucial.csv","Crucial (Micron Technology)"
-"ddr5_gskill.csv","G.Skill"
-"ddr5_kingston.csv","Kingston Technology"
-"ddr5_micron.csv","Micron Technology"
-"ddr5_netac.csv","Netac"
-"ddr5_patriot.csv","Patriot Memory"
-"ddr5_sabrent.csv","Sabrent"
-"ddr5_samsung.csv","Samsung Electronics"
-"ddr5_skhynix.csv","SK hynix"
-"ddr5_team.csv","Team Group"
-"ddr5_vcolor.csv","V-Color"
+ddr5_adata.csv,ADATA
+ddr5_corsair.csv,Corsair
+ddr5_crucial.csv,Crucial (Micron Technology)
+ddr5_gskill.csv,G.Skill
+ddr5_kingston.csv,Kingston Technology
+ddr5_micron.csv,Micron Technology
+ddr5_netac.csv,Netac
+ddr5_patriot.csv,Patriot Memory
+ddr5_pny.csv,PNY
+ddr5_sabrent.csv,Sabrent
+ddr5_samsung.csv,Samsung Electronics
+ddr5_siliconpower.csv,Silicon Power
+ddr5_skhynix.csv,SK hynix
+ddr5_team.csv,Team Group
+ddr5_vcolor.csv,V-Color

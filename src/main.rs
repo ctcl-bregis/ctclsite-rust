@@ -70,7 +70,6 @@ async fn root() -> impl Responder {
 async fn privacy() -> impl Responder {
     let result = mkcontext("about", "privacy").unwrap();
     let mut context = result.0;
-    let index = result.1;
     
     context.insert("content", &md2html("./config/about/about_privacy.md").unwrap());
     

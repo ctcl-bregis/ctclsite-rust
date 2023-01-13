@@ -1,5 +1,14 @@
 ctclsite-rust changelog
 
+## 0.1.1
+First release after the official release of the Rust version of the website.
+
+Changes since 0.1.0:
+
+- Removed unused variable outlined in a warning during compilation
+- Fixed repeating background CSS for About/Welcome page.
+
+
 ## 0.1.0
 First release of the Rust version of the website
 
@@ -20,5 +29,3 @@ RAMList changes:
 - Significant performance improvement due to using Rust over Python for the backend
 - List pages are now themed the same color as the menu button
 - Removed "Last Updated" due to the date changing every time the website is updated. "Last Updated" may be added in a future update once a more reliable way to keep track of modification times.
-
-
