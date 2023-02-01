@@ -1,5 +1,0 @@
-model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
-DDR3-1600 CS3222270 (2x1GB),DIMM,Unbuffered,non-ECC,1 GiB,,,1.9V,DDR3-1600,7-6-6-18,,Micron,,Micron D9GTR (BY-187E),N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
-DDR3-1600 CS3222271 (2x1GB),DIMM,Unbuffered,non-ECC,1 GiB,,,1.9V,DDR3-1600,7-7-7-14,,Micron,,Micron D9JNL (HX-187E),N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
-DDR3-1800 CS3222580 (2x1GB),DIMM,Unbuffered,non-ECC,1 GiB,,,1.9V,DDR3-1800,8-7-6-21,,Micron,,Micron D9GTR (BY-187E),N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
-DDR3-1875 CS3222770 (2x1GB),DIMM,Unbuffered,non-ECC,1 GiB,,,2.0V,DDR3-1875,8-8-8-16,,Micron,,Micron D9JNL (HX-187E),N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/

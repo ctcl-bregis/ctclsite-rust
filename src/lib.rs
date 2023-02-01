@@ -1,5 +1,5 @@
 // Purpose: commonly used functions to organize main.rs code
-// Date: November 28, 2022 - January 1, 2023
+// Date: November 28, 2022 - February 1, 2023
 // CrazyblocksTechnologies Computer Laboratories, Brayden Regis - 2022-2023
 use csv::{self, Error};
 use indexmap::IndexMap;
@@ -84,43 +84,4 @@ pub fn mkcontext(metapage: &str, subpage: &str) -> Result<(Context, IndexMap<Str
     context.insert("css", &css.to_string());
     
     Ok((context, subpage_entry))
-}
-
-// This part here is why I switched to Rust, the amount of data read from CSV files is large enough that it is important this function is optimized
-// Output Tuple item 1: Tables Vector of IndexMaps of Vectors of IndexMaps
-// Output Tuple item 2: Table column widths
-// Output Tuple item 3: Number of entries, unsigned 32-bit integer
-pub fn rl_list_gen(list: &str) -> Result<(IndexMap<String, Vec<IndexMap<String, String>>>, IndexMap<String, IndexMap<String, String>>, u32), Error> {
-    let rl_index = csv2im("./config/ramlist/menu.csv").unwrap();
-    
-    let mut tableinfo: Vec<IndexMap<String, String>> = Vec::new();
-    let mut listindex: Vec<IndexMap<String, String>> = Vec::new();
-    for entry in rl_index {
-        if entry["name"] == list {
-           tableinfo = csv2im(&format!("./config/ramlist/lists/{}", &entry["tabc"])).unwrap();
-           listindex = csv2im(&format!("./config/ramlist/lists/{}", &entry["indc"])).unwrap();
-        }
-    }
-    
-    let mut entrycount: u32 = 0;
-    
-    let mut tables = IndexMap::new();
-    for entry in listindex {
-        let entries = csv2im(&format!("./config/ramlist/lists/{}/{}", list, &entry["file"])).unwrap();
-        // try_from to convert from usize to u32
-        entrycount = &entrycount + u32::try_from(entries.len()).unwrap();
-        
-        tables.insert(entry["brand"].clone(), entries);
-    }
-
-    let mut colwidths = IndexMap::new();
-    for entry in tableinfo {
-        let mut tmpim = IndexMap::new();
-        tmpim.insert(String::from("title"), entry["title"].clone());
-        tmpim.insert(String::from("width"), entry["width"].clone());
-        // ydata name left over from when the website used YAML with Python...
-        colwidths.insert(entry["ydata"].clone(), tmpim);
-    }
-    
-    Ok((tables, colwidths, entrycount))
 }

@@ -1,4 +1,0 @@
-model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
-Advanced DDR,DIMM,Unbuffered,non-ECC,,,,,,,,Samsung,,Samsung TCCD,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
-New Advanced DDR533,DIMM,Unbuffered,non-ECC,,,,,PC4300,3.0-4-4-8-1T,,hynix,,hynix D5,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
-New Advanced DDR400,DIMM,Unbuffered,non-ECC,,,,,PC3200,2.0-2-2-5-1T,,Samsung,,Samsung TCCD,N/A,,Brainpower PCB,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List

@@ -1,2 +1,0 @@
-model,devtp,pconn,wconn,protp,prosp,provn,promd,memsp,membr,memvn,memmd,flisp,flibr,flivn,flimd,stkos,othic,othsp,notes,insrc
-DO BERA1300CD,In-vehicle entertainment (car radio),MMC? RCA connectors?,N/A,,,TAMUL,85L8035X01,SDRAM 16 Mbit x16 two banks,ESMT,PSC/Powerchip or Nanya??,ESMT M12L16161A-7T,SOIC-8,cFeon (Eon),Eon,,N/A,Titan Micro TM2313 audio switch; various Diodes Incorporated LDO regulators,,,"Kris (Pictures, device specs, IC info), CrazyblocksTechnologies Computer Laboratories (Other ICs)"

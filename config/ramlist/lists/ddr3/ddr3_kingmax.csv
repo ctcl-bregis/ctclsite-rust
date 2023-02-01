@@ -1,5 +1,0 @@
-model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
-DDR3-1333 (1GB/2GB),DIMM,Unbuffered,non-ECC,1 GiB/2 GiB,,,1.5V,DDR3-1333,5-5-5-15,,Elpida,,,N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
-DDR3-1333 FLFD45F-B8EE9 (1GB),DIMM,Unbuffered,non-ECC,1 GiB,,,1.5V,DDR3-1333,9-9-9-24,,Elpida,,Elpida BASE-DJ-E,N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
-DDR3-1600 FLGD45F-B8MF7 (1GB),DIMM,Unbuffered,non-ECC,1 GiB,,,1.9V,DDR3-1600,7-7-7-X,,Micron,,Micron D9JNM (HX-15E),N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
-DDR3-2200 Hercules FLKE85F-B8xxx (2x2GB),DIMM,Unbuffered,non-ECC,2 GiB,,,1.7,DDR3-2200,10-10-10-30,,Powerchip,,,N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/

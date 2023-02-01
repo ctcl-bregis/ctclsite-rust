@@ -1,2 +1,0 @@
-model,devtp,pconn,wconn,protp,prosp,provn,promd,memsp,membr,memvn,memmd,flisp,flibr,flivn,flimd,stkos,othic,othsp,notes,insrc
-EPC3208,Cable modem,"2x phone connectors, 12v barrel connector, 1x Ethernet, 1x type-f coaxial cable connector",N/A,System on Chip,MIPS32,Broadcom,BCM3382,DDR2 SDRAM 512 Mbit x16,Samsung,Samsung,K4T51163QJ-BCF7,,,,,,,,,"Kris (Pictures, device specs, IC info), CrazyblocksTechnologies Computer Laboratories (Other ICs), OpenWrt Wiki (SoC information) https://openwrt.org/docs/techref/hardware/soc/soc.broadcom.bcm33xx"

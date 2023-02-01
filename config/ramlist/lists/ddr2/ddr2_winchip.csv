@@ -1,3 +1,0 @@
-model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
-64A0TMTHE8G17C,DIMM,Unbuffered,non-ECC,1 GiByte,2Rx8,512 Mibit,2.4v,DDR2-1200,CL5-5-5-15,,Micron,Micron,D9GMH,N/A,,,,https://www.techpowerup.com/review/winchip-ddr2-1200-2gb/2.html
-64C0MFTHE8G17C,DIMM,Unbuffered,non-ECC,4 GiByte,2Rx8,2 GiBit,,DDR2-667,CL5-5-5-15,,Micron/SpecTek,Winchip,SpecTek AEC2560KQ-30 256X8DDR2 K,N/A,,,,https://www.techpowerup.com/review/winchip-ddr2-667-16gb-kit/2.html

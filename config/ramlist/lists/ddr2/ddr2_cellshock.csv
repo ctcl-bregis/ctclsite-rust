@@ -1,7 +1,0 @@
-model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
-DDR2-800 CS2111041 / CS2221041,DIMM,Unbuffered,non-ECC,,,,2.2v,DDR2-800,4-4-4-12,,Micron,,Micron D9GMH (B6-3),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
-DDR2-800 Only batch 1.09196.95.360 & 1.09256.97.360,DIMM,Unbuffered,non-ECC,,,,2.2v,DDR2-800,4-4-4-12,,Micron,,Micron D9GKX (B6-25E),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
-DDR2-800 V² CS2111042 / CS2221042,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,4-4-4-12,,Elpida,,Elpida,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
-DDR2-1000 CS2221440,DIMM,Unbuffered,non-ECC,,,,2.2v,DDR2-1000,4-4-4-12,,Micron,,Micron D9GKX (B6-25E),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
-DDR2-1000 CAS 5 CS2221450,DIMM,Unbuffered,non-ECC,,,,2.2v,DDR2-1000,5-5-5-15,,Micron,,"Micron D9GKX (B6-25E), Micron D9GMH (B6-3)",N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
-CS2221550,DIMM,Unbuffered,non-ECC,1 GiByte,2Rx8,512 Mibit,2.3v,DDR2-1066,5-5-5-15,,Micron,Micron,Micron D9GMH ,N/A,,,,https://www.techpowerup.com/review/cellshock-pc2-8500/2.html

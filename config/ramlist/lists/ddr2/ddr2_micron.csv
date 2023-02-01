@@ -1,6 +1,0 @@
-model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
-DDR2-533 ECC MT9HTF6472AY-53EA1,DIMM,Unbuffered,ECC,,,,,DDR2-533,,,Micron,,Micron D9CRZ (BT-37E),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
-DDR2-533 ECC MT9HTF6472AY-53EB3,DIMM,Unbuffered,ECC,,,,,DDR2-533,,,Micron,,Micron D9DCN (CB-37E),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
-DDR2-533 MT4HTF3264AY-53ED3,DIMM,Unbuffered,non-ECC,,,,,DDR2-533,,,Micron,,Micron D9GKW (B6-37E),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
-DDR2-533 MT8HTF6464AY-53ED7,DIMM,Unbuffered,non-ECC,,,,,DDR2-533,,,Micron,,Micron D9GCT (B6-37E),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
-DDR2-800 MT16HTF12864AY-800D4,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,6.0-6-6-X,,Micron,,Micron D9HCD (B6-25),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List

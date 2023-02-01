@@ -1,7 +1,0 @@
-model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
-AORUS GP-ARS16G44,DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.5v,DDR4-4400,19-26-26-46,,SK hynix,SK hynix,D-die,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
-AORUS GP-AR36C18S8K2HU416R,DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.35v,DDR4-3600,18-19-19-39,,SK hynix,SK hynix,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
-AORUS GP-AR32C16S8K2HU416R,DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.35v,DDR4-3200,16-18-18-38,,SK hynix,SK hynix,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
-AORUS GP-ARS16G32,DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.35v,DDR4-3200,16-18-18-38,,SK hynix,SK hynix,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
-GP-DSG64G32,DIMM,Unbuffered,non-ECC,32 GiByte,2Rx8,16 Gibit,1.35v,DDR4-3200,16-18-18-38,,SK hynix,SK hynix,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
-GP-GR26C16S8K2HU416,DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.2v,DDR4-2666,16-16-16-35,,SK hynix,SK hynix,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]

@@ -1,3 +1,0 @@
-"model","mdtyp","rgtyp","errcd","mdcap","orgzn","iccap","icvlt","rtdsp","tming","icpkg","icmfg","icbnd","icmdl","rgvnd","flvnd","mpmic","pcvnd","notes","insrc"
-"TS4800ALE-16G","DIMM","Unbuffered","non-ECC","16 GiByte","1Rx8","16 Gibit","1.1v","DDR5-4800 (OC) DDR5-4800 (Base)","39-39-39-77",,"Samsung","Samsung",,"N/A",,,,,"Gigabyte Z790 AORUS MASTER QVL: https://www.gigabyte.com/Motherboard/Z790-AORUS-MASTER-rev-10/support#support-memsup"
-"TS4800ALE-32G","DIMM","Unbuffered","non-ECC","32 GiByte","2Rx8","16 Gibit","1.1v","DDR5-4800 (OC) DDR5-4800 (Base)","39-39-39-77",,"Samsung","Samsung",,"N/A",,,,,"Gigabyte Z790 AORUS MASTER QVL: https://www.gigabyte.com/Motherboard/Z790-AORUS-MASTER-rev-10/support#support-memsup"

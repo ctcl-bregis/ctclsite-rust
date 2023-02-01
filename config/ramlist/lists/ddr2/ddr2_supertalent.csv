@@ -1,3 +1,0 @@
-model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
-DDR2-800 T800UX2GC4 (2x T800UB1GC4 modules),DIMM,Unbuffered,non-ECC,,,,2.2V,DDR2-800,4.0-4-3-8,,"Micron, ProMOS",,"Micron D9GCT (B6-37E), Micron D9GMH (B6-3), Micron D9GKX (B6-25E), Micron D9DQT (BT-3)",N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
-DDR2-1000 T1000UX2G4 (2 x T1000UB1G4 modules),DIMM,Unbuffered,non-ECC,,,,2.2V,DDR2-1000,4.0-5-4-15,,Micron,,"Micron D9GMH (B6-3), Micron D9GKX (B6-25E), Micron D9DQT (BT-3)",N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List

@@ -1,5 +1,0 @@
-model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
-Nano Gaming GLMF63F-D8KAEA HABX (4x4GB),DIMM,Unbuffered,non-ECC ,4 GiByte,,,1.35v,PC4-22400 ,14-15-15-35,,SK hynix,,SK hynix H5AN4G8NMFR-TFC,N/A,,,,i4memory RAM List https://web.archive.org/web/20160515151107/http://ramlist.i4memory.com/ddr4/
-GLLF62F-DAKZIG CLBU Z11C,DIMM,Unbuffered,non-ECC,4 GiByte,1Rx16,8 Gibit,1.2v,DDR4-2400,17-17-17-39,,Micron,SpecTek (Micron),,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
-GLLF62F-DAKZIG CLBU Z11B,DIMM,Unbuffered,non-ECC,4 GiByte,1Rx16,8 Gibit,1.2v,DDR4-2400,17-17-17-39,,Micron,SpecTek (Micron),,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
-GLLH22F-18KIIA CFBU2 Z11B,DIMM,Unbuffered,non-ECC,16 GiByte,2Rx8,8 Gibit,1.2v,DDR4-2400,17-17-17-39,,Micron,SpecTek (Micron),,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
