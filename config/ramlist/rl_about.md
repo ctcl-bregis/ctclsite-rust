@@ -204,7 +204,7 @@ RAMList purposely does not include information on what ICs perform "better" in o
 ### Component Changes
 Vendors may change components; use different ICs from time to time. A listed module could use different components from what is shown on RAMList.
 
-If this is the case, please [contact me](https://crazyblockstech.com/contact/) for additions and/or changes.
+If this is the case, please [contact me](https://crazyblockstech.com/) for additions and/or changes.
 
 ### Original Research
 Content added with the source being "CrazyblocksTechnologies Computer Labs", "CTCL", etc. is classified as original research. I strive to show as much information as possible while being accurate. If more information is needed, such as photo proof, please [contact me](https://crazyblockstech.com/contact/). This is also the case with "Kris", who is an online friend, usually I have pictures of the described module/component when adding such entries.

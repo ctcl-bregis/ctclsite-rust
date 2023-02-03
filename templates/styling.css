@@ -4,8 +4,8 @@
 }
 
 body {
-    background-color: #FFFFFF;
-    color: #000000;
+    background-color: #000000;
+    color: #FFFFFF;
     font-family: "arial";
     margin: 0pt;
 }
@@ -80,8 +80,8 @@ hr {
 
 .btn-group-rlmenu button {
     background-color: {{ color }}; /* this is used unless overridden by in-line styling */
-    border: 1px solid #000000;
-    margin: 1px;
+    border: 0.5pt solid #000000;
+    margin: 0pt;
     color: #FFFFFF;
     padding: 10px 24px;
     cursor: pointer; 
@@ -110,6 +110,7 @@ a {
 
 p {
     font-size: 12pt;
+    margin: 8pt;
 }
 
 ::selection {
@@ -138,18 +139,13 @@ p {
 }
 
 body {
-    background-color: #FFFFFF;
+    background-color: #000000;
     font-family: "arial";
 }
 
 .navbar .active {
-    background-color: #FFFFFF;
+    background-color: #000000;
     color: {{ color }};
-}
-
-p {
-    font-size: 12pt;
-    margin: 8pt;
 }
 
 th, td {
@@ -161,7 +157,7 @@ th, td {
 }
 
 tr:nth-child(even) {
-    background-color: #CCCCCC;
+    background-color: #404040;
 }
 
 li::marker {
@@ -169,13 +165,12 @@ li::marker {
 }
 
 li {
-    color: #000000;
+    /* color: #000000; */
     list-style-type: square;
 }
 
 section {
     min-height: 200pt;
-    /* <section> is only used on the about page for now which is "dark theme" */
     color: #FFFFFF;
     background-color: #000000;
     background-size: cover;
