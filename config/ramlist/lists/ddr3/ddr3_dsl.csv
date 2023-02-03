@@ -1,0 +1,194 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+D3VH28081XH15AA ,DIMM,Unbuffered,non-ECC,1 GiByte,"1Rx8, 8 ICs",1 GiBit,1.5v,DDR3-1333,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,Very-low Profile (VLP) DIMM,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3VP28081XH15AB,DIMM,Unbuffered,non-ECC,1 GiByte,"1Rx8, 8 ICs",1 GiBit,1.5v,DDR3-1333,,,ProMOS,ProMOS,,N/A,,,Very-low Profile (VLP) DIMM,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3VH56081XH18AB ,DIMM,Unbuffered,non-ECC,2 GiByte,"1Rx8, 8 ICs",2 GiBit,1.5v,DDR3-1066,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,Very-low Profile (VLP) DIMM,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3VS56081XH18AC,DIMM,Unbuffered,non-ECC,2 GiByte,"1Rx8, 8 ICs",2 GiBit,1.5v,DDR3-1066,,,Samsung,Samsung,,N/A,,,Very-low Profile (VLP) DIMM,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3VH56081XH15AB,DIMM,Unbuffered,non-ECC,2 GiByte,"1Rx8, 8 ICs",2 GiBit,1.5v,DDR3-1333,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,Very-low Profile (VLP) DIMM,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3VS56081XH15AB ,DIMM,Unbuffered,non-ECC,2 GiByte,"1Rx8, 8 ICs",2 GiBit,1.5v,DDR3-1333,,,Samsung,Samsung,,N/A,,,Very-low Profile (VLP) DIMM,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3VH56082XH15AB ,DIMM,Unbuffered,non-ECC,4 GiByte,"2Rx8, 16 ICs",2 GiBit,1.5v,DDR3-1333,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,Very-low Profile (VLP) DIMM,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3VS56082XH15AB ,DIMM,Unbuffered,non-ECC,4 GiByte,"2Rx8, 16 ICs",2 GiBit,1.5v,DDR3-1333,,,Samsung,Samsung,,N/A,,,Very-low Profile (VLP) DIMM,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3VH12081XH18AB ,DIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.5v,DDR3-1333,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,Very-low Profile (VLP) DIMM,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3VS12081XH18AB ,DIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.5v,DDR3-1333,,,Samsung,Samsung,,N/A,,,Very-low Profile (VLP) DIMM,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3VS12081XH12AA ,DIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.5v,DDR3-1600,,,Samsung,Samsung,,N/A,,,Very-low Profile (VLP) DIMM,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3VH12082XH15AB ,DIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1333,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,Very-low Profile (VLP) DIMM,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3VS12082XH15AB ,DIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1333,,,Samsung,Samsung,,N/A,,,Very-low Profile (VLP) DIMM,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UP28081XH18AC ,DIMM,Unbuffered,non-ECC,1 GiByte,"1Rx8, 8 ICs",1 GiBit,1.5v,DDR3-1066 ,,,ProMOS,ProMOS,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UH28081XH18AB ,DIMM,Unbuffered,non-ECC,1 GiByte,"1Rx8, 8 ICs",1 GiBit,1.5v,DDR3-1066 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3US28081XH18AB ,DIMM,Unbuffered,non-ECC,1 GiByte,"1Rx8, 8 ICs",1 GiBit,1.5v,DDR3-1066 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UP28081XH15AB ,DIMM,Unbuffered,non-ECC,1 GiByte,"1Rx8, 8 ICs",1 GiBit,1.5v,DDR3-1333 ,,,ProMOS,ProMOS,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UH28081XH15AA ,DIMM,Unbuffered,non-ECC,1 GiByte,"1Rx8, 8 ICs",1 GiBit,1.5v,DDR3-1333 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3US28081XH15AA ,DIMM,Unbuffered,non-ECC,1 GiByte,"1Rx8, 8 ICs",1 GiBit,1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UP28081XH12AA ,DIMM,Unbuffered,non-ECC,1 GiByte,"1Rx8, 8 ICs",1 GiBit,1.5v,DDR3-1600,,,ProMOS,ProMOS,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UP28082XH18AC ,DIMM,Unbuffered,non-ECC,2 GiByte,"2Rx8, 16 ICs",1 GiBit,1.5v,DDR3-1066 ,,,ProMOS,ProMOS,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UH28082XH18AB ,DIMM,Unbuffered,non-ECC,2 GiByte,"2Rx8, 16 ICs",1 GiBit,1.5v,DDR3-1066 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3US28082XH18AB ,DIMM,Unbuffered,non-ECC,2 GiByte,"2Rx8, 16 ICs",1 GiBit,1.5v,DDR3-1066 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UP28082XH15AB ,DIMM,Unbuffered,non-ECC,2 GiByte,"2Rx8, 16 ICs",1 GiBit,1.5v,DDR3-1333 ,,,ProMOS,ProMOS,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UH28082XH15AA ,DIMM,Unbuffered,non-ECC,2 GiByte,"2Rx8, 16 ICs",1 GiBit,1.5v,DDR3-1333 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3US28082XH15AA ,DIMM,Unbuffered,non-ECC,2 GiByte,"2Rx8, 16 ICs",1 GiBit,1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UH56081XH15AB ,DIMM,Unbuffered,non-ECC,2 GiByte,"1Rx8, 8 ICs",2 GiBit,1.5v,DDR3-1333 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3US56081XH15AB ,DIMM,Unbuffered,non-ECC,2 GiByte,"1Rx8, 8 ICs",2 GiBit,1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UH56081XH12AA ,DIMM,Unbuffered,non-ECC,2 GiByte,"1Rx8, 8 ICs",2 GiBit,1.5v,DDR3-1600 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3US56081XH12AA ,DIMM,Unbuffered,non-ECC,2 GiByte,"1Rx8, 8 ICs",2 GiBit,1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3US56081XH10AA ,DIMM,Unbuffered,non-ECC,2 GiByte,"1Rx8, 8 ICs",2 GiBit,1.5v,DDR3-1866 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UH56082XH18AB,DIMM,Unbuffered,non-ECC,4 GiByte,"2Rx8, 16 ICs",2 GiBit,1.5v,DDR3-1066 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3US56082XH18AC,DIMM,Unbuffered,non-ECC,4 GiByte,"2Rx8, 16 ICs",2 GiBit,1.5v,DDR3-1066 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UH56082XH15AB ,DIMM,Unbuffered,non-ECC,4 GiByte,"2Rx8, 16 ICs",2 GiBit,1.5v,DDR3-1333 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3US56082XH15AB,DIMM,Unbuffered,non-ECC,4 GiByte,"2Rx8, 16 ICs",2 GiBit,1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UH56082XH12AA,DIMM,Unbuffered,non-ECC,4 GiByte,"2Rx8, 16 ICs",2 GiBit,1.5v,DDR3-1600,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3US56082XH12AA ,DIMM,Unbuffered,non-ECC,4 GiByte,"2Rx8, 16 ICs",2 GiBit,1.5v,DDR3-1600,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UH12081XH12AA,DIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.5v,DDR3-1600 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3US12081XH12AA,DIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UM12081XH10AA ,DIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.5v,DDR3-1866 ,,,Micron,Micron,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UH12081XL12AA ,DIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.35v/1.5v,DDR3-1600 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3US12081XL12AA ,DIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.35v/1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UM12081XL10AA ,DIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.35v/1.5v,DDR3-1866 ,,,Micron,Micron,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3US12081XL10AA ,DIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.35v/1.5v,DDR3-1866 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UH12082XH18AC ,DIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1066 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3US12082XH18AC ,DIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1066 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UM12082XH18AD ,DIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1066 ,,,Micron,Micron,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UH12082XH15AB,DIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1333 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3US12082XH15AB ,DIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UM12082XH15AC,DIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1333 ,,,Micron,Micron,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UH12082XH12AA,DIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1600,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3US12082XH12AA,DIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UM12082XH12AB,DIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1600,,,Micron,Micron,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UM12082XH10AA,DIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1866,,,Micron,Micron,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UH12082XL12AA,DIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.35v/1.5v,DDR3-1600 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3US12082XL12AA,DIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.35v/1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UM12082XL10AA,DIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.35v/1.5v,DDR3-1866 ,,,Micron,Micron,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3US12082XL10AA,DIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.35v/1.5v,DDR3-1866 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UI1G082XL12AB,DIMM,Unbuffered,non-ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.35v/1.5v,DDR3-1600 ,,,ISSI,,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3UP1G082XL12AB,DIMM,Unbuffered,non-ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.35v/1.5v,DDR3-1600 ,,,ProMOS,ProMOS,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SP28081XH18AC,SODIMM,Unbuffered,non-ECC,1 GiByte,"1Rx8, 8 ICs",1 GiBit,1.5v,DDR3-1066 ,,,ProMOS,ProMOS,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS28081XH18AB ,SODIMM,Unbuffered,non-ECC,1 GiByte,"1Rx8, 8 ICs",1 GiBit,1.5v,DDR3-1066 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS28161XH18AC ,SODIMM,Unbuffered,non-ECC,1 GiByte,"1Rx16, 4 ICs",2 GiBit,1.5v,DDR3-1066 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS28161XL18AC,SODIMM,Unbuffered,non-ECC,1 GiByte,"1Rx16, 4 ICs",2 GiBit,1.35v/1.5v,DDR3-1066 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SP28081XH15AB,SODIMM,Unbuffered,non-ECC,1 GiByte,"1Rx8, 8 ICs",1 GiBit,1.5v,DDR3-1333 ,,,ProMOS,ProMOS,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS28081XH15AA,SODIMM,Unbuffered,non-ECC,1 GiByte,"1Rx8, 8 ICs",1 GiBit,1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS28161XH15AB ,SODIMM,Unbuffered,non-ECC,1 GiByte,"1Rx16, 4 ICs",2 GiBit,1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS28161XL15AB,SODIMM,Unbuffered,non-ECC,1 GiByte,"1Rx16, 4 ICs",2 GiBit,1.35v/1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SP28081XH12AA,SODIMM,Unbuffered,non-ECC,1 GiByte,"1Rx8, 8 ICs",1 GiBit,1.5v,DDR3-1600 ,,,ProMOS,ProMOS,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS28161XH12AA ,SODIMM,Unbuffered,non-ECC,1 GiByte,"1Rx16, 4 ICs",2 GiBit,1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS28161XL12AA,SODIMM,Unbuffered,non-ECC,1 GiByte,"1Rx16, 4 ICs",2 GiBit,1.35v/1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SN28161XL10AA,SODIMM,Unbuffered,non-ECC,1 GiByte,"1Rx16, 4 ICs",2 GiBit,1.35v/1.5v,DDR3-1866 ,,,Nanya,Nanya,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS28161XL10AA,SODIMM,Unbuffered,non-ECC,1 GiByte,"1Rx16, 4 ICs",2 GiBit,1.35v/1.5v,DDR3-1866 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SP28082XH18AC,SODIMM,Unbuffered,non-ECC,2 GiByte,"2Rx8, 16 ICs",1 GiBit,1.5v,DDR3-1066 ,,,ProMOS,ProMOS,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS28082XH18AB,SODIMM,Unbuffered,non-ECC,2 GiByte,"2Rx8, 16 ICs",1 GiBit,1.5v,DDR3-1066 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SH56081XH18AB,SODIMM,Unbuffered,non-ECC,2 GiByte,"1Rx8, 8 ICs",2 GiBit,1.5v,DDR3-1066 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS56081XH18AC,SODIMM,Unbuffered,non-ECC,2 GiByte,"1Rx8, 8 ICs",2 GiBit,1.5v,DDR3-1066 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS56161XH18AC,SODIMM,Unbuffered,non-ECC,2 GiByte,"1Rx16, 4 ICs",4 GiBit,1.5v,DDR3-1066 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SH56081XH15AB,SODIMM,Unbuffered,non-ECC,2 GiByte,"1Rx8, 8 ICs",2 GiBit,1.5v,DDR3-1333 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS56081XH15AB,SODIMM,Unbuffered,non-ECC,2 GiByte,"1Rx8, 8 ICs",2 GiBit,1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS56081XL15AB,SODIMM,Unbuffered,non-ECC,2 GiByte,"1Rx8, 8 ICs",2 GiBit,1.35v/1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS56161XH15AB,SODIMM,Unbuffered,non-ECC,2 GiByte,"1Rx16, 4 ICs",4 GiBit,1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS56161XL15AB,SODIMM,Unbuffered,non-ECC,2 GiByte,"1Rx16, 4 ICs",4 GiBit,1.35v/1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SH56081XH12AA,SODIMM,Unbuffered,non-ECC,2 GiByte,"1Rx8, 8 ICs",2 GiBit,1.5v,DDR3-1600 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS56081XH12AA,SODIMM,Unbuffered,non-ECC,2 GiByte,"1Rx8, 8 ICs",2 GiBit,1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS56161XH12AA,SODIMM,Unbuffered,non-ECC,2 GiByte,"1Rx16, 4 ICs",4 GiBit,1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS56081XH10AA,SODIMM,Unbuffered,non-ECC,2 GiByte,"1Rx8, 8 ICs",2 GiBit,1.5v,DDR3-1866 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SH56081XL12AA,SODIMM,Unbuffered,non-ECC,2 GiByte,"1Rx8, 8 ICs",2 GiBit,1.35v/1.5v,DDR3-1600 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS56081XL12AA,SODIMM,Unbuffered,non-ECC,2 GiByte,"1Rx8, 8 ICs",2 GiBit,1.35v/1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS56161XL12AA,SODIMM,Unbuffered,non-ECC,2 GiByte,"1Rx16, 4 ICs",4 GiBit,1.35v/1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SH56161XL10AA,SODIMM,Unbuffered,non-ECC,2 GiByte,"1Rx16, 4 ICs",4 GiBit,1.35v/1.5v,DDR3-1866 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SN56161XL10AA,SODIMM,Unbuffered,non-ECC,2 GiByte,"1Rx16, 4 ICs",4 GiBit,1.35v/1.5v,DDR3-1866 ,,,Nanya,Nanya,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS56161XL10AA,SODIMM,Unbuffered,non-ECC,2 GiByte,"1Rx16, 4 ICs",4 GiBit,1.35v/1.5v,DDR3-1866 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SH56082XH18AB,SODIMM,Unbuffered,non-ECC,4 GiByte,"2Rx8, 16 ICs",2 GiBit,1.5v,DDR3-1066 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS56082XH18AC,SODIMM,Unbuffered,non-ECC,4 GiByte,"2Rx8, 16 ICs",2 GiBit,1.5v,DDR3-1066 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SE56082XH18AB,SODIMM,Unbuffered,non-ECC,4 GiByte,"2Rx8, 16 ICs",2 GiBit,1.5v,DDR3-1066 ,,,Elpida,Elpida,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SH56082XH15AB,SODIMM,Unbuffered,non-ECC,4 GiByte,"2Rx8, 16 ICs",2 GiBit,1.5v,DDR3-1333 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS56082XH15AB,SODIMM,Unbuffered,non-ECC,4 GiByte,"2Rx8, 16 ICs",2 GiBit,1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SE56082XH15AA,SODIMM,Unbuffered,non-ECC,4 GiByte,"2Rx8, 16 ICs",2 GiBit,1.5v,DDR3-1333 ,,,Elpida,Elpida,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SH56082XH12AA,SODIMM,Unbuffered,non-ECC,4 GiByte,"2Rx8, 16 ICs",2 GiBit,1.5v,DDR3-1600 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS56082XH12AA,SODIMM,Unbuffered,non-ECC,4 GiByte,"2Rx8, 16 ICs",2 GiBit,1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SH12081XL15AB,SODIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.35v/1.5v,DDR3-1333 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS12081XL15AB,SODIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.35v/1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SH12081XH12AA,SODIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.5v,DDR3-1600 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS12081XH12AA,SODIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SM12081XH10AA,SODIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.5v,DDR3-1866 ,,,Micron,Micron,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS12081XH10AA,SODIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.5v,DDR3-1866 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SH12081XL12AA ,SODIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.35v/1.5v,DDR3-1600 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS12081XL12AA ,SODIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.35v/1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SH56162XL10AA,SODIMM,Unbuffered,non-ECC,4 GiByte,"2Rx16, 8 ICs",4 GiBit,1.35v/1.5v,DDR3-1866 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SN56162XL10AA,SODIMM,Unbuffered,non-ECC,4 GiByte,"2Rx16, 8 ICs",4 GiBit,1.35v/1.5v,DDR3-1866 ,,,Nanya,Nanya,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS56162XL10AA,SODIMM,Unbuffered,non-ECC,4 GiByte,"2Rx16, 8 ICs",4 GiBit,1.35v/1.5v,DDR3-1866 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SM12081XL10AA ,SODIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.35v/1.5v,DDR3-1866 ,,,Micron,Micron,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS12081XL10AA ,SODIMM,Unbuffered,non-ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.35v/1.5v,DDR3-1866 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS12082XH18AC,SODIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1066 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SE12082XH18AC,SODIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1066 ,,,Elpida,Elpida,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SH12082XH15AB,SODIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1333 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS12082XH15AB,SODIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SE12082XH15AB,SODIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1333 ,,,Elpida,Elpida,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SH12082XL15AB,SODIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.35v/1.5v,DDR3-1333 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS12082XL15AB,SODIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.35v/1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SH12082XH12AA,SODIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1600 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS12082XH12AA,SODIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SE12082XH12AA,SODIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1600 ,,,Elpida,Elpida,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SH12082XL12AA,SODIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.35v/1.5v,DDR3-1600 ,,,hynix/SK hynix,hynix/SK hynix,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS12082XL12AA,SODIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.35v/1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SM12082XL10AA,SODIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.35v/1.5v,DDR3-1866 ,,,Micron,Micron,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SS12082XL10AA,SODIMM,Unbuffered,non-ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.35v/1.5v,DDR3-1866 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SI1G082XL12AB,SODIMM,Unbuffered,non-ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.35v/1.5v,DDR3-1600 ,,,ISSI,,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3SP1G082XL12AB,SODIMM,Unbuffered,non-ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.35v/1.5v,DDR3-1600 ,,,ProMOS,ProMOS,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3XS12081XH18AC,SODIMM,Unbuffered,ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.5v,DDR3-1066 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3XM12081XH15AB,SODIMM,Unbuffered,ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.5v,DDR3-1333 ,,,Micron,Micron,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3XS12081XH15AB,SODIMM,Unbuffered,ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3XS12081XL15AB,SODIMM,Unbuffered,ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.35v/1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3XM12081XH12AA,SODIMM,Unbuffered,ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.5v,DDR3-1600 ,,,Micron,Micron,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3XS12081XH12AA,SODIMM,Unbuffered,ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3XS12081XL12AA,SODIMM,Unbuffered,ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.35v/1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3XM12081XH10AA,SODIMM,Unbuffered,ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.5v,DDR3-1866 ,,,Micron,Micron,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3XS12081XH10AA,SODIMM,Unbuffered,ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.5v,DDR3-1866 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3XM12081XL10AA,SODIMM,Unbuffered,ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.35v/1.5v,DDR3-1866 ,,,Micron,Micron,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3XS12081XL10AA,SODIMM,Unbuffered,ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.35v/1.5v,DDR3-1866 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3XS12082XH18AC,SODIMM,Unbuffered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1066 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3XM12082XH15AB ,SODIMM,Unbuffered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1333 ,,,Micron,Micron,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3XS12082XH15AB ,SODIMM,Unbuffered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3XS12082XL15AB,SODIMM,Unbuffered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.35v/1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3XM12082XH12AA,SODIMM,Unbuffered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1600 ,,,Micron,Micron,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3XS12082XH12AA,SODIMM,Unbuffered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3XS12082XL12AA,SODIMM,Unbuffered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.35v/1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3XM12082XH10AA,SODIMM,Unbuffered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1866 ,,,Micron,Micron,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3XS12082XH10AA,SODIMM,Unbuffered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1866 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3XM12082XL10AA,SODIMM,Unbuffered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.35v/1.5v,DDR3-1866 ,,,Micron,Micron,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3XS12082XL10AA,SODIMM,Unbuffered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.35v/1.5v,DDR3-1866 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3EP28081XH18AB,DIMM,Unbuffered,ECC,1 GiByte,"1Rx8, 8 ICs",1 GiBit,1.5v,DDR3-1066 ,,,ProMOS,ProMOS,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3EP28081XH15AA,DIMM,Unbuffered,ECC,1 GiByte,"1Rx8, 8 ICs",1 GiBit,1.5v,DDR3-1333 ,,,ProMOS,ProMOS,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3EP28081XH12AA,DIMM,Unbuffered,ECC,1 GiByte,"1Rx8, 8 ICs",1 GiBit,1.5v,DDR3-1600 ,,,ProMOS,ProMOS,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3EP28082XH18AB,DIMM,Unbuffered,ECC,2 GiByte,"2Rx8, 16 ICs",1 GiBit,1.5v,DDR3-1066 ,,,ProMOS,ProMOS,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3EP28082XH15AA,DIMM,Unbuffered,ECC,2 GiByte,"2Rx8, 16 ICs",1 GiBit,1.5v,DDR3-1333 ,,,ProMOS,ProMOS,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3EP28082XH12AA,DIMM,Unbuffered,ECC,2 GiByte,"2Rx8, 16 ICs",1 GiBit,1.5v,DDR3-1600 ,,,ProMOS,ProMOS,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3ES56081XH12AA,DIMM,Unbuffered,ECC,2 GiByte,"1Rx8, 8 ICs",2 GiBit,1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3ES56081XL12AA,DIMM,Unbuffered,ECC,2 GiByte,"1Rx8, 8 ICs",2 GiBit,1.35v/1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3EP56081XH10AA,DIMM,Unbuffered,ECC,2 GiByte,"1Rx8, 8 ICs",2 GiBit,1.5v,DDR3-1866 ,,,ProMOS,ProMOS,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3EP56081XL12AA,DIMM,Unbuffered,ECC,2 GiByte,"1Rx8, 8 ICs",2 GiBit,1.35v/1.5v,DDR3-1866 ,,,ProMOS,ProMOS,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3ES56082XH15AB,DIMM,Unbuffered,ECC,4 GiByte,"2Rx8, 16 ICs",2 GiBit,1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3ES56082XL15AB,DIMM,Unbuffered,ECC,4 GiByte,"2Rx8, 16 ICs",2 GiBit,1.35v/1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3ES56082XH12AA,DIMM,Unbuffered,ECC,4 GiByte,"2Rx8, 16 ICs",2 GiBit,1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3ES56082XL12AA,DIMM,Unbuffered,ECC,4 GiByte,"2Rx8, 16 ICs",2 GiBit,1.35v/1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3ES12081XH15AB,DIMM,Unbuffered,ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3ES12081XL15AB,DIMM,Unbuffered,ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.35v/1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3ES12081XH12AA,DIMM,Unbuffered,ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3ES12081XL12AA,DIMM,Unbuffered,ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.35v/1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3EM12081XH10AA,DIMM,Unbuffered,ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.5v,DDR3-1866 ,,,Micron,Micron,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3ES12081XH10AA,DIMM,Unbuffered,ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.5v,DDR3-1866 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3EM12081XL10AA,DIMM,Unbuffered,ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.35v/1.5v,DDR3-1866 ,,,Micron,Micron,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3ES12081XL10AA,DIMM,Unbuffered,ECC,4 GiByte,"1Rx8, 8 ICs",4 GiBit,1.35v/1.5v,DDR3-1866 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3ES12082XH15AB,DIMM,Unbuffered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3ES12082XL15AB,DIMM,Unbuffered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.35v/1.5v,DDR3-1333 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3ES12082XH12AA,DIMM,Unbuffered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3ES12082XL12AA,DIMM,Unbuffered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.35v/1.5v,DDR3-1600 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3EM12082XH10AA,DIMM,Unbuffered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1866 ,,,Micron,Micron,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3ES12082XH10AA,DIMM,Unbuffered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1866 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3EM12082XL10AA,DIMM,Unbuffered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.35v/1.5v,DDR3-1866 ,,,Micron,Micron,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3ES12082XL10AA,DIMM,Unbuffered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.35v/1.5v,DDR3-1866 ,,,Samsung,Samsung,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3EI1G082XL12AB,DIMM,Unbuffered,ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.35v/1.5v,DDR3-1600 ,,,ISSI,,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3EP1G082XL12AB,DIMM,Unbuffered,ECC,16 GiByte,"2Rx8, 16 ICs",8 GiBit,1.35v/1.5v,DDR3-1600 ,,,ProMOS,ProMOS,,N/A,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3RH28082XH18AB,DIMM,Registered,ECC,2 GiByte,"2Rx8, 16 ICs",1 GiBit,1.5v,DDR3-1066,,,hynix/SK hynix,hynix/SK hynix,,,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3RH28082XH15AA,DIMM,Registered,ECC,2 GiByte,"2Rx8, 16 ICs",1 GiBit,1.5v,DDR3-1333,,,hynix/SK hynix,hynix/SK hynix,,,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3RH28082XH12AA,DIMM,Registered,ECC,2 GiByte,"2Rx8, 16 ICs",1 GiBit,1.5v,DDR3-1600,,,hynix/SK hynix,hynix/SK hynix,,,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3RH56082XH18AB,DIMM,Registered,ECC,4 GiByte,"2Rx8, 16 ICs",2 GiBit,1.5v,DDR3-1066,,,hynix/SK hynix,hynix/SK hynix,,,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3RH56082XH15AA,DIMM,Registered,ECC,4 GiByte,"2Rx8, 16 ICs",2 GiBit,1.5v,DDR3-1333,,,hynix/SK hynix,hynix/SK hynix,,,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3RH56082XH12AA,DIMM,Registered,ECC,4 GiByte,"2Rx8, 16 ICs",2 GiBit,1.5v,DDR3-1600,,,hynix/SK hynix,hynix/SK hynix,,,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3RS12082XH18AC,DIMM,Registered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1066,,,Samsung,Samsung,,,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3RS12082XH15AB,DIMM,Registered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1333,,,Samsung,Samsung,,,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/
+D3RS12082XH12AA,DIMM,Registered,ECC,8 GiByte,"2Rx8, 16 ICs",4 GiBit,1.5v,DDR3-1600,,,Samsung,Samsung,,,,,,DSL Tech: https://www.dsltech.com.tw/products/ddr3-sram/

@@ -1,0 +1,5 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+DDR PC333 1Bank 256M Chip M256-333-8,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx8, 8 ICs",256 Mbit,,PC2700,,,,MDT,MDT25D25680S-6 (relabel),N/A,,,,https://asset.msi.com/file/test_report/TR10_149.pdf MSI QVL [PDF]
+DDR PC333 2Bank 256M Chip M512-333-16,DIMM,Unbuffered,non-ECC,512 MByte,"2Rx8, 16 ICs",256 Mbit,,PC2700,,,,MDT,MDT25D25680S-6 (relabel),N/A,,,,https://asset.msi.com/file/test_report/TR10_149.pdf MSI QVL [PDF]
+DDR PC400 1Bank 256M Chip M256-400-8,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx8, 8 ICs",256 Mbit,,PC3200,,,,MDT,MDT25D25680S-5 (relabel),N/A,,,,https://asset.msi.com/file/test_report/TR10_149.pdf MSI QVL [PDF]
+DDR PC400 2Bnak 256M Chip M512-400-16,DIMM,Unbuffered,non-ECC,512 MByte,"2Rx8, 16 ICs",256 Mbit,,PC3200,,,,MDT,MDT25D25680S-5 (relabel),N/A,,,,https://asset.msi.com/file/test_report/TR10_149.pdf MSI QVL [PDF]

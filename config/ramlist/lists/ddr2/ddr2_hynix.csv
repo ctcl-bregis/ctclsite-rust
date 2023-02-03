@@ -1,0 +1,10 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+Unknown,DIMM,Unbuffered,non-ECC,2 GByte,"2Rx8, 16 ICs",1 Gbit,,DDR2-800,CL5-5-5-15,,hynix,hynix,"HY5PS1G831CFP-Y5 C-die (Die code: MWHAM753H, Date code: 822A; Week 22, 2008, Location: KOR; South Korea)",N/A,K-line/HUAJIE,,"Label text other than model no.: Assembled in China, 512MB 2Rx16 DDR2-667S-555-12-A0, B6D80215042, Lead-free mark","Kris (Pictures, IC indentification, Timings), CrazyblocksTechnologies Computer Laboratories (Confirmation, EEPROM, label info)"
+DDR2-533 Value,DIMM,Unbuffered,non-ECC,,,,,DDR2-533,3.0-3-3-X,,hynix,,hynix FP-C3,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-533 Value HYMP564U648-C4 AA,DIMM,Unbuffered,non-ECC,,,,,DDR2-533,4.0-4-4-12,,hynix,,"hynix F-C4, hynix FP-C4",N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-533 Value HYMP564U64P8-C4 AA,DIMM,Unbuffered,non-ECC,,,,,DDR2-533,4.0-4-4-12,,hynix,,hynix FP-C4,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-533 Value HYMP512U648-C4 AA,DIMM,Unbuffered,non-ECC,,,,,DDR2-533,4.0-4-4-12,,hynix,,hynix F-C4,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667 Value,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,4.0-4-4-X,,hynix,,hynix FP-Y4,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667 Value,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,5.0-5-5-X,,hynix,,hynix FP-Y5,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667 Value,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,6.0-6-6-X,,hynix,,hynix F-Y6,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800 HYMP512U64CP8-S5 AB,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,5.0-5-5-12,,hynix,,hynix FP-S5,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List

@@ -1,0 +1,70 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+DDR2-533C3,DIMM,Unbuffered,non-ECC,,,,,DDR2-533,3.0-3-3-8,,Elpida,,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-533C3PRO,DIMM,Unbuffered,non-ECC,,,,,DDR2-533,3.0-3-3-8,,Elpida,,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667C4 Rev 1.1,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,4.0-4-4-12,,Samsung,,Samsung B,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667C4 Rev 2.4 & 2.5,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,4.0-4-4-12,,Micron,,Micron D9Dxx (BT-x),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667C4 Rev 2.6 & 2.7,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,4.0-4-4-12,,Micron,,Micron B,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667C4 Rev 2.8 & 2.9,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,4.0-4-4-12,,Micron,,Micron D9Gxx (B6-x),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667C4 Rev 3.x,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,4.0-4-4-12,,Infineon,,Infineon A/B,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667C4 Rev 4.2,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,4.0-4-4-12,,Elpida,,Elpida E,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667C4 Rev 4.3 & 4.4 & 4.5,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,4.0-4-4-12,,Nanya,,Nanya A/B,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667C4 Rev 5.1,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,4.0-4-4-12,,Elpida,,Elpida A,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667C4 Rev 5.2,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,4.0-4-4-12,,Powerchip,,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667C4 Rev 6.x,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,4.0-4-4-12,,Elpida,,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667C4 Rev 7.1,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,4.0-4-4-12,,ProMOS,,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667C4PRO Rev 1.1,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,4.0-4-4-12,,Samsung,,Samsung B,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667C4PRO Rev 2.3,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,4.0-4-4-12,,Micron,,Micron D9Dxx (BT-x),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667C4PRO Rev 2.4 & 2.5 & 2.6,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,4.0-4-4-12,,Micron,,Micron D9Gxx (B6-x),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667C4PRO Rev 2.7,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,4.0-4-4-12,,Micron,,Micron B,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667C4PRO Rev 3.x,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,4.0-4-4-12,,Infineon,,Infineon A/C,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667C4PRO Rev 4.x,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,4.0-4-4-12,,Nanya,,Nanya A/B,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667C4PRO Rev 5.x,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,4.0-4-4-12,,ProMOS,,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667C4PRO Rev 6.x,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,4.0-4-4-12,,Elpida,,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667C4PT Rev 3.3,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,4.0-4-4-12,,Infineon,,Infineon B,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667C4PT Rev 5.2,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,4.0-4-4-12,,Powerchip,,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667C4PT Rev 7.1,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,4.0-4-4-12,,ProMOS,,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667UL Rev 1.1 & 1.3,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,3.0-3-2-8,,Micron,,"Micron D9DQT (BT-3), Micron D9DQW (BT-37E) (some)",N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667UL Rev 1.5,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,3.0-3-2-8,,Micron,,Micron D9DQW (BT-37E),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800 Rev 1.1 & 1.2 & 1.3,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,5.0-5-5-12,,Micron,,Micron D9Dxx (BT-x),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800 Rev 1.4,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,5.0-5-5-12,,Micron,,Micron D9Gxx (B6-x),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800 Rev 1.5,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,5.0-5-5-12,,Micron,,Micron B,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800 Rev 1.6 & 1.7 & 1.8,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,5.0-5-5-12,,Micron,,Micron D9Gxx (B6-x),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800 Rev 2.1,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,5.0-5-5-12,,Elpida,,Elpida E,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800 Rev 2.2 & 2.3,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,5.0-5-5-12,,Elpida,,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800 Rev 2.4,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,5.0-5-5-12,,Elpida,,Elpida H,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800 Rev 4.x,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,5.0-5-5-12,,Infineon,,Infineon B/C,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800 Rev 5.1,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,5.0-5-5-12,,ProMOS,,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800 Rev 6.1,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,5.0-5-5-12,,Nanya,,Nanya B,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800 Rev 7.1,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,5.0-5-5-12,,Powerchip,,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800C3 Rev 1.1,DIMM,Unbuffered,non-ECC,,,,2.2V,DDR2-800,3.0-4-3-9,,Micron,,Micron D9GKX (B6-25E),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800C3DF DOMINATOR Rev 1.x,DIMM,Unbuffered,non-ECC,,,,2.2V,DDR2-800,3.0-4-3-9,,Micron,,Micron D9GMH (B6-3) Handpicked,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800C4 Rev 1.x,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,4.0-4-4-12,,Micron,,Micron D9Gxx (B6-x),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800C4 Rev 2.1,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,4.0-4-4-12,,ProMOS,,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800C4 Rev 3.1,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,4.0-4-4-12,,Samsung,,Samsung C,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800C4 Rev 4.x,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,4.0-4-4-12,,Infineon,,Infineon C,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800C4 Rev 5.1,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,4.0-4-4-12,,Elpida,,Elpida H,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800C4D(HX) Rev 1.x,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,4.0-4-4-12,,Micron,,"Micron D9GMH (B6-3) Handpicked, Micron D9GCT (B6-37E) Handpicked",N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800C4D(HX) Rev 2.x,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,4.0-4-4-12,,ProMOS,,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800C4D(HX) Rev 3.x,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,4.0-4-4-12,,Elpida,,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800C4D(HX) Rev 4.x,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,4.0-4-4-12,,Qimonda,,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800C4D(HX) Rev 6.x,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,4.0-4-4-12,,Powerchip,,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800C4PRO Rev 1.1 & 1.2 & 1.3,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,4.0-4-4-12,,Micron,,Micron D9Gxx (B6-x),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800C4PRO Rev 2.1 & 2.2,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,4.0-4-4-12,,ProMOS,,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800C4PRO Rev 3.1,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,4.0-4-4-12,,Elpida,,Elpida H,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800C4PRO Rev 4.1,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,4.0-4-4-12,,Infineon,,Infineon C,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800PRO Rev 1.1,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,5.0-5-5-12,,Micron,,Micron D9Dxx (BT-x),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800PRO Rev 1.2,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,5.0-5-5-12,,Micron,,Micron B,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800PRO Rev 1.3 & 1.4 & 1.5,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,5.0-5-5-12,,Micron,,Micron D9Gxx (B6-x),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800PRO Rev 1.6,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,5.0-5-5-12,,Micron,,Micron B,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800PRO Rev 2.1 & 2.2,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,5.0-5-5-12,,Elpida,,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800PRO Rev 2.3,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,5.0-5-5-12,,Elpida,,Elpida H,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800PRO Rev 3.1 & 3.2,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,5.0-5-5-12,,Infineon,,Infineon B/C,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800PRO Rev 4.1 & 4.2,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,5.0-5-5-12,,ProMOS,,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800PRO Rev 5.1,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,5.0-5-5-12,,Nanya,,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-1000UL Rev 1.1 & 1.2 & 1.3,DIMM,Unbuffered,non-ECC,,,,2.2V,DDR2-1000,5.0-4-4-9,,Micron,,"Micron D9DQT (BT-3), Micron D9DQW (BT-37E)",N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-1066C5 Rev 1.1 & 1.2 & 1.3 & 1.4,DIMM,Unbuffered,non-ECC,,,,2.2V,DDR2-1066,5.0-5-5-15,,Micron,,Micron D9GMH (B6-3),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-1066C5 Rev 2.1,DIMM,Unbuffered,non-ECC,,,,2.2V,DDR2-1066,5.0-5-5-15,,Infineon,,Infineon B,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-1066C5D DOMINATOR Rev 1.1 & 1.2 & 1.3,DIMM,Unbuffered,non-ECC,,,,2.2V,DDR2-1066,5.0-5-5-15,,Micron,,"Micron D9GMH (B6-3) Handpicked, Micron D9GKX (B6-25E) Handpicked",N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+PC2-8888C4DF DOMINATOR Rev 1.2,DIMM,Unbuffered,non-ECC,,,,2.4V,PC2-8888,4.0-4-4-12,,Micron,,Micron D9GMH (B6-3) Handpicked,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+PC2-9136C5D DOMINATOR Rev 1.1,DIMM,Unbuffered,non-ECC,,,,,PC2-9136,5.0-5-5-15,,Micron,,Micron D9GMH (B6-3) Handpicked,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+PC2-10000C5DF DOMINATOR Rev 1.1,DIMM,Unbuffered,non-ECC,,,,2.4V,PC2-10000,5.0-5-5-18,,Micron,,"Micron D9GKX (B6-25E) Handpicked, Micron D9GMH (B6-3) Handpicked",N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List

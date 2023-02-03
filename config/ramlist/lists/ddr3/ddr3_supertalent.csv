@@ -1,0 +1,15 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+DDR3-1333 W1333UA2GH (1x2GB),DIMM,Unbuffered,non-ECC,2 GiB,,,,DDR3-1333,9-X-X-X,,hynix/SK hynix,,hynix/SK hynix H5TQ2G83CFR,N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
+DDR3-1333 W1333UX2G9 (2x1GB),DIMM,Unbuffered,non-ECC,1 GiB,,,,DDR3-1333,,,Qimonda,,Qimonda -10F,N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
+DDR3-1333 W1333UX4GM (2x2GB),DIMM,Unbuffered,non-ECC,2 GiB,,,,DDR3-1333,7-X-X-X,,Micron,,,N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
+DDR3-1333 W1333UX4GS (2x2GB),DIMM,Unbuffered,non-ECC,2 GiB,,,,DDR3-1333,7-X-X-X,,Samsung,,,N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
+DDR3-1600 W1600UA1G7 (1GB),DIMM,Unbuffered,non-ECC,1 GiB,,,1.8V,DDR3-1600,7-7-7-18,,Micron,,Micron D9GTR (BY-187E),N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
+DDR3-1600 W1600UX2G7 (2x1GB),DIMM,Unbuffered,non-ECC,1 GiB,,,1.9V,DDR3-1600,7-7-7-18,,Micron,,Micron D9GTR (BY-187E),N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
+DDR3-1800 ProjectXW1800UX2GP (2x1GB),DIMM,Unbuffered,non-ECC,1 GiB,,,2.0V,DDR3-1800,7-7-7-21,,Micron,,Micron D9GTR (BY-187E),N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
+DDR3-1866 W1866UA1G8 (1GB),DIMM,Unbuffered,non-ECC,1 GiB,,,1.9V,DDR3-1866,8-8-8-24,,Micron,,Micron D9GTR (BY-187E),N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
+DDR3-1866 W1866UX2G8 (2x1GB),DIMM,Unbuffered,non-ECC,1 GiB,,,1.9V,DDR3-1866,8-8-8-24,,Micron,,Micron D9GTR (BY-187E),N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
+DDR3-2000 WX200UX6G7 (3x2GB),DIMM,Unbuffered,non-ECC,2 GiB,,,1.65v,DDR3-2000,7-7-7-20,,Elpida,,Elpida MGH-E Hyper,N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
+DDR3-2000 PerformanceWP200UX4G8 (2x2GB),DIMM,Unbuffered,non-ECC,2 GiB,,,1.65v,DDR3-2000,8-8-8-24,,Elpida,,Elpida MGH-E Hyper,N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
+DDR3-2000 ProjectXWX200UB2G7 (2GB),DIMM,Unbuffered,non-ECC,2 GiB,,,1.65v,DDR3-2000,7-7-7-20,,Elpida,,Elpida MGH-E Hyper,N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
+DDR3-2200 WS220UX4G8 (2x2GB),DIMM,Unbuffered,non-ECC,2 GiB,,,1.65v,DDR3-2200,8-8-8-24,,Elpida,,Elpida MGH-E Hyper,N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
+DDR3-1066,DIMM,Unbuffered,non-ECC,,,,,DDR3-1066,,,Samsung,,Samsung ZCG8,N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/

@@ -1,0 +1,7 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+MPXB62D-38KT3R,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx8, 8 ICs",256 Mbit,,,,,,Kingmax,Kingmax KDL388P4EA-50 (relabel),N/A,,,,http://dlcdnet.asus.com/pub/ASUS/mb/sock478/p4p800-se/P4P800_SE_QVL.pdf Asus P4P800-SE QVL [PDF]
+MPMD42D-D8KB3,DIMM,Unbuffered,non-ECC,1 GByte,"2Rx8, 16 ICs",512 Mbit,,,,,,Kingmax,Kingmax KDLD88T4AA-60 (relabel),N/A,,,,http://dlcdnet.asus.com/pub/ASUS/mb/sock478/p4p800-se/P4P800_SE_QVL.pdf Asus P4P800-SE QVL [PDF]
+MPXC22D-38KT3R,DIMM,Unbuffered,non-ECC,512 MByte,"2Rx8, 16 ICs",256 Mbit,,,,,,Kingmax,Kingmax KDL388P4EA-50(A) (relabel),N/A,,,,http://dlcdnet.asus.com/pub/ASUS/mb/sock478/p4p800-se/P4P800_SE_QVL.pdf Asus P4P800-SE QVL [PDF]
+MPXB62D-38KT3R-PEAS,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx8, 8 ICs",256 Mbit,,PC3200,,,,Kingmax,Kingmax KDL388P4EA-50 (relabel),N/A,,,,https://asset.msi.com/file/test_report/TR10_149.pdf MSI QVL [PDF]
+Hardcore PC4000 TSOP (3.0-4-4-8-1T),DIMM,Unbuffered,non-ECC,,,,,PC4000,,TSOP,hynix,,hynix D,N/A,,,,i4memory https://web.archive.org/web/20160319064334/http://ramlist.i4memory.com/ddr/
+Hardcore PC4000 BGA (3.0-4-4-8-1T),DIMM,Unbuffered,non-ECC,,,,,PC4000,,BGA,hynix,,hynix D,N/A,,Brainpower PCB,,i4memory https://web.archive.org/web/20160319064334/http://ramlist.i4memory.com/ddr/

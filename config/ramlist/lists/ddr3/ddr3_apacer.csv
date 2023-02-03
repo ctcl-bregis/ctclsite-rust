@@ -1,0 +1,5 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+DDR3-1333 78.A1GC6.421 (2GB),DIMM,Unbuffered,non-ECC,2 GiB,,,,DDR3-1333,9-9-9-X,,Elpida,,Elpida BABG-DJ-E,N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
+DDR3-1333 DL.04GAJ.F9EK2 (2GB),DIMM,Unbuffered,non-ECC,2 GiB,,,,DDR3-1333,9-X-X-X,,Powerchip,,,N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
+DDR3-2200 Aeolus 78.0AGDB.CGZ (2x1GB),DIMM,Unbuffered,non-ECC,1 GiB,,,1.65v,DDR3-2200,10-X-X-X,,Elpida,,Elpida BDSE,N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
+DDR3-2666 Ares (4x8GB),DIMM,Unbuffered,non-ECC,8 GiB,,,1.65v,DDR3-2666,12-13-13-35,,hynix/SK hynix,,hynix/SK hynix H5TQ4G83MFR-PBC,N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/

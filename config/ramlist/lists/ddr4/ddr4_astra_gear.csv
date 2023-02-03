@@ -1,0 +1,4 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+AHL19E6SD8G8F8G48K,DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.5v,4800,19-26-26-46,,SK hynix,SK hynix,D-die,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+AHL19E6SD8G8E8G41K,DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.35v,4133,19-24-24-44,,SK hynix,SK hynix,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF] 
+AHD1900SD8G8E8G41K,DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.35v,4133,19-24-24-44,,SK hynix,SK hynix,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF] 

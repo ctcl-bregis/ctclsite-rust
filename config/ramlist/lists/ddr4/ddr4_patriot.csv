@@ -1,0 +1,18 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+PVS464G360C8GK,DIMM,Unbuffered,non-ECC,32 GiByte,2Rx8,16 Gbit,1.35v,3600 MT/s,CL18,,SK hynix,,DJR,N/A,,,,K4sum1#7987 using HWiNFO64 v6.43-4385
+Viper 4 Series PV416G240C5QK (4x4GB),DIMM,Unbuffered,non-ECC,4 GiByte,,,1.2v,PC4-19200 ,15-15-15-35,,Micron,,D9RGG,N/A,,,,i4memory RAM List https://web.archive.org/web/20160515151107/http://ramlist.i4memory.com/ddr4/
+PVS416G440C9K,DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.45v,DDR4-4400,19-19-19-39,,Samsung,Samsung,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+PVS416G360C8K,DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.35v,DDR4-3600,18-22-22-42,,SK hynix,SK hynix,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+PV48G340C6K,DIMM,Unbuffered,non-ECC,4 GiByte,1Rx8,4 Gibit,1.35v,DDR4-3400,CL16,,,,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+PV416G340C6K,DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.35v,DDR4-3400,CL16,,,,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+PV48G320C6K,DIMM,Unbuffered,non-ECC,4 GiByte,1Rx8,4 Gibit,1.35v,DDR4-3200,CL16,,,,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+PV416G320C6K,DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.35v,DDR4-3200,CL16,,,,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+PVR416G320C6K,DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.35v,DDR4-3200,16-18-18-36,,,,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+PVR416G320C6KW,DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.35v,DDR4-3200,16-18-18-36,,,,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+PV432G320C6K,DIMM,Unbuffered,non-ECC,16 GiByte,2Rx8,8 Gibit,1.35v,DDR4-3200,CL16,,,,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+PV48G300C6K,DIMM,Unbuffered,non-ECC,4 GiByte,1Rx8,4 Gibit,1.35v,DDR4-3000,CL16,,,,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+PV416G300C6K,DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.35v,DDR4-3000,CL16,,,,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+PVE48G240C5KRD,DIMM,Unbuffered,non-ECC,4 GiByte,1Rx8,4 Gibit,1.2v,DDR4-2400,CL15,,,,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+PVE416G240C5KRD,DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.2v,DDR4-2400,CL15,,,,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+PSD48G240081,DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.2v,DDR4-2400,CL17,,,,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+PSD416G24002,DIMM,Unbuffered,non-ECC,16 GiByte,2Rx8,8 Gibit,1.2v,DDR4-2400,CL17,,,,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]

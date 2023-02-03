@@ -1,0 +1,2 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+THMD25N11B70,DIMM,Unbuffered,non-ECC,256 MByte,,,,PC2100,,,,,Toshiba TC59WM807BFT-70,N/A,,,,https://asset.msi.com/file/test_report/TR10_149.pdf MSI QVL [PDF]

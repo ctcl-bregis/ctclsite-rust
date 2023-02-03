@@ -1,0 +1,13 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+DDR2-533 ECC,DIMM,Unbuffered,ECC,,,,,DDR2-533,,,Elpida,,Elpida AE-5S-E,N/A,,,"If ""E"" is next to barcode",https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667 TS64MLQ64V6J,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,,,"Micron, Powerchip",,"Powerchip, Micron D9GMH (B6-3) (some), Micron D9DCL (CB-3)",N/A,,,"Powerchip if ""P"" is next to barcode",https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800 JetRam (2x2GB) JM4GDDR2-8K,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,,,"Micron ('N' behind barcode), ProMOS ('M' behind barcode), Nanya ('Y' behind barcode), Powerchip ('P' behind barcode), Elpida ('E' behind barcode)",,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800 aXeRam TX800QLJ-2GK,DIMM,Unbuffered,non-ECC,,,,1.8V,DDR2-800,4.0-4-4-12,,"Micron ('N' behind barcode), ProMOS ('M' behind barcode), Nanya ('Y' behind barcode), Powerchip ('P' behind barcode), Elpida ('E' behind barcode)",,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-1066 aXeRam TX1066QLJ-2GK,DIMM,Unbuffered,non-ECC,,,,2.1V,DDR2-1066,5.0-5-5-15,,Micron,,Micron D9GMH (B6-3),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-1200 aXeRam TX1200QLJ-2GK,DIMM,Unbuffered,non-ECC,,,,2.2V,DDR2-1200,5.0-5-5-15,,Micron,,Micron D9GMH (B6-3),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+N next to barcode,,,,,,,,,,,Micron,,,,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+M next to barcode,,,,,,,,,,,ProMOS,,,,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+Y next to barcode,,,,,,,,,,,Nanya,,,,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+P next to barcode,,,,,,,,,,,PSC/Powerchip,,,,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+E next to barcode,,,,,,,,,,,Elpida,,,,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+W next to barcode,,,,,,,,,,,Winbond?,,,,,,,"Seen online, need to verify this"

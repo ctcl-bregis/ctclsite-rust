@@ -1,0 +1,2 @@
+model,gpvnd,gpmdl,bustp,vidcn,memtp,memtc,membw,membs,memog,memiv,memib,memic,memim,memip,othic,htsnk,notes,insrc
+MX440 Daytona,Nvidia,,AGP,,DDR,64 MByte,128-bit,,8 ICs x 16-bit,Samsung,Samsung,64 Mbit,"K4D64163HF-TC40 (Die code: U9GB27DA KOREA, Date: 235, Week 25, 2002)",TSOP-66,,Passive ALU Heatsink,,"Kris (pictures, memory info, card info), CrazyblocksTechnologies (Confirmation, more IC info)"

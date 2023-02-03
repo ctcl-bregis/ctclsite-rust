@@ -1,0 +1,5 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+DDR2-533 Value,DIMM,Unbuffered,non-ECC,,,,,DDR2-533,,,"Samsung, Elpida",,"Elpida AB-5C-E, Samsung GCD5",N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667 Value,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,5.0-5-5-X,,hynix,,hynix FP-Y5,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667 Value,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,5.0-5-5-X,,Nanya,,Nanya AE-3C,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800 Value,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,,,Elpida,,Elpida AB-6E-E,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List

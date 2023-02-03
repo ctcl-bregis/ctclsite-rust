@@ -1,0 +1,2 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+,SODIMM,Unbuffered,non-ECC,2 GiByte,2Rx8,1 Gibit,1.8v,DDR2-667,,,"Some are Elpida, Some are Powerchip/PSC; mismatched chips",Kingston,,N/A,,,Module and IC capacity determined by part number,Krazycrafter#5548 via Discord

@@ -1,0 +1,19 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+"AHU08GGB41CNU5H
+EK.16GA7.GGBK2",DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.35v,4133,19-21-21-41,,Samsung,Samsung,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+"AHU08GGB40CMU90
+EK.08G29.GJG",DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.35v,4000,19-21-21-41,,,,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+"AHU08GGB38CJU5H
+EK.16GA7.GGBK2",DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.35v,3866,18-22-22-42,,Samsung,Samsung,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+"AHU08GGB37CEU5H
+EK.16GA6.GFBK2",DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.35v,3733,17-19-19-39,,,,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+AHU08GGB36CJU5H,DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.35v,3600,18-18-18-42,,,,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+AH4U08G32C08YNBAA,DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.35v,3200,16-18-18-38,,SK hynix,SK hynix,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+D12.2724FS.001,DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.20v,3200,22-22-22-52,,Samsung,Samsung,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+AU04GGB26CQWBGH,DIMM,Unbuffered,non-ECC,4 GiByte,2Rx16,4 Gibit,1.2v,2666,19-19-19-43,,Micron,SpecTek (Micron),Rev.B,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+AU04GGB26CQTBGH,DIMM,Unbuffered,non-ECC,4 GiByte,1Rx8,4 Gibit,1.2v,2666,19-19-19-43,,Micron,SpecTek (Micron),Rev.B,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+EL.08G2V.GNH,DIMM,Unbuffered,non-ECC,8 GiByte,1Rx16,16 Gibit,1.2v,2666,19-19-19-43,,SK hynix,SK hynix,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+AU08GGB26CQYBGH,DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.2v,2666,CL19,,,,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+AU08GGB26CQYBGH,DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.2v,2666,19-19-19-43,,Samsung,Samsung,C-die,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+AU16GGB26CQYBGH,DIMM,Unbuffered,non-ECC,16 GiByte,2Rx8,8 Gibit,1.2v,2666,CL19,,,,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+AU16GGB26CQYBGH,DIMM,Unbuffered,non-ECC,16 GiByte,2Rx8,8 Gibit,1.2v,2666,19-19-19-43,,Samsung,Samsung,C-die,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]

@@ -1,0 +1,2 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+NTSRD4P32DP-16S NSRSU1BD4163200TC8DP,DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.35v,DDR4-3200,14-16-16-36,,ChangXin Memory Technologies (CXMT),,,N/A,,,,PauloOoO#3731 via Discord using CPU-Z 2.01.0.x64 for memory IC info

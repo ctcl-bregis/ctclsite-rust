@@ -1,0 +1,25 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+M2G9I08AFATT9F081AA4T,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx8, 8 ICs",256 Mbit,,,,,,,"Unknown, relabel with TMD7608F8E50D",N/A,,,,http://dlcdnet.asus.com/pub/ASUS/mb/sock478/p4p800-se/P4P800_SE_QVL.pdf Asus P4P800-SE QVL [PDF]
+M2G9J16AGATT9F081AA4T,DIMM,Unbuffered,non-ECC,512 MByte,"2Rx8, 16 ICs",256 Mbit,,,,,,,"Unknown, relabel with TMD7608F8E50D",N/A,,,,http://dlcdnet.asus.com/pub/ASUS/mb/sock478/p4p800-se/P4P800_SE_QVL.pdf Asus P4P800-SE QVL [PDF]
+M2S9I08AFAPS9F0811A-T,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx8, 8 ICs",256 Mbit,,,,,Powerchip/PSC,,Powerchip/PSC A2S56D30ATP,N/A,,,,http://dlcdnet.asus.com/pub/ASUS/mb/sock478/p4p800-se/P4P800_SE_QVL.pdf Asus P4P800-SE QVL [PDF]
+M2SAO16A,DIMM,Unbuffered,non-ECC,1 GByte,"2Rx8, 16 ICs",512 Mbit,,,,,hynix,,hynix HY5DU12822AT-D43,N/A,,,,http://dlcdnet.asus.com/pub/ASUS/mb/sock478/p4p800-se/P4P800_SE_QVL.pdf Asus P4P800-SE QVL [PDF]
+M2G9108A-TT,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx8, 8 ICs",256 Mbit,,PC3200,,,,,Unknown (TwinMOS TMD7608F8E50D),N/A,,,,https://asset.msi.com/file/test_report/TR10_149.pdf MSI QVL [PDF]
+TwinMOS DDR333,DIMM,Unbuffered,non-ECC,,,,,PC2700,2.5-3-3-6,,Samsung,,"Samsung TCB3, TCC4 Winbond AH-6, Winbond BH-6",N/A,,,,https://forums.extremeoverclocking.com/showthread.php?t=91533 extremeoverclocking.com
+TwinMOS/Winbond DDR400,DIMM,Unbuffered,non-ECC,,,,,PC3200,2.5-3-3-6,,Winbond,,"Could be Winbond BH-5, CH-5, look at the chips",N/A,,,,https://forums.extremeoverclocking.com/showthread.php?t=91533 extremeoverclocking.com
+TwinMOS Twisters DDR500 (TSOP),DIMM,Unbuffered,non-ECC,,,,,PC4000,3-4-4-8,,hynix,,"hynix D43, Samsung TCCC",N/A,,,,https://forums.extremeoverclocking.com/showthread.php?t=91533 extremeoverclocking.com
+Twinmos Twisters DDR533,DIMM,Unbuffered,non-ECC,,,,,PC4200,3-4-4-8,,hynix,,hynix D5,N/A,,,,https://forums.extremeoverclocking.com/showthread.php?t=91533 extremeoverclocking.com
+PC2700 (2.5-3-3-6-1T),DIMM,Unbuffered,non-ECC,,,,,PC2700,2.5-3-3-6-1T,,"hynix, Samsung, Winbond",,Samsung TCB3  Samsung TCC4  Winbond AH-6  Winbond BH-6  hynix,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+PC3200 (2.5-3-3-6-1T),DIMM,Unbuffered,non-ECC,,,,,PC3200,2.5-3-3-6-1T,,Winbond,,Winbond  BH-5  Winbond CH-5,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+Twister PC3200,DIMM,Unbuffered,non-ECC,,,,,PC3200,,,hynix,,hynix  D43  hynix D5,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+Twister PC3200 BH-5,DIMM,Unbuffered,non-ECC,,,,,PC3200,,,Winbond,,Winbond UTT,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+Twister PC3700,DIMM,Unbuffered,non-ECC,,,,,,,,hynix,,hynix  D5  hynix D43,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+Twister PC4000 (TSOP) (3.0-4-4-8-1T),DIMM,Unbuffered,non-ECC,,,,,PC4000,,,"hynix, PSC/Powerchip, Samsung",,"hynix D5, hynix D43, Samsung TCCC, PSC/Powerchip",N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+Twister PC4200 (3.0-4-4-8-1T),DIMM,Unbuffered,non-ECC,,,,,PC4200,3.0-4-4-8-1T,,hynix,,hynix  D5,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+TwisterPro PC3200 (2.0-2-2-5-1T),DIMM,Unbuffered,non-ECC,,,,,PC3200,2.0-2-2-5-1T,,Samsung,,Samsung TCCD,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+TwisterPro PC3700 (2.5-3-3-7-1T),DIMM,Unbuffered,non-ECC,,,,,,2.5-3-3-7-1T,,Samsung,,Samsung TCCD,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+Speed Premium PC3200 (2.5-3-3-8-1T),DIMM,Unbuffered,non-ECC,,,,,PC3200,2.5-3-3-8-1T,,"Powerchip, Winbond",,"Winbond UTT (after 46 04), Powerchip (before 46 04)",N/A,,Brainpower PCB,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+Speed Premium PC3500 (1A4T),DIMM,Unbuffered,non-ECC,,,,,PC3500,,,Winbond,,Winbond UTT,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+Speed Premium PC3500 (AA4T),DIMM,Unbuffered,non-ECC,,,,,PC3500,,,Winbond,,Winbond UTT,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+Speed Premium PC3500 (AADT),DIMM,Unbuffered,non-ECC,,,,,PC3500,,,Powerchip,,Powerchip  0.13µ,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+Speed Premium PC3500 (CADT),DIMM,Unbuffered,non-ECC,,,,,PC3500,,,Powerchip,,Powerchip  0.11µ,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
+Speed Premium PC3500 (ACMT),DIMM,Unbuffered,non-ECC,,,,,PC3500,,,hynix,,hynix D43,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List

@@ -1,0 +1,4 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+DDR2-533 Value,DIMM,Unbuffered,non-ECC,,,,,DDR2-533,,,Powerchip,,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-667 Value 0105-07A1 MEADR429LA,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,5.0-X-X-X,,Powerchip,,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
+DDR2-800 Value 0103-07A6 MEAER421LA,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,5.0-X-X-X,,Powerchip,,,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List

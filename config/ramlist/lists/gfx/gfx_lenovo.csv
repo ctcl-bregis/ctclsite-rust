@@ -1,0 +1,2 @@
+model,gpvnd,gpmdl,bustp,vidcn,memtp,memtc,membw,membs,memog,memiv,memib,memic,memim,memip,othic,htsnk,notes,insrc
+ThinkPad T430s Integrated Nvidia Quadro NVS 5200M graphics,Nvidia,GF117 Fermi,,N/A,DDR3,1 GByte,64-bit,DDR3-1866,4 ICs x 16-bit?,hynix,hynix,2 Gbit,,,,,,"CrazyblocksTechnologies (Confirmation using CPU-Z and lshw), NotebookCheck (GPU info) https://www.notebookcheck.net/NVIDIA-NVS-5200M.76732.0.html"

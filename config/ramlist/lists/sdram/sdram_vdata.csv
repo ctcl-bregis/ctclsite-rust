@@ -1,0 +1,2 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+MSGVD3E4G3160B1A5H,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx8, 8 ICs",256 Mbit,3.3v,PC133,,TSOP-54,"hynix, presumed",VDATA,VDATA VDS8616A8A-75G H0639 (hynix die code: N7CA8F54TQ1) TSOP,N/A,,,"Possibly made in 2006, week 39. ""H"" before date code could possibly be for hynix. Text style on die code gave away hynix. Serial: 639TH (VDCBC2808)","Kris (module pictures and specs), CrazyblocksTechnologies Computer Laboratories (IC identification)"

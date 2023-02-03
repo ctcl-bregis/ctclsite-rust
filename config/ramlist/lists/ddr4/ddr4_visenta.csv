@@ -1,0 +1,3 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+DDR4 2400 8G,DIMM,Unbuffered,non-ECC,8 GiByte,1Rx8,8 Gibit,1.2v,DDR4-2400,17-17-17-40,,,,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]
+DDR4 2400 16G,DIMM,Unbuffered,non-ECC,16 GiByte,2Rx8,8 Gibit,1.2v,DDR4-2400,15-15-15-35,,,,,N/A,,,,https://download.gigabyte.com/FileList/Memory/mb_memory_b550-aorus-pro-v2_vermeer_210224.pdf [PDF]

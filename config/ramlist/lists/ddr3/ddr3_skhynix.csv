@@ -1,0 +1,5 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+DDR3-1333 (ECC) HMT112U7BFR8C-H9 (1GB),DIMM,Unbuffered,ECC,1 GiByte,,,1.5V,DDR3-1333,9-9-9-27,,hynix/SK hynix,,hynix/SK hynix H5TQ1G83BFR,N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
+DDR3-1066 HMT125U6BFR8C-G7 (2GB),DIMM,Unbuffered,non-ECC,2 GiByte,,,1.5V,DDR3-1066,7-7-7-21,,hynix/SK hynix,,hynix/SK hynix H5TQ1G83BFR-G7C,N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
+HMT41GU7AFR8C-RD,DIMM,Unbuffered,ECC,8 GiByte,2Rx8,4 Gibit,1.5v,DDR3-1866,CL13,,hynix/SK hynix,hynix/SK hynix,H5TQ4G83AFR,N/A,,,,Krazycrafter#5548 via Discord
+HMT451U6BFR8A-PB,DIMM,Unbuffered,non-ECC,4 GiByte,1Rx8,4 Gibit,1.35v,DDR3-1600,CL11,,hynix/SK hynix,hynix/SK hynix,H5TC4G83BFR,N/A,,,,KrisX#7331 via Discord

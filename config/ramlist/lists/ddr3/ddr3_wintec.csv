@@ -1,0 +1,3 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+DDR3-1333 AMPX3AXH1333C9WS2GK (2x1GB),DIMM,Unbuffered,non-ECC,1 GiB,,,1.5V,DDR3-1333,9-9-9-XX,,Samsung,,Samsung K4B1G0846D HCH9,N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
+DDR3-1600 ONE3OH16009u9H-8GK (2x4GB),DIMM,Unbuffered,non-ECC,4 GiB,,,1.5V,DDR3-1600,9-9-9-XX,,hynix/SK hynix,,hynix/SK hynix H5TQ2G83CFR-H9C,N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/

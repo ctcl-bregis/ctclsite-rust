@@ -1,0 +1,22 @@
+title,width,ydata
+Model,7%,model
+Device Type,3%,devtp
+Connectivity,5%,pconn
+Wireless connectivity,2%,wconn
+Processor type,3%,protp
+Processor specs,5%,prosp
+Processor vendor,3%,provn
+Processor model,5%,promd
+Memory (RAM) specs,5%,memsp
+Memory (RAM) brand,3%,membr
+Memory (RAM) vendor,3%,memvn
+Memory (RAM) model,5%,memmd
+Flash IC specs,5%,flisp
+Flash IC brand,3%,flibr
+Flash IC vendor,3%,flivn
+Flash IC model,5%,flimd
+Stock OS,3%,stkos
+Other IC(s),12%,othic
+Other notable specifications,5%,othsp
+Notes,7%,notes
+Source,8%,insrc

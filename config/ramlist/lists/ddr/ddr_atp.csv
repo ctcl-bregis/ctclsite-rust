@@ -1,0 +1,3 @@
+model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
+AG32L64T8SQC4S,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx8, 8 ICs",256 Mbit,,,,,Samsung,,K4H560838D-TCC4,N/A,,,,http://dlcdnet.asus.com/pub/ASUS/mb/sock478/p4p800-se/P4P800_SE_QVL.pdf
+AG64L64T8SQC4S,DIMM,Unbuffered,non-ECC,512 MByte,"2Rx8, 8 ICs",256 Mbit,,PC3200,,,Samsung,,K4H560838D-TCC4 or Samsung K4H560838E-TCCC,N/A,,,,http://dlcdnet.asus.com/pub/ASUS/mb/sock478/p4p800-se/P4P800_SE_QVL.pdf and https://asset.msi.com/file/test_report/TR10_149.pdf
