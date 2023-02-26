@@ -1,14 +1,12 @@
 {% include "main_header.html" %}
 <!-- end header -->
     <h2 class="center">Blog Posts</h2>{% for post in posts %}{% if post["content"] != "" %}
+    <hr class="smallhr">
     <div class="blogpost">
-        <h2 class="nopix"><a href="{{ post["page"]}}/">{{ post["title"] }}</a></h2>
+        <h3 class="nopix"><a href="{{ post["page"]}}/">{{ post["title"] }}</a></h2>
         <h5>Date: {{ post["date"] }} - Category: {{ post["bcat"] }}</h5>
         <p>{{ post["desc"] }}</p>
-    </div>
-    <hr>
-    {% endif %}{% endfor %}
-    
+    </div>{% endif %}{% endfor %}
 <!-- end content -->
 <!-- start footer -->        
 {% include "main_footer.html" %}

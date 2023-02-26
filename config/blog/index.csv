@@ -1,5 +1,3 @@
 content,desc,page,title,color,date,bcat
 ,Current Blog Posts,root,Blog Posts,#009900,,
-blogpost_3.md,What has been going on?,3,State of things - October 2022,#009900,"October 12, 2022",Personal
-blogpost_2.md,New version of the website now online,2,Website Rewrite,#009900,"July 28, 2022",Meta
-blogpost_1.md,Added a blog to the website! Title is link to full post.,1,New Blog,#009900,"February 8, 2022",Meta
+blogpost_1,What has been going on,1,State of Things February 2023,#009900,"February 26, 2023",Personal

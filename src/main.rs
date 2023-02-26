@@ -1,5 +1,5 @@
 // Purpose: Main program code
-// Date: November 28, 2022 - January 1, 2023
+// Date: November 28, 2022 - February 26, 2023
 // CrazyblocksTechnologies Computer Laboratories, Brayden Regis - 2022-2023
 use std::{error::Error, collections::BTreeMap};
 use actix_web::{App, web, get, error, HttpResponse, HttpServer, http::StatusCode, Responder, web::Path};
@@ -114,13 +114,10 @@ async fn ramlist(list: Path<Info>) -> impl Responder {
         let mut context = result.0;
         let index = result.1;
         
-        let mut content = md2html(&index["content"]).unwrap();
-        
-        // Hacky solution until I find out how to have Comrak put the class there
-        content = content.replace("<h2>", "<h2 class=\"nopix\">");
+        let content = md2html(&index["content"]).unwrap();
         
         context.insert("content", &content);
-        
+
         match TEMPLATES.render("rl_about.html", &context) {
             Ok(body) => Ok(HttpResponse::Ok().body(body)),
             Err(err) => {
@@ -219,12 +216,11 @@ async fn blog_main() -> impl Responder {
 
 // Blog post content
 async fn blog_post(post: Path<Info>) -> impl Responder {
-    // TODO: Read info for context from blog post index
     let result = mkcontext("blog", &post.page).unwrap();
     let mut context = result.0;
     let index = result.1;
     
-    context.insert("content", &md2html(&format!("./config/blog/{}", &index["content"])).unwrap());
+    context.insert("content", &md2html(&format!("./config/blog/{}/content.md", &index["content"])).unwrap());
     
     match TEMPLATES.render("blog_post.html", &context) {
         Ok(body) => Ok(HttpResponse::Ok().body(body)),
@@ -235,6 +231,41 @@ async fn blog_post(post: Path<Info>) -> impl Responder {
     }
 }
 
+// Project list
+async fn project_main() -> impl Responder {
+    let result = mkcontext("projects", "root").unwrap();
+    let mut context = result.0;
+    
+    context.insert("pages", &csv2im("./config/projects/index.csv").unwrap());
+    
+    match TEMPLATES.render("projects_menu.html", &context) {
+        Ok(body) => Ok(HttpResponse::Ok().body(body)),
+        Err(err) => {
+            eprintln!("Tera error: {}", err.source().unwrap());
+            Err(error::ErrorInternalServerError(err))
+        }, 
+    }
+}
+
+
+// Project page
+async fn project_page(page: Path<Info>) -> impl Responder {
+    let result = mkcontext("projects", &page.page).unwrap();
+    let mut context = result.0;
+    let index = result.1;
+    
+    context.insert("content", &md2html(&format!("./config/projects/{}/content.md", &index["content"])).unwrap());
+    
+    match TEMPLATES.render("projects_page.html", &context) {
+        Ok(body) => Ok(HttpResponse::Ok().body(body)),
+        Err(err) => {
+            eprintln!("Tera error: {}", err.source().unwrap());
+            Err(error::ErrorInternalServerError(err))
+        }, 
+    } 
+}
+
+// Routes
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
@@ -246,6 +277,8 @@ async fn main() -> std::io::Result<()> {
             .route("/ramlist/{page}/", web::get().to(ramlist))
             .route("/blog/", web::get().to(blog_main))
             .route("/blog/{page}/", web::get().to(blog_post))
+            .route("/projects/", web::get().to(project_main))
+            .route("/projects/{page}/", web::get().to(project_page))
             .route("/privacy/", web::get().to(privacy))
     })
     .bind("127.0.0.1:5000")?

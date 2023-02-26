@@ -1,5 +1,16 @@
 ctclsite-rust changelog
 
+
+## 0.2.0
+Major release with the main feature being the addition of the "Projects" page.
+
+Changes since 0.1.1:
+- "Projects" page
+- CSS improvements
+- Improvements to "Blog"
+- RAMList removed from navigation bar
+- General code improvements
+
 ## 0.1.1
 First release after the official release of the Rust version of the website.
 

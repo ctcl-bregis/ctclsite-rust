@@ -1,5 +1,7 @@
 ## Technical Info
 
-The website itself is a *static site generator* written in the Rust programming language.
+The website was written by myself.
 
-The website code that I have written is open source and is currently hosted on GitHub, see the repository [here](https://github.com/ctcl-bregis/ctclsite-rust).
+More techincal information about the website can be found [here](/projects/ctclsite/).
+
+Privacy Policy can be found [here](/privacy/).

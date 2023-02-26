@@ -1,5 +1,4 @@
-
-RAMList is a section of the CrazyblocksTechnologies Computer Laboratories website dedicated to listing the components, specifically the DRAM ICs, that computer memory modules use.
+RAMList is a section of the CTCL website dedicated to listing the components, specifically the DRAM ICs, that computer memory modules use.
 
 Note: Lists that do not focus on memory module such as mobile devices and storage devices may not be updated as often as they are not the original focus of RAMList. 
 
@@ -43,7 +42,7 @@ RAMList may make extensive use of acronyms mainly relating to computers. Acronym
 - CPU
   - Central Processing Unit
 - CTCL
-  - CrazyblocksTechnologies Computer Laboratories
+  - CTCL
 - DDR
   - Double Data Rate
 - DIMM
@@ -183,17 +182,17 @@ Micron Technology:
 - SpecTek
 - Crucial
 
-Qimonda:
+Qimonda/Infineon:
 
 - Aeneon
 
-Nanya Technology:
+Nanya Technology (Formosa Plastics Group):
 
 - elixir
 
 Powerchip:
 
-- MIRA/Deutron (separate company, founded by same person and almost always uses Powerchip)
+- MIRA/Deutron (separate company, founded by the same founder)
 - Zentel
 
 ## Legal and Accuracy
@@ -210,6 +209,6 @@ If this is the case, please [contact me](https://crazyblockstech.com/) for addit
 Content added with the source being "CrazyblocksTechnologies Computer Labs", "CTCL", etc. is classified as original research. I strive to show as much information as possible while being accurate. If more information is needed, such as photo proof, please [contact me](https://crazyblockstech.com/contact/). This is also the case with "Kris", who is an online friend, usually I have pictures of the described module/component when adding such entries.
 
 ### Warranty and Legal
-THE SERVICE AND ANY RELATED SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTY OF ANY KIND, WHETHER WRITTEN OR ORAL, EXPRESS OR IMPLIED. CRAZYBLOCKSTECHNOLOGIES COMPUTER LABORATORIES DISCLAIMS ALL IMPLIED WARRANTIES, INCLUDING BUT NOT LIMITED TO ALL WARRANTIES OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. CRAZYBLOCKSTECHNOLOGIES COMPUTER LABORATORIES DOES NOT REPRESENT OR WARRANT THAT THE SERVICE WILL MEET CLIENT'S NEEDS OR REQUIREMENTS, THAT ANY INFORMATION OBTAINED THROUGH USE OF THE SERVICE WILL BE ACCURATE OR RELIABLE, THAT USE OF THE SERVICE WILL BE UNINTERRUPTED, TIMELY, SECURE OR FREE FROM ERROR, OR THAT ALL DEFECTS IN THE SERVICE WILL BE CORRECTED.
+THE SERVICE AND ANY RELATED SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTY OF ANY KIND, WHETHER WRITTEN OR ORAL, EXPRESS OR IMPLIED. CTCL DISCLAIMS ALL IMPLIED WARRANTIES, INCLUDING BUT NOT LIMITED TO ALL WARRANTIES OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. CTCL DOES NOT REPRESENT OR WARRANT THAT THE SERVICE WILL MEET CLIENT'S NEEDS OR REQUIREMENTS, THAT ANY INFORMATION OBTAINED THROUGH USE OF THE SERVICE WILL BE ACCURATE OR RELIABLE, THAT USE OF THE SERVICE WILL BE UNINTERRUPTED, TIMELY, SECURE OR FREE FROM ERROR, OR THAT ALL DEFECTS IN THE SERVICE WILL BE CORRECTED.
 
 The content of RAMList pages are released into the Public Domain, see page footer for more license information.

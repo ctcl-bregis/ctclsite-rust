@@ -1,0 +1,6 @@
+content,desc,page,title,color,bcat,subcat
+,Projects that I have worked on,root,Projects,#009900,,
+ctclsite,This website,ctclsite,ctclsite-rust,#009900,software,Webapp
+wbpc_pbt,Desktop computer system,wbpc_pbt,"""Polybutylene Terephthalate""",#009900,hardware,Workstation PC
+wbpc_pet,Desktop computer system,wbpc_pet,"""Polyethylene Terephthalate""",#009900,hardware,Workstation PC
+wbpc_abs,Desktop computer system,wbpc_abs,"""Acrylonitrile Butadiene Styrene""",#009900,hardware,Workstation PC
