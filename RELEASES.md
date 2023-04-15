@@ -1,5 +1,9 @@
 ctclsite-rust changelog
 
+## 0.2.1
+
+Changes:
+- Updated dependency versions in Cargo.toml
 
 ## 0.2.0
 Major release with the main feature being the addition of the "Projects" page.

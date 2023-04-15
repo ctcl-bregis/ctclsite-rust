@@ -1,6 +1,6 @@
 // Purpose: commonly used functions to organize main.rs code
-// Date: November 28, 2022 - January 1, 2023
-// CrazyblocksTechnologies Computer Laboratories, Brayden Regis - 2022-2023
+// Date: November 28, 2022 - April 15, 2023
+// CTCL - Brayden Regis - 2022-2023
 use csv::{self, Error};
 use indexmap::IndexMap;
 use std::{fs, convert::TryFrom};
@@ -49,7 +49,7 @@ pub fn mkcontext(metapage: &str, subpage: &str) -> Result<(Context, IndexMap<Str
     }
     // If the for loop completed and did not assign a new value to pagemeta_sub
     if metapage.is_empty() {
-        panic!("Page not found");
+        panic!("## mkcontext: Page not found");
     }
     
     // Get the index file defined for the subpage in pagemeta
@@ -64,7 +64,7 @@ pub fn mkcontext(metapage: &str, subpage: &str) -> Result<(Context, IndexMap<Str
         } 
     }
     if subpage.is_empty() {
-        panic!("Subpage not found");
+        panic!("## mkcontext: Subpage not found");
     }
     
     // Prefill

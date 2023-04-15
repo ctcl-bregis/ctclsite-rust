@@ -1,0 +1,6 @@
+[[remote]]
+name = "myRemote"
+host = "ctcl@192.168.0.237" # dedicated CTCL-SVCS VM with 12 vCPU
+ssh_port = 22
+temp_dir = "/dev/shm/"
+env = "~/.profile"

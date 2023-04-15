@@ -1,6 +1,6 @@
 // Purpose: Main program code
-// Date: November 28, 2022 - February 26, 2023
-// CrazyblocksTechnologies Computer Laboratories, Brayden Regis - 2022-2023
+// Date: November 28, 2022 - April 15, 2023
+// CTCL - Brayden Regis - 2022-2023
 use std::{error::Error, collections::BTreeMap};
 use actix_web::{App, web, get, error, HttpResponse, HttpServer, http::StatusCode, Responder, web::Path};
 use actix_files as fs;
@@ -202,8 +202,9 @@ async fn ramlist(list: Path<Info>) -> impl Responder {
 async fn blog_main() -> impl Responder {
     let result = mkcontext("blog", "root").unwrap();
     let mut context = result.0;
+    let posts = &csv2im("./config/blog/index.csv").unwrap();
     
-    context.insert("posts", &csv2im("./config/blog/index.csv").unwrap());
+    context.insert("posts", posts);
     
     match TEMPLATES.render("blog_menu.html", &context) {
         Ok(body) => Ok(HttpResponse::Ok().body(body)),
@@ -247,9 +248,8 @@ async fn project_main() -> impl Responder {
     }
 }
 
-
 // Project page
-async fn project_page(page: Path<Info>) -> impl Responder {
+async fn project_page(page: Path<Info>) -> impl Responder {    
     let result = mkcontext("projects", &page.page).unwrap();
     let mut context = result.0;
     let index = result.1;

@@ -1,10 +1,10 @@
 "Acrylonitrile Butadiene Styrene" is the codename given to the hardware platform that currently serves as WBPC2 for multi-thread high-memory-usage workloads
 
-Current specifications as of February 26, 2023:
+Current specifications as of April 16, 2023:
 - Motherboard: ASUS KCMA-D8
 - CPU: 2x AMD Opteron 4386
-- Memory: 128GB (8x16GB) Registered ECC Nanya Technology NT16GC72C4NB0NL-CG
-- Graphics: ASUS AMD Radeon R7 240 2GB DDR3
+- Memory: 32GB (4x8GB) Qimonda DDR3-1066 Registered ECC
+- Graphics: HP AMD Radeon RX 580 4GB GDDR5 (Samsung)
 - Storage, boot: ADATA ULTIMATE SU800 512GB SATA SSD
 - Storage, user: WD Black 1TB SATA HDD
 - Power Supply: Corsair RM650
