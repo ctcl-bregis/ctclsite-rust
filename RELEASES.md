@@ -1,5 +1,11 @@
 ctclsite-rust changelog
 
+## 0.3.0
+Logging Update
+
+Additions:
+- Rust application would now log requests and store the logs in the "log" directory
+
 ## 0.2.1
 
 Changes:

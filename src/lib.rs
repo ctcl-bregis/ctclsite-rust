@@ -1,6 +1,6 @@
 // Purpose: commonly used functions to organize main.rs code
-// Date: November 28, 2022 - April 15, 2023
-// CTCL - Brayden Regis - 2022-2023
+// Date: November 28, 2022 - April 27, 2023
+// Brayden Regis - CTCL 2022-2023
 use csv::{self, Error};
 use indexmap::IndexMap;
 use std::{fs, convert::TryFrom};

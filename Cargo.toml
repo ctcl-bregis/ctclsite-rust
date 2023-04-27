@@ -1,6 +1,6 @@
 [package]
 name = "ctclsite"
-version = "0.2.1"
+version = "0.3.0"
 license = "MIT"
 edition = "2021"
 
@@ -20,3 +20,4 @@ csv = "1.2.1"
 comrak = "0.18.0"
 indexmap = { version = "1.9.3", features = ["serde-1"] }
 minifier = "0.2.2"
+env_logger = "0.10.0"

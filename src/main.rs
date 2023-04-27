@@ -1,12 +1,13 @@
 // Purpose: Main program code
-// Date: November 28, 2022 - April 15, 2023
+// Date: November 28, 2022 - April 27, 2023
 // CTCL - Brayden Regis - 2022-2023
 use std::{error::Error, collections::BTreeMap};
-use actix_web::{App, web, get, error, HttpResponse, HttpServer, http::StatusCode, Responder, web::Path};
+use actix_web::{App, web, get, error, HttpResponse, HttpServer, http::StatusCode, Responder, web::Path, middleware::Logger};
 use actix_files as fs;
 use tera::Tera;
 use once_cell::sync::Lazy;
 use ctclsite::{csv2im, md2html, mkcontext, rl_list_gen};
+use env_logger::Env;
 #[macro_use] extern crate serde_derive;
 
 #[derive(Deserialize)]
@@ -268,8 +269,12 @@ async fn project_page(page: Path<Info>) -> impl Responder {
 // Routes
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
+    env_logger::init_from_env(Env::default().default_filter_or("info"));
+    
     HttpServer::new(|| {
          App::new().service(root)
+            .wrap(Logger::default())
+            .wrap(Logger::new("%a \"%r\" %s %b \"%{Referer}i\" \"%{User-Agent}i\" %T"))
             // TODO: figure out how to redirect to page with / at the end
             .service(fs::Files::new("/static/", "./static/")
                 .use_last_modified(true))

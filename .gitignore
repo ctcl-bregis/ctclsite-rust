@@ -20,5 +20,5 @@ Cargo.lock
 # Make sure website access logs are not uploaded
 /log/*.*
 
-# Upload for files that should not be synced
+# Any other files that should not be pushed to the repository 
 /noupload/*.*
