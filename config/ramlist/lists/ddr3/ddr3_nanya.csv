@@ -1,3 +1,0 @@
-model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
-NT2GC64B88G0NF-CG,DIMM,Unbuffered,non-ECC,2 GiByte,1Rx8,2 Gibit,1.5v,DDR3-1333,CL9,,Nanya,Nanya,NT5CB256M8GN-CG,N/A,,Possibly Nan Ya PCB,,Krazycrafter#5548 via Discord
-NT16GC72C4NB0NL-CG,DIMM,Registered,ECC,16 GiByte,2Rx4,4 Gibit,1.35v,DDR3-1333,CL9,,Nanya,Nanya,NT5CC1024M4BN-CG,Inphi INSSTE32882UV-GS02,,Nan Ya PCB,,CTCL

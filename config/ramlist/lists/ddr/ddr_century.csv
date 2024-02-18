@@ -1,3 +1,0 @@
-model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
-DXV6S8SSCCD3K27C,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx8, 8 ICs",256 Mbit,,,,,Samsung,,Samsung K4H560838D-TCCC,N/A,,,,http://dlcdnet.asus.com/pub/ASUS/mb/sock478/p4p800-se/P4P800_SE_QVL.pdf Asus P4P800-SE QVL [PDF]+http://www.xtremesystems.org/forums/showthread.php?38489-Which-chip-is-this-one ICs used
-DXV2S8SSCCD3K27C,DIMM,Unbuffered,non-ECC,512 MByte,"2Rx8, 16 ICs",256 Mbit,,,,,Samsung,,Samsung K4H560838D-TCCC,N/A,,,,http://dlcdnet.asus.com/pub/ASUS/mb/sock478/p4p800-se/P4P800_SE_QVL.pdf Asus P4P800-SE QVL [PDF]+http://www.xtremesystems.org/forums/showthread.php?38489-Which-chip-is-this-one ICs used

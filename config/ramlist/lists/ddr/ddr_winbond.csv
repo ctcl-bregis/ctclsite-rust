@@ -1,6 +1,0 @@
-model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
-W9425GCDB-5,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx8, 8 ICs",256 Mbit,,,,,Winbond,,Winbond W942508CH-5,N/A,,,,http://dlcdnet.asus.com/pub/ASUS/mb/sock478/p4p800-se/P4P800_SE_QVL.pdf Asus P4P800-SE QVL [PDF]
-W9451GCDB-5,DIMM,Unbuffered,non-ECC,512 MByte,"2Rx8, 16 ICs",256 Mbit,,,,,Winbond,,Winbond W942508CH-5,N/A,,,,http://dlcdnet.asus.com/pub/ASUS/mb/sock478/p4p800-se/P4P800_SE_QVL.pdf Asus P4P800-SE QVL [PDF]
-W9425GADA-7,DIMM,Unbuffered,non-ECC,256 MByte,,,,PC2100,,,Winbond,,Winbond W942508AH-7,N/A,,,,https://asset.msi.com/file/test_report/TR10_149.pdf MSI QVL [PDF]
-W9425GCDB-5,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx8, 8 ICs",256 Mbit,,PC3200,,,Winbond,,Winbond CH-5 W942508CH-5,N/A,,,,https://asset.msi.com/file/test_report/TR10_149.pdf MSI QVL [PDF]
-W9451GCDB-5,DIMM,Unbuffered,non-ECC,512 MByte,"2Rx8, 16 ICs",256 Mbit,,PC3200,,,Winbond,,Winbond CH-5 W942508CH-5,N/A,,,,https://asset.msi.com/file/test_report/TR10_149.pdf MSI QVL [PDF]

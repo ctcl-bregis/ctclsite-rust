@@ -1,5 +1,0 @@
-page,title,index
-about,About,config/about/index.csv
-blog,Blog Posts,config/blog/index.csv
-ramlist,RAMList,config/ramlist/index.csv
-projects,Projects,config/projects/index.csv

@@ -1,6 +1,0 @@
-model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
-DDR2-800F4M,DIMM,Unbuffered,non-ECC,,,,2.1V ~ 2.2V,DDR2-800,4.0-4-3-9,,Micron,,Micron D9GMH (B6-3),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
-DDR2-800F4M Rev 2.0,DIMM,Unbuffered,non-ECC,,,,2.1V ~ 2.35V,DDR2-800,4.0-4-3-9,,Micron,,Micron D9GCT (B6-37E),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
-DDR2-800F3M Savage H.X.E.,DIMM,Unbuffered,non-ECC,,,,2.2V ~ 2.45V,DDR2-800,3.0-3-3-9,,Micron,,Micron D9GMH (B6-3) Handpicked,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
-DDR2-1000F4M Savage H.X.E.,DIMM,Unbuffered,non-ECC,,,,2.2V ~ 2.45V,DDR2-1000,4.0-4-4-9,,Micron,,"Micron D9GMH (B6-3) Handpicked, Micron D9GKX (B6-25E) Handpicked",N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
-DDR2-1000F5M,DIMM,Unbuffered,non-ECC,,,,2.1V ~ 2.35V,DDR2-1000,5.0-4-4-9,,Micron,,"Micron D9GCT (B6-37E), Micron D9GMH (B6-3)",N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List

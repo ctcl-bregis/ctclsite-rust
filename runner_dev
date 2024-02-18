@@ -1,0 +1,9 @@
+#!/bin/bash
+# ctclsite-rust - CTCL 2020-2024
+# File: runner_dev
+# Date: April ??, 2023 - February 18, 2024
+# Purpose: Runs the web server
+
+target/debug/ctclsite
+
+

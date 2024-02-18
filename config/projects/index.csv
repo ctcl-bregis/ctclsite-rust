@@ -1,8 +1,0 @@
-content,desc,page,title,color,bcat,subcat
-,Projects that I have worked on,root,Projects,#F0D000,,
-ctclsite,This website,ctclsite,ctclsite-rust,#F0D000,software,Webapp
-cams,Inventory Managment System,cams,CAMS Asset Management System,#F0D000,software,Webapp
-wbpc_pbt,Desktop computer system,wbpc_pbt,"""Polybutylene Terephthalate""",#F0D000,hardware,Workstation PC
-wbpc_pet,Desktop computer system,wbpc_pet,"""Polyethylene Terephthalate""",#F0D000,hardware,Workstation PC
-wbpc_abs,Desktop computer system,wbpc_abs,"""Acrylonitrile Butadiene Styrene""",#F0D000,hardware,Workstation PC
-svcs_pe,Server system,svcs_pe,"""Polyethylene""",#F0D000,hardware,Server

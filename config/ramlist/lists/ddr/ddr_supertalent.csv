@@ -1,3 +1,0 @@
-model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
-X32PB2GC,DIMM,Unbuffered,non-ECC,1 GByte,2Rx8,512 Mbit,2.5v,PC3200,CL3-?-?-?-?,TSOP-66,Infineon??,,,N/A,,,Heatsink covering ICs,CrazyblocksTechnologies Computer Laboratories
-PC3500 DDR433 (2.0-3-3-X-1T) D35PB12C2,DIMM,Unbuffered,non-ECC,,,,,PC3500,2.0-3-3-X-1T,,Infineon,,Infineon C-5,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List

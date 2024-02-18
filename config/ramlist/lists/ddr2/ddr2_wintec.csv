@@ -1,4 +1,0 @@
-model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
-DDR2-667 AMP X 39137282K-UA,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,,,Micron,,Micron D9CRZ (BT-37E),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
-DDR2-800 AMP X 3AXT6400C4-2048K,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,4.0-X-X-X,,Micron,,Micron D9GMH (B6-3),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
-DDR2-1000 AMP X 3AXT8000C5-2048K,DIMM,Unbuffered,non-ECC,,,,,DDR2-1000,5.0-X-X-X,,Micron,,Micron D9GKX (B6-25E),N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List

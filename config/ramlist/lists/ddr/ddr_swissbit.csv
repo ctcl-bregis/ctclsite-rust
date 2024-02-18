@@ -1,5 +1,0 @@
-model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
-SDU03264B4B31MT-50,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx8, 8 ICs",256 Mbit,,PC3200,,,Micron,,Micron MT46V32M8TG-5B,N/A,,,,https://asset.msi.com/file/test_report/TR10_149.pdf MSI QVL [PDF]
-SDU03264B4B31MT-50,DIMM,Unbuffered,non-ECC,512 MByte,"2Rx8, 16 ICs",256 Mbit,,PC3200,,,Micron,,Micron MT46V32M8TG-5B,N/A,,,,https://asset.msi.com/file/test_report/TR10_149.pdf MSI QVL [PDF]
-SDU06464H1B22IN-50,DIMM,Unbuffered,non-ECC,512 MByte,"2Rx8, 16 ICs",256 Mbit,,PC3200,,,Infineon,,Infineon HYB25D256800BT-5B,N/A,,,,https://asset.msi.com/file/test_report/TR10_149.pdf MSI QVL [PDF]
-SDU12864H1B32MT-50,DIMM,Unbuffered,non-ECC,1 GByte,"2Rx8, 16 ICs",512 Mbit,,PC3200,,,Micron,,Micron MT46V64M8TG-5R C,N/A,,,,https://asset.msi.com/file/test_report/TR10_149.pdf MSI QVL [PDF]

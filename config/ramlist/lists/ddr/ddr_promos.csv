@@ -1,3 +1,0 @@
-model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
-V826632K24SBTG-D3,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx8, 8 ICs",256 Mbit,,PC3200,,,ProMOS,,ProMOS V58C2256804SBT5,N/A,,,,https://asset.msi.com/file/test_report/TR10_149.pdf MSI QVL [PDF]
-V826664K24SBTG-D3,DIMM,Unbuffered,non-ECC,512 MByte,"2Rx8, 16 ICs",256 Mbit,,PC3200,,,ProMOS,,ProMOS V58C2256804SBT5,N/A,,,,https://asset.msi.com/file/test_report/TR10_149.pdf MSI QVL [PDF]

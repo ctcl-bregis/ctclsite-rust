@@ -1,7 +1,0 @@
-model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
-"DDR3-1333 M378B5273DH0-CH9 (4GB), M378B5773DH0-CH9 (2GB)",DIMM,Unbuffered,non-ECC,4 GiB,,,1.5V,DDR3-1333,9-X-X-X,,Samsung,,Samsung K4B2G0846D-HCH9,N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
-DDR3-1333 M378B5273DH0-CH9 (4GB),DIMM,Unbuffered,non-ECC,4 GiB,,,1.5V,DDR3-1333,9-9-9-25,,Samsung,,"Samsung K4B2G0846D-BCH9, Samsung K4B2G0846D-HCH9",N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
-DDR3-1600 M378B5273CH0-CK0 (4GB),DIMM,Unbuffered,non-ECC,4 GiB,,,1.5V,DDR3-1600,11-11-11-28,,Samsung,,Samsung K4B2G0846C-HCK0,N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
-DDR3-1600 VLP LV (Very Low Profile Low Voltage) M379B5273DH0-YK0 (4GB),DIMM,Unbuffered,non-ECC,4 GiB,,,1.5V,DDR3-1600,11-11-11-28,,Samsung,,Samsung K4B2G0846D-HYK0,N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
-DDR3-1066 M378B2873CZ0-CF8 (1GB),DIMM,Unbuffered,non-ECC,1 GiB,,,,DDR3-1066,,,Samsung,,Samsung ZCF8,N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/
-DDR3-1066 M378B6573EZ0-CF8 (512MB),DIMM,Unbuffered,non-ECC,,,,,DDR3-1066,,,Samsung,,Samsung ZCF8,N/A,,,,https://web.archive.org/web/20160515160658/http://ramlist.i4memory.com:80/ddr3/

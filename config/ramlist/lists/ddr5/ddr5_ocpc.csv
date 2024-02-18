@@ -1,3 +1,0 @@
-"model","mdtyp","rgtyp","errcd","mdcap","orgzn","iccap","icvlt","rtdsp","tming","icpkg","icmfg","icbnd","icmdl","rgvnd","flvnd","mpmic","pcvnd","notes","insrc"
-"MMPT2K16GD556C36T","DIMM","Unbuffered","non-ECC","8 GiByte","1Rx16","16 Gibit","1.25v","DDR5-5600 (OC) DDR5-4800 (Base)","36-38-38-76",,"Samsung","Samsung",,"N/A",,,,,"Gigabyte Z790 AORUS MASTER QVL: https://www.gigabyte.com/Motherboard/Z790-AORUS-MASTER-rev-10/support#support-memsup"
-"MMPT2K16GD548C40T","DIMM","Unbuffered","non-ECC","8 GiByte","1Rx16","16 Gibit","1.1v","DDR5-4800 (OC) DDR5-4800 (Base)","40-40-40-77",,"Micron","Micron/SpecTek","A","N/A",,,,,"Gigabyte Z790 AORUS MASTER QVL: https://www.gigabyte.com/Motherboard/Z790-AORUS-MASTER-rev-10/support#support-memsup"

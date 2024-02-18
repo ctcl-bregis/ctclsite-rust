@@ -1,6 +1,0 @@
-model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
-M378T6553BZ0-KD5,DIMM,Unbuffered,non-ECC,512 MByte,"1Rx8, 8 ICs",512 Mbit,,DDR2-533,CL4-4-4-10,,Samsung,Samsung,"K4T51083QB-ZKD5 (Die code: CZA358CC, Date code: 510; Week 10, 2005)",N/A,,,"Label has 0512 date code; Week 12, 2005. EEPROM unknown with markings: ""N503 A20RC""","Kris (Pictures, IC indentification, Timings), CTCL (Confirmation, EEPROM, label info)"
-M470T5663QZ3-CE6,SODIMM,Unbuffered,non-ECC,2 GByte,"2Rx8, 16 ICs",1 Gbit,,DDR2-667,CL5-5-5-12,,Samsung,Samsung,K4T1G084QR-HCF7,N/A,,,"Module made in China with date code 0849; Week 49, 2008","Kris (Pictures, IC indentification, Timings), CTCL (Confirmation, label info)"
-DDR2-533 Value M378T3253FG0-CD5,DIMM,Unbuffered,non-ECC,,,,,DDR2-533,4.0-4-4-10,,Samsung,,Samsung GCD5,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
-DDR2-667 Value M378T6553CZ3-CE6,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,5.0-5-5-12,,Samsung,,Samsung ZCE6,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
-M393T5750EZA-CE6Q0,DIMM,Registered,ECC,2 Gbyte,"2Rx4, 36 ICs",512 Mbit,,DDR2-667,CL5-5-5-12,,Samsung,Samsung,K4T51043QE-ZCE6,Inphi,,,,CTCL

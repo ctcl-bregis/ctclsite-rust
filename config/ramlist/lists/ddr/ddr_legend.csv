@@ -1,3 +1,0 @@
-model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
-L3264D36-643HDC5B,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx8, 8 ICs",256 Mbit,,PC2700,,,hynix,,hynix HY5DU56822BT-J,N/A,,,,https://asset.msi.com/file/test_report/TR10_149.pdf MSI QVL [PDF]
-L3264D37-643HDC9B,DIMM,Unbuffered,non-ECC,256 MByte,"1Rx8, 8 ICs",256 Mbit,,PC3200,,,hynix,,hynix HY5DU56822BT-D43,N/A,,,,https://asset.msi.com/file/test_report/TR10_149.pdf MSI QVL [PDF]

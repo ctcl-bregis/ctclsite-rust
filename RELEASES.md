@@ -1,17 +1,23 @@
-ctclsite-rust changelog
+# ctclsite-rust v1 - 2024
+On February 18, 2024, the framework was switched to Rocket in order to prepare for a possible rewrite.
 
-## 0.3.0
+## 1.1.0 - [UNRELEASED]
+Initial release
+
+# ctclsite-rust v0 - 2022-2023
+
+## 0.3.0 - April 27, 2023
 Logging Update
 
 Additions:
 - Rust application would now log requests and store the logs in the "log" directory
 
-## 0.2.1
+## 0.2.1 - April 15, 2023
 
 Changes:
 - Updated dependency versions in Cargo.toml
 
-## 0.2.0
+## 0.2.0 - February 26, 2023
 Major release with the main feature being the addition of the "Projects" page.
 
 Changes since 0.1.1:
@@ -21,7 +27,7 @@ Changes since 0.1.1:
 - RAMList removed from navigation bar
 - General code improvements
 
-## 0.1.1
+## 0.1.1 - January 13, 2023
 First release after the official release of the Rust version of the website.
 
 Changes since 0.1.0:
@@ -29,8 +35,7 @@ Changes since 0.1.0:
 - Removed unused variable outlined in a warning during compilation
 - Fixed repeating background CSS for About/Welcome page.
 
-
-## 0.1.0
+## 0.1.0 - January 13, 2024
 First release of the Rust version of the website
 
 General changes from ctclsite (Python) 2.1.4:

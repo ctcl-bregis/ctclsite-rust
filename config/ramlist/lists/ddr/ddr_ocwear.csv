@@ -1,4 +1,0 @@
-model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
-PC3200 (2.0-3-3-6-1T) - DDR560 CL 3-4-4-8 @ 2.8V,DIMM,Unbuffered,non-ECC,,,,2.8V,PC3200/PC4500,2.0-3-3-6-1T,,Samsung,,Samsung TCCD,N/A,,Brainpower PCB,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
-PC3200 WB BH 5ns,DIMM,Unbuffered,non-ECC,,,,,PC3200,,,Winbond,,Winbond UTT/BH-5,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List
-PC4200,DIMM,Unbuffered,non-ECC,,,,,PC4200,,,Samsung,,Samsung TCCD,N/A,,,,https://web.archive.org/web/20160530022939/http://ramlist.i4memory.com/ddr/ i4memory RAM List

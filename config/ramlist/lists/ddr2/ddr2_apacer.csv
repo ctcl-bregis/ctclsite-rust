@@ -1,7 +1,0 @@
-model,mdtyp,rgtyp,errcd,mdcap,orgzn,iccap,icvlt,rtdsp,tming,icpkg,icmfg,icbnd,icmdl,rgvnd,flvnd,pcvnd,notes,insrc
-DDR2-533,DIMM,Unbuffered,non-ECC,,,,,DDR2-533,4.0-4-4-X,,"Samsung, Elpida",,"Elpida AB-5C-E, Elpida, AG-5C-E, Samsung GCD5, Samsung ZCD5",N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
-DDR2-533 P/N: 78.01066.460 S/N: 2004224-00007,DIMM,Unbuffered,non-ECC,,,,,DDR2-533,4.0-4-4-X,,Samsung,,Samsung GCD5,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
-DDR2-667,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,5.0-5-5-X,,"Micron, Elpida",,"Elpida AE-6E-E, Elpida AG-6E-E, Micron D9DCL (CB-3)",N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
-DDR2-667 P/N: 78.91G88.420 S/N: 2006025-00195,DIMM,Unbuffered,non-ECC,,,,,DDR2-667,5.0-5-5-X,,Elpida,,Elpida AE-6E-E,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
-DDR2-800,DIMM,Unbuffered,non-ECC,,,,,DDR2-800,5.0-5-5-X,,"Samsung, Elpida",,"Elpida AB-6E-E, Samsung",N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
-DDR2-1066,DIMM,Unbuffered,non-ECC,,,,,DDR2-1066,5.0-5-5-15,,ProMOS,,ProMOS,N/A,,,,https://web.archive.org/web/20160322194238/http://ramlist.i4memory.com/ddr2/ i4memory RAM List
