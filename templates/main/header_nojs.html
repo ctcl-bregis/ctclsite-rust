@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Windows meta tags -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="msapplication-TileColor" content="{{ themecolor }}">
+        <!-- Main tags -->
+        <title>{{ title }}</title>
+        <meta name="generator" content="CTCL Website Backend">
+        <meta name="author" content="CTCL">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta property="og:site_name" content="CTCL">
+        <meta property="og:title" content="{{ title }}">
+        <meta property="og:locale" content="en_US">
+        <meta name="theme-color" content="{{ themecolor }}">
+        {% if desc and desc != "" %}
+        <meta property="og:description" content="{{ desc }} - CTCL">
+        <meta name="description" content="{{ desc }} - CTCL">
+        {% endif %}
+        <style>
+{{ styling|safe }}
+        </style>
+    </head>
+    <body>
+{% include "main/navbar.html" %}

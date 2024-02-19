@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Windows meta tags -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="msapplication-TileColor" content="{{ themecolor }}">
+        <!-- Main tags -->
+        <title>{{ title }}</title>
+        <meta name="generator" content="CTCL Website Backend">
+        <meta name="author" content="CTCL">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="description" content="{{ desc }} - CTCL">
+        <!-- OpenGraph meta tags -->
+        <meta property="og:url" content="https://www.ctcl-tech.com/">
+        <meta property="og:site_name" content="CTCL">
+        <meta property="og:title" content="{{ title }}">
+        <meta property="og:locale" content="en_US">
+        <meta name="theme-color" content="{{ themecolor }}">
+        <meta property="og:description" content="{{ desc }} - CTCL">
+        <script type="module" src="/static/common.js"></script>
+        <script type="module" src="/static/clientinfo.js"></script>
+        <style>
+{{ styling|safe }}
+        </style>
+        <script>
+function playPauseVideo() {
+    let videos = document.querySelectorAll("video");
+    videos.forEach((video) => {
+        let playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.then((_) => {
+                let observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (
+                                entry.intersectionRatio !== 1 &&
+                                !video.paused
+                            ) {
+                                video.pause();
+                            } else if (video.paused) {
+                                video.play();
+                            }
+                        });
+                    },
+                    { threshold: 0.2 }
+                );
+                observer.observe(video);
+            });
+        }
+    });
+}
+        </script>
+    </head>
+    <body>
+{% include "main/navbar.html" %}
