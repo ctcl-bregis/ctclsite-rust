@@ -1,11 +1,13 @@
 // ctclsite-rust - CTCL 2020-2024
-// File: runner_dev
+// File: src/app.rs
 // Purpose: Main code
 // Created: November 28, 2022
-// Modified: February 19, 2024
+// Modified: February 25, 2024
 
 #[macro_use] extern crate rocket;
 use rocket_dyn_templates::Template;
+use tera::Tera;
+
 
 #[get("/")]
 fn index() -> &'static str {

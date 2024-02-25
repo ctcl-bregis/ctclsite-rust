@@ -1,6 +1,6 @@
 {% include "lite/header.html" %}
     {% for section in sections %}
-    <section id="banner" style="background-image: url({{ section.bgimg }});">
+    <section class="banner" style="background-image: url({{ section.bgimg }});">
         <section class="sectioncontent">
         <h2 class="sectionheader pix">{{ section.title }}</h2>
         {{ section.rendered|safe }}

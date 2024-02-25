@@ -6,8 +6,8 @@
         <hr>
     </noscript>
     {% for section in sections %}
-    <section id="banner">
-        <video id="bgvid" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" poster="{{ section.bgimg }}">
+    <section id="{{ section.id }}" class="banner">
+        <video class="bgvid" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" poster="{{ section.bgimg }}">
             <source src="{{ section.bgvid }}" type="video/webm">
         </video>
         <section class="sectioncontent">
