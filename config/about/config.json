@@ -1,0 +1,26 @@
+{"config": {
+    "root": {
+        "theme": "gold",
+        "title": "Welcome",
+        "desc": "About the website and myself",
+        "sections": [
+            {"title": "About Me", "id": "about", "content": "config/about/sections/whoami.md", "bgvid": "/static/bgimg/whoami.webm", "bgimg": "/static/bgimg/whoami.webp"},
+            {"title": "Work Experience", "id": "workexp", "content": "config/about/sections/workexp.md", "bgvid": "/static/bgimg/workexp.webm", "bgimg": "/static/bgimg/workexp.webp"},
+            {"title": "Education", "id": "education", "content": "config/about/sections/education.md", "bgvid": "/static/bgimg/education.webm", "bgimg": "/static/bgimg/education.webp"},
+            {"title": "Website Info", "id": "websiteinfo", "content": "config/about/sections/techinfo.md", "bgvid": "/static/bgimg/techinfo.webm", "bgimg": "/static/bgimg/techinfo.webp"},
+            {"title": "Contact", "id": "contact", "content": "config/about/sections/contact.md", "bgvid": "/static/bgimg/contact.webm", "bgimg": "/static/bgimg/contact.webp"}
+        ]
+    },
+    "privacy": {
+        "theme": "gold",
+        "title": "Privacy Policy",
+        "desc": "Privacy policy of the website",
+        "content": "config/about/privacy.md"
+    },
+    "licensing": {
+        "theme": "gold",
+        "title": "Licensing",
+        "desc": "Licensing information for CTCL content on and off of the website",
+        "content": "config/about/licensing.md"
+    }
+}}

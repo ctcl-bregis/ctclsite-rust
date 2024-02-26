@@ -1,0 +1,70 @@
+{"config": {
+    "menu": {
+        "theme": "gold",
+        "title": "Projects",
+        "desc": "List of personal projects including PC hardware, hardware design, software and art projects"
+    },
+    "cats": {
+        "codename": {
+            "title": "Naming Scheme",
+            "desc": "Guides for the naming of my projects",
+            "subpages": [
+                {"link": "codenames", "content": "codenames.md", "theme": "gold", "title": "Codename Guide", "desc": "Guide about the codenames used for software and hardware projects."}
+            ]
+        },
+        "software": {
+            "title": "Software",
+            "desc": "Computer software projects such as web applications and desktop applications.",
+            "subpages": [
+                {"link": "ctclsite", "content": "ctclsite.md", "theme": "gold", "title": "CTCL Website", "desc": "The website itself"},
+                {"link": "cams", "content": "cams.md", "theme": "red", "title": "CAMS Asset Management System", "desc": "Fully custom inventory management software"},
+                {"link": "contactlist", "content": "contactlist.md", "theme": "blue", "title": "ContactList", "desc": "Browser-based contact manager"},
+                {"link": "todokiosk", "content": "todokiosk.md", "theme": "gold", "title": "ToDoKiosk", "desc": "CalDAV tasks client"},
+                {"link": "slag", "content": "slag.md", "theme": "99gray", "title": "SLAG", "desc": "Custom Discord bot"}
+            ]
+        },
+        "hardware": {
+            "title": "Hardware Design",
+            "desc": "Projects with custom circuit design and firmware.",
+            "subpages": [
+                {"link": "mct_1", "content": "mct_1.md", "theme": "mediacow", "title": "MediaCow Touch - \"Nashville\"", "desc": "Android tablet experiment"},
+                {"link": "mct_2", "content": "mct_2.md", "theme": "white", "title": "MediaCow Touch 2 - \"Paris\"", "desc": "Android tablet experiment idea"},
+                {"link": "mathpad", "content": "mathpad.md", "theme": "gold", "title": "MathPad", "desc": "Calculator keypad peripheral device"}
+            ]
+        },
+        "pchardware": {
+            "title": "PC Hardware",
+            "desc": "Computer systems that I use that are assembled from off-the-shelf parts.",
+            "subpages": [
+                {"link": "pc_pbt", "content": "pc_pbt.md", "theme": "red", "title": "WBPC - \"Polybutylene Terephthalate\"", "desc": "General-purpose desktop computer system"},
+                {"link": "pc_pc", "content": "pc_pc.md", "theme": "orange", "title": "WBPC - \"Polycarbonate\"", "desc": "Workbench desktop computer system"},
+                {"link": "pc_pmma", "content": "pc_pmma.md", "theme": "gold", "title": "MWDL - \"Polymethylmethacrylate\"", "desc": "Laptop computer system"},
+                {"link": "pc_pet", "content": "pc_pet.md", "theme": "qipurple", "title": "WBPC - \"Polyethylene Terephthalate\"", "desc": "Former general-purpose desktop computer system"},
+                {"link": "pc_pet2", "content": "pc_pet2.md", "theme": "qipurple", "title": "WBPC - \"Polyethylene Terephthalate v2\"", "desc": "Planned experimental desktop computer system"},
+                {"link": "pc_pp", "content": "pc_pp.md", "theme": "99red", "title": "WBPC - \"Polypropylene\"", "desc": "Experimental desktop computer system"},
+                {"link": "pc_pe", "content": "pc_pe.md", "theme": "99green", "title": "WBPC - \"Polyethylene\"", "desc": "Former, now experimental, desktop computer system"},
+                {"link": "pc_r12", "content": "pc_r12.md", "theme": "gold", "title": "SIGN1 - \"Dichlorodifluoromethane\"", "desc": "Bookshelf PC for displaying a To-Do list"},
+                {"link": "pc_thc", "content": "pc_thc.md", "theme": "gold", "title": "Phone - \"Tetrahydrocannabinol\"", "desc": "Main smartphone"},
+                {"link": "srv_vc", "content": "srv_vc.md", "theme": "gold", "title": "PRSV - \"Vinyl Chloride\"", "desc": "Dedicated 3D printer interface"},
+                {"link": "srv_amp", "content": "srv_amp.md", "theme": "gold", "title": "SVCS", "desc": "Series of server systems for use with service hosting"},
+                {"link": "srv_prm", "content": "srv_prm.md", "theme": "gold", "title": "WBSD - \"Promethazine\"", "desc": "Dedicated storage server"},
+                {"link": "srv_dxm", "content": "srv_dxm.md", "theme": "gold", "title": "ROUTER - \"Dextromethorphan\"", "desc": "Router and firewall server"}
+            ]
+        },
+        "automotive": {
+            "title": "Automotive and Mechanical",
+            "desc": "Projects that surround the development of automotive, mechanical and mechatronic systems.",
+            "subpages": [
+                {"link": "netkart", "content": "netkart.md", "theme": "netkart", "title": "NetKart", "desc": "Project surrounding the upgrades and potential computerization of a Go Kart"}
+            ]
+        },
+        "creative": {
+            "title": "Creative work",
+            "desc": "My creative work such as game design and photography.",
+            "subpages": [
+                {"link": "p2maps", "content": "p2maps.md", "theme": "source", "title": "Portal 2 Maps", "desc": "Custom community maps made for the 2011 puzzle game Portal 2"},
+                {"link": "nonmono", "content": "nonmono.md", "theme": "99gray", "title": "nonmonolithic", "desc": "Creative photography and video project"}
+            ]
+        }
+    }
+}}

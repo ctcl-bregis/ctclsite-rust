@@ -1,0 +1,3 @@
+ContactList is an open source configurable contact management web application written in Python using the Django web framework. It was developed in need for a simple contact manager that does not rely on any internet services and can be accessed from a browser anywhere on the local network. It is my first completed software that uses a database.
+
+The source code is currently hosted through GitHub at this [repository](https://github.com/ctcl-bregis/cams/).

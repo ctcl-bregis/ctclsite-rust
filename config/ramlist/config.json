@@ -1,0 +1,124 @@
+{"config": {
+    "menupage": {
+        "title": "RAMList",
+        "theme": "#009900",
+        "content": ""
+    },
+    "content": {
+        "root": [
+            {
+                "enabled": "False",
+                "name": "sdram",
+                "title": "RAMList - SDRAM",
+                "description": "Identification guide for SDRAM memory modules",
+                "theme": "#996600",
+                "buttonfg": "#000000",
+                "buttonbg": "#996600",
+                "buttontext": "SDRAM Memory Modules",
+                "buttonlink": "content/sdram/",
+                "content": "ramlist/content/sdram.md"
+            },
+            {
+                "enabled": "False",
+                "name": "ddr",
+                "title": "RAMList - DDR",
+                "description": "Identification guide for DDR memory modules",
+                "theme": "#000099",
+                "buttonfg": "#000000",
+                "buttonbg": "#000099",
+                "buttontext": "DDR Memory Modules",
+                "buttonlink": "content/ddr/",
+                "content": "ramlist/content/ddr.md"
+            },
+            {
+                "enabled": "False",
+                "name": "ddr2",
+                "title": "RAMList - DDR2",
+                "description": "Identification guide for DDR2 memory modules",
+                "theme": "#999900",
+                "buttonfg": "#000000",
+                "buttonbg": "#999900",
+                "buttontext": "DDR2 Memory Modules",
+                "buttonlink": "content/ddr2/",
+                "content": "ramlist/content/ddr2.md"
+            },
+            {
+                "enabled": "False",
+                "name": "ddr3",
+                "title": "RAMList - DDR3",
+                "description": "Identification guide for DDR3 memory modules",
+                "theme": "#990000",
+                "buttonfg": "#000000",
+                "buttonbg": "#990000",
+                "buttontext": "DDR3 Memory Modules",
+                "buttonlink": "content/ddr3/",
+                "content": "ramlist/content/ddr3.md"
+            },
+            {
+                "type": "content",
+                "name": "ddr4",
+                "enabled": "True",
+                "title": "RAMList - DDR4",
+                "description": "Identification guide for DDR4 memory modules",
+                "theme": "#009999",
+                "buttonfg": "#000000",
+                "buttonbg": "#009999",
+                "buttontext": "DDR4 Memory Modules",
+                "buttonlink": "content/ddr4/",
+                "content": "ramlist/content/ddr4.md"
+            },
+            {
+                "type": "content",
+                "name": "ddr5",
+                "enabled": "True",
+                "title": "RAMList - DDR5",
+                "description": "Identification guide for DDR5 memory modules",
+                "theme": "#990099",
+                "buttonfg": "#000000",
+                "buttonbg": "#990099",
+                "buttontext": "DDR5 Memory Modules",
+                "buttonlink": "content/ddr5/",
+                "content": "ramlist/content/ddr5.md"
+            },
+            {
+                "type": "dir",
+                "name": "misc",
+                "title": "Misc. Documents",
+                "description": "Miscellanious pages of RAMList",
+                "theme": "#009900",
+                "buttonfg": "#000000",
+                "buttonbg": "#FFFFFF",
+                "buttontext": "Misc. Documents",
+                "buttonlink": "content/misc/",
+                "qi_markings": [
+                    {
+                        "type": "content",
+                        "name": "ddr5",
+                        "enabled": "True",
+                        "title": "RAMList - Qimonda DRAM package markings theory",
+                        "description": "Theory on the meaning of Siemens, Infineon and Qimonda DRAM device package markings.",
+                        "theme": "#520C82",
+                        "buttonfg": "#FFFFFF",
+                        "buttonbg": "#520C82",
+                        "buttontext": "Qimonda DRAM package markings theory",
+                        "buttonlink": "content/misc/qimonda/",
+                        "content": "ramlist/content/misc/qi_markings.md"
+                    }
+                ]
+            },
+            {
+                "type": "content",
+                "name": "about",
+                "enabled": "True",
+                "title": "RAMList - About",
+                "description": "About RAMList",
+                "theme": "#009900",
+                "buttonfg": "#000000",
+                "buttonbg": "#009900",
+                "buttontext": "DDR5 Memory Modules",
+                "buttonlink": "content/ddr5/",
+                "content": "ramlist/content/ddr5.md"
+            }
+        ]
+    }
+}}

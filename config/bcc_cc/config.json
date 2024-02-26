@@ -1,0 +1,13 @@
+{"config": {
+    "main": {
+        "theme": "bcc_green",
+        "title": "Brightpoint Community College Computer Club",
+        "desc": "Links to pages related to the Brightpoint Community College Computer Club",
+        "background": "/static/bcc_cc/cc_background.webp",
+        "menu": [
+            {"title": "Flier - 🚧 Coming soon", "link": ".", "theme": "bcc_green"},
+            {"title": "Website - 🚧 Coming soon", "link": ".", "theme": "bcc_green"},
+            {"title": "Discord", "link": "https://discord.com/invite/YWPtsMGCn4", "theme": "discord"}
+        ]
+    }
+}}

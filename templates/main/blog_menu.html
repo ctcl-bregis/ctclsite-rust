@@ -2,7 +2,7 @@
     <h1 class="center pix">Blog Posts</h1>
     <hr>{% for key, value in posts.items %}{% if value.content != "" %}
     <section class="blogpost theme-{{ value.theme }}">{% if value.icon == "" %}{% else %}
-        <img src="{{ value.icon }}">{% endif %}
+        <img src="{{ value.icon }}" title="{{ value.icontitle }}">{% endif %}
         <a href="{{ key }}/"><button><h2>{{ value.title }}</h2></button></a>
         <p class="bloginfo">Date: {{ value.date }} - Category: {{ value.cat }}</p>
         <p class="blogdesc">{{ value.desc }}</p>
