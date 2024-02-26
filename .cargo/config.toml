@@ -1,4 +1,5 @@
 [build]
+# Change the "target-cpu" parameter to whatever CPU you need to support.
 rustflags = ["-C", "target-cpu=westmere"]
 
 [term]
