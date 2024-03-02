@@ -1,20 +1,20 @@
-{"config": {
-    "menu": {
+{
+    "root": {
         "theme": "gold",
         "title": "Blog Posts",
-        "desc": "List of the blog posts on the website"
-    },
-    "posts": {
-        "11": {"content": "blogpost_11.md", "icon": "/static/blog/11/blog11_icon.webp", "icontitle": "In the datacenter, where I belong", "theme": "gold", "cat": "Update", "date": "February 25, 2024", "title": "Week 8, 2024", "desc": "The eighth week of 2024"},
-        "10": {"content": "blogpost_10.md", "icon": "/static/blog/10/blog10_icon.webp", "icontitle": "Nanya business", "theme": "99green", "cat": "Software", "date": "February 18, 2024", "title": "A message about RAMList", "desc": "The status and plans for the RAMList section of the website."},
-        "9": {"content": "blogpost_9.md", "icon": "/static/blog/9/blog9_icon.webp", "icontitle": "\"Solid as steel\"", "theme": "gold", "cat": "Update", "date": "February 18, 2024", "title": "Week 7, 2024", "desc": "The seventh week of 2024"},
-        "8": {"content": "blogpost_8.md", "icon": "/static/blog/8/blog8_icon.webp", "icontitle": "i forgor 💀", "theme": "gold", "cat": "Update", "date": "February 11, 2024", "title": "Week 6, 2024", "desc": "The sixth week of 2024"},
-        "7": {"content": "blogpost_7.md", "icon": "/static/blog/7/blog7_icon.webp", "icontitle": "MediaCow Touch in 2024", "theme": "gold", "cat": "Update", "date": "February 4, 2024", "title": "Week 5, 2024", "desc": "The fifth week of 2024"},
-        "6": {"content": "blogpost_6.md", "icon": "/static/blog/6/blog6_icon.webp", "icontitle": "Lisdexamfetamine shortage", "theme": "gold", "cat": "Update", "date": "January 27, 2024", "title": "Week 4, 2024", "desc": "The fourth week of 2024"},
-        "5": {"content": "blogpost_5.md", "icon": "/static/blog/5/blog5_icon.webp", "icontitle": "A familiar hallway", "theme": "gold", "cat": "Update", "date": "January 21, 2024", "title": "Week 3, 2024", "desc": "The third week of 2024"},
-        "4": {"content": "blogpost_4.md", "icon": "/static/blog/4/blog4_icon.webp", "icontitle": "Backrooms vacation", "theme": "gold", "cat": "Update", "date": "January 14, 2024", "title": "Week 2, 2024", "desc": "The Second Week of 2024"},
-        "3": {"content": "blogpost_3.md", "icon": "/static/blog/3/blog3_icon.webp", "icontitle": "Professional Minecraft player", "theme": "gold", "cat": "Update", "date": "January 7, 2024", "title": "Week 1, 2024", "desc": "The First Week of 2024"},
-        "2": {"content": "blogpost_2.md", "icon": "", "theme": "gold", "cat": "Update", "date": "December 22, 2023", "title": "2023 In Review", "desc": "Overview of my experience during 2023 and yet another new version of the website"},
-        "1": {"content": "blogpost_1.md", "icon": "", "theme": "gold", "cat": "Hardware", "date": "July 11, 2023", "title": "SP7021 Part 1", "desc": "My work with the SP7021 SIP"}
+        "desc": "List of the blog posts on the website",
+        "posts": [
+            {"id": "11", "content": "blogpost_11.md", "icon": "/static/blog/11/blog11_icon.webp", "icontitle": "In the datacenter, where I belong", "theme": "gold", "cat": "Update", "date": "February 25, 2024", "title": "Week 8, 2024", "desc": "The eighth week of 2024"},
+            {"id": "10", "content": "blogpost_10.md", "icon": "/static/blog/10/blog10_icon.webp", "icontitle": "Nanya business", "theme": "99green", "cat": "Software", "date": "February 18, 2024", "title": "A message about RAMList", "desc": "The status and plans for the RAMList section of the website."},
+            {"id": "9", "content": "blogpost_9.md", "icon": "/static/blog/9/blog9_icon.webp", "icontitle": "\"Solid as steel\"", "theme": "gold", "cat": "Update", "date": "February 18, 2024", "title": "Week 7, 2024", "desc": "The seventh week of 2024"},
+            {"id": "8", "content": "blogpost_8.md", "icon": "/static/blog/8/blog8_icon.webp", "icontitle": "i forgor 💀", "theme": "gold", "cat": "Update", "date": "February 11, 2024", "title": "Week 6, 2024", "desc": "The sixth week of 2024"},
+            {"id": "7", "content": "blogpost_7.md", "icon": "/static/blog/7/blog7_icon.webp", "icontitle": "MediaCow Touch in 2024", "theme": "gold", "cat": "Update", "date": "February 4, 2024", "title": "Week 5, 2024", "desc": "The fifth week of 2024"},
+            {"id": "6", "content": "blogpost_6.md", "icon": "/static/blog/6/blog6_icon.webp", "icontitle": "Lisdexamfetamine shortage", "theme": "gold", "cat": "Update", "date": "January 27, 2024", "title": "Week 4, 2024", "desc": "The fourth week of 2024"},
+            {"id": "5", "content": "blogpost_5.md", "icon": "/static/blog/5/blog5_icon.webp", "icontitle": "A familiar hallway", "theme": "gold", "cat": "Update", "date": "January 21, 2024", "title": "Week 3, 2024", "desc": "The third week of 2024"},
+            {"id": "4", "content": "blogpost_4.md", "icon": "/static/blog/4/blog4_icon.webp", "icontitle": "Backrooms vacation", "theme": "gold", "cat": "Update", "date": "January 14, 2024", "title": "Week 2, 2024", "desc": "The Second Week of 2024"},
+            {"id": "3", "content": "blogpost_3.md", "icon": "/static/blog/3/blog3_icon.webp", "icontitle": "Professional Minecraft player", "theme": "gold", "cat": "Update", "date": "January 7, 2024", "title": "Week 1, 2024", "desc": "The First Week of 2024"},
+            {"id": "2", "content": "blogpost_2.md", "icon": "", "icontitle": "", "theme": "gold", "cat": "Update", "date": "December 22, 2023", "title": "2023 In Review", "desc": "Overview of my experience during 2023 and yet another new version of the website"},
+            {"id": "1", "content": "blogpost_1.md", "icon": "", "icontitle": "", "theme": "gold", "cat": "Hardware", "date": "July 11, 2023", "title": "SP7021 Part 1", "desc": "My work with the SP7021 SIP"}
+        ]
     }
-}}
+}

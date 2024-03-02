@@ -54,7 +54,6 @@ hr {
     margin: 0 0;
     padding: 0;
     margin-block: 0;
-    border-top: 2pt solid $theme;
 }
 
 .smallhr {
@@ -77,7 +76,6 @@ hr {
     padding-right: 0pt;
     padding-top: 4pt;
     padding-bottom: 4pt;
-    background-color: $theme;
     color: #000000;
 }
 
@@ -99,7 +97,6 @@ hr {
     font-family: "pix5x5";
     font-weight: normal;
     font-size: 12pt;
-    background-color: $theme;
     color: #000000;
     padding: 6pt 6pt;
 }
@@ -109,52 +106,9 @@ hr {
     z-index: -1;
 }
 
-.menu li a {
-    $btn-height: 16pt;
-
-    text-decoration: none;
-    color: $fgcolor;
-    background-color: $theme;
-
-    &:hover {
-        transition: 0.1s linear;
-        background-color: $fgcolor;
-        color: $theme;
-    }
-}
-
-a {
-    color: $theme;
-}
-
 p {
     font-size: 12pt;
     margin: 8pt;
-}
-
-::selection {
-    color: $fgcolor;
-    background-color: $theme;
-}
-
-::-moz-selection {
-    color: $fgcolor;
-    background-color: $theme;
-}
-
-::-o-selection {
-    color: $fgcolor;
-    background-color: $theme;
-}
-
-::-ms-selection {
-    color: $fgcolor;
-    background-color: $theme;
-}
-
-::-webkit-selection {
-    color: $fgcolor;
-    background-color: $theme;
 }
 
 table {
@@ -187,17 +141,12 @@ li {
     list-style-type: square;
 }
 
-li::marker {
-    color: $theme;
-}
-
 section {
     color: #FFFFFF;
 }
 
 .sectionheader {
     color: #000000;
-    background-color: $theme;
     margin: 0;
     padding: 6pt;
     padding-top: 4pt;
@@ -227,21 +176,18 @@ section p {
     width: auto;
     min-height: 100vh;
     overflow: hidden;
-    margin: $sectionmargin;
-    border: $theme;
     border-width: 2pt;
     border-style: solid;
+    margin: $sectionmargin;
 }
 
 .servicebanner {
     position: relative;
     width: auto;
     overflow: hidden;
-    margin: $sectionmargin;
-    border: $theme;
     border-width: 2pt;
     border-style: solid;
-
+    margin: $sectionmargin;
 }
 
 .bgvid {
@@ -277,10 +223,9 @@ section p {
     position: relative;
     width: auto;
     overflow: hidden;
-    margin: $sectionmargin;
-    border: $theme;
     border-width: 2pt;
     border-style: solid;
+    margin: $sectionmargin;
 }
 
 .sectiontitle {
@@ -290,7 +235,6 @@ section p {
     width: fit-content;
     font-weight: bold;
     font-size: 18pt;
-    background-color: $theme;
     color: #000000;
 }
 
@@ -368,36 +312,6 @@ section p {
     margin: 0;
 }
 
-@each $themename, $colors in $themes {
-    $boxfgcolor: unquote(map-get($colors, "fgcolor"));
-    $boxbgcolor: unquote(map-get($colors, "color"));
-
-    .theme-#{$themename} {
-        border-color: $boxbgcolor;
-
-        ::selection {
-            color: $boxfgcolor;
-            background-color: $boxbgcolor;
-        }
-    }
-
-    .theme-#{$themename} img {
-        border-color: $boxbgcolor;
-    }
-
-    .theme-#{$themename} a button {
-        color: $boxfgcolor;
-        background-color: $boxbgcolor;
-        border-color: $boxbgcolor;
-
-        &:hover {
-            transition: 0.1s linear;
-            background-color: $boxfgcolor;
-            color: $boxbgcolor;
-        }
-    }
-}
-
 .bloginfo {
     margin: 4pt;
     font-size: 10pt;
@@ -405,35 +319,13 @@ section p {
 
 .blogdesc {
     display: flex;
-    max-width: calc(100% - height);
+    /* max-width: calc(100% - height); */
     margin: 4pt;
     font-size: 12pt;
 }
 
 .content {
     min-height: 100vh;
-}
-
-.backbutton {
-    height: 32pt;
-    width: 64pt;
-    font-family: "pix5x5";
-
-    border-width: 2pt;
-    border-color: $theme;
-    border-style: solid;
-    border-bottom-style: none;
-    cursor: pointer;
-    font-size: 12pt;
-
-    background-color: $theme;
-    color: $fgcolor;
-
-    &:hover {
-        transition: 0.1s linear;
-        background-color: $fgcolor;
-        color: $theme;
-    }
 }
 
 figure {
@@ -494,31 +386,4 @@ figure figcaption {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14pt;
     text-align: center;
-}
-
-
-@each $themename, $colors in $themes {
-    $boxfgcolor: unquote(map-get($colors, "fgcolor"));
-    $boxbgcolor: unquote(map-get($colors, "color"));
-
-    .linkitem-theme-#{$themename} {
-        border-color: $boxbgcolor;
-
-        ::selection {
-            color: $boxfgcolor;
-            background-color: $boxbgcolor;
-        }
-    }
-
-    .linkitem-theme-#{$themename} a button {
-        color: $boxfgcolor;
-        background-color: rgba(0, 0, 0, 0);
-        border-color: $boxbgcolor;
-
-        &:hover {
-            transition: 0.1s linear;
-            background-color: $boxbgcolor;
-            color: $boxfgcolor;
-        }
-    }
 }

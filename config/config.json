@@ -1,41 +1,39 @@
-{"config": {
+{
     "main_scss": "config/styling/main/common.scss",
     "lite_scss": "config/styling/lite/common.scss",
-    "main_scss_comp": "build/main/common.json",
-    "lite_scss_comp": "build/lite/common.json",
-    "styling_colors": {
-        "blue": {"color": "#0000ff", "fgcolor": "#000000", "enabled": "true"},
-        "gold": {"color": "#f0d000", "fgcolor": "#000000", "enabled": "true"},
-        "red": {"color": "#ff0000", "fgcolor": "#000000", "enabled": "true"},
-        "bcc_green": {"color": "#00cc00", "fgcolor": "#ffffff", "enabled": "true"},
-        "white": {"color": "#ffffff", "fgcolor": "#000000", "enabled": "true"},
-        "99gray": {"color": "#999999", "fgcolor": "#000000", "enabled": "true"},
-        "99green": {"color": "#009900", "fgcolor": "#000000", "enabled": "true"},
-        "99red": {"color": "#990000", "fgcolor": "#000000", "enabled": "true"},
-        "mediacow": {"color": "#996633", "fgcolor": "#000000", "enabled": "true"},
-        "netkart": {"color": "#006633", "fgcolor": "#ffffff", "enabled": "true"},
-        "orange": {"color": "#ff6600", "fgcolor": "#000000", "enabled": "true"},
-        "source": {"color": "#f79a10", "fgcolor": "#000000", "enabled": "true"},
-        "qipurple": {"color": "#520c82", "fgcolor": "#ffffff", "enabled": "true"},
-        "discord": {"color": "#707bf4", "fgcolor": "#ffffff", "enabled": "true"},
-        "insta": {"color": "#f400a7", "fgcolor": "#ffffff", "enabled": "true"},
-        "sdram": {"color": "#996600", "fgcolor": "#000000", "enabled": "false"},
-        "ddr": {"color": "#000099", "fgcolor": "#000000", "enabled": "false"},
-        "ddr2": {"color": "#999900", "fgcolor": "#000000", "enabled": "false"},
-        "ddr3": {"color": "#990000", "fgcolor": "#000000", "enabled": "false"},
-        "ddr4": {"color": "#009999", "fgcolor": "#000000", "enabled": "false"},
-        "ddr5": {"color": "#990099", "fgcolor": "#000000", "enabled": "false"}
+    "themes": {
+        "blue": {"color": "#0000ff", "fgcolor": "#000000", "enabled": true},
+        "gold": {"color": "#f0d000", "fgcolor": "#000000", "enabled": true},
+        "red": {"color": "#ff0000", "fgcolor": "#000000", "enabled": true},
+        "bcc_green": {"color": "#00cc00", "fgcolor": "#ffffff", "enabled": true},
+        "white": {"color": "#ffffff", "fgcolor": "#000000", "enabled": true},
+        "99gray": {"color": "#999999", "fgcolor": "#000000", "enabled": true},
+        "99green": {"color": "#009900", "fgcolor": "#000000", "enabled": true},
+        "99red": {"color": "#990000", "fgcolor": "#000000", "enabled": true},
+        "mediacow": {"color": "#996633", "fgcolor": "#000000", "enabled": true},
+        "netkart": {"color": "#006633", "fgcolor": "#ffffff", "enabled": true},
+        "orange": {"color": "#ff6600", "fgcolor": "#000000", "enabled": true},
+        "source": {"color": "#f79a10", "fgcolor": "#000000", "enabled": true},
+        "qipurple": {"color": "#520c82", "fgcolor": "#ffffff", "enabled": true},
+        "discord": {"color": "#707bf4", "fgcolor": "#ffffff", "enabled": true},
+        "insta": {"color": "#f400a7", "fgcolor": "#ffffff", "enabled": true},
+        "sdram": {"color": "#996600", "fgcolor": "#000000", "enabled": false},
+        "ddr": {"color": "#000099", "fgcolor": "#000000", "enabled": false},
+        "ddr2": {"color": "#999900", "fgcolor": "#000000", "enabled": false},
+        "ddr3": {"color": "#990000", "fgcolor": "#000000", "enabled": false},
+        "ddr4": {"color": "#009999", "fgcolor": "#000000", "enabled": false},
+        "ddr5": {"color": "#990099", "fgcolor": "#000000", "enabled": false}
     },
     "navbar": [
-        {"type": "button", "app": "about", "title": "ABOUT", "link": "/", "float": "left"},
-        {"type": "button", "app": "blog", "title": "BLOG", "link": "/blog/", "float": "left"},
-        {"type": "button", "app": "projects", "title": "PROJECTS", "link": "/projects/", "float": "left"}
+        {"navtype": "button", "app": "about", "title": "ABOUT", "link": "/", "float": "left"},
+        {"navtype": "button", "app": "blog", "title": "BLOG", "link": "/blog/", "float": "left"},
+        {"navtype": "button", "app": "projects", "title": "PROJECTS", "link": "/projects/", "float": "left"}
     ],
     "pages": {
         "about": "config/about/config.json",
         "blog": "config/blog/config.json",
         "projects": "config/projects/config.json",
-        "services": "config/projects/services.json",
+        "services": "config/services/config.json",
         "ramlist": "config/ramlist/config.json"
     }
-}}
+}

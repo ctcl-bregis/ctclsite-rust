@@ -14,7 +14,8 @@ I have the most experience with these programming languages in these application
         - [ContactList](../projects/contactlist/)
         - [ToDoKiosk](../projects/todokiosk) 
         - [CAMS](../projects/cams/)
-    - Pycord, discord.py bot frameworks
+- Python - Chat service bots
+    - Pycord and discord.py Discord bot frameworks
         - [SLAG](../projects/slag/)
 
 ### Intermediate Experience
@@ -26,13 +27,15 @@ I have some experience with these programming languages in these applications.
     - MicroPython, CircuitPython
         - Modifications to the [Adafruit "EZ Make Oven"](https://learn.adafruit.com/ez-make-oven/installing-the-code) code
         - Some experimentation with the Raspberry Pi Pico
-
-### Beginner Experience
-I do not have that much experience in these programming languages in the listed applications but I am willing to learn more about them.
-
 - Rust - Server/web applications
     - Actix Web
         - [ctclsite-rust](../projects/ctclsite/)
+- Rust - Chat service bots
+    - Serenity Discord bot framework
+        - [SLAG](../projects/slag/)
+### Beginner Experience
+I do not have that much experience in these programming languages in the listed applications but I am willing to learn more about them.
+
 - Rust - Embedded
     - So far just hardware experimentation, no use in projects yet
 - JavaScript - Web applications

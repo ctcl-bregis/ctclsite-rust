@@ -1,5 +1,5 @@
 /*
- * ctclsite-python - CTCL 2020-2024
+ * ctclsite-python - CTCL 2022-2024
  * File: static/clientinfo.js
  * Purpose: Client-side data collection script
  * Created: December 16, 2023

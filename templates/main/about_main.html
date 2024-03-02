@@ -1,10 +1,4 @@
 {% include "main/header.html" %}
-    <noscript>
-        <section>
-            <p>If some features are missing because of the browser not supporting JavaScript or newer CSS features, try the compatibility version of the website <a href="/lite/">here</a></p>
-        </section>
-        <hr>
-    </noscript>
     {% for section in sections %}
     <section id="{{ section.id }}" class="banner">
         <video class="bgvid" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" poster="{{ section.bgimg }}">
@@ -12,7 +6,7 @@
         </video>
         <section class="sectioncontent">
         <h2 class="sectionheader pix">{{ section.title }}</h2>
-        {{ section.rendered|safe }}
+        {{ section.content|safe }}
         </section>
     </section>{% endfor %}
     <hr>

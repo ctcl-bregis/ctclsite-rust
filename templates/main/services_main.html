@@ -4,7 +4,7 @@
     {% for section in sections %}
     <section class="servicebanner">
         <h2 class="sectionheader pix">{{ section.title }}</h2>
-        {{ section.rendered|safe }}
+        {{ section.content|safe }}
         </section>
     </section>{% endfor %}
     <hr>

@@ -1,8 +1,15 @@
 # ctclsite-rust v1 - 2024
-On February 18, 2024, the framework was switched to Rocket in order to prepare for a possible rewrite.
+On February 18, 2024, a rewrite continuing to use Actix was started
 
 ## 1.1.0 - [UNRELEASED]
 Initial release
+
+### Changes from ctclsite-python v5
+Other than the switch from Python Django and Rust Actix bringing significant performance improvements.
+
+- JavaScript files are no longer linked and are now embedded in the page head
+- JavaScript is now minimized
+- SCSS modified per theme split into a separate file called theme.scss, this should decrease SCSS compilation time
 
 # ctclsite-rust v0 - 2022-2023
 
@@ -35,10 +42,10 @@ Changes since 0.1.0:
 - Removed unused variable outlined in a warning during compilation
 - Fixed repeating background CSS for About/Welcome page.
 
-## 0.1.0 - January 13, 2024
+## 0.1.0 - January 13, 2023
 First release of the Rust version of the website
 
-General changes from ctclsite (Python) 2.1.4:
+General changes from ctclsite-python 2.1.4:
 
 - Rewritten entirely in Rust, mainly utilizing actix-web and Tera
 - Smaller directory count

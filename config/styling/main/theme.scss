@@ -1,0 +1,159 @@
+@use "sass:color";
+@use "sass:map";
+@use "sass:string";
+
+/* This is the quick hack; this value is to be replaced by build.rs */
+$$thememap$$
+
+hr {
+    border-top: 2pt solid $theme;
+}
+
+.navbar {
+    background-color: $theme;
+}
+
+.menu li a {
+    $btn-height: 16pt;
+
+    text-decoration: none;
+    color: $fgcolor;
+    background-color: $theme;
+
+    &:hover {
+        transition: 0.1s linear;
+        background-color: $fgcolor;
+        color: $theme;
+    }
+}
+
+a {
+    color: $theme;
+}
+
+li::marker {
+    color: $theme;
+}
+
+.banner {
+    border-color: $theme;
+}
+
+.servicebanner {
+    border-color: $theme;
+}
+
+.sectionheader {
+    background-color: $theme;
+}
+
+.sectionitem {
+    border-color: $theme;
+}
+
+.sectiontitle {
+    background-color: $theme;
+}
+
+::selection {
+    color: $fgcolor;
+    background-color: $theme;
+}
+
+::-moz-selection {
+    color: $fgcolor;
+    background-color: $theme;
+}
+
+::-o-selection {
+    color: $fgcolor;
+    background-color: $theme;
+}
+
+::-ms-selection {
+    color: $fgcolor;
+    background-color: $theme;
+}
+
+::-webkit-selection {
+    color: $fgcolor;
+    background-color: $theme;
+}
+
+@each $themename, $colors in $themes {
+    $boxfgcolor: unquote(map-get($colors, "fgcolor"));
+    $boxbgcolor: unquote(map-get($colors, "color"));
+
+    .theme-#{$themename} {
+        border-color: $boxbgcolor;
+
+        ::selection {
+            color: $boxfgcolor;
+            background-color: $boxbgcolor;
+        }
+    }
+
+    .theme-#{$themename} img {
+        border-color: $boxbgcolor;
+    }
+
+    .theme-#{$themename} a button {
+        color: $boxfgcolor;
+        background-color: $boxbgcolor;
+        border-color: $boxbgcolor;
+
+        &:hover {
+            transition: 0.1s linear;
+            background-color: $boxfgcolor;
+            color: $boxbgcolor;
+        }
+    }
+}
+
+@each $themename, $colors in $themes {
+    $boxfgcolor: unquote(map-get($colors, "fgcolor"));
+    $boxbgcolor: unquote(map-get($colors, "color"));
+
+    .linkitem-theme-#{$themename} {
+        border-color: $boxbgcolor;
+
+        ::selection {
+            color: $boxfgcolor;
+            background-color: $boxbgcolor;
+        }
+    }
+
+    .linkitem-theme-#{$themename} a button {
+        color: $boxfgcolor;
+        background-color: rgba(0, 0, 0, 0);
+        border-color: $boxbgcolor;
+
+        &:hover {
+            transition: 0.1s linear;
+            background-color: $boxbgcolor;
+            color: $boxfgcolor;
+        }
+    }
+}
+
+.backbutton {
+    height: 32pt;
+    width: 64pt;
+    font-family: "pix5x5";
+
+    border-width: 2pt;
+    border-color: $theme;
+    border-style: solid;
+    border-bottom-style: none;
+    cursor: pointer;
+    font-size: 12pt;
+
+    background-color: $theme;
+    color: $fgcolor;
+
+    &:hover {
+        transition: 0.1s linear;
+        background-color: $fgcolor;
+        color: $theme;
+    }
+}

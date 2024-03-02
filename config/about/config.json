@@ -1,4 +1,4 @@
-{"config": {
+{
     "root": {
         "theme": "gold",
         "title": "Welcome",
@@ -23,4 +23,4 @@
         "desc": "Licensing information for CTCL content on and off of the website",
         "content": "config/about/licensing.md"
     }
-}}
+}

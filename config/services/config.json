@@ -1,8 +1,8 @@
-{"config": {
+{
     "root": {
         "theme": "gold",
         "title": "Services",
-        "description": "Services that I offer",
+        "desc": "Services that I offer",
         "sections": [
             {"title": "Technical Support", "content": "config/services/sections/techsupport.md"},
             {"title": "Software", "content": "config/services/sections/software.md"},
@@ -10,4 +10,4 @@
             {"title": "Contact", "content": "config/about/sections/contact.md"}
         ]
     }
-}}
+}

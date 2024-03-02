@@ -1,4 +1,4 @@
-{"config": {
+{
     "main": {
         "theme": "bcc_green",
         "title": "Brightpoint Community College Computer Club",
@@ -10,4 +10,4 @@
             {"title": "Discord", "link": "https://discord.com/invite/YWPtsMGCn4", "theme": "discord"}
         ]
     }
-}}
+}
