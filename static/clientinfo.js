@@ -3,7 +3,7 @@
  * File: static/clientinfo.js
  * Purpose: Client-side data collection script
  * Created: December 16, 2023
- * Modified: January 14, 2024
+ * Modified: March 3, 2024
  */
 
 // Time and networking
@@ -51,15 +51,6 @@ if (localIp) {
 
 } else {
     localIp = "";
-}
-
-var extIp = "";
-extIp = await fetch("/inlog/getip/").then(res => res.text());
-
-if (extIp) {
-    
-} else {
-    extIp = "";
 }
 
 // Device data
@@ -329,7 +320,7 @@ try {
 
 var canvas = document.createElement('canvas');
 var ctx = canvas.getContext('2d');
-var txt = 'ctclsite-python-canvas-test';
+var txt = 'ctclsite-canvas-test';
 ctx.textBaseline = "top";
 ctx.font = "14px 'Arial'";
 ctx.textBaseline = "alphabetic";
@@ -353,35 +344,34 @@ fetch("/inlog/", {
   method: "POST",
   body: JSON.stringify({
     // Time and networking
-    timeZone: timeZone,
-    localIp: localIp,
-    extIp: extIp,
+    timeZone: String(timeZone),
+    localIp: String(localIp),
+    extIp: String(""),
     // Device data
-    webGlDebug: webGlDebug,
-    webGlVendor: webGlVendor,
-    webGlRenderer: webGlRenderer,
-    cpuCores: cpuCores,
-    memSize: memSize,
-    maxTp: maxTp,
-    oscpu: oscpu,
-    plat: plat,
-    screenX: screenX,
-    screenY: screenY,
-    screenPixRatio: screenPixRatio,
-    screenPixDepth: screenPixDepth,
-    canvasFp: canvasFp,
+    webGlVendor: String(webGlVendor),
+    webGlRenderer: String(webGlRenderer),
+    cpuCores: String(cpuCores),
+    memSize: String(memSize),
+    maxTp: String(maxTp),
+    oscpu: String(oscpu),
+    plat: String(plat),
+    screenX: String(screenX),
+    screenY: String(screenY),
+    screenPixRatio: String(screenPixRatio),
+    screenPixDepth: String(screenPixDepth),
+    canvasFp: String(canvasFp),
     // Software support
-    onLine: onLine,
-    pdfViewer: pdfViewer,
-    cookiesEnabled: cookiesEnabled,
-    dntEnabled: dntEnabled,
-    langs: langs,
-    prod: prod,
-    prodSub: prodSub,
-    userAgent: userAgent,
-    vend: vend,
-    innerHeight: innerHeight,
-    innerWidth: innerWidth,
+    onLine: String(onLine),
+    pdfViewer: String(pdfViewer),
+    cookiesEnabled: String(cookiesEnabled),
+    dntEnabled: String(dntEnabled),
+    langs: String(langs),
+    prod: String(prod),
+    prodSub: String(prodSub),
+    userAgent: String(userAgent),
+    vend: String(vend),
+    innerHeight: String(innerHeight),
+    innerWidth: String(innerWidth),
   }),
   headers: {"Content-type": "application/json; charset=UTF-8"}
 });

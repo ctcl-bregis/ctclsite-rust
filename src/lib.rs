@@ -2,19 +2,17 @@
 // File: src/lib.rs
 // Purpose: Module import and commonly used functions
 // Created: November 28, 2022
-// Modified: March 1, 2024
+// Modified: March 3, 2024
 
 pub mod routes;
-pub mod logger;
 
+use indexmap::IndexMap;
 use std::collections::HashMap;
 use std::fs::File;
 use std::io::{Read, Error};
 use std::result::Result;
-use log::debug;
 use comrak::{markdown_to_html, Options};
 use serde::{Deserialize, Serialize};
-use serde_json::Value;
 
 // Config file terminology:
 // config/ - "site"
@@ -42,12 +40,12 @@ struct Navitem {
 struct Sitecfg {
     main_scss: String,
     lite_scss: String,
-    themes: HashMap<String, Theme>,
+    themes: IndexMap<String, Theme>,
     navbar: Vec<Navitem>,
-    pages: HashMap<String, String>
+    pages: IndexMap<String, String>
 }
 
-#[derive(Deserialize, Serialize, Debug)]
+#[derive(Deserialize, Serialize, Debug, Clone)]
 struct Section {
     title: String,
     id: Option<String>,
@@ -56,40 +54,30 @@ struct Section {
     bgimg: Option<String>
 }
 
-#[derive(Deserialize, Serialize, Debug)]
+#[derive(Deserialize, Serialize, Debug, Clone)]
 struct Linklistlink {
     title: String,
     link: String,
     theme: String
 }
 
-#[derive(Deserialize, Serialize, Debug)]
-struct Blogpost {
-    id: String,
-    content: String,
-    icon: String,
-    icontitle: String,
-    theme: String,
-    cat: String,
-    date: String,
-    title: String,
-    desc: String
-}
-
-#[derive(Deserialize, Serialize, Debug)]
+#[derive(Deserialize, Serialize, Debug, Clone)]
 struct Page {
     theme: String,
     title: String,
     desc: String,
-    posts: Option<Vec<Blogpost>>,
     content: Option<String>,
     sections: Option<Vec<Section>>,
-    menu: Option<Vec<Linklistlink>>
+    menu: Option<Vec<Linklistlink>>,
+    icon: Option<String>,
+    icontitle: Option<String>,
+    cat: Option<String>,
+    date: Option<String>
 }
 
 #[derive(Deserialize, Serialize, Debug)]
 struct Pagecfg {
-    pages: HashMap<String, Page>
+    pages: IndexMap<String, Page>
 }
 // -------------------------------------
 
@@ -127,19 +115,17 @@ pub fn mkcontext(metapage: &str, subpage: &str) -> Result<tera::Context, Error> 
     // TODO: find out how to load the configurations on start instead of every time this function is called
     let sitecfg: Sitecfg = serde_json::from_str(&read_file(String::from("config/config.json")).unwrap()).unwrap();
 
-    let mut pagecfg: Pagecfg = Pagecfg { pages: HashMap::new() };
+    // IndexMap must be used here to preserve order and allow sorting of keys
+    let mut pagecfg: Pagecfg = Pagecfg { pages: IndexMap::new() };
 
     pagecfg.pages = if metapage == "about" {
-        let lookup: HashMap<String, Page> = serde_json::from_str(&read_file(sitecfg.pages.get("about").unwrap().to_string()).unwrap()).unwrap();
+        let lookup: IndexMap<String, Page> = serde_json::from_str(&read_file(sitecfg.pages.get("about").unwrap().to_string()).unwrap()).unwrap();
         lookup
     } else if metapage == "blog" {
-        let lookup: HashMap<String, Page> = serde_json::from_str(&read_file(sitecfg.pages.get("blog").unwrap().to_string()).unwrap()).unwrap();
-        lookup
-    } else if metapage == "projects" {
-        let lookup: HashMap<String, Page> = serde_json::from_str(&read_file(sitecfg.pages.get("projects").unwrap().to_string()).unwrap()).unwrap();
+        let lookup: IndexMap<String, Page> = serde_json::from_str(&read_file(sitecfg.pages.get("blog").unwrap().to_string()).unwrap()).unwrap();
         lookup
     } else if metapage == "services" {
-        let lookup: HashMap<String, Page> = serde_json::from_str(&read_file(sitecfg.pages.get("services").unwrap().to_string()).unwrap()).unwrap();
+        let lookup: IndexMap<String, Page> = serde_json::from_str(&read_file(sitecfg.pages.get("services").unwrap().to_string()).unwrap()).unwrap();
         lookup
     } else {
         return Err(Error::new(std::io::ErrorKind::NotFound, "Invalid page".to_string()))
@@ -177,7 +163,17 @@ pub fn mkcontext(metapage: &str, subpage: &str) -> Result<tera::Context, Error> 
     }
 
     // Blog is a special case
-    if metapage == "blog" && subpage == "root" {
+    if metapage == "blog" {
+        if subpage == "root" {
+            let mut posts: IndexMap<String, Page> = pagecfg.pages;
+            posts.shift_remove("root");
+            
+            ctx.insert("posts", &posts)
+        } else {
+            let mdpath = subpagecfg.unwrap().content.as_ref().unwrap();
+            let rendered = markdown_to_html(&read_file(mdpath.to_owned()).unwrap(), &comrak_options);
+            ctx.insert("rendered", &rendered);
+        }
 
     }
 

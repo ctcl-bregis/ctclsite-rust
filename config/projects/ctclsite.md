@@ -10,7 +10,7 @@ The source code to the website can be found here: [GitHub](https://github.com/ct
 # History
 The Rust version of the website has the codename "Atlantic Blue Crab", while the Python version has the codename "Apache Trout".
 
-The website has gone under six rewrites since its introduction in December 2021/January 2022. The first, second and third version was written using the Python Flask framework, the third, fourth and the current version, fifth was written using Python Django.
+The website has gone under seven rewrites since its introduction in December 2021/January 2022. The first, second and third version was written using the Python Flask framework. The fourth and seventh was written using Rust Actix. The fifth and sixth used Python Django.
 
 From November 2022 to January 2023, I made a rewrite of the website in the Rust programming language utilizing the Actix framework, this version of the website, called ctclsite-rust "Atlantic Blue Crab" did not last that long and was eventually replaced by the third rewrite of ctclsite-python.
 
@@ -45,7 +45,7 @@ These rewrites boil down to this:
         <td><a href="../pc_pet">Polyethylene Terephthalate</a></td>
     </tr>
     <tr>
-        <td>ctclsite-rust v1</td>
+        <td>ctclsite-rust v0</td>
         <td>Rust</td>
         <td>Actix</td>
         <td>Manual Styling</td>
@@ -72,12 +72,21 @@ These rewrites boil down to this:
         <td><a href="../pc_pbt">Polybutylene Terephthalate</a></td>
     </tr>
     <tr>
-        <td>ctclsite-python v5 - <strong>CURRENT</strong></td>
-        <td>Python + JavaScript</td>
+        <td>ctclsite-python v5</td>
+        <td>Python, JavaScript</td>
         <td>Django</td>
         <td>SCSS</td>
         <td>November 21, 2023</td>
         <td>December 22, 2023</td>
+        <td><a href="../pc_pbt">Polybutylene Terephthalate</a></td>
+    </tr>
+    <tr>
+        <td>ctclsite-rust v1 - <strong>CURRENT</strong></td>
+        <td>Rust, JavaScript</td>
+        <td>Actix</td>
+        <td>SCSS</td>
+        <td>February 18, 2024</td>
+        <td>March 3, 2024</td>
         <td><a href="../pc_pbt">Polybutylene Terephthalate</a></td>
     </tr>
 </table>
@@ -111,4 +120,6 @@ ctclsite-python v5 has minor changes over the backend code of the website and wa
 This release was finally put into production on December 22, 2023.
 
 ## ctclsite-rust v2
-On February 18, 2024, I have set up the ctclsite-rust repository for a potential rewrite using the Rust framework. Actual development has not started yet.
+On February 18, 2024, I have set up the ctclsite-rust repository for a potential rewrite using Rust.
+
+On March 3, 2024, version 1.1.0 of ctclsite-rust was deployed. Like the former version, the Actix web framework is used.

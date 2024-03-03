@@ -1,15 +1,25 @@
 # ctclsite-rust v1 - 2024
 On February 18, 2024, a rewrite continuing to use Actix was started
 
-## 1.1.0 - [UNRELEASED]
+## 1.2.0 - [UNRELEASED]
+To-Do:
+
+- JavaScript files are no longer linked and are now embedded in the page head
+- JavaScript is now minimized
+- Accessed configuration files and content are now cached in memory
+
+## 1.1.0 - March 3, 2024
 Initial release
 
 ### Changes from ctclsite-python v5
 Other than the switch from Python Django and Rust Actix bringing significant performance improvements.
 
-- JavaScript files are no longer linked and are now embedded in the page head
-- JavaScript is now minimized
+- "Lite" version of the website temporarily unimplemented
+- Server request logging temporarily removed
 - SCSS modified per theme split into a separate file called theme.scss, this should decrease SCSS compilation time
+- Some modifications to SCSS files required for the rewrite
+- Some modifications to JSON files required for the rewrite
+- Blog icons are now larger on screen
 
 # ctclsite-rust v0 - 2022-2023
 

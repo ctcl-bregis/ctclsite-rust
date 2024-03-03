@@ -11,7 +11,7 @@ use actix_web::{
 };
 use crate::mkcontext;
 
-pub async fn serivces_index(tmpl: web::Data<tera::Tera>, query: web::Query<HashMap<String, String>>) -> Result<impl Responder, Error> {
+pub async fn services_index(tmpl: web::Data<tera::Tera>, query: web::Query<HashMap<String, String>>) -> Result<impl Responder, Error> {
     let ctx = mkcontext("services", "root").unwrap();
 
     let s = match tmpl.render("main/services_main.html", &ctx) {

@@ -2,7 +2,7 @@
 // File: src/main.rs
 // Purpose: Main code
 // Created: November 28, 2022
-// Modified: March 1, 2024
+// Modified: March 3, 2024
 
 //use std::collections::HashMap;
 
@@ -33,10 +33,15 @@ async fn main() -> std::io::Result<()> {
             .service(web::resource("/").route(web::get().to(about_index)))
             .service(web::resource("/privacy/").route(web::get().to(about_privacy)))
             .service(web::resource("/licensing/").route(web::get().to(about_licensing)))
-            .service(web::resource("/services/").route(web::get().to(serivces_index)))
+            .service(web::resource("/services/").route(web::get().to(services_index)))
             .service(web::resource("/blog/").route(web::get().to(blog_index)))
+            .service(web::resource("/blog/{page}/").route(web::get().to(blog_post)))
+            .service(web::resource("/projects/").route(web::get().to(projects_index)))
+            .service(web::resource("/projects/{page}/").route(web::get().to(projects_page)))
+            .service(web::resource("/inlog/getip/").route(web::get().to(logger_getip)))
+            .service(web::resource("/inlog/").route(web::post().to(logger_incoming)))
     })
-    .bind(("127.0.0.1", 8000))?
+    .bind(("0.0.0.0", 8000))?
     .run()
     .await
 }

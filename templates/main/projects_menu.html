@@ -1,12 +1,12 @@
 {% include "main/header.html" %}
     <h1 class="center pix">Projects</h1>
-    <hr>{% for key, value in menu.items %}
+    <hr>{% for menukey, menuvalue in menu %}
     <section class="sectionitem">
-        <h2 class="sectiontitle">{{ value.title }}</h2>
-        <p>{{ value.desc }}</p>{% for subpage in value.subpages %}
-        <section class="projectitem theme-{{ subpage.theme }}">
-            <a href="{{ subpage.link }}/"><button><h3 class="projecttitle">{{ subpage.title }}</h3></button></a>
-            <p class="projectdesc">{{ subpage.desc }}</p>
+        <h2 class="sectiontitle">{{ menuvalue.title }}</h2>
+        <p>{{ menuvalue.desc }}</p>{% for subpagekey, subpagevalue in menuvalue.subpages %}
+        <section class="projectitem theme-{{ subpagevalue.theme }}">
+            <a href="{{ subpagekey }}/"><button><h3 class="projecttitle">{{ subpagevalue.title }}</h3></button></a>
+            <p class="projectdesc">{{ subpagevalue.desc }}</p>
         </section>{% endfor %}
     </section>{% endfor %}
     </a>
