@@ -18,7 +18,7 @@ Cargo.lock
 *.~lock*
 
 # Make sure website access logs are not uploaded
-/log/*.*
+logs/
+log/
 
-# Any other files that should not be pushed to the repository 
-/noupload/*.*
+themes.json
