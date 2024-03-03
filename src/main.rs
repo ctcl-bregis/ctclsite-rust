@@ -41,7 +41,7 @@ async fn main() -> std::io::Result<()> {
             .service(web::resource("/inlog/getip/").route(web::get().to(logger_getip)))
             .service(web::resource("/inlog/").route(web::post().to(logger_incoming)))
     })
-    .bind(("0.0.0.0", 8000))?
+    .bind(("127.0.0.1", 8000))?
     .run()
     .await
 }
