@@ -4,7 +4,7 @@
 // Created: March 1, 2024
 // Modified: March 3, 2024
 
-use std::{collections::{BTreeMap, HashMap}, hash::Hash};
+use std::collections::HashMap;
 use actix_web::{
     web, Error, HttpResponse, Responder, Result,
 };
@@ -34,7 +34,7 @@ fn getpage(page: String) -> Result<Page, std::io::Error> {
     let projectscfg: ProjectsCfg = serde_json::from_str(&read_file(sitecfg.pages.get("projects").unwrap().to_string()).unwrap()).unwrap();
 
     for (catkey, catvalue) in projectscfg.cats.clone() {
-        for (pagekey, pagevalue) in catvalue.subpages {
+        for (pagekey, _pagevalue) in catvalue.subpages {
             pagemap.insert(pagekey, catkey.clone());
         }
     }
@@ -49,7 +49,7 @@ fn getpage(page: String) -> Result<Page, std::io::Error> {
     Ok(pageobject.clone())
 }
 
-pub async fn projects_index(tmpl: web::Data<tera::Tera>, query: web::Query<HashMap<String, String>>) -> Result<impl Responder, Error> {
+pub async fn projects_index(tmpl: web::Data<tera::Tera>) -> Result<impl Responder, Error> {
     // Due to the structure of config/projects/config.json, mkcontext cannot be used
     let mut ctx = tera::Context::new();
 
@@ -65,7 +65,10 @@ pub async fn projects_index(tmpl: web::Data<tera::Tera>, query: web::Query<HashM
     ctx.insert("desc", &subpagecfg.desc);
     ctx.insert("styling", &themecfg.get(&subpagecfg.theme));
 
-    let s = match tmpl.render("main/projects_menu.html", &ctx) {
+    ctx.insert("clientinfojs", &read_file(String::from("static/clientinfo.js")).unwrap());
+    ctx.insert("commonjs", &read_file(String::from("static/common.js")).unwrap());
+
+    let s = match tmpl.render("projects_menu.html", &ctx) {
         Ok(html) => HttpResponse::Ok().body(html),
         Err(err) => return Ok(HttpResponse::InternalServerError().body(format!("{:?}", err)))
     };
@@ -73,12 +76,11 @@ pub async fn projects_index(tmpl: web::Data<tera::Tera>, query: web::Query<HashM
     Ok(s)
 }
 
-pub async fn projects_page(page: web::Path<String>, tmpl: web::Data<tera::Tera>, query: web::Query<HashMap<String, String>>) -> Result<impl Responder, Error> {
+pub async fn projects_page(page: web::Path<String>, tmpl: web::Data<tera::Tera>) -> Result<impl Responder, Error> {
     // Due to the structure of config/projects/config.json, mkcontext cannot be used
     let mut ctx = tera::Context::new();
 
     let sitecfg: Sitecfg = serde_json::from_str(&read_file(String::from("config/config.json")).unwrap()).unwrap();
-    let projectscfg: ProjectsCfg = serde_json::from_str(&read_file(sitecfg.pages.get("projects").unwrap().to_string()).unwrap()).unwrap();
     let themecfg: HashMap<String, String> = serde_json::from_str(&read_file("themes.json".to_string()).unwrap()).unwrap();
 
     let subpagecfg = match getpage(page.to_string()) {
@@ -94,10 +96,13 @@ pub async fn projects_page(page: web::Path<String>, tmpl: web::Data<tera::Tera>,
     ctx.insert("desc", &subpagecfg.desc);
     ctx.insert("styling", &themecfg.get(&subpagecfg.theme));
 
+    ctx.insert("clientinfojs", &read_file(String::from("static/clientinfo.js")).unwrap());
+    ctx.insert("commonjs", &read_file(String::from("static/common.js")).unwrap());
+
     let rendered = mdpath2html(subpagecfg.content.unwrap()).unwrap();
     ctx.insert("rendered", &rendered);
 
-    let s = match tmpl.render("main/projects_content.html", &ctx) {
+    let s = match tmpl.render("projects_content.html", &ctx) {
         Ok(html) => HttpResponse::Ok().body(html),
         Err(err) => return Ok(HttpResponse::InternalServerError().body(format!("{:?}", err)))
     };

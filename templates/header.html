@@ -18,9 +18,11 @@
         <meta property="og:description" content="{{ desc }} - CTCL">
         <meta name="description" content="{{ desc }} - CTCL">
         {% endif %}
+        <script type="module">{{ commonjs|safe }}</script>
+        <script type="module">{{ clientinfojs|safe }}</script>
         <style>
 {{ styling|safe }}
         </style>
     </head>
     <body>
-{% include "lite/navbar.html" %}
+{% include "navbar.html" %}

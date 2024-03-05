@@ -1,4 +1,6 @@
-{% include "main/header.html" %}
+{% include "header.html" %}
+    <h1 class="center pix">Welcome</h1>
+    <hr>
     {% for section in sections %}
     <section id="{{ section.id }}" class="banner">
         <video class="bgvid" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" poster="{{ section.bgimg }}">
@@ -10,4 +12,4 @@
         </section>
     </section>{% endfor %}
     <hr>
-{% include "main/footer.html" %}
+{% include "footer.html" %}

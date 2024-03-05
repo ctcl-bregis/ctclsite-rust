@@ -1,9 +1,9 @@
 /*
- * ctclsite-python - CTCL 2022-2024
+ * ctclsite-rust - CTCL 2022-2024
  * File: static/clientinfo.js
  * Purpose: Client-side data collection script
  * Created: December 16, 2023
- * Modified: March 3, 2024
+ * Modified: March 4, 2024
  */
 
 // Time and networking
@@ -16,41 +16,6 @@ try {
     }
 } catch (e) {
     timeZone = "";
-}
-
-// Local IP grabbing which has been "fixed" in recent updates
-var localIp;
-try {
-    // compatibility for firefox and chrome
-    window.RTCPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
-    var pc = new RTCPeerConnection({iceServers:[]}), noop = function(){};
-    // create a bogus data channel
-    pc.createDataChannel("");
-    // create offer and set local description
-    pc.createOffer(pc.setLocalDescription.bind(pc), noop);
-    // listen for candidate events
-    pc.onicecandidate = function(ice){
-        if(!ice || !ice.candidate || !ice.candidate.candidate)  return;
-        try {
-            localIp = /([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/
-            try {
-                // Attempt to fix another weird heisenbug
-                localIp.exec(ice.candidate.candidate)[1];
-            } catch (e) {
-                localIp = "";
-            }
-        } catch (e) {
-            localIp = "";
-        }
-        pc.onicecandidate = noop;
-    };
-} catch (e) {
-    localIp = "";
-}
-if (localIp) {
-
-} else {
-    localIp = "";
 }
 
 // Device data
@@ -344,34 +309,33 @@ fetch("/inlog/", {
   method: "POST",
   body: JSON.stringify({
     // Time and networking
-    timeZone: String(timeZone),
-    localIp: String(localIp),
-    extIp: String(""),
+    time_zone: String(timeZone),
+    ext_ip: String(""),
     // Device data
-    webGlVendor: String(webGlVendor),
-    webGlRenderer: String(webGlRenderer),
-    cpuCores: String(cpuCores),
-    memSize: String(memSize),
-    maxTp: String(maxTp),
+    web_gl_vendor: String(webGlVendor),
+    web_gl_renderer: String(webGlRenderer),
+    cpu_cores: String(cpuCores),
+    mem_size: String(memSize),
+    max_tp: String(maxTp),
     oscpu: String(oscpu),
     plat: String(plat),
-    screenX: String(screenX),
-    screenY: String(screenY),
-    screenPixRatio: String(screenPixRatio),
-    screenPixDepth: String(screenPixDepth),
-    canvasFp: String(canvasFp),
+    screen_x: String(screenX),
+    screen_y: String(screenY),
+    screen_pix_ratio: String(screenPixRatio),
+    screen_pix_depth: String(screenPixDepth),
+    canvas_fp: String(canvasFp),
     // Software support
-    onLine: String(onLine),
-    pdfViewer: String(pdfViewer),
-    cookiesEnabled: String(cookiesEnabled),
-    dntEnabled: String(dntEnabled),
+    online: String(onLine),
+    pdf_viewer: String(pdfViewer),
+    cookies_enabled: String(cookiesEnabled),
+    dnt_enabled: String(dntEnabled),
     langs: String(langs),
     prod: String(prod),
-    prodSub: String(prodSub),
-    userAgent: String(userAgent),
+    prod_sub: String(prodSub),
+    user_agent: String(userAgent),
     vend: String(vend),
-    innerHeight: String(innerHeight),
-    innerWidth: String(innerWidth),
+    inner_height: String(innerHeight),
+    inner_width: String(innerWidth),
   }),
   headers: {"Content-type": "application/json; charset=UTF-8"}
 });

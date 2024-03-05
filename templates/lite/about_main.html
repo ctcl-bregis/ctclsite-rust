@@ -1,9 +1,0 @@
-{% include "lite/header.html" %}
-    {% for section in sections %}
-    <section class="banner" style="background-image: url({{ section.bgimg }});">
-        <section class="sectioncontent">
-        <h2 class="sectionheader pix">{{ section.title }}</h2>
-        {{ section.rendered|safe }}
-        </section>
-    </section>{% endfor %}
-{% include "lite/footer.html" %}

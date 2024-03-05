@@ -1,8 +1,8 @@
-// ctclsite-python - CTCL 2022-2024
+// ctclsite-rust - CTCL 2022-2024
 // File: common.js
 // Purpose: Commonly loaded JavaScript script for various functions, see comments below
 // Created: January 8, 2024
-// Modified: February 23, 2024
+// Modified: March 4, 2024
 
 // Extend the header to fit the entire section width if it is past a certain width
 function resizeHeaders() {

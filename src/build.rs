@@ -2,7 +2,7 @@
 // File: src/build.rs
 // Purpose: Build needed files
 // Created: February 28, 2024
-// Modified: March 1, 2024
+// Modified: March 4, 2024
 
 // touch grass
 use grass;
@@ -12,9 +12,7 @@ use std::fs::File;
 use std::io::Read;
 use std::io::Error;
 use std::result::Result;
-
-const MAIN_BASE_SCSS: &str = "config/styling/main/common.scss";
-const MAIN_THEME_SCSS: &str = "config/styling/main/theme.scss";
+use minifier::js::minify;
 
 #[derive(Deserialize, Serialize)]
 struct Theme {
@@ -33,10 +31,8 @@ struct Navitem {
 
 #[derive(Deserialize, Serialize)]
 struct Sitecfg {
-    main_scss: String,
-    lite_scss: String,
+    scss: String,
     themes: HashMap<String, Theme>,
-    navbar: Vec<Navitem>,
     pages: HashMap<String, String>
 }
 
@@ -50,18 +46,18 @@ pub fn read_file(path: &str) -> Result<String, Error> {
 }
 
 fn main() {
-    let mut grass_options: grass::Options = grass::Options::default()
+    let grass_options: grass::Options = grass::Options::default()
         .style(grass::OutputStyle::Compressed);
 
     let sitecfg: Sitecfg = serde_json::from_str(&read_file("config/config.json").unwrap()).unwrap();
     let sitecfgthemes: HashMap<String, Theme> = sitecfg.themes;
 
-    let mut themecfg: HashMap<String, String> = std::collections::HashMap::new();
+    let mut themecfg: HashMap<String, String> = HashMap::new();
 
-    let mbase_scss_content = read_file(MAIN_BASE_SCSS).unwrap();
+    let mbase_scss_content = read_file("src/styling/common.scss").unwrap();
     let mbase_css = grass::from_string(mbase_scss_content, &grass_options).unwrap();
 
-    let mut mtheme_scss_content = read_file(MAIN_THEME_SCSS).unwrap();
+    let mtheme_scss_content = read_file("src/styling/theme.scss").unwrap();
 
     for (key, value) in &sitecfgthemes {
         // Do not overwrite the original string
@@ -88,5 +84,14 @@ fn main() {
     let json = serde_json::to_string(&themecfg).unwrap();
 
     std::fs::write("./themes.json", json).expect("Unable to write file themes.json");
+
+    let clientinfojs = &read_file("src/js/clientinfo.js").expect("Error reading src/js/clientinfo.js");
+    let commonjs = &read_file("src/js/common.js").expect("Error reading src/js/common.js");
+    let minclientinfojs = minify(clientinfojs).to_string();
+    let mincommmonjs = minify(commonjs).to_string();
+
+    std::fs::write("static/clientinfo.js", minclientinfojs).unwrap();
+    std::fs::write("static/common.js", mincommmonjs).unwrap();
+
     
 }

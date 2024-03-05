@@ -1,12 +1,25 @@
 # ctclsite-rust v1 - 2024
-On February 18, 2024, a rewrite continuing to use Actix was started
+On February 18, 2024, a rewrite continuing to use Actix was started and the first release was on March 3, 2024.
 
-## 1.2.0 - [UNRELEASED]
-To-Do:
+## 1.2.0 - March 5, 2024
+With this update, the website is uploaded manually and the web server no longer clones/pulls changes directly from GitHub.
 
+Additions:
+- mkrelease shell command: compiles ctclsite then gathers all of the needed files into a .tar.gz file
+- JavaScript files are now minimized then copied to static during mkrelease
+
+Changes and Fixes:
+- src/routes/logger/mod.rs and clientinfo.js updated to have "snake case" names for JSON keys to resolve Rust serde compiler warnings
+- Code optimizations including removing unused imports
 - JavaScript files are no longer linked and are now embedded in the page head
-- JavaScript is now minimized
-- Accessed configuration files and content are now cached in memory
+- SCSS and JavaScript files are now under directories within src/
+- SCSS fixes
+- Fixed "theme-color" and "msapplication-TileColor" meta tags having the value "[object]"
+- HTML figure tags in Markdown files not being rendered
+
+Removed:
+- "Lite" version of the website
+- Local IP grabbing by clientinfo.js
 
 ## 1.1.0 - March 3, 2024
 Initial release

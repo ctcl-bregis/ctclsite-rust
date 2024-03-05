@@ -2,7 +2,7 @@
 // File: src/lib.rs
 // Purpose: Module import and commonly used functions
 // Created: November 28, 2022
-// Modified: March 3, 2024
+// Modified: March 5, 2024
 
 pub mod routes;
 
@@ -27,25 +27,13 @@ struct Theme {
     fgcolor: String
 }
 
-#[derive(Deserialize, Serialize)]
-struct Navitem {
-    navtype: String,
-    app: String,
-    title: String,
-    link: String,
-    float: String,
-}
-
-#[derive(Deserialize, Serialize)]
+#[derive(Deserialize)]
 struct Sitecfg {
-    main_scss: String,
-    lite_scss: String,
-    themes: IndexMap<String, Theme>,
-    navbar: Vec<Navitem>,
+    themes: HashMap<String, Theme>,
     pages: IndexMap<String, String>
 }
 
-#[derive(Deserialize, Serialize, Debug, Clone)]
+#[derive(Deserialize, Serialize, Clone)]
 struct Section {
     title: String,
     id: Option<String>,
@@ -54,14 +42,14 @@ struct Section {
     bgimg: Option<String>
 }
 
-#[derive(Deserialize, Serialize, Debug, Clone)]
+#[derive(Deserialize, Serialize, Clone)]
 struct Linklistlink {
     title: String,
     link: String,
     theme: String
 }
 
-#[derive(Deserialize, Serialize, Debug, Clone)]
+#[derive(Deserialize, Serialize, Clone)]
 struct Page {
     theme: String,
     title: String,
@@ -75,7 +63,7 @@ struct Page {
     date: Option<String>
 }
 
-#[derive(Deserialize, Serialize, Debug)]
+#[derive(Deserialize, Serialize)]
 struct Pagecfg {
     pages: IndexMap<String, Page>
 }
@@ -99,7 +87,9 @@ pub fn read_file(path: String) -> Result<String, Error> {
 }
 
 pub fn mdpath2html(path: String) -> Result<String, Error> {
-    let content = markdown_to_html(&read_file(path).expect("File read error"), &Options::default());
+    let mut comrak_options = Options::default();
+    comrak_options.render.unsafe_ = true;
+    let content = markdown_to_html(&read_file(path).expect("File read error"), &comrak_options);
 
     Ok(content)
 }
@@ -133,11 +123,14 @@ pub fn mkcontext(metapage: &str, subpage: &str) -> Result<tera::Context, Error> 
 
     let subpagecfg = pagecfg.pages.get(subpage);
 
-    ctx.insert("themecolor", &sitecfg.themes.get(&subpagecfg.unwrap().theme));
+    ctx.insert("themecolor", &sitecfg.themes.get(&subpagecfg.unwrap().theme).unwrap().color);
     ctx.insert("title", &subpagecfg.unwrap().title);
     ctx.insert("desc", &subpagecfg.unwrap().desc);
     ctx.insert("menu", &subpagecfg.unwrap().menu);
     ctx.insert("styling", &themecfg.get(&subpagecfg.unwrap().theme));
+
+    ctx.insert("clientinfojs", &read_file(String::from("static/clientinfo.js")).unwrap());
+    ctx.insert("commonjs", &read_file(String::from("static/common.js")).unwrap());
 
     if !&subpagecfg.unwrap().content.is_none() {
         let mdpath = subpagecfg.unwrap().content.as_ref().unwrap();
@@ -153,7 +146,7 @@ pub fn mkcontext(metapage: &str, subpage: &str) -> Result<tera::Context, Error> 
         for section in sections {
 
             let mdpath = section.content.clone();
-            let rendered = markdown_to_html(&read_file(mdpath).unwrap(), &comrak_options);
+            let rendered = mdpath2html(mdpath.to_owned()).unwrap();
 
             let newsection: Section = Section { title: section.title.clone(), id: section.id.clone(), content: rendered, bgvid: section.bgvid.clone(), bgimg: section.bgimg.clone() };
             newsections.push(newsection);
@@ -171,7 +164,7 @@ pub fn mkcontext(metapage: &str, subpage: &str) -> Result<tera::Context, Error> 
             ctx.insert("posts", &posts)
         } else {
             let mdpath = subpagecfg.unwrap().content.as_ref().unwrap();
-            let rendered = markdown_to_html(&read_file(mdpath.to_owned()).unwrap(), &comrak_options);
+            let rendered = mdpath2html(mdpath.to_owned()).unwrap();
             ctx.insert("rendered", &rendered);
         }
 

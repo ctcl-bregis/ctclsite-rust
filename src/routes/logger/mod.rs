@@ -2,7 +2,7 @@
 // File: src/logger/mod.rs
 // Purpose: Logger routes
 // Created: March 3, 2024
-// Modified: March 3, 2024
+// Modified: March 5, 2024
 
 use std::io::Write;
 use actix_web::{
@@ -14,58 +14,49 @@ use csv;
 
 #[derive(Deserialize, Serialize, Debug)]
 pub struct ClientLog {
-    timeZone: String,
-    localIp: String,
-    extIp: String,
+    time_zone: String,
+    ext_ip: String,
     // Device data
-    webGlVendor: String,
-    webGlRenderer: String,
-    cpuCores: String,
-    memSize: String,
-    maxTp:  String,
+    web_gl_vendor: String,
+    web_gl_renderer: String,
+    cpu_cores: String,
+    mem_size: String,
+    max_tp:  String,
     oscpu: String,
     plat: String,
-    screenX: String,
-    screenY: String,
-    screenPixRatio: String,
-    screenPixDepth: String,
-    canvasFp: String,
+    screen_x: String,
+    screen_y: String,
+    screen_pix_ratio: String,
+    screen_pix_depth: String,
+    canvas_fp: String,
     // Software support
-    onLine: String,
-    pdfViewer: String,
-    cookiesEnabled: String,
-    dntEnabled: String,
+    online: String,
+    pdf_viewer: String,
+    cookies_enabled: String,
+    dnt_enabled: String,
     langs: String,
     prod: String,
-    prodSub: String,
-    userAgent: String,
+    prod_sub: String,
+    user_agent: String,
     vend: String,
-    innerHeight: String,
-    innerWidth: String,
-}
-
-pub async fn logger_getip(req: HttpRequest) -> Result<impl Responder, Error> {
-    let conninfo = &req.connection_info();
-    let ip = conninfo.realip_remote_addr().unwrap();
-
-    Ok(HttpResponse::Ok().body(ip.to_string()))
+    inner_height: String,
+    inner_width: String,
 }
 
 pub async fn logger_incoming(req: HttpRequest, mut info: web::Json<ClientLog>) -> Result<impl Responder, Error> {
-    let mut writer = csv::WriterBuilder::new().has_headers(false);
     if !std::path::Path::new("logs/").exists() {
         std::fs::create_dir("logs/")?;
     }
 
     if !std::path::Path::new("logs/client_latest.csv").exists() {
         let mut file = std::fs::File::create("logs/client_latest.csv")?;
-        file.write_all(b"timeZone,localIp,extIp,webGlVendor,webGlRenderer,cpuCores,memSize,maxTp,oscpu,plat,screenX,screenY,screenPixRatio,screenPixDepth,canvasFp,onLine,pdfViewer,cookiesEnabled,dntEnabled,langs,prod,prodSub,userAgent,vend,innerHeight,innerWidth\n")?;
+        file.write_all(b"time_zone,ext_ip,web_gl_vendor,web_gl_renderer,cpu_cores,mem_size,max_tp,oscpu,plat,screen_x,screen_y,screen_pix_ratio,screen_pix_depth,canvas_fp,online,pdf_viewer,cookies_enabled,dnt_enabled,langs,prod,prod_sub,user_agent,vend,inner_height,inner_width\n")?;
     }
 
     let conninfo = &req.connection_info();
     let ip = conninfo.realip_remote_addr().unwrap();
 
-    info.extIp = ip.to_string();
+    info.ext_ip = ip.to_string();
 
     let mut writer = csv::WriterBuilder::new().has_headers(false).from_writer(vec![]);
     writer.serialize(info).unwrap();
