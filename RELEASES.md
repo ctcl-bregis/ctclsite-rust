@@ -1,6 +1,14 @@
 # ctclsite-rust v1 - 2024
 On February 18, 2024, a rewrite continuing to use Actix was started and the first release was on March 3, 2024.
 
+## 1.3.0 - March 6, 2024
+This update adds favicons to the website. 
+
+By default; if unspecified, the icons are a square with the color of the page theme.
+
+Additions:
+- Page favicons
+
 ## 1.2.0 - March 5, 2024
 With this update, the website is uploaded manually and the web server no longer clones/pulls changes directly from GitHub.
 

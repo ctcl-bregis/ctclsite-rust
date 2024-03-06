@@ -2,7 +2,7 @@
 // File: src/lib.rs
 // Purpose: Module import and commonly used functions
 // Created: November 28, 2022
-// Modified: March 5, 2024
+// Modified: March 6, 2024
 
 pub mod routes;
 
@@ -55,6 +55,7 @@ struct Page {
     title: String,
     desc: String,
     content: Option<String>,
+    favicon: Option<String>,
     sections: Option<Vec<Section>>,
     menu: Option<Vec<Linklistlink>>,
     icon: Option<String>,
@@ -137,6 +138,13 @@ pub fn mkcontext(metapage: &str, subpage: &str) -> Result<tera::Context, Error> 
         let rendered = markdown_to_html(&read_file(mdpath.to_owned()).unwrap(), &comrak_options);
 
         ctx.insert("rendered", &rendered);
+    }
+
+    if !&subpagecfg.unwrap().favicon.is_none() {
+        ctx.insert("favicon", &subpagecfg.unwrap().favicon.as_ref().unwrap());
+    } else {
+        let iconname: &str = subpagecfg.unwrap().theme.as_ref();
+        ctx.insert("favicon", &format!("/static/favicons/default_{iconname}.ico"));
     }
 
     if !&subpagecfg.unwrap().sections.is_none() {

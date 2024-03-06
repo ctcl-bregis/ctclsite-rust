@@ -27,3 +27,4 @@ themes.json
 release.tar.gz
 static/clientinfo.js
 static/common.js
+static/favicons/default*

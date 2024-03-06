@@ -2,7 +2,7 @@
 // File: src/build.rs
 // Purpose: Build needed files
 // Created: February 28, 2024
-// Modified: March 4, 2024
+// Modified: March 6, 2024
 
 // touch grass
 use grass;
@@ -13,6 +13,8 @@ use std::io::Read;
 use std::io::Error;
 use std::result::Result;
 use minifier::js::minify;
+extern crate image;
+use image::{Rgb, RgbImage};
 
 #[derive(Deserialize, Serialize)]
 struct Theme {
@@ -45,10 +47,16 @@ pub fn read_file(path: &str) -> Result<String, Error> {
     Ok(buff)
 }
 
+fn remove_first(s: &str) -> Option<&str> {
+    s.chars().next().map(|c| &s[c.len_utf8()..])
+}
+
 fn main() {
+
     let grass_options: grass::Options = grass::Options::default()
         .style(grass::OutputStyle::Compressed);
 
+    // Step 1: Build the CSS for each theme
     let sitecfg: Sitecfg = serde_json::from_str(&read_file("config/config.json").unwrap()).unwrap();
     let sitecfgthemes: HashMap<String, Theme> = sitecfg.themes;
 
@@ -85,6 +93,7 @@ fn main() {
 
     std::fs::write("./themes.json", json).expect("Unable to write file themes.json");
 
+    // Step 2: Minimize and move JavaScript
     let clientinfojs = &read_file("src/js/clientinfo.js").expect("Error reading src/js/clientinfo.js");
     let commonjs = &read_file("src/js/common.js").expect("Error reading src/js/common.js");
     let minclientinfojs = minify(clientinfojs).to_string();
@@ -93,5 +102,20 @@ fn main() {
     std::fs::write("static/clientinfo.js", minclientinfojs).unwrap();
     std::fs::write("static/common.js", mincommmonjs).unwrap();
 
-    
+    // Step 3: Generate default favicons
+    if !std::path::Path::new("static/favicons/").exists() {
+        std::fs::create_dir("static/favicons/").expect("Could not create directory static/favicons/");
+    }
+
+    for (key, value) in &sitecfgthemes {
+        let mut image = RgbImage::new(16, 16);
+        for x in 0..16 {
+            for y in 0..16 {
+                let mut bytes = [0u8; 3];
+                hex::decode_to_slice(remove_first(&value.color).unwrap(), &mut bytes as &mut [u8]).unwrap();
+                image.put_pixel(x, y, Rgb(bytes));
+            }
+        }
+        image.save(format!("static/favicons/default_{key}.ico")).expect(&format!("Error while saving file default_{key}.ico"));
+    }
 }

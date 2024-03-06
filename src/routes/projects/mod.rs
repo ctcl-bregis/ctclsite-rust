@@ -2,7 +2,7 @@
 // File: src/routes/services/mod.rs
 // Purpose: Services module
 // Created: March 1, 2024
-// Modified: March 3, 2024
+// Modified: March 6, 2024
 
 use std::collections::HashMap;
 use actix_web::{
@@ -68,6 +68,13 @@ pub async fn projects_index(tmpl: web::Data<tera::Tera>) -> Result<impl Responde
     ctx.insert("clientinfojs", &read_file(String::from("static/clientinfo.js")).unwrap());
     ctx.insert("commonjs", &read_file(String::from("static/common.js")).unwrap());
 
+    if !&subpagecfg.favicon.is_none() {
+        ctx.insert("favicon", &subpagecfg.favicon.as_ref().unwrap());
+    } else {
+        let iconname: &str = subpagecfg.theme.as_ref();
+        ctx.insert("favicon", &format!("/static/favicons/default_{iconname}.ico"));
+    }
+
     let s = match tmpl.render("projects_menu.html", &ctx) {
         Ok(html) => HttpResponse::Ok().body(html),
         Err(err) => return Ok(HttpResponse::InternalServerError().body(format!("{:?}", err)))
@@ -101,6 +108,13 @@ pub async fn projects_page(page: web::Path<String>, tmpl: web::Data<tera::Tera>)
 
     let rendered = mdpath2html(subpagecfg.content.unwrap()).unwrap();
     ctx.insert("rendered", &rendered);
+
+    if !&subpagecfg.favicon.is_none() {
+        ctx.insert("favicon", &subpagecfg.favicon.as_ref().unwrap());
+    } else {
+        let iconname: &str = subpagecfg.theme.as_ref();
+        ctx.insert("favicon", &format!("/static/favicons/default_{iconname}.ico"));
+    }
 
     let s = match tmpl.render("projects_content.html", &ctx) {
         Ok(html) => HttpResponse::Ok().body(html),
