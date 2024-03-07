@@ -10,4 +10,4 @@ The current hardware platform used for WBSD is codenamed "Promethazine" (Shortha
 - Storage controller: LSI 9260-4i
 - Case: Supermicro CSE-813 1U
 
-The codename for this device along with ["Dextromethorphan"](../srv_dxm) are based off the Far East Movement song "Like a G6".
+The codename for this device along with ["Dextromethorphan"](../srv_dxm/) are based off the Far East Movement song "Like a G6".

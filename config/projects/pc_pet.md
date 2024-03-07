@@ -28,4 +28,4 @@ In January 2023, the successor "Polybutylene Terephthalate" was built, replacing
 
 On June 1, 2023, the system was permanently decomissioned after discovering that the motherboard damaged eight memory modules for unknown reasons. 
 
-During 2023, I started the plan for ["Polyethylene Terephthalate v2"](../pc_pet2), a redo of "Polyethylene Terephthalate". 
+During 2023, I started the plan for ["Polyethylene Terephthalate v2"](../pc_pet2/), a redo of "Polyethylene Terephthalate". 

@@ -17,7 +17,7 @@ In 2023, these projects were released:
 - [ToDoKiosk](../../projects/todokiosk/)
 
 ## Game Design
-In 2023, I made many online friends after gaining more interest in the development of maps for the 2011 puzzle game, Portal 2. I added a page to Projects relating to this [here](../../projects/p2maps/).
+In 2023, I made many online friends after gaining more interest in the development of maps for the 2011 puzzle game, Portal 2. [Project Page](../../projects/p2maps/).
 
 ## ctclsite-python v5
 Before the end of the year, I have released the fifth rewrite of the Python version of the website.

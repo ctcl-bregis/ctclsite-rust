@@ -3,6 +3,8 @@ MediaCow Touch "Nashville" was a project for building a tablet computer. Plannin
 # Planning
 In 2020, this was a massive undertaking given my skillset at the time. All of the planning was done within LaTeX formatted documents. 
 
+The system being used at the time for planning was "Polyoxybenzylmethylenglycolanhydride" when it was still being used as a workstation before it was eventually reconfigured as a router in September 2021.
+
 The Banana Pi team was greatly helpful during the planning and assembly stage of the project.
 
 # Hardware

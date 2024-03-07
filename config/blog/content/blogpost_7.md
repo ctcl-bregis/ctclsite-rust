@@ -18,7 +18,7 @@ In the blog post about [Week 4](../6/), I mentioned a project that I was working
 ### MediaCow 
 This week, I have been brainstorming and recording ideas about potential MediaCow devices. As hardware development is expensive, complex and difficult, it is likely that I would not start or continue any projects in the MediaCow mobile device series any time soon.
 
-On February 3, 2024, I have plugged in and booted the [MediaCow Touch "Nashville" device project from 2020](../../projects/mct_1). The device is still fully functional after three years.
+On February 3, 2024, I have plugged in and booted the [MediaCow Touch "Nashville" device project from 2020](../../projects/mct_1/). The device is still fully functional after three years.
 
 # Work
 Like earlier weeks of this year, I have been getting some work activity.

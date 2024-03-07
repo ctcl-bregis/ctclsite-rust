@@ -33,7 +33,7 @@ These rewrites boil down to this:
         <td>Manual Styling</td>
         <td>December 2021</td>
         <td>January 2022</td>
-        <td><a href="../pc_pet">Polyethylene Terephthalate</a></td>
+        <td><a href="../pc_pet/">Polyethylene Terephthalate</a></td>
     </tr>
     <tr>
         <td>ctclsite-python v2</td>
@@ -42,7 +42,7 @@ These rewrites boil down to this:
         <td>Manual Styling</td>
         <td>2022</td>
         <td>2022</td>
-        <td><a href="../pc_pet">Polyethylene Terephthalate</a></td>
+        <td><a href="../pc_pet/">Polyethylene Terephthalate</a></td>
     </tr>
     <tr>
         <td>ctclsite-rust v0</td>
@@ -51,7 +51,7 @@ These rewrites boil down to this:
         <td>Manual Styling</td>
         <td>November 2022</td>
         <td>January 2023</td>
-        <td>Most of the development on a ThinkPad X240 codenamed "Dichlorofluoromethane", later <a href="../pc_pbt">Polybutylene Terephthalate</a></td>
+        <td>Most of the development on a ThinkPad X240 codenamed "Dichlorofluoromethane", later <a href="../pc_pbt/">Polybutylene Terephthalate</a></td>
     </tr>
     <tr>
         <td>ctclsite-python v3</td>
@@ -60,7 +60,7 @@ These rewrites boil down to this:
         <td>Manual Styling</td>
         <td>May 15, 2023</td>
         <td>May 20, 2023</td>
-        <td><a href="../pc_pbt">Polybutylene Terephthalate</a></td>
+        <td><a href="../pc_pbt/">Polybutylene Terephthalate</a></td>
     </tr>
     <tr>
         <td>ctclsite-python v4</td>
@@ -69,7 +69,7 @@ These rewrites boil down to this:
         <td>SCSS</td>
         <td>August 26, 2023</td>
         <td>October 20, 2023</td>
-        <td><a href="../pc_pbt">Polybutylene Terephthalate</a></td>
+        <td><a href="../pc_pbt/">Polybutylene Terephthalate</a></td>
     </tr>
     <tr>
         <td>ctclsite-python v5</td>
@@ -78,7 +78,7 @@ These rewrites boil down to this:
         <td>SCSS</td>
         <td>November 21, 2023</td>
         <td>December 22, 2023</td>
-        <td><a href="../pc_pbt">Polybutylene Terephthalate</a></td>
+        <td><a href="../pc_pbt/">Polybutylene Terephthalate</a></td>
     </tr>
     <tr>
         <td>ctclsite-rust v1 - <strong>CURRENT</strong></td>
@@ -87,7 +87,7 @@ These rewrites boil down to this:
         <td>SCSS</td>
         <td>February 18, 2024</td>
         <td>March 3, 2024</td>
-        <td><a href="../pc_pbt">Polybutylene Terephthalate</a></td>
+        <td><a href="../pc_pbt/">Polybutylene Terephthalate</a>, <a href="../pc_pmma/">Polymethylmethacrylate</a></td>
     </tr>
 </table>
 
@@ -121,5 +121,7 @@ This release was finally put into production on December 22, 2023.
 
 ## ctclsite-rust v2
 On February 18, 2024, I have set up the ctclsite-rust repository for a potential rewrite using Rust.
+
+This rewrite was done not because it needed it in any way but was instead used as an opportunity to reintroduce myself to Rust in a much more familiar environment; web design before taking on more difficult projects such as writing [SLAG](../slag/) in Rust.
 
 On March 3, 2024, version 1.1.0 of ctclsite-rust was deployed. Like the former version, the Actix web framework is used.

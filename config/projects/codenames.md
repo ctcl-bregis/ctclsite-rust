@@ -116,7 +116,7 @@ Polyester-family polymers are used for general-purpose workstation systems desig
 
 - [Polybutylene Terephthalate](../pc_pbt/) - PBT
 - Polyethylene Naphthalate - PEN
-- [Polyethylene Terephthalate](../pc_pet) and [Polyethylene Terephthalate v2](../pc_pet2) - PET and PETv2 respectively
+- [Polyethylene Terephthalate](../pc_pet/) and [Polyethylene Terephthalate v2](../pc_pet2/) - PET and PETv2 respectively
 - Polylatic Acid - PLA
 - **Polytrimethylene Terephthalate** - PTT
 

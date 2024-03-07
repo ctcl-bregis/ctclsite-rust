@@ -51,7 +51,7 @@ This job was quite important for me, parts of the building reminded me of certai
 
 <figure>
     <img src="/static/blog/9/sml_1.webp">
-    <figcaption>Part of the building that I worked on which felt oddly familiar. This sight ending up being a slight inspiration for some projects including <a href="../../projects/slag">SLAG</a> and <a href="../../projects/p2maps">maps for Portal 2</a> - February 15, 2024 - ASUS Zenfone 9</figcaption>
+    <figcaption>Part of the building that I worked on which felt oddly familiar. This sight ending up being a slight inspiration for some projects including <a href="../../projects/slag/">SLAG</a> and <a href="../../projects/p2maps/">maps for Portal 2</a> - February 15, 2024 - ASUS Zenfone 9</figcaption>
 </figure>
 
 <figure>

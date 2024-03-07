@@ -19,6 +19,6 @@ The only changes to the system were:
 - From January 24, 2023 to January 27, 2023, the system used two 8GB Corsair Vengeance LPX ver8.31 (Nanya Technology NT5AD1024M8B3) in order to test the system as I did not have any Unbuffered ECC DDR4 modules yet.
 - On January 27, 2023, two 8GB Samsung M391A1K43BB1-CRC 1Rx8 DDR4-2400 Unbuffered ECC modules were installed.
 - On February 21, 2023, the system was rebuilt into a mini tower case, the Cooler Master N200.
-- On February 23, 2023, four 8GB SK hynix HMA81GU7CJR8N-VK 1Rx8 DDR4-2666 Unbuffered ECC modules replaced the current configuration, bringing RAM capacity to 32GB. The M391A1K43BB1-CRC were later used to build ["Polycarbonate"](../pc_pc).
+- On February 23, 2023, four 8GB SK hynix HMA81GU7CJR8N-VK 1Rx8 DDR4-2666 Unbuffered ECC modules replaced the current configuration, bringing RAM capacity to 32GB. The M391A1K43BB1-CRC were later used to build ["Polycarbonate"](../pc_pc/).
 - On August 30, 2023, the memory configuration was replaced with two 16GB Micron Technology MTA9ASF2G72AZ-3G2B1 1Rx8 DDR4-3200 Unbuffered ECC because of performance concerns with the previous memory configuration. This memory upgrade brought significant and noticable performance improvements, especially with gaming.
 - On January 13, 2024, a SK hynix Platinum P41 was added alongside the Samsung PM9A1 while the 1TB WD Black HDD was removed. This switched the system over to a "all-flash" storage configuration, bringing a significant improvement in performance for most tasks.
