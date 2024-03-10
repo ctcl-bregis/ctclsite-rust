@@ -14,7 +14,7 @@ Current specifications as of January 13, 2024:
 - Case: Cooler Master N200
 - Case Fans: 3x 120mm Protechnic Magic MGT12012ZB-W25
 
-The only changes to the system were:
+The configuration has changed slightly over time
 
 - From January 24, 2023 to January 27, 2023, the system used two 8GB Corsair Vengeance LPX ver8.31 (Nanya Technology NT5AD1024M8B3) in order to test the system as I did not have any Unbuffered ECC DDR4 modules yet.
 - On January 27, 2023, two 8GB Samsung M391A1K43BB1-CRC 1Rx8 DDR4-2400 Unbuffered ECC modules were installed.

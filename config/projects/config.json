@@ -43,6 +43,7 @@
                 "pc_pet2": {"content": "config/projects/pc_pet2.md", "theme": "qipurple", "title": "WBPC - \"Polyethylene Terephthalate v2\"", "desc": "Planned experimental desktop computer system"},
                 "pc_pp": {"content": "config/projects/pc_pp.md", "theme": "99red", "title": "WBPC - \"Polypropylene\"", "desc": "Experimental desktop computer system"},
                 "pc_pe": {"content": "config/projects/pc_pe.md", "theme": "99green", "title": "WBPC - \"Polyethylene\"", "desc": "Former, now experimental, desktop computer system"},
+                "pc_tbm": {"content": "config/projects/pc_tbm.md", "theme": "gold", "title": "GAMEPC - \"tert-Butylthiol\"", "desc": "Hardware testing system"},
                 "pc_r12": {"content": "config/projects/pc_r12.md", "theme": "gold", "title": "SIGN1 - \"Dichlorodifluoromethane\"", "desc": "Bookshelf PC for displaying a To-Do list"},
                 "pc_thc": {"content": "config/projects/pc_thc.md", "theme": "gold", "title": "Phone - \"Tetrahydrocannabinol\"", "desc": "Main smartphone"},
                 "srv_vc": {"content": "config/projects/srv_vc.md", "theme": "gold", "title": "PRSV - \"Vinyl Chloride\"", "desc": "Dedicated 3D printer interface"},

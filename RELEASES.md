@@ -1,6 +1,11 @@
 # ctclsite-rust v1 - 2024
 On February 18, 2024, a rewrite continuing to use Actix was started and the first release was on March 3, 2024.
 
+## 1.3.1 - March 10, 2024
+
+Additons:
+- --content-only flag for mkrelease
+
 ## 1.3.0 - March 6, 2024
 This update adds favicons to the website. 
 

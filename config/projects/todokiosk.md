@@ -13,4 +13,4 @@ The project is open source and the source code is hosted on GitHub at [this repo
 
 On December 23, 2023, I had the idea of recreating ToDoKiosk in Rust to reintroduce myself to the Rust programming language. The source code is also on GitHub at [this repository](https://github.com/ctcl-bregis/todokiosk-rust).
 
-On January 2, 2024, this rewrite was officially put on hold indefinitely as I decided there is no apparent need for me to switch the project over to Rust, a much more unfamiliar environment. 
+On January 2, 2024, this rewrite was officially put on hold indefinitely as I decided there is no apparent need for me to switch the project over to Rust, a much more unfamiliar environment. On March 10, plans to attempt to rewrite ToDoKiosk in Rust appeared.
