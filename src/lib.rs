@@ -2,7 +2,7 @@
 // File: src/lib.rs
 // Purpose: Module import and commonly used functions
 // Created: November 28, 2022
-// Modified: March 6, 2024
+// Modified: March 13, 2024
 
 pub mod routes;
 
@@ -21,20 +21,14 @@ use serde::{Deserialize, Serialize};
 //     config.json - "pagecfg", "subpage"
 
 // configuration file structs
-#[derive(Deserialize, Serialize)]
-struct Theme {
+#[derive(Deserialize, Serialize, Clone)]
+pub struct Theme {
     color: String,
     fgcolor: String
 }
 
-#[derive(Deserialize)]
-struct Sitecfg {
-    themes: HashMap<String, Theme>,
-    pages: IndexMap<String, String>
-}
-
 #[derive(Deserialize, Serialize, Clone)]
-struct Section {
+pub struct Section {
     title: String,
     id: Option<String>,
     content: String,
@@ -43,20 +37,21 @@ struct Section {
 }
 
 #[derive(Deserialize, Serialize, Clone)]
-struct Linklistlink {
+pub struct Linklistlink {
     title: String,
     link: String,
     theme: String
 }
 
 #[derive(Deserialize, Serialize, Clone)]
-struct Page {
+pub struct SubPageCfg {
     theme: String,
     title: String,
     desc: String,
     content: Option<String>,
     favicon: Option<String>,
     sections: Option<Vec<Section>>,
+    background: Option<String>,
     menu: Option<Vec<Linklistlink>>,
     icon: Option<String>,
     icontitle: Option<String>,
@@ -64,11 +59,52 @@ struct Page {
     date: Option<String>
 }
 
-#[derive(Deserialize, Serialize)]
-struct Pagecfg {
-    pages: IndexMap<String, Page>
+#[derive(Deserialize, Serialize, Clone)]
+pub struct PageCfg {
+    pages: IndexMap<String, SubPageCfg>
 }
+
+#[derive(Deserialize, Serialize, Clone)]
+pub struct ProjectCatCfg {
+    title: String,
+    desc: String,
+    subpages: IndexMap<String, SubPageCfg>
+}
+
+#[derive(Deserialize, Serialize, Clone)]
+pub struct ProjectsPageCfg {
+    root: SubPageCfg,
+    cats: IndexMap<String, ProjectCatCfg>
+}
+
+// Add function to convert ProjectsPagesCfg to a PageCfg with all of the pages under projects
+impl ProjectsPageCfg {
+    fn topagecfg(self) -> PageCfg {
+        let mut pages: IndexMap<String, SubPageCfg> = IndexMap::new();
+        pages.insert("root".to_string(), self.root);
+        for cat in self.cats.values() {
+            for subpage in cat.subpages.iter() {
+                pages.insert(subpage.0.clone(), subpage.1.clone());
+            }
+        }
+        let res: PageCfg = PageCfg { pages: pages };
+        res
+    }
+}
+
+#[derive(Deserialize, Serialize, Clone)]
+pub struct SiteCfg {
+    pub aboutcfg: PageCfg,
+    pub bcctccfg: PageCfg,
+    pub blogcfg: PageCfg,
+    pub projectscfg: ProjectsPageCfg,
+    pub servicescfg: PageCfg,
+    pub themes: HashMap<String, Theme>,
+    pub themes_css: HashMap<String, String>
+}
+
 // -------------------------------------
+
 
 pub fn read_file(path: String) -> Result<String, Error> {
     let tmppath = path.clone();
@@ -96,59 +132,57 @@ pub fn mdpath2html(path: String) -> Result<String, Error> {
 }
 
 // Function that prefills the Tera context
-pub fn mkcontext(metapage: &str, subpage: &str) -> Result<tera::Context, Error> {
+pub fn mkcontext(sitecfg: SiteCfg, metapage: &str, subpage: &str) -> Result<tera::Context, Error> {
     let mut ctx = tera::Context::new();
     let mut comrak_options = Options::default();
     comrak_options.render.unsafe_ = true;
-    
-    let themecfg: HashMap<String, String> = serde_json::from_str(&read_file("themes.json".to_string()).unwrap()).unwrap();
 
-    // TODO: find out how to load the configurations on start instead of every time this function is called
-    let sitecfg: Sitecfg = serde_json::from_str(&read_file(String::from("config/config.json")).unwrap()).unwrap();
-
-    // IndexMap must be used here to preserve order and allow sorting of keys
-    let mut pagecfg: Pagecfg = Pagecfg { pages: IndexMap::new() };
-
-    pagecfg.pages = if metapage == "about" {
-        let lookup: IndexMap<String, Page> = serde_json::from_str(&read_file(sitecfg.pages.get("about").unwrap().to_string()).unwrap()).unwrap();
-        lookup
-    } else if metapage == "blog" {
-        let lookup: IndexMap<String, Page> = serde_json::from_str(&read_file(sitecfg.pages.get("blog").unwrap().to_string()).unwrap()).unwrap();
-        lookup
-    } else if metapage == "services" {
-        let lookup: IndexMap<String, Page> = serde_json::from_str(&read_file(sitecfg.pages.get("services").unwrap().to_string()).unwrap()).unwrap();
-        lookup
-    } else {
-        return Err(Error::new(std::io::ErrorKind::NotFound, "Invalid page".to_string()))
+    let pagecfg = match metapage {
+        "about" => sitecfg.aboutcfg,
+        "bcc_tc" => sitecfg.bcctccfg,
+        "blog" => sitecfg.blogcfg,
+        "projects" => sitecfg.projectscfg.clone().topagecfg(),
+        "services" => sitecfg.servicescfg,
+        _ => return Err(Error::new(std::io::ErrorKind::NotFound, "Invalid page".to_string()))
+    };
+    let themecfg = sitecfg.themes;
+    let themecsscfg = sitecfg.themes_css;
+    let subpagecfg = match pagecfg.pages.get(subpage) {
+        Some(subpage) => subpage,
+        None => return Err(Error::new(std::io::ErrorKind::NotFound, "Page not found".to_string()))
     };
 
-    let subpagecfg = pagecfg.pages.get(subpage);
+    ctx.insert("themecolor", &themecfg.get(&subpagecfg.theme).unwrap().color);
+    ctx.insert("title", &subpagecfg.title);
+    ctx.insert("desc", &subpagecfg.desc);
 
-    ctx.insert("themecolor", &sitecfg.themes.get(&subpagecfg.unwrap().theme).unwrap().color);
-    ctx.insert("title", &subpagecfg.unwrap().title);
-    ctx.insert("desc", &subpagecfg.unwrap().desc);
-    ctx.insert("menu", &subpagecfg.unwrap().menu);
-    ctx.insert("styling", &themecfg.get(&subpagecfg.unwrap().theme));
+    if metapage == "bcc_tc" {
+        ctx.insert("menu", &subpagecfg.menu);
+        ctx.insert("background", &subpagecfg.background);
+    } else if metapage == "projects" {
+        ctx.insert("menu", &sitecfg.projectscfg.cats);
+    }
+    ctx.insert("styling", &themecsscfg.get(&subpagecfg.theme).unwrap());
 
     ctx.insert("clientinfojs", &read_file(String::from("static/clientinfo.js")).unwrap());
     ctx.insert("commonjs", &read_file(String::from("static/common.js")).unwrap());
 
-    if !&subpagecfg.unwrap().content.is_none() {
-        let mdpath = subpagecfg.unwrap().content.as_ref().unwrap();
+    if !&subpagecfg.content.is_none() {
+        let mdpath = subpagecfg.content.as_ref().unwrap();
         let rendered = markdown_to_html(&read_file(mdpath.to_owned()).unwrap(), &comrak_options);
 
         ctx.insert("rendered", &rendered);
     }
 
-    if !&subpagecfg.unwrap().favicon.is_none() {
-        ctx.insert("favicon", &subpagecfg.unwrap().favicon.as_ref().unwrap());
+    if !&subpagecfg.favicon.is_none() {
+        ctx.insert("favicon", &subpagecfg.favicon.as_ref().unwrap());
     } else {
-        let iconname: &str = subpagecfg.unwrap().theme.as_ref();
+        let iconname: &str = subpagecfg.theme.as_ref();
         ctx.insert("favicon", &format!("/static/favicons/default_{iconname}.ico"));
     }
 
-    if !&subpagecfg.unwrap().sections.is_none() {
-        let sections = subpagecfg.unwrap().sections.as_ref().unwrap();
+    if !&subpagecfg.sections.is_none() {
+        let sections = subpagecfg.sections.as_ref().unwrap();
         let mut newsections: Vec<Section> = vec![];
 
         for section in sections {
@@ -166,12 +200,12 @@ pub fn mkcontext(metapage: &str, subpage: &str) -> Result<tera::Context, Error> 
     // Blog is a special case
     if metapage == "blog" {
         if subpage == "root" {
-            let mut posts: IndexMap<String, Page> = pagecfg.pages;
+            let mut posts = pagecfg.pages.clone();
             posts.shift_remove("root");
             
             ctx.insert("posts", &posts)
         } else {
-            let mdpath = subpagecfg.unwrap().content.as_ref().unwrap();
+            let mdpath = subpagecfg.content.as_ref().unwrap();
             let rendered = mdpath2html(mdpath.to_owned()).unwrap();
             ctx.insert("rendered", &rendered);
         }

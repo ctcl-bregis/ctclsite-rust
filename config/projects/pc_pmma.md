@@ -1,6 +1,6 @@
 # Introduction
 
-"Polymethylmethacrylate" (shorthand "PMMA") is the codename given to the HP ZBook Studio G3 laptop with an Intel Xeon processor that I acquired in September 2021. Its main purpose is to serve as a mobile workstation for cases where a desktop system such as ["Polybutylene Terephthalate"](../pc_pbt/) is not efficient to transport such as on airlines and most overnight trips. Its use of ECC memory and an Intel Xeon mobile workstation processor makes it a rarity but important for mission-critical applications.
+"Polymethylmethacrylate" (shorthand "PMMA") is the codename given to the HP ZBook Studio G3 laptop with an Intel Xeon processor that I have used since September 2021. Its main purpose is to serve as a mobile workstation for cases where a desktop system such as ["Polybutylene Terephthalate"](../pc_pbt/) is not efficient to travel with such as trips or jobs that last less than a week. Its use of ECC memory and an Intel Xeon mobile workstation processor makes it a rarity but important for mission-critical applications.
 
 # Configuration
 

@@ -16,7 +16,4 @@ The Python version came first, with its development starting on January 24, 2024
 Details of the bot including its features and code can be found at the repostitory [here](https://github.com/ctcl-bregis/slag).
 
 # Rust version
-I started the Rust version of the software on February 21, 2024 due to general discontent with Python including performance and runtime errors (that would be otherwise caught during compile time).
-
-The codename of the Rust version of SLAG is currently undecided as of February 21, 2024.
-
+I started the Rust version of the software on February 21, 2024 due to general discontent with Python including performance and runtime errors (that would be otherwise caught during compile time). The codename for the Rust version of SLAG is "Black-footed Ferret".

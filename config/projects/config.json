@@ -1,5 +1,5 @@
 {
-    "menu": {
+    "root": {
         "theme": "gold",
         "title": "Projects",
         "desc": "List of personal projects including PC hardware, hardware design, software and art projects"
@@ -19,7 +19,7 @@
                 "ctclsite": {"content": "config/projects/ctclsite.md", "theme": "gold", "title": "CTCL Website", "desc": "The website itself"},
                 "cams": {"content": "config/projects/cams.md", "theme": "red", "title": "CAMS Asset Management System", "desc": "Fully custom inventory management software"},
                 "contactlist": {"content": "config/projects/contactlist.md", "theme": "blue", "title": "ContactList", "desc": "Browser-based contact manager"},
-                "todokiosk": {"content": "config/projects/todokiosk.md", "theme": "gold", "title": "ToDoKiosk", "desc": "CalDAV tasks client"},
+                "todokiosk": {"content": "config/projects/todokiosk.md", "theme": "white", "title": "ToDoKiosk", "desc": "CalDAV tasks client"},
                 "slag": {"content": "config/projects/slag.md", "theme": "99gray", "title": "SLAG", "desc": "Custom Discord bot"}
             }
         },
@@ -43,13 +43,13 @@
                 "pc_pet2": {"content": "config/projects/pc_pet2.md", "theme": "qipurple", "title": "WBPC - \"Polyethylene Terephthalate v2\"", "desc": "Planned experimental desktop computer system"},
                 "pc_pp": {"content": "config/projects/pc_pp.md", "theme": "99red", "title": "WBPC - \"Polypropylene\"", "desc": "Experimental desktop computer system"},
                 "pc_pe": {"content": "config/projects/pc_pe.md", "theme": "99green", "title": "WBPC - \"Polyethylene\"", "desc": "Former, now experimental, desktop computer system"},
-                "pc_tbm": {"content": "config/projects/pc_tbm.md", "theme": "gold", "title": "GAMEPC - \"tert-Butylthiol\"", "desc": "Hardware testing system"},
-                "pc_r12": {"content": "config/projects/pc_r12.md", "theme": "gold", "title": "SIGN1 - \"Dichlorodifluoromethane\"", "desc": "Bookshelf PC for displaying a To-Do list"},
-                "pc_thc": {"content": "config/projects/pc_thc.md", "theme": "gold", "title": "Phone - \"Tetrahydrocannabinol\"", "desc": "Main smartphone"},
-                "srv_vc": {"content": "config/projects/srv_vc.md", "theme": "gold", "title": "PRSV - \"Vinyl Chloride\"", "desc": "Dedicated 3D printer interface"},
-                "srv_amp": {"content": "config/projects/srv_amp.md", "theme": "gold", "title": "SVCS", "desc": "Series of server systems for use with service hosting"},
-                "srv_prm": {"content": "config/projects/srv_prm.md", "theme": "gold", "title": "WBSD - \"Promethazine\"", "desc": "Dedicated storage server"},
-                "srv_dxm": {"content": "config/projects/srv_dxm.md", "theme": "gold", "title": "ROUTER - \"Dextromethorphan\"", "desc": "Router and firewall server"}
+                "pc_tbm": {"content": "config/projects/pc_tbm.md", "theme": "nanblue", "title": "GAMEPC - \"tert-Butylthiol\"", "desc": "Hardware testing system"},
+                "pc_r12": {"content": "config/projects/pc_r12.md", "theme": "blue", "title": "SIGN1 - \"Dichlorodifluoromethane\"", "desc": "Bookshelf PC for displaying a To-Do list"},
+                "pc_thc": {"content": "config/projects/pc_thc.md", "theme": "red", "title": "Phone - \"Tetrahydrocannabinol\"", "desc": "Main smartphone"},
+                "srv_vc": {"content": "config/projects/srv_vc.md", "theme": "nanblue", "title": "PRSV - \"Vinyl Chloride\"", "desc": "Dedicated 3D printer interface"},
+                "srv_amp": {"content": "config/projects/srv_amp.md", "theme": "orange", "title": "SVCS", "desc": "Series of server systems for use with service hosting"},
+                "srv_prm": {"content": "config/projects/srv_prm.md", "theme": "green", "title": "WBSD - \"Promethazine\"", "desc": "Dedicated storage server"},
+                "srv_dxm": {"content": "config/projects/srv_dxm.md", "theme": "green", "title": "ROUTER - \"Dextromethorphan\"", "desc": "Router and firewall server"}
             }
         },
         "automotive": {

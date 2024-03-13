@@ -15,4 +15,4 @@ Planned configuration:
 - Case Fans: **TBD**
 - Case: **TBD**
 
-A planned feature of the desktop is to have cooling fans mounted over the memory modules due to the immense amount of heat that the early dual-die package DRAM devices produce under load. 
+A planned feature of the desktop is to have cooling fans mounted over the memory modules due to the immense amount of heat that the early dual-die package DRAM devices produce under load.

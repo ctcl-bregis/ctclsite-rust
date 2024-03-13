@@ -1,6 +1,4 @@
-# ctclsite-rust
-ctclsite-rust "Atlantic Blue Crab"
-
+# ctclsite-rust "Atlantic Blue Crab"
 This is the Rust version of [my personal website](https://ctcl-tech.com/). 
 
 On February 18, 2024, I prepared this repository for a potential rewrite.

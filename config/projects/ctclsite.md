@@ -87,7 +87,7 @@ These rewrites boil down to this:
         <td>SCSS</td>
         <td>February 18, 2024</td>
         <td>March 3, 2024</td>
-        <td><a href="../pc_pbt/">Polybutylene Terephthalate</a>, <a href="../pc_pmma/">Polymethylmethacrylate</a></td>
+        <td><a href="../pc_pbt/">Polybutylene Terephthalate</a>, <a href="../pc_pmma/">Polymethylmethacrylate</a>, <a href="../pc_thc/">Tetrahydrocannabinol</a></td>
     </tr>
 </table>
 
@@ -119,7 +119,7 @@ ctclsite-python v5 has minor changes over the backend code of the website and wa
 
 This release was finally put into production on December 22, 2023.
 
-## ctclsite-rust v2
+## ctclsite-rust v1
 On February 18, 2024, I have set up the ctclsite-rust repository for a potential rewrite using Rust.
 
 This rewrite was done not because it needed it in any way but was instead used as an opportunity to reintroduce myself to Rust in a much more familiar environment; web design before taking on more difficult projects such as writing [SLAG](../slag/) in Rust.

@@ -157,3 +157,20 @@ li::marker {
         color: $theme;
     }
 }
+
+
+/* Have both scrollbar-* and -webkit-scrollbar for wider browser support */
+@supports (scrollbar-color: auto) {
+    html {
+      scrollbar-color: $theme scale-color($theme, $lightness: -90%);
+    }
+}
+  
+@supports selector(::-webkit-scrollbar) {
+    html::-webkit-scrollbar {
+        background: $theme; 
+    }
+    html::-webkit-scrollbar-thumb {
+      background: scale-color($theme, $lightness: -90%);
+    }
+}

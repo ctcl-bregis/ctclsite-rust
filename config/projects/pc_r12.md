@@ -1,4 +1,4 @@
-"Dichlorodifluoromethane" (shorthand "R12") is the small Intel desktop system currently used as SIGN1 with the current main purpose of running the [ToDoKiosk software](../todokiosk) to display tasks on a monitor on the bookshelf next to my desk.
+"Dichlorodifluoromethane" (shorthand "R12") is the small Intel desktop system currently used as SIGN1 with the current main purpose of running the [ToDoKiosk software](../todokiosk/) to display tasks on a monitor on the bookshelf next to my desk.
 
 This system was put into production on May 13, 2023 while the system was officially given a codename on January 6, 2024.
 
@@ -20,7 +20,7 @@ Current specifications as of January 6, 2024:
 - OS: Debian 11 + XFCE
 - Monitor: HannStar Display HANNS.G HL193ABBUFWK1
 
-
-The use of an x86 system over a common ARM-based single-board computers such as ones from Raspberry Pi or Banana Pi was because these boards often lack a VGA video output. The monitor has a VGA port for its only input. Though I could have just used a video converter, this was done more for fun.
+The use of an x86 system over a common ARM-based single-board computers such as ones from Raspberry Pi or Banana Pi was because these boards often lack a VGA video output. The monitor has a VGA port for its only input. 
+Though video converters exist for HDMI to VGA, being a much lower cost option than building a dedicated x86 system, this was done for more of a learning experience.
 
 The power usage, while not actually have been measured, is expected to be very low compared to other desktop systems making this system suitable for embedded, single-use applications such as running ToDoKiosk.

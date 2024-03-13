@@ -1,4 +1,4 @@
-SVCS, nicknamed "Dracula's Castle", is the name given to any platform that I use for virtualization.
+SVCS is the name given to any platform that I use for virtualization.
 
 # Current
 In early May 2023, I was given an HP BladeSystem C3000 chassis with three HP ProLiant BL460c G8 systems installed along with many other computer parts.

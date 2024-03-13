@@ -2,15 +2,15 @@
 // File: src/routes/about/mod.rs
 // Purpose: About module
 // Created: February 26, 2024
-// Modified: March 4, 2024
+// Modified: March 13, 2024
 
 use actix_web::{
-    web, Error, HttpResponse, Responder, Result,
+    web, Error, HttpResponse, Responder, Result
 };
-use crate::mkcontext;
+use crate::{mkcontext, SiteCfg};
 
-pub async fn about_index(tmpl: web::Data<tera::Tera>) -> Result<impl Responder, Error> {
-    let ctx = mkcontext("about", "root").unwrap();
+pub async fn about_index(tmpl: web::Data<tera::Tera>, sitecfg: web::Data<SiteCfg>) -> Result<impl Responder, Error> {
+    let ctx = mkcontext(sitecfg.get_ref().to_owned(), "about", "root").unwrap();
 
     let s = match tmpl.render("about_main.html", &ctx) {
         Ok(html) => HttpResponse::Ok().body(html),
@@ -20,8 +20,8 @@ pub async fn about_index(tmpl: web::Data<tera::Tera>) -> Result<impl Responder, 
     Ok(s)
 }
 
-pub async fn about_privacy(tmpl: web::Data<tera::Tera>) -> Result<impl Responder, Error> {
-    let ctx = mkcontext("about", "privacy").unwrap();
+pub async fn about_privacy(tmpl: web::Data<tera::Tera>, sitecfg: web::Data<SiteCfg>) -> Result<impl Responder, Error> {
+    let ctx = mkcontext(sitecfg.get_ref().to_owned(), "about", "privacy").unwrap();
     
     let s = match tmpl.render("about_md_pp.html", &ctx) {
         Ok(html) => HttpResponse::Ok().body(html),
@@ -31,8 +31,8 @@ pub async fn about_privacy(tmpl: web::Data<tera::Tera>) -> Result<impl Responder
     Ok(s)
 }
 
-pub async fn about_licensing(tmpl: web::Data<tera::Tera>) -> Result<impl Responder, Error> {
-    let ctx = mkcontext("about", "licensing").unwrap();
+pub async fn about_licensing(tmpl: web::Data<tera::Tera>, sitecfg: web::Data<SiteCfg>) -> Result<impl Responder, Error> {
+    let ctx = mkcontext(sitecfg.get_ref().to_owned(), "about", "licensing").unwrap();
 
     let s = match tmpl.render("about_md.html", &ctx) {
         Ok(html) => HttpResponse::Ok().body(html),

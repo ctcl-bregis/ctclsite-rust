@@ -5,14 +5,14 @@
 // Modified: March 4, 2024
 
 mod about;
-mod bcc_cc;
+mod bcc_tc;
 mod blog;
 mod logger;
 mod projects;
 mod services;
 
 pub use about::*;
-//pub use bcc_cc::*;
+pub use bcc_tc::*;
 pub use blog::*;
 pub use logger::*;
 pub use projects::*;

@@ -1,4 +1,4 @@
-{
+{"pages": {
     "root": {
         "theme": "gold",
         "title": "Blog Posts",
@@ -17,4 +17,4 @@
     "03": {"content": "config/blog/content/blogpost_3.md", "icon": "/static/blog/3/blog3_icon.webp", "icontitle": "Professional Minecraft player", "theme": "gold", "cat": "Update", "date": "January 7, 2024", "title": "Week 1, 2024", "desc": "The First Week of 2024"},
     "02": {"content": "config/blog/content/blogpost_2.md", "icon": "", "icontitle": "", "theme": "gold", "cat": "Update", "date": "December 22, 2023", "title": "2023 In Review", "desc": "Overview of my experience during 2023 and yet another new version of the website"},
     "01": {"content": "config/blog/content/blogpost_1.md", "icon": "", "icontitle": "", "theme": "gold", "cat": "Hardware", "date": "July 11, 2023", "title": "SP7021 Part 1", "desc": "My work with the SP7021 SIP"}
-}
+}}

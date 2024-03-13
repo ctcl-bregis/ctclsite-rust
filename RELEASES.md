@@ -1,6 +1,17 @@
 # ctclsite-rust v1 - 2024
 On February 18, 2024, a rewrite continuing to use Actix was started and the first release was on March 3, 2024.
 
+## 1.4.0 - March 13, 2024
+This update mostly covers the loading of website configuration data into memory before use.
+
+Additons:
+- BCC TC link list page implemented
+- Website configuration data is now stored in memory instead of being read from disk on every page load. This decreases file accesses on the server side siginficantly.
+- Custom scrollbars that follow the current page theme
+
+Changes:
+- Restructuring of structs used for configuration data
+
 ## 1.3.1 - March 10, 2024
 
 Additons:

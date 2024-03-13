@@ -1,4 +1,4 @@
-{
+{"pages": {
     "root": {
         "theme": "gold",
         "title": "Services",
@@ -10,4 +10,4 @@
             {"title": "Contact", "content": "config/about/sections/contact.md"}
         ]
     }
-}
+}}

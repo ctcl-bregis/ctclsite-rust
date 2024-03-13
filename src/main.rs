@@ -2,26 +2,46 @@
 // File: src/main.rs
 // Purpose: Main code
 // Created: November 28, 2022
-// Modified: March 4, 2024
-
-//use std::collections::HashMap;
+// Modified: March 13, 2024
 
 use actix_files as fs;
 use actix_web::{
     middleware, web, App, HttpServer
 };
+use serde::{Deserialize, Serialize};
+use std::collections::HashMap;
 use tera::Tera;
+use ctclsite::*;
 use ctclsite::routes::*;
+
+// config/config.json
+#[derive(Deserialize, Serialize, Clone)]
+pub struct GlobalCfg{
+    pub pages: HashMap<String, String>,
+    pub themes: HashMap<String, Theme>
+}
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
         let tera = Tera::new("templates/**/*.html").unwrap();
 
+        let globalcfg: GlobalCfg = serde_json::from_str(&read_file("config/config.json".to_string()).unwrap()).unwrap();
+        let sitecfg: SiteCfg = SiteCfg {
+            themes: globalcfg.themes,
+            themes_css: serde_json::from_str(&read_file("themes.json".to_string()).unwrap()).unwrap(),
+            aboutcfg: serde_json::from_str(&read_file(globalcfg.pages.get("about").unwrap().to_string()).unwrap()).unwrap(), 
+            bcctccfg: serde_json::from_str(&read_file(globalcfg.pages.get("bcctc").unwrap().to_string()).unwrap()).unwrap(), 
+            blogcfg: serde_json::from_str(&read_file(globalcfg.pages.get("blog").unwrap().to_string()).unwrap()).unwrap(), 
+            projectscfg: serde_json::from_str(&read_file(globalcfg.pages.get("projects").unwrap().to_string()).unwrap()).unwrap(), 
+            servicescfg: serde_json::from_str(&read_file(globalcfg.pages.get("services").unwrap().to_string()).unwrap()).unwrap()
+        };
+
         App::new()
             .service(fs::Files::new("/static", "static/"))
             .app_data(web::Data::new(tera))
-            .wrap(middleware::Logger::default())
+            .app_data(web::Data::new(sitecfg))
+            .wrap(middleware::NormalizePath::new(middleware::TrailingSlash::Always))
             .service(web::resource("/").route(web::get().to(about_index)))
             .service(web::resource("/privacy/").route(web::get().to(about_privacy)))
             .service(web::resource("/licensing/").route(web::get().to(about_licensing)))
@@ -30,7 +50,11 @@ async fn main() -> std::io::Result<()> {
             .service(web::resource("/blog/{page}/").route(web::get().to(blog_post)))
             .service(web::resource("/projects/").route(web::get().to(projects_index)))
             .service(web::resource("/projects/{page}/").route(web::get().to(projects_page)))
+            .service(web::resource("/bcc_tc/").route(web::get().to(bcctc_index)))
+            .service(web::redirect("/bcc_cc/", "/bcc_tc/"))
             .service(web::resource("/inlog/").route(web::post().to(logger_incoming)))
+
+            
     })
     .bind(("127.0.0.1", 8000))?
     .run()
