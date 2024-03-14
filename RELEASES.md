@@ -1,6 +1,16 @@
 # ctclsite-rust v1 - 2024
 On February 18, 2024, a rewrite continuing to use Actix was started and the first release was on March 3, 2024.
 
+## 1.4.1 - March 14, 2024
+This update covers a small feature that I missed during the last release
+
+Additions:
+- Binding IP and port is now specified in config/config.json instead of being hardcoded. IP is stored as a string, port is stored as u16.
+
+Changes:
+- Made GlobalCfg fields private since they don't need to be public
+- Code cleanup
+
 ## 1.4.0 - March 13, 2024
 This update mostly covers the loading of website configuration data into memory before use.
 

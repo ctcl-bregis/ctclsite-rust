@@ -2,13 +2,13 @@
 // File: src/logger/mod.rs
 // Purpose: Logger routes
 // Created: March 3, 2024
-// Modified: March 5, 2024
+// Modified: March 14, 2024
 
 use std::io::Write;
+use std::fs::OpenOptions;
 use actix_web::{
     web, Error, HttpResponse, HttpRequest, Responder, Result,
 };
-use std::fs::OpenOptions;
 use serde::{Deserialize, Serialize};
 use csv;
 

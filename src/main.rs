@@ -2,7 +2,7 @@
 // File: src/main.rs
 // Purpose: Main code
 // Created: November 28, 2022
-// Modified: March 13, 2024
+// Modified: March 14, 2024
 
 use actix_files as fs;
 use actix_web::{
@@ -16,13 +16,19 @@ use ctclsite::routes::*;
 
 // config/config.json
 #[derive(Deserialize, Serialize, Clone)]
-pub struct GlobalCfg{
-    pub pages: HashMap<String, String>,
-    pub themes: HashMap<String, Theme>
+pub struct GlobalCfg {
+    pages: HashMap<String, String>,
+    themes: HashMap<String, Theme>,
+    bindip: String,
+    bindport: u16
 }
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
+    let globalcfg: GlobalCfg = serde_json::from_str(&read_file("config/config.json".to_string()).unwrap()).unwrap();
+    let bindip = globalcfg.bindip;
+    let bindport = globalcfg.bindport;
+    
     HttpServer::new(|| {
         let tera = Tera::new("templates/**/*.html").unwrap();
 
@@ -53,10 +59,8 @@ async fn main() -> std::io::Result<()> {
             .service(web::resource("/bcc_tc/").route(web::get().to(bcctc_index)))
             .service(web::redirect("/bcc_cc/", "/bcc_tc/"))
             .service(web::resource("/inlog/").route(web::post().to(logger_incoming)))
-
-            
     })
-    .bind(("127.0.0.1", 8000))?
+    .bind((bindip, bindport))?
     .run()
     .await
 }

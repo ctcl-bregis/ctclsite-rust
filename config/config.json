@@ -32,5 +32,7 @@
         "projects": "config/projects/config.json",
         "services": "config/services/config.json",
         "ramlist": "config/ramlist/config.json"
-    }
+    },
+    "bindip": "127.0.0.1",
+    "bindport": 8000
 }
