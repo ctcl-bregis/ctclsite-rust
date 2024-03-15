@@ -1,6 +1,14 @@
 # ctclsite-rust v1 - 2024
 On February 18, 2024, a rewrite continuing to use Actix was started and the first release was on March 3, 2024.
 
+## 1.4.2 - March 15, 2024
+
+Additions:
+- Added current URL path to client-side logging
+
+Changes:
+- Logger module cleanup
+
 ## 1.4.1 - March 14, 2024
 This update covers a small feature that I missed during the last release
 

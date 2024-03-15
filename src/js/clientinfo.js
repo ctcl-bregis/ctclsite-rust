@@ -3,11 +3,18 @@
  * File: static/clientinfo.js
  * Purpose: Client-side data collection script
  * Created: December 16, 2023
- * Modified: March 4, 2024
+ * Modified: March 15, 2024
  */
 
+var urlPath = "";
+try {
+    urlPath = window.location.pathname;
+} catch (e) {
+    urlPath = "";
+}
+
 // Time and networking
-var timeZone= "";
+var timeZone = "";
 try {
     if (timeZone) {
         timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
@@ -285,7 +292,7 @@ try {
 
 var canvas = document.createElement('canvas');
 var ctx = canvas.getContext('2d');
-var txt = 'ctclsite-canvas-test';
+var txt = 'ctclsite-canvas-test 🦀🐍';
 ctx.textBaseline = "top";
 ctx.font = "14px 'Arial'";
 ctx.textBaseline = "alphabetic";
@@ -298,7 +305,7 @@ ctx.fillText(txt, 4, 17);
 var canvasFpImg = canvas.toDataURL();
 
 var canvasFp = "";
-// Hash the fingerprint client-side
+// Hash client-side
 const msgBuffer = new TextEncoder().encode(canvasFpImg);
 const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
 const hashArray = Array.from(new Uint8Array(hashBuffer));
@@ -308,9 +315,9 @@ canvasFp = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
 fetch("/inlog/", {
   method: "POST",
   body: JSON.stringify({
+    url_path: String(urlPath),
     // Time and networking
     time_zone: String(timeZone),
-    ext_ip: String(""),
     // Device data
     web_gl_vendor: String(webGlVendor),
     web_gl_renderer: String(webGlRenderer),
