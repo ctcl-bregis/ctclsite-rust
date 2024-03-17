@@ -21,6 +21,10 @@
         {% endif %}
         <script type="module">{{ commonjs|safe }}</script>
         <script type="module">{{ clientinfojs|safe }}</script>
+        <script>
+            // Message for anyone looking at the JS logs
+            console.log("Hello there!\n Want to learn more about how this website was made? Check out https://ctcl-tech.com/projects/ctclsite/");
+        </script>
         <style>
 {{ styling|safe }}
         </style>

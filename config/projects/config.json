@@ -9,7 +9,8 @@
             "title": "Naming Scheme",
             "desc": "Guides for the naming of my projects",
             "subpages": {
-                "codenames": {"content": "config/projects/codenames.md", "theme": "gold", "title": "Codename Guide", "desc": "Guide about the codenames used for software and hardware projects."}
+                "codenames": {"content": "config/projects/codenames.md", "theme": "gold", "title": "Codename Guide", "desc": "Guide about the codenames used for software and hardware projects."},
+                "naming": {"content": "config/projects/naming.md", "theme": "gold", "title": "Project Naming", "desc": "How names are chosen for projects."}
             }
         },
         "software": {

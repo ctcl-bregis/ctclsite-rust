@@ -2,7 +2,7 @@
 // File: src/main.rs
 // Purpose: Main code
 // Created: November 28, 2022
-// Modified: March 14, 2024
+// Modified: March 17, 2024
 
 use actix_files as fs;
 use actix_web::{
@@ -56,6 +56,7 @@ async fn main() -> std::io::Result<()> {
             .service(web::resource("/blog/{page}/").route(web::get().to(blog_post)))
             .service(web::resource("/projects/").route(web::get().to(projects_index)))
             .service(web::resource("/projects/{page}/").route(web::get().to(projects_page)))
+            .service(web::redirect("/projects/nonmonolithic", "/projects/nonmono")) // Quick hack that should be removed in a future update
             .service(web::resource("/bcc_tc/").route(web::get().to(bcctc_index)))
             .service(web::redirect("/bcc_cc/", "/bcc_tc/"))
             .service(web::resource("/inlog/").route(web::post().to(logger_incoming)))

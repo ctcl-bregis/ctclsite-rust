@@ -2,7 +2,7 @@
 // File: src/build.rs
 // Purpose: Build needed files
 // Created: February 28, 2024
-// Modified: March 12, 2024
+// Modified: March 17, 2024
 
 // touch grass
 use grass;
@@ -52,7 +52,6 @@ fn remove_first(s: &str) -> Option<&str> {
 }
 
 fn main() {
-
     let grass_options: grass::Options = grass::Options::default()
         .style(grass::OutputStyle::Compressed);
 
@@ -72,13 +71,19 @@ fn main() {
         let mut themescss = mtheme_scss_content.clone();
 
         // Grass apparently does not have the "Inject Values" function that pyScss has so a hack is required here
-        let mut scssvalues = format!("$theme: {};\n$fgcolor: {};\n", value.color, value.fgcolor);
-        
-        scssvalues.push_str("$themes: (\n");
+        let mut scssvalues = String::from("$themes: (\n");
         for (key2, value2) in &sitecfgthemes {
-            scssvalues.push_str(&format!("'{}': ('color': '{}', 'fgcolor': '{}'),\n", key2, value2.color, value2.fgcolor));
+            scssvalues.push_str(&format!("'{}': ('color': {}, 'fgcolor': {}),\n", key2, value2.color, value2.fgcolor));
+            let mut colorbytes = [0u8; 3];
+            let mut fgcolorbytes = [0u8; 3];
+            hex::decode_to_slice(remove_first(&value2.color).unwrap(), &mut colorbytes as &mut [u8]).unwrap();
+            hex::decode_to_slice(remove_first(&value2.color).unwrap(), &mut fgcolorbytes as &mut [u8]).unwrap();
+            scssvalues.push_str(&format!("'{}rgb': ('color': rgb({}, {}, {}), 'fgcolor': rgb({}, {}, {})),\n", key2, colorbytes[0], colorbytes[1], colorbytes[2], fgcolorbytes[0], fgcolorbytes[1], fgcolorbytes[2]));
         }
         scssvalues.push_str(");");
+
+        scssvalues.push_str(&format!("$theme: {};\n$fgcolor: {}; \n", format_args!("map.get(map.get($themes, '{}'), 'color')", key), format_args!("map.get(map.get($themes, '{}'), 'fgcolor')", key)));
+        scssvalues.push_str(&format!("$themergb: {};\n$fgcolorgb: {}; \n", format_args!("map.get(map.get($themes, '{}rgb'), 'color')", key), format_args!("map.get(map.get($themes, '{}rgb'), 'fgcolor')", key)));
 
         themescss = themescss.replace("$$thememap$$", &scssvalues);
 

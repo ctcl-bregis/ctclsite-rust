@@ -1,6 +1,16 @@
 # ctclsite-rust v1 - 2024
 On February 18, 2024, a rewrite continuing to use Actix was started and the first release was on March 3, 2024.
 
+## 1.4.3 - March 17, 2024
+
+Additions: 
+- Add redirect: "/projects/nonmonolithic/" to "/projects/nonmono/"
+- JavaScript Console message moved to header.html and header_nonav.html from navbar.html
+
+Changes:
+- Fixed scrollbar colors
+- SCSS fixes
+
 ## 1.4.2 - March 15, 2024
 
 Additions:
@@ -16,7 +26,7 @@ Additions:
 - Binding IP and port is now specified in config/config.json instead of being hardcoded. IP is stored as a string, port is stored as u16.
 
 Changes:
-- Made GlobalCfg fields private since they don't need to be public
+- Removed public declaration from GlobalCfg fields in main.rs as they are unneeded
 - Code cleanup
 
 ## 1.4.0 - March 13, 2024

@@ -32,15 +32,15 @@ I had an interesting business trip this week to the Outer Banks area of North Ca
 
 <figure>
     <img src="/static/blog/4/obx_2.webp">
-    <figcaption>View out the window overlooking the beach during the sunrise. <a href="../../projects/pc_pmma/">"Polymethylmethacrylate"</a> pictured on the desk. January 11, 2024 - ASUS Zenfone 9</figcaption>
+    <figcaption>View out the window overlooking the beach during the sunrise. <a href="../../projects/pc_pmma/">"Polymethylmethacrylate"</a> pictured on the desk. January 11, 2024 - ASUS ZenFone 9</figcaption>
 </figure>
 
 <figure>
     <img src="/static/blog/4/obx_1.webp">
-    <figcaption>January 10, 2024 - ASUS Zenfone 9</figcaption>
+    <figcaption>January 10, 2024 - ASUS ZenFone 9</figcaption>
 </figure>
 
 <figure>
     <img src="/static/blog/4/obx_3.webp">
-    <figcaption>January 10, 2024 - ASUS Zenfone 9</figcaption>
+    <figcaption>January 10, 2024 - ASUS ZenFone 9</figcaption>
 </figure>

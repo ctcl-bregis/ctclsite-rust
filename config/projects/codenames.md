@@ -141,9 +141,9 @@ HP ProLiant blade servers that were given to me on May 5, 2023 use the names of 
 
 Starting September 5, 2023, amphetamine-based stimulant and related prodrug chemical compound codenames are now to be used with any HP BladeSystem-compatible device. 
 
-- **Dextroamphetamine** - "DXA"
-- **Levoamphetamine** - "LVA"
-- **Lisdexamfetamine** - "LDX"
+- [Dextroamphetamine](../srv_amp/) - "DXA"
+- [Levoamphetamine](../srv_amp/) - "LVA"
+- [Lisdexamfetamine](../srv_amp/) - "LDX"
 - Levomethamphetamine - "LVMA"
 - Dextromethamphetamine - "DXMA"
 

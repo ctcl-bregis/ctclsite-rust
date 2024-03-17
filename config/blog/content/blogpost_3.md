@@ -28,7 +28,7 @@ Since I had root access to this VPS, I installed the lshw and htop utilities to 
 
 In order to test server performance with multiple users, I joined the Minecraft server in order to see if there is too much server-side lag and other users are able to have operator command access.
 
-The devices "Polymethylmethacrylate", being the HP ZBook Studio G3 15 (Xeon) and "Tetrahydrocannabinol", being the ASUS Zenfone 9 played a crucial role in the troubleshooting and setup of the server. The laptop, "Polymethylmethacrylate" was mainly used to access the Linux console via SSH and to test Minecraft functionality with the MultiMC launcher. The phone was used for hotspot connectivity to access the internet. Along with the CTCL systems, a provided Microsoft Surface device running Windows 11 was used to access the web interface of Hostinger and the VPS's hosted game interface.
+The devices "Polymethylmethacrylate", being the HP ZBook Studio G3 15 (Xeon) and "Tetrahydrocannabinol", being the ASUS ZenFone 9 played a crucial role in the troubleshooting and setup of the server. The laptop, "Polymethylmethacrylate" was mainly used to access the Linux console via SSH and to test Minecraft functionality with the MultiMC launcher. The phone was used for hotspot connectivity to access the internet. Along with the CTCL systems, a provided Microsoft Surface device running Windows 11 was used to access the web interface of Hostinger and the VPS's hosted game interface.
 
 This successful gig later lead to the addition of the "Services" page on this website.
 

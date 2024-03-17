@@ -34,11 +34,11 @@ For authenticity, the device along with its motherboard, CPU implementer and CPU
 ## Post 1 - August 4, 2023
 "I actually took this picture today   
   
-ASUS Zenfone 9 - August 4, 2023"  
+ASUS ZenFone 9 - August 4, 2023"  
 
 As stated, I took the picture then later posted it.
 
-- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS Zenfone 9, Qualcomm ARM64)
+- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS ZenFone 9, Qualcomm ARM64)
 
 ## Post 2 - August 5, 2023
 "Employee 427  
@@ -169,13 +169,13 @@ The caption was chosen arbitrarily, refering to the shopping carts in the photo
 ## Post 16 - August 15, 2023
 "Department
 
-ASUS Zenfone 9 - August 15, 2023"
+ASUS ZenFone 9 - August 15, 2023"
 
 The caption was chosen as a play on the term "department".
 
 Photo is of an now empty Sears.
 
-- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS Zenfone 9, Qualcomm ARM64)
+- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS ZenFone 9, Qualcomm ARM64)
 
 ## Post 17 - August 16, 2023
 "Party upstairs
@@ -189,7 +189,7 @@ The caption was chosen arbitrarily
 ## Post 18 - August 16, 2023
 "Arrival
 
-ASUS Zenfone 9 - August 15, 2023"
+ASUS ZenFone 9 - August 15, 2023"
 
 The caption is related to Post 16
 
@@ -279,7 +279,7 @@ The caption was chosen arbitrarily.
 ## Post 28 - August 21, 2023
 "Makeup Room
 
-ASUS Zenfone 9 - June 12, 2023"
+ASUS ZenFone 9 - June 12, 2023"
 
 The caption was chosen arbitrarily.
 
@@ -297,16 +297,16 @@ The caption is related to the building being a motel.
 ## Post 30 - August 23, 2023
 "Transmission
 
-ASUS Zenfone 9 - August 15, 2023"
+ASUS ZenFone 9 - August 15, 2023"
 
 The caption was chosen arbitrarily. This is the third post not authored on a system with an AMD processor.
 
-- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS Zenfone 9, Qualcomm ARM64)
+- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS ZenFone 9, Qualcomm ARM64)
 
 ## Post 31 - August 24, 2023
 "Dining Room
 
-ASUS Zenfone 9 - June 12, 2023"
+ASUS ZenFone 9 - June 12, 2023"
 
 The caption was chosen arbitrarily.
 
@@ -342,13 +342,13 @@ The caption was chosen arbitrarily.
 ## Post 35 - August 29, 2023
 "Upstairs office
 
-ASUS Zenfone 9 - August 29, 2023"
+ASUS ZenFone 9 - August 29, 2023"
 
 The caption was chosen arbitarily. This is the fourth post not authored on an AMD-based system and instead was posted within five minutes after the photo was taken. Having another post like this was because of skipping a post on August 28 and I wanted something out quick.
 
 The post just had one photo due to limitations posed by a recent UI update for the Instagram app. 
 
-- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS Zenfone 9, Qualcomm ARM64)
+- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS ZenFone 9, Qualcomm ARM64)
 
 ## Post 36 - August 30, 2023
 "Doctor's visit
@@ -418,7 +418,7 @@ The caption was chosen arbitarily.
 ## Post 43 - September 6, 2023
 "Area of Refuge
 
-ASUS Zenfone 9 - September 5, 2023 - Rotated and cropped with GIMP on Linux Mint"
+ASUS ZenFone 9 - September 5, 2023 - Rotated and cropped with GIMP on Linux Mint"
 
 The caption references text shown in one of the photos.
 
@@ -489,9 +489,9 @@ The caption references a common error message from the Matterport app.
 ## Post 50 - September 14, 2023
 "Renovations
 
-Slide 1 and 3: ASUS Zenfone 9 - September 13, 2023
+Slide 1 and 3: ASUS ZenFone 9 - September 13, 2023
 
-Slide 2: ASUS Zenfone 9 - September 14, 2023
+Slide 2: ASUS ZenFone 9 - September 14, 2023
 
 Rotated and cropped within Instagram app"
 
@@ -499,61 +499,61 @@ The caption was chosen arbitrarily
 
 This is the first day that I am away from home and away from any AMD-based computer. This resulted in a challenge to use only pictures I have taken myself for the entire trip.
 
-- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS Zenfone 9, Qualcomm ARM64)
+- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS ZenFone 9, Qualcomm ARM64)
 
 ## Post 51 - September 15, 2023
 "Studio
 
-ASUS Zenfone 9 - August 15, 2023 - Rotated and cropped within Instagram app"
+ASUS ZenFone 9 - August 15, 2023 - Rotated and cropped within Instagram app"
 
 The caption references the text shown in the last slide. Second day of the challenge.
 
-- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS Zenfone 9, Qualcomm ARM64)
+- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS ZenFone 9, Qualcomm ARM64)
 
 ## Post 52 - September 16, 2023
 "Reconstruct
 
-ASUS Zenfone 9 - September 15, 2023 - Rotated and cropped within Instagram app"
+ASUS ZenFone 9 - September 15, 2023 - Rotated and cropped within Instagram app"
 
 The caption is based off both the "gm_construct" Garry's Mod map and the term "rebuild". Third day of the challenge.
 
-- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS Zenfone 9, Qualcomm ARM64)
+- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS ZenFone 9, Qualcomm ARM64)
 
 ## Post 53 - September 17, 2023
 "Regression Simulator
 
-ASUS Zenfone 9 - September 17, 2023 - Rotated and cropped within Instagram app"
+ASUS ZenFone 9 - September 17, 2023 - Rotated and cropped within Instagram app"
 
 The caption is a reference to the Adventure Time episode 'The Vault'. The choice to use the caption is related to how I have not been to the location since June 2018; as it is a return; regression. Fourth day of the challenge.
 
-- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS Zenfone 9, Qualcomm ARM64)
+- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS ZenFone 9, Qualcomm ARM64)
 
 ## Post 54 - September 18, 2023
 "Regression Complete
 
-ASUS Zenfone 9 - September 17, 2023 - Rotated and cropped within Instagram app". 
+ASUS ZenFone 9 - September 17, 2023 - Rotated and cropped within Instagram app". 
 
 The caption is related to the last post. Fifth day of the challenge.
 
-- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS Zenfone 9, Qualcomm ARM64)
+- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS ZenFone 9, Qualcomm ARM64)
 
 ## Post 55 - September 19, 2023
 "If it starts pointing toward space you are having a bad problem and you will not go to space today.
 
-ASUS Zenfone 9 - September 18, 2023 - Rotated and cropped within Instagram app"
+ASUS ZenFone 9 - September 18, 2023 - Rotated and cropped within Instagram app"
 
 The caption is a direct quote from the XKCD comic 'Up Goer Five', relating to the post using photos from a trip to Kennedy Space Center. Sixth day of the challenge.
 
-- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS Zenfone 9, Qualcomm ARM64)
+- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS ZenFone 9, Qualcomm ARM64)
 
 ## Post 56 - September 20, 2023
 "Renovations complete
 
-ASUS Zenfone 9 - September 19, 2023 - Cropped within Instagram app"
+ASUS ZenFone 9 - September 19, 2023 - Cropped within Instagram app"
 
 The caption references the caption of Post 50 as it is the same location. Seventh and last day of the challenge. 
 
-- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS Zenfone 9, Qualcomm ARM64)
+- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS ZenFone 9, Qualcomm ARM64)
 
 ## Post 57 - September 21, 2023
 "Winterized
@@ -576,11 +576,11 @@ The caption references the Windows BSOD shown in the first slide
 ## Post 59 - September 23, 2023
 "Groovy Baby
 
-ASUS Zenfone 9 - September 20, 2023 - Cropped with the Instagram app"
+ASUS ZenFone 9 - September 20, 2023 - Cropped with the Instagram app"
 
 The caption references the Austin Powers poster shown in the first slide. 
 
-- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS Zenfone 9, Qualcomm ARM64)
+- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS ZenFone 9, Qualcomm ARM64)
 
 ## Post 60 - September 24, 2023
 "American Dream
@@ -667,7 +667,7 @@ The caption references the Disney Princess decal shown in slide 2.
 ## Post 69 - October 4, 2023
 "Dead Center
 
-ASUS Zenfone 9 - September 29, 2023 - Rotated and cropped with GIMP on Linux Mint"
+ASUS ZenFone 9 - September 29, 2023 - Rotated and cropped with GIMP on Linux Mint"
 
 The caption is yet another reference to Left 4 Dead 2. Which viewers seemed to immediately recognize.
 
@@ -694,11 +694,11 @@ The caption was chosen arbitrarily
 ## Post 72 - October 10, 2023
 "At night
 
-ASUS Zenfone 9 - October 9, 2023"
+ASUS ZenFone 9 - October 9, 2023"
 
 The caption references the SpongeBob SquarePants episode Graveyard Shift.
 
-- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS Zenfone 9, Qualcomm ARM64)
+- Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS ZenFone 9, Qualcomm ARM64)
 
 ## Post 73 - October 14, 2023
 "Skylit

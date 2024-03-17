@@ -1,6 +1,6 @@
 [build]
-# Change the "target-cpu" parameter to whatever CPU you need to support.
-rustflags = ["-C", "target-cpu=westmere"]
+# Zen 2 for the target system; EPYC 7762
+rustflags = ["-C", "target-cpu=znver2"]
 
 [term]
 quiet = false

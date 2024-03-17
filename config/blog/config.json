@@ -4,6 +4,7 @@
         "title": "Blog Posts",
         "desc": "List of the blog posts on the website"
     },
+    "14": {"content": "config/blog/content/blogpost_14.md", "icon": "/static/blog/14/blog14_icon.webp", "icontitle": "What can I do for you, my effeminate fellow", "theme": "gold", "cat": "Update", "date": "March 17, 2024", "title": "Week 11, 2024", "desc": "The eleventh week of 2024"},
     "13": {"content": "config/blog/content/blogpost_13.md", "icon": "/static/blog/13/blog13_icon.webp", "icontitle": "Continuously Variable", "theme": "gold", "cat": "Update", "date": "March 10, 2024", "title": "Week 10, 2024", "desc": "The tenth week of 2024"},
     "12": {"content": "config/blog/content/blogpost_12.md", "icon": "/static/blog/12/blog12_icon.webp", "icontitle": "Yet another website backend rewrite", "theme": "gold", "cat": "Update", "date": "March 3, 2024", "title": "Week 9, 2024", "desc": "The ninth week of 2024"},
     "11": {"content": "config/blog/content/blogpost_11.md", "icon": "/static/blog/11/blog11_icon.webp", "icontitle": "In the datacenter, where I belong", "theme": "gold", "cat": "Update", "date": "February 25, 2024", "title": "Week 8, 2024", "desc": "The eighth week of 2024"},
