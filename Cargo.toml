@@ -1,9 +1,10 @@
 [package]
 name = "ctclsite"
-version = "1.4.3"
+version = "1.5.1"
 license = "MIT"
 edition = "2021"
 build = "src/build.rs"
+target-applies-to-host = false
 
 [build-dependencies]
 grass = "0.13.2"
@@ -27,5 +28,6 @@ json-objects-to-csv = "0.1.3"
 log = "0.4.20"
 serde = { version = "1.0.197", features = ["derive"] }
 serde_json = { version = "1.0.114", features = ["preserve_order"] }
+sha256 = "1.5.0"
 simple-logging = "2.0.2"
 tera = "1.19.1"

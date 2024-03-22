@@ -55,29 +55,18 @@ li::marker {
     background-color: $theme;
 }
 
-::selection {
-    color: $fgcolor;
-    background-color: $theme;
-}
+$selectiontypes: "::selection", "::-moz-selection", "::-o-selection", "::-ms-selection", "::-webkit-selection";
 
-::-moz-selection {
-    color: $fgcolor;
-    background-color: $theme;
-}
-
-::-o-selection {
-    color: $fgcolor;
-    background-color: $theme;
-}
-
-::-ms-selection {
-    color: $fgcolor;
-    background-color: $theme;
-}
-
-::-webkit-selection {
-    color: $fgcolor;
-    background-color: $theme;
+@each $selectiontype in $selectiontypes {
+    /* Default selection colors */
+    #{$selectiontype} {
+        color: $fgcolor;
+        background-color: $theme;
+    }
+    .sectiontitle#{$selectiontype} {
+        color: $theme;
+        background-color: $fgcolor;
+    }
 }
 
 @each $themename, $colors in $themes {
@@ -87,9 +76,11 @@ li::marker {
     .theme-#{$themename} {
         border-color: $boxbgcolor;
 
-        ::selection {
-            color: $boxfgcolor;
-            background-color: $boxbgcolor;
+        @each $selectiontype in $selectiontypes {
+            #{$selectiontype} {
+                color: $boxfgcolor;
+                background-color: $boxbgcolor;
+            }
         }
     }
 
@@ -102,24 +93,28 @@ li::marker {
         background-color: $boxbgcolor;
         border-color: $boxbgcolor;
 
+        @each $selectiontype in $selectiontypes {
+            #{$selectiontype} {
+                color: $boxbgcolor;
+                background-color: $boxfgcolor;
+            }
+        }
+
         &:hover {
             transition: 0.1s linear;
             background-color: $boxfgcolor;
             color: $boxbgcolor;
         }
     }
-}
-
-@each $themename, $colors in $themes {
-    $boxfgcolor: map-get($colors, "fgcolor");
-    $boxbgcolor: map-get($colors, "color");
 
     .linkitem-theme-#{$themename} {
         border-color: $boxbgcolor;
 
-        ::selection {
-            color: $boxfgcolor;
-            background-color: $boxbgcolor;
+        @each $selectiontype in $selectiontypes {
+            #{$selectiontype} {
+                color: $boxbgcolor;
+                background-color: $boxfgcolor;
+            }
         }
     }
 

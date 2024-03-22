@@ -1,9 +1,10 @@
 {"pages": {
     "root": {
         "theme": "bcc_green",
-        "title": "Brightpoint Community College Computer Club",
-        "desc": "Links to pages related to the Brightpoint Community College Computer Club",
+        "title": "Brightpoint Community College Technology Club",
+        "desc": "Links to pages related to the Brightpoint Community College Technology Club",
         "background": "/static/bcc_cc/cc_background.webp",
+        "navbar": false,
         "menu": [
             {"title": "Flier - 🚧 Coming soon", "link": ".", "theme": "bcc_green"},
             {"title": "Website - 🚧 Coming soon", "link": ".", "theme": "bcc_green"},

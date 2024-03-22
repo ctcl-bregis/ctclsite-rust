@@ -1,6 +1,8 @@
 {% include "header.html" %}
+    <script>{{ vidsjs|safe }}</script>
     <h1 class="center pix">Welcome</h1>
     <hr>
+    <button class="playpausebtn-play" onclick = "playpauseVideos();"></button>
     {% for section in sections %}
     <section id="{{ section.id }}" class="banner">
         <video class="bgvid" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" poster="{{ section.bgimg }}">

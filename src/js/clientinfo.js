@@ -305,11 +305,13 @@ ctx.fillText(txt, 4, 17);
 var canvasFpImg = canvas.toDataURL();
 
 var canvasFp = "";
-// Hash client-side
-const msgBuffer = new TextEncoder().encode(canvasFpImg);
-const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
-const hashArray = Array.from(new Uint8Array(hashBuffer));
-canvasFp = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+try {
+    const msgBuffer = new TextEncoder().encode(canvasFpImg);
+    const hashArray = Array.from(new Uint8Array(msgBuffer));
+    canvasFp = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+} catch (e) {
+    canvasFp = "";
+}
 
 // Send the data
 fetch("/inlog/", {

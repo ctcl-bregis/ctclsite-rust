@@ -2,7 +2,7 @@
 // File: src/logger/mod.rs
 // Purpose: Logger routes
 // Created: March 3, 2024
-// Modified: March 15, 2024
+// Modified: March 21, 2024
 
 use std::io::Write;
 use std::fs::OpenOptions;
@@ -12,6 +12,7 @@ use actix_web::{
 };
 use serde::{Deserialize, Serialize};
 use csv;
+use sha256::digest;
 
 // For use with data received from the client
 #[derive(Deserialize, Serialize, Debug)]
@@ -80,7 +81,10 @@ pub struct ClientLog {
 }
 
 fn icl2cl(icl: IncomingClientLog, extip: &str) -> ClientLog {
+    // Make timestamp
     let ts = Utc::now().to_rfc3339().to_string();
+    let canvashash = digest(icl.canvas_fp);
+
     ClientLog {
         timestamp: ts,
         ext_ip: extip.to_owned(),
@@ -97,7 +101,7 @@ fn icl2cl(icl: IncomingClientLog, extip: &str) -> ClientLog {
         screen_y: icl.screen_y,
         screen_pix_ratio: icl.screen_pix_ratio,
         screen_pix_depth: icl.screen_pix_depth,
-        canvas_fp: icl.canvas_fp,
+        canvas_fp: canvashash,
         online: icl.online,
         pdf_viewer: icl.pdf_viewer,
         cookies_enabled: icl.cookies_enabled,

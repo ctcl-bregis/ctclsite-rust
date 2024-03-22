@@ -239,16 +239,6 @@ section p {
     color: #000000;
 }
 
-.projectitem {
-    margin: $sectionmargin;
-    border-style: solid;
-    border-width: 2pt;
-}
-
-.projectdesc {
-    margin: 6pt;
-}
-
 .projecttitle {
     margin-block: 0;
     margin: 0;
@@ -264,25 +254,22 @@ section p {
     color: #000000;
 }
 
-.blogpost {
-    margin: $sectionmargin;
-    border-style: solid;
-    border-width: 2pt;
-    height: 100pt;
-}
-
-.blogpost img {
+.blogpost img, .projectitem img {
     float: right;
     height: 100%;
     border-left-style: solid;
     border-left-width: 2pt;
 }
 
-.blogpost a {
-    display: table;
+.blogpost, .projectitem {
+    margin: $sectionmargin;
+    border-style: solid;
+    border-width: 2pt;
+    height: 80pt;
 }
 
 .blogpost a button, .projectitem a button {
+    display: table;
     width: fit-content;
     align-items: center;
     justify-content: space-between;
@@ -299,6 +286,12 @@ section p {
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
+}
+
+.projectitem a, .blogpost a {
+    width: fit-content;
+    text-decoration: none;
+    display: table;
 }
 
 .blogpost a button h2 {
@@ -318,7 +311,7 @@ section p {
     font-size: 10pt;
 }
 
-.blogdesc {
+.blogdesc, .projectdesc {
     display: flex;
     /* max-width: calc(100% - height); */
     margin: 4pt;
@@ -387,4 +380,26 @@ figure figcaption {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14pt;
     text-align: center;
+}
+
+.playpausebtn-pause {
+    width: 24pt;
+    height: 24pt;
+    margin: $sectionmargin;
+    margin-bottom: 0;
+    background-size: contain;
+    background-image: url("/static/pause.svg");
+    cursor: pointer;
+    border: none;
+}
+
+.playpausebtn-play {
+    width: 24pt;
+    height: 24pt;
+    margin: $sectionmargin;
+    margin-bottom: 0;
+    background-size: contain;
+    background-image: url("/static/play.svg");
+    cursor: pointer;
+    border: none;
 }

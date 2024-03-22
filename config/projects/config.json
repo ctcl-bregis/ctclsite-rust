@@ -17,20 +17,20 @@
             "title": "Software",
             "desc": "Computer software projects such as web applications and desktop applications.",
             "subpages": {
-                "ctclsite": {"content": "config/projects/ctclsite.md", "theme": "gold", "title": "CTCL Website", "desc": "The website itself"},
-                "cams": {"content": "config/projects/cams.md", "theme": "red", "title": "CAMS Asset Management System", "desc": "Fully custom inventory management software"},
-                "contactlist": {"content": "config/projects/contactlist.md", "theme": "blue", "title": "ContactList", "desc": "Browser-based contact manager"},
-                "todokiosk": {"content": "config/projects/todokiosk.md", "theme": "white", "title": "ToDoKiosk", "desc": "CalDAV tasks client"},
-                "slag": {"content": "config/projects/slag.md", "theme": "99gray", "title": "SLAG", "desc": "Custom Discord bot"}
+                "ctclsite": {"content": "config/projects/ctclsite.md", "theme": "gold", "title": "CTCL Website", "desc": "The website itself", "icon": "/static/projects/icons/blog12_icon.webp"},
+                "cams": {"content": "config/projects/cams.md", "theme": "red", "title": "CAMS Asset Management System", "desc": "Fully custom inventory management software", "icon": "/static/projects/icons/cams_icon_512.webp"},
+                "contactlist": {"content": "config/projects/contactlist.md", "theme": "blue", "title": "ContactList", "desc": "Browser-based contact manager", "icon": "/static/projects/icons/cl_icon_full_512.webp"},
+                "todokiosk": {"content": "config/projects/todokiosk.md", "theme": "white", "title": "ToDoKiosk", "desc": "CalDAV tasks client", "icon": "/static/projects/icons/tdk_rust.webp"},
+                "slag": {"content": "config/projects/slag.md", "theme": "99gray", "title": "SLAG", "desc": "Custom Discord bot", "icon": "/static/projects/icons/slag_icon_512.webp"}
             }
         },
         "hardware": {
             "title": "Hardware Design",
             "desc": "Projects with custom circuit design and firmware.",
             "subpages": {
-                "mct_1": {"content": "config/projects/mct_1.md", "theme": "mediacow", "title": "MediaCow Touch - \"Nashville\"", "desc": "Android tablet experiment"},
+                "mct_1": {"content": "config/projects/mct_1.md", "theme": "mediacow", "title": "MediaCow Touch - \"Nashville\"", "desc": "Android tablet experiment", "icon": "/static/projects/icons/mct1_amogus.webp", "icontitle": "This was the best photo I had of something running on the device."},
                 "mct_2": {"content": "config/projects/mct_2.md", "theme": "white", "title": "MediaCow Touch 2 - \"Paris\"", "desc": "Android tablet experiment idea"},
-                "mathpad": {"content": "config/projects/mathpad.md", "theme": "gold", "title": "MathPad", "desc": "Calculator keypad peripheral device"}
+                "mathpad": {"content": "config/projects/mathpad.md", "theme": "gold", "title": "MathPad", "desc": "Calculator keypad peripheral device", "icon": "/static/projects/icons/mathpad_512.webp"}
             }
         },
         "pchardware": {
@@ -46,7 +46,7 @@
                 "pc_pe": {"content": "config/projects/pc_pe.md", "theme": "99green", "title": "WBPC - \"Polyethylene\"", "desc": "Former, now experimental, desktop computer system"},
                 "pc_tbm": {"content": "config/projects/pc_tbm.md", "theme": "nanblue", "title": "GAMEPC - \"tert-Butylthiol\"", "desc": "Hardware testing system"},
                 "pc_r12": {"content": "config/projects/pc_r12.md", "theme": "blue", "title": "SIGN1 - \"Dichlorodifluoromethane\"", "desc": "Bookshelf PC for displaying a To-Do list"},
-                "pc_thc": {"content": "config/projects/pc_thc.md", "theme": "red", "title": "Phone - \"Tetrahydrocannabinol\"", "desc": "Main smartphone"},
+                "pc_thc": {"content": "config/projects/pc_thc.md", "theme": "red", "title": "Phone - \"Tetrahydrocannabinol\"", "desc": "Main smartphone", "icon": "/static/projects/icons/thc_apr242023.webp"},
                 "srv_vc": {"content": "config/projects/srv_vc.md", "theme": "nanblue", "title": "PRSV - \"Vinyl Chloride\"", "desc": "Dedicated 3D printer interface"},
                 "srv_amp": {"content": "config/projects/srv_amp.md", "theme": "orange", "title": "SVCS", "desc": "Series of server systems for use with service hosting"},
                 "srv_prm": {"content": "config/projects/srv_prm.md", "theme": "green", "title": "WBSD - \"Promethazine\"", "desc": "Dedicated storage server"},
@@ -57,14 +57,14 @@
             "title": "Automotive and Mechanical",
             "desc": "Projects that surround the development of automotive, mechanical and mechatronic systems.",
             "subpages": {
-                "netkart": {"content": "config/projects/netkart.md", "theme": "netkart", "title": "NetKart", "desc": "Project surrounding the upgrades and potential computerization of a Go Kart"}
+                "netkart": {"content": "config/projects/netkart.md", "theme": "netkart", "title": "NetKart", "desc": "Upgrades and potential computerization of a Go Kart"}
             }
         },
         "creative": {
             "title": "Creative work",
             "desc": "My creative work such as game design and photography.",
             "subpages": {
-                "p2maps": {"content": "config/projects/p2maps.md", "theme": "source", "title": "Portal 2 Maps", "desc": "Custom community maps made for the 2011 puzzle game Portal 2"},
+                "p2maps": {"content": "config/projects/p2maps.md", "theme": "source", "title": "Portal 2 Maps", "desc": "Custom community maps made for the 2011 puzzle game Portal 2", "icon": "/static/projects/icons/the_hall_preview.webp"},
                 "nonmono": {"content": "config/projects/nonmono.md", "theme": "99gray", "title": "nonmonolithic", "desc": "Creative photography and video project"}
             }
         }

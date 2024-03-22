@@ -15,7 +15,8 @@
         "theme": "gold",
         "title": "Privacy Policy",
         "desc": "Privacy policy of the website",
-        "content": "config/about/privacy.md"
+        "content": "config/about/privacy.md",
+        "js": false
     },
     "licensing": {
         "theme": "gold",

@@ -1,6 +1,26 @@
 # ctclsite-rust v1 - 2024
 On February 18, 2024, a rewrite continuing to use Actix was started and the first release was on March 3, 2024.
 
+## 1.5.1 - March 21, 2024
+
+Changes:
+- Scrollbar fixes, again
+- Made the play button look less like Analog Devices and match the pixel theme
+- Fixes to clientinfo.js
+- Canvas fingerprints are now hashed server-side
+
+## 1.5.0 - March 20, 2024
+
+Additions:
+- Add support for icons on project page entries
+- Play/pause button for videos on the about page
+
+Changes:
+- Fix website embed on services such as Discord
+- Template consolidation
+- build.rs now minimizes all .js files found under src/js/
+- Remove unused imports
+
 ## 1.4.3 - March 17, 2024
 
 Additions: 
@@ -22,7 +42,7 @@ Changes:
 ## 1.4.1 - March 14, 2024
 This update covers a small feature that I missed during the last release
 
-Additions:
+Additions:at
 - Binding IP and port is now specified in config/config.json instead of being hardcoded. IP is stored as a string, port is stored as u16.
 
 Changes:

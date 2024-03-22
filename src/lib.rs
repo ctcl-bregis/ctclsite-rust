@@ -2,7 +2,7 @@
 // File: src/lib.rs
 // Purpose: Module import and commonly used functions
 // Created: November 28, 2022
-// Modified: March 13, 2024
+// Modified: March 21, 2024
 
 pub mod routes;
 
@@ -56,7 +56,9 @@ pub struct SubPageCfg {
     icon: Option<String>,
     icontitle: Option<String>,
     cat: Option<String>,
-    date: Option<String>
+    date: Option<String>,
+    js: Option<bool>,
+    navbar: Option<bool>
 }
 
 #[derive(Deserialize, Serialize, Clone)]
@@ -87,7 +89,7 @@ impl ProjectsPageCfg {
                 pages.insert(subpage.0.clone(), subpage.1.clone());
             }
         }
-        let res: PageCfg = PageCfg { pages: pages };
+        let res: PageCfg = PageCfg { pages };
         res
     }
 }
@@ -100,11 +102,21 @@ pub struct SiteCfg {
     pub projectscfg: ProjectsPageCfg,
     pub servicescfg: PageCfg,
     pub themes: HashMap<String, Theme>,
-    pub themes_css: HashMap<String, String>
+    pub themes_css: HashMap<String, String>,
+    pub globalcfg: GlobalCfg
+}
+
+// config/config.json
+#[derive(Deserialize, Serialize, Clone)]
+pub struct GlobalCfg {
+    pub pages: HashMap<String, String>,
+    pub themes: HashMap<String, Theme>,
+    pub bindip: String,
+    pub bindport: u16,
+    pub siteurl: String
 }
 
 // -------------------------------------
-
 
 pub fn read_file(path: String) -> Result<String, Error> {
     let tmppath = path.clone();
@@ -152,6 +164,31 @@ pub fn mkcontext(sitecfg: SiteCfg, metapage: &str, subpage: &str) -> Result<tera
         None => return Err(Error::new(std::io::ErrorKind::NotFound, "Page not found".to_string()))
     };
 
+    // JavaScript is only disabled explicitly; a page entry without the js field would have JavaScript enabled by default
+    if subpagecfg.js == Some(false) {
+        ctx.insert("js", &false)
+    } else {
+        ctx.insert("js", &true)
+    }
+
+    // navbar follows the same rule
+    if subpagecfg.navbar == Some(false) {
+        ctx.insert("navbar", &false)
+    } else {
+        ctx.insert("navbar", &true)
+    }
+
+    // Another hack that should be removed soon
+    if metapage == "about" && subpage == "root" {
+        ctx.insert("url", &format!("https://{}/", sitecfg.globalcfg.siteurl));
+    } else if metapage == "about" && subpage != "root" {
+        ctx.insert("url", &format!("https://{}/{}/", sitecfg.globalcfg.siteurl, subpage));
+    } else if subpage == "root" {
+        ctx.insert("url", &format!("https://{}/{}/", sitecfg.globalcfg.siteurl, metapage));
+    } else {
+        ctx.insert("url", &format!("https://{}/{}/{}/", sitecfg.globalcfg.siteurl, metapage, subpage));
+    }
+
     ctx.insert("themecolor", &themecfg.get(&subpagecfg.theme).unwrap().color);
     ctx.insert("title", &subpagecfg.title);
     ctx.insert("desc", &subpagecfg.desc);
@@ -164,6 +201,7 @@ pub fn mkcontext(sitecfg: SiteCfg, metapage: &str, subpage: &str) -> Result<tera
     }
     ctx.insert("styling", &themecsscfg.get(&subpagecfg.theme).unwrap());
 
+    ctx.insert("vidsjs", &read_file(String::from("static/vids.js")).unwrap());
     ctx.insert("clientinfojs", &read_file(String::from("static/clientinfo.js")).unwrap());
     ctx.insert("commonjs", &read_file(String::from("static/common.js")).unwrap());
 

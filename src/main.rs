@@ -2,26 +2,15 @@
 // File: src/main.rs
 // Purpose: Main code
 // Created: November 28, 2022
-// Modified: March 17, 2024
+// Modified: March 20, 2024
 
 use actix_files as fs;
 use actix_web::{
     middleware, web, App, HttpServer
 };
-use serde::{Deserialize, Serialize};
-use std::collections::HashMap;
 use tera::Tera;
 use ctclsite::*;
 use ctclsite::routes::*;
-
-// config/config.json
-#[derive(Deserialize, Serialize, Clone)]
-pub struct GlobalCfg {
-    pages: HashMap<String, String>,
-    themes: HashMap<String, Theme>,
-    bindip: String,
-    bindport: u16
-}
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
@@ -34,13 +23,14 @@ async fn main() -> std::io::Result<()> {
 
         let globalcfg: GlobalCfg = serde_json::from_str(&read_file("config/config.json".to_string()).unwrap()).unwrap();
         let sitecfg: SiteCfg = SiteCfg {
-            themes: globalcfg.themes,
+            themes: globalcfg.clone().themes,
             themes_css: serde_json::from_str(&read_file("themes.json".to_string()).unwrap()).unwrap(),
             aboutcfg: serde_json::from_str(&read_file(globalcfg.pages.get("about").unwrap().to_string()).unwrap()).unwrap(), 
             bcctccfg: serde_json::from_str(&read_file(globalcfg.pages.get("bcctc").unwrap().to_string()).unwrap()).unwrap(), 
             blogcfg: serde_json::from_str(&read_file(globalcfg.pages.get("blog").unwrap().to_string()).unwrap()).unwrap(), 
             projectscfg: serde_json::from_str(&read_file(globalcfg.pages.get("projects").unwrap().to_string()).unwrap()).unwrap(), 
-            servicescfg: serde_json::from_str(&read_file(globalcfg.pages.get("services").unwrap().to_string()).unwrap()).unwrap()
+            servicescfg: serde_json::from_str(&read_file(globalcfg.pages.get("services").unwrap().to_string()).unwrap()).unwrap(),
+            globalcfg: globalcfg.clone()
         };
 
         App::new()

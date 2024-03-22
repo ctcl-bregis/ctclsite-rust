@@ -1,6 +1,6 @@
 [build]
 # Zen 2 for the target system; EPYC 7762
-rustflags = ["-C", "target-cpu=znver2"]
+#rustflags = ["-C", "target-cpu=znver2"]
 
 [term]
 quiet = false

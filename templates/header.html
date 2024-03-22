@@ -6,28 +6,35 @@
         <meta name="msapplication-TileColor" content="{{ themecolor }}">
         <!-- Main tags -->
         <title>{{ title }}</title>
+        <meta content="{{ title }}" property="og:title">
+        <meta content="Site Description" property="og:description">
+        <meta content="{{ url }}" property="og:url">
+        <meta content="CTCL" property="og:site_name">
+        <meta content="en_US" property="og:locale">
+        <meta content="{{ themecolor }}" data-react-helmet="true" name="theme-color">
         <meta name="generator" content="CTCL Website Backend">
         <meta name="author" content="CTCL">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta property="og:site_name" content="CTCL">
-        <meta property="og:title" content="{{ title }}">
-        <meta property="og:locale" content="en_US">
         <meta name="theme-color" content="{{ themecolor }}">
         <link rel="icon" type="image/x-icon" href="{{ favicon }}">
         {% if desc and desc != "" %}
         <meta property="og:description" content="{{ desc }} - CTCL">
         <meta name="description" content="{{ desc }} - CTCL">
         {% endif %}
-        <script type="module">{{ commonjs|safe }}</script>
-        <script type="module">{{ clientinfojs|safe }}</script>
+        <style>
+            {{ styling|safe }}
+        </style>
+        {% if js %}
         <script>
             // Message for anyone looking at the JS logs
             console.log("Hello there!\n Want to learn more about how this website was made? Check out https://ctcl-tech.com/projects/ctclsite/");
         </script>
-        <style>
-{{ styling|safe }}
-        </style>
+        <script type="module">{{ commonjs|safe }}</script>
+        <script type="module">{{ clientinfojs|safe }}</script>
+        {% endif %}
     </head>
     <body>
+{% if navbar %}
 {% include "navbar.html" %}
+{% endif %}

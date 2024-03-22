@@ -6,7 +6,7 @@ The project is open source and the source code is hosted on GitHub at [this repo
 
 <figure>
     <img src="/static/projects/todokiosk/todokiosk_jan72024.webp">
-    <figcaption>ToDoKiosk v0.3.2 in action on <a href="../pc_r12/">SIGN1 "Dichlorodifluoromethane"</a> - January 7, 2024</figcaption>
+    <figcaption>ToDoKiosk-python v0.3.2 in action on <a href="../pc_r12/">SIGN1 "Dichlorodifluoromethane"</a> - January 7, 2024</figcaption>
 </figure>
 
 ## Rust Version

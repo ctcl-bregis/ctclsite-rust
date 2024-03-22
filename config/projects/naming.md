@@ -1,5 +1,7 @@
 # Software
-Names for software generally follow the guideline that they describe what the software does; are minimalistic. This minimalistic mindset is also used in the development of the software in which the software is designed to do exactly what it is described to do. This, however, leads to names being quite generic and could be difficult to find in online searches. I obviously was not the first to use the name ['ContactList'](https://github.com/search?q=ContactList&type=repositories).
+Names for software generally follow the guideline that they simply describe what the software does. This minimalistic mindset is also used in the development of the software in which the software is designed to do exactly what it is described to do. This, however, leads to names being quite generic and could be difficult to find in online searches. I obviously was not the first to use the name ['ContactList'](https://github.com/search?q=ContactList&type=repositories).
+
+Larger software projects may have more work put into their branding.
 
 ## Acronyms
 A pattern I have noticed in the naming of my software projects is that they are often acronyms.
