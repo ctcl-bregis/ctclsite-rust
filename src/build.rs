@@ -2,7 +2,7 @@
 // File: src/build.rs
 // Purpose: Build needed files
 // Created: February 28, 2024
-// Modified: March 20, 2024
+// Modified: March 23, 2024
 
 // touch grass
 use grass::{Options, OutputStyle};
@@ -15,6 +15,7 @@ use std::result::Result;
 use minifier::js::minify;
 extern crate image;
 use image::{Rgb, RgbImage};
+use chrono::Utc;
 
 #[derive(Deserialize, Serialize)]
 struct Theme {
@@ -47,12 +48,6 @@ pub fn read_file(path: &str) -> Result<String, Error> {
     Ok(buff)
 }
 
-//macro_rules! actuallyprintln {
-//    ($($tokens: tt)*) => {
-//        println!("cargo:warning={}", format!($($tokens)*))
-//    }
-//}
-
 fn remove_first(s: &str) -> Option<&str> {
     s.chars().next().map(|c| &s[c.len_utf8()..])
 }
@@ -64,8 +59,6 @@ fn main() {
     // Step 1: Build the CSS for each theme
     let sitecfg: Sitecfg = serde_json::from_str(&read_file("config/config.json").unwrap()).unwrap();
     let sitecfgthemes: HashMap<String, Theme> = sitecfg.themes;
- 
-    let mut themecfg: HashMap<String, String> = HashMap::new();
  
     let mbase_scss_content = read_file("src/styling/common.scss").unwrap();
     let mbase_css = grass::from_string(mbase_scss_content, &grass_options).unwrap();
@@ -97,12 +90,18 @@ fn main() {
  
         themecss.push_str(&grass::from_string(themescss, &grass_options).unwrap());
  
-        themecfg.insert(key.to_owned(), themecss);
+        let current_time = Utc::now().format("%b %-d, %Y, %H:%M %Z");
+        let system: String = if std::env::var("hwcodename").is_ok() {
+            format!("{} \"{}\"", gethostname::gethostname().to_str().unwrap(), std::env::var("hwcodename").unwrap())
+        } else {
+            gethostname::gethostname().to_str().unwrap().to_string()
+        };
+
+        let mut header = format!("/*\nctclsite-rust styling for theme \"{}\"\nGenerated {} on system {} \n*/\n", &key, current_time, system);
+        header.push_str(&themecss);
+
+        std::fs::write(format!("./static/{}.css", &key), &header).expect("Unable to write file themes.json");
     }
- 
-    let json = serde_json::to_string(&themecfg).unwrap();
- 
-    std::fs::write("./themes.json", json).expect("Unable to write file themes.json");
  
     // Step 2: Minimize and move JavaScript
     let paths = std::fs::read_dir("src/js/").unwrap();

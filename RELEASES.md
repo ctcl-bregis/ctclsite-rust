@@ -1,5 +1,33 @@
-# ctclsite-rust v1 - 2024
+# What constitutes a release
+Genearlly, releases are made when code or functionality of the website is changed.
+
+What constitues an release:
+- Changes to...
+  - frontend code; JavaScript files
+  - HTML templates
+  - styling; SCSS files
+  - shell scripts
+  - source code such as Rust (.rs), Python (.py) files
+- Updates of dependencies
+
+What does not constitue a release:
+- Blog posts
+- Editing content such as text and images from markdown files
+- Modification to JSON configuration files
+- Changes unrelated to the project such as website domain changes or configuration of proxy web servers
+- Edits to this file or README.md
+
+# Changelog
 On February 18, 2024, a rewrite continuing to use Actix was started and the first release was on March 3, 2024.
+
+## 1.5.2 - March 23, 2024
+
+Additions:
+- File header on built CSS files
+
+Changes:
+- Styling and scripts are no longer embedded in the page head. This removes "themes.json".
+- Many HTML fixes
 
 ## 1.5.1 - March 21, 2024
 
@@ -16,7 +44,6 @@ Additions:
 - Play/pause button for videos on the about page
 
 Changes:
-- Fix website embed on services such as Discord
 - Template consolidation
 - build.rs now minimizes all .js files found under src/js/
 - Remove unused imports

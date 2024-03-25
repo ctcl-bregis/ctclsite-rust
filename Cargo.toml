@@ -1,12 +1,14 @@
 [package]
 name = "ctclsite"
-version = "1.5.1"
+version = "1.5.2"
 license = "MIT"
 edition = "2021"
 build = "src/build.rs"
 target-applies-to-host = false
 
 [build-dependencies]
+chrono = "0.4.35"
+gethostname = "0.4.3"
 grass = "0.13.2"
 grass_compiler = "0.13.2"
 serde = { version = "1.0.197", features = ["derive"] }

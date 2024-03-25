@@ -1,17 +1,17 @@
 {% include "header.html" %}
-    <script>{{ vidsjs|safe }}</script>
+    <script src="/static/vids.js"></script>
     <h1 class="center pix">Welcome</h1>
     <hr>
     <button class="playpausebtn-play" onclick = "playpauseVideos();"></button>
     {% for section in sections %}
-    <section id="{{ section.id }}" class="banner">
-        <video class="bgvid" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" poster="{{ section.bgimg }}">
-            <source src="{{ section.bgvid }}" type="video/webm">
+    <div id="{{ section.id }}" class="banner">
+        <video class="bgvid" preload="auto" poster="{{ section.bgimg }}" autoplay muted>
+            <source src="{{ section.bgvid|safe }}" type="video/webm">
         </video>
         <section class="sectioncontent">
         <h2 class="sectionheader pix">{{ section.title }}</h2>
         {{ section.content|safe }}
         </section>
-    </section>{% endfor %}
+    </div>{% endfor %}
     <hr>
 {% include "footer.html" %}

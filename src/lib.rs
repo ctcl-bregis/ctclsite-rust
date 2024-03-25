@@ -2,7 +2,7 @@
 // File: src/lib.rs
 // Purpose: Module import and commonly used functions
 // Created: November 28, 2022
-// Modified: March 21, 2024
+// Modified: March 23, 2024
 
 pub mod routes;
 
@@ -102,7 +102,6 @@ pub struct SiteCfg {
     pub projectscfg: ProjectsPageCfg,
     pub servicescfg: PageCfg,
     pub themes: HashMap<String, Theme>,
-    pub themes_css: HashMap<String, String>,
     pub globalcfg: GlobalCfg
 }
 
@@ -158,7 +157,6 @@ pub fn mkcontext(sitecfg: SiteCfg, metapage: &str, subpage: &str) -> Result<tera
         _ => return Err(Error::new(std::io::ErrorKind::NotFound, "Invalid page".to_string()))
     };
     let themecfg = sitecfg.themes;
-    let themecsscfg = sitecfg.themes_css;
     let subpagecfg = match pagecfg.pages.get(subpage) {
         Some(subpage) => subpage,
         None => return Err(Error::new(std::io::ErrorKind::NotFound, "Page not found".to_string()))
@@ -169,6 +167,12 @@ pub fn mkcontext(sitecfg: SiteCfg, metapage: &str, subpage: &str) -> Result<tera
         ctx.insert("js", &false)
     } else {
         ctx.insert("js", &true)
+    }
+
+    if metapage == "about" {
+        ctx.insert("vids", &false)
+    } else {
+        ctx.insert("vids", &true)
     }
 
     // navbar follows the same rule
@@ -190,6 +194,7 @@ pub fn mkcontext(sitecfg: SiteCfg, metapage: &str, subpage: &str) -> Result<tera
     }
 
     ctx.insert("themecolor", &themecfg.get(&subpagecfg.theme).unwrap().color);
+    ctx.insert("themename", &subpagecfg.theme);
     ctx.insert("title", &subpagecfg.title);
     ctx.insert("desc", &subpagecfg.desc);
 
@@ -199,11 +204,6 @@ pub fn mkcontext(sitecfg: SiteCfg, metapage: &str, subpage: &str) -> Result<tera
     } else if metapage == "projects" {
         ctx.insert("menu", &sitecfg.projectscfg.cats);
     }
-    ctx.insert("styling", &themecsscfg.get(&subpagecfg.theme).unwrap());
-
-    ctx.insert("vidsjs", &read_file(String::from("static/vids.js")).unwrap());
-    ctx.insert("clientinfojs", &read_file(String::from("static/clientinfo.js")).unwrap());
-    ctx.insert("commonjs", &read_file(String::from("static/common.js")).unwrap());
 
     if !&subpagecfg.content.is_none() {
         let mdpath = subpagecfg.content.as_ref().unwrap();

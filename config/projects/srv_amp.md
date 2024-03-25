@@ -34,12 +34,14 @@ SVCS3 uses the hardware platform "Dextroamphetamine" (shorthand "DXA"). I could 
 
 On February 11, 2024, the E5-2643 v2 CPUs where switched for E5-2667 v2 CPUs due to the higher core count and slight increase in single-threaded performance. It may be used for remote code compilation if I start to use the Rust programming language again.
 
+As covered in the [blog post for Week 12 of 2024](../../blog/15/), there has been attempts to run LLMs on this system.
+
 Specifications:
 
 - System: HP ProLiant BL460c G8
 - CPUs: 2x Intel Xeon E5-2667 v2
 - Memory: 64GB (8x8GB) Nanya Technology NT4GC72B4PB2NL-DI Registered ECC 1Rx4 PC3-12800R
-- Storage: 1x HGST 600GB 10000RPM 6Gb/s SAS
+- Storage: 1x Samsung PM851 256GB SATA SSD
 
 # Former
 From February 2023 to the introduction of the systems above, the motherboard ["Polyethylene"](../pc_pe/) in a Supermicro chassis was used.

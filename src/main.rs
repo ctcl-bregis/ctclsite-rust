@@ -2,7 +2,7 @@
 // File: src/main.rs
 // Purpose: Main code
 // Created: November 28, 2022
-// Modified: March 20, 2024
+// Modified: March 23, 2024
 
 use actix_files as fs;
 use actix_web::{
@@ -24,7 +24,6 @@ async fn main() -> std::io::Result<()> {
         let globalcfg: GlobalCfg = serde_json::from_str(&read_file("config/config.json".to_string()).unwrap()).unwrap();
         let sitecfg: SiteCfg = SiteCfg {
             themes: globalcfg.clone().themes,
-            themes_css: serde_json::from_str(&read_file("themes.json".to_string()).unwrap()).unwrap(),
             aboutcfg: serde_json::from_str(&read_file(globalcfg.pages.get("about").unwrap().to_string()).unwrap()).unwrap(), 
             bcctccfg: serde_json::from_str(&read_file(globalcfg.pages.get("bcctc").unwrap().to_string()).unwrap()).unwrap(), 
             blogcfg: serde_json::from_str(&read_file(globalcfg.pages.get("blog").unwrap().to_string()).unwrap()).unwrap(), 

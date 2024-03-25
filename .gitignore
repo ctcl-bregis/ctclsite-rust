@@ -23,9 +23,8 @@ Cargo.lock
 logs/
 log/
 
-
 # Built files
-themes.json
 release.tar.gz
 static/*.js
+static/*.css
 static/favicons/default*
