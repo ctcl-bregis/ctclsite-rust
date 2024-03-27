@@ -5,7 +5,7 @@
     <button class="playpausebtn-play" onclick = "playpauseVideos();"></button>
     {% for section in sections %}
     <div id="{{ section.id }}" class="banner">
-        <video class="bgvid" preload="auto" poster="{{ section.bgimg }}" autoplay muted>
+        <video class="bgvid" preload="auto" poster="{{ section.bgimg }}" autoplay loop muted playsinline>
             <source src="{{ section.bgvid|safe }}" type="video/webm">
         </video>
         <section class="sectioncontent">

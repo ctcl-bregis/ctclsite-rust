@@ -1,10 +1,9 @@
 [package]
 name = "ctclsite"
-version = "1.5.2"
+version = "1.5.3"
 license = "MIT"
 edition = "2021"
 build = "src/build.rs"
-target-applies-to-host = false
 
 [build-dependencies]
 chrono = "0.4.35"

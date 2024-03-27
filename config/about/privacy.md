@@ -1,4 +1,4 @@
-**Date of last modification:** March 5, 2024
+**Date of last modification:** March 27, 2024
 
 # Definitions
 "CTCL" refers to the operator of this website, Brayden Regis.
@@ -22,7 +22,6 @@ Most pages use a client-side script to attempt to collect the following
 
 - Device time zone
 - Device's external IP address
-- Device's local IP address
 - Device display information: Resolution, color depth and ratio
 - Device GPU information
 - Device CPU core count (what is available to the browser)
@@ -40,17 +39,12 @@ Most pages use a client-side script to attempt to collect the following
 - Browser vendor
 - Hashed HTML canvas fingerprint
 
-These scripts are embedded in script tags in the page head.
-
 This information may be provided by the web browser or the device and is not collected from any other means.
 
 ## Content Use
 Examples of how CTCL content is used and shared publicly on other platforms may be recorded. This includes but is not limited to: screenshots including messages sent by CTCL, use of source code or designs in other projects,
 
 Once again, this data is not shared with any third party and is instead used to help observe how and if my content is being used and is benefiting others.
-
-## Photography
-Photos taken by CTCL that contain personally identifying information or other persons are not shared or used publicy without consent of any party represented in the photo. However, such photos may be stored on CTCL systems indefinitely. However, if these photos are shared publicly, such personally identifying information is removed beforehand.
 
 ## Publicly accessible information
 CTCL may retain publicly posted information from other platforms indefinitely, even if the original post was deleted or made unavailable to the public. This includes messages and social media posts.
@@ -93,7 +87,7 @@ Collecting such information is used for, including but not limited to:
 - Providing technical support
 - Understanding website traffic
 - Analytics
-- Identification
+- User Identification
 - Communications
 
 # Third Party Websites

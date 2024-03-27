@@ -15,10 +15,16 @@ What does not constitue a release:
 - Editing content such as text and images from markdown files
 - Modification to JSON configuration files
 - Changes unrelated to the project such as website domain changes or configuration of proxy web servers
+- Privacy policy changes
 - Edits to this file or README.md
 
 # Changelog
 On February 18, 2024, a rewrite continuing to use Actix was started and the first release was on March 3, 2024.
+
+## 1.5.3 - March 27, 2024
+
+Changes:
+- Small fixes to have background videos play properly on iOS devices
 
 ## 1.5.2 - March 23, 2024
 
