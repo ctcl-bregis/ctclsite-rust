@@ -1,4 +1,4 @@
-**Date of last modification:** March 27, 2024
+**Date of last modification:** March 29, 2024
 
 # Definitions
 "CTCL" refers to the operator of this website, Brayden Regis.
@@ -49,6 +49,8 @@ Once again, this data is not shared with any third party and is instead used to 
 ## Publicly accessible information
 CTCL may retain publicly posted information from other platforms indefinitely, even if the original post was deleted or made unavailable to the public. This includes messages and social media posts.
 
+This may include personal information such as location, name, age and phone numbers.
+
 ## Game Servers and Other CTCL Hosted Services
 Log data and user content from game servers and other public services hosted on CTCL hardware or on a CTCL-managed VPS may be collected and stored indefinitely. This includes IP addresses, usernames and the dates of login.
 
@@ -90,5 +92,18 @@ Collecting such information is used for, including but not limited to:
 - User Identification
 - Communications
 
+## Analytics data use
+Data that is collected by the website itself may be used in reports with personally identifiable data removed.
+
+For example, I may mention in a blog post that "From March 25, 2024 to March 29, 2024, 5.26% of webpage visits were from the Instagram app excluding bots and ".
+
+## User Identification and Technical Support
+I may use information from the website logs along with data collected from other methods such as social media to identify users. This data may be stored using CTCL-developed software such as ContactList.
+
 # Third Party Websites
 This website may mention other websites or contain links to other websites. CTCL cannot take responsibility for personal information collected on these third party websites, nor does CTCL monitor or accept responsibility for the accuracy or content of these other websites.
+
+# Data Requests
+One can request to get a report of what data was collected about them, if there is any data. 
+
+Check the Contact section on the main page for methods of contacting CTCL.

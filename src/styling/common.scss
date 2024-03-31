@@ -146,15 +146,6 @@ section {
     color: #FFFFFF;
 }
 
-.sectionheader {
-    color: #000000;
-    margin: 0;
-    padding: 6pt;
-    padding-top: 4pt;
-    padding-bottom: 4pt;
-    width: fit-content;
-}
-
 section h3 {
     margin: 8pt;
 }
@@ -200,6 +191,15 @@ section p {
     overflow: hidden;
 }
 
+.sectiontitle {
+    color: #000000;
+    margin: 0;
+    padding: 6pt;
+    padding-top: 4pt;
+    padding-bottom: 4pt;
+    width: fit-content;
+}
+
 .sectioncontent {
     min-height: 100vh;
     background-color: rgba(0, 0, 0, 0.6);
@@ -234,42 +234,43 @@ section p {
     margin: 0;
     padding: 4pt;
     width: fit-content;
-    font-weight: bold;
+    overflow-wrap: break-word;
     font-size: 18pt;
     color: #000000;
 }
 
-.projecttitle {
+.buttonsectiontitle {
     margin-block: 0;
     margin: 0;
     padding: 0;
     width: fit-content;
     font-weight: bold;
     font-size: 14pt;
+    overflow-wrap: break-word;
 }
 
-.projecttitle a {
+.buttonsectiontitle a {
     padding: 0pt;
     text-decoration: none;
     color: #000000;
 }
 
-.blogpost img, .projectitem img {
+.buttonsection img {
     float: right;
     height: 100%;
     border-left-style: solid;
     border-left-width: 2pt;
 }
 
-.blogpost, .projectitem {
+.buttonsection {
     margin: $sectionmargin;
     border-style: solid;
     border-width: 2pt;
     height: 80pt;
 }
 
-.blogpost a button, .projectitem a button {
-    display: table;
+.buttonsection a {
+    display: inline;
     width: fit-content;
     align-items: center;
     justify-content: space-between;
@@ -286,32 +287,30 @@ section p {
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
-}
-
-.projectitem a, .blogpost a {
-    width: fit-content;
     text-decoration: none;
     display: table;
 }
 
-.blogpost a button h2 {
+.buttonsection a h2 {
+    overflow: hidden;
     text-align: left;
     font-size: 14pt;
     margin: 0;
 }
 
-.projectitem a button h3 {
+.buttonsection a h3 {
+    overflow: hidden;
     text-align: left;
     font-size: 14pt;
     margin: 0;
 }
 
-.bloginfo {
+.buttonsectioninfo {
     margin: 4pt;
     font-size: 10pt;
 }
 
-.blogdesc, .projectdesc {
+.buttonsectiondesc {
     display: flex;
     /* max-width: calc(100% - height); */
     margin: 4pt;
@@ -337,6 +336,11 @@ figure {
 }
 
 figure img {
+    width: -webkit-fill-available;
+    max-width: 100%;
+}
+
+figure video {
     width: -webkit-fill-available;
     max-width: 100%;
 }

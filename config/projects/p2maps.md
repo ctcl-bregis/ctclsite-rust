@@ -24,4 +24,4 @@ On December 15, 2023, I made a concept map named ["Companion Shield"](https://st
 On December 23, 2023, I started developing a map completely in Hammer with the working title "The Hall". Unlike my past maps, this map is much more personal. It takes inspiration from a hallway in a school that I have not seen since early 2011 so this part of the map is completely designed from how I remember it. Because of being based off such a faint memory, the map takes on a Liminal Spaces aesthetic. This my first map with custom designed textures, specifically posters.
 
 # Services
-I can create maps for Portal 2 with
+In March 2024, I have decided that I would no longer work on maps for others for the time being because of the other work I do and my still limited knowledge on Valve's Hammer.

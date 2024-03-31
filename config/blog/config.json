@@ -4,6 +4,7 @@
         "title": "Blog Posts",
         "desc": "List of the blog posts on the website"
     },
+    "16": {"content": "config/blog/content/blogpost_16.md", "icon": "/static/blog/16/blog16_icon.webp", "icontitle": "Trust me, I'm an engineer", "theme": "gold", "cat": "Update", "date": "March 31, 2024", "title": "Week 13, 2024", "desc": "The thirteenth week of 2024"},
     "15": {"content": "config/blog/content/blogpost_15.md", "icon": "/static/blog/15/blog15_icon_alt.webp", "icontitle": "Key to the world", "theme": "gold", "cat": "Update", "date": "March 24, 2024", "title": "Week 12, 2024", "desc": "The twelfth week of 2024"},
     "14": {"content": "config/blog/content/blogpost_14.md", "icon": "/static/blog/14/blog14_icon.webp", "icontitle": "What can I do for you, my effeminate fellow", "theme": "gold", "cat": "Update", "date": "March 17, 2024", "title": "Week 11, 2024", "desc": "The eleventh week of 2024"},
     "13": {"content": "config/blog/content/blogpost_13.md", "icon": "/static/blog/13/blog13_icon.webp", "icontitle": "Continuously Variable", "theme": "gold", "cat": "Update", "date": "March 10, 2024", "title": "Week 10, 2024", "desc": "The tenth week of 2024"},

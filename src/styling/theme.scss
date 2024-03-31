@@ -88,7 +88,7 @@ $selectiontypes: "::selection", "::-moz-selection", "::-o-selection", "::-ms-sel
         border-color: $boxbgcolor;
     }
 
-    .theme-#{$themename} a button {
+    .theme-#{$themename} a {
         color: $boxfgcolor;
         background-color: $boxbgcolor;
         border-color: $boxbgcolor;
@@ -118,7 +118,7 @@ $selectiontypes: "::selection", "::-moz-selection", "::-o-selection", "::-ms-sel
         }
     }
 
-    .linkitem-theme-#{$themename} a button {
+    .linkitem-theme-#{$themename} a {
         color: $boxfgcolor;
         background-color: rgba(0, 0, 0, 0);
         border-color: $boxbgcolor;

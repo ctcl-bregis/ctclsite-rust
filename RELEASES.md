@@ -21,6 +21,18 @@ What does not constitue a release:
 # Changelog
 On February 18, 2024, a rewrite continuing to use Actix was started and the first release was on March 3, 2024.
 
+## 1.5.5 - March 31, 2024
+
+Changes:
+- Another fix for section header buttons for iOS Safari
+
+## 1.5.4 - March 29, 2024
+
+Changes:
+- Fix header widths for sections with an icon image
+- General fixes to sections on the Blog and Projects menu pages
+- 404 for nonexistant pages under Projects
+
 ## 1.5.3 - March 27, 2024
 
 Changes:

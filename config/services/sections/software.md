@@ -32,7 +32,7 @@ For frontend, I have experience in the following:
 I have some experience in writing firmware for microcontroller-based devices and building custom embedded Linux images.
 
 - C
-  - Keypad controller for [MediaCow Touch "Nashville"](../projects/mct1/) - ARMv6-M
+  - Keypad controller for [MediaCow Touch "Nashville"](../projects/mct_1/) - ARMv6-M
   - Various projects using Arduino hardware - AVR
 - Rust 
   - Some experimentation with the Adafruit PyPortal - ARMv7E-M

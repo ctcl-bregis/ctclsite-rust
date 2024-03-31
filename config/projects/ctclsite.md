@@ -5,7 +5,7 @@ Internally and for development purposes, I use the name "ctclsite", "ctclsite-py
 # Programming
 The website's backend and frontend code was written by myself and is open source. For licensing of specific content, see [Licensing](../../licensing/).
 
-The source code to the website can be found here: [GitHub](https://github.com/ctcl-bregis/ctclsite-python)
+The source code to the website can be found here: [GitHub](https://github.com/ctcl-bregis/ctclsite-rust)
 
 # History
 The Rust version of the website has the codename "Atlantic Blue Crab", while the Python version has the codename "Apache Trout".

@@ -624,7 +624,7 @@ The caption was chosen arbitrarily in relation to the second and third slides.
 Slide 1, 3, 4: Canon PowerShot SX260 HS - May 6, 2015
 Slide 2: Apple iPhone 5s - May 6, 2015"
 
-The caption references both ULTRAKILL and the song Machine by Static-X.
+The caption references both ULTRAKILL and the 2001 Static-X album, Machine
 
 - Authored: ["Polybutylene Terephthalate"](../pc_pbt/) (ASRock B550M Pro4, AMD x86-64)
 
@@ -793,3 +793,13 @@ The caption was chosen arbitrarily, in relation to the first slide.
 - Authored: ["Polybutylene Terephthalate"](../pc_pbt/) (ASRock B550M Pro4, AMD x86-64)
 
 This is the last post prior to the November 9 Incident.
+
+## Post 83 - March 27, 2024
+"Paint the skies gray
+
+iPhone XR - September 7, 2024
+Rotated and cropped with GIMP for Windows"
+
+The caption was chosen in relation to the gray skies in both photos. The caption is a reference to a line from the In Flames song 'Your Bedtime Story is Scaring Everyone'.
+
+- Authored: ["Polybutylene Terephthalate"](../pc_pbt/) (ASRock B550M Pro4, AMD x86-64)

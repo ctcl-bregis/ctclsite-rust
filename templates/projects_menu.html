@@ -4,10 +4,10 @@
     <section class="sectionitem">
         <h2 class="sectiontitle">{{ menuvalue.title }}</h2>
         <p>{{ menuvalue.desc }}</p>{% for subpagekey, subpagevalue in menuvalue.subpages %}
-        <section class="projectitem theme-{{ subpagevalue.theme }}">{% if subpagevalue.icon %}
+        <section class="buttonsection theme-{{ subpagevalue.theme }}">{% if subpagevalue.icon %}
             <img src="{{ subpagevalue.icon }}" title="{{ subpagevalue.icontitle }}">{% endif %}
-            <a href="{{ subpagekey }}/"><button><h3 class="projecttitle">{{ subpagevalue.title }}</h3></button></a>
-            <p class="projectdesc">{{ subpagevalue.desc }}</p>
+            <a href="{{ subpagekey }}/"><h3 class="buttonsectiontitle">{{ subpagevalue.title }}</h3></a>
+            <p class="buttonsectiondesc">{{ subpagevalue.desc }}</p>
         </section>{% endfor %}
     </section>{% endfor %}
     </a>
