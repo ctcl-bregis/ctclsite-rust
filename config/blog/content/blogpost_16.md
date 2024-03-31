@@ -13,7 +13,7 @@ Releases 1.5.3, 1.5.4 and 1.5.5 were deployed this week. All of these releases c
 ### ContactList
 Within this week, I have made siginficant progress with rewriting ContactList in Rust using the Actix Web framework. 
 
-This is my first time using the Diesel ORM (Object–relational mapping) and the first time successfully using databases with Rust. Just like ContactList written in Python, a build script generates the schema used by the ORM. However, I am still considering switching back to using SQL directly instead of using an ORM since the dynamic generation of the schema may defeat the purpose of using an ORM. I am still new to the software development topic of database management how I go about this may change.
+This is my first time using the Diesel ORM (Object–relational mapping) and the first time successfully using databases with Rust. Just like ContactList written in Python, a build script generates the schema used by the ORM. However, I am still considering switching back to using SQL directly instead of using an ORM since the dynamic generation of the schema may defeat the purpose of using an ORM. I am still new to the software development topic of database management so how I go about this may change.
 
 ### SLAG
 SLAG's development continues to be dormant because of my work on other projects. With the inactivity in the Discord guild for the college club that I manage, the bot is not really needed at the moment.
