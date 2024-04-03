@@ -1,20 +1,32 @@
 # Software
-Names for software generally follow the guideline that they simply describe what the software does. This minimalistic mindset is also used in the development of the software in which the software is designed to do exactly what it is described to do. This, however, leads to names being quite generic and could be difficult to find in online searches. I obviously was not the first to use the name ['ContactList'](https://github.com/search?q=ContactList&type=repositories).
+Names for software generally follow the guideline that they simply describe what the software does. This minimalistic mindset is also used in the development of the software in which the software is designed to do exactly what it is described to do. This, however, leads to names being quite generic and could be difficult to find in online searches; I obviously was not the first to use the name ['ContactList'](https://github.com/search?q=ContactList&type=repositories).
 
-Larger software projects may have more work put into their branding.
+Often, these names are acronyms, for example:
 
-## Acronyms
-A pattern I have noticed in the naming of my software projects is that they are often acronyms.
+* [SLAG](../slag/) for "Security, Logging, Analytics, General (purpose)".
+* CAMS is currently "CAMS Asset Management System", a recursive acronym. It's prior meaning was "Computer Asset Management System" but was changed to reflect the software's ability to be used in other applications such as automotive and medical asset management.
 
-For example, [SLAG](../slag/) for "Security, Logging, Analytics, General (purpose)".
+## Internal Names and Codenames
+Software with the same purpose but written in a different programming language are considered a different project.
 
-Another example being [CAMS](../cams/): CAMS is currently "CAMS Asset Management System", a recursive acronym. It's prior meaning was "Computer Asset Management System" but was changed to reflect the software's ability to be used in other applications such as automotive and medical asset management.
+For example, with SLAG:
+* slag-rust "Black-footed Ferret"
+* slag-python "Channel Catfish"
+
+## Repository Names
+Starting April 1, 2024, all repositories/internal names of projects would have their programming language specified. When a software project is done in another programming language, it is considered another project and is assigned a codename.
+
+On April 1, 2024, these names were changed:
+* cams -> cams-rust, existing "cams-rust" repository was deleted as it was empty
+* contactlist -> contactlist-python
+* slag -> slag-python
+* ToDoKiosk -> todokiosk-python
 
 # Hardware
 Hardware projects may have some creativity in their naming unlike software projects.
 
 ## MediaCow
-MediaCow was a name I came up with in late 2018 for a tablet-like portable media player. The original "MediaCow" was basically an Amazon FireTV Stick, battery pack, 7" HDMI LCD in a custom-made wooden box, the device was tested in March 2019 and was a great achievement at the time.
+MediaCow was a name I came up with in late 2018 for a tablet-like portable media player as the spiritial successor to the "Digital Media Locker" project. The original "MediaCow" was basically an Amazon FireTV Stick, battery pack, 7" HDMI LCD in a custom-made wooden box, the device was tested in March 2019 and was a great achievement at the time.
 
 ### MediaCow Touch
 MediaCow Touch is a device that is basically a tablet running Android. These are the most complex projects in the series while having the most processing power and memory size.

@@ -6,3 +6,4 @@ The project was likely abandoned in December 2022 due to the lack of equipment a
 
 On January 19, 2024, I released whatever work I had done for the project on [GitHub](https://github.com/ctcl-bregis/mathpad/tree/main). The existing components ordered may be reused for other projects.
 
+In March 2024, I had the idea of trying to assemble a prototype as I now have more of the required equipment to place and solder the tiny components.

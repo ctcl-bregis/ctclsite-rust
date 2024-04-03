@@ -87,7 +87,7 @@ These rewrites boil down to this:
         <td>SCSS</td>
         <td>February 18, 2024</td>
         <td>March 3, 2024</td>
-        <td><a href="../pc_pbt/">Polybutylene Terephthalate</a>, <a href="../pc_pmma/">Polymethylmethacrylate</a>, <a href="../pc_thc/">Tetrahydrocannabinol</a></td>
+        <td><a href="../pc_pbt/">Polybutylene Terephthalate</a>, <a href="../pc_pmma/">Polymethylmethacrylate</a>, <a href="../pc_thc/">Tetrahydrocannabinol</a> (content only)</td>
     </tr>
 </table>
 
@@ -103,8 +103,8 @@ ctclsite-python v2 was a rewrite that retained much of the content. Most of the 
 
 Development was during 2022 and was released shortly after within the same year.
 
-## ctclsite-rust v1
-As a way to teach myself the Rust programming language after being aware of its features by colleagues. I rewrote the website in Rust, using the Actix web framework. This version seemed much faster due to the inefficent nature of how RAMList loads content.
+## ctclsite-rust v0
+As a way to teach myself the Rust programming language after being aware of its features by colleagues. I rewrote the website in Rust, using the Actix web framework. This version seemed much faster due to the inefficent nature of how RAMList loaded content. I did not have an in-depth knowledge of Rust, which kept me from being able to maintain the website, leading to another Python rewrite described below.
 
 ## ctclsite-python v3
 ctclsite-python v3 was a much needed rewrite of the website, adding significant performance improvements. This version continued to use Python Flask. I went back to Python due to my inability to maintain the Rust version of the website because of my limited knowledge of the Rust programming language.

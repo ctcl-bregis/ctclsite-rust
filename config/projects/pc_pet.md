@@ -1,4 +1,4 @@
-"Polyethylene Terephthalate" (shorthand "PET") is a desktop system that I put together in late 2021. It served as the "main" desktop for all of 2022. It had a variety of workloads such as running PC games, virtualization, EDA and running the Xactimate estimating software.
+"Polyethylene Terephthalate" (shorthand "PET") is a desktop system that I put together in late 2021. It served as the "main" desktop for all of 2022. It had a variety of workloads such as running PC games, virtualization, EDA and running the Xactimate estimating software. It was the first "themed" build I have completed.
 
 ## Configuration
 
@@ -26,6 +26,6 @@ All computer-bound work I have completed surrounding Fort Myers Beach island was
 
 In January 2023, the successor "Polybutylene Terephthalate" was built, replacing "Polyethylene Terephthalate" as my "main" desktop PC.
 
-On June 1, 2023, the system was permanently decomissioned after discovering that the motherboard damaged eight memory modules for unknown reasons. 
+On June 1, 2023, the system was permanently decomissioned after discovering that the motherboard damaged eight memory modules for unknown reasons. This could likely be result of still bent pins on the CPU socket. In March 2024, there has been plans to check the CPU socket again for bent pins and attempt to repair them.
 
-During 2023, I started the plan for ["Polyethylene Terephthalate v2"](../pc_pet2/), a redo of "Polyethylene Terephthalate". 
+During 2023, I started the plan for ["Polyethylene Terephthalate v2"](../pc_pet2/), a redo of this system.

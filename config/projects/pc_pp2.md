@@ -2,6 +2,8 @@
 
 # Planned Specifications
 
+Plans as of April 3, 2024:
+
 * Motherboard: Supermicro H11SSL-i
 * CPU: AMD EPYC 7371
 * Memory: 64GB (8x8GB) DDR4-2400 Registered ECC Samsung M393A1G40EB1-CRC or equivalent

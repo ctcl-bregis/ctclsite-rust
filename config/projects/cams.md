@@ -1,18 +1,18 @@
-CAMS Asset Management System, or just CAMS, is a fully custom inventory management software made for mainly organizing computer hardware. I have started to learn how to write Python to start working on the project in late 2021. The idea was from created the need of a specialized asset/inventory management system software to organize the vast amount of computers and computer parts that I had.
-
-CAMS is based off the fully custom-made inventory management software, commonly referred to as just "IMS", used by the computer resale company 2nd Life Inc. of Richmond, Virginia where I was employed formerly. Unlike CAMS, 2nd Life IMS was written using Ruby on Rails. The development of CAMS is also inspired by the inventory software [PartKeepr](https://github.com/partkeepr/PartKeepr).
-
-Formerly CAMS meant Computer Asset Management System but now CAMS referrs to CAMS Asset Managment System since the software can be used to manage other types of assets if configured so.
+CAMS, currently known as 'CAMS Asset Management System' is an asset management software that I have planned to develop since 2021. 
 
 # Development
-The original codename for CAMS when Python was going to be used is "Rainbow Trout". The current plan with Rust uses the codename "
+CAMS was the main motivation to start learning programming in Python.
 
-Originally, CAMS was planned to be written in Python using the Django web framework. In March 2024, since no actual development has been done for CAMS yet, I decided to switch to Rust for the project as I have already moved to Rust for [ToDoKiosk](../todokiosk/) and [the website](../ctclsite/).
+## Python
+Since 2021, I have made many attempts to start working on CAMS but I never got far due to my limited knowledge of programming.
 
-# Planning
-CAMS is anticipated to be the largest software project that I would work on by myself. The project suffered from the lack of project management and and the lack of planning.
+As described in the "Rust" section below, plans to write the software in Python was dropped in March 2024 in favor of Rust. On April 1, 2024, the repository for CAMS was renamed to "cams-rust" as there was barely any Python code left.
 
+The codename for the Python version of CAMS was "Rainbow Trout", starting the [Trout theme for Python web software](../codenames/).
 
+## Rust
+In February 2024, I have started to move to Rust for all web software development. There was the idea to write CAMS in Rust in early 2023 but I never worked on it.
 
-# Source Code
-The source code is currently hosted through GitHub at this [repository](https://github.com/ctcl-bregis/cams/).
+With the successes of rewriting [the website](../ctclsite/), [ToDoKiosk](../todokiosk/) and [ContactList](../contactlist/) in Rust using the Actix Web framework, I have decided to write CAMS in Rust once the time comes.
+
+The codename for the Rust version of CAMS is "Red Rock Crab" and was chosen in early 2023. 

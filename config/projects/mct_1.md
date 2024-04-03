@@ -8,6 +8,7 @@ The system being used at the time for planning was "Polyoxybenzylmethylenglycola
 The Banana Pi team was greatly helpful during the planning and assembly stage of the project.
 
 # Hardware
+The device made use of off-the-shelf components and parts from other devices.
 
 ## Case
 The case was built from plywood reused from a 50-60's era phono radio system. The front bezel was reused from a digital photo frame and consisted of (presumably) solid aluminum. The case was put together using hot glue and wood screws.

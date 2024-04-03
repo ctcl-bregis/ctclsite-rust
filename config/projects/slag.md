@@ -13,9 +13,11 @@ For privacy information about instances operated by myself, see the [Privacy Pol
 # Python version
 The Python version came first, with its development starting on January 24, 2024. The codename for the Python version is "Channel Catfish".
 
-Details of the bot including its features and code can be found at the repostitory [here](https://github.com/ctcl-bregis/slag).
+Details of the bot including its features and code can be found at its [repostitory](https://github.com/ctcl-bregis/slag-python).
 
 # Rust version
 I started the Rust version of the software on February 21, 2024 due to general discontent with Python including performance and runtime errors (that would be otherwise caught during compile time). The codename for the Rust version of SLAG is "Black-footed Ferret".
 
 Development at first was too difficult so I ended up rewriting both [the website](../ctclsite/) and [ToDoKiosk](../todokiosk/) in Rust to better familiarize myself with the programming language before taking on SLAG. After the rewrite of both of those web applications, I now understand Rust enough to be able to start working on SLAG.
+
+Details of the Rust version can be found at its [repostitory](https://github.com/ctcl-bregis/slag-rust).

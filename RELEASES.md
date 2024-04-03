@@ -21,6 +21,14 @@ What does not constitue a release:
 # Changelog
 On February 18, 2024, a rewrite continuing to use Actix was started and the first release was on March 3, 2024.
 
+## 1.6.0 - UNRELEASED
+
+Additions:
+- Projects: Add feature to redirect to a page
+
+Changes:
+- General aesthetic changes
+
 ## 1.5.5 - March 31, 2024
 
 Changes:

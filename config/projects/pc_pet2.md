@@ -1,9 +1,9 @@
 "Polyethylene Terephthalate v2" (shorthand "PETv2") is a planned desktop build directly based off ["Polyethylene Terephthalate"](../pc_pet/). It retains the white and purple theme of the previous build.
 
-## Configuration
+# Configuration
 The following is subject to change
 
-Planned configuration:
+Planned configuration as of April 3, 2024:
 
 - Motherboard: Supermicro X9DAi
 - CPUs: 2x Intel Xeon E5-2667 v2

@@ -524,7 +524,7 @@ The caption is based off both the "gm_construct" Garry's Mod map and the term "r
 
 ASUS ZenFone 9 - September 17, 2023 - Rotated and cropped within Instagram app"
 
-The caption is a reference to the Adventure Time episode 'The Vault'. The choice to use the caption is related to how I have not been to the location since June 2018; as it is a return; regression. Fourth day of the challenge.
+The caption is a reference to the Adventure Time episode 'The Vault'. The choice to use the caption is related to how I have not been to the location since June 2018; as it is a return, regression. Fourth day of the challenge.
 
 - Authored: ["Tetrahydrocannabinol"](../pc_thc/) (ASUS ZenFone 9, Qualcomm ARM64)
 

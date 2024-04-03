@@ -7,6 +7,7 @@ The theming and codename is inspired by a certain online friend that I met in la
 As of February 4, 2024, there may be a chance that I would start the development of MediaCow Touch 2 if my current software projects are successful.
 
 # Hardware
+MediaCow Touch 2's hardware plans has changed over time.
 
 ## System on Module
 For MediaCow Touch 2 "Paris", I did not plan to design around the SoC itself and instead I made use of readily available System on Modules (SoM).

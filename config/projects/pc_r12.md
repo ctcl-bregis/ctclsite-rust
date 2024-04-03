@@ -3,8 +3,8 @@
 This system was put into production on May 13, 2023 while the system was officially given a codename on January 6, 2024.
 
 <figure>
-    <img src="/static/projects/r12_todokiosk.webp" alt="&quot;Dichlorodifluoromethane&quot; running ToDoKiosk 0.3.2 - January 6, 2024 taken on ASUS ZenFone 9, edited in GIMP">
-    <figcaption>"Dichlorodifluoromethane" running ToDoKiosk 0.3.2 - January 6, 2024 taken on ASUS ZenFone 9, edited in GIMP</figcaption>
+    <img src="/static/projects/r12_todokiosk.webp">
+    <figcaption>"Dichlorodifluoromethane" running ToDoKiosk 0.3.2 - January 6, 2024 taken on ASUS Zenfone 9, edited in GIMP</figcaption>
 </figure>
 
 ## Configuration

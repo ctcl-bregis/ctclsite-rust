@@ -6,7 +6,6 @@ The current codename system is used more or less as an inventory system until pr
 Throughout lists below, any codename that has a link and/or is in **bold** is currently in use.
 
 # Rules for codenames 
-
 - As of February 22, 2022, codenames shall no longer be *directly* related to real persons. Though the codename "Paris" will continue to be used by MediaCow Touch 2.
 - Codenames should not be longer than 30 characters but with some exceptions when seen fit such as "polyoxybenzylmethylenglycolanhydride"
 
@@ -131,10 +130,10 @@ Though unrelated to the description in the "Polyvinyls" section above, codenames
 - [Vinyl Chloride](../srv_vc/) - VC
 
 ## Psychoactives 
-Codenames of psychoactive substances are used for server hardware.
+Codenames of psychoactive substances are used for server systems.
 
 ### Stimulants 
-Stimulant drug-related codenames are generally for use with virtualization and compute servers.
+Stimulant drug-related codenames are generally for use with virtualization and compute servers. This is mainly inspired by the use of stimulants for the treatment of ADHD (Attention Deficit Hyperactivity Disorder) while this is reflected by the use of the names of stimulants specifically used for the purpose of treating the disorder.
 
 #### Amphetamines 
 HP ProLiant blade servers that were given to me on May 5, 2023 use the names of amphetamine-based stimulant chemical compounds.
@@ -154,8 +153,10 @@ Stimulant codenames and related prodrugs in the methylphenidate family are reser
 - Levomethylphenidate - LMP
 - **Serdexmethylphenidate** - SDX
 
-#### Xanthine exception
- Codenames that are of stimulants under the xanthine/methylxanthine family are not used for servers and are instead used with certain mobile devices. This is inconsistent as stimulant names are used for servers but the use of xanthine names started with a former Samsung Galaxy S7 (SM-G930F) that I used from September 2022 to April 2023 codenamed "Trimethylxanthine". 
+#### Xanthines
+Codenames that are of stimulants under the xanthine/methylxanthine family are not used for servers and are instead used with certain mobile devices. This is inconsistent as stimulant names are used for servers but the use of xanthine names started with a former Samsung Galaxy S7 (SM-G930F) that I used from September 2022 to April 2023 codenamed "Trimethylxanthine". 
+
+Soon, these codenames may be retired and devices with these codenames may be renamed due to the fact that stimulant codenames are for use with virtualization servers.
 
 - Tetramethylxanthine - QMX, Methylcaffeine
 - **Trimethylxanthine** - TMX, Caffeine
@@ -184,7 +185,7 @@ Sedative drug-related compounds are generally for use with non-embedded storage 
 - Diphenhydramine - DPH
 
 ## Thiols 
-Thiol-related codenames are reserved for AMD Ryzen systems without motherboard ECC memory support. AMD Ryzen systems with ECC memory support may get a plastics-related codename instead. This includes devices with customized AMD processors using the Zen series CPU architecture such as the Valve Steam Deck's APU. Unlike the HCFC/CFC theme for Intel-based devices, codenames for these devices are chosen regardless to their form factor.
+Thiol-related codenames are reserved for AMD Ryzen systems without motherboard ECC memory support. AMD Ryzen systems with ECC memory support may get a plastics-related codename instead. This includes devices with customized AMD processors using the Zen series CPU architecture such as the Valve Steam Deck's APU and the APUs used in the Xbox Series X/S and PlayStation 5. Unlike the HCFC/CFC theme for Intel-based devices, codenames for these devices are chosen regardless to their form factor.
 
 - **Butanethiol** - BTH
 - Decanethiol - DTH
@@ -199,7 +200,7 @@ Thiol-related codenames are reserved for AMD Ryzen systems without motherboard E
 - Pentadecanethiol - PDTH
 - Pentanethiol - PETH
 - Propanethiol - PTH
-- **tert-Butylthiol** - TBM, TBTH
+- [tert-Butylthiol](../pc_tbm/) - TBM, TBTH
 - tert-Dodecanethiol - TDDTH
 - tert-Nonanethiol - TNTH
 - Tetradecanethiol - TDTH
@@ -261,9 +262,15 @@ Standalone software projects use the names of animals. Embedded software written
 ## Rust
 
 ### Web Software
-Codenames using the names of **crabs** are used for web software projects that utilize the Rust programming language. The inspiration of using crustaceans for Rust-based projects is from the term "Rustacean" and the unofficial mascot of Rust named Ferris.
+Codenames using the names of crustaceans under the infraorder **Brachyura**, commonly known as **crabs**, are used for web software projects that utilize the Rust programming language. The inspiration of using crustaceans for Rust-based projects is from the term "Rustacean" and the unofficial mascot of Rust named Ferris. 
 
 - [Atlantic Blue Crab - ctclsite-rust](../ctclsite/)
+- [Red Rock Crab - cams-rust](../cams/)
+
+### Chat Bots
+On February 23, 2024, I have decided to have software projects of chat bots, currently for Discord, be codenamed after the common names of animals under the **Mustela** genus, also known as weasels, polecats, ferrets and stoats. Specifically, the names of **ferrets** are used. This was inspired by Aurorans Solis, who I met on Discord in February 2024 and was the main inspiration for me to start using Rust again.
+
+- [Black-footed Ferret - slag-rust](../slag/)
 
 ## Python
 Starting January 30, 2024, codenames of fish would be used for any Python-based project as started with the trout theme for web applications.
