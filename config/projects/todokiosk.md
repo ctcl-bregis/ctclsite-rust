@@ -13,8 +13,6 @@ Like all of my other software projects, the project is open source and the sourc
 On October 31, 2023, within a few hours, the initial version of ToDoKiosk was developed and released. 
 
 ## Rust Version
-On December 23, 2023, I had the idea of recreating ToDoKiosk in Rust to reintroduce myself to the Rust programming language. The source code is also on GitHub at [this repository](https://github.com/ctcl-bregis/todokiosk-rust).
-
-On January 2, 2024, this rewrite was officially put on hold indefinitely as I decided there is no apparent need for me to switch the project over to Rust, a much more unfamiliar environment. On March 10, plans to attempt to rewrite ToDoKiosk in Rust appeared.
+On December 23, 2023, I had the idea of recreating ToDoKiosk in Rust to reintroduce myself to the Rust programming language though I did not get too far with the project until later on in February 2024 where I learned much more about Rust.
 
 On March 10 to March 11, 2024, the Rust rewrite was done using the Actix web framework and the Python version is no longer used.

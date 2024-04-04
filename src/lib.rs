@@ -2,13 +2,13 @@
 // File: src/lib.rs
 // Purpose: Module import and commonly used functions
 // Created: November 28, 2022
-// Modified: March 23, 2024
+// Modified: April 4, 2024
 
 pub mod routes;
 
 use indexmap::IndexMap;
 use std::collections::HashMap;
-use std::fs::File;
+use std::fs::{File, OpenOptions};
 use std::io::{Read, Error};
 use std::result::Result;
 use comrak::{markdown_to_html, Options};
@@ -28,7 +28,7 @@ pub struct Theme {
 }
 
 #[derive(Deserialize, Serialize, Clone)]
-pub struct Section {
+pub struct AboutSection {
     title: String,
     id: Option<String>,
     content: String,
@@ -37,60 +37,124 @@ pub struct Section {
 }
 
 #[derive(Deserialize, Serialize, Clone)]
+pub struct ServicesSection {
+    title: String,
+    id: Option<String>,
+    content: String
+}
+
+
+#[derive(Deserialize, Serialize, Clone)]
 pub struct Linklistlink {
     title: String,
     link: String,
     theme: String
 }
 
+//#[derive(Deserialize, Serialize, Clone)]
+//pub struct SubPageCfg {
+//    theme: String,
+//    title: String,
+//    desc: String,
+//    content: Option<String>,
+//    favicon: Option<String>,
+//    sections: Option<Vec<Section>>,
+//    background: Option<String>,
+//    menu: Option<Vec<Linklistlink>>,
+//    icon: Option<String>,
+//    icontitle: Option<String>,
+//    cat: Option<String>,
+//    date: Option<String>,
+//    js: Option<bool>,
+//    navbar: Option<bool>
+//}
+
+// Generic content page
 #[derive(Deserialize, Serialize, Clone)]
-pub struct SubPageCfg {
+pub struct BasePageKind {
     theme: String,
     title: String,
     desc: String,
-    content: Option<String>,
-    favicon: Option<String>,
-    sections: Option<Vec<Section>>,
-    background: Option<String>,
-    menu: Option<Vec<Linklistlink>>,
-    icon: Option<String>,
-    icontitle: Option<String>,
-    cat: Option<String>,
-    date: Option<String>,
-    js: Option<bool>,
-    navbar: Option<bool>
+    content: String,
 }
 
 #[derive(Deserialize, Serialize, Clone)]
-pub struct PageCfg {
-    pages: IndexMap<String, SubPageCfg>
+struct BlogSubPageKind {
+    theme: String,
+    title: String,
+    desc: String,
+    date: String,
+    cat: String,
+}
+
+#[derive(Deserialize, Serialize, Clone)]
+struct AboutPageKind {
+    theme: String,
+    title: String,
+    desc: String,
+    sections: Vec<AboutSection>
+}
+
+#[derive(Deserialize, Serialize, Clone)]
+struct ServicesPageKind {
+    theme: String,
+    title: String,
+    desc: String,
+    sections: Vec<ServicesSection>
+}
+
+#[derive(Deserialize, Serialize, Clone)]
+struct ProjectsSubPageKind {
+    theme: String,
+    title: String,
+    desc: String,
+    icon: Option<String>,
+    icontitle: Option<String>
+}
+
+#[derive(Deserialize, Serialize, Clone)]
+struct LinklistPageKind {
+
+}
+
+#[derive(Deserialize, Serialize, Clone)]
+enum PageKind {
+    // A "SubPage" is a page under a category page such as "Projects" or "Blog"
+    BasePage(BasePageKind),
+    BlogSubPage(BlogSubPageKind),
+    AboutPage(AboutPageKind),
+    ServicesSubPage(ServicesPageKind),
+    ProjectsSubPage(ProjectsSubPageKind),
+    LinklistPage(LinklistPageKind)
 }
 
 #[derive(Deserialize, Serialize, Clone)]
 pub struct ProjectCatCfg {
     title: String,
     desc: String,
-    subpages: IndexMap<String, SubPageCfg>
+    subpages: IndexMap<String, PageKind>
 }
 
 #[derive(Deserialize, Serialize, Clone)]
 pub struct ProjectsPageCfg {
-    root: SubPageCfg,
+    root: PageKind,
     cats: IndexMap<String, ProjectCatCfg>
 }
 
-// Add function to convert ProjectsPagesCfg to a PageCfg with all of the pages under projects
+// Get all pages under every category
 impl ProjectsPageCfg {
-    fn topagecfg(self) -> PageCfg {
-        let mut pages: IndexMap<String, SubPageCfg> = IndexMap::new();
+    fn topagecfg(self) -> IndexMap<String, PageKind> {
+        let mut pages: IndexMap<String, PageKind> = IndexMap::new();
+        // root does not have categories
         pages.insert("root".to_string(), self.root);
+    
         for cat in self.cats.values() {
             for subpage in cat.subpages.iter() {
                 pages.insert(subpage.0.clone(), subpage.1.clone());
             }
         }
-        let res: PageCfg = PageCfg { pages };
-        res
+        
+        pages
     }
 }
 
@@ -134,10 +198,13 @@ pub fn read_file(path: String) -> Result<String, Error> {
     Ok(buff)
 }
 
-pub fn mdpath2html(path: String) -> Result<String, Error> {
+pub fn mdpath2html(path: &str, headerids: bool) -> Result<String, Error> {
     let mut comrak_options = Options::default();
     comrak_options.render.unsafe_ = true;
-    let content = markdown_to_html(&read_file(path).expect("File read error"), &comrak_options);
+    if headerids {
+        comrak_options.extension.header_ids = Some("".to_string());
+    }
+    let content = markdown_to_html(&read_file(path.to_owned()).expect("File read error"), &comrak_options);
 
     Ok(content)
 }
@@ -207,7 +274,7 @@ pub fn mkcontext(sitecfg: SiteCfg, metapage: &str, subpage: &str) -> Result<tera
 
     if !&subpagecfg.content.is_none() {
         let mdpath = subpagecfg.content.as_ref().unwrap();
-        let rendered = markdown_to_html(&read_file(mdpath.to_owned()).unwrap(), &comrak_options);
+        let rendered = mdpath2html(mdpath, true).unwrap();
 
         ctx.insert("rendered", &rendered);
     }
@@ -226,7 +293,7 @@ pub fn mkcontext(sitecfg: SiteCfg, metapage: &str, subpage: &str) -> Result<tera
         for section in sections {
 
             let mdpath = section.content.clone();
-            let rendered = mdpath2html(mdpath.to_owned()).unwrap();
+            let rendered = mdpath2html(&mdpath, false).unwrap();
 
             let newsection: Section = Section { title: section.title.clone(), id: section.id.clone(), content: rendered, bgvid: section.bgvid.clone(), bgimg: section.bgimg.clone() };
             newsections.push(newsection);
@@ -244,7 +311,7 @@ pub fn mkcontext(sitecfg: SiteCfg, metapage: &str, subpage: &str) -> Result<tera
             ctx.insert("posts", &posts)
         } else {
             let mdpath = subpagecfg.content.as_ref().unwrap();
-            let rendered = mdpath2html(mdpath.to_owned()).unwrap();
+            let rendered = mdpath2html(mdpath, true).unwrap();
             ctx.insert("rendered", &rendered);
         }
 

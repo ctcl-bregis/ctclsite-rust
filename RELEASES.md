@@ -22,12 +22,18 @@ What does not constitue a release:
 On February 18, 2024, a rewrite continuing to use Actix was started and the first release was on March 3, 2024.
 
 ## 1.6.0 - UNRELEASED
+As this release is currently a Work In Progress, the following may change
 
 Additions:
-- Projects: Add feature to redirect to a page
+- Feature to list redirects to a page in its configuration file
+- Header IDs for markdown generated content
+- Filtering by categories for the Blog menu
+- Server-side logging
 
 Changes:
 - General aesthetic changes
+- Code optimizations
+- JavaScript is now enabled on every page
 
 ## 1.5.5 - March 31, 2024
 
