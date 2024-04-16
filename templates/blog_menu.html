@@ -4,7 +4,7 @@
     <section class="buttonsection theme-{{ value.theme }}">{% if value.icon == "" %}{% else %}
         <img src="{{ value.icon }}" title="{{ value.icontitle }}">{% endif %}
         <section class="buttontextsection">
-            <a href="{{ key }}/"><h2>{{ value.title }}</h2></a>
+            <a href="{{ key }}/" class="buttonsectiontitle"><h2>{{ value.title }}</h2></a>
             <p class="buttonsectioninfo">Date: {{ value.date }} - Category: {{ value.cat }}</p>
             <p class="buttonsectiondesc">{{ value.desc }}</p>
         </section>

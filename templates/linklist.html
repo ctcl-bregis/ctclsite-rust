@@ -1,6 +1,6 @@
 {% include "header.html" %}
         <section class="linklist" style="background-image: url({{ background }})">
-            <h1>BCC Computer Club</h1>
+            <h1>{{ title }}</h1>
             {% for subpage in menu %}
             <section class="linkitem linkitem-theme-{{ subpage.theme }}">
                 <a href="{{ subpage.link }}/"><button>{{ subpage.title }}</button></a>

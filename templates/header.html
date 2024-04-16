@@ -7,7 +7,6 @@
         <title>{{ title }}</title>
         <meta property="og:title" content="{{ title }}">
         <meta property="og:type" content="website">
-        <meta property="og:url" content="{{ url|safe }}">
         <meta property="og:image" content="{{ favicon|safe }}">{% if desc and desc != "" %}
         <meta property="og:description" content="{{ desc }} - CTCL">
         <meta name="description" content="{{ desc }} - CTCL">{% endif %}
@@ -17,13 +16,12 @@
         <meta name="generator" content="CTCL Website Backend">
         <meta name="author" content="CTCL">
         <link rel="icon" type="image/x-icon" href="{{ favicon|safe }}">
-        <link rel="stylesheet" href="/static/{{ themename }}.css">{% if js %}
+        <link rel="stylesheet" href="/static/{{ themename }}.css">
         <script>
-            // Message for anyone looking at the JS logs
             console.log("Hello there!\n Want to learn more about how this website was made? Check out https://ctcl-tech.com/projects/ctclsite/");
         </script>
         <script type="module" src="/static/common.js"></script>
-        <script type="module" src="/static/clientinfo.js"></script>{% endif %}
+        <script type="module" src="/static/clientinfo.js"></script>
     </head>
-    <body>{% if navbar %}
-{% include "navbar.html" %}{% endif %}
+    <body>
+{% include "navbar.html" %}

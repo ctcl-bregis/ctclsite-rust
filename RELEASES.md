@@ -1,39 +1,31 @@
-# What constitutes a release
-Genearlly, releases are made when code or functionality of the website is changed.
-
-What constitues an release:
-- Changes to...
-  - frontend code; JavaScript files
-  - HTML templates
-  - styling; SCSS files
-  - shell scripts
-  - source code such as Rust (.rs), Python (.py) files
-- Updates of dependencies
-
-What does not constitue a release:
-- Blog posts
-- Editing content such as text and images from markdown files
-- Modification to JSON configuration files
-- Changes unrelated to the project such as website domain changes or configuration of proxy web servers
-- Privacy policy changes
-- Edits to this file or README.md
-
 # Changelog
 On February 18, 2024, a rewrite continuing to use Actix was started and the first release was on March 3, 2024.
 
-## 1.6.0 - UNRELEASED
-As this release is currently a Work In Progress, the following may change
+Starting April 15, 2024, this project will no longer use versions and instead would be continously updated.
+
+## To-Do
 
 Additions:
-- Feature to list redirects to a page in its configuration file
-- Header IDs for markdown generated content
-- Filtering by categories for the Blog menu
-- Server-side logging
+- "altcolor" field for themes
+- "?video=false" parameter to disable the loading of background videos for the about page
 
 Changes:
 - General aesthetic changes
+
+## April 1, 2024 - April 15, 2024
+
+Changes:
+- Enabled markdown table extension
+- Header IDs for markdown generated content for certain pages
+- HTML template consolidation
+- SCSS fixes
+- "client_latest.csv" renamed to "latest.csv" as the log contains both client and server data
+- Removed options in configuration files to selectively disable JavaScript and/or navbar for a page
+- JavaScript is now enabled on every page as result of above
 - Code optimizations
-- JavaScript is now enabled on every page
+- "mkcontext" function removed from lib.rs and is replaced by a function in every module
+
+# Old Changelog
 
 ## 1.5.5 - March 31, 2024
 

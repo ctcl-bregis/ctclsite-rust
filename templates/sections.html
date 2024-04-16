@@ -1,0 +1,24 @@
+{% include "header.html" %}
+    {% if video %}
+    <script src="/static/vids.js"></script>
+    <button class="playpausebtn-play" onclick = "playpauseVideos();"></button>
+    {% endif %}
+    {% for sectionkey, sectionvalue in sections %}
+    {% if sectionvalue.fitscreen %}
+    {# Use CSS value #}
+    <div id="{{ sectionkey }}" class="banner theme-{{ sectionvalue.theme }}">
+    {% else %}
+    <div id="{{ sectionkey }}" class="banner theme-{{ sectionvalue.theme }}" style="min-height: 0">
+    {% endif %}
+        {% if sectionvalue.bgvid %}
+        <video class="bgvid" preload="auto" poster="{{ sectionvalue.bgimg }}" autoplay loop muted playsinline>
+            <source src="{{ sectionvalue.bgvid|safe }}" type="video/webm">
+        </video>
+        {% endif %}
+        <section class="sectioncontent theme-{{ sectionvalue.theme }}">
+        <h2 class="sectiontitle {% if sectionpixfont %}pix{% endif %}">{{ sectionvalue.title }}</h2>
+        {{ sectionvalue.content|safe }}
+        </section>
+    </div>{% endfor %}
+    <hr>
+{% include "footer.html" %}

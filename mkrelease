@@ -3,7 +3,17 @@
 # File: mkrelease
 # Purpose: Builds and gathers files
 # Created: March 4, 2024
-# Modified: March 23, 2024
+# Modified: April 15, 2024
+
+function showerror {
+    echo "mkrelease: \"$1\" failed"
+    # Don't continue if something fails so the app does not try to run with missing files
+    exit
+}
+
+git add -A || showerror "git add -A"
+git commit || showerror "git commit"
+git push || showerror "git push"
 
 if [ ! -f Cargo.toml ]; then
     echo "Cargo.toml not found in the current directory. Make sure this script is being run within the ctclsite-rust directory."

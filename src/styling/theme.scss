@@ -17,12 +17,12 @@ hr {
     $btn-height: 16pt;
 
     text-decoration: none;
-    color: $fgcolor;
+    color: $bgcolor;
     background-color: $theme;
 
     &:hover {
         transition: 0.1s linear;
-        background-color: $fgcolor;
+        background-color: $bgcolor;
         color: $theme;
     }
 }
@@ -60,21 +60,73 @@ $selectiontypes: "::selection", "::-moz-selection", "::-o-selection", "::-ms-sel
 @each $selectiontype in $selectiontypes {
     /* Default selection colors */
     #{$selectiontype} {
-        color: $fgcolor;
+        color: $bgcolor;
         background-color: $theme;
     }
     .sectiontitle#{$selectiontype} {
         color: $theme;
-        background-color: $fgcolor;
+        background-color: $bgcolor;
     }
 }
 
+/* Sections */
 @each $themename, $colors in $themes {
-    $boxfgcolor: map-get($colors, "fgcolor");
-    $boxbgcolor: map-get($colors, "color");
+    $boxbgcolor: map-get($colors, "bgcolor");
+    $boxfgcolor: map-get($colors, "color");
 
     .theme-#{$themename} {
-        border-color: $boxbgcolor;
+        border-color: $boxfgcolor;
+
+        @each $selectiontype in $selectiontypes {
+            #{$selectiontype} {
+                color: $boxbgcolor;
+                background-color: $boxfgcolor;
+            }
+        }
+    }
+
+    .theme-#{$themename} .buttonsectiontitle {
+        color: $boxbgcolor;
+        background-color: $boxfgcolor;
+        border-color: $boxfgcolor;
+
+        @each $selectiontype in $selectiontypes {
+            #{$selectiontype} {
+                color: $boxfgcolor;
+                background-color: $boxbgcolor;
+            }
+        }
+
+        &:hover {
+            transition: 0.1s linear;
+            background-color: $boxbgcolor;
+            color: $boxfgcolor;
+        }
+    }
+
+    .theme-#{$themename}.buttonsection .buttontextsection .buttonsectiontitle  {
+        color: $boxbgcolor;
+        background-color: $boxfgcolor;
+        border-color: $boxfgcolor;
+
+        @each $selectiontype in $selectiontypes {
+            #{$selectiontype} {
+                color: $boxfgcolor;
+                background-color: $boxbgcolor;
+            }
+        }
+
+        &:hover {
+            transition: 0.1s linear;
+            background-color: $boxbgcolor;
+            color: $boxfgcolor;
+        }
+    }
+
+    .theme-#{$themename} .sectiontitle {
+        color: $boxbgcolor;
+        background-color: $boxfgcolor;
+        border-color: $boxfgcolor;
 
         @each $selectiontype in $selectiontypes {
             #{$selectiontype} {
@@ -85,48 +137,37 @@ $selectiontypes: "::selection", "::-moz-selection", "::-o-selection", "::-ms-sel
     }
 
     .theme-#{$themename} img {
-        border-color: $boxbgcolor;
+        border-color: $boxfgcolor;
     }
 
-    .theme-#{$themename} a {
+    .theme-#{$themename}.buttonsection img {
+        border-color: $boxfgcolor;
+    }
+
+    .theme-#{$themename} a, .theme-#{$themename} li::marker {
         color: $boxfgcolor;
-        background-color: $boxbgcolor;
-        border-color: $boxbgcolor;
-
-        @each $selectiontype in $selectiontypes {
-            #{$selectiontype} {
-                color: $boxbgcolor;
-                background-color: $boxfgcolor;
-            }
-        }
-
-        &:hover {
-            transition: 0.1s linear;
-            background-color: $boxfgcolor;
-            color: $boxbgcolor;
-        }
     }
 
     .linkitem-theme-#{$themename} {
-        border-color: $boxbgcolor;
+        border-color: $boxfgcolor;
 
         @each $selectiontype in $selectiontypes {
             #{$selectiontype} {
-                color: $boxbgcolor;
-                background-color: $boxfgcolor;
+                color: $boxfgcolor;
+                background-color: $boxbgcolor;
             }
         }
     }
 
     .linkitem-theme-#{$themename} a {
-        color: $boxfgcolor;
+        color: $boxbgcolor;
         background-color: rgba(0, 0, 0, 0);
-        border-color: $boxbgcolor;
+        border-color: $boxfgcolor;
 
         &:hover {
             transition: 0.1s linear;
-            background-color: $boxbgcolor;
-            color: $boxfgcolor;
+            background-color: $boxfgcolor;
+            color: $boxbgcolor;
         }
     }
 }
@@ -144,15 +185,16 @@ $selectiontypes: "::selection", "::-moz-selection", "::-o-selection", "::-ms-sel
     font-size: 12pt;
 
     background-color: $theme;
-    color: $fgcolor;
+    color: $bgcolor;
 
     &:hover {
         transition: 0.1s linear;
-        background-color: $fgcolor;
+        background-color: $bgcolor;
         color: $theme;
     }
 }
 
+/* The scrollbar */
 @supports selector(::-webkit-scrollbar) {
     ::-webkit-scrollbar {
         width: 16px;

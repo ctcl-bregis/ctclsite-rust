@@ -1,27 +1,30 @@
-{"pages": {
+{
     "root": {
+        "type": "sections",
         "theme": "gold",
         "title": "Welcome",
         "desc": "About the website and myself",
-        "sections": [
-            {"title": "About Me", "id": "about", "content": "config/about/sections/whoami.md", "bgvid": "/static/bgimg/whoami.webm", "bgimg": "/static/bgimg/whoami.webp"},
-            {"title": "Work Experience", "id": "workexp", "content": "config/about/sections/workexp.md", "bgvid": "/static/bgimg/workexp.webm", "bgimg": "/static/bgimg/workexp.webp"},
-            {"title": "Education", "id": "education", "content": "config/about/sections/education.md", "bgvid": "/static/bgimg/education.webm", "bgimg": "/static/bgimg/education.webp"},
-            {"title": "Website Info", "id": "websiteinfo", "content": "config/about/sections/techinfo.md", "bgvid": "/static/bgimg/techinfo.webm", "bgimg": "/static/bgimg/techinfo.webp"},
-            {"title": "Contact", "id": "contact", "content": "config/about/sections/contact.md", "bgvid": "/static/bgimg/contact.webm", "bgimg": "/static/bgimg/contact.webp"}
-        ]
+        "sectionpixfont": true,
+        "sections": {
+            "about": {"title": "About Me", "theme": "gold", "content": "config/about/sections/whoami.md", "bgvid": "/static/bgimg/whoami.webm", "bgimg": "/static/bgimg/whoami.webp"},
+            "workexp": {"title": "Work Experience", "theme": "gold", "content": "config/about/sections/workexp.md", "bgvid": "/static/bgimg/workexp.webm", "bgimg": "/static/bgimg/workexp.webp"},
+            "education": {"title": "Education", "theme": "gold", "content": "config/about/sections/education.md", "bgvid": "/static/bgimg/education.webm", "bgimg": "/static/bgimg/education.webp"},
+            "websiteinfo": {"title": "Website Info", "theme": "gold", "content": "config/about/sections/techinfo.md", "bgvid": "/static/bgimg/techinfo.webm", "bgimg": "/static/bgimg/techinfo.webp"},
+            "contact": {"title": "Contact", "theme": "gold", "content": "config/about/sections/contact.md", "bgvid": "/static/bgimg/contact.webm", "bgimg": "/static/bgimg/contact.webp"}
+        }
     },
     "privacy": {
+        "type": "content",
         "theme": "gold",
         "title": "Privacy Policy",
         "desc": "Privacy policy of the website",
-        "content": "config/about/privacy.md",
-        "js": false
+        "content": "config/about/privacy.md"
     },
     "licensing": {
+        "type": "content",
         "theme": "gold",
         "title": "Licensing",
         "desc": "Licensing information for CTCL content on and off of the website",
         "content": "config/about/licensing.md"
     }
-}}
+}

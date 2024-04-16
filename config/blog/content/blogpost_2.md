@@ -40,6 +40,6 @@ With a decrease of activity at Atlantic Estimating, I was not needed for most of
 In June and September 2023, I revisited the Fort Myers Beach, Florida area after my long business trip in the beginning of November 2022 relating to the aftermath of Hurricane Ian. These subsequent visits to the area were important to me as the original November 2022 business trip was a major turning point in my life.
 
 <figure>
-    <img src="/static/blog/2/fmb_1.webp" alt="Overlooking the beach and other building in Fort Myers Beach. June 16, 2023, ASUS ZenFone 9, edited in GIMP">
-    <figcaption>Overlooking the beach and other building in Fort Myers Beach. June 16, 2023, ASUS ZenFone 9, edited in GIMP</figcaption>
+    <img src="/static/blog/2/fmb_1.webp" alt="Overlooking the beach and other building in Fort Myers Beach. June 16, 2023, ASUS Zenfone 9, edited in GIMP">
+    <figcaption>Overlooking the beach and other building in Fort Myers Beach. June 16, 2023, ASUS Zenfone 9, edited in GIMP</figcaption>
 </figure>

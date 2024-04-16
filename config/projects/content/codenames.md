@@ -125,15 +125,15 @@ Codenames of polymers made of monomers with a vinyl group are for future use wit
 - Polyvinyl Chloride - PVC
   
 ### Vinyl Monomers 
-Though unrelated to the description in the "Polyvinyls" section above, codenames of monomers with a vinyl group are used for systems using VIA x86/x86-64 processors with or without ECC memory support.
+Though unrelated to the hardware in the "Polyvinyls" section above, codenames of monomers with a vinyl group are used for systems using VIA x86/x86-64 processors with or without ECC memory support regardless of application.
 
 - [Vinyl Chloride](../srv_vc/) - VC
 
 ## Psychoactives 
-Codenames of psychoactive substances are used for server systems.
+Codenames of psychoactive substances are generally used for server systems.
 
 ### Stimulants 
-Stimulant drug-related codenames are generally for use with virtualization and compute servers. This is mainly inspired by the use of stimulants for the treatment of ADHD (Attention Deficit Hyperactivity Disorder) while this is reflected by the use of the names of stimulants specifically used for the purpose of treating the disorder.
+Stimulant drug-related codenames are generally for use with virtualization and compute servers. This is mainly inspired by the use of stimulants for the treatment of ADHD (Attention Deficit Hyperactivity Disorder) and this is reflected by the use of names of stimulants specifically used for ADHD treatment. 
 
 #### Amphetamines 
 HP ProLiant blade servers that were given to me on May 5, 2023 use the names of amphetamine-based stimulant chemical compounds.
@@ -143,6 +143,7 @@ Starting September 5, 2023, amphetamine-based stimulant and related prodrug chem
 - [Dextroamphetamine](../srv_amp/) - "DXA"
 - [Levoamphetamine](../srv_amp/) - "LVA"
 - [Lisdexamfetamine](../srv_amp/) - "LDX"
+- 4-Hydroxyamphetamine - "HXA"
 - Levomethamphetamine - "LVMA"
 - Dextromethamphetamine - "DXMA"
 
@@ -153,29 +154,21 @@ Stimulant codenames and related prodrugs in the methylphenidate family are reser
 - Levomethylphenidate - LMP
 - **Serdexmethylphenidate** - SDX
 
-#### Xanthines
-Codenames that are of stimulants under the xanthine/methylxanthine family are not used for servers and are instead used with certain mobile devices. This is inconsistent as stimulant names are used for servers but the use of xanthine names started with a former Samsung Galaxy S7 (SM-G930F) that I used from September 2022 to April 2023 codenamed "Trimethylxanthine". 
-
-Soon, these codenames may be retired and devices with these codenames may be renamed due to the fact that stimulant codenames are for use with virtualization servers.
-
-- Tetramethylxanthine - QMX, Methylcaffeine
-- **Trimethylxanthine** - TMX, Caffeine
-- 1,3,9-Trimethylxanthine - Isocaffeine
-- 1,3-Dimethylxanthine - Theophylline
-- 1,7-Dimethylxanthine - Paraxanthine
-- 7-Methylxanthine - Heteroxanthine
-- **3,7-Dimethylxanthine** - DMX, Theobromine
-- Monomethylxanthine - MMX
-
-### Cannabinoids
-Just like methylxanthines listed above, cannabinoids are also used for critical mobile devices. However, cannabinoid codenames are used for smartphones used for general communications.
-
-- [Tetrahydrocannabinol](../pc_thc/) - THC
-
 ### Hallucinogen 
 Hallucinogenic drug-related compounds are generally for use with non-embedded network router/gateway devices.
 
+#### Dissociatives
+Hallucinogenic chemical compounds that have a dissociative effect are for use with routers using Intel x86-64 processors.
+
 - [Dextromethorphan](../srv_dxm/) - DXM
+
+#### Psychedelics
+Hallucinogenic chemical compounds that have an psychedelic effect are for use with routers using AMD x86-64 processors.
+
+
+#### Deliriants
+Hallucinogenic chemical compounds that have a deliriant effect are for use with routers using any ARM-based SoC.
+
 
 ### Sedatives 
 Sedative drug-related compounds are generally for use with non-embedded storage servers.
@@ -184,8 +177,18 @@ Sedative drug-related compounds are generally for use with non-embedded storage 
 - [Promethazine](../srv_pm/) - PM or PRM
 - Diphenhydramine - DPH
 
+### Cannabinoids
+Cannabinoids, due to their unique effect, are used for critical mobile devices instead of servers. 
+
+- [Tetrahydrocannabinol](../pc_thc/) - THC
+- Hexahydrocannabinol - HHC
+- Tetrahydrocannabiphorol - THPC
+- Hexahydrocannabiphorol - HHPC
+- 
 ## Thiols 
-Thiol-related codenames are reserved for AMD Ryzen systems without motherboard ECC memory support. AMD Ryzen systems with ECC memory support may get a plastics-related codename instead. This includes devices with customized AMD processors using the Zen series CPU architecture such as the Valve Steam Deck's APU and the APUs used in the Xbox Series X/S and PlayStation 5. Unlike the HCFC/CFC theme for Intel-based devices, codenames for these devices are chosen regardless to their form factor.
+Thiol-related codenames are reserved for AMD Ryzen systems without motherboard ECC memory support. AMD Ryzen systems with ECC memory support may get a plastics-related codename instead. This includes devices with customized AMD processors using the Zen series CPU architecture such as the Valve Steam Deck's APU and the APUs used in the Xbox Series X/S and PlayStation 5. Notably, names of chemical compounds that are used in the odorization of gases are used first.
+
+ Unlike the HCFC/CFC theme for Intel-based devices, codenames for these devices are chosen regardless to their form factor.
 
 - **Butanethiol** - BTH
 - Decanethiol - DTH
@@ -231,30 +234,44 @@ Special chemical compound names are reserved for rare hardware platforms.
 
 Devices that would have a "special" codename include but is obviously not limited to:
 
-- Contains an SoC part of the MagicEyes MMSP series
-- Contains an SoC part of the Ingenic Jz47xx series outside of development kits
-- Contains a Chips&Technologies GPU, video controller or CPU
-- Sold under the brand "Positivo" or "Positivo BGH" (common in Latin America, especially Brazil, but rare in the US)
+- Branded under: 
+    - Positivo, Positivo BGH (common in Latin America, especially Brazil, but rare in the US)
+    - Micron Technology
+- Contains a SoC from the following vendors:
+    - Ingenic (only Jz series)
+    - DM&P (e.g. Vortex86)
+    - MagicEyes
+    - Chips&Technologies
+    - C-Cube Microsystems
+    - Sunplus Technology/Generalplus Technology excluding development hardware (e.g. BPI-F2P/S, CTCL-designed hardware) and DVD video decoders
+    - MCST (МЦСТ)
+- Contains DRAM branded as PieceMakers
 
 ### Antimatter 
+Antimatter codenames are for use with Positivo-branded hardware. This scheme started in late 2021 with the introduction of a Positivo Y210 tablet.
+
 - **Positronium Hydride**
 
 ### Ions 
 - Helium Hydride
 
 # Embedded Project Codenames 
-Embedded circuit design projects are codenamed after specific locations such as cities, towns and villages.
+Embedded circuit design projects are codenamed after specific locations such as cities, towns and villages. The design idea is what receives the codename, unlike the workstation codenames that are linked to a single unique motherboard.
 
-The design idea is what receives the codename, unlike the workstation codenames that are linked to a single unique motherboard.
+For a hardware project to receive a codename, it must have at least one microcontroller, microprocessor or SoC.
 
 ## DRAM Plant Locations 
-Projects that surround the testing or demonstration of computer DRAM are named after locations are or were locations of significant DRAM plants.
+Projects that surround the testing or demonstration of computer DRAM are named after current or former locations of significant DRAM plants.
 
 - Boise, Idaho
 - Clay, New York
 - Sandston, Virginia
 - Seoul, South Korea
 - Dresden, Germany
+
+## Fort Myers Beach, Florida, US
+Any device, regardless to whatever series it belongs to, that is the first project that require designing with DDR memory receives the codename "Fort Myers Beach".
+
 
 # Software 
 Standalone software projects use the names of animals. Embedded software written for hardware projects do not receive their own codename. Software written for specific hardware not developed by CTCL may receive their own codename.
@@ -264,13 +281,27 @@ Standalone software projects use the names of animals. Embedded software written
 ### Web Software
 Codenames using the names of crustaceans under the infraorder **Brachyura**, commonly known as **crabs**, are used for web software projects that utilize the Rust programming language. The inspiration of using crustaceans for Rust-based projects is from the term "Rustacean" and the unofficial mascot of Rust named Ferris. 
 
-- [Atlantic Blue Crab - ctclsite-rust](../ctclsite/)
-- [Red Rock Crab - cams-rust](../cams/)
+- [ctclsite-rust|Atlantic Blue Crab - CTCL Website (ctclsite-rust)](../ctclsite/)
+- Atlantic Red Crab
+- Atlantic Rock Crab
+- [ContactList|Blue Crab - ContactList (contactlist-rust)](../contactlist/)
+- Dungeness Crab
+- Asian Blue Crab
+- [CAMS|Red Rock Crab - CAMS (cams-rust)](../cams/)
+- Golden Crab
+- Gulf Stone Crab
+- Jonah Crab
+- Horsehair Crab
+- Pie Crust Crab
+- [ToDoKiosk|Brown Crab - ToDoKiosk (todokiosk-rust)](../todokiosk/)
+- Florida Stone Crab
+- Dwarf Crab
+- Tiger Crab
 
 ### Chat Bots
 On February 23, 2024, I have decided to have software projects of chat bots, currently for Discord, be codenamed after the common names of animals under the **Mustela** genus, also known as weasels, polecats, ferrets and stoats. Specifically, the names of **ferrets** are used. This was inspired by Aurorans Solis, who I met on Discord in February 2024 and was the main inspiration for me to start using Rust again.
 
-- [Black-footed Ferret - slag-rust](../slag/)
+- [Black-footed Ferret - SLAG (slag-rust)](../slag/)
 
 ## Python
 Starting January 30, 2024, codenames of fish would be used for any Python-based project as started with the trout theme for web applications.
@@ -279,10 +310,10 @@ Starting January 30, 2024, codenames of fish would be used for any Python-based 
 Projects using the codenames of **trout** are used for projects using the Django or Flask web framework and the Python programming language. The idea of using the names of trout for codenames started with CAMS in which was inspired by excursions to fish farms during summer camp in 2018 and 2019.
 
 - Adriatic Trout
-- [Apache Trout - ctclsite-python](../ctclsite/)
+- [Apache Trout - CTCL Website (ctclsite-python)](../ctclsite/)
 - Biwa Trout
 - Brook Trout
-- [Brown Trout - ContactList](../contactlist/)
+- [Brown Trout - ContactList (contactlist-python)](../contactlist/)
 - Bull Trout
 - Cutthroat Trout 
 - Flathead Trout
@@ -291,7 +322,7 @@ Projects using the codenames of **trout** are used for projects using the Django
 - Lake Trout
 - Marble Trout
 - Ohrid Trout
-- [Rainbow Trout - CAMS](../cams/)
+- [Rainbow Trout - CAMS (cams-python)](../cams/)
 - Sevan Trout
 - Silver Trout
 - Tiger Trout

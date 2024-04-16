@@ -51,30 +51,30 @@ This job was quite important for me, parts of the building reminded me of certai
 
 <figure>
     <img src="/static/blog/9/sml_1.webp">
-    <figcaption>Part of the building that I worked on which felt oddly familiar. This sight ending up being a slight inspiration for some projects including <a href="../../projects/slag/">SLAG</a> and <a href="../../projects/p2maps/">maps for Portal 2</a> - February 15, 2024 - ASUS ZenFone 9</figcaption>
+    <figcaption>Part of the building that I worked on which felt oddly familiar. This sight ending up being a slight inspiration for some projects including <a href="../../projects/slag/">SLAG</a> and <a href="../../projects/p2maps/">maps for Portal 2</a> - February 15, 2024 - ASUS Zenfone 9</figcaption>
 </figure>
 
 <figure>
     <img src="/static/blog/9/sml_2.webp">
-    <figcaption>A couple of Bluegill (my knowledge on specific species is limited so this may or may not be correct) seen at the Smith Mountain Lake State Park - February 15, 2024 - ASUS ZenFone 9</figcaption>
+    <figcaption>A couple of Bluegill (my knowledge on specific species is limited so this may or may not be correct) seen at the Smith Mountain Lake State Park - February 15, 2024 - ASUS Zenfone 9</figcaption>
 </figure>
 
 <figure>
     <img src="/static/blog/9/sml_3.webp">
-    <figcaption>Overlooking part of the Discovery Center area at the Smith Mountain Lake State Park - February 15, 2024 - ASUS ZenFone 9</figcaption>
+    <figcaption>Overlooking part of the Discovery Center area at the Smith Mountain Lake State Park - February 15, 2024 - ASUS Zenfone 9</figcaption>
 </figure>
 
 <figure>
     <img src="/static/blog/9/sml_4.webp">
-    <figcaption>Overlooking the lake from the Discovery Center area at the Smith Mountain Lake State Park - February 15, 2024 - ASUS ZenFone 9</figcaption>
+    <figcaption>Overlooking the lake from the Discovery Center area at the Smith Mountain Lake State Park - February 15, 2024 - ASUS Zenfone 9</figcaption>
 </figure>
 
 <figure>
     <img src="/static/blog/9/sml_5.webp">
-    <figcaption>Overlooking the lake from the shore near Cedar Key Lane, Huddleston, Virginia - February 16, 2024 - ASUS ZenFone 9</figcaption>
+    <figcaption>Overlooking the lake from the shore near Cedar Key Lane, Huddleston, Virginia - February 16, 2024 - ASUS Zenfone 9</figcaption>
 </figure>
 
 <figure>
     <img src="/static/blog/9/sml_6.webp">
-    <figcaption>Overlooking the lake from a cabin at Cedar Key Lane, Huddleston, Virginia - February 16, 2024 - ASUS ZenFone 9</figcaption>
+    <figcaption>Overlooking the lake from a cabin at Cedar Key Lane, Huddleston, Virginia - February 16, 2024 - ASUS Zenfone 9</figcaption>
 </figure>

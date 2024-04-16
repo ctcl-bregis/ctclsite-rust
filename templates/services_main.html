@@ -1,10 +1,10 @@
 {% include "header.html" %}
     <h1 class="center pix">Services</h1>
     <hr>
-    {% for section in sections %}
-    <section class="servicebanner">
-        <h2 class="sectiontitle pix">{{ section.title }}</h2>
-        {{ section.content|safe }}
+    {% for sectionkey, sectionvalue in sections %}
+    <section class="servicebanner theme-{{ sectionvalue.theme }}">
+        <h2 id="{{ sectionkey }}" class="sectiontitle {% if sectionpixfont %}pix{% endif %}">{{ sectionvalue.title }}</h2>
+        {{ sectionvalue.content|safe }}
         </section>
     </section>{% endfor %}
     <hr>

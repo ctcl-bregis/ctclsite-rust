@@ -1,13 +1,30 @@
-{"pages": {
+{
     "root": {
         "theme": "gold",
         "title": "Services",
         "desc": "Services that I offer",
-        "sections": [
-            {"title": "Technical Support", "content": "config/services/sections/techsupport.md"},
-            {"title": "Software", "content": "config/services/sections/software.md"},
-            {"title": "Building Consulting", "content": "config/services/sections/insurance.md"},
-            {"title": "Contact", "content": "config/about/sections/contact.md"}
-        ]
+        "sectionpixfont": true,
+        "sections": {
+            "techsupport": {
+                "title": "Technical Support", 
+                "theme": "gold",
+                "content": "config/services/sections/techsupport.md"
+            },
+            "software": {
+                "title": "Software",
+                "theme": "gold",
+                "content": "config/services/sections/software.md"
+            },
+            "insurance": {
+                "title": "Building Consulting", 
+                "theme": "gold",
+                "content": "config/services/sections/insurance.md"
+            },
+            "contact": {
+                "title": "Contact",
+                "theme": "gold",
+                "content": "config/services/sections/contact.md"
+            }
+        }
     }
-}}
+}

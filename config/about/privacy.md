@@ -1,4 +1,4 @@
-**Date of last modification:** March 29, 2024
+**Date of last modification:** April 10, 2024
 
 # Definitions
 "CTCL" refers to the operator of this website, Brayden Regis.
@@ -8,6 +8,8 @@
 
 # What is collected
 The following are the kinds of data that is collected by the website and other services.
+
+By accessing this website and other services hosted by CTCL, you agree to these terms.
 
 ## The Website
 Information that is automatically collected on the server side when an user visits any webpage consists of:

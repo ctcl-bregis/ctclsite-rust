@@ -1,4 +1,4 @@
-"Polycarbonate" is the codename given to the system that is currently the lab/workbench desktop with the hostname WBPC2. This system was set up in the need for a small form factor desktop to take place of the much larger ["Polyethylene"](../pc_pe/) while maintaining support for ECC memory. The entire build costed less than US$100 in June 2023. 
+"Polycarbonate" is the codename given to the system that is currently the lab/workbench desktop with the hostname WBPC2. This system was set up in the need for a small form factor desktop to take place of the much larger ["Polyethylene"](../pc_pe/) while maintaining support for ECC memory. The entire build cost less than US$100 in June 2023. 
 
 Configuration as of April 3, 2024:
 

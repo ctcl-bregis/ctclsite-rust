@@ -2,15 +2,50 @@
 // File: src/routes/blog/mod.rs
 // Purpose: Blog module
 // Created: March 1, 2024
-// Modified: March 13, 2024
+// Modified: April 10, 2024
 
 use actix_web::{
     web, Error, HttpResponse, Responder, Result,
 };
-use crate::{SiteCfg, mkcontext};
+use tera::Context;
+use crate::{mdpath2html, SiteCfg};
+
+fn mkcontext(sitecfg: &SiteCfg, subpage: &str) -> Context {
+    let mut ctx = Context::new();
+
+    if subpage == "root" {
+        let subpagetype = &sitecfg.blogcfg.root;
+        ctx.insert("posts", &sitecfg.blogcfg.posts);
+        ctx.insert("title", &subpagetype.title);
+        let defaultfavicon = &format!("/static/favicons/default_{}.ico", &subpagetype.theme);
+        ctx.insert("favicon", match &subpagetype.favicon {
+            Some(link) => link,
+            None => defaultfavicon
+        });
+        ctx.insert("themename", &subpagetype.theme);
+        ctx.insert("themecolor", &sitecfg.themes.get(&subpagetype.theme).unwrap().color);
+        ctx.insert("desc", &subpagetype.desc);
+    } else {
+        // The page should be known to exist at this point
+        let subpagetype = sitecfg.blogcfg.posts.get(subpage).unwrap();
+
+        ctx.insert("title", &subpagetype.title);
+        let defaultfavicon = &format!("/static/favicons/default_{}.ico", &subpagetype.theme);
+        ctx.insert("favicon", match &subpagetype.favicon {
+            Some(link) => link,
+            None => defaultfavicon
+        });
+        ctx.insert("themename", &subpagetype.theme);
+        ctx.insert("themecolor", &sitecfg.themes.get(&subpagetype.theme).unwrap().color);
+        ctx.insert("desc", &subpagetype.desc);
+
+        ctx.insert("rendered", &mdpath2html(&subpagetype.content, true).unwrap());        
+    }
+    ctx
+}
 
 pub async fn blog_index(tmpl: web::Data<tera::Tera>, sitecfg: web::Data<SiteCfg>) -> Result<impl Responder, Error> {
-    let ctx = mkcontext(sitecfg.get_ref().to_owned(), "blog", "root").unwrap();
+    let ctx = mkcontext(sitecfg.get_ref(), "root");
     
     let s = match tmpl.render("blog_menu.html", &ctx) {
         Ok(html) => HttpResponse::Ok().body(html),
@@ -21,15 +56,15 @@ pub async fn blog_index(tmpl: web::Data<tera::Tera>, sitecfg: web::Data<SiteCfg>
 }
 
 pub async fn blog_post(page: web::Path<String>, tmpl: web::Data<tera::Tera>, sitecfg: web::Data<SiteCfg>) -> Result<impl Responder, Error> {
-    let blogcfg = &sitecfg.blogcfg.pages;
+    let blogcfg = &sitecfg.blogcfg;
 
-    if !blogcfg.contains_key(&page.clone()) {
+    if !blogcfg.posts.contains_key(&page.clone()) {
         return Ok(HttpResponse::NotFound().body("Blog post not found"))
     }
 
-    let ctx = mkcontext(sitecfg.get_ref().to_owned(), "blog", &page.clone()).unwrap();
+    let ctx = mkcontext(sitecfg.get_ref(), &page.clone());
 
-    let s = match tmpl.render("blog_post.html", &ctx) {
+    let s = match tmpl.render("content.html", &ctx) {
         Ok(html) => HttpResponse::Ok().body(html),
         Err(err) => HttpResponse::InternalServerError().body(format!("Failed to render the template: {:?}", err))
     };

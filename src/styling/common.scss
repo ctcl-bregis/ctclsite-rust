@@ -175,6 +175,7 @@ section p {
     border-width: 2pt;
     border-style: solid;
     margin: $sectionmargin;
+    background: rgba(0,0,0,.6);
 }
 
 .servicebanner {
@@ -202,11 +203,6 @@ section p {
     padding-top: 4pt;
     padding-bottom: 4pt;
     width: fit-content;
-}
-
-.sectioncontent {
-    min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .sectioncontent p {

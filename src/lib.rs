@@ -2,13 +2,14 @@
 // File: src/lib.rs
 // Purpose: Module import and commonly used functions
 // Created: November 28, 2022
-// Modified: April 4, 2024
+// Modified: April 13, 2024
 
 pub mod routes;
+pub mod middleware;
 
 use indexmap::IndexMap;
 use std::collections::HashMap;
-use std::fs::{File, OpenOptions};
+use std::fs::File;
 use std::io::{Read, Error};
 use std::result::Result;
 use comrak::{markdown_to_html, Options};
@@ -20,137 +21,136 @@ use serde::{Deserialize, Serialize};
 //   about/ - "page"
 //     config.json - "pagecfg", "subpage"
 
-// configuration file structs
 #[derive(Deserialize, Serialize, Clone)]
 pub struct Theme {
+    // Main theme color
     color: String,
-    fgcolor: String
+    // Background color on buttons that are hovered
+    bgcolor: String,
+    // Used for animations where the theme color transistions to this color
+    altcolor: Option<String>
 }
 
+// Section struct used for pages made of sections
 #[derive(Deserialize, Serialize, Clone)]
-pub struct AboutSection {
+pub struct Section {
+    theme: String,
     title: String,
-    id: Option<String>,
     content: String,
+    // Value that determines if the section should have the height of the viewport, defaults to true
+    fitscreen: Option<bool>,
     bgvid: Option<String>,
     bgimg: Option<String>
 }
 
+// Any page that is made up of a single Markdown document
 #[derive(Deserialize, Serialize, Clone)]
-pub struct ServicesSection {
-    title: String,
-    id: Option<String>,
-    content: String
-}
-
-
-#[derive(Deserialize, Serialize, Clone)]
-pub struct Linklistlink {
-    title: String,
-    link: String,
-    theme: String
-}
-
-//#[derive(Deserialize, Serialize, Clone)]
-//pub struct SubPageCfg {
-//    theme: String,
-//    title: String,
-//    desc: String,
-//    content: Option<String>,
-//    favicon: Option<String>,
-//    sections: Option<Vec<Section>>,
-//    background: Option<String>,
-//    menu: Option<Vec<Linklistlink>>,
-//    icon: Option<String>,
-//    icontitle: Option<String>,
-//    cat: Option<String>,
-//    date: Option<String>,
-//    js: Option<bool>,
-//    navbar: Option<bool>
-//}
-
-// Generic content page
-#[derive(Deserialize, Serialize, Clone)]
-pub struct BasePageKind {
+pub struct ContentPage {
     theme: String,
     title: String,
     desc: String,
+    // This is the path to the markdown file before its value is replaced by the rendered document
     content: String,
-}
-
-#[derive(Deserialize, Serialize, Clone)]
-struct BlogSubPageKind {
-    theme: String,
-    title: String,
-    desc: String,
-    date: String,
-    cat: String,
-}
-
-#[derive(Deserialize, Serialize, Clone)]
-struct AboutPageKind {
-    theme: String,
-    title: String,
-    desc: String,
-    sections: Vec<AboutSection>
-}
-
-#[derive(Deserialize, Serialize, Clone)]
-struct ServicesPageKind {
-    theme: String,
-    title: String,
-    desc: String,
-    sections: Vec<ServicesSection>
-}
-
-#[derive(Deserialize, Serialize, Clone)]
-struct ProjectsSubPageKind {
-    theme: String,
-    title: String,
-    desc: String,
+    // Optional link to favicon 
+    favicon: Option<String>,
+    // For project and blog pages at the moment
     icon: Option<String>,
     icontitle: Option<String>
 }
 
 #[derive(Deserialize, Serialize, Clone)]
-struct LinklistPageKind {
-
-}
-
-#[derive(Deserialize, Serialize, Clone)]
-enum PageKind {
-    // A "SubPage" is a page under a category page such as "Projects" or "Blog"
-    BasePage(BasePageKind),
-    BlogSubPage(BlogSubPageKind),
-    AboutPage(AboutPageKind),
-    ServicesSubPage(ServicesPageKind),
-    ProjectsSubPage(ProjectsSubPageKind),
-    LinklistPage(LinklistPageKind)
-}
-
-#[derive(Deserialize, Serialize, Clone)]
-pub struct ProjectCatCfg {
+pub struct BlogContentPage {
+    theme: String,
     title: String,
     desc: String,
-    subpages: IndexMap<String, PageKind>
+    // This is the path to the markdown file before its value is replaced by the rendered document
+    content: String,
+    // Optional link to favicon 
+    favicon: Option<String>,
+    // For project and blog pages at the moment
+    icon: Option<String>,
+    icontitle: Option<String>,
+    date: String,
+    // To-Do: replace this with actual categorization
+    cat: String,
+}
+
+// Any page that is made up of sections, including About
+#[derive(Deserialize, Serialize, Clone)]
+pub struct SectionsPage {
+    theme: String,
+    title: String,
+    desc: Option<String>,
+    sections: IndexMap<String, Section>,
+    favicon: Option<String>,
+    sectionpixfont: Option<bool>,
+    // For project and blog pages at the moment
+    icon: Option<String>,
+    icontitle: Option<String>
 }
 
 #[derive(Deserialize, Serialize, Clone)]
-pub struct ProjectsPageCfg {
-    root: PageKind,
-    cats: IndexMap<String, ProjectCatCfg>
+#[serde(tag = "type")]
+pub enum PageType {
+    #[serde(alias = "content")]
+    PageTypeContent(ContentPage),
+    #[serde(alias = "sections")]
+    PageTypeSections(SectionsPage)
+}
+ 
+#[derive(Deserialize, Serialize, Clone)]
+pub struct LinklistList {
+    title: String,
+    link: String,
+    theme: String
+}
+
+#[derive(Deserialize, Serialize, Clone)]
+pub struct LinklistPage {
+    theme: String,
+    title: String,
+    desc: String,
+    background: String,
+    menu: Vec<LinklistList>,
+    favicon: Option<String>,
+}
+
+#[derive(Deserialize, Serialize, Clone)]
+pub struct MetaPage {
+    theme: String,
+    title: String,
+    desc: String,
+    favicon: Option<String>
+}
+
+#[derive(Deserialize, Serialize, Clone)]
+pub struct BlogPage {
+    root: MetaPage,
+    posts: IndexMap<String, BlogContentPage>
+}
+
+#[derive(Deserialize, Serialize, Clone)]
+pub struct ProjectsPageCategory {
+    title: String,
+    desc: String,
+    theme: String,
+    subpages: IndexMap<String, PageType>
+}
+
+#[derive(Deserialize, Serialize, Clone)]
+pub struct ProjectsPage {
+    root: MetaPage,
+    cats: IndexMap<String, ProjectsPageCategory>
 }
 
 // Get all pages under every category
-impl ProjectsPageCfg {
-    fn topagecfg(self) -> IndexMap<String, PageKind> {
-        let mut pages: IndexMap<String, PageKind> = IndexMap::new();
-        // root does not have categories
-        pages.insert("root".to_string(), self.root);
+impl ProjectsPage {
+    fn getpages(self) -> IndexMap<String, PageType> {
+        let mut pages: IndexMap<String, PageType> = IndexMap::new();
     
         for cat in self.cats.values() {
-            for subpage in cat.subpages.iter() {
-                pages.insert(subpage.0.clone(), subpage.1.clone());
+            for (key, value) in cat.subpages.iter() {
+                pages.insert(key.to_owned(), value.to_owned());
             }
         }
         
@@ -160,11 +160,11 @@ impl ProjectsPageCfg {
 
 #[derive(Deserialize, Serialize, Clone)]
 pub struct SiteCfg {
-    pub aboutcfg: PageCfg,
-    pub bcctccfg: PageCfg,
-    pub blogcfg: PageCfg,
-    pub projectscfg: ProjectsPageCfg,
-    pub servicescfg: PageCfg,
+    pub aboutcfg: IndexMap<String, PageType>,
+    pub linklistcfg: IndexMap<String, LinklistPage>,
+    pub blogcfg: BlogPage,
+    pub projectscfg: ProjectsPage,
+    pub servicescfg: IndexMap<String, SectionsPage>,
     pub themes: HashMap<String, Theme>,
     pub globalcfg: GlobalCfg
 }
@@ -176,22 +176,20 @@ pub struct GlobalCfg {
     pub themes: HashMap<String, Theme>,
     pub bindip: String,
     pub bindport: u16,
-    pub siteurl: String
+    pub siteurl: String,
+    pub redirects: HashMap<String, String>
 }
 
 // -------------------------------------
 
-pub fn read_file(path: String) -> Result<String, Error> {
-    let tmppath = path.clone();
-
+pub fn read_file(path: &str) -> Result<String, Error> {
     let mut file = match File::open(path) {
         Ok(file) => file,
         Err(e) => match e.kind() {
-            std::io::ErrorKind::NotFound => return Err(Error::new(std::io::ErrorKind::NotFound, format!("File {} not found", tmppath))),
-            _ => panic!("Can't read from file: {}, err {}", tmppath.to_owned(), e),
+            std::io::ErrorKind::NotFound => return Err(Error::new(std::io::ErrorKind::NotFound, format!("File {} not found", path))),
+            _ => panic!("Can't read from file: {}, err {}", path.to_owned(), e),
         }
     };
-    //let mut file = File::open(path).expect("Failed to open file");
     let mut buff = String::new();
     file.read_to_string(&mut buff).unwrap();
 
@@ -201,123 +199,11 @@ pub fn read_file(path: String) -> Result<String, Error> {
 pub fn mdpath2html(path: &str, headerids: bool) -> Result<String, Error> {
     let mut comrak_options = Options::default();
     comrak_options.render.unsafe_ = true;
+    comrak_options.extension.table = true;
     if headerids {
         comrak_options.extension.header_ids = Some("".to_string());
     }
-    let content = markdown_to_html(&read_file(path.to_owned()).expect("File read error"), &comrak_options);
+    let content = markdown_to_html(&read_file(path).expect("File read error"), &comrak_options);
 
     Ok(content)
 }
-
-// Function that prefills the Tera context
-pub fn mkcontext(sitecfg: SiteCfg, metapage: &str, subpage: &str) -> Result<tera::Context, Error> {
-    let mut ctx = tera::Context::new();
-    let mut comrak_options = Options::default();
-    comrak_options.render.unsafe_ = true;
-
-    let pagecfg = match metapage {
-        "about" => sitecfg.aboutcfg,
-        "bcc_tc" => sitecfg.bcctccfg,
-        "blog" => sitecfg.blogcfg,
-        "projects" => sitecfg.projectscfg.clone().topagecfg(),
-        "services" => sitecfg.servicescfg,
-        _ => return Err(Error::new(std::io::ErrorKind::NotFound, "Invalid page".to_string()))
-    };
-    let themecfg = sitecfg.themes;
-    let subpagecfg = match pagecfg.pages.get(subpage) {
-        Some(subpage) => subpage,
-        None => return Err(Error::new(std::io::ErrorKind::NotFound, "Page not found".to_string()))
-    };
-
-    // JavaScript is only disabled explicitly; a page entry without the js field would have JavaScript enabled by default
-    if subpagecfg.js == Some(false) {
-        ctx.insert("js", &false)
-    } else {
-        ctx.insert("js", &true)
-    }
-
-    if metapage == "about" {
-        ctx.insert("vids", &false)
-    } else {
-        ctx.insert("vids", &true)
-    }
-
-    // navbar follows the same rule
-    if subpagecfg.navbar == Some(false) {
-        ctx.insert("navbar", &false)
-    } else {
-        ctx.insert("navbar", &true)
-    }
-
-    // Another hack that should be removed soon
-    if metapage == "about" && subpage == "root" {
-        ctx.insert("url", &format!("https://{}/", sitecfg.globalcfg.siteurl));
-    } else if metapage == "about" && subpage != "root" {
-        ctx.insert("url", &format!("https://{}/{}/", sitecfg.globalcfg.siteurl, subpage));
-    } else if subpage == "root" {
-        ctx.insert("url", &format!("https://{}/{}/", sitecfg.globalcfg.siteurl, metapage));
-    } else {
-        ctx.insert("url", &format!("https://{}/{}/{}/", sitecfg.globalcfg.siteurl, metapage, subpage));
-    }
-
-    ctx.insert("themecolor", &themecfg.get(&subpagecfg.theme).unwrap().color);
-    ctx.insert("themename", &subpagecfg.theme);
-    ctx.insert("title", &subpagecfg.title);
-    ctx.insert("desc", &subpagecfg.desc);
-
-    if metapage == "bcc_tc" {
-        ctx.insert("menu", &subpagecfg.menu);
-        ctx.insert("background", &subpagecfg.background);
-    } else if metapage == "projects" {
-        ctx.insert("menu", &sitecfg.projectscfg.cats);
-    }
-
-    if !&subpagecfg.content.is_none() {
-        let mdpath = subpagecfg.content.as_ref().unwrap();
-        let rendered = mdpath2html(mdpath, true).unwrap();
-
-        ctx.insert("rendered", &rendered);
-    }
-
-    if !&subpagecfg.favicon.is_none() {
-        ctx.insert("favicon", &subpagecfg.favicon.as_ref().unwrap());
-    } else {
-        let iconname: &str = subpagecfg.theme.as_ref();
-        ctx.insert("favicon", &format!("/static/favicons/default_{iconname}.ico"));
-    }
-
-    if !&subpagecfg.sections.is_none() {
-        let sections = subpagecfg.sections.as_ref().unwrap();
-        let mut newsections: Vec<Section> = vec![];
-
-        for section in sections {
-
-            let mdpath = section.content.clone();
-            let rendered = mdpath2html(&mdpath, false).unwrap();
-
-            let newsection: Section = Section { title: section.title.clone(), id: section.id.clone(), content: rendered, bgvid: section.bgvid.clone(), bgimg: section.bgimg.clone() };
-            newsections.push(newsection);
-        }
-
-        ctx.insert("sections", &newsections);
-    }
-
-    // Blog is a special case
-    if metapage == "blog" {
-        if subpage == "root" {
-            let mut posts = pagecfg.pages.clone();
-            posts.shift_remove("root");
-            
-            ctx.insert("posts", &posts)
-        } else {
-            let mdpath = subpagecfg.content.as_ref().unwrap();
-            let rendered = mdpath2html(mdpath, true).unwrap();
-            ctx.insert("rendered", &rendered);
-        }
-
-    }
-
-    Ok(ctx)
-}
-
-

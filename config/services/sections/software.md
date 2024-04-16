@@ -15,8 +15,8 @@ For backend, I have experience in the following:
 - Rust programming language
   - [Actix](https://actix.rs/) - [ctclsite-rust](../projects/ctclsite/)
 - Python programming language
-  - [Django](https://www.djangoproject.com/) - [ctclsite-python](../projects/ctclsite/), [ToDoKiosk](../projects/todokiosk/), [ContactList](../projects/contactlist/)
-  - [Flask](https://flask.palletsprojects.com/) - [ctclsite-python](../projects/ctclsite/) (2021-2022)
+  - [Django](https://www.djangoproject.com/) - [ctclsite-python](../projects/ctclsite/) (2023-2024), [ToDoKiosk](../projects/todokiosk/), [ContactList](../projects/contactlist/)
+  - [Flask](https://flask.palletsprojects.com/) - [ctclsite-python](../projects/ctclsite/) (2021-2023)
 
 For frontend, I have experience in the following:
 

@@ -23,7 +23,7 @@ I went as Alucard from Castlevania (anime) as I have historically chosen costume
 
 <figure>
     <img src="/static/blog/14/selfie_1.webp">
-    <figcaption>Mirror selfie of my Alucard (Castlevania anime) cosplay prior to styling my hair. - March 16, 2024; ASUS ZenFone 9 <a href="../../projects/pc_thc/">Tetrahydrocannbinol</a></figcaption>
+    <figcaption>Mirror selfie of my Alucard (Castlevania anime) cosplay prior to styling my hair. - March 16, 2024; ASUS Zenfone 9 <a href="../../projects/pc_thc/">Tetrahydrocannbinol</a></figcaption>
 </figure>
 
 <figure>
@@ -33,17 +33,17 @@ I went as Alucard from Castlevania (anime) as I have historically chosen costume
 
 <figure>
     <img src="/static/blog/14/amogus.webp">
-    <figcaption>Among Us - March 16, 2024; A<strong>SUS</strong> ZenFone 9 <a href="../../projects/pc_thc/">Tetrahydrocannbinol</a>; Edited <a href="../../projects/pc_pbt/">"Polybutylene Terephthalate"</a></figcaption>
+    <figcaption>Among Us - March 16, 2024; A<strong>SUS</strong> Zenfone 9 <a href="../../projects/pc_thc/">Tetrahydrocannbinol</a>; Edited <a href="../../projects/pc_pbt/">"Polybutylene Terephthalate"</a></figcaption>
 </figure>
 
 Ever since I started [nonmonolithic](../../projects/nonmono/). I have been taking "Backrooms-like" photos almost compulsively.
 
 <figure>
     <img src="/static/blog/14/backrooms_1.webp">
-    <figcaption>March 16, 2024; ASUS ZenFone 9 <a href="../../projects/pc_thc/">Tetrahydrocannbinol</a>; Edited <a href="../../projects/pc_pbt/">"Polybutylene Terephthalate"</a></figcaption>
+    <figcaption>March 16, 2024; ASUS Zenfone 9 <a href="../../projects/pc_thc/">Tetrahydrocannbinol</a>; Edited <a href="../../projects/pc_pbt/">"Polybutylene Terephthalate"</a></figcaption>
 </figure>
 
 <figure>
     <img src="/static/blog/14/backrooms_2.webp">
-    <figcaption>March 16, 2024; ASUS ZenFone 9 <a href="../../projects/pc_thc/">Tetrahydrocannbinol</a></figcaption>
+    <figcaption>March 16, 2024; ASUS Zenfone 9 <a href="../../projects/pc_thc/">Tetrahydrocannbinol</a></figcaption>
 </figure>

@@ -58,7 +58,7 @@ As described in the first section, the case was chosen for its small size. While
 ## Changes
 Some changes in the system's configuration was done over time.
 
-- From January 24, 2023 to January 27, 2023, the system used two 8GB Corsair Vengeance LPX ver8.31 (Nanya Technology NT5AD1024M8B3) in order to test the system as I did not have any Unbuffered ECC DDR4 modules yet.
+- From January 24, 2023 to January 27, 2023, the system used two 8GB Corsair Vengeance LPX ver8.31 (8x Nanya Technology NT5AD1024M8B3) in order to test the system as I did not have any Unbuffered ECC DDR4 modules yet.
 - On January 27, 2023, two 8GB Samsung M391A1K43BB1-CRC 1Rx8 DDR4-2400 Unbuffered ECC modules were installed.
 - On February 21, 2023, the system was rebuilt into a mini tower case, the Cooler Master N200.
 - On February 23, 2023, four 8GB SK hynix HMA81GU7CJR8N-VK 1Rx8 DDR4-2666 Unbuffered ECC modules replaced the current configuration, bringing RAM capacity to 32GB. The M391A1K43BB1-CRC were later used to build ["Polycarbonate"](../pc_pc/).

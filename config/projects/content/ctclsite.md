@@ -30,80 +30,16 @@ From November 2022 to January 2023, I made a rewrite of the website in the Rust 
 
 These rewrites boil down to this:
 
-<table>
-    <tr>
-        <th>Version</th>
-        <th>Programming Langauge</th>
-        <th>Web Framework</th>
-        <th>Styling</th>
-        <th>Development Started</th>
-        <th>Released</th>
-        <th>System Used</th>
-    </tr>
-    <tr>
-        <td>ctclsite-python v1</td>
-        <td>Python</td>
-        <td>Flask</td>
-        <td>Manual Styling</td>
-        <td>December 2021</td>
-        <td>January 2022</td>
-        <td><a href="../pc_pet/">Polyethylene Terephthalate</a></td>
-    </tr>
-    <tr>
-        <td>ctclsite-python v2</td>
-        <td>Python</td>
-        <td>Flask</td>
-        <td>Manual Styling</td>
-        <td>2022</td>
-        <td>2022</td>
-        <td><a href="../pc_pet/">Polyethylene Terephthalate</a></td>
-    </tr>
-    <tr>
-        <td>ctclsite-rust v0</td>
-        <td>Rust</td>
-        <td>Actix</td>
-        <td>Manual Styling</td>
-        <td>November 2022</td>
-        <td>January 2023</td>
-        <td>Most of the development on a ThinkPad X240 codenamed "Dichlorofluoromethane", later <a href="../pc_pbt/">Polybutylene Terephthalate</a></td>
-    </tr>
-    <tr>
-        <td>ctclsite-python v3</td>
-        <td>Python</td>
-        <td>Flask</td>
-        <td>Manual Styling</td>
-        <td>May 15, 2023</td>
-        <td>May 20, 2023</td>
-        <td><a href="../pc_pbt/">Polybutylene Terephthalate</a></td>
-    </tr>
-    <tr>
-        <td>ctclsite-python v4</td>
-        <td>Python</td>
-        <td>Django</td>
-        <td>SCSS</td>
-        <td>August 26, 2023</td>
-        <td>October 20, 2023</td>
-        <td><a href="../pc_pbt/">Polybutylene Terephthalate</a></td>
-    </tr>
-    <tr>
-        <td>ctclsite-python v5</td>
-        <td>Python, JavaScript</td>
-        <td>Django</td>
-        <td>SCSS</td>
-        <td>November 21, 2023</td>
-        <td>December 22, 2023</td>
-        <td><a href="../pc_pbt/">Polybutylene Terephthalate</a></td>
-    </tr>
-    <tr>
-        <td>ctclsite-rust v1 - <strong>CURRENT</strong></td>
-        <td>Rust, JavaScript</td>
-        <td>Actix</td>
-        <td>SCSS</td>
-        <td>February 18, 2024</td>
-        <td>March 3, 2024</td>
-        <td><a href="../pc_pbt/">Polybutylene Terephthalate</a>, <a href="../pc_pmma/">Polymethylmethacrylate</a>, <a href="../pc_thc/">Tetrahydrocannabinol</a> (content only)</td>
-    </tr>
-</table>
+
+| Website Version    | Programming Language | Web Framework | Styling    | Development Started | Released          | Development System(s)                                                                                                         |
+| ------------------ | -------------------- | ------------- | ---------- | ------------------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| ctclsite-python v1 | Python               | Flask         | Manual CSS | December 2021       | January 7, 2022   | [Polyethylene Terephthalate](../wbpc/#pc_pet)                                                                                 |
+| ctclsite-python v2 | Python               | Flask         | Manual CSS | 2022                | 2022              | [Polyethylene Terephthalate](../wbpc/#pc_pet)                                                                                 |
+| ctclsite-rust v0   | Rust                 | Actix Web     | Manual CSS | November 2022       | January 2023      | "Dichlorofluoromethane" (ThinkPad X240), [Polyethylene Terephthalate](../wbpc/#pc_pet)                                        |
+| ctclsite-python v3 | Python               | Flask         | Manual CSS | May 15, 2023        | May 20, 2023      | [Polybutylene Terephthalate](../wbpc/#pc_pbt)                                                                                 |
+| ctclsite-python v4 | Python               | Django        | SCSS       | August 26, 2023     | October 20, 2023  | [Polybutylene Terephthalate](../wbpc/#pc_pbt)                                                                                 |
+| ctclsite-python v5 | Python, JavaScript   | Django        | SCSS       | November 21, 2023   | December 22, 2023 | [Polybutylene Terephthalate](../wbpc/#pc_pbt)                                                                                 |
+| ctclsite-rust v1   | Rust, JavaScript     | Actix Web     | SCSS       | February 18, 2024   | March 3, 2024     | [Polybutylene Terephthalate](../wbpc/#pc_pbt), [Polymethylmethacrylate](../wbpc/#pc_pmma), [Tetrahydrocannabinol](../pc_thc/) |
 
 ## ctclsite-python v1
 ctclsite-python v1 was the first version of the website that did not have all of the HTML content written by hand and instead had content handled by Python Flask with the Jinja2 templating engine. Before this, the website was just a collection of HTML and CSS files. 

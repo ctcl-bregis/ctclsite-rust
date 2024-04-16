@@ -2,7 +2,7 @@
 // File: src/logger/mod.rs
 // Purpose: Logger routes
 // Created: March 3, 2024
-// Modified: March 21, 2024
+// Modified: April 13, 2024
 
 use std::io::Write;
 use std::fs::OpenOptions;
@@ -45,6 +45,7 @@ pub struct IncomingClientLog {
     inner_height: String,
     inner_width: String,
 }
+
 
 // Client Log entry with fields added server-side
 #[derive(Deserialize, Serialize, Debug)]
@@ -123,15 +124,15 @@ pub async fn logger_incoming(req: HttpRequest, info: web::Json<IncomingClientLog
         std::fs::create_dir("logs/")?;
     }
 
+    let conn = &req.connection_info();
+    let extip = conn.realip_remote_addr().unwrap();
+    let info = icl2cl(info.0, extip);
+
     // Manually write the CSV header
     if !std::path::Path::new("logs/client_latest.csv").exists() {
         let mut file = std::fs::File::create("logs/client_latest.csv")?;
         file.write_all(b"timestamp,ext_ip,url_path,time_zone,web_gl_vendor,web_gl_renderer,cpu_cores,mem_size,max_tp,oscpu,plat,screen_x,screen_y,screen_pix_ratio,screen_pix_depth,canvas_fp,online,pdf_viewer,cookies_enabled,dnt_enabled,langs,prod,prod_sub,user_agent,vend,inner_height,inner_width\n")?;
     }
-
-    let conn = &req.connection_info();
-    let extip = conn.realip_remote_addr().unwrap();
-    let info = icl2cl(info.0, extip);
 
     let mut writer = csv::WriterBuilder::new().has_headers(false).from_writer(vec![]);
     writer.serialize(info).unwrap();
