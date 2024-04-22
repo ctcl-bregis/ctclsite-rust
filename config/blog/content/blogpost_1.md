@@ -19,11 +19,9 @@ In May 2021, to teach myself about putting together my own embedded Linux images
 
 Just recently, on July 10, 2023, I have made an EasyEDA footprint and symbol for the SP7021. I used the tool by [Wu Haotian (RigoLigoRLC) for converting the EasyEDA footprint to KiCAD](https://github.com/RigoLigoRLC/LC2KiCad).
 
-The files are available here:
+On April 21, 2024, due to inaccuracies in the symbol and footprint I have designed, I have started to work on improving them.
 
-- [EasyEDA footprint](/static/blog/1/PCBLIB_TQFP-176_L20.0-W20.0-P0.40-EP9.6-BL_2023-07-10.json)
-- [EasyEDA symbol](/static/blog/1/SCHLIB_SP7021_2023-07-10.json)
-- [KiCAD symbol](/static/blog/1/SP7021.lib)
+**Updated files coming soon**
 
 ## Banana Pi
 

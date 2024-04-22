@@ -260,18 +260,39 @@ Embedded circuit design projects are codenamed after specific locations such as 
 
 For a hardware project to receive a codename, it must have at least one microcontroller, microprocessor or SoC.
 
-## DRAM Plant Locations 
-Projects that surround the testing or demonstration of computer DRAM are named after current or former locations of significant DRAM plants.
+Historically, codenames for these types of projects have been inconsistent so just certain devices have an actual theme. Sometimes, 
 
-- Boise, Idaho
-- Clay, New York
-- Sandston, Virginia
-- Seoul, South Korea
-- Dresden, Germany
+## MediaCow 
+MediaCow is a series of projects about the design and assembly of portable media players and tablet computers.
 
-## Fort Myers Beach, Florida, US
-Any device, regardless to whatever series it belongs to, that is the first project that require designing with DDR memory receives the codename "Fort Myers Beach".
+The first MediaCow in 2019 received the codename "Syracuse".
 
+### MediaCow Touch
+MediaCow Touch devices have received codenames relating to real persons that I have met online. Codenames for these devices do not follow any theme.
+
+- MediaCow Touch (1) - Nashville
+- MediaCow Touch 2 - Paris
+
+### MediaCow Touch Mini
+Currently, there is no theme for codenames used for MediaCow Touch Mini devices.
+
+### MediaCow Micro
+Starting December 16, 2023, MediaCow Micro devices would use codenames of locations within central New York State.
+
+## Special Cases
+
+### Fort Myers Beach, Florida, US
+Any device, regardless to whatever series it belongs to, that is the first project that require designing with DDR2 or later memory generations receives the codename "Fort Myers Beach".
+
+### Generally Reserved Codenames
+These codenames are reserved for special cases due to personal importance.
+
+- **Canastota**, New York, US
+- **Curitiba**, Paraná, Brazil
+- **Oneida**, New York, US
+- **Richmond**, Virginia, US
+- **Salisbury**, Maryland, US
+- **Virginia Beach**, Virginia, US
 
 # Software 
 Standalone software projects use the names of animals. Embedded software written for hardware projects do not receive their own codename. Software written for specific hardware not developed by CTCL may receive their own codename.
@@ -281,19 +302,19 @@ Standalone software projects use the names of animals. Embedded software written
 ### Web Software
 Codenames using the names of crustaceans under the infraorder **Brachyura**, commonly known as **crabs**, are used for web software projects that utilize the Rust programming language. The inspiration of using crustaceans for Rust-based projects is from the term "Rustacean" and the unofficial mascot of Rust named Ferris. 
 
-- [ctclsite-rust|Atlantic Blue Crab - CTCL Website (ctclsite-rust)](../ctclsite/)
+- [Atlantic Blue Crab - CTCL Website (ctclsite-rust)](../ctclsite/)
 - Atlantic Red Crab
 - Atlantic Rock Crab
-- [ContactList|Blue Crab - ContactList (contactlist-rust)](../contactlist/)
+- [Blue Crab - ContactList (contactlist-rust)](../contactlist/)
 - Dungeness Crab
 - Asian Blue Crab
-- [CAMS|Red Rock Crab - CAMS (cams-rust)](../cams/)
+- [Red Rock Crab - CAMS (cams-rust)](../cams/)
 - Golden Crab
 - Gulf Stone Crab
 - Jonah Crab
 - Horsehair Crab
 - Pie Crust Crab
-- [ToDoKiosk|Brown Crab - ToDoKiosk (todokiosk-rust)](../todokiosk/)
+- [Brown Crab - ToDoKiosk (todokiosk-rust)](../todokiosk/)
 - Florida Stone Crab
 - Dwarf Crab
 - Tiger Crab

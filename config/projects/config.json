@@ -100,6 +100,26 @@
                     "title": "MathPad", 
                     "desc": "Calculator keypad peripheral device", 
                     "icon": "/static/projects/icons/mathpad_512.webp"
+                },
+                "fz": {
+                    "type": "sections",
+                    "theme": "flipper",
+                    "title": "Modules for Flipper Zero",
+                    "desc": "Custom-designed modules for the Flipper Zero digital multitool device",
+                    "sections": {
+                        "fz_intro": {
+                            "content": "config/projects/content/fz/fz_intro.md",
+                            "theme": "flipper",
+                            "title": "Introduction",
+                            "fitscreen": false
+                        },
+                        "fz_audio": {
+                            "content": "config/projects/content/fz/fz_audio.md",
+                            "theme": "flipper",
+                            "title": "Audio Module",
+                            "fitscreen": false
+                        }
+                    }
                 }
             }
         },
@@ -183,7 +203,7 @@
                     "title": "PRSV - \"Vinyl Chloride\"", 
                     "desc": "Dedicated 3D printer interface"
                 },
-                "srv_amp": {
+                "svcs": {
                     "type": "sections",
                     "theme": "orange", 
                     "title": "SVCS", 
