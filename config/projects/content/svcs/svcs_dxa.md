@@ -1,4 +1,4 @@
-SVCS3 uses the hardware platform "Dextroamphetamine" (shorthand "DXA"). I could not actually get the system to boot from the hard drive. Since SVCS1 "Levoamphetamine" and SVCS2 "Lisdexamfetamine" are more than enough for my current needs, I have not put this system in production yet.
+SVCS3 uses the hardware platform "Dextroamphetamine" (shorthand "DXA"). This system was not put into production until March 2024, one of the reasons for this was that I could not have the system boot to a drive connected to the RAID controller. The fix was simple; all I needed to do was change a setting within HP ORCA to have the system boot from a drive on the RAID controller.
 
 On February 11, 2024, the E5-2643 v2 CPUs where switched for E5-2667 v2 CPUs due to the higher core count and slight increase in single-threaded performance. 
 
