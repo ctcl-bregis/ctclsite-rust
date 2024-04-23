@@ -12,4 +12,6 @@ Potential applications:
 - Use of the Flipper Zero as a Portable Media Player (PMP)
 - Testing of audio equipment
 
-I do not have a Flipper Zero on hand as of April 19, 2024, testing of the design is planned to be done using a micrcontroller board or evaluation kit with an I2S interface.
+ As mentioned before, I do not have a Flipper Zero on hand as of April 23, 2024. Testing of the design is planned to be done using a microcontroller board or evaluation kit with an I2S interface.
+
+By request, [the design files for the TLV320DAC3203 module were uploaded to a GitHub repository](https://github.com/ctcl-bregis/flipper-zero-audio-module/) though the design is unreviewed and is not guaranteed to be functional or have an optimal layout as of April 23, 2024.

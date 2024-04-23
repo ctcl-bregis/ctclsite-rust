@@ -132,7 +132,7 @@
                     "type": "sections",
                     "theme": "gold",
                     "title": "Workstation systems",
-                    "desc": "Desktop computer systems used for various workloads.",
+                    "desc": "Computer systems used for various workloads.",
                     "sections": {
                         "pc_pbt": {
                             "content": "config/projects/content/wbpc/pc_pbt.md", 
@@ -164,44 +164,41 @@
                             "content": "config/projects/content/wbpc/pc_pe.md", 
                             "theme": "99green", 
                             "title": "\"Polyethylene\""
+                        },
+                        "pc_pmma": {
+                            "content": "config/projects/content/wbpc/pc_pmma.md", 
+                            "theme": "gold", 
+                            "title": "MWDL - \"Polymethylmethacrylate\""
                         }
                     }
                 },
-                "pc_pmma": {
-                    "type": "content",
-                    "content": "config/projects/content/pc_pmma.md", 
-                    "theme": "gold", 
-                    "title": "MWDL - \"Polymethylmethacrylate\"", 
-                    "desc": "Laptop computer system"
-                },
-                "pc_tbm": {
-                    "type": "content",
-                    "content": "config/projects/content/pc_tbm.md", 
-                    "theme": "nanblue", 
-                    "title": "GAMEPC - \"tert-Butylthiol\"", 
-                    "desc": "Hardware testing system"
-                },
-                "pc_r12": {
-                    "type": "content",
-                    "content": "config/projects/content/pc_r12.md", 
-                    "theme": "blue", "title": 
-                    "SIGN1 - \"Dichlorodifluoromethane\"", 
-                    "desc": "Bookshelf PC for displaying a To-Do list"
-                },
-                "pc_thc": {
-                    "type": "content",
-                    "content": "config/projects/content/pc_thc.md", 
-                    "theme": "red", 
-                    "title": "Phone - \"Tetrahydrocannabinol\"", 
-                    "desc": "Main smartphone", 
-                    "icon": "/static/projects/icons/thc_apr242023.webp"
-                },
-                "srv_vc": {
-                    "type": "content",
-                    "content": "config/projects/content/srv_vc.md", 
-                    "theme": "nanblue", 
-                    "title": "PRSV - \"Vinyl Chloride\"", 
-                    "desc": "Dedicated 3D printer interface"
+                "misc": {
+                    "type": "sections",
+                    "theme": "gold",
+                    "title": "Other systems",
+                    "desc": "Miscellaneous computer systems.",
+                    "sections": {
+                        "pc_tbm": {
+                            "content": "config/projects/content/misc/pc_tbm.md", 
+                            "theme": "nanblue", 
+                            "title": "GAMEPC - \"tert-Butylthiol\""
+                        },
+                        "pc_r12": {
+                            "content": "config/projects/content/misc/pc_r12.md", 
+                            "theme": "blue", 
+                            "title": "SIGN1 - \"Dichlorodifluoromethane\""
+                        },
+                        "pc_thc": {
+                            "content": "config/projects/content/misc/pc_thc.md", 
+                            "theme": "red", 
+                            "title": "Phone - \"Tetrahydrocannabinol\""
+                        },
+                        "srv_vc": {
+                            "content": "config/projects/content/misc/srv_vc.md", 
+                            "theme": "nanblue", 
+                            "title": "PRSV - \"Vinyl Chloride\""
+                        }
+                    }
                 },
                 "svcs": {
                     "type": "sections",

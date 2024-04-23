@@ -2,7 +2,7 @@
 // File: src/main.rs
 // Purpose: Main code
 // Created: November 28, 2022
-// Modified: April 15, 2024
+// Modified: April 23, 2024
 
 use actix_files as fs;
 //use actix_web::body::MessageBody;
@@ -69,6 +69,10 @@ async fn main() -> std::io::Result<()> {
             .service(web::redirect("/projects/pc_pp/", "/projects/wbpc/#pc_pp"))
             .service(web::redirect("/projects/pc_pe/", "/projects/wbpc/#pc_pe"))
             .service(web::redirect("/projects/srv_amp/", "/projects/svcs/"))
+            .service(web::redirect("/projects/pc_tbm/", "/projects/misc/#pc_tbm"))
+            .service(web::redirect("/projects/pc_r12/", "/projects/misc/#pc_r12"))
+            .service(web::redirect("/projects/pc_thc/", "/projects/misc/#pc_thc"))
+            .service(web::redirect("/projects/srv_vc/", "/projects/misc/#srv_vc"))
             .service(web::resource("/").route(web::get().to(about_index)))
             .service(web::resource("/privacy/").route(web::get().to(about_privacy)))
             .service(web::resource("/licensing/").route(web::get().to(about_licensing)))
