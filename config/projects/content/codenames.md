@@ -270,22 +270,23 @@ The first MediaCow in 2019 received the codename "Syracuse".
 ### MediaCow Touch
 MediaCow Touch devices have received codenames relating to real persons that I have met online. Codenames for these devices do not follow any theme.
 
-- MediaCow Touch (1) - Nashville
-- MediaCow Touch 2 - Paris
+- [MediaCow Touch (1) - Nashville](../mct_1/)
+- [MediaCow Touch 2 - Paris](../mct_2/)
 
 ### MediaCow Touch Mini
-Currently, there is no theme for codenames used for MediaCow Touch Mini devices.
+Currently, there is no theme for codenames used for MediaCow Touch Mini devices. An idea for a theme for these devices were codenames of locations within Tennessee, United States.
 
-### MediaCow Micro
+### [MediaCow Micro](../mcm/)
 Starting December 16, 2023, MediaCow Micro devices would use codenames of locations within central New York State.
 
 ## Special Cases
+These codenames are reserved for special cases due to personal importance.
 
 ### Fort Myers Beach, Florida, US
 Any device, regardless to whatever series it belongs to, that is the first project that require designing with DDR2 or later memory generations receives the codename "Fort Myers Beach".
 
 ### Generally Reserved Codenames
-These codenames are reserved for special cases due to personal importance.
+These codenames have personal importance but they have not been assigned to any device or idea yet.
 
 - **Canastota**, New York, US
 - **Curitiba**, Paraná, Brazil
