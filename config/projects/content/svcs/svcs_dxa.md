@@ -2,11 +2,11 @@ SVCS3 uses the hardware platform "Dextroamphetamine" (shorthand "DXA"). This sys
 
 On February 11, 2024, the E5-2643 v2 CPUs where switched for E5-2667 v2 CPUs due to the higher core count and slight increase in single-threaded performance. 
 
-On April 5, 2024, a Minecraft server was set up bare metal on this system for use by a college club. 16GB of memory is allocated and the server has access to the 16 cores/32 threads of the two E5-2667 v2.
+On April 5, 2024, a Minecraft server was set up bare metal on this system for use by a college club. 16GB of memory is allocated to the JVM and the server has access to the 16 cores/32 threads of the two E5-2667 v2.
 
 As covered in the [blog post for Week 12 of 2024](../../blog/15/), there has been attempts to run LLMs on this system.
 
-Specifications:
+Specifications as of May 2, 2024:
 
 - System: HP ProLiant BL460c G8
 - CPUs: 2x Intel Xeon E5-2667 v2

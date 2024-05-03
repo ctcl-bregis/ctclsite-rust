@@ -1,5 +1,7 @@
 "Polypropylene v2", is an idea for a desktop that is a "redo" of ["Polypropylene"](../pc_pp/), analogous to [Polyethylene Terephthalate v2](../pc_pet2/) to [Polyethylene Terephthalate](../pc_pet/).
 
+Due to the lack of funding, it is unlikely that this system would be built.
+
 # Planned Specifications
 
 Plans as of April 3, 2024:

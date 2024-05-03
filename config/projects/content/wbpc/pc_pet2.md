@@ -3,7 +3,7 @@
 # Configuration
 The following is subject to change
 
-Planned configuration as of April 3, 2024:
+Planned configuration as of May 2, 2024:
 
 - Motherboard: Supermicro X9DAi
 - CPUs: 2x Intel Xeon E5-2667 v2

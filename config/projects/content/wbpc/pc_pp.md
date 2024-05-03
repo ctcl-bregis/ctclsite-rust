@@ -11,5 +11,5 @@ Configuration as of December 14, 2023:
 - Motherboard: ASUS KCMA-D8
 - CPU: 2x AMD Opteron 4386
 - Memory: 2x4GB (8GB) DDR3-1333 2Rx4 Registered ECC Patriot/Qimonda using IDSH1G-02A1F1C-13H ICs (Prod. in Sandston/Richmond, Virginia, United States)
-- GPU: MSI AMD/ATI Radeon HD 4770 1GB GDDR5 (Qimonda, also produced in Sandston, Virginia)
+- GPU: MSI AMD/ATI Radeon HD 4770 1GB GDDR5 (Qimonda, also from Virginia)
 - Storage: 512GB ADATA SU800

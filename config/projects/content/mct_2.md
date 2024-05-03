@@ -38,6 +38,7 @@ Since 2022, I planned to use a 10.1 inch display with a MIPI DSI interface, capa
 Former plans from 2021 to 2022 described the case being 3D printed from white PETG (polyethylene terephthalate glycol) plastic.
 
 ## Connectivity
+A feature that I plan to have unique with MediaCow Touch 2 to off-the-shelf tablet devices is more physical connectors. 
 
 ### Ports
 Like MediaCow Touch "Nashville", the device would have full-size USB Type-A ports and an RJ-45 Ethernet jack.

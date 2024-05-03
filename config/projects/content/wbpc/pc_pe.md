@@ -13,7 +13,7 @@ Current configuration as of December 19, 2023:
 - Motherboard: Supermicro X8DAi
 - CPUs: 2x Intel Xeon X5670
 - Memory: 48GB (12x4GB) DDR3-1333 Registered ECC Nanya Technology NT4GC72B4NA1NL-CG
-- Graphics: HP AMD Radeon RX 580 4GB GDDR5 (Samsung)
+- Graphics: HP AMD Radeon RX 580 4GB GDDR5
 - Storage, boot: 512GB ADATA SU800 SATA SSD
 - Storage, user: 1TB Western Digital WD1003FBYX-01Y7B0 SATA 7200RPM HDD
 - Audio: Integrated Realtek

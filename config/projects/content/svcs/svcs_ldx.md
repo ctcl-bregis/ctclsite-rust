@@ -2,7 +2,7 @@ SVCS2 uses the hardware platform "Lisdexamfetamine" (shorthand "LDX"). This is t
 
 Currently, as of March 20, 2024, the system is used for ancillary virtualization services including [SLAG](../slag/) and other CTCL-developed services.
 
-Specifications:
+Specifications as of May 2, 2024:
 
 - System: HP ProLiant BL460c G8
 - CPUs: 2x Intel Xeon E5-2650

@@ -9,7 +9,7 @@ Configuration as of January 8, 2024:
 - System: HP ZBook Studio G3 15
 - CPU: Intel Xeon E5-1505M v5
 - Memory: 1x16GB 2Rx8 DDR4-2400 (at DDR4-2133) Unbuffered ECC SODIMM SK hynix HMA82GS7AFR9N-UH
-- GPU: Nvidia Quadro 1000M 2GB GDDR5 (SK hynix)
+- GPU: Nvidia Quadro 1000M 2GB GDDR5
 - Storage: 500GB NVMe SSD SK hynix Gold P31
 - Display: 15" 1920x1080 IPS LCD Samsung
 

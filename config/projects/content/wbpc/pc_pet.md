@@ -7,7 +7,7 @@ Configuration from May 25, 2022 to January 13, 2023:
 - Motherboard: Supermicro X9SRA
 - CPU: 1x Intel Xeon E5-1650 v2
 - Memory: 16GB (4x4GB) Qimonda IMHH4GP12A1F1C-10 DDR3-1066 Registered ECC (Prod. in Dresden, Germany)
-- Graphics: HP AMD Radeon RX 580 4GB GDDR5 (Samsung)
+- Graphics: HP AMD Radeon RX 580 4GB GDDR5
 - Storage, boot: ADATA ULTIMATE SU800 512GB SATA SSD
 - Storage, user: Hitachi UltraStar 1TB SATA HDD 7200RPM
 - Power Supply: Corsair TX550M Gold

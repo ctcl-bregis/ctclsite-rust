@@ -1,6 +1,6 @@
 SVCS1 uses the platform designated "Levoamphetamine" (shorthand "LVA"). The system is currently used for general purpose virtualization.
 
-Specifications:
+Specifications as of May 2, 2024
 
 - System: HP ProLiant BL460c G8
 - CPUs: 2x Intel Xeon E5-2697 v2

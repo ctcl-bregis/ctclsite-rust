@@ -1,9 +1,9 @@
 # Introduction 
 Codenames are used to differentiate between projects and computer hardware. 
 
-The current codename system is used more or less as an inventory system until proper inventory management is set up with either [CAMS](../cams/) or something else. 
+The current codename system is used more or less as an inventory system until proper inventory management is set up with either [CAMS](../cams/) or something else. Codenames for specific devices may be retired or significantly less relied on once an inventory management system is put into place. Hardware design and software projects will continue to have codenames.
 
-Throughout lists below, any codename that has a link and/or is in **bold** is currently in use.
+Throughout lists below, any codename that has a link and/or is in **bold** is currently in use or is assigned to a future device.
 
 # Rules for codenames 
 - As of February 22, 2022, codenames shall no longer be *directly* related to real persons. Though the codename "Paris" will continue to be used by MediaCow Touch 2.
@@ -34,6 +34,8 @@ Another example, with lisdexamfetamine, the INN name is used over L-lysine-dextr
 
 ## Chlorofluorocarbons and Hydrochlorofluorocarbon 
 Starting June 2, 2023, Chlorofluorocarbon and Hydrochlorofluorocarbon codenames are reserved for Intel systems without ECC memory support. This excludes devices originally classified as a Chromebook or Chromebox, as they may get a chromium compound codename. Intel systems with ECC memory support may get a plastics-related codename instead. 
+
+This scheme was originally started to poke fun at the potential environmental effect of Windows 11.
 
 On January 19, 2024, the categories for Chlorofluorocarbons and Hydrochlorofluorocarbons were extended to include Chlorofluoroolefins and Hydrochlorofluoroolefins respectively.
 
@@ -130,10 +132,10 @@ Though unrelated to the hardware in the "Polyvinyls" section above, codenames of
 - [Vinyl Chloride](../srv_vc/) - VC
 
 ## Psychoactives 
-Codenames of psychoactive substances are generally used for server systems.
+Codenames of psychoactive substances are generally used for server systems. All of these systems have ECC memory unless otherwise specififed.
 
 ### Stimulants 
-Stimulant drug-related codenames are generally for use with virtualization and compute servers. This is mainly inspired by the use of stimulants for the treatment of ADHD (Attention Deficit Hyperactivity Disorder) and this is reflected by the use of names of stimulants specifically used for ADHD treatment. 
+Stimulant drug-related codenames are generally for use with virtualization and compute servers. The use of stimulants for codenames of compute servers is based off their use for the treatment of ADHD (Attention deficit hyperactivity disorder). 
 
 #### Amphetamines 
 HP ProLiant blade servers that were given to me on May 5, 2023 use the names of amphetamine-based stimulant chemical compounds.
@@ -148,17 +150,17 @@ Starting September 5, 2023, amphetamine-based stimulant and related prodrug chem
 - Dextromethamphetamine - "DXMA"
 
 #### Methylphenidates 
-Stimulant codenames and related prodrugs in the methylphenidate family are reserved for future use with Supermicro AMD EPYC hardware used in servers.
+Stimulant codenames and related prodrugs in the methylphenidate family are reserved for future use with Supermicro AMD EPYC hardware.
 
 - Dexmethylphenidate - DMP
 - Levomethylphenidate - LMP
 - **Serdexmethylphenidate** - SDX
 
 ### Hallucinogen 
-Hallucinogenic drug-related compounds are generally for use with non-embedded network router/gateway devices.
+Hallucinogenic drug-related compounds are generally for use with non-embedded network router/gateway devices. 
 
 #### Dissociatives
-Hallucinogenic chemical compounds that have a dissociative effect are for use with routers using Intel x86-64 processors.
+Hallucinogenic chemical compounds that have a dissociative effect are for use with routers using Intel x86-64 processors. This theme started with "Dextromethorphan" which was inspired by the 2010 Far East Novement single, "Like a G6".
 
 - [Dextromethorphan](../srv_dxm/) - DXM
 
@@ -166,25 +168,26 @@ Hallucinogenic chemical compounds that have a dissociative effect are for use wi
 Hallucinogenic chemical compounds that have an psychedelic effect are for use with routers using AMD x86-64 processors.
 
 
+
 #### Deliriants
 Hallucinogenic chemical compounds that have a deliriant effect are for use with routers using any ARM-based SoC.
 
 
 ### Sedatives 
-Sedative drug-related compounds are generally for use with non-embedded storage servers.
+Sedative drug-related compounds are generally for use with non-embedded storage servers. Along with "Dextromethorphan" listed in Hallucinogenics above, this theme started with "Promethazine" which was also inspired by the 2010 Far East Novement single, "Like a G6".
 
 - Alprazolam - AZM
 - [Promethazine](../srv_pm/) - PM or PRM
 - Diphenhydramine - DPH
 
 ### Cannabinoids
-Cannabinoids, due to their unique effect, are used for critical mobile devices instead of servers. 
+Cannabinoids, due to their unique effect, are used for critical mobile devices instead of servers.
 
 - [Tetrahydrocannabinol](../pc_thc/) - THC
 - Hexahydrocannabinol - HHC
 - Tetrahydrocannabiphorol - THPC
 - Hexahydrocannabiphorol - HHPC
-- 
+
 ## Thiols 
 Thiol-related codenames are reserved for AMD Ryzen systems without motherboard ECC memory support. AMD Ryzen systems with ECC memory support may get a plastics-related codename instead. This includes devices with customized AMD processors using the Zen series CPU architecture such as the Valve Steam Deck's APU and the APUs used in the Xbox Series X/S and PlayStation 5. Notably, names of chemical compounds that are used in the odorization of gases are used first.
 
@@ -210,7 +213,7 @@ Thiol-related codenames are reserved for AMD Ryzen systems without motherboard E
 - Undecanethiol - UDTH
 
 ## Chromium-based Compounds 
-Chromium-based compound codenames are reserved for x86-64 systems originally designed for Chrome OS such as Chromebooks or Chromeboxes but had the firmware replaced with Coreboot or similar, allowing them to be designated a codename.
+Chromium-based compound codenames are reserved for x86-64 systems originally designed for Chrome OS such as Chromebooks or Chromeboxes but had the firmware replaced with Coreboot or similar, allowing them to be designated a codename. The source of this codename scheme is fairly obvious.
 
 - Chromium Acetate - CrA
 - **Chromium Chloride** - CrC
@@ -268,32 +271,68 @@ MediaCow is a series of projects about the design and assembly of portable media
 The first MediaCow in 2019 received the codename "Syracuse".
 
 ### MediaCow Touch
-MediaCow Touch devices have received codenames relating to real persons that I have met online. Codenames for these devices do not follow any theme.
+MediaCow Touch devices have received codenames relating to real persons that I have met online. Codenames for these devices do not follow any theme. Though MediaCow Touch "Nashville" is considered to be codenamed after a real person, it is also inspired by the business trip in May 2020 to Nashville, Tennessee. 
 
-- [MediaCow Touch (1) - Nashville](../mct_1/)
-- [MediaCow Touch 2 - Paris](../mct_2/)
+- [MediaCow Touch (1) - "Nashville"](../mct_1/)
+- [MediaCow Touch 2 - "Paris"](../mct_2/)
 
 ### MediaCow Touch Mini
 Currently, there is no theme for codenames used for MediaCow Touch Mini devices. An idea for a theme for these devices were codenames of locations within Tennessee, United States.
 
-### [MediaCow Micro](../mcm/)
-Starting December 16, 2023, MediaCow Micro devices would use codenames of locations within central New York State.
+### MediaCow Micro
+Starting December 16, 2023, [MediaCow Micro](../mcm/) devices would use codenames of locations within Central New York State or nearby locations that were personally important in any way. This excludes any codenames under "Generally Reserved Codenames" including Canastota, Oneida and Clay.
+
+Potential codenames for these devices:
+
+- Brewerton
+- Cazenovia
+- Camden
+- Chittenango
+- Cicero
+- Clockville
+- Dewitt
+- Fayetteville
+- Lenox
+- Manlius
+- Minoa
+- Old Forge
+- Oneida Castle
+- Onondaga
+- Rome
+- Sherill
+- Skaneateles
+- Sylvan Beach
+- Sullivan
+- Tully
+- Utica
+- Van Buren
+- Vernon
+- Verona
+- Wampsville
+- Watertown
+- Weedsport
 
 ## Special Cases
 These codenames are reserved for special cases due to personal importance.
 
 ### Fort Myers Beach, Florida, US
-Any device, regardless to whatever series it belongs to, that is the first project that require designing with DDR2 or later memory generations receives the codename "Fort Myers Beach".
+Any device, regardless to whatever series it belongs to, that is the first project that require designing with DDR2 or later memory generations receives the codename "Fort Myers Beach". This is due to how such project would be seen as a significant turning point like the 2022 business trip to Fort Myers Beach, Florida.
 
 ### Generally Reserved Codenames
 These codenames have personal importance but they have not been assigned to any device or idea yet.
 
 - **Canastota**, New York, US
+- **Clay**, New York, US
 - **Curitiba**, Paraná, Brazil
+- **Dresden**, Saxony, Germany
+- **Jacksonville**, Florida, US
 - **Oneida**, New York, US
 - **Richmond**, Virginia, US
 - **Salisbury**, Maryland, US
+- **Sandston**, Virginia, US
 - **Virginia Beach**, Virginia, US
+- **Whitelaw**, New York, US
+- **Solvay**, New York, US
 
 # Software 
 Standalone software projects use the names of animals. Embedded software written for hardware projects do not receive their own codename. Software written for specific hardware not developed by CTCL may receive their own codename.
