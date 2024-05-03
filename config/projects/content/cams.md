@@ -12,7 +12,7 @@ As described in the "Rust" section below, plans to write the software in Python 
 
 The codename for the Python version of CAMS was "Rainbow Trout", starting the [Trout theme for Python web software](../codenames/).
 
-
+There is no "cams-python" repository as it was renamed to cams-rust since there was no meaningful Python code.
 
 ## Rust
 In February 2024, I have started to move to Rust for all web software development. There was the idea to write CAMS in Rust in early 2023 but I never got to it. I plan to start development of CAMS once I have a better understanding of Rust after the completion of the Rust versions of ContactList and SLAG which both use databases.
@@ -21,4 +21,4 @@ With the successes of rewriting [the website](../ctclsite/), [ToDoKiosk](../todo
 
 The codename for the Rust version of CAMS is "Red Rock Crab" and was chosen in early 2023. 
 
-The source code for CAMS is hosted on GitHub: [https://github.com/ctcl-bregis/cams-rust]
+The source code for CAMS is hosted on GitHub: [https://github.com/ctcl-bregis/cams-rust](cams-rust)
