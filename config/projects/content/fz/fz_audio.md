@@ -15,3 +15,5 @@ Potential applications:
  As mentioned before, I do not have a Flipper Zero on hand as of April 23, 2024. Testing of the design is planned to be done using a microcontroller board or evaluation kit with an I2S interface.
 
 By request, [the design files for the TLV320DAC3203 module were uploaded to a GitHub repository](https://github.com/ctcl-bregis/flipper-zero-audio-module/) though the design is unreviewed and is not guaranteed to be functional or have an optimal layout as of April 23, 2024.
+
+In May 2024, I have started to redesign the module in KiCad. This new version moves the I2C pins from pins 13 and 14 to 15 and 16.
