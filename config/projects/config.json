@@ -93,6 +93,9 @@
                     "title": "MediaCow Touch 2 - \"Paris\"",
                     "desc": "Android tablet experiment idea"
                 },
+                "mcm": {
+                    "type": "content"
+                }
                 "mathpad": {
                     "type": "content",
                     "content": "config/projects/content/mathpad.md", 

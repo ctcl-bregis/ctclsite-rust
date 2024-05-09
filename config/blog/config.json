@@ -5,6 +5,7 @@
         "desc": "List of the blog posts on the website"
     },
     "posts": {
+        "21": {"content": "config/blog/content/blogpost_21.md", "icon": "", "icontitle": "", "theme": "gold", "cat": "Update", "date": "May 6, 2024", "title": "Week 18, 2024", "desc": "The eighteenth week of 2024"},
         "20": {"content": "config/blog/content/blogpost_20.md", "icon": "/static/blog/20/blog20_icon.webp", "icontitle": "Project Overcomplicator", "theme": "gold", "cat": "Update", "date": "April 29, 2024", "title": "Week 17, 2024", "desc": "The seventeenth week of 2024"},
         "19": {"content": "config/blog/content/blogpost_19.md", "icon": "/static/blog/19/blog19_icon.webp", "icontitle": "Eclipsed", "theme": "gold", "cat": "Update", "date": "April 22, 2024", "title": "Week 16, 2024", "desc": "The sixteenth week of 2024"},
         "18": {"content": "config/blog/content/blogpost_18.md", "icon": "/static/blog/18/blog18_icon.webp", "icontitle": "Set in stone", "theme": "gold", "cat": "Update", "date": "April 15, 2024", "title": "Week 15, 2024", "desc": "The fifteenth week of 2024"},

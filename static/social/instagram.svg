@@ -13,11 +13,6 @@
      id="defs2" />
   <g
      id="layer1">
-    <path
-       id="rect846-1"
-       style="fill:#ffffff;stroke-width:0.585902"
-       d="M 0,0 V 45.353516 H 45.353516 V 0 Z M 3.7792969,3.7792969 H 41.574219 V 41.574219 H 3.7792969 Z"
-       transform="scale(0.26458333)" />
     <rect
        style="fill:#ffffff;stroke-width:0.0934806"
        id="rect846-1-1"
@@ -53,5 +48,33 @@
        height="4"
        x="3"
        y="4" />
+    <rect
+       style="fill:#ffffff;stroke-width:0.159663"
+       id="rect1029"
+       width="10"
+       height="1"
+       x="1"
+       y="0" />
+    <rect
+       style="fill:#ffffff;stroke-width:0.159663"
+       id="rect1029-2"
+       width="10"
+       height="1"
+       x="0.99999958"
+       y="11" />
+    <rect
+       style="fill:#ffffff;stroke-width:0.159663"
+       id="rect1029-9"
+       width="1"
+       height="10"
+       x="11"
+       y="1" />
+    <rect
+       style="fill:#ffffff;stroke-width:0.159663"
+       id="rect1029-9-6"
+       width="1"
+       height="10"
+       x="-1.7763568e-15"
+       y="1" />
   </g>
 </svg>
