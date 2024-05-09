@@ -94,8 +94,12 @@
                     "desc": "Android tablet experiment idea"
                 },
                 "mcm": {
-                    "type": "content"
-                }
+                    "type": "content",
+                    "content": "config/projects/content/mcm.md",
+                    "theme": "gold",
+                    "title": "MediaCow Micro series",
+                    "desc": "Circuit design challenge about designing many small portable media players"
+                },
                 "mathpad": {
                     "type": "content",
                     "content": "config/projects/content/mathpad.md", 
