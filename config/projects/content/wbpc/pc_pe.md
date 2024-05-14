@@ -21,4 +21,3 @@ Current configuration as of December 19, 2023:
 - Case fans: 3x 120mm Protechnic Magic MGT12012ZB-W25
 - CPU coolers: 2x Supermicro X8-series 1U heatsinks with one DEEP COOL ICE BLADE 200M fan each
 - Power supply: Corsair RM650x
-- OS: Linux Mint 21 XFCE

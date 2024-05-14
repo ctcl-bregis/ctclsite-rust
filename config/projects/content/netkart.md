@@ -39,4 +39,4 @@ Inspired by the Tesla MCU hardware, an AMD Ryzen system may be used for the dash
 ### Engine
 The single-cylinder engine being used at the moment may be switched in the future for a motorcycle or snowmobile engine.
 
-There has been plans to design and build a custom engine control unit and possibly add computerized valve control which may require siginficant modification to the engine head.
+There has been plans to design and build a custom engine control unit using the SP7021 and possibly add computerized valve control which may require siginficant modification to the engine head.

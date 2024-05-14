@@ -15,7 +15,7 @@ The codename for the Python version of CAMS was "Rainbow Trout", starting the [T
 There is no "cams-python" repository as it was renamed to cams-rust since there was no meaningful Python code.
 
 ## Rust
-In February 2024, I have started to move to Rust for all web software development. There was the idea to write CAMS in Rust in early 2023 but I never got to it. I plan to start development of CAMS once I have a better understanding of Rust after the completion of the Rust versions of ContactList and SLAG which both use databases.
+In February 2024, I have started to move to Rust for all web software development. There was the idea to write CAMS in Rust in early 2023 but I did not know how to use Rust then. I plan to start development of CAMS once I have a better understanding of Rust after the completion of the Rust versions of ContactList and SLAG which both use databases.
 
 With the successes of rewriting [the website](../ctclsite/), [ToDoKiosk](../todokiosk/) and [ContactList](../contactlist/) in Rust using the Actix Web framework, I have decided to write CAMS in Rust once the time comes.
 

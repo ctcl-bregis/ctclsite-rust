@@ -2,9 +2,11 @@
 
 This system was put into production on May 13, 2023 while the system was officially given a codename on January 6, 2024.
 
+On May 14, 2024, I have started to plan to have an ARM single-board computer take place of this system for showing the to-do list.
+
 <figure>
     <img src="/static/projects/r12_todokiosk.webp">
-    <figcaption>"Dichlorodifluoromethane" running ToDoKiosk 0.3.2 - January 6, 2024 taken on ASUS Zenfone 9, edited in GIMP</figcaption>
+    <figcaption>"Dichlorodifluoromethane" running ToDoKiosk 0.3.2 - January 6, 2024</figcaption>
 </figure>
 
 ## Configuration

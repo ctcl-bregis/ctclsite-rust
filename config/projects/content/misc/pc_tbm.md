@@ -1,7 +1,5 @@
 "tert-Butylthiol" is the codename given to a small AMD Ryzen system that was originally set up for hardware testing.
 
-Recently, there has been a plan to set the system up for gaming separate from [WBPC1 "Polybutylene Terephthalate"](../pc_pbt) for use outside of the CTCL network due to connection problems on [certain games](https://support.rockstargames.com/articles/206210548/How-to-Resolve-Errors-in-GTA-Online-about-Strict-span-class-highlight-NAT-span-Type) casued by the [network setup](../srv_dxm/).
-
 ## Configuration
 Current specifications as of March 9, 2024:
 
@@ -12,5 +10,3 @@ Current specifications as of March 9, 2024:
 - Storage: 512GB NVMe Samsung PM9A1
 - Power Supply: 550W 80+ Gold Corsair TX550
 - Case: Unknown mini tower case
-- OS: Windows 10
-

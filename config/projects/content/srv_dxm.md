@@ -7,5 +7,3 @@ Specifications as of May 2, 2024:
 - Memory: 8GB (4x2GB) Unbuffered ECC DDR3-1333 ATP Micron
 - Boot storage: 120GB Intel SATA SSD
 - Chassis: Supermicro CSE-813
-
-The codename for this device along with ["Promethazine"](../srv_prm/) are based off the Far East Movement song "Like a G6". See [Codename Guide](../codenames/).

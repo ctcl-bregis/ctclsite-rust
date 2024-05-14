@@ -33,7 +33,7 @@ As covered in the [Codename Guide](../codenames/), these devices would use coden
 | MediaCow Micro P |          | Parallax Propeller 2              | Propeller      | Not Started    |
 | MediaCow Micro Q | Verona   | Infineon XMC4400 series           | ARM Cortex-M4  | Not Started    |
 | MediaCow Micro R |          | Raspberry Pi RP2040               | ARM Cortex-M0+ | Not Started    |
-| MediaCow Micro S |          | STMicroelectronics STM32F767ZIT6  | ARM Cortex-M7  | In Development |
+| MediaCow Micro S |          | STMicroelectronics STM32F767ZIT6  | ARM Cortex-M7  | On Hold        |
 | MediaCow Micro T |          | Texas Instruments TM4C series     | ARM Cortex-M4  | Not Started    |
 | MediaCow Micro U |          | Generalplus/Sunplus 8051          | 8051           | Not Started    |
 | MediaCow Micro V |          | VLSI Solution VS1005(g)           | ???            | Not Started    |
