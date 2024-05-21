@@ -16,7 +16,7 @@ The device consists of a single PCB (circuit board) in the form of a keypad.
 The device uses a four-layer circuit board designed within EasyEDA. 
 
 ## Microcontroller
-The device uses an STMicroelectronics STM32G0B1RCT6 ARM microcontroller. 
+The design uses an STMicroelectronics STM32G0B1RCT6 ARM microcontroller. This is my first circuit design project to use a microcontroller.
 
 ## Display
 The device uses an OLED display for device status and showing math operations. The display chosen was the [Crystalfontz CFAL12864K-W 2.7" 128x64 OLED display module](https://www.crystalfontz.com/product/cfal12864kw-128x64-white-graphic-oled).

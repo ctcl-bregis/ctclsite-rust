@@ -81,6 +81,7 @@ pub struct SectionsPage {
     theme: String,
     title: String,
     desc: Option<String>,
+    introduction: Option<String>,
     sections: IndexMap<String, Section>,
     favicon: Option<String>,
     sectionpixfont: Option<bool>,

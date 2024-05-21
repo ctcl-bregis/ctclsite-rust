@@ -4,13 +4,15 @@ This system was put into production on May 13, 2023 while the system was officia
 
 On May 14, 2024, I have started to plan to have an ARM single-board computer take place of this system for showing the to-do list.
 
+On May 16, 2024, a Raspberry Pi 4B single board computer took place of this desktop for ToDoKiosk. The parts from this desktop are planned to be used in other systems, 
+
 <figure>
     <img src="/static/projects/r12_todokiosk.webp">
     <figcaption>"Dichlorodifluoromethane" running ToDoKiosk 0.3.2 - January 6, 2024</figcaption>
 </figure>
 
 ## Configuration
-Current specifications as of January 6, 2024:
+Current specifications as of January 6, 2024 up to May 16, 2024:
 
 - Motherboard: ASRock AD2550B-ITX
 - CPU: Intel Atom D2550 @ 1.86GHz
@@ -21,8 +23,3 @@ Current specifications as of January 6, 2024:
 - Case: Captec Custom Mini-ITX
 - OS: Debian 11 XFCE
 - Monitor: HannStar Display HANNS.G HL193ABBUFWK1
-
-The use of an x86 system over a common ARM-based single-board computers such as ones from Raspberry Pi or Banana Pi was because these boards often lack a VGA video output. The monitor has a VGA port for its only input. 
-Though video converters exist for HDMI to VGA, being a much lower cost option than building a dedicated x86 system, this was done for more of a learning experience.
-
-The power usage, while not actually have been measured, is expected to be very low compared to other desktop systems making this system suitable for embedded, single-use applications such as running ToDoKiosk.

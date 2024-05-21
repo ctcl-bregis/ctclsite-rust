@@ -1,18 +1,24 @@
 # Changelog
 On February 18, 2024, a rewrite continuing to use Actix was started and the first release was on March 3, 2024.
 
-Starting April 15, 2024, this project will no longer use versions and instead would be continously updated.
-
 ## To-Do
 
 Additions:
 - "altcolor" field for themes
 - "?video=false" parameter to disable the loading of background videos for the about page
 
-Changes:
-- General aesthetic changes
+## 1.7.0 - May 19, 2024
+The website was reverted to the Semantic Versioning format due to the version parameter in Cargo.toml
 
-## April 1, 2024 - April 15, 2024
+Addition:
+- Option for an "Introduction" section on pages made up sections that is not in a box
+
+Changes:
+- Switch from the Pixel-5x5 font to Pixel-12x12 font recently created.
+- Removal of ".pix" class and headers are in the pixel font by default
+- Header sizes are now defined by what class it is under
+
+## 1.6.0 - April 15, 2024
 
 Changes:
 - Enabled markdown table extension
@@ -24,8 +30,6 @@ Changes:
 - JavaScript is now enabled on every page as result of above
 - Code optimizations
 - "mkcontext" function removed from lib.rs and is replaced by a function in every module
-
-# Old Changelog
 
 ## 1.5.5 - March 31, 2024
 

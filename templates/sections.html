@@ -1,7 +1,14 @@
 {% include "header.html" %}
+    <h1 class="title center">{{ title }}</h1>
+    <hr>
     {% if video %}
     <script src="/static/vids.js"></script>
     <button class="playpausebtn-play" onclick = "playpauseVideos();"></button>
+    {% endif %}
+    {% if introduction %}
+    <div class="sectionintro">
+        {{ introduction|safe }}
+    </div>
     {% endif %}
     {% for sectionkey, sectionvalue in sections %}
     {% if sectionvalue.fitscreen %}
@@ -16,7 +23,7 @@
         </video>
         {% endif %}
         <section class="sectioncontent theme-{{ sectionvalue.theme }}">
-        <h2 class="sectiontitle {% if sectionpixfont %}pix{% endif %}">{{ sectionvalue.title }}</h2>
+        <h2 class="sectiontitle">{{ sectionvalue.title }}</h2>
         {{ sectionvalue.content|safe }}
         </section>
     </div>{% endfor %}

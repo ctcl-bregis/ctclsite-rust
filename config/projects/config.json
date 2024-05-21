@@ -190,11 +190,6 @@
                             "theme": "nanblue", 
                             "title": "GAMEPC - \"tert-Butylthiol\""
                         },
-                        "pc_r12": {
-                            "content": "config/projects/content/misc/pc_r12.md", 
-                            "theme": "blue", 
-                            "title": "SIGN1 - \"Dichlorodifluoromethane\""
-                        },
                         "pc_thc": {
                             "content": "config/projects/content/misc/pc_thc.md", 
                             "theme": "red", 
@@ -212,13 +207,8 @@
                     "theme": "orange", 
                     "title": "SVCS", 
                     "desc": "Series of server systems for use with service hosting",
+                    "introduction": "config/projects/content/svcs/svcs_intro.md", 
                     "sections": {
-                        "svcs_intro": {
-                            "content": "config/projects/content/svcs/svcs_intro.md", 
-                            "theme": "orange", 
-                            "title": "Introduction",
-                            "fitscreen": false
-                        },
                         "svcs_lva": {
                             "content": "config/projects/content/svcs/svcs_lva.md", 
                             "theme": "orange", 

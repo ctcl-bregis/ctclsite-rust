@@ -2,7 +2,7 @@
 // File: src/build.rs
 // Purpose: Build needed files
 // Created: February 28, 2024
-// Modified: April 9, 2024
+// Modified: May 19, 2024
 
 // touch grass
 use grass::{Options, OutputStyle};
@@ -85,7 +85,7 @@ fn main() {
         scssvalues.push_str(&format!("$theme: {};\n$bgcolor: {}; \n", format_args!("map.get(map.get($themes, '{}'), 'color')", theme), format_args!("map.get(map.get($themes, '{}'), 'bgcolor')", theme)));
         scssvalues.push_str(&format!("$themergb: {};\n$bgcolorgb: {}; \n", format_args!("map.get(map.get($themes, '{}rgb'), 'color')", theme), format_args!("map.get(map.get($themes, '{}rgb'), 'bgcolor')", theme)));
  
-        themescss = themescss.replace("$$thememap$$", &scssvalues);
+        themescss = themescss.replace("/* $$thememap$$ */", &scssvalues);
  
         let mut themecss = mbase_css.clone();
  

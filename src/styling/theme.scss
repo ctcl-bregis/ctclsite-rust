@@ -2,20 +2,13 @@
 @use "sass:map";
 @use "sass:string";
 
-/* This is the quick hack; this value is to be replaced by build.rs */
-$$thememap$$
+/* $$thememap$$ */
 
 hr {
-    border-top: 2pt solid $theme;
-}
-
-.navbar {
-    background-color: $theme;
+    border-color: $theme;
 }
 
 .menu li a {
-    $btn-height: 16pt;
-
     text-decoration: none;
     color: $bgcolor;
     background-color: $theme;
@@ -33,6 +26,25 @@ a {
 
 li::marker {
     color: $theme;
+}
+
+.navbar ul {
+    background-color: $theme;
+}
+
+.navbar ul li a {
+    color: $bgcolor;
+}
+
+.navbar ul li {
+    color: $bgcolor;
+    background-color: $theme;
+
+    & a:hover {
+        transition: 0.1s linear;
+        background-color: $bgcolor;
+        color: $theme;
+    }
 }
 
 .banner {
@@ -173,17 +185,7 @@ $selectiontypes: "::selection", "::-moz-selection", "::-o-selection", "::-ms-sel
 }
 
 .backbutton {
-    height: 32pt;
-    width: 64pt;
-    font-family: "pix5x5";
-
-    border-width: 2pt;
     border-color: $theme;
-    border-style: solid;
-    border-bottom-style: none;
-    cursor: pointer;
-    font-size: 12pt;
-
     background-color: $theme;
     color: $bgcolor;
 

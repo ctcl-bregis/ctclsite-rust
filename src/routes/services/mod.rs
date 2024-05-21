@@ -2,7 +2,7 @@
 // File: src/services/mod.rs
 // Purpose: Services module
 // Created: March 1, 2024
-// Modified: April 13, 2024
+// Modified: May 20, 2024
 
 use actix_web::{
     web, Error, HttpResponse, Responder, Result,
@@ -44,6 +44,11 @@ fn mkcontext(sitecfg: &SiteCfg, subpage: &SectionsPage) -> Context {
         renderedsections.insert(section.0.to_string(), renderedsection);
     }
 
+    if subpage.introduction.is_some() {
+        let renderedintro = mdpath2html(subpage.introduction.as_ref().unwrap(), false).unwrap();
+        ctx.insert("introduction", &renderedintro);
+    }
+
     ctx.insert("video", &isvideo);
     ctx.insert("sections", &renderedsections);
 
@@ -53,7 +58,7 @@ fn mkcontext(sitecfg: &SiteCfg, subpage: &SectionsPage) -> Context {
 pub async fn services_index(tmpl: web::Data<tera::Tera>, sitecfg: web::Data<SiteCfg>) -> Result<impl Responder, Error> {
     let ctx = mkcontext(sitecfg.get_ref(), sitecfg.servicescfg.get("root").unwrap());
 
-    let s = match tmpl.render("services_main.html", &ctx) {
+    let s = match tmpl.render("sections.html", &ctx) {
         Ok(html) => HttpResponse::Ok().body(html),
         Err(err) => return Ok(HttpResponse::InternalServerError().body(format!("Failed to render the template: {:?}", err)))
     };

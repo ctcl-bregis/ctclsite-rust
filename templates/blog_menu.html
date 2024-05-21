@@ -1,5 +1,5 @@
 {% include "header.html" %}
-    <h1 class="center pix">Blog Posts</h1>
+    <h1 class="title center">{{ title }}</h1>
     <hr>{% for key, value in posts %}{% if value.content != "" %}
     <section class="buttonsection theme-{{ value.theme }}">{% if value.icon == "" %}{% else %}
         <img src="{{ value.icon }}" title="{{ value.icontitle }}">{% endif %}

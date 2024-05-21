@@ -2,7 +2,7 @@
 // File: src/routes/about/mod.rs
 // Purpose: About module
 // Created: February 26, 2024
-// Modified: April 15, 2024
+// Modified: May 19, 2024
 
 use actix_web::{
     web, Error, HttpResponse, Responder, Result
@@ -43,6 +43,11 @@ fn mkcontext(sitecfg: &SiteCfg, subpage: &PageType) -> Context {
                 }
 
                 renderedsections.insert(section.0.to_string(), renderedsection);
+            }
+
+            if subpage.introduction.is_some() {
+                let renderedintro = mdpath2html(subpage.introduction.as_ref().unwrap(), false).unwrap();
+                ctx.insert("introduction", &renderedintro);
             }
 
             ctx.insert("sections", &renderedsections);

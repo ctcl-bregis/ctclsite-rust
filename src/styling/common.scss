@@ -6,8 +6,8 @@
 $sectionmargin: 7pt;
 
 @font-face {
-    font-family: "pix5x5";
-    src: #{url(/static/Pixel-5x5.ttf) format("truetype")};
+    font-family: "pix12x12";
+    src: #{url(/static/Pixel-12x12-condensed.ttf) format("truetype")};
 }
 
 @font-face {
@@ -24,34 +24,46 @@ body {
     margin: 0pt;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
     margin: 8pt;
-    font-weight: bold;
-}
-
-.pix {
-    font-family: "pix5x5";
     font-weight: normal;
-    margin: 8pt;
-    line-height: 100%;
+    font-family: "pix12x12";
+    /* This value is to be overridden. Headers are only for page organization for screen readers and other accessibility technologies. */
+    font-size: 8px;
 }
 
-@for $i from 1 through 6 {
-    $fontsize: 2.66 - (0.33 * $i);
-    h#{$i} {
-        font-size: string.unquote($fontsize + "em");
-    }
+.content h1 {
+    font-size: 40px;;
+}
+
+.content h2 {
+    font-size: 32px;
+}
+
+.content h3 {
+    font-size: 24px;
+}
+
+.content h4 {
+    font-size: 16px;
+}
+
+.content h5 {
+    font-size: 12px;
 }
 
 .center {
     text-align: center;
 }
 
+.title {
+    font-size: 32pt;
+}
+
 hr {
-    border-color: inherit;
     display: block;
-    height: 0;
-    border: 0;
+    border-style: solid;
+    border-width: 1pt;
     margin: 0 0;
     padding: 0;
     margin-block: 0;
@@ -69,20 +81,37 @@ hr {
     margin-block: 0;
 }
 
-.navbar {
-    display: flex;
+.navbar ul {
+    list-style-type: none;
+    overflow: hidden;
     align-items: center;
-    justify-content: space-between;
-    padding-left: 0pt;
-    padding-right: 0pt;
-    padding-top: 4pt;
-    padding-bottom: 4pt;
+    margin: 0;
+    padding: 2pt;
     color: #000000;
 }
 
-.nav-links {
+.navbar ul li {
+    list-style: none;
+    float: left;
+    text-decoration: none;
+}
+
+.navbar ul li a {
+    padding: 4pt;
+    font-family: "pix12x12";
+    display: block;
+    font-size: 16px;
+    text-decoration-line: none;
+}
+
+.navlink {
     padding: 0;
     margin: 0;
+    height: 100%;
+}
+
+.navspacer {
+    width: max-content;
 }
 
 .menu {
@@ -95,11 +124,22 @@ hr {
 }
 
 .menu li a {
-    font-family: "pix5x5";
+    font-family: "pix12x12";
     font-weight: normal;
-    font-size: 12pt;
+    font-size: 16px;
     color: #000000;
     padding: 6pt 6pt;
+}
+
+.backbutton {
+    height: 32pt;
+    width: 64pt;
+    font-family: "pix5x5";
+
+    border-width: 2pt;
+    border-style: solid;
+    border-bottom-style: none;
+    cursor: pointer;
 }
 
 *:before,
@@ -203,6 +243,9 @@ section p {
     padding-top: 4pt;
     padding-bottom: 4pt;
     width: fit-content;
+    overflow-wrap: break-word;
+    font-family: "pix12x12";
+    font-size: 32px;
 }
 
 .sectioncontent p {
@@ -220,6 +263,14 @@ section p {
     margin-bottom: 4pt;
 }
 
+.sectioncontent h2 {
+    font-size: 24px;
+}
+
+.sectioncontent h3 {
+    font-size: 16px;
+}
+
 .sectionitem {
     position: relative;
     width: auto;
@@ -229,23 +280,12 @@ section p {
     margin: $sectionmargin;
 }
 
-.sectiontitle {
-    margin-block: 0;
-    margin: 0;
-    padding: 4pt;
-    width: fit-content;
-    overflow-wrap: break-word;
-    font-size: 18pt;
-    color: #000000;
-}
-
 .buttonsectiontitle {
     margin-block: 0;
     margin: 0;
     padding: 0;
     width: fit-content;
     font-weight: bold;
-    font-size: 14pt;
     overflow-wrap: break-word;
 }
 
@@ -253,6 +293,7 @@ section p {
     padding: 0pt;
     text-decoration: none;
     color: #000000;
+    font-size: 24px;
 }
 
 .buttonsection img {
@@ -282,7 +323,6 @@ section p {
     border-left-style: none;
     border-bottom-style: solid;
     border-top-style: none;
-    font-size: 14pt;
     font-family: $body-font;
     font-weight: bold;
     text-decoration: none;
@@ -294,14 +334,14 @@ section p {
 .buttonsection a h2 {
     overflow: hidden;
     text-align: left;
-    font-size: 14pt;
+    font-size: 24px;
     margin: 0;
 }
 
 .buttonsection a h3 {
     overflow: hidden;
     text-align: left;
-    font-size: 14pt;
+    font-size: 24px;
     margin: 0;
 }
 
@@ -350,7 +390,8 @@ figure figcaption {
 }
 
 .footertext {
-    font-size: 10pt;
+    font-family: "pix12x12";
+    font-size: 16px;
     text-align: center;
 }
 

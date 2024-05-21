@@ -38,6 +38,7 @@ For example, with Serdexmethylphenidate, the IUPAC name `(2S)-3-hydroxy-2-[[1-[[
 
 Another example, with lisdexamfetamine, the INN name is used over L-lysine-dextroamphetamine or lisdexamphetamine because the lisdexamfetamine name is more common.
 
+
 ## Chlorofluorocarbons and Hydrochlorofluorocarbon
 
 Starting June 2, 2023, Chlorofluorocarbon and Hydrochlorofluorocarbon codenames are reserved for Intel systems without ECC memory support. This excludes devices originally classified as a Chromebook or Chromebox, as they may get a chromium compound codename. Intel systems with ECC memory support may get a plastics-related codename instead.
@@ -177,25 +178,25 @@ Stimulant codenames and related prodrugs in the methylphenidate family are reser
 
 ### Hallucinogen
 
-Hallucinogenic drug-related compounds are generally for use with non-embedded network router/gateway devices.
+Hallucinogenic drug-related compounds are generally for use with non-embedded network router/gateway devices. This specific theme started with some server codenemaes being based off the 2010 Far East Movement single, "Like a G6".
 
 #### Dissociatives
 
-Hallucinogenic chemical compounds that have a dissociative effect are for use with routers using Intel x86-64 processors. This theme started with "Dextromethorphan" in early 2023 which was inspired by the 2010 Far East Movement single, "Like a G6".
+Codenames of dissociatives are for use with routers using Intel x86-64 processors.
 
 - [Dextromethorphan](../srv_dxm/) - DXM
 
 #### Psychedelics
 
-Names derived from hallucinogenic chemical compounds that have an psychedelic effect are for use with routers using AMD x86-64 processors.
+Codenames of psychedelics that have an psychedelic effect are for use with routers using AMD x86-64 processors.
 
 #### Deliriants
 
-Hallucinogenic chemical compounds that have a deliriant effect are for use with routers using any ARM-based SoC.
+Codenames of deliriants are for use with routers using any ARM-based SoC.
 
 ### Sedatives
 
-Sedative drug-related compounds are generally for use with non-embedded storage servers. Along with "Dextromethorphan" listed in Hallucinogenics above, this theme started with "Promethazine" which was also inspired by the 2010 Far East Movement single, "Like a G6".
+Sedative drug-related compounds are generally for use with non-embedded storage servers.
 
 - Alprazolam - AZM
 - [Promethazine](../srv_pm/) - PM or PRM
@@ -306,6 +307,11 @@ Exceptions to the requirement of the design requiring a processor of some sort a
 * MediaCow "Syracuse" (2019)
 * MediaCow Touch "Nashville"
 
+## By Chipset
+
+### SP7021
+Starting May 16, 2024, any project using the Sunplus/Tibbo SP7021 SoC or any other Sunplus ARM implementation are to use codenames of locations in **Brazil** starting with "Curitiba" because of its personal value.
+
 ## MediaCow
 
 MediaCow is a series of projects about the design and assembly of portable media players and tablet computers.
@@ -321,11 +327,13 @@ MediaCow Touch devices have received codenames relating to real persons that I h
 
 ### MediaCow Touch Mini
 
-Currently, there is no theme for codenames used for MediaCow Touch Mini devices. An idea for a theme for these devices were codenames of locations within Tennessee, United States.
+Currently, there is no theme for codenames used for MediaCow Touch Mini devices. A lot of these device ideas would receive special codenames.
+
+- MediaCow Touch Mini SP7021 - "Curitiba"
 
 ### MediaCow Micro
 
-Starting December 16, 2023, [MediaCow Micro](../mcm/) devices would use codenames of locations within Central New York State or nearby locations that were personally important in any way. This excludes any codenames under "Generally Reserved Codenames" including Canastota, Oneida and Clay.
+Starting December 16, 2023, [MediaCow Micro](../mcm/) devices would use codenames of locations within Central New York State or nearby locations that were personally important in any way. This excludes any codenames under "Generally Reserved Codenames" such as Canastota, Oneida and Clay.
 
 Potential codenames for these devices:
 
@@ -370,17 +378,22 @@ The codename "Fort Myers" was used for the [MathPad](../mathpad/) project in 202
 
 ### Generally Reserved Codenames
 
-These codenames have personal importance but they have not been assigned to any device or idea yet.
+These codenames are reserved for general purpose
 
 - Canastota, New York, US
 - Clay, New York, US
+  - Likely would be used with something DRAM related
 - Curitiba, Paraná, Brazil
+  - Planned to be used with a MediaCow Touch Mini device using the SP7021
 - Dresden, Saxony, Germany
 - Jacksonville, Florida, US
+- Knoxville, Tennessee, US
+  - May be used with a device similar to MediaCow Touch (1)
 - Oneida, New York, US
 - Richmond, Virginia, US
 - Salisbury, Maryland, US
 - Sandston, Virginia, US
+  - Likely would be used with something DRAM related
 - Virginia Beach, Virginia, US
 - Whitelaw, New York, US
 - Solvay, New York, US
