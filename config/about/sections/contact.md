@@ -18,7 +18,7 @@ These are available upon legitimate request:
 - Phone Number
 - Personal Email
 
-## Friends' Websites
+### Friends' Websites
 
 - [auroranssolis.github.io](https://auroranssolis.github.io/)
 - [dirtmanaudio.com](https://dirtmanaudio.com/)

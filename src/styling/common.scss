@@ -26,38 +26,35 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     margin: 8pt;
+    margin-bottom: 6pt;
     font-weight: normal;
     font-family: "pix12x12";
-    /* This value is to be overridden. Headers are only for page organization for screen readers and other accessibility technologies. */
-    font-size: 8px;
 }
 
-.content h1 {
-    font-size: 40px;;
+$headersizes: (
+    1: 48,
+    2: 40,
+    3: 32,
+    4: 24,
+    5: 16,
+    6: 8
+);
+
+@for $i from 1 to 6 {
+    .content h#{$i} {
+        font-size: map.get($headersizes, $i)px;
+    }
+    .sectioncontent h#{$i} {
+        font-size: map.get($headersizes, $i)px;
+    }
 }
 
-.content h2 {
-    font-size: 32px;
-}
-
-.content h3 {
-    font-size: 24px;
-}
-
-.content h4 {
-    font-size: 16px;
-}
-
-.content h5 {
-    font-size: 12px;
+.title {
+    font-size: 48px;
 }
 
 .center {
     text-align: center;
-}
-
-.title {
-    font-size: 32pt;
 }
 
 hr {
