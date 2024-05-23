@@ -7,7 +7,7 @@ The theming and codename is inspired by a certain online friend that I met in la
 As of February 4, 2024, there may be a chance that I would start the development of MediaCow Touch 2 if my current software projects are successful.
 
 # Hardware
-MediaCow Touch 2's hardware plans has changed over time.
+MediaCow Touch 2's hardware plans has changed over time with the latest plan now using an x86-64 processor.
 
 ## System on Module
 For MediaCow Touch 2 "Paris", I did not plan to design around the SoC itself and instead I made use of readily available System on Modules (SoM).
@@ -36,11 +36,43 @@ In May 2024, I have found out about the [LattePanda Mu](https://www.lattepanda.c
 
 Using an x86 processor has its benefits including better software support and laptop-like performance.
 
-## Graphics
-Due to the amount of PCIe lanes available on the LattePanda Mu, an MXM3.0 connector may be added for a dedicated GPU module. This may add a great amount of complexity to the project. It is likely that a dedicated GPU would not be added.
+## Carrier Board
+The most complex part of the project is the custom carrier board for the compute module. The carrier board may have four to six layers. 
 
-## Storage
-The device may make use of an NVMe SSD using a standard M.2 connector.
+### Storage
+The device may make use of an NVMe SSD using a standard M.2 connector for boot and user storage.
+
+### Connectivity
+A feature that I plan to have unique with MediaCow Touch 2 to off-the-shelf tablet devices is more physical connectors. 
+
+#### Ports
+Like MediaCow Touch "Nashville", the device would have full-size USB Type-A ports and an RJ-45 Ethernet jack.
+
+Full list of connectors:
+
+- At least one USB Type-A with USB 3.0 support
+- Micro SD card slot
+- RS232 connector
+- RJ-45 10/100/1000 Ethernet
+- Standard 3.5mm headphone jack
+- **More TBD**
+
+The device may have a single USB Type-C port for charging and data. It is most likely that I would implement USB Power Delivery for higher voltage charging.
+
+#### Wi-Fi and Bluetooth
+Like many laptop computers, especially older ones, MediaCow Touch 2 may provide Wi-Fi and Bluetooth only through standard M.2 modules.
+
+This allows the Wi-Fi and Bluetooth radios to be swapped or disconnected for user security and privacy.
+
+### Audio
+As mentioned under Ports, the device would include a 3.5mm headphone jack. 
+
+A separate audio CODEC IC would be used, there are many options for this IC and currently one has not been chosen yet.
+
+### Camera and Microphone
+There may be one or two cameras connected with USB to the system on module. These cameras may be found in existing laptop devices. The camera modules found in laptops often have microphones.
+
+There would be hardware shut-off switches for the cameras and microphones.
 
 ## Display
 Since 2022, I planned to use a 10.1 inch display with capacitive touch and a resolution of at least 1280x800.
@@ -49,35 +81,6 @@ Likely the display would have an LVDS interface and there would be a bridge IC o
 
 ## Case
 The current plan is to use white 3D printed PETG for the case.
-
-## Connectivity
-A feature that I plan to have unique with MediaCow Touch 2 to off-the-shelf tablet devices is more physical connectors. 
-
-### Ports
-Like MediaCow Touch "Nashville", the device would have full-size USB Type-A ports and an RJ-45 Ethernet jack.
-
-Full list of connectors:
-
-- At least one USB Type-A with USB 3.0 support
-- Micro SD card slot
-- Debug UART (serial)
-- RJ-45 10/100/1000 Ethernet
-- Standard 3.5mm headphone jack
-
-The device may have a single USB Type-C port for charging and data. It is most likely that I would implement USB Power Delivery for higher voltage charging.
-
-### Wi-Fi and Bluetooth
-Like many laptop computers, especially older ones, MediaCow Touch 2 may provide Wi-Fi and Bluetooth only through a standard M.2 module connected to the system by likely USB or another interface.
-
-This allows the Wi-Fi and Bluetooth radios to be swapped or disconnected for user security and privacy.
-
-## Audio
-As mentioned under Ports, the device would include a 3.5mm headphone jack. 
-
-A separate audio CODEC IC would be used, there are many options for this IC and currently one has not been chosen yet.
-
-## Camera
-There may be one or two cameras connected with USB to the system on module. These cameras may be found in existing laptop devices.
 
 # Software
 

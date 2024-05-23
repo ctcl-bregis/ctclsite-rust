@@ -1,4 +1,4 @@
-This website itself is one of my ongoing projects.
+This page serves as the project page for the website while being the colophon.
 
 Internally and for development purposes, I use the name "ctclsite", "ctclsite-python" for the Python Flask/Django version and "ctclsite-rust" for the Rust Actix version.
 

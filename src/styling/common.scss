@@ -6,8 +6,18 @@
 $sectionmargin: 7pt;
 
 @font-face {
+    font-family: "pix16x16";
+    src: #{url(/static/Pixel-16x16-condensed.ttf) format("truetype")};
+}
+
+@font-face {
     font-family: "pix12x12";
     src: #{url(/static/Pixel-12x12-condensed.ttf) format("truetype")};
+}
+
+@font-face {
+    font-family: "pix7x7";
+    src: #{url(/static/Pixel-7x7-condensed.ttf) format("truetype")};
 }
 
 @font-face {
@@ -28,30 +38,41 @@ h1, h2, h3, h4, h5, h6 {
     margin: 8pt;
     margin-bottom: 6pt;
     font-weight: normal;
-    font-family: "pix12x12";
 }
 
 $headersizes: (
-    1: 48,
+    1: 64,
     2: 40,
     3: 32,
     4: 24,
-    5: 16,
-    6: 8
+    5: 18,
+    6: 9
+);
+
+$headerfont: (
+    1: "pix12x12",
+    2: "pix12x12",
+    3: "pix12x12",
+    4: "pix12x12",
+    5: "pix7x7",
+    6: "pix7x7"
 );
 
 @for $i from 1 to 6 {
+    h#{$i} {
+        font-size: map.get($headersizes, $i)px;
+        font-family: map.get($headerfont, $i);
+    }
     .content h#{$i} {
         font-size: map.get($headersizes, $i)px;
+        font-family: map.get($headerfont, $i);
     }
     .sectioncontent h#{$i} {
         font-size: map.get($headersizes, $i)px;
+        font-family: map.get($headerfont, $i);
     }
 }
 
-.title {
-    font-size: 48px;
-}
 
 .center {
     text-align: center;
@@ -387,8 +408,8 @@ figure figcaption {
 }
 
 .footertext {
-    font-family: "pix12x12";
-    font-size: 16px;
+    font-family: "pix7x7";
+    font-size: 9px;
     text-align: center;
 }
 
