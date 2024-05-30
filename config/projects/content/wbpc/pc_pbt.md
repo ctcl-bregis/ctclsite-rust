@@ -10,11 +10,11 @@ Current specifications as of May 2, 2024:
 - Motherboard: ASRock B550M Pro4
 - CPU: AMD Ryzen 5 5600
 - Memory: 32GB (2x16GB) DDR4-3200 1Rx8 Unbuffered ECC Micron MTA9ASF2G72AZ-3G2B1
-- Graphics: ASRock Challenger D AMD Radeon RX 6700 XT 12GB GDDR6
+- Graphics: ASRock Challenger D AMD Radeon RX 6700 XT 12GB GDDR6 (Samsung)
 - Storage, Windows and Linux root: 1TB NVMe PCIe 4.0 SSD SK hynix Platinum P41
 - Storage, Linux mounted as /home: 512GB NVMe PCIe 3.0 SSD Samsung PM9A1
 - Power Supply: Corsair RM850x
-- CPU Cooler: Cooler Master Hyper 212 EVO V2, with a single 120mm Protechnic Magic MGT12012ZB-W25
+- CPU Cooler: Cooler Master Hyper 212 EVO V2, with a single 120mm Protechnic Magic MGT12012ZB-W25 in place of the provided fan
 - Case Fans: 3x 120mm Protechnic Magic MGT12012ZB-W25
 - Case: Cooler Master N200
 
@@ -47,10 +47,12 @@ The Corsair RM850x was used out of the [Polyethylene](../pc_pe/) build. It may n
 ### CPU Cooler
 At first, an included AMD Wraith Stealth cooler was used. Due to noise and cooling concerns, a Cooler Master Hyper 212 EVO V2 was later installed with one of the extra case fans taking place of the included fan.
 
+As of May 23, 2024, CPU temperatures often reach 50-55 celsius on heavy workloads such as compiling large amounts of Rust crates (ctclsite-rust uses 395 as of 1.7.0). It is likely that not enough thermal paste was used.
+
 ### Case Fans
 Four 120mm Protechnic Magic MGT12012ZB-W25 fans were found on eBay. Three were installed on the case while one was used for the CPU cooler.
 
-These fans are highly effective but are loud. If I decide to, I may switch the fans for ones that are more quiet and use the current fans in servers or other projects.
+These fans are highly effective but are loud. If I decide to, I may switch the fans for ones that are more quiet and use the fans in servers or other projects.
 
 ### Case
 As described in the first section, the case was chosen for its small size, low cost and lack of a side window.

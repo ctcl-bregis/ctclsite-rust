@@ -1,4 +1,4 @@
-// ctclsite-rust - CTCL 2022-2024
+// ctclsite-rust - CTCL 2020-2024
 // File: src/services/mod.rs
 // Purpose: Services module
 // Created: March 1, 2024
@@ -24,7 +24,7 @@ fn mkcontext(sitecfg: &SiteCfg, subpage: &SectionsPage) -> Context {
     ctx.insert("themename", &subpage.theme);
     ctx.insert("themecolor", &sitecfg.themes.get(&subpage.theme).unwrap().color);
     ctx.insert("desc", &subpage.desc);
-    ctx.insert("sectionpixfont", &subpage.sectionpixfont);
+    ctx.insert("keywords", &subpage.keywords);
 
     let mut renderedsections: IndexMap<String, Section> = IndexMap::new();
     let mut isvideo: bool = false;

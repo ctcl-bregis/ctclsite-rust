@@ -1,4 +1,4 @@
-// ctclsite-rust - CTCL 2022-2024
+// ctclsite-rust - CTCL 2020-2024
 // File: src/middleware/mod.rs
 // Purpose: Middleware for redirecting a URL to another
 // Created: April 6, 2024

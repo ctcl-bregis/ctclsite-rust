@@ -1,5 +1,5 @@
 /*
- * ctclsite-rust - CTCL 2022-2024
+ * ctclsite-rust - CTCL 2020-2024
  * File: static/clientinfo.js
  * Purpose: Client-side data collection script
  * Created: December 16, 2023

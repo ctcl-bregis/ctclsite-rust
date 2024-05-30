@@ -1,8 +1,8 @@
-// ctclsite-rust - CTCL 2022-2024
+// ctclsite-rust - CTCL 2020-2024
 // File: src/routes/blog/mod.rs
 // Purpose: Blog module
 // Created: March 1, 2024
-// Modified: April 10, 2024
+// Modified: May 29, 2024
 
 use actix_web::{
     web, Error, HttpResponse, Responder, Result,
@@ -25,6 +25,7 @@ fn mkcontext(sitecfg: &SiteCfg, subpage: &str) -> Context {
         ctx.insert("themename", &subpagetype.theme);
         ctx.insert("themecolor", &sitecfg.themes.get(&subpagetype.theme).unwrap().color);
         ctx.insert("desc", &subpagetype.desc);
+        ctx.insert("keywords", &subpagetype.keywords);
     } else {
         // The page should be known to exist at this point
         let subpagetype = sitecfg.blogcfg.posts.get(subpage).unwrap();
@@ -38,6 +39,7 @@ fn mkcontext(sitecfg: &SiteCfg, subpage: &str) -> Context {
         ctx.insert("themename", &subpagetype.theme);
         ctx.insert("themecolor", &sitecfg.themes.get(&subpagetype.theme).unwrap().color);
         ctx.insert("desc", &subpagetype.desc);
+        ctx.insert("keywords", &subpagetype.keywords);
 
         ctx.insert("rendered", &mdpath2html(&subpagetype.content, true).unwrap());        
     }

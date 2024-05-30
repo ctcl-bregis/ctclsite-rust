@@ -1,8 +1,8 @@
-// ctclsite-rust - CTCL 2022-2024
+// ctclsite-rust - CTCL 2020-2024
 // File: src/routes/linklist/mod.rs
 // Purpose: Module for link lists
 // Created: March 13, 2024
-// Modified: April 10, 2024
+// Modified: May 28, 2024
 
 use actix_web::{
     web, Error, HttpResponse, Responder, Result

@@ -1,65 +1,53 @@
-**Date of last modification:** April 10, 2024
+**Date of last modification:** May 29, 2024
 
-# Definitions
-"CTCL" refers to the operator of this website, Brayden Regis.
+## Definitions
 
-- "CTCL Hardware" - Server hardware and other computer systems managed by CTCL (Brayden Regis)
+- "CTCL" refers to the operator of this website and other services; Brayden Regis.
+- "CTCL Hardware" - Server hardware and other computer systems managed and physically accessible by CTCL (Brayden Regis)
 - "CTCL-managed" - Software, hardware or virtual hardware, managed by CTCL (Brayden Regis)
 
-# What is collected
+## What is collected
 The following are the kinds of data that is collected by the website and other services.
 
 By accessing this website and other services hosted by CTCL, you agree to these terms.
 
-## The Website
-Information that is automatically collected on the server side when an user visits any webpage consists of:
+### The Website
+Information that is automatically collected when an user visits any webpage consists of:
 
 - Time and date of the request
 - IP address
 - Referring URL
 - What page was accessed
 - Browser User Agent
-
-Most pages use a client-side script to attempt to collect the following
-
-- Device time zone
-- Device's external IP address
-- Device display information: Resolution, color depth and ratio
-- Device GPU information
-- Device CPU core count (what is available to the browser)
-- Device memory (RAM) size (what is available to the browser)
-- Amount of touchscreen points available, if present
-- Device platform (Kernel and CPU architecture)
-- Browser window size
-- Status of the Do Not Track header (the website does not try to track the user anyway so this is ignored)
-- Browser languages
-- Browser "product" (almost always "Gecko")
-- Browser build number (almost always "20030107")
-- Browser User Agent
-- Browser connectivity status
-- PDF viewer availability
-- Browser vendor
-- Hashed HTML canvas fingerprint
+- Data about the device and browser provided by the browser
+- Hashed browser fingerprint
 
 This information may be provided by the web browser or the device and is not collected from any other means.
 
-## Content Use
-Examples of how CTCL content is used and shared publicly on other platforms may be recorded. This includes but is not limited to: screenshots including messages sent by CTCL, use of source code or designs in other projects,
+The website is open source software therefore the [source code is available for review](../projects/ctclsite/).
 
-Once again, this data is not shared with any third party and is instead used to help observe how and if my content is being used and is benefiting others.
-
-## Publicly accessible information
+### Outside of the website
 CTCL may retain publicly posted information from other platforms indefinitely, even if the original post was deleted or made unavailable to the public. This includes messages and social media posts.
 
 This may include personal information such as location, name, age and phone numbers.
 
-## Game Servers and Other CTCL Hosted Services
+#### Content Use
+Examples of how CTCL content is used and shared publicly on other platforms may be recorded. This includes but is not limited to: screenshots including messages sent by CTCL, use of source code or designs in other projects,
+
+Once again, this data is not shared with any third party and is instead used to help observe how and if my content is being used and is benefiting others.
+
+#### Direct messages
+All direct messages such as from email and instant messaging may be recorded and stored indefinitely.
+
+Messages sent to CTCL with images or other message content that is known to be deleted shortly after being viewed may be downloaded or captured by screenshot and then stored indefinitely.
+
+### Game Servers and Other CTCL Hosted Services
 Log data and user content from game servers and other public services hosted on CTCL hardware or on a CTCL-managed VPS may be collected and stored indefinitely. This includes IP addresses, usernames and the dates of login.
 
-## CTCL managed chat services and communications
+### CTCL managed chat services and communications
 Messages in chat groups including Discord "servers" with CTCL-managed chat bots may be recorded and stored indefinitely. As stated before, if these chat services are hosted by CTCL, all data from these chat services may be recorded and stored indefinitely.
 
-### Discord bots
+#### Discord bots
 Messages and other data in Discord "servers" with CTCL-managed bots such as [SLAG](../projects/slag/) may be recorded and stored indefinitely.
 
 This includes but not limited to:
@@ -76,14 +64,14 @@ This includes but not limited to:
     - Roles
     - Join date
     - Account creation date
-    - User flags (see Discord documentation: https://discord.com/developers/docs/resources/user)
+    - User flags (see Discord documentation: https://discord.com/developers/docs/resources/user
     - Username changes
     - Profile picture and profile picture changes
 
 This data is only collected if a user is in the same guild ("server") as the bot and is provided by the user.
 
-# How the information is used
-Data listed above, under "Information that is collected", may be stored indefinitely on servers within the United States of America, currently within the states of New Jersey and Virginia. This data is not shared with any third party.
+## How the information is used
+Data listed above, under "Information that is collected", may be stored indefinitely on servers within the United States of America, currently within Ashburn, Virginia and Midlothian, Virginia.
 
 Collecting such information is used for, including but not limited to:
 
@@ -94,18 +82,22 @@ Collecting such information is used for, including but not limited to:
 - User Identification
 - Communications
 
-## Analytics data use
+### Data Sharing
+Data collected by this website or any other CTCL-manged service is not shared or sold to any third party. 
+
+### Analytics data use
 Data that is collected by the website itself may be used in reports with personally identifiable data removed.
 
 For example, I may mention in a blog post that "From March 25, 2024 to March 29, 2024, 5.26% of webpage visits were from the Instagram app excluding bots and ".
 
-## User Identification and Technical Support
+### User Identification
 I may use information from the website logs along with data collected from other methods such as social media to identify users. This data may be stored using CTCL-developed software such as ContactList.
 
-# Third Party Websites
+
+## Third Party Websites
 This website may mention other websites or contain links to other websites. CTCL cannot take responsibility for personal information collected on these third party websites, nor does CTCL monitor or accept responsibility for the accuracy or content of these other websites.
 
-# Data Requests
+## Data Requests
 One can request to get a report of what data was collected about them, if there is any data. 
 
 Check the Contact section on the main page for methods of contacting CTCL.

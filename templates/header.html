@@ -1,22 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta content="The website is already in dark theme" name="darkreader-lock">
+        <meta content="ctclsite-rust - CTCL 2020-2024" name="generator">
         <title>{{ title }}</title>
         <meta property="og:title" content="{{ title }}">
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="{{ favicon|safe }}">{% if desc and desc != "" %}
-        <meta property="og:description" content="{{ desc }} - CTCL">
-        <meta name="description" content="{{ desc }} - CTCL">{% endif %}
-        <meta property="og:site_name" content="CTCL">
-        <meta property="og:locale" content="en_US">
-        <meta content="{{ themecolor }}" data-react-helmet="true" name="theme-color">
-        <meta name="generator" content="CTCL Website Backend">
-        <meta name="author" content="CTCL">
-        <link rel="icon" type="image/x-icon" href="{{ favicon|safe }}">
+        <meta property="twitter:title" content="{{ title }}">
+        <meta name="description" content="{{ desc }}">
+        <meta name="og:description" content="{{ desc }}">
+        <meta name="twitter:description" content="{{ desc }}">
+        <meta name="keywords" content={{ keywords }}>
+        <link rel="stylesheet" href="/static/base.css">
         <link rel="stylesheet" href="/static/{{ themename }}.css">
+        <link rel="stylesheet" media="print" href="/static/print.css">
+        <link rel="icon" href="{{ favicon }}" type="image/x-icon" sizes="any">
         <script>
             console.log("Hello there!\n Want to learn more about how this website was made? Check out https://ctcl-tech.com/projects/ctclsite/");
         </script>
@@ -24,4 +23,9 @@
         <script type="module" src="/static/clientinfo.js"></script>
     </head>
     <body>
-{% include "navbar.html" %}
+        <header>
+            {% include "navbar.html" %}
+            <h1>{{ title }}</h1>
+        </header>
+        <hr>
+

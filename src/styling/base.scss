@@ -1,0 +1,169 @@
+@use "sass:color";
+@use "sass:map";
+@use "sass:string";
+@use "src/styling/themes";
+
+/* Fonts */
+@font-face {
+    font-family: "pix14x14";
+    src: #{url(/static/Pixel-14x14-condensed.ttf) format("truetype")};
+}
+
+@font-face {
+    font-family: "pix12x12";
+    src: #{url(/static/Pixel-12x12-condensed.ttf) format("truetype")};
+}
+
+@font-face {
+    font-family: "pix7x7";
+    src: #{url(/static/Pixel-7x7-condensed.ttf) format("truetype")};
+}
+
+@font-face {
+    font-family: "play";
+    src: #{url(/static/Play-Regular.ttf) format("truetype")};
+}
+
+/* - Variables - */
+
+/* margin to use on most type of sections */
+$sectionmargin: 7pt;
+
+/* Header Configuration */
+@mixin h1values {
+    font-family: "pix12x12";
+    font-size: 64px;
+}
+
+@mixin h2values {
+    font-family: "pix12x12";
+    font-size: 48px;
+}
+
+@mixin h3values {
+    font-family: "pix12x12";
+    font-size: 32px;
+}
+
+@mixin h4values {
+    font-family: "pix12x12";
+    font-size: 16px;
+}
+
+@mixin h5values {
+    font-family: "pix7x7";
+    font-size: 9px;
+}
+
+@mixin h6values {
+    font-family: "pix7x7";
+    font-size: 9px;
+}
+
+
+/* ------------ */
+
+/* Base Tags */
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    font-family: "pix12x12";
+    font-size: 16px;
+}
+
+hr {
+    width: 100%;
+    border-left: none;
+    border-right: none;
+    border-bottom-style: solid;
+    border-top-style: solid;
+}
+
+/* Pixel fonts are already "bold" by nature */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    margin-top: 8pt;
+    margin-bottom: 8pt;
+}
+
+header h1 {
+    @include h1values;
+    margin: 4pt;
+}
+
+header {
+    text-align: center;
+}
+
+/* Navbar */
+nav ul {
+    list-style-type: none;
+    overflow: hidden;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+}
+
+nav ul li {
+    list-style: none;
+    float: left;
+    text-decoration: none;
+}
+
+nav ul li a {
+    border-width: 2px;
+    border-style: solid;
+    padding: 4px;
+    display: block;
+    @include h4values;
+    text-decoration-line: none;
+}
+
+/* Content Pages */
+.content {
+    margin: 4pt;
+}
+
+
+.content h1 {
+    @include h1values;
+}
+
+.content h2 {
+    @include h2values;
+}
+
+.content h3 {
+    @include h3values;
+}
+
+.content h4 {
+    @include h4values;
+}
+
+.content h5 {
+    @include h5values;
+}
+
+.content h6 {
+    @include h6values;
+}
+
+.content p {
+    font-family: "play";
+}
+
+/* Section Color Scheme */
+@each $theme, $themedata in themes.$themes {
+    .theme-#{$theme} {
+        color: map.get($themedata, "theme");
+    }
+}
+
+

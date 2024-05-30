@@ -7,6 +7,23 @@ Additions:
 - "altcolor" field for themes
 - "?video=false" parameter to disable the loading of background videos for the about page
 
+## 1.8.0 - [UNRELEASED]
+
+Changes:
+- Almost complete rewrite of HTML and styling
+- Rewrite of build.rs 
+- Base styling is now in a separate file instead of being included in each theme, significantly decreasing the size of each theme stylesheet
+
+Additions:
+- HTML minification
+- Page keywords
+- Pages optimized for printing for anyone who still does that
+- Embeds supposedly fixed
+
+To-Do:
+- Blog Categories
+- Blog Sort
+
 ## 1.7.0 - May 19, 2024
 The website was reverted to the Semantic Versioning format due to the version parameter in Cargo.toml
 

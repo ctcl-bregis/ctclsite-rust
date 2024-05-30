@@ -1,4 +1,4 @@
-// ctclsite-rust - CTCL 2022-2024
+// ctclsite-rust - CTCL 2020-2024
 // File: src/lib.rs
 // Purpose: Module import and commonly used functions
 // Created: November 28, 2022
@@ -25,8 +25,8 @@ use serde::{Deserialize, Serialize};
 pub struct Theme {
     // Main theme color
     color: String,
-    // Background color on buttons that are hovered
-    bgcolor: String,
+    // Text color on theme color
+    fgcolor: String,
     // Used for animations where the theme color transistions to this color
     altcolor: Option<String>
 }
@@ -49,6 +49,7 @@ pub struct ContentPage {
     theme: String,
     title: String,
     desc: String,
+    keywords: Option<String>,
     // This is the path to the markdown file before its value is replaced by the rendered document
     content: String,
     // Optional link to favicon 
@@ -63,6 +64,7 @@ pub struct BlogContentPage {
     theme: String,
     title: String,
     desc: String,
+    keywords: Option<String>,
     // This is the path to the markdown file before its value is replaced by the rendered document
     content: String,
     // Optional link to favicon 
@@ -81,6 +83,7 @@ pub struct SectionsPage {
     theme: String,
     title: String,
     desc: Option<String>,
+    keywords: Option<String>,
     introduction: Option<String>,
     sections: IndexMap<String, Section>,
     favicon: Option<String>,
@@ -111,6 +114,7 @@ pub struct LinklistPage {
     theme: String,
     title: String,
     desc: String,
+    keywords: Option<String>,
     background: String,
     menu: Vec<LinklistList>,
     favicon: Option<String>,
@@ -121,6 +125,7 @@ pub struct MetaPage {
     theme: String,
     title: String,
     desc: String,
+    keywords: Option<String>,
     favicon: Option<String>
 }
 
@@ -134,6 +139,7 @@ pub struct BlogPage {
 pub struct ProjectsPageCategory {
     title: String,
     desc: String,
+    keywords: Option<String>,
     theme: String,
     subpages: IndexMap<String, PageType>
 }

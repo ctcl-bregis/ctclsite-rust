@@ -1,6 +1,11 @@
 I have experience with multiple jobs in different fields.
 So far I have been employed by these companies.
 
+- Resume (single-page): [Download](/static/resume.pdf)
+
+- Extended resume: [Download](/static/extresume.pdf)
+
+
 ### 2nd Life Inc.
 
 - Employed: July 2020 - April 2023  
@@ -22,3 +27,4 @@ Main responsibility: Assist with building consulting when needed
 
 - Use of [Matterport software](https://matterport.com) and [hardware](https://matterport.com/pro2) to create virtual 3D spaces
 - Use of [Xactimate software](https://www.verisk.com/property-estimating-solutions/) to create sketches of buildings of varying complexity
+

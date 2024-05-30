@@ -1,5 +1,5 @@
 #!/bin/bash
-# ctclsite-rust - CTCL 2022-2024
+# ctclsite-rust - CTCL 2020-2024
 # File: mkrelease
 # Purpose: Builds and gathers files
 # Created: March 4, 2024

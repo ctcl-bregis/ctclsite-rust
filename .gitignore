@@ -28,3 +28,4 @@ release.tar.gz
 static/*.js
 static/*.css
 static/favicons/default*
+src/styling/_themes.scss

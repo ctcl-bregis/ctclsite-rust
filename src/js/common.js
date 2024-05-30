@@ -1,4 +1,4 @@
-// ctclsite-rust - CTCL 2022-2024
+// ctclsite-rust - CTCL 2020-2024
 // File: common.js
 // Purpose: Commonly loaded JavaScript script for various functions, see comments below
 // Created: January 8, 2024

@@ -1,0 +1,1 @@
+Since I have gotten a Flipper Zero, I have planned to customize the firmware for my own use while still being compatible with the mobile app and most existing apps.

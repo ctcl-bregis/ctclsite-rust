@@ -1,8 +1,8 @@
-// ctclsite-rust - CTCL 2022-2024
+// ctclsite-rust - CTCL 2020-2024
 // File: src/routes/projects/mod.rs
 // Purpose: Projects module
 // Created: March 1, 2024
-// Modified: May 19, 2024
+// Modified: May 28, 2024
 
 use actix_web::{
     web, Error, HttpResponse, Responder, Result,
@@ -27,6 +27,7 @@ fn mkcontext(sitecfg: &SiteCfg, subpage: &str) -> Context {
         ctx.insert("themename", &rootpage.theme);
         ctx.insert("themecolor", &sitecfg.themes.get(&rootpage.theme).unwrap().color);
         ctx.insert("desc", &rootpage.desc);
+        ctx.insert("keywords", &rootpage.keywords);
     } else {
         // The page should be known to exist at this point
         let projectscfg = &sitecfg.projectscfg.clone().getpages();
@@ -43,7 +44,7 @@ fn mkcontext(sitecfg: &SiteCfg, subpage: &str) -> Context {
                 ctx.insert("themename", &subpage.theme);
                 ctx.insert("themecolor", &sitecfg.themes.get(&subpage.theme).unwrap().color);
                 ctx.insert("desc", &subpage.desc);
-                ctx.insert("sectionpixfont", &subpage.sectionpixfont);
+                ctx.insert("keywords", &subpage.keywords);
 
                 let mut renderedsections: IndexMap<String, Section> = IndexMap::new();
                 let mut isvideo: bool = false;
@@ -82,6 +83,7 @@ fn mkcontext(sitecfg: &SiteCfg, subpage: &str) -> Context {
                 ctx.insert("themename", &subpage.theme);
                 ctx.insert("themecolor", &sitecfg.themes.get(&subpage.theme).unwrap().color);
                 ctx.insert("desc", &subpage.desc);
+                ctx.insert("keywords", &subpage.keywords);
 
                 ctx.insert("rendered", &mdpath2html(&subpage.content, true).unwrap());
             }

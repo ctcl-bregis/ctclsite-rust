@@ -1,13 +1,3 @@
 {% include "header.html" %}
-    <h1 class="title center">{{ title }}</h1>
-    <hr>{% for key, value in posts %}{% if value.content != "" %}
-    <section class="buttonsection theme-{{ value.theme }}">{% if value.icon == "" %}{% else %}
-        <img src="{{ value.icon }}" title="{{ value.icontitle }}">{% endif %}
-        <section class="buttontextsection">
-            <a href="{{ key }}/" class="buttonsectiontitle"><h2>{{ value.title }}</h2></a>
-            <p class="buttonsectioninfo">Date: {{ value.date }} - Category: {{ value.cat }}</p>
-            <p class="buttonsectiondesc">{{ value.desc }}</p>
-        </section>
-    </section>{% endif %}{% endfor %}
-    <hr>
+
 {% include "footer.html" %}

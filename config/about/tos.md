@@ -1,2 +1,9 @@
-**Date of last modification: April 10, 2024**
+**Date of last modification: May 25, 2024**
 
+# Privacy Policy
+The privacy policy is at a different page. 
+
+[Link to Privacy Policy](../privacy/)
+
+
+# 
