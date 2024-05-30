@@ -5,7 +5,6 @@ So far I have been employed by these companies.
 
 - Extended resume: [Download](/static/extresume.pdf)
 
-
 ### 2nd Life Inc.
 
 - Employed: July 2020 - April 2023  
