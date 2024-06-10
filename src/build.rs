@@ -2,14 +2,12 @@
 // File: src/build.rs
 // Purpose: Build needed files
 // Created: February 28, 2024
-// Modified: May 29, 2024
+// Modified: June 5, 2024
 
 // touch grass
 use grass::{Options, OutputStyle};
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
-use std::fmt::write;
-use std::fs::read;
 use std::fs::File;
 use std::io::Read;
 use std::io::Error;
@@ -18,7 +16,6 @@ use std::result::Result;
 use minifier::js::minify;
 extern crate image;
 use image::{Rgb, RgbImage};
-use chrono::Utc;
 
 #[derive(Deserialize, Serialize)]
 struct Theme {
@@ -56,10 +53,17 @@ pub fn file_exists(path: &str) -> bool {
     Path::new(path).exists()
 }
 
+pub fn mkdir(path: &str) -> Result<(), Error> {
+    if !std::path::Path::new(path).exists() {
+        std::fs::create_dir(path).expect("Could not create directory static/favicons/");
+    }
+    Ok(())
+}
+
 fn main() {
     let sitecfg: Sitecfg = serde_json::from_str(&read_file("config/config.json").unwrap()).unwrap();
 
-    // Step 1: Generate _themes.scss
+    // Step 1.1: Generate _themes.scss
     let mut maprows: String = String::from("");
     let themeiter: Vec<(String, Theme)> = sitecfg.themes.into_iter().collect();
 
@@ -82,28 +86,42 @@ fn main() {
     let thememap = &format!("$themes: (\n{}\n);", maprows);
     std::fs::write("src/styling/_themes.scss", thememap).unwrap();
 
-    // Step 2: Build base CSS
+    // Step 1.2: Build base CSS
     let grass_options: Options = Options::default().style(OutputStyle::Compressed);
     let basescss = read_file("./src/styling/base.scss").unwrap();
     let basecss = &grass::from_string(basescss, &grass_options).unwrap();
 
     std::fs::write("./static/base.css", basecss).unwrap();
 
-    // Step 3: Build theme CSS
+    // Step 1.3: Build theme CSS
     let themescss = read_file("./src/styling/theme.scss").unwrap();
+    mkdir("static/themes/").unwrap();
     for (name, _value) in &themeiter {
         // Separate variable to store the modified SCSS so theme.scss is not loaded every time
         let themescssvar = &themescss.clone().replace("/* $themename */", &format!("$themename: '{}';", name));
         let themecss = &grass::from_string(themescssvar, &grass_options).unwrap();
-        std::fs::write(format!("static/{}.css", name), themecss).unwrap();
+        std::fs::write(format!("static/themes/{}.css", name), themecss).unwrap();
+    }
+
+    // Step 2: Minimize and move JavaScript
+    let paths = std::fs::read_dir("src/js/").unwrap();
+
+    for path in paths {
+        let upath = path.unwrap().file_name();
+        let filename = upath.to_str().unwrap();
+        let jsfile: String;
+        if filename.ends_with(".js") {
+            jsfile = read_file(&format!("src/js/{}", filename)).expect("Error reading src/js/clientinfo.js");
+            let minjsfile = minify(&jsfile).to_string();
+            std::fs::write(&format!("static/{}", filename), minjsfile).unwrap();
+        }
     }
 
     // Step 3: Generate default favicons
-    if !std::path::Path::new("static/favicons/").exists() {
-        std::fs::create_dir("static/favicons/").expect("Could not create directory static/favicons/");
-    }
- 
+    mkdir("static/favicons/").unwrap();
+
     for (key, value) in &themeiter {
+        // It is unlikely that default favicons would change so to reduce build time and disk writes, generation is skipped if the favicon already exists.
         if !file_exists("static/favicons/default_{key}.ico") {
             let mut image = RgbImage::new(16, 16);
             for x in 0..16 {

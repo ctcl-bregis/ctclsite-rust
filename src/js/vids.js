@@ -2,7 +2,7 @@
 // File: common.js
 // Purpose: Commonly loaded JavaScript script for various functions, see comments below
 // Created: January 8, 2024
-// Modified: March 4, 2024
+// Modified: June 10, 2024
 
 function playVideos() {
     let videos = document.querySelectorAll("video");
@@ -10,20 +10,22 @@ function playVideos() {
         video.play();
     });
 }
+
 function pauseVideos() {
     let videos = document.querySelectorAll("video");
     videos.forEach((video) => {
         video.pause();
     });
 }
+
 function playpauseVideos() {
-    if (document.querySelector(".playpausebtn-pause")) {
-        let btn = document.querySelector(".playpausebtn-pause");
+    if (document.querySelector(".vidbtn-play")) {
+        let btn = document.querySelector(".vidbtn-play");
         playVideos();
-        btn.className = "playpausebtn-play";
+        btn.className = "vidbtn-pause";
     } else {
-        let btn = document.querySelector(".playpausebtn-play");
+        let btn = document.querySelector(".vidbtn-pause");
         pauseVideos();
-        btn.className = "playpausebtn-pause";
+        btn.className = "vidbtn-play";
     }
 }

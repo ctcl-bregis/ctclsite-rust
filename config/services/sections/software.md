@@ -1,14 +1,14 @@
-## Language Experience
+### Language Experience
 I have started to learn about software development and programming in late 2021 in order to start working on [CAMS](../projects/cams/).
 
 Up to February 2024, I mainly used the Python programming language for server-side and client-side software projects because of its popularity and ease of use, allowing myself to complete projects faster. I have begun to use the Rust programming language for more types of projects since then. I can learn and use other programming languages when needed.
 
-## Web Design
+### Web Design
 I have extensive experience in developing and maintaining web applications and websites. I can design and develop websites and web software of varying complexities by hand, with web frameworks or with web editors.
 
 This entire website is designed, developed and maintained by myself.
 
-### Technologies
+#### Technologies
 
 For backend, I have experience in the following:
 
@@ -28,7 +28,7 @@ For frontend, I have experience in the following:
 - JavaScript - [ctclsite-python and ctclsite-rust](../projects/ctclsite/)
 - jQuery - [ContactList](../projects/contactlist/)
 
-## Embedded Software
+### Embedded Software
 I have some experience in writing firmware for microcontroller-based devices and building custom embedded Linux images.
 
 - C
@@ -39,12 +39,12 @@ I have some experience in writing firmware for microcontroller-based devices and
 - Python
   - Some experimentation with the Raspberry Pi Pico - ARMv6-M
 
-## Other Software
+### Other Software
 
-### Game Design
+#### Game Design
 With programming for games, I so far just have experience in creating mods with the C# programming language for games using Unity.
 
-### Discord applications
+#### Discord applications
 I have experience in creating "bots" for the Discord messaging service using either pyCord or serenity-rs.
 
 So far, this has been just [SLAG](../projects/slag/).

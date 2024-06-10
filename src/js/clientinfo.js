@@ -1,10 +1,8 @@
-/*
- * ctclsite-rust - CTCL 2020-2024
- * File: static/clientinfo.js
- * Purpose: Client-side data collection script
- * Created: December 16, 2023
- * Modified: March 15, 2024
- */
+// ctclsite-rust - CTCL 2020-2024
+// File: static/clientinfo.js
+// Purpose: Client-side data collection script
+// Created: December 16, 2023
+// Modified: June 5, 2024
 
 var urlPath = "";
 try {

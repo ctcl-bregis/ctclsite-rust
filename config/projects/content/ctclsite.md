@@ -1,30 +1,20 @@
-This page serves as the project page for the website while being the colophon.
+This page is the colophon for the website.
 
-Internally and for development purposes, I use the name "ctclsite", "ctclsite-python" for the Python Flask/Django version and "ctclsite-rust" for the Rust Actix version.
+## About
+This website serves mainly as my online portfolio and blog. 
 
-# Features
-The website is sort of like a static site generator though currently, HTML is generated on each page load instead of the entire website being built then hosted using a webserver like nginx or Apache.
+### Development History
+From 2020 to 2021, my website was made up of just HTML and CSS that I wrote by hand. The webpages were hosted on GitHub Pages initially then was moved to DigitalOcean some time in 2021 when I got a domain name. It was not until December 2021-January 2022 that I wrote a version of the website that has backend code. 
 
-Some parts of the website rely on a backend anyway, such as logging.
+The switch to a version that uses backend code to generate content was mainly due to the former RAMList pages that had amounts of tabular data that was too large to be managed by hand. RAMList was the main reason why I switched to using Rust for the website in November 2022 which turned out to compensate for the highly inefficient method of retrieving and processing data. [RAMList was discontinued in August 2023](../../blog/10/) for multiple reasons.
 
-## Analytics and Logging
-Unlike many websites, the CTCL website makes use of custom-made logging and data collection instead of relying on a third-party service such as Google Analytics. This ensures that collected data is only seen by the website manager; me and to be more transparent about how the data is collected and processed.
+It is possible for me to just make something that generates static HTML pages to served by the webserver. However, there has been plans for features that would not be possible with just HTML and JS such as improved logging, view counters and dynamically generated embeds for other websites.
 
-With ctclsite-python v5 and ctclsite-rust v1, a JavaScript file is used to collect data about the browser and device.
+In February 2024, I have decided to switch to Rust for server (web) software development.
 
-More about how the website logs browser information and how data is collected outside of the website can be found at the [Privacy Policy](/privacy/).
+#### Versions
+The current version of the website is **ctclsite-rust v1**.
 
-# Development
-The website's backend and frontend code was written by myself and is open source. For licensing of specific content, see [Licensing](../../licensing/).
-
-The source code to the Rust version of the website can be found here: [GitHub](https://github.com/ctcl-bregis/ctclsite-rust)
-
-The source code to the former Python version can be found here: [GitHub](https://github.com/ctcl-bregis/ctclsite-python)
-
-## History
-The Rust version of the website has the codename "Atlantic Blue Crab", while the Python version has the codename "Apache Trout".
-
-The website has gone under seven rewrites since its introduction in December 2021/January 2022. The first, second and third version was written using the Python Flask framework. The fourth and seventh was written using Rust Actix. The fifth and sixth used Python Django.
 
 | Website Version    | Programming Language | Web Framework | Styling    | Development Started | Released          | Development System(s)                                                                                                         |
 | ------------------ | -------------------- | ------------- | ---------- | ------------------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------- |
@@ -34,46 +24,9 @@ The website has gone under seven rewrites since its introduction in December 202
 | ctclsite-python v3 | Python               | Flask         | Manual CSS | May 15, 2023        | May 20, 2023      | [Polybutylene Terephthalate](../wbpc/#pc_pbt)                                                                                 |
 | ctclsite-python v4 | Python               | Django        | SCSS       | August 26, 2023     | October 20, 2023  | [Polybutylene Terephthalate](../wbpc/#pc_pbt)                                                                                 |
 | ctclsite-python v5 | Python, JavaScript   | Django        | SCSS       | November 21, 2023   | December 22, 2023 | [Polybutylene Terephthalate](../wbpc/#pc_pbt)                                                                                 |
-| **ctclsite-rust v1**   | Rust, JavaScript     | Actix Web     | SCSS       | February 18, 2024   | March 3, 2024     | [Polybutylene Terephthalate](../wbpc/#pc_pbt), [Polymethylmethacrylate](../wbpc/#pc_pmma), [Tetrahydrocannabinol](../pc_thc/) (content only), [Polycarbonate](../pc_pc/) (content only) |
+| ctclsite-rust v1   | Rust, JavaScript     | Actix Web     | SCSS       | February 18, 2024   | March 3, 2024     | [Polybutylene Terephthalate](../wbpc/#pc_pbt), [Polymethylmethacrylate](../wbpc/#pc_pmma)                                     |
 
-### Before ctclsite-python v1
-In early to mid-2020, I have made some sort of a website using GitHub Pages that was eventually moved to a DigitalOcean instance.
+### Hosting
+Currently, as of June 10, 2024, the website is hosted by Orace Cloud using their 'Oracle Cloud Free Tier' which consists of a VPS with a single vCPU and 1GB of memory on an AMD EPYC 7551P. Up to May 2024, Vultr was used for US$6/month for a single vCPU 1GB on an AMD EPYC Zen 2 (7xx2 series). Before Vultr, I used DigitalOcean for US$7/month for the same specifications.
 
-Up to late 2021 with the introduction of ctclsite-python, all edits were done with plain HTML and CSS.
-
-### ctclsite-python v1
-ctclsite-python v1 was the first version of the website that did not have all of the HTML content written by hand and instead had content handled by Python Flask with the Jinja2 templating engine. Before this, the website was just a collection of HTML and CSS files. 
-
-Development was presumably started in December 2021 and the release was on January 7, 2022.
-
-This version was very slow with many optimization steps I was unaware of due to my absolute beginner knowledge of Python and programming in general.
-
-### ctclsite-python v2
-ctclsite-python v2 was a rewrite that retained much of the content. Most of the backend code was rewritten because of the original code being nearly unreadable and inefficient.
-
-Development was during 2022 and was released shortly after within the same year.
-
-### ctclsite-rust v0
-As a way to teach myself the Rust programming language after being aware of its features by colleagues. I rewrote the website in Rust, using the Actix web framework. This version seemed much faster due to the inefficent nature of how RAMList loaded content. I did not have an in-depth knowledge of Rust, which kept me from being able to maintain the website, leading to another Python rewrite described below.
-
-### ctclsite-python v3
-ctclsite-python v3 was a much needed rewrite of the website, adding significant performance improvements. This version continued to use Python Flask. I went back to Python due to my inability to maintain the Rust version of the website because of my limited knowledge of the Rust programming language.
-
-Development was started on May 15, 2023 and was quickly released on May 20, 2023.
-
-### ctclsite-python v4
-This version of the website was started after being made aware of the misleading nature of RAMList on August 26, 2023. I was originally going to have a update to v3 but most of the code was "unreadable" and was rewritten in the Django web framework. Django was used because I was already used to using Django from the development of ContactList and CAMS.
-
-### ctclsite-python v5
-ctclsite-python v5 has minor changes over the backend code of the website and was originally planned to be version "4.2.0" of the website. Instead this release was a great redesign of the general look of the website and finally added client-side scripts.
-
-This release was finally put into production on December 22, 2023.
-
-### ctclsite-rust v1
-ctclsite-rust v1 is the **current** version of the website.
-
-On February 18, 2024, I have set up the ctclsite-rust repository for a potential rewrite using Rust.
-
-This rewrite was done not because it needed it in any way but was instead used as an opportunity to reintroduce myself to Rust in a much more familiar environment of web design before taking on more difficult projects such as writing [SLAG](../slag/) in Rust.
-
-On March 3, 2024, version 1.1.0 of ctclsite-rust was deployed. Like the former Rust version, the Actix web framework is used.
+There are multiple reasons why I don't host the website on one of my servers such as [SVCS1 "Levoamphetamine"](../../projects/svcs/). For one, security: With the residential network setup that is provided, I do not expect the setup to be as secure as a datacenter installation. Another reason, as mentioned before, I just have a residential internet setup with a dynamic IP that can change at any time without warning and it is possible that Verizon would not allow web hosting on residential networks however self-hosting Minecraft servers using my domain name pointing to the home network has been successful. Using a VPS service is easier in many ways and data privacy is not a concern since the VPS just hosts this website. There has been the idea for me to self-host this website but it is likely that would not happen any time soon.

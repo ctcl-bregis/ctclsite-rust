@@ -26,7 +26,7 @@ hr {
 
 /* Navbar */
 nav ul {
-    background-color: #F0D000;
+    background-color: $themecolor;
 }
 
 nav ul li a {
@@ -39,6 +39,15 @@ nav ul li a {
         background-color: $fgcolor;
         color: $themecolor;
     }
+}
+
+/* Play/Pause Button */
+.vidbtn-play {
+    background-color: $themecolor;
+}
+
+.vidbtn-pause {
+    background-color: $themecolor;
 }
 
 /* Scrollbar */
@@ -145,6 +154,7 @@ nav ul li a {
 @supports (scrollbar-color: auto) {
     html {
       scrollbar-color: $themecolor scale-color($themecolor, $lightness: -80%);
+      scrollbar-width: 16px;
     }
 }
 

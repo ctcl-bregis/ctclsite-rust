@@ -1,28 +1,36 @@
 # Changelog
 On February 18, 2024, a rewrite continuing to use Actix was started and the first release was on March 3, 2024.
 
-## To-Do
+## 1.9.0 - [UNRELEASED]
 
-Additions:
-- "altcolor" field for themes
-- "?video=false" parameter to disable the loading of background videos for the about page
+To-Do:
+- Implement memcached
+- New logging system
+- URL query strings for disabling video load or pausing on load
+- Blog Categories
+- Blog Sort
 
-## 1.8.0 - [UNRELEASED]
+
+## 1.8.0 - June 10, 2024
+This update covers some new features though the largest change is the rewrite of HTML templates and SCSS.
+
+Aesthetic changes:
+- Implementation of custom-made pixel fonts for headers and buttons
 
 Changes:
 - Almost complete rewrite of HTML and styling
+  - Significantly much less reliance on CSS class and id for styling
+  - Consistent styling
+  - Theme color map is shared across theme.scss and base.scss in a separate file named "_theme.scss" that is automatically generated before compilation by build.rs
+  - Pages optimized for printing for anyone who still does that
+- Built theme files are now under the directory "static/themes/" instead of the static root ("static/")
 - Rewrite of build.rs 
 - Base styling is now in a separate file instead of being included in each theme, significantly decreasing the size of each theme stylesheet
 
 Additions:
 - HTML minification
 - Page keywords
-- Pages optimized for printing for anyone who still does that
 - Embeds supposedly fixed
-
-To-Do:
-- Blog Categories
-- Blog Sort
 
 ## 1.7.0 - May 19, 2024
 The website was reverted to the Semantic Versioning format due to the version parameter in Cargo.toml

@@ -8,22 +8,26 @@
             "techsupport": {
                 "title": "Technical Support", 
                 "theme": "gold",
-                "content": "config/services/sections/techsupport.md"
+                "content": "config/services/sections/techsupport.md",
+                "fitscreen": false
             },
             "software": {
                 "title": "Software",
                 "theme": "gold",
-                "content": "config/services/sections/software.md"
+                "content": "config/services/sections/software.md",
+                "fitscreen": false
             },
             "insurance": {
                 "title": "Building Consulting", 
                 "theme": "gold",
-                "content": "config/services/sections/insurance.md"
+                "content": "config/services/sections/insurance.md",
+                "fitscreen": false
             },
             "contact": {
                 "title": "Contact",
                 "theme": "gold",
-                "content": "config/services/sections/contact.md"
+                "content": "config/services/sections/contact.md",
+                "fitscreen": false
             }
         }
     }

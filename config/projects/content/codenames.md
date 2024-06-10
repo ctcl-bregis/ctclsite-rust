@@ -22,17 +22,20 @@ Throughout lists below, any codename that has a link and/or is in **bold** is cu
 - Codenames stay linked to the motherboard even if the device's application changes such as the reuse of parts from a workstation in a server. An example of this is [Polyethylene](../pc_pe/).
 
 ## Workstation Codenames
+Codenames given to specific systems are different from hardware project codenames as codenames for such projects are linked to the project idea itself and not a specific device/prototype.
 
-Chemical compounds are used for any device codename. This is different from hardware project codenames as codenames for such projects are linked to the project idea itself and not a specific device/prototype. Due to the length of many of the codenames, a shorthand version is given in this format: `<codename> - <shorthand codename>`
+Starting with "Polyethylene Terephthalate" in 2021, chemical compounds are used for any device codename.
 
-- The existence of a chemical compound must be verified to exist
+With chemical compound names:
+- The existence of a chemical compound must be verified
 - Starting February 6, 2024, codenames relating to chiral chemical compounds must use the names of its optical rotations
 
 Codenames do not differeniate devices on a network; they are not hostnames or part of hostnames. Hostnames are short descriptions of what purpose the device currently serves and are seen on the network by that name, such as "SVCS" for virtualization systems.
 
 ### Names to Use
-
 Chemical compounds may have multiple ways to name their chemical structures. Generally, the most common chemical name for a substance is used.
+
+Due to the length of many of the codenames, a shorthand version is given in this format: `<codename> - <shorthand codename>`
 
 For example, with Serdexmethylphenidate, the IUPAC name `(2S)-3-hydroxy-2-[[1-[[(2R)-2-[(1R)-2-methoxy-2-oxo-1-phenylethyl]piperidine-1-carbonyl]oxymethyl]pyridin-1-ium-3-carbonyl]amino]propanoate` could not be used for a device codename for multiple reasons.
 

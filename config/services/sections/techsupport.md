@@ -1,10 +1,9 @@
 I offer various kinds of technology support and consulting remotely and within the areas of Bon Air, Chesterfield, Midlothian, Moseley, Rockwood, Hallsboro, Richmond in Virginia.
 
-## Small Business and Home Technology Support
+### Small Business and Home Technology Support
 I have experience in the management and setup of Small Office, Home Office (SOHO) environments from personal, educational and work experience.
 
-## Desktop and Server Assembly
-
+### Desktop and Server Assembly
 I have much experience in the planning, assembly and maintenance of desktop computers, laptops, servers and similar devices from personal, educational and work experience, especially with my former employment at [2nd Life Inc. in Richmond, Virginia](https://2ndlifeinc.com/).
 
 <figure style="float: left">
@@ -17,17 +16,17 @@ I have much experience in the planning, assembly and maintenance of desktop comp
     <figcaption><a href="../../projects/srv_amp/">"Lisdexamfetamine"</a> hardware platform being prepared for DRAM testing - October 9, 2023</figcaption>
 </figure>
 
-This includes gaming computers which I have built many for myself and others.
+This includes desktops which I have built many for myself and others.
 
 <figure style="float: left">
     <img src="/static/services/kingtux_pc_mar272023.webp">
     <figcaption>Desktop gaming computer built for a classmate on March 27, 2023 - March 27, 2023</figcaption>
 </figure>
 
-## System Administration
-I have extensive experience in the setup and maintainence of computer server hardware and software including Linux and FreeBSD distributions.
+### System Administration
+I have extensive experience in the setup and maintainence of server hardware and software including Linux and FreeBSD distributions.
 
-### Game server setup
+#### Game server setup
 I have experience in the setup of local and remote servers for various games including the popular sandbox game, Minecraft.
 
 <figure style="float: left">

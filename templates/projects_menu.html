@@ -1,3 +1,20 @@
 {% include "header.html" %}
-
+{% for pcatid, pcat in menu %}
+    <section class="buttonsection section-{{ pcat.theme }}">
+        <h2>{{ pcat.title }}</h2>
+        {% for subpageid, subpage in pcat.subpages %}
+        <section class="pagebutton section-{{ subpage.theme }}">
+            {% if subpage.icon %}
+            <img src="{{ subpage.icon }}"{% if subpage.icontitle %} alt="{{ subpage.icontitle }}"{% endif %}>
+            {% endif %}
+            <a href="{{ subpageid }}/">
+                <section class="pagebuttoncontent">
+                    <h3>{{ subpage.title }}</h3>
+                    <p>{{ subpage.desc }}</p>
+                </section>
+            </a>
+        </section>
+        {% endfor %}
+    </section>
+{% endfor %}
 {% include "footer.html" %}

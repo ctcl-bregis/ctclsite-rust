@@ -239,14 +239,14 @@
                     "type": "content",
                     "content": "config/projects/content/srv_prm.md", 
                     "theme": "green", 
-                    "title": "WBSD - \"Promethazine\"", 
+                    "title": "WBSD", 
                     "desc": "Dedicated storage server"
                 },
                 "srv_dxm": {
                     "type": "content",
                     "content": "config/projects/content/srv_dxm.md", 
                     "theme": "green", 
-                    "title": "ROUTER - \"Dextromethorphan\"", 
+                    "title": "ROUTER", 
                     "desc": "Router and firewall server"
                 }
             }

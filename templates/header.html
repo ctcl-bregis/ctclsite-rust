@@ -13,7 +13,7 @@
         <meta name="twitter:description" content="{{ desc }}">
         <meta name="keywords" content={{ keywords }}>
         <link rel="stylesheet" href="/static/base.css">
-        <link rel="stylesheet" href="/static/{{ themename }}.css">
+        <link rel="stylesheet" href="/static/themes/{{ themename }}.css">
         <link rel="stylesheet" media="print" href="/static/print.css">
         <link rel="icon" href="{{ favicon }}" type="image/x-icon" sizes="any">
         <script>
@@ -21,11 +21,12 @@
         </script>
         <script type="module" src="/static/common.js"></script>
         <script type="module" src="/static/clientinfo.js"></script>
+        {% if video %}<script src="/static/vids.js"></script>{% endif %}
     </head>
     <body>
         <header>
             {% include "navbar.html" %}
-            <h1>{{ title }}</h1>
+            <h1><p>{{ title }}</p></h1>
         </header>
         <hr>
 
