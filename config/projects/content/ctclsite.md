@@ -3,6 +3,12 @@ This page is the colophon for the website.
 ## About
 This website serves mainly as my online portfolio and blog. 
 
+### Compatibility
+Ensuring compatibility with most browsers is a difficult feat. I try my best to have the website look as intended on both mobile and desktop browsers.
+
+- Desktop test browser: Ungoogled Chromium 125.0.6422.112 - 1920x1080 23", 1024x1280 17" (portrait)
+- Mobile test browser: Vivaldi 6.7.3335.149 - 2400x1080 5.9" (portrait and landscape)
+
 ### Development History
 From 2020 to 2021, my website was made up of just HTML and CSS that I wrote by hand. The webpages were hosted on GitHub Pages initially then was moved to DigitalOcean some time in 2021 when I got a domain name. It was not until December 2021-January 2022 that I wrote a version of the website that has backend code. 
 
@@ -10,7 +16,7 @@ The switch to a version that uses backend code to generate content was mainly du
 
 It is possible for me to just make something that generates static HTML pages to served by the webserver. However, there has been plans for features that would not be possible with just HTML and JS such as improved logging, view counters and dynamically generated embeds for other websites.
 
-In February 2024, I have decided to switch to Rust for server (web) software development.
+In February 2024, I have decided to switch to Rust for server and web software development.
 
 #### Versions
 The current version of the website is **ctclsite-rust v1**.
@@ -29,4 +35,4 @@ The current version of the website is **ctclsite-rust v1**.
 ### Hosting
 Currently, as of June 10, 2024, the website is hosted by Orace Cloud using their 'Oracle Cloud Free Tier' which consists of a VPS with a single vCPU and 1GB of memory on an AMD EPYC 7551P. Up to May 2024, Vultr was used for US$6/month for a single vCPU 1GB on an AMD EPYC Zen 2 (7xx2 series). Before Vultr, I used DigitalOcean for US$7/month for the same specifications.
 
-There are multiple reasons why I don't host the website on one of my servers such as [SVCS1 "Levoamphetamine"](../../projects/svcs/). For one, security: With the residential network setup that is provided, I do not expect the setup to be as secure as a datacenter installation. Another reason, as mentioned before, I just have a residential internet setup with a dynamic IP that can change at any time without warning and it is possible that Verizon would not allow web hosting on residential networks however self-hosting Minecraft servers using my domain name pointing to the home network has been successful. Using a VPS service is easier in many ways and data privacy is not a concern since the VPS just hosts this website. There has been the idea for me to self-host this website but it is likely that would not happen any time soon.
+There are multiple reasons why I don't host the website on one of my servers such as [SVCS1 "Levoamphetamine"](../../projects/svcs/). For one, security: With the residential network setup that is provided, I do not expect the setup to be as secure as a datacenter installation. Another reason, as mentioned before, I just have a residential internet setup with a dynamic IP that can change at any time without warning and it is possible that Verizon would not allow web hosting on residential networks. Using a VPS service is easier in many ways and data privacy is not a concern since the VPS just hosts this website. There has been the idea for me to self-host this website but it is likely that would not happen any time soon.

@@ -5,6 +5,11 @@
 
 /* Fonts */
 @font-face {
+    font-family: "pix18x18";
+    src: #{url(/static/Pixel-18x18-condensed.ttf) format("truetype")};
+}
+
+@font-face {
     font-family: "pix14x14";
     src: #{url(/static/Pixel-14x14-condensed.ttf) format("truetype")};
 }
@@ -30,53 +35,54 @@ $sectionmargin: 8px;
 /* Border width of sections and page buttons */
 $sectionborder: 2px;
 /* Minimum height of blog post and project links */
-$entryheight: 128px;
+$entryheight: 25vw;
 
-/* Header Configuration */
-@mixin h1values {
-    font-family: "pix12x12";
+/* Font configurations */
+
+@mixin pix18_2 {
+    font-family: "pix18x18";
     font-size: 48px;
     font-smooth: never;
     -webkit-font-smoothing: none;
 }
 
-@mixin h2values {
+@mixin pix18_1 {
+    font-family: "pix18x18";
+    font-size: 24px;
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+}
+
+@mixin pix12_2 {
     font-family: "pix12x12";
     font-size: 32px;
     font-smooth: never;
     -webkit-font-smoothing: none;
 }
 
-@mixin h3values {
-    font-family: "pix12x12";
-    font-size: 32px;
-    font-smooth: never;
-    -webkit-font-smoothing: none;
-}
-
-@mixin h4values {
+@mixin pix12_1 {
     font-family: "pix12x12";
     font-size: 16px;
     font-smooth: never;
     -webkit-font-smoothing: none;
 }
 
-@mixin h5values {
+@mixin pix7_1 {
     font-family: "pix7x7";
     font-size: 9px;
     font-smooth: never;
     -webkit-font-smoothing: none;
 }
 
-@mixin h6values {
-    font-family: "pix7x7";
-    font-size: 9px;
-    font-smooth: never;
-    -webkit-font-smoothing: none;
+@mixin play {
+    font-family: "play";
+    font-size: 10pt;
 }
 
+/* Thing to use for having headers appear as the "tabs" on sections */
 @mixin tabify {
     width: fit-content; 
+    height: fit-content;
     border-right: none;
     margin: 0;
     padding: 4px;
@@ -95,7 +101,7 @@ footer {
 }
 
 footer p {
-    @include h4values;
+    @include pix12_1;
     padding: 3px;
     margin-top: 8pt;
     margin-bottom: 8pt;
@@ -135,8 +141,7 @@ figure video {
 }
 
 figure figcaption {
-    font-size: 10pt;
-    font-family: "Play";
+    @include play;
 }
 
 /* Pixel fonts are already "bold" by nature */
@@ -147,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header h1 {
-    @include h1values;
+    @include pix18_2;
     display: flex;
     justify-content: center;
     margin: 6px;
@@ -178,7 +183,7 @@ nav ul li a {
     border-style: solid;
     padding: 4px;
     display: block;
-    @include h4values;
+    @include pix12_1;
     text-decoration-line: none;
 }
 
@@ -188,31 +193,31 @@ nav ul li a {
 }
 
 .content h1 {
-    @include h1values;
+    @include pix18_2;
 }
 
 .content h2 {
-    @include h2values;
+    @include pix12_2;
 }
 
 .content h3 {
-    @include h3values;
+    @include pix18_1;
 }
 
 .content h4 {
-    @include h4values;
+    @include pix12_1;
 }
 
 .content h5 {
-    @include h5values;
+    @include pix7_1;
 }
 
 .content h6 {
-    @include h6values;
+    @include pix7_1;
 }
 
 .content p {
-    font-family: "play";
+    @include play;
 }
 
 .content ul {
@@ -220,7 +225,7 @@ nav ul li a {
 }
 
 .content ul li {
-    font-family: "play";
+    @include play;
     list-style-type: square;
     padding: 0;
 }
@@ -230,7 +235,7 @@ nav ul li a {
 }
 
 /* Styling common to sections */
-.section {
+section {
     position: relative;
     width: auto;
     overflow: hidden;
@@ -240,16 +245,21 @@ nav ul li a {
     background: rgba(0,0,0,.6);
 }
 
-.section .content {
+section .content {
     margin: $sectionmargin;
 }
 
-.section h2 {
-    @include h3values;
+section h2 {
+    @include pix18_1;
     @include tabify;
 }
 
-.section video {
+section p {
+    @include pix12_1;
+    margin: $sectionmargin;
+}
+
+section video {
     height: 100vh;
     left: 50%;
     overflow: hidden;
@@ -264,64 +274,58 @@ nav ul li a {
 
 /* Section classes for Projects and Blog pages */
 
-.buttonsection {
-    min-height: $entryheight;
-    margin: $sectionmargin;
-    border-style: solid;
-    border-width: $sectionborder;
-}
-
-.buttonsection a {
-    text-decoration: none;
-}
-
-.buttonsection h2 {
-    @include h2values;
-    @include tabify;
-}
-
 .pagebutton {
-    min-height: $entryheight;
-    margin: $sectionmargin;
+    height: $entryheight;
     border-style: solid;
     border-width: $sectionborder;
     text-decoration: none;
-    display: flex;
+    position: relative;
+    display: grid;
+    grid-template-columns: $entryheight 1fr;
+    grid-template-rows: min-content min-content 1fr min-content;
+    grid-template-areas:
+      'title title image'
+      'tags  tags  image'
+      'desc  desc  image'
+      'date  date  image';
+    overflow: hidden;
+    margin: $sectionmargin;
 }
 
-.pagebutton a {
-    text-decoration: none;
-    flex-grow: 1;
-    order: 1;
-}
-
-.pagebuttoncontent p {
-    color: #FFFFFF;
-    font-family: "play";
-    margin: 4px;
-
-}
-
-.pagebuttoncontent h3 {
-    @include h3values;
+.pagebutton-title {
+    @include pix18_1;
     @include tabify;
+    color: #000000;
+    grid-area: title;
+    display: flex;
+    flex-direction: row;
 }
 
-.pagebuttoncontent h4 {
-    @include h4values;
-    margin: 6px;
-    margin-bottom: 8px;
+.pagebutton-desc {
+    @include pix12_1;
     color: #FFFFFF;
+    margin: 4px;
+    grid-area: desc;
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
-.pagebutton img {
-    order: 2;
+.pagebutton-img {
+    width: $entryheight;
     height: $entryheight;
-    border-right-style: none;
+    background-size: cover;
+    background-position: cover;
+    grid-area: image;
     border-left-style: solid;
-    border-bottom-style: none;
-    border-top-style: none;
-    border-width: $sectionborder;
+    border-left-width: $sectionborder;
+}
+
+.pagebutton-date {
+    @include pix12_1;
+    color: #FFFFFF;
+    margin: 4px;
+    grid-area: date;
+    margin-top: auto;
 }
 
 /* Play/Pause Button */
@@ -355,9 +359,9 @@ nav ul li a {
         color: map.get($themedata, "fgcolor");
         background-color: map.get($themedata, "theme");
     }
-    .pagebutton.section-#{$theme} h3 {
+    .pagebutton.section-#{$theme} .pagebutton-title {
         color: map.get($themedata, "fgcolor");
-        background: map.get($themedata, "theme");
+        background-color: map.get($themedata, "theme");
     }
     .section-#{$theme} {
         border-color: map.get($themedata, "theme");

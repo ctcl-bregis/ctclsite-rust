@@ -1,16 +1,12 @@
 {% include "header.html" %}
     {% for subpageid, subpage in posts %}
-    <section class="pagebutton section-{{ subpage.theme }}">
+    <a class="pagebutton section-{{ subpage.theme }}" href="{{ subpageid }}/">
+        <span class="pagebutton-title">{{ subpage.title }}</span>
+        <span class="pagebutton-desc">{{ subpage.desc }}</span>
+        <span class="pagebutton-date">{{ subpage.date }} - {{ subpage.cat }}</span>
         {% if subpage.icon %}
-        <img src="{{ subpage.icon }}"{% if subpage.icontitle %} title="{{ subpage.icontitle }}"{% endif %}>
+        <img class="pagebutton-img" src="{{ subpage.icon }}"{% if subpage.icontitle %} title="{{ subpage.icontitle }}"{% endif %}>
         {% endif %}
-        <a href="{{ subpageid }}/">
-            <section class="pagebuttoncontent">
-                <h3>{{ subpage.title }}</h3>
-                <h4>{{ subpage.date}} - {{subpage.cat}}</h4>
-                <p>{{ subpage.desc }}</p>
-            </section>
-        </a>
-    </section>
+    </a>
     {% endfor %}
 {% include "footer.html" %}

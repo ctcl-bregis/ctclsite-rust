@@ -2,7 +2,7 @@
 // File: src/lib.rs
 // Purpose: Module import and commonly used functions
 // Created: November 28, 2022
-// Modified: May 21, 2024
+// Modified: June 18, 2024
 
 pub mod routes;
 pub mod middleware;
@@ -69,8 +69,9 @@ pub struct BlogContentPage {
     content: String,
     // Optional link to favicon 
     favicon: Option<String>,
-    // For project and blog pages at the moment
+    // Optional icon image
     icon: Option<String>,
+    // Optional icon image mouseover text
     icontitle: Option<String>,
     date: String,
     // To-Do: replace this with actual categorization
@@ -139,7 +140,6 @@ pub struct BlogPage {
 pub struct ProjectsPageCategory {
     title: String,
     desc: String,
-    keywords: Option<String>,
     theme: String,
     subpages: IndexMap<String, PageType>
 }

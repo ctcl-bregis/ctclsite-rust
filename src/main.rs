@@ -2,13 +2,13 @@
 // File: src/main.rs
 // Purpose: Main code
 // Created: November 28, 2022
-// Modified: April 23, 2024
+// Modified: June 18 2024
 
 use actix_files as fs;
 //use actix_web::body::MessageBody;
 //use actix_web::dev::{ServiceRequest, ServiceResponse};
 use actix_web::{
-    web, App, HttpServer
+    web, App, HttpServer, Responder, Error
 };
 //use actix_web::{http, middleware, Error, HttpResponse};
 //use actix_web_lab::middleware::{from_fn, Next};
@@ -34,6 +34,12 @@ use ctclsite::*;
 //    next.call(req).await
 //}
 
+pub async fn robots() -> Result<impl Responder, Error> {
+    let robotstxt = read_file("static/robots.txt").unwrap();
+
+    Ok(robotstxt)
+}
+
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     let globalcfg: GlobalCfg = serde_json::from_str(&read_file("config/config.json").unwrap()).unwrap();
@@ -58,6 +64,7 @@ async fn main() -> std::io::Result<()> {
             .service(fs::Files::new("/static", "static/"))
             .app_data(web::Data::new(tera))
             .app_data(web::Data::new(sitecfg))
+            .service(web::resource("/robots.txt").route(web::get().to(robots)))
             // Temporary redirects until a proper middleware is implemented
             .service(web::redirect("/projects/nonmonolithic/", "/projects/nonmono/"))
             .service(web::redirect("/bcc_cc/", "/links/bcc_tc/"))

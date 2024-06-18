@@ -8,6 +8,8 @@ SLAG is a bot for the management of Discord guilds. SLAG is an initialism of "Se
 
 SLAG is the first project where I have written SQL statements for setting up databases. Its development has been a great learning experience.
 
+I am aware what "Slag" means in British English. That was not the original intention behind the name. However, there are no plans to change the name of the project (it's too funny).
+
 For privacy information about instances operated by myself, see the [Privacy Policy](../../privacy/).
 
 # Python version

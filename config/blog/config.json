@@ -5,6 +5,7 @@
         "desc": "List of the blog posts on the website"
     },
     "posts": {
+        "27": {"content": "config/blog/content/week_24_2024.md", "icon": "/static/blog/27/blog27_icon.webp", "icontitle": "Blåhaj", "theme": "gold", "cat": "Update", "date": "June 17, 2024", "title": "Week 24, 2024", "desc": "The twenty-fourth week of 2024"},
         "26": {"content": "config/blog/content/week_23_2024.md", "icon": "/static/blog/26/blog26_icon.webp", "icontitle": "push button receive bacon", "theme": "gold", "cat": "Update", "date": "June 10, 2024", "title": "Week 23, 2024", "desc": "The twenty-third week of 2024"},
         "25": {"content": "config/blog/content/week_22_2024.md", "icon": "/static/blog/25/blog25_icon.webp", "icontitle": "gm_lake", "theme": "gold", "cat": "Update", "date": "June 3, 2024", "title": "Week 22, 2024", "desc": "The twenty-second week of 2024"},
         "24": {"content": "config/blog/content/week_21_2024.md", "icon": "/static/blog/24/blog24_icon.webp", "icontitle": "Wild goose chase", "theme": "gold", "cat": "Update", "date": "May 27, 2024", "title": "Week 21, 2024", "desc": "The twenty-first week of 2024"},
@@ -22,7 +23,7 @@
         "12": {"content": "config/blog/content/week_9_2024.md", "icon": "/static/blog/12/blog12_icon.webp", "icontitle": "Yet another website backend rewrite", "theme": "gold", "cat": "Update", "date": "March 3, 2024", "title": "Week 9, 2024", "desc": "The ninth week of 2024"},
         "11": {"content": "config/blog/content/week_8_2024.md", "icon": "/static/blog/11/blog11_icon.webp", "icontitle": "In the datacenter, where I belong", "theme": "gold", "cat": "Update", "date": "February 25, 2024", "title": "Week 8, 2024", "desc": "The eighth week of 2024"},
         "10": {"content": "config/blog/content/ramlist2024.md", "icon": "/static/blog/10/blog10_icon.webp", "icontitle": "Nanya business", "theme": "99green", "cat": "Software", "date": "February 18, 2024", "title": "A message about RAMList", "desc": "The status and plans for the RAMList section of the website."},
-        "09": {"content": "config/blog/content/week_7_2024.md", "icon": "/static/blog/9/blog9_icon.webp", "icontitle": "\"Solid as steel\"", "theme": "gold", "cat": "Update", "date": "February 18, 2024", "title": "Week 7, 2024", "desc": "The seventh week of 2024"},
+        "09": {"content": "config/blog/content/week_7_2024.md", "icon": "/static/blog/9/blog9_icon.webp", "icontitle": "Solid as steel", "theme": "gold", "cat": "Update", "date": "February 18, 2024", "title": "Week 7, 2024", "desc": "The seventh week of 2024"},
         "08": {"content": "config/blog/content/week_6_2024.md", "icon": "/static/blog/8/blog8_icon.webp", "icontitle": "i forgor 💀", "theme": "gold", "cat": "Update", "date": "February 11, 2024", "title": "Week 6, 2024", "desc": "The sixth week of 2024"},
         "07": {"content": "config/blog/content/week_5_2024.md", "icon": "/static/blog/7/blog7_icon.webp", "icontitle": "MediaCow Touch in 2024", "theme": "gold", "cat": "Update", "date": "February 4, 2024", "title": "Week 5, 2024", "desc": "The fifth week of 2024"},
         "06": {"content": "config/blog/content/week_4_2024.md", "icon": "/static/blog/6/blog6_icon.webp", "icontitle": "Lisdexamfetamine shortage", "theme": "gold", "cat": "Update", "date": "January 27, 2024", "title": "Week 4, 2024", "desc": "The fourth week of 2024"},

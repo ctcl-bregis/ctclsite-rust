@@ -2,6 +2,14 @@
 On February 18, 2024, a rewrite continuing to use Actix was started and the first release was on March 3, 2024.
 
 ## 1.9.0 - [UNRELEASED]
+Still in progress...
+
+Changes:
+- More text now uses the Pixel fonts
+- Aesthetic improvments
+
+Additions:
+- robots.txt
 
 To-Do:
 - Implement memcached
