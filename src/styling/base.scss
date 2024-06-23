@@ -5,8 +5,8 @@
 
 /* Fonts */
 @font-face {
-    font-family: "pix18x18";
-    src: #{url(/static/Pixel-18x18-condensed.ttf) format("truetype")};
+    font-family: "pix16x16";
+    src: #{url(/static/Pixel-16x16-condensed.ttf) format("truetype")};
 }
 
 @font-face {
@@ -17,6 +17,16 @@
 @font-face {
     font-family: "pix12x12";
     src: #{url(/static/Pixel-12x12-condensed.ttf) format("truetype")};
+}
+
+@font-face {
+    font-family: "pix10x10";
+    src: #{url(/static/Pixel-10x10-condensed.ttf) format("truetype")};
+}
+
+@font-face {
+    font-family: "pix8x8";
+    src: #{url(/static/Pixel-8x8-condensed.ttf) format("truetype")};
 }
 
 @font-face {
@@ -35,43 +45,59 @@ $sectionmargin: 8px;
 /* Border width of sections and page buttons */
 $sectionborder: 2px;
 /* Minimum height of blog post and project links */
-$entryheight: 25vw;
+$entryheight: 20vw;
 
 /* Font configurations */
 
-@mixin pix18_2 {
-    font-family: "pix18x18";
-    font-size: 48px;
-    font-smooth: never;
-    -webkit-font-smoothing: none;
+
+@mixin pix16_2 {
+    font-family: "pix16x16";
+    font-size: 44px;
 }
 
-@mixin pix18_1 {
-    font-family: "pix18x18";
-    font-size: 24px;
-    font-smooth: never;
-    -webkit-font-smoothing: none;
+@mixin pix16 {
+    font-family: "pix16x16";
+    font-size: 22px;
+}
+
+@mixin pix14_2 {
+    font-family: "pix14x14";
+    font-size: 36px;
+}
+
+@mixin pix14 {
+    font-family: "pix14x14";
+    font-size: 18px;
 }
 
 @mixin pix12_2 {
     font-family: "pix12x12";
     font-size: 32px;
-    font-smooth: never;
-    -webkit-font-smoothing: none;
 }
 
-@mixin pix12_1 {
+@mixin pix12 {
     font-family: "pix12x12";
     font-size: 16px;
-    font-smooth: never;
-    -webkit-font-smoothing: none;
 }
 
-@mixin pix7_1 {
+@mixin pix10_2 {
+    font-family: "pix10x10";
+    font-size: 28px;
+}
+
+@mixin pix10 {
+    font-family: "pix10x10";
+    font-size: 14px;
+}
+
+@mixin pix8 {
+    font-family: "pix8x8";
+    font-size: 10px;
+}
+
+@mixin pix7 {
     font-family: "pix7x7";
     font-size: 9px;
-    font-smooth: never;
-    -webkit-font-smoothing: none;
 }
 
 @mixin play {
@@ -101,7 +127,7 @@ footer {
 }
 
 footer p {
-    @include pix12_1;
+    @include pix12;
     padding: 3px;
     margin-top: 8pt;
     margin-bottom: 8pt;
@@ -152,7 +178,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header h1 {
-    @include pix18_2;
+    @include pix16_2;
     display: flex;
     justify-content: center;
     margin: 6px;
@@ -181,9 +207,9 @@ nav ul li {
 nav ul li a {
     border-width: $sectionborder;
     border-style: solid;
-    padding: 4px;
+    padding: 6px;
     display: block;
-    @include pix12_1;
+    @include pix12;
     text-decoration-line: none;
 }
 
@@ -193,35 +219,43 @@ nav ul li a {
 }
 
 .content h1 {
-    @include pix18_2;
+    @include pix16_2;
+    margin: 8px;
 }
 
 .content h2 {
     @include pix12_2;
+    margin: 8px;
 }
 
 .content h3 {
-    @include pix18_1;
+    @include pix16;
+    margin: 8px;
 }
 
 .content h4 {
-    @include pix12_1;
+    @include pix12;
+    margin: 8px;
 }
 
 .content h5 {
-    @include pix7_1;
+    @include pix10;
+    margin: 8px;
 }
 
 .content h6 {
-    @include pix7_1;
+    @include pix8;
+    margin: 8px;
 }
 
 .content p {
     @include play;
+    margin: 8px;
 }
 
 .content ul {
     padding-left: 24px;
+    margin: 8px
 }
 
 .content ul li {
@@ -250,12 +284,12 @@ section .content {
 }
 
 section h2 {
-    @include pix18_1;
+    @include pix16;
     @include tabify;
 }
 
 section p {
-    @include pix12_1;
+    @include pix12;
     margin: $sectionmargin;
 }
 
@@ -293,7 +327,7 @@ section video {
 }
 
 .pagebutton-title {
-    @include pix18_1;
+    @include pix16;
     @include tabify;
     color: #000000;
     grid-area: title;
@@ -302,7 +336,7 @@ section video {
 }
 
 .pagebutton-desc {
-    @include pix12_1;
+    @include pix12;
     color: #FFFFFF;
     margin: 4px;
     grid-area: desc;
@@ -321,7 +355,7 @@ section video {
 }
 
 .pagebutton-date {
-    @include pix12_1;
+    @include pix10;
     color: #FFFFFF;
     margin: 4px;
     grid-area: date;
