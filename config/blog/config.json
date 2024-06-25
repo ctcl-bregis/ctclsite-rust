@@ -5,6 +5,7 @@
         "desc": "List of the blog posts on the website"
     },
     "posts": {
+        "28": {"content": "config/blog/content/week_25_2024.md", "icon": "/static/blog/28/blog28_icon.webp", "icontitle": "Key to the GPU", "theme": "gold", "cat": "Update", "date": "June 24, 2024", "title": "Week 25, 2024", "desc": "The twenty-fifth week of 2024"},
         "27": {"content": "config/blog/content/week_24_2024.md", "icon": "/static/blog/27/blog27_icon.webp", "icontitle": "Blåhaj", "theme": "gold", "cat": "Update", "date": "June 17, 2024", "title": "Week 24, 2024", "desc": "The twenty-fourth week of 2024"},
         "26": {"content": "config/blog/content/week_23_2024.md", "icon": "/static/blog/26/blog26_icon.webp", "icontitle": "push button receive bacon", "theme": "gold", "cat": "Update", "date": "June 10, 2024", "title": "Week 23, 2024", "desc": "The twenty-third week of 2024"},
         "25": {"content": "config/blog/content/week_22_2024.md", "icon": "/static/blog/25/blog25_icon.webp", "icontitle": "gm_lake", "theme": "gold", "cat": "Update", "date": "June 3, 2024", "title": "Week 22, 2024", "desc": "The twenty-second week of 2024"},

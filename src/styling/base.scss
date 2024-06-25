@@ -5,6 +5,11 @@
 
 /* Fonts */
 @font-face {
+    font-family: "pix20x20";
+    src: #{url(/static/Pixel-20x20-condensed.ttf) format("truetype")};
+}
+
+@font-face {
     font-family: "pix16x16";
     src: #{url(/static/Pixel-16x16-condensed.ttf) format("truetype")};
 }
@@ -31,7 +36,7 @@
 
 @font-face {
     font-family: "pix7x7";
-    src: #{url(/static/Pixel-7x7-monospace.ttf) format("truetype")};
+    src: #{url(/static/Pixel-7x7-condensed.ttf) format("truetype")};
 }
 
 @font-face {
@@ -45,10 +50,14 @@ $sectionmargin: 8px;
 /* Border width of sections and page buttons */
 $sectionborder: 2px;
 /* Minimum height of blog post and project links */
-$entryheight: 20vw;
+$entryheight: 25vw;
 
 /* Font configurations */
 
+@mixin pix20 {
+    font-family: "pix20x20";
+    font-size: 28px;
+}
 
 @mixin pix16_2 {
     font-family: "pix16x16";
@@ -62,12 +71,22 @@ $entryheight: 20vw;
 
 @mixin pix14_2 {
     font-family: "pix14x14";
-    font-size: 36px;
+    font-size: 40px;
 }
 
 @mixin pix14 {
     font-family: "pix14x14";
-    font-size: 18px;
+    font-size: 20px;
+}
+
+@mixin pix12_4 {
+    font-family: "pix12x12";
+    font-size: 32px;
+}
+
+@mixin pix12_3 {
+    font-family: "pix12x12";
+    font-size: 32px;
 }
 
 @mixin pix12_2 {
@@ -105,6 +124,33 @@ $entryheight: 20vw;
     font-size: 10pt;
 }
 
+/* Font use definitions */
+
+.content h1, header h1 {
+    @include pix12_2;
+}
+
+.pagebutton-title, section h2 {
+    @include pix16;
+}
+
+.content h2, .content h3, .content h4, section p, .pagebutton-desc, .pagebutton-date, nav ul li a {
+    @include pix12;
+}
+
+.content h5 {
+    @include pix10;
+}
+
+.content h6 {
+    @include pix8;
+}
+
+.content p, figure figcaption, .content ul li {
+    @include play;
+}
+
+
 /* Thing to use for having headers appear as the "tabs" on sections */
 @mixin tabify {
     width: fit-content; 
@@ -127,7 +173,6 @@ footer {
 }
 
 footer p {
-    @include pix12;
     padding: 3px;
     margin-top: 8pt;
     margin-bottom: 8pt;
@@ -166,10 +211,6 @@ figure video {
     max-width: 100%;
 }
 
-figure figcaption {
-    @include play;
-}
-
 /* Pixel fonts are already "bold" by nature */
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
@@ -178,14 +219,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header h1 {
-    @include pix16_2;
     display: flex;
     justify-content: center;
+    text-align: center;
     margin: 6px;
-}
-
-header h1 p {
-    margin: 0;
 }
 
 /* Navbar */
@@ -207,9 +244,8 @@ nav ul li {
 nav ul li a {
     border-width: $sectionborder;
     border-style: solid;
-    padding: 6px;
+    padding: 4px;
     display: block;
-    @include pix12;
     text-decoration-line: none;
 }
 
@@ -218,48 +254,12 @@ nav ul li a {
     margin: $sectionmargin;
 }
 
-.content h1 {
-    @include pix16_2;
-    margin: 8px;
-}
-
-.content h2 {
-    @include pix12_2;
-    margin: 8px;
-}
-
-.content h3 {
-    @include pix16;
-    margin: 8px;
-}
-
-.content h4 {
-    @include pix12;
-    margin: 8px;
-}
-
-.content h5 {
-    @include pix10;
-    margin: 8px;
-}
-
-.content h6 {
-    @include pix8;
-    margin: 8px;
-}
-
-.content p {
-    @include play;
-    margin: 8px;
-}
-
 .content ul {
     padding-left: 24px;
     margin: 8px
 }
 
 .content ul li {
-    @include play;
     list-style-type: square;
     padding: 0;
 }
@@ -284,12 +284,10 @@ section .content {
 }
 
 section h2 {
-    @include pix16;
     @include tabify;
 }
 
 section p {
-    @include pix12;
     margin: $sectionmargin;
 }
 
@@ -327,7 +325,6 @@ section video {
 }
 
 .pagebutton-title {
-    @include pix16;
     @include tabify;
     color: #000000;
     grid-area: title;
@@ -336,9 +333,8 @@ section video {
 }
 
 .pagebutton-desc {
-    @include pix12;
     color: #FFFFFF;
-    margin: 4px;
+    margin: $sectionmargin;
     grid-area: desc;
     background-clip: text;
     -webkit-background-clip: text;
@@ -355,9 +351,8 @@ section video {
 }
 
 .pagebutton-date {
-    @include pix10;
     color: #FFFFFF;
-    margin: 4px;
+    margin: $sectionmargin;
     grid-area: date;
     margin-top: auto;
 }

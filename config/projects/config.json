@@ -5,26 +5,6 @@
         "desc": "List of personal projects including PC hardware, hardware design, software and art projects"
     },
     "cats": {
-        "codename": {
-            "title": "Naming Scheme",
-            "desc": "Guides for the naming of my projects",
-            "theme": "gold",
-            "subpages": {
-                "codenames": {
-                    "type": "content",
-                    "content": "config/projects/content/codenames.md", 
-                    "theme": "gold", 
-                    "title": "Codename Guide", 
-                    "desc": "Guide about the codenames used for software and hardware projects."
-                },
-                "naming": {
-                    "type": "content",
-                    "content": "config/projects/content/naming.md", 
-                    "theme": "gold", 
-                    "title": "Project Naming", 
-                    "desc": "How names are chosen for projects."}
-            }
-        },
         "software": {
             "title": "Software",
             "desc": "Computer software projects such as web applications and desktop applications.",
@@ -285,6 +265,26 @@
                     "title": "nonmonolithic", 
                     "desc": "Creative photography and video project"
                 }
+            }
+        },
+        "misc": {
+            "title": "Misc.",
+            "desc": "Miscellaneous guides",
+            "theme": "gold",
+            "subpages": {
+                "codenames": {
+                    "type": "content",
+                    "content": "config/projects/content/codenames.md", 
+                    "theme": "gold", 
+                    "title": "Codename Guide", 
+                    "desc": "Guide about the codenames used for software and hardware projects."
+                },
+                "naming": {
+                    "type": "content",
+                    "content": "config/projects/content/naming.md", 
+                    "theme": "gold", 
+                    "title": "Project Naming", 
+                    "desc": "How names are chosen for projects."}
             }
         }
     }
