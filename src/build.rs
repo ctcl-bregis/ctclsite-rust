@@ -2,11 +2,11 @@
 // File: src/build.rs
 // Purpose: Build needed files
 // Created: February 28, 2024
-// Modified: June 5, 2024
+// Modified: June 29, 2024
 
 // touch grass
 use grass::{Options, OutputStyle};
-use serde::{Deserialize, Serialize};
+use serde::{Serialize, Deserialize};
 use std::collections::HashMap;
 use std::fs::File;
 use std::io::Read;
@@ -17,27 +17,17 @@ use minifier::js::minify;
 extern crate image;
 use image::{Rgb, RgbImage};
 
-#[derive(Deserialize, Serialize)]
-struct Theme {
+#[derive(Serialize, Deserialize, Clone)]
+pub struct Theme {
+    // Main theme color
     color: String,
-    altcolor: Option<String>,
+    // Text color on theme color
     fgcolor: String
 }
 
-#[derive(Deserialize, Serialize)]
-struct Sitecfg {
-    scss: String,
-    themes: HashMap<String, Theme>,
-    pages: HashMap<String, String>
-}
-
-pub fn get_system() -> String {
-    let system: String = if std::env::var("hwcodename").is_ok() {
-        format!("{} \"{}\"", gethostname::gethostname().to_str().unwrap(), std::env::var("hwcodename").unwrap())
-    } else {
-        gethostname::gethostname().to_str().unwrap().to_string()
-    };
-    system
+#[derive(Serialize, Deserialize, Clone)]
+pub struct SiteCfg {
+    pub themes: HashMap<String, Theme>
 }
 
 pub fn read_file(path: &str) -> Result<String, Error> {
@@ -61,7 +51,7 @@ pub fn mkdir(path: &str) -> Result<(), Error> {
 }
 
 fn main() {
-    let sitecfg: Sitecfg = serde_json::from_str(&read_file("config/config.json").unwrap()).unwrap();
+    let sitecfg: SiteCfg = serde_json::from_str(&read_file("config/config.json").unwrap()).unwrap();
 
     // Step 1.1: Generate _themes.scss
     let mut maprows: String = String::from("");
@@ -111,7 +101,7 @@ fn main() {
         let filename = upath.to_str().unwrap();
         let jsfile: String;
         if filename.ends_with(".js") {
-            jsfile = read_file(&format!("src/js/{}", filename)).expect("Error reading src/js/clientinfo.js");
+            jsfile = read_file(&format!("src/js/{}", filename)).unwrap_or_else(|_| panic!("Error reading src/js/{}", filename));
             let minjsfile = minify(&jsfile).to_string();
             std::fs::write(&format!("static/{}", filename), minjsfile).unwrap();
         }

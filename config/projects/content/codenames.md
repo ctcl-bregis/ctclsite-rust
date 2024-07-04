@@ -221,7 +221,7 @@ Codenames derived from phytocannabinoids, or naturally-occuring cannabinoids, ar
 
 ##### Synthetic cannabinoids
 
-Codenames derived from synthetic cannabinoids, or cannabinoids that are not naturally-occuring, are to be used with mobile devices that use microcontrollers. This specific theme was defined for deciding a codename for a Flipper Zero device. 
+Codenames derived from synthetic cannabinoids; cannabinoids that are not naturally-occuring, are to be used with mobile devices that use microcontrollers. This specific theme was defined for deciding a codename for a Flipper Zero device. 
 
 - **Dimethylheptylpyran** - DMHP
 
@@ -271,6 +271,52 @@ Chromium-based compound codenames are reserved for x86-64 systems originally des
 
 ARM-based Chromebook and Chromebox systems are excluded from codenaming as there is currently no known way to replace their Google-developed firmware.
 
+### Development Hardware
+Development hardware are systems used in the development of other hardware such as system on modules, single-board computers and evaluation kits.
+
+Codename schemes for development systems are chosen in relation to what CPU architecture they use instead of the other codename schemes that are based on application.
+
+#### ARM Development Hardware
+For ARM-based development systems using ARM applications processors, codenames of alkanes, alkenes
+
+
+
+#### x86 Development Hardware
+x86-based systems use the codenames of cycloalkanes, cycloalkenes. This would start with "Cyclobutane" for the LattePanda Mu used for MediaCow Touch 2.
+
+- Cyclopropane
+- **Cyclobutane**
+- Cyclopentane
+- Cyclohexane
+- Cycloheptane
+- Cyclooctane
+- Cyclononane
+- Cyclodecane
+- Cycloundecane
+- Cyclododecane
+- Cyclotridecane
+- Cyclotetradecane
+
+When all cycloalkane codenames are used, new codenames use cycloalkene codenames:
+
+- Cyclopropene
+- Cyclobutene
+- Cyclopentene
+- Cyclohexene
+- Cycloheptene
+- Cyclooctene
+- Cyclononene
+- Cyclodecene
+
+When all cycloalkane and cycloalkene codenames are used, new codenames use cycloalykene codenames:
+
+- Cyclobutyne
+
+### MIPS Development Hardware
+
+
+### RISC-V Development Hardware
+
 ### Special
 
 Special chemical compound names are reserved for rare hardware platforms.
@@ -303,6 +349,8 @@ Antimatter codenames are for use with Positivo-branded hardware. This scheme sta
 ## Embedded Project Codenames
 
 Embedded circuit design projects are codenamed after specific locations such as cities, towns and villages. The design idea is what receives the codename, unlike the workstation codenames that are linked to a single unique motherboard.
+
+To elaborate: specific hardware units used in embedded hardware projects may receive a codename specific to it. For example, the LattePanda Mu received for the MediaCow Touch 2 "Paris" project was given the codename "Cyclobutane". 
 
 For a hardware project to receive a codename, the circuit design must have at least one microcontroller, microprocessor, System on Module or SoC on the PCB.
 

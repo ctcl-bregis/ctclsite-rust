@@ -1,9 +1,10 @@
 {
     "root": {
+        "type": "sections",
+        "link": "/services/",
         "theme": "gold",
         "title": "Services",
         "desc": "Services that I offer",
-        "sectionpixfont": true,
         "sections": {
             "techsupport": {
                 "title": "Technical Support", 

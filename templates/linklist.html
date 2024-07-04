@@ -1,3 +1,12 @@
 {% include "header.html" %}
-
+{% for entry in menu %}
+<a class="pagebutton section-{{ entry.theme }}" href="{{ entry.link }}">
+    <span class="pagebutton-title">{{ entry.title }}</span>
+    <span class="pagebutton-desc">{{ entry.desc }}</span>
+    <span class="pagebutton-date">{% if entry.date %}{{ entry.date }}{% endif %}{% if entry.cat %} <span class="category-{{ cats[entry.cat].theme }}">{{ cats[entry.cat].title }}</span>{% endif %}</span>
+    {% if entry.icon %}
+    <img class="pagebutton-img" src="{{ entry.icon }}" {% if entry.icontitle %} title="{{ entry.icontitle }}"{% endif %}>
+    {% endif %}
+</a>
+{% endfor %}
 {% include "footer.html" %}

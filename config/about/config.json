@@ -1,10 +1,10 @@
 {
     "root": {
+        "link": "/",
         "type": "sections",
         "theme": "gold",
         "title": "Welcome",
         "desc": "About the website and myself",
-        "sectionpixfont": true,
         "sections": {
             "about": {"title": "About Me", "theme": "gold", "content": "config/about/sections/whoami.md", "bgvid": "/static/bgimg/whoami.webm", "bgimg": "/static/bgimg/whoami.webp"},
             "workexp": {"title": "Work Experience", "theme": "gold", "content": "config/about/sections/workexp.md", "bgvid": "/static/bgimg/workexp.webm", "bgimg": "/static/bgimg/workexp.webp"},
@@ -14,6 +14,7 @@
         }
     },
     "privacy": {
+        "link": "/privacy/",
         "type": "content",
         "theme": "gold",
         "title": "Privacy Policy",
@@ -21,6 +22,7 @@
         "content": "config/about/privacy.md"
     },
     "licensing": {
+        "link": "/licensing/",
         "type": "content",
         "theme": "gold",
         "title": "Licensing",

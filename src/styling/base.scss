@@ -5,16 +5,6 @@
 
 /* Fonts */
 @font-face {
-    font-family: "pix20x20";
-    src: #{url(/static/Pixel-20x20-condensed.ttf) format("truetype")};
-}
-
-@font-face {
-    font-family: "pix16x16";
-    src: #{url(/static/Pixel-16x16-condensed.ttf) format("truetype")};
-}
-
-@font-face {
     font-family: "pix14x14";
     src: #{url(/static/Pixel-14x14-condensed.ttf) format("truetype")};
 }
@@ -25,8 +15,28 @@
 }
 
 @font-face {
-    font-family: "pix10x10";
-    src: #{url(/static/Pixel-10x10-condensed.ttf) format("truetype")};
+    font-family: "pix12x12-mono";
+    src: #{url(/static/Pixel-12x12-condensed-mono.ttf) format("truetype")};
+}
+
+@font-face {
+    font-family: "pix11x11";
+    src: #{url(/static/Pixel-11x11-condensed.ttf) format("truetype")};
+}
+
+@font-face {
+    font-family: "pix11x11";
+    src: #{url(/static/Pixel-11x11-condensed.ttf) format("truetype")};
+}
+
+@font-face {
+    font-family: "pix9x9";
+    src: #{url(/static/Pixel-9x9-condensed.ttf) format("truetype")};
+}
+
+@font-face {
+    font-family: "pix9x9-light";
+    src: #{url(/static/Pixel-9x9-condensed-light.ttf) format("truetype")};
 }
 
 @font-face {
@@ -49,25 +59,12 @@
 $sectionmargin: 8px;
 /* Border width of sections and page buttons */
 $sectionborder: 2px;
-/* Minimum height of blog post and project links */
-$entryheight: 25vw;
+/* Default height of blog post and project links */
+$linkheight: 128pt;
+/* Max height of blog post and project links */
+$linkmaxheight: 128pt;
 
 /* Font configurations */
-
-@mixin pix20 {
-    font-family: "pix20x20";
-    font-size: 28px;
-}
-
-@mixin pix16_2 {
-    font-family: "pix16x16";
-    font-size: 44px;
-}
-
-@mixin pix16 {
-    font-family: "pix16x16";
-    font-size: 22px;
-}
 
 @mixin pix14_2 {
     font-family: "pix14x14";
@@ -77,16 +74,6 @@ $entryheight: 25vw;
 @mixin pix14 {
     font-family: "pix14x14";
     font-size: 20px;
-}
-
-@mixin pix12_4 {
-    font-family: "pix12x12";
-    font-size: 32px;
-}
-
-@mixin pix12_3 {
-    font-family: "pix12x12";
-    font-size: 32px;
 }
 
 @mixin pix12_2 {
@@ -99,19 +86,29 @@ $entryheight: 25vw;
     font-size: 16px;
 }
 
-@mixin pix10_2 {
-    font-family: "pix10x10";
-    font-size: 28px;
+@mixin pix12-mono {
+    font-family: "pix12x12-mono";
+    font-size: 16px;
 }
 
-@mixin pix10 {
-    font-family: "pix10x10";
-    font-size: 14px;
+@mixin pix11_2 {
+    font-family: "pix11x11";
+    font-size: 30px;
 }
 
-@mixin pix8 {
+@mixin pix9_2 {
+    font-family: "pix9x9";
+    font-size: 26px;
+}
+
+@mixin pix9-light {
+    font-family: "pix9x9-light";
+    font-size: 13px;
+}
+
+@mixin pix8_2 {
     font-family: "pix8x8";
-    font-size: 10px;
+    font-size: 20px;
 }
 
 @mixin pix7 {
@@ -121,7 +118,7 @@ $entryheight: 25vw;
 
 @mixin play {
     font-family: "play";
-    font-size: 10pt;
+    font-size: 12pt;
 }
 
 /* Font use definitions */
@@ -130,23 +127,27 @@ $entryheight: 25vw;
     @include pix12_2;
 }
 
-.pagebutton-title, section h2 {
-    @include pix16;
+.pagebutton-title, section h2, .content h2 {
+    @include pix11_2;
 }
 
-.content h2, .content h3, .content h4, section p, .pagebutton-desc, .pagebutton-date, nav ul li a {
+.section p, .pagebutton-desc, .pagebutton-date, nav ul li a, footer p {
     @include pix12;
 }
 
-.content h5 {
-    @include pix10;
+.content p code, .section p code {
+    @include pix12-mono;
 }
 
-.content h6 {
-    @include pix8;
+.content h3 {
+    @include pix9_2;
 }
 
-.content p, figure figcaption, .content ul li {
+.content h4, .content h5, .content h6 {
+    @include pix8_2;
+}
+
+.content p, figure figcaption, .content ul li, td, th {
     @include play;
 }
 
@@ -287,10 +288,6 @@ section h2 {
     @include tabify;
 }
 
-section p {
-    margin: $sectionmargin;
-}
-
 section video {
     height: 100vh;
     left: 50%;
@@ -307,19 +304,19 @@ section video {
 /* Section classes for Projects and Blog pages */
 
 .pagebutton {
-    height: $entryheight;
+    height: $linkheight;
+    max-height: $linkmaxheight;
     border-style: solid;
     border-width: $sectionborder;
     text-decoration: none;
     position: relative;
     display: grid;
-    grid-template-columns: $entryheight 1fr;
-    grid-template-rows: min-content min-content 1fr min-content;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr min-content;
     grid-template-areas:
-      'title title image'
-      'tags  tags  image'
-      'desc  desc  image'
-      'date  date  image';
+      'title image'
+      'desc  image'
+      'date  image';
     overflow: hidden;
     margin: $sectionmargin;
 }
@@ -341,10 +338,10 @@ section video {
 }
 
 .pagebutton-img {
-    width: $entryheight;
-    height: $entryheight;
+    height: inherit;
+    width: auto;
     background-size: cover;
-    background-position: cover;
+    background-position: right;
     grid-area: image;
     border-left-style: solid;
     border-left-width: $sectionborder;
@@ -400,6 +397,14 @@ section video {
     }
     .pagebutton-#{$theme} {
         border-color: map.get($themedata, "theme");
+    }
+    .category-#{$theme} {
+        color: map.get($themedata, "fgcolor");
+        background-color: map.get($themedata, "theme");
+        padding-top: 4px;
+        padding-left: 4px;
+        padding-right: 2px;
+        padding-bottom: 0;
     }
 }
 

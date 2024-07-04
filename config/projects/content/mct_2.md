@@ -25,7 +25,7 @@ In February 2022, I acquired the development board for [Shenzhen Graperain Techn
 
 The SoC (System on a Chip) used by the GR3399 System on Module is the Rockchip RK3399 featuring four ARM Cortex-A53 cores and two ARM Cortex-A72 cores in a big.LITTLE configuration.
 
-The development board from Graperain using the RK3399 SoC may be used for another project.
+Following the new plan to use the Intel N100, the development board from Graperain using the RK3399 SoC may be used for another project.
 
 ##### Rockchip RK3588
 Later in 2022, I found out that Banana Pi has developed multiple System on Module devices utilizing the more recent Rockchip RK3588 SoC.
@@ -46,14 +46,18 @@ The most complex part of the project is the custom carrier board for the compute
 #### Embedded Controllers
 Two embedded controllers in the form of microcontroller ICs may be present on the carrier board. Though this may change during the circuit design stage, the microcontrollers used may be ones part of the STMicroelectronics STM32 series due to their popularity and my experience with the STM32 series.
 
+These microcontrollers run independently from the system on module
+
 ##### Battery Management Embedded Controller
-Known as the BMEC, this microcontroller connects directly to the battery fuel gauge and charger ICs.
+Known as the BMEC, this microcontroller connects directly to the battery fuel gauge and charger ICs. 
 
 ##### IO Embedded Controller
 Known as the IOEC, this microcontroller manages buttons and switches other than the Reset and Power buttons and manages power switches for cameras, USB ports and possibly audio.
 
 ##### Storage
 The device may make use of an NVMe SSD using a standard M.2 connector for boot and user storage.
+
+Due to the size of the device, M.2 2280 format drives may be able to be used
 
 #### Connectivity
 A feature that I plan to have unique with MediaCow Touch 2 to off-the-shelf tablet devices is more physical connectors. Like MediaCow Touch "Nashville", the device would have full-size USB Type-A ports and an RJ-45 Ethernet jack.
@@ -72,7 +76,9 @@ Full list of connectors:
 The USB Type-C Power Delivery port may only be used for charging and no data transfer would be available.
 
 ##### USB Type-A ports
-With the use of an xHCI host controller IC such as the TI TUSB7340, four USB 3 Type-A ports would be available.
+With the use of an xHCI host controller IC such as the TI TUSB7340, four USB 3 Type-A ports would be available to the user.
+
+If not all used internally, USB 2.0 from the SoM would be available. 
 
 ##### Wi-Fi and Bluetooth
 Like many laptop computers, especially older ones, MediaCow Touch 2 may provide Wi-Fi and Bluetooth only through standard M.2 modules.

@@ -1,0 +1,293 @@
+{
+    "root": {
+        "type": "sections",
+        "theme": "gold",
+        "title": "Projects",
+        "desc": "List of personal projects including PC hardware, hardware design, software and art projects"
+    },
+    "cats": {
+        "software": {
+            "title": "Software",
+            "desc": "Computer software projects such as web applications and desktop applications.",
+            "theme": "gold",
+            "subpages": {
+                "ctclsite": {
+                    "type": "content",
+                    "content": "config/projects/content/ctclsite.md", 
+                    "theme": "gold", 
+                    "title": "CTCL Website", 
+                    "desc": "The website itself", 
+                    "icon": "/static/projects/icons/blog12_icon.webp"
+                },
+                "cams": {
+                    "type": "content",
+                    "content": "config/projects/content/cams.md", 
+                    "theme": "red", 
+                    "title": "CAMS Asset Management System",
+                    "desc": "Fully custom inventory management software", 
+                    "icon": "/static/projects/icons/cams_icon_512.webp"
+                },
+                "contactlist": {
+                    "type": "content",
+                    "content": "config/projects/content/contactlist.md", 
+                    "theme": "blue", 
+                    "title": "ContactList",
+                    "desc": "Browser-based contact manager", 
+                    "icon": "/static/projects/icons/cl_icon_full_512.webp"
+                },
+                "todokiosk": {
+                    "type": "content",
+                    "content": "config/projects/content/todokiosk.md", 
+                    "theme": "white", 
+                    "title": "ToDoKiosk", 
+                    "desc": "CalDAV tasks client", 
+                    "icon": "/static/projects/icons/tdk_rust.webp"
+                },
+                "slag": {
+                    "type": "content",
+                    "content": "config/projects/content/slag.md", 
+                    "theme": "99gray", 
+                    "title": "SLAG", 
+                    "desc": "Custom Discord bot", 
+                    "icon": "/static/projects/icons/slag_icon_512.webp"
+                }
+            }
+        },
+        "hardware": {
+            "title": "Hardware Design",
+            "desc": "Projects with custom circuit design and firmware.",
+            "theme": "gold",
+            "subpages": {
+                "mct_1": {
+                    "type": "content",
+                    "content": "config/projects/content/mct_1.md", 
+                    "theme": "mediacow", 
+                    "title": "MediaCow Touch - \"Nashville\"", 
+                    "desc": "Android tablet experiment", 
+                    "icon": "/static/projects/icons/mct1_amogus.webp", 
+                    "icontitle": "This was the best photo I had of something running on the device."
+                },
+                "mct_2": {
+                    "type": "content",
+                    "content": "config/projects/content/mct_2.md", 
+                    "theme": "white", 
+                    "title": "MediaCow Touch 2 - \"Paris\"",
+                    "desc": "Android tablet experiment idea"
+                },
+                "mcm": {
+                    "type": "content",
+                    "content": "config/projects/content/mcm.md",
+                    "theme": "gold",
+                    "title": "MediaCow Micro series",
+                    "desc": "Circuit design challenge about designing many small portable media players"
+                },
+                "mathpad": {
+                    "type": "content",
+                    "content": "config/projects/content/mathpad.md", 
+                    "theme": "gold", 
+                    "title": "MathPad", 
+                    "desc": "Calculator keypad peripheral device", 
+                    "icon": "/static/projects/icons/mathpad_512.webp"
+                },
+                "fz": {
+                    "type": "sections",
+                    "theme": "flipper",
+                    "title": "Modules for Flipper Zero",
+                    "desc": "Custom-designed modules for the Flipper Zero digital multitool device",
+                    "sections": {
+                        "fz_intro": {
+                            "content": "config/projects/content/fz/fz_intro.md",
+                            "theme": "flipper",
+                            "title": "Introduction",
+                            "fitscreen": false
+                        },
+                        "fz_audio": {
+                            "content": "config/projects/content/fz/fz_audio.md",
+                            "theme": "flipper",
+                            "title": "Audio Module",
+                            "fitscreen": false
+                        }
+                    }
+                }
+            }
+        },
+        "pchardware": {
+            "title": "PC Hardware",
+            "desc": "Computer systems that I use that are assembled from off-the-shelf parts.",
+            "theme": "gold",
+            "subpages": {
+                "wbpc": {
+                    "type": "sections",
+                    "theme": "gold",
+                    "title": "Workstation systems",
+                    "desc": "Computer systems used for various workloads.",
+                    "sections": {
+                        "pc_pbt": {
+                            "content": "config/projects/content/wbpc/pc_pbt.md", 
+                            "theme": "red", 
+                            "title": "\"Polybutylene Terephthalate\""
+                        },
+                        "pc_pc": {
+                            "content": "config/projects/content/wbpc/pc_pc.md", 
+                            "theme": "orange", 
+                            "title": "\"Polycarbonate\""
+                        },
+                        "pc_pet": {
+                            "content": "config/projects/content/wbpc/pc_pet.md", 
+                            "theme": "qipurple", 
+                            "title": "\"Polyethylene Terephthalate\""
+                        },
+                        "pc_pet2": {
+                            "content": "config/projects/content/wbpc/pc_pet2.md", 
+                            "theme": "qipurple", 
+                            "title": "\"Polyethylene Terephthalate v2\"", 
+                            "desc": "Planned experimental desktop computer system"
+                        },
+                        "pc_pp": {
+                            "content": "config/projects/content/wbpc/pc_pp.md", 
+                            "theme": "99red", 
+                            "title": "\"Polypropylene\""
+                        },
+                        "pc_pe": {
+                            "content": "config/projects/content/wbpc/pc_pe.md", 
+                            "theme": "99green", 
+                            "title": "\"Polyethylene\""
+                        },
+                        "pc_pmma": {
+                            "content": "config/projects/content/wbpc/pc_pmma.md", 
+                            "theme": "gold", 
+                            "title": "MWDL - \"Polymethylmethacrylate\""
+                        }
+                    }
+                },
+                "misc": {
+                    "type": "sections",
+                    "theme": "gold",
+                    "title": "Other systems",
+                    "desc": "Miscellaneous computer systems.",
+                    "sections": {
+                        "pc_tbm": {
+                            "content": "config/projects/content/misc/pc_tbm.md", 
+                            "theme": "nanblue", 
+                            "title": "GAMEPC - \"tert-Butylthiol\""
+                        },
+                        "pc_thc": {
+                            "content": "config/projects/content/misc/pc_thc.md", 
+                            "theme": "red", 
+                            "title": "Phone - \"Tetrahydrocannabinol\""
+                        },
+                        "srv_vc": {
+                            "content": "config/projects/content/misc/srv_vc.md", 
+                            "theme": "nanblue", 
+                            "title": "PRSV - \"Vinyl Chloride\""
+                        }
+                    }
+                },
+                "svcs": {
+                    "type": "sections",
+                    "theme": "orange", 
+                    "title": "SVCS", 
+                    "desc": "Series of server systems for use with service hosting",
+                    "introduction": "config/projects/content/svcs/svcs_intro.md", 
+                    "sections": {
+                        "svcs_lva": {
+                            "content": "config/projects/content/svcs/svcs_lva.md", 
+                            "theme": "orange", 
+                            "title": "SVCS1 - \"Levoamphetamine\"",
+                            "fitscreen": false
+                        },
+                        "svcs_ldx": {
+                            "content": "config/projects/content/svcs/svcs_ldx.md", 
+                            "theme": "orange", 
+                            "title": "SVCS2 - \"Lisdexamfetamine\"",
+                            "fitscreen": false
+                        },
+                        "svcs_dxa": {
+                            "content": "config/projects/content/svcs/svcs_dxa.md", 
+                            "theme": "orange", 
+                            "title": "SVCS3 - \"Dextroamphetamine\"",
+                            "fitscreen": false
+                        },
+                        "svcs_pe": {
+                            "content": "config/projects/content/svcs/svcs_pe.md", 
+                            "theme": "green", 
+                            "title": "Former systems",
+                            "fitscreen": false
+                        }
+                    }
+                },
+                "srv_prm": {
+                    "type": "content",
+                    "content": "config/projects/content/srv_prm.md", 
+                    "theme": "green", 
+                    "title": "WBSD", 
+                    "desc": "Dedicated storage server"
+                },
+                "srv_dxm": {
+                    "type": "content",
+                    "content": "config/projects/content/srv_dxm.md", 
+                    "theme": "green", 
+                    "title": "ROUTER", 
+                    "desc": "Router and firewall server"
+                }
+            }
+        },
+        "automotive": {
+            "title": "Automotive and Mechanical",
+            "desc": "Projects that surround the development of automotive, mechanical and mechatronic systems.",
+            "theme": "gold",
+            "subpages": {
+                "netkart": {
+                    "type": "content",
+                    "content": "config/projects/content/netkart.md", 
+                    "theme": "netkart", 
+                    "title": "NetKart", 
+                    "desc": "Upgrades and potential computerization of a Go Kart"
+                }
+            }
+        },
+        "creative": {
+            "title": "Creative work",
+            "desc": "My creative work such as game design and photography.",
+            "theme": "gold",
+            "subpages": {
+                "p2maps": {
+                    "type": "content",
+                    "content": "config/projects/content/p2maps.md", 
+                    "theme": "source", 
+                    "title": "Portal 2 Maps", 
+                    "desc": "Custom community maps made for the 2011 puzzle game Portal 2", 
+                    "icon": "/static/projects/icons/the_hall_preview.webp"
+                },
+                "nonmono": {
+                    "type": "content",
+                    "content": "config/projects/content/nonmono.md", 
+                    "theme": "99gray", 
+                    "title": "nonmonolithic", 
+                    "desc": "Creative photography and video project"
+                }
+            }
+        },
+        "misc": {
+            "title": "Misc.",
+            "desc": "Miscellaneous guides",
+            "theme": "gold",
+            "subpages": {
+                "codenames": {
+                    "type": "content",
+                    "content": "config/projects/content/codenames.md", 
+                    "theme": "gold", 
+                    "title": "Codename Guide", 
+                    "desc": "Guide about the codenames used for software and hardware projects."
+                },
+                "naming": {
+                    "type": "content",
+                    "content": "config/projects/content/naming.md", 
+                    "theme": "gold", 
+                    "title": "Project Naming", 
+                    "desc": "How names are chosen for projects."
+                }
+            }
+        }
+    }
+}

@@ -5,6 +5,7 @@ On February 18, 2024, a rewrite continuing to use Actix was started and the firs
 Still in progress...
 
 Changes:
+- Rewrite of configuration file loading
 - More text now uses the Pixel fonts
 - Aesthetic improvments
 

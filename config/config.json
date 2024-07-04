@@ -1,8 +1,7 @@
 {
     "bindip": "0.0.0.0",
     "bindport": 8000,
-    "siteurl": "ctcl.lgbt",
-    "scss": "config/styling/main/common.scss",
+    "siteurl": "https://ctcl.lgbt",
     "themes": {
         "99gray": {"color": "999999", "fgcolor": "000000"},
         "99green": {"color": "009900", "fgcolor": "000000"},
@@ -29,19 +28,28 @@
         "source": {"color": "ff9900", "altcolor": "0066cc", "fgcolor": "000000"},
         "white": {"color": "ffffff", "fgcolor": "000000"}
     },
-    "pages": {
+    "pagecfgpaths": {
         "about": "config/about/config.json",
-        "linklist": "config/linklist/config.json",
         "blog": "config/blog/config.json",
+        "linklist": "config/linklist/config.json",
         "projects": "config/projects/config.json",
-        "services": "config/services/config.json",
-        "ramlist": "config/ramlist/config.json"
+        "ramlist": "config/ramlist/config.json",
+        "services": "config/services/config.json"
     },
     "redirects": {
         "/projects/nonmonolithic/": "/projects/nonmono/",
         "/bcc_cc/": "/links/bcc_tc/",
         "/bcc_tc/": "/links/bcc_tc/",
         "/projects/pc_pbt/": "/projects/wbpc/#pc_pbt",
-        "/projects/srv_amp/": "/projects/svcs/"
+        "/projects/pc_pc/": "/projects/wbpc/#pc_pc",
+        "/projects/pc_pet/": "/projects/wbpc/#pc_pet",
+        "/projects/pc_pet2/": "/projects/wbpc/#pc_pet2",
+        "/projects/pc_pp/": "/projects/wbpc/#pc_pp",
+        "/projects/pc_pe/": "/projects/wbpc/#pc_pe",
+        "/projects/srv_amp/": "/projects/svcs/",
+        "/projects/pc_tbm/": "/projects/misc/#pc_tbm",
+        "/projects/pc_r12/": "/projects/misc/#pc_r12",
+        "/projects/pc_thc/": "/projects/misc/#pc_thc",
+        "/projects/srv_vc/": "/projects/misc/#srv_vc"
     }
 }

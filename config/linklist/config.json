@@ -1,13 +1,31 @@
 {
     "bcctc": {
+        "type": "linklist",
+        "link": "/links/bcctc/",
         "theme": "bcc_green",
         "title": "Brightpoint Community College Technology Club",
         "desc": "Links to pages related to the Brightpoint Community College Technology Club",
-        "background": "/static/bcc_cc/cc_background.webp",
         "menu": [
-            {"title": "Flier - 🚧 Coming soon", "link": ".", "theme": "bcc_green"},
-            {"title": "Website - 🚧 Coming soon", "link": ".", "theme": "bcc_green"},
-            {"title": "Discord", "link": "https://discord.com/invite/RRNGJ5c6Uq", "theme": "discord"}
+            "flier",
+            "discord"
         ]
+    },
+    "flier": {
+        "type": "link",
+        "link": ".",
+        "theme": "bcc_green",
+        "title": "Flier - 🚧 Coming soon",
+        "desc": "",
+        "icon": "",
+        "icontitle": ""
+    },
+    "discord": {
+        "type": "link",
+        "link": "https://discord.com/invite/RRNGJ5c6Uq", 
+        "theme": "discord",
+        "title": "Discord", 
+        "desc": "Link to the club Discord server",
+        "icon": "",
+        "icontitle": ""
     }
 }

@@ -29,7 +29,9 @@
     </head>
     <body>
         <header>
+            {% if shownavbar %}
             {% include "navbar.html" %}
+            {% endif %}
             <h1>{{ title }}</h1>
         </header>
         <hr>
