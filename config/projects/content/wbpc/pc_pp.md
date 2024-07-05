@@ -4,7 +4,7 @@ The device later became a "meme" build, resulting in the change of my Steam user
 
 On January 24, 2024, the codename for the device was changed from "Acrylonitrile Butadiene Styrene" to "Polypropylene" due to ABS plastic in reality being made up of multiple monomers which does not follow the codename guide.
 
-# Configuration
+### Configuration
 
 Configuration as of December 14, 2023:
 

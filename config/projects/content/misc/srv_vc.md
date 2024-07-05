@@ -1,4 +1,4 @@
-This device is a dedicated server for running the [OctoPrint](https://octoprint.org/) 3D printer controller software. The codename for this system is "Vinyl Chloride" (shorthand "VC").
+This device is a dedicated server for running OctoPrint (soon to be replaced) 3D printer controller software. The codename for this system is "Vinyl Chloride" (shorthand "VC").
 
 The device was originally an experiment to test the usability of VIA x86 processors with modern workloads but now serves as my main 3D printer interface. The OctoPrint on Debian installation was completed on May 8, 2023 and is still used currently.
 

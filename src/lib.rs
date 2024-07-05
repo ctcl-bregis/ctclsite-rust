@@ -60,11 +60,15 @@ pub struct Page {
     link: String,
     theme: String,
     title: String,
-    desc: Option<String>,
-    keywords: Option<String>,
+    #[serde(default = "empty_string")]
+    desc: String,
+    #[serde(default = "empty_string")]
+    keywords: String,
     favicon: Option<String>,
-    icon: Option<String>,
-    icontitle: Option<String>,
+    #[serde(default = "empty_string")]
+    icon: String,
+    #[serde(default = "empty_string")]
+    icontitle: String,
     cat: Option<String>,
     date: Option<String>,
     #[serde(default = "true_default")]

@@ -50,6 +50,16 @@ nav ul li a {
     background-color: $themecolor;
 }
 
+::-moz-selection {
+    background-color: $themecolor;
+    color: $fgcolor;
+}
+
+::selection {
+    background-color: $themecolor;
+    color: $fgcolor;
+}
+
 /* Scrollbar */
 @supports selector(::-webkit-scrollbar) {
     ::-webkit-scrollbar {

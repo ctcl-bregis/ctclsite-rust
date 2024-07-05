@@ -1,6 +1,6 @@
 "tert-Butylthiol" is the codename given to a small AMD Ryzen system that was originally set up for hardware testing.
 
-## Configuration
+### Configuration
 Current specifications as of March 9, 2024:
 
 - Motherboard: MSI MAG A520M VECTOR WIFI 

@@ -285,7 +285,7 @@ nav ul li a {
 .content table {
     border-style: solid;
     border-width: 1px;
-    border-color: #999999;
+    border-color: #FFFFFF;
     -webkit-border-horizontal-spacing: 0;
     -webkit-border-vertical-spacing: 0;
 }
@@ -293,7 +293,7 @@ nav ul li a {
 .content table tr th, .content table tr td {
     border-style: solid;
     border-width: 1px;
-    border-color: #999999;
+    border-color: #FFFFFF;
     padding: 2px;
     text-align: center;
     vertical-align: middle;
@@ -422,6 +422,20 @@ section video {
     }
     .section-#{$theme} {
         border-color: map.get($themedata, "theme");
+    }
+    .section-#{$theme} a {
+        color: map.get($themedata, "theme");
+    }
+    .section-#{$theme} ::selection {
+        color: map.get($themedata, "fgcolor");
+        background-color: map.get($themedata, "theme");
+    }
+    .section-#{$theme} ::-moz-selection {
+        color: map.get($themedata, "fgcolor");
+        background-color: map.get($themedata, "theme");
+    }
+    .section-#{$theme} ul li::marker {
+        color: map.get($themedata, "theme");
     }
     .section-#{$theme}.pagebutton img {
         border-color: map.get($themedata, "theme");

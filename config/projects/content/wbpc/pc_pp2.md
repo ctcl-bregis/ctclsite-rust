@@ -2,7 +2,7 @@
 
 Due to the lack of funding, it is unlikely that this system would be built.
 
-# Planned Specifications
+### Planned Specifications
 
 Plans as of April 3, 2024:
 
