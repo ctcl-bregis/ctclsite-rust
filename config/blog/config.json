@@ -12,41 +12,40 @@
             "update": {"title": "Update", "theme": "gold"}
         },
         "menu": [
-            "29",
-            "28",
-            "27",
-            "26",
-            "25",
-            "24",
-            "23",
-            "22",
-            "21",
-            "20",
-            "19",
-            "18",
-            "17",
-            "16",
-            "15",
-            "14",
-            "13",
-            "12",
-            "11",
-            "10",
-            "09",
-            "08",
-            "07",
-            "06",
-            "05",
-            "04",
-            "03",
-            "02",
-            "01"
+            "wk26_2024",
+            "wk25_2024",
+            "wk24_2024",
+            "wk23_2024",
+            "wk22_2024",
+            "wk21_2024",
+            "wk20_2024",
+            "wk19_2024",
+            "wk18_2024",
+            "wk17_2024",
+            "wk16_2024",
+            "wk15_2024",
+            "wk14_2024",
+            "wk13_2024",
+            "wk12_2024",
+            "wk11_2024",
+            "wk10_2024",
+            "wk09_2024",
+            "wk08_2024",
+            "rl_2024",
+            "wk07_2024",
+            "wk06_2024",
+            "wk05_2024",
+            "wk04_2024",
+            "wk03_2024",
+            "wk02_2024",
+            "wk01_2024",
+            "2023_review",
+            "sp7021_p1"
         ]
     },
-    "29": {
+    "wk26_2024": {
         "type": "content",
-        "content": "config/blog/content/week_26_2024.md",
-        "link": "/blog/29/",
+        "content": "config/blog/content/weekly/week_26_2024.md",
         "icon": "/static/blog/29/blog29_icon.webp",
         "icontitle": "Desktop MediaCow",
         "theme": "gold",
@@ -55,10 +54,9 @@
         "title": "Week 26, 2024",
         "desc": "The twenty-sixth week of 2024"
     },
-    "28": {
+    "wk25_2024": {
         "type": "content",
-        "content": "config/blog/content/week_25_2024.md",
-        "link": "/blog/28/",
+        "content": "config/blog/content/weekly/week_25_2024.md",
         "icon": "/static/blog/28/blog28_icon.webp",
         "icontitle": "Key to the GPU",
         "theme": "gold",
@@ -67,10 +65,9 @@
         "title": "Week 25, 2024",
         "desc": "The twenty-fifth week of 2024"
     },
-    "27": {
+    "wk24_2024": {
         "type": "content",
-        "content": "config/blog/content/week_24_2024.md",
-        "link": "/blog/27/",
+        "content": "config/blog/content/weekly/week_24_2024.md",
         "icon": "/static/blog/27/blog27_icon.webp",
         "icontitle": "Blåhaj",
         "theme": "gold",
@@ -79,10 +76,9 @@
         "title": "Week 24, 2024",
         "desc": "The twenty-fourth week of 2024"
     },
-    "26": {
+    "wk23_2024": {
         "type": "content",
-        "content": "config/blog/content/week_23_2024.md",
-        "link": "/blog/26/",
+        "content": "config/blog/content/weekly/week_23_2024.md",
         "icon": "/static/blog/26/blog26_icon.webp",
         "icontitle": "push button receive bacon",
         "theme": "gold",
@@ -91,10 +87,9 @@
         "title": "Week 23, 2024",
         "desc": "The twenty-third week of 2024"
     },
-    "25": {
+    "wk22_2024": {
         "type": "content",
-        "content": "config/blog/content/week_22_2024.md",
-        "link": "/blog/25/",
+        "content": "config/blog/content/weekly/week_22_2024.md",
         "icon": "/static/blog/25/blog25_icon.webp",
         "icontitle": "gm_lake",
         "theme": "gold",
@@ -103,10 +98,9 @@
         "title": "Week 22, 2024",
         "desc": "The twenty-second week of 2024"
     },
-    "24": {
+    "wk21_2024": {
         "type": "content",
-        "content": "config/blog/content/week_21_2024.md",
-        "link": "/blog/24/",
+        "content": "config/blog/content/weekly/week_21_2024.md",
         "icon": "/static/blog/24/blog24_icon.webp",
         "icontitle": "Wild goose chase",
         "theme": "gold",
@@ -115,10 +109,9 @@
         "title": "Week 21, 2024",
         "desc": "The twenty-first week of 2024"
     },
-    "23": {
+    "wk20_2024": {
         "type": "content",
-        "content": "config/blog/content/week_20_2024.md",
-        "link": "/blog/23/",
+        "content": "config/blog/content/weekly/week_20_2024.md",
         "icon": "/static/blog/23/blog23_icon.webp",
         "icontitle": "Southern",
         "theme": "gold",
@@ -127,10 +120,9 @@
         "title": "Week 20, 2024",
         "desc": "The twentieth week of 2024"
     },
-    "22": {
+    "wk19_2024": {
         "type": "content",
-        "content": "config/blog/content/week_19_2024.md",
-        "link": "/blog/22/",
+        "content": "config/blog/content/weekly/week_19_2024.md",
         "icon": "/static/blog/22/blog22_icon.webp",
         "icontitle": "Flip the World!",
         "theme": "gold",
@@ -139,10 +131,9 @@
         "title": "Week 19, 2024",
         "desc": "The nineteenth week of 2024"
     },
-    "21": {
+    "wk18_2024": {
         "type": "content",
-        "content": "config/blog/content/week_18_2024.md",
-        "link": "/blog/21/",
+        "content": "config/blog/content/weekly/week_18_2024.md",
         "icon": "/static/blog/21/blog21_icon.webp",
         "icontitle": ":put_litter_in_its_place:",
         "theme": "gold",
@@ -151,10 +142,9 @@
         "title": "Week 18, 2024",
         "desc": "The eighteenth week of 2024"
     },
-    "20": {
+    "wk17_2024": {
         "type": "content",
-        "content": "config/blog/content/week_17_2024.md",
-        "link": "/blog/20/",
+        "content": "config/blog/content/weekly/week_17_2024.md",
         "icon": "/static/blog/20/blog20_icon.webp",
         "icontitle": "Project Overcomplicator",
         "theme": "gold",
@@ -163,10 +153,9 @@
         "title": "Week 17, 2024",
         "desc": "The seventeenth week of 2024"
     },
-    "19": {
+    "wk16_2024": {
         "type": "content",
-        "content": "config/blog/content/week_16_2024.md",
-        "link": "/blog/19/",
+        "content": "config/blog/content/weekly/week_16_2024.md",
         "icon": "/static/blog/19/blog19_icon.webp",
         "icontitle": "Eclipsed",
         "theme": "gold",
@@ -175,10 +164,9 @@
         "title": "Week 16, 2024",
         "desc": "The sixteenth week of 2024"
     },
-    "18": {
+    "wk15_2024": {
         "type": "content",
-        "content": "config/blog/content/week_15_2024.md",
-        "link": "/blog/18/",
+        "content": "config/blog/content/weekly/week_15_2024.md",
         "icon": "/static/blog/18/blog18_icon.webp",
         "icontitle": "Set in stone",
         "theme": "gold",
@@ -187,10 +175,9 @@
         "title": "Week 15, 2024",
         "desc": "The fifteenth week of 2024"
     },
-    "17": {
+    "wk14_2024": {
         "type": "content",
-        "content": "config/blog/content/week_14_2024.md",
-        "link": "/blog/17/",
+        "content": "config/blog/content/weekly/week_14_2024.md",
         "icon": "/static/blog/17/blog17_icon.webp",
         "icontitle": "Key to the atrium",
         "theme": "gold",
@@ -199,10 +186,9 @@
         "title": "Week 14, 2024",
         "desc": "The fourteenth week of 2024"
     },
-    "16": {
+    "wk13_2024": {
         "type": "content",
-        "content": "config/blog/content/week_13_2024.md",
-        "link": "/blog/16/",
+        "content": "config/blog/content/weekly/week_13_2024.md",
         "icon": "/static/blog/16/blog16_icon.webp",
         "icontitle": "Trust me, I'm an engineer",
         "theme": "gold",
@@ -211,10 +197,9 @@
         "title": "Week 13, 2024",
         "desc": "The thirteenth week of 2024"
     },
-    "15": {
+    "wk12_2024": {
         "type": "content",
-        "content": "config/blog/content/week_12_2024.md",
-        "link": "/blog/15/",
+        "content": "config/blog/content/weekly/week_12_2024.md",
         "icon": "/static/blog/15/blog15_icon_alt.webp",
         "icontitle": "Key to the world",
         "theme": "gold",
@@ -223,10 +208,9 @@
         "title": "Week 12, 2024",
         "desc": "The twelfth week of 2024"
     },
-    "14": {
+    "wk11_2024": {
         "type": "content",
-        "content": "config/blog/content/week_11_2024.md",
-        "link": "/blog/14/",
+        "content": "config/blog/content/weekly/week_11_2024.md",
         "icon": "/static/blog/14/blog14_icon.webp",
         "icontitle": "What can I do for you, my effeminate fellow",
         "theme": "gold",
@@ -235,10 +219,9 @@
         "title": "Week 11, 2024",
         "desc": "The eleventh week of 2024"
     },
-    "13": {
+    "wk10_2024": {
         "type": "content",
-        "content": "config/blog/content/week_10_2024.md",
-        "link": "/blog/13/",
+        "content": "config/blog/content/weekly/week_10_2024.md",
         "icon": "/static/blog/13/blog13_icon.webp",
         "icontitle": "Continuously Variable",
         "theme": "gold",
@@ -247,10 +230,9 @@
         "title": "Week 10, 2024",
         "desc": "The tenth week of 2024"
     },
-    "12": {
+    "wk09_2024": {
         "type": "content",
-        "content": "config/blog/content/week_9_2024.md",
-        "link": "/blog/12/",
+        "content": "config/blog/content/weekly/week_9_2024.md",
         "icon": "/static/blog/12/blog12_icon.webp",
         "icontitle": "Yet another website backend rewrite",
         "theme": "gold",
@@ -259,10 +241,9 @@
         "title": "Week 9, 2024",
         "desc": "The ninth week of 2024"
     },
-    "11": {
+    "wk08_2024": {
         "type": "content",
-        "content": "config/blog/content/week_8_2024.md",
-        "link": "/blog/11/",
+        "content": "config/blog/content/weekly/week_8_2024.md",
         "icon": "/static/blog/11/blog11_icon.webp",
         "icontitle": "In the datacenter, where I belong",
         "theme": "gold",
@@ -271,10 +252,9 @@
         "title": "Week 8, 2024",
         "desc": "The eighth week of 2024"
     },
-    "10": {
+    "rl_2024": {
         "type": "content",
         "content": "config/blog/content/ramlist2024.md",
-        "link": "/blog/10/",
         "icon": "/static/blog/10/blog10_icon.webp",
         "icontitle": "Nanya business",
         "theme": "99green",
@@ -283,10 +263,9 @@
         "title": "A message about RAMList",
         "desc": "The status and plans for the RAMList section of the website."
     },
-    "09": {
+    "wk07_2024": {
         "type": "content",
-        "content": "config/blog/content/week_7_2024.md",
-        "link": "/blog/09/",
+        "content": "config/blog/content/weekly/week_7_2024.md",
         "icon": "/static/blog/9/blog9_icon.webp",
         "icontitle": "Solid as steel",
         "theme": "gold",
@@ -295,10 +274,9 @@
         "title": "Week 7, 2024",
         "desc": "The seventh week of 2024"
     },
-    "08": {
+    "wk06_2024": {
         "type": "content",
-        "content": "config/blog/content/week_6_2024.md",
-        "link": "/blog/08/",
+        "content": "config/blog/content/weekly/week_6_2024.md",
         "icon": "/static/blog/8/blog8_icon.webp",
         "icontitle": "i forgor 💀",
         "theme": "gold",
@@ -307,10 +285,9 @@
         "title": "Week 6, 2024",
         "desc": "The sixth week of 2024"
     },
-    "07": {
+    "wk05_2024": {
         "type": "content",
-        "content": "config/blog/content/week_5_2024.md",
-        "link": "/blog/07/",
+        "content": "config/blog/content/weekly/week_5_2024.md",
         "icon": "/static/blog/7/blog7_icon.webp",
         "icontitle": "MediaCow Touch in 2024",
         "theme": "gold",
@@ -319,10 +296,9 @@
         "title": "Week 5, 2024",
         "desc": "The fifth week of 2024"
     },
-    "06": {
+    "wk04_2024": {
         "type": "content",
-        "content": "config/blog/content/week_4_2024.md",
-        "link": "/blog/06/",
+        "content": "config/blog/content/weekly/week_4_2024.md",
         "icon": "/static/blog/6/blog6_icon.webp",
         "icontitle": "Lisdexamfetamine shortage",
         "theme": "gold",
@@ -331,10 +307,9 @@
         "title": "Week 4, 2024",
         "desc": "The fourth week of 2024"
     },
-    "05": {
+    "wk03_2024": {
         "type": "content",
-        "content": "config/blog/content/week_3_2024.md",
-        "link": "/blog/05/",
+        "content": "config/blog/content/weekly/week_3_2024.md",
         "icon": "/static/blog/5/blog5_icon.webp",
         "icontitle": "A familiar hallway",
         "theme": "gold",
@@ -343,10 +318,9 @@
         "title": "Week 3, 2024",
         "desc": "The third week of 2024"
     },
-    "04": {
+    "wk02_2024": {
         "type": "content",
-        "content": "config/blog/content/week_2_2024.md",
-        "link": "/blog/04/",
+        "content": "config/blog/content/weekly/week_2_2024.md",
         "icon": "/static/blog/4/blog4_icon.webp",
         "icontitle": "Backrooms vacation",
         "theme": "gold",
@@ -355,10 +329,9 @@
         "title": "Week 2, 2024",
         "desc": "The second week of 2024"
     },
-    "03": {
+    "wk01_2024": {
         "type": "content",
-        "content": "config/blog/content/week_1_2024.md",
-        "link": "/blog/03/",
+        "content": "config/blog/content/weekly/week_1_2024.md",
         "icon": "/static/blog/3/blog3_icon.webp",
         "icontitle": "Professional Minecraft player",
         "theme": "gold",
@@ -367,10 +340,9 @@
         "title": "Week 1, 2024",
         "desc": "The first week of 2024"
     },
-    "02": {
+    "2023_review": {
         "type": "content",
         "content": "config/blog/content/2023review.md",
-        "link": "/blog/02/",
         "icon": "",
         "icontitle": "",
         "theme": "gold",
@@ -379,10 +351,9 @@
         "title": "2023 In Review",
         "desc": "Overview of my experience during 2023 and yet another new version of the website"
     },
-    "01": {
+    "sp7021_p1": {
         "type": "content",
         "content": "config/blog/content/sp7021_p1.md",
-        "link": "/blog/01/",
         "icon": "",
         "icontitle": "",
         "theme": "gold",

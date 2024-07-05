@@ -13,12 +13,12 @@ Additions:
 - robots.txt
 
 To-Do:
+- Reimplement video pause/play button
 - Implement memcached
 - New logging system
 - URL query strings for disabling video load or pausing on load
 - Blog Categories
 - Blog Sort
-
 
 ## 1.8.0 - June 10, 2024
 This update covers some new features though the largest change is the rewrite of HTML templates and SCSS.

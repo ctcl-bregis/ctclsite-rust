@@ -3,6 +3,13 @@ This page is the colophon for the website.
 ## About
 This website serves mainly as my online portfolio and blog. 
 
+### Content
+Writing styling and the backend code myself allowed for more creative freedoms in the design of the website. 
+
+The background videos shown on the About/Welcome page were also produced by myself.
+
+Starting July 5, 2024, all fonts on the website are part of the Pixel font series that I created myself.
+
 ### Compatibility
 Ensuring compatibility with most browsers is a difficult feat. I try my best to have the website look as intended on both mobile and desktop browsers.
 

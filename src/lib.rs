@@ -2,7 +2,7 @@
 // File: src/lib.rs
 // Purpose: Module import and commonly used functions
 // Created: November 28, 2022
-// Modified: June 30, 2024
+// Modified: July 5, 2024
 
 pub mod routes;
 
@@ -17,6 +17,10 @@ use serde::{Serialize, Deserialize};
 
 fn true_default() -> bool {
     true
+}
+
+fn empty_string() -> String {
+    String::from("")
 }
 
 #[derive(Serialize, Deserialize, Clone)]
@@ -51,6 +55,8 @@ pub struct Page {
     // Base
     #[serde(rename = "type")]
     ptype: String,
+    // "link" should be assigned the name of the key if empty
+    #[serde(default = "empty_string")]
     link: String,
     theme: String,
     title: String,
@@ -113,7 +119,7 @@ pub fn read_file(path: &str) -> Result<String, Error> {
         Ok(file) => file,
         Err(e) => match e.kind() {
             std::io::ErrorKind::NotFound => return Err(Error::new(std::io::ErrorKind::NotFound, format!("File {} not found", path))),
-            _ => panic!("Can't read from file: {}, err {}", path.to_owned(), e),
+            _ => panic!("Error reading from file {}: {}", path.to_owned(), e),
         }
     };
     let mut buff = String::new();
@@ -134,14 +140,26 @@ pub fn mdpath2html(path: &str, headerids: bool) -> Result<String, Error> {
     Ok(content)
 }
 
+pub fn fill_empty_links(map: HashMap<String, Page>) -> HashMap<String, Page> {
+    let mut newmap: HashMap<String, Page> = HashMap::new();
+    for (key, value) in map.into_iter() {
+        let mut newpage: Page = value.clone();
+        if newpage.link.is_empty() {
+            newpage.link.clone_from(&key);
+        }
+        newmap.insert(key, newpage);
+    }
+    newmap
+}
+
 pub fn get_combined_cfg() -> Result<CombinedCfg, Error> {
     let sitecfg: SiteCfg = serde_json::from_str(&read_file("config/config.json").unwrap()).unwrap();
 
-    let about: HashMap<String, Page> = serde_json::from_str(&read_file(&sitecfg.pagecfgpaths.about).unwrap()).unwrap();
-    let blog: HashMap<String, Page> = serde_json::from_str(&read_file(&sitecfg.pagecfgpaths.blog).unwrap()).unwrap();
-    let linklist: HashMap<String, Page> = serde_json::from_str(&read_file(&sitecfg.pagecfgpaths.linklist).unwrap()).unwrap();
-    let projects: HashMap<String, Page> = serde_json::from_str(&read_file(&sitecfg.pagecfgpaths.projects).unwrap()).unwrap();
-    let services: HashMap<String, Page> = serde_json::from_str(&read_file(&sitecfg.pagecfgpaths.services).unwrap()).unwrap();
+    let about: HashMap<String, Page> = fill_empty_links(serde_json::from_str(&read_file(&sitecfg.pagecfgpaths.about).unwrap()).unwrap());
+    let blog: HashMap<String, Page> = fill_empty_links(serde_json::from_str(&read_file(&sitecfg.pagecfgpaths.blog).unwrap()).unwrap());
+    let linklist: HashMap<String, Page> = fill_empty_links(serde_json::from_str(&read_file(&sitecfg.pagecfgpaths.linklist).unwrap()).unwrap());
+    let projects: HashMap<String, Page> = fill_empty_links(serde_json::from_str(&read_file(&sitecfg.pagecfgpaths.projects).unwrap()).unwrap());
+    let services: HashMap<String, Page> = fill_empty_links(serde_json::from_str(&read_file(&sitecfg.pagecfgpaths.services).unwrap()).unwrap());
 //    let ramlist: HashMap<String, Page> = serde_json::from_str(&read_file(&sitecfg.pagecfgpaths.ramlist).unwrap()).unwrap();
 
     Ok(CombinedCfg {

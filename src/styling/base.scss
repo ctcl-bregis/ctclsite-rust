@@ -25,13 +25,13 @@
 }
 
 @font-face {
-    font-family: "pix11x11";
-    src: #{url(/static/Pixel-11x11-condensed.ttf) format("truetype")};
+    font-family: "pix12x12-light";
+    src: #{url(/static/Pixel-12x12-condensed-light.ttf) format("truetype")};
 }
 
 @font-face {
-    font-family: "pix9x9";
-    src: #{url(/static/Pixel-9x9-condensed.ttf) format("truetype")};
+    font-family: "pix10x10";
+    src: #{url(/static/Pixel-10x10-condensed.ttf) format("truetype")};
 }
 
 @font-face {
@@ -86,6 +86,11 @@ $linkmaxheight: 128pt;
     font-size: 16px;
 }
 
+@mixin pix12-light {
+    font-family: "pix12x12-light";
+    font-size: 20px;
+}
+
 @mixin pix12-mono {
     font-family: "pix12x12-mono";
     font-size: 16px;
@@ -96,14 +101,14 @@ $linkmaxheight: 128pt;
     font-size: 30px;
 }
 
-@mixin pix9_2 {
-    font-family: "pix9x9";
-    font-size: 26px;
+@mixin pix11 {
+    font-family: "pix11x11";
+    font-size: 15px;
 }
 
-@mixin pix9-light {
-    font-family: "pix9x9-light";
-    font-size: 13px;
+@mixin pix10_2 {
+    font-family: "pix10x10";
+    font-size: 28px;
 }
 
 @mixin pix8_2 {
@@ -128,7 +133,7 @@ $linkmaxheight: 128pt;
 }
 
 .pagebutton-title, section h2, .content h2 {
-    @include pix11_2;
+    @include pix12_2;
 }
 
 .section p, .pagebutton-desc, .pagebutton-date, nav ul li a, footer p {
@@ -140,15 +145,20 @@ $linkmaxheight: 128pt;
 }
 
 .content h3 {
-    @include pix9_2;
+    @include pix10_2;
 }
 
 .content h4, .content h5, .content h6 {
     @include pix8_2;
 }
 
+.content p strong, .content p code, .section p strong, .section p code, .content table tr th {
+    @include pix12;
+    font-weight: normal;
+}
+
 .content p, figure figcaption, .content ul li, td, th {
-    @include play;
+    @include pix12_light;
 }
 
 
@@ -215,8 +225,7 @@ figure video {
 /* Pixel fonts are already "bold" by nature */
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin: 8px;
 }
 
 header h1 {
@@ -255,9 +264,13 @@ nav ul li a {
     margin: $sectionmargin;
 }
 
+.content p {
+    margin: 8px;
+}
+
 .content ul {
     padding-left: 24px;
-    margin: 8px
+    margin: 0;
 }
 
 .content ul li {
@@ -268,6 +281,24 @@ nav ul li a {
 .content ul li p {
     margin: 0;
 }
+
+.content table {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #999999;
+    -webkit-border-horizontal-spacing: 0;
+    -webkit-border-vertical-spacing: 0;
+}
+
+.content table tr th, .content table tr td {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #999999;
+    padding: 2px;
+    text-align: center;
+    vertical-align: middle;
+}
+
 
 /* Styling common to sections */
 section {
