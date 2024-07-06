@@ -32,7 +32,8 @@
             "netkart",
             "p2maps",
             "nonmono",
-            "misc"
+            "codenames",
+            "naming"
         ]
     },
     "ctclsite": {
@@ -57,7 +58,7 @@
         "icontitle": "",
         "cat": "software",
         "date": "2021-Present",
-        "content": "config/projects/content/ctclsite.md"
+        "content": "config/projects/content/cams.md"
     },
     "contactlist": {
         "type": "content",

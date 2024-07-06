@@ -210,7 +210,6 @@ Sedative drug-related compounds are generally for use with non-embedded storage 
 Cannabinoids, due to their unique effect, are used for critical mobile devices instead of servers. Formerly, codenames derived from methylxanthines were used for mobile devices but that theme was later discontinued for multiple reasons, one of them being that methylxanthines are considered stimulants.
 
 ##### Phytocannabinoids
-
 Codenames derived from phytocannabinoids, or naturally-occuring cannabinoids, are to be used with mobile devices that use SoCs or microprocessors.
 
 - [Tetrahydrocannabinol](../pc_thc/) - THC
@@ -220,18 +219,16 @@ Codenames derived from phytocannabinoids, or naturally-occuring cannabinoids, ar
 - **Cannabidiol** - CBD 
 
 ##### Synthetic cannabinoids
-
 Codenames derived from synthetic cannabinoids; cannabinoids that are not naturally-occuring, are to be used with mobile devices that use microcontrollers. This specific theme was defined for deciding a codename for a Flipper Zero device. 
 
 - **Dimethylheptylpyran** - DMHP
 
 ### Thiols
-
-Thiol-related codenames are reserved for AMD Ryzen systems without motherboard ECC memory support. AMD Ryzen systems with ECC memory support may get a plastics-related codename instead. This includes devices with customized AMD processors using the Zen series CPU architecture such as the Valve Steam Deck's APU and the APUs used in the Xbox Series X/S and PlayStation 5. Typically, codenames of thiol chemical compounds commonly used in odorization are used. 
+Thiol-related codenames are reserved for AMD Ryzen systems without motherboard ECC memory support. AMD Ryzen systems with ECC memory support may get a plastics-related codename instead. This includes devices with customized AMD processors using the Zen series CPU architecture such as the Valve Steam Deck's APU and the APUs used in the Xbox Series X/S and PlayStation 5. Thiols that are used in the odorization of fuel gases are used first. 
 
 Unlike the HCFC/CFC theme for Intel-based devices, codenames for these devices are chosen regardless to their form factor.
 
-- **Butanethiol** - BTH
+- Butanethiol - BTH
 - Decanethiol - DTH
 - Dodecanethiol - DDTH
 - **Ethanethiol** - ETH
@@ -252,7 +249,7 @@ Unlike the HCFC/CFC theme for Intel-based devices, codenames for these devices a
 
 ### Chromium-based Compounds
 
-Chromium-based compound codenames are reserved for x86-64 systems originally designed for Chrome OS such as Chromebooks or Chromeboxes but had the firmware replaced with Coreboot or similar, allowing them to be designated a codename. The source of this codename scheme is fairly obvious.
+Chromium-based compound codenames are for use with systems originally designed for Chrome OS such as Chromebooks or Chromeboxes but had the firmware replaced with Coreboot or similar, allowing them to be designated a codename. The source of this codename scheme is fairly obvious. 
 
 - Chromium Acetate - CrA
 - **Chromium Chloride** - CrC
@@ -269,20 +266,29 @@ Chromium-based compound codenames are reserved for x86-64 systems originally des
 - Lead Chromate - CrL
 - Strontium Chromate - CrR
 
-ARM-based Chromebook and Chromebox systems are excluded from codenaming as there is currently no known way to replace their Google-developed firmware.
+This codename scheme applies to both x86-64 and ARM systems that have had their firmware/BIOS replaced with Coreboot or similar.
 
 ### Development Hardware
-Development hardware are systems used in the development of other hardware such as system on modules, single-board computers and evaluation kits.
+Development hardware are systems used in the development of other hardware such as system on modules, single-board computers and evaluation kits. This codename scheme makes use of the names of hydrocarbons in relation to how they are used to "build" other chemical compounds. 
 
 Codename schemes for development systems are chosen in relation to what CPU architecture they use instead of the other codename schemes that are based on application.
 
 #### ARM Development Hardware
-For ARM-based development systems using ARM applications processors, codenames of alkanes, alkenes
+For ARM-based development systems using ARM applications processors currently use codenames of alkanes.
 
-
+* Methane 
+* Ethane
+* Propane
+* Butane
+* Pentane
+* Hexane
+* Heptane
+* Octane
+* Nonane
+* Decane
 
 #### x86 Development Hardware
-x86-based systems use the codenames of cycloalkanes, cycloalkenes. This would start with "Cyclobutane" for the LattePanda Mu used for MediaCow Touch 2.
+x86-based systems currently use the codenames of cycloalkanes. This would start with "Cyclobutane" for the LattePanda Mu used for MediaCow Touch 2.
 
 - Cyclopropane
 - **Cyclobutane**
@@ -297,28 +303,13 @@ x86-based systems use the codenames of cycloalkanes, cycloalkenes. This would st
 - Cyclotridecane
 - Cyclotetradecane
 
-When all cycloalkane codenames are used, new codenames use cycloalkene codenames:
-
-- Cyclopropene
-- Cyclobutene
-- Cyclopentene
-- Cyclohexene
-- Cycloheptene
-- Cyclooctene
-- Cyclononene
-- Cyclodecene
-
-When all cycloalkane and cycloalkene codenames are used, new codenames use cycloalykene codenames:
-
-- Cyclobutyne
-
 ### MIPS Development Hardware
-
+MIPS development hardware uses codenames of alkylcycloalkanes.
 
 ### RISC-V Development Hardware
+RISC-V development hardware uses codenames of polycycloalkanes.
 
 ### Special
-
 Special chemical compound names are reserved for rare hardware platforms.
 
 Devices that would have a "special" codename include but is obviously not limited to:
@@ -334,10 +325,8 @@ Devices that would have a "special" codename include but is obviously not limite
   - C-Cube Microsystems
   - Sunplus Technology/Generalplus Technology excluding development hardware (e.g. BPI-F2P/S, CTCL-designed hardware) and DVD video decoders
   - MCST (МЦСТ)
-- Contains DRAM branded as PieceMakers
 
 #### Antimatter
-
 Antimatter codenames are for use with Positivo-branded hardware. This scheme started in late 2021 with the introduction of a Positivo Y210 tablet.
 
 - **Positronium Hydride**
@@ -350,13 +339,15 @@ Antimatter codenames are for use with Positivo-branded hardware. This scheme sta
 
 Embedded circuit design projects are codenamed after specific locations such as cities, towns and villages. The design idea is what receives the codename, unlike the workstation codenames that are linked to a single unique motherboard.
 
-To elaborate: specific hardware units used in embedded hardware projects may receive a codename specific to it. For example, the LattePanda Mu received for the MediaCow Touch 2 "Paris" project was given the codename "Cyclobutane". 
+Specific hardware units used in embedded hardware projects may receive a codename specific to it. For example, the LattePanda Mu received for the MediaCow Touch 2 "Paris" project was given the codename "Cyclobutane". CTCL-designed hardware can receive codenames such as if a mobile device not using an SoM; has the SoC on a custom PCB, it can receive a Cannabinoid codename as described in the sections above.
 
 For a hardware project to receive a codename, the circuit design must have at least one microcontroller, microprocessor, System on Module or SoC on the PCB.
 
 Exceptions to the requirement of the design requiring a processor of some sort are:
 * MediaCow "Syracuse" (2019)
-* MediaCow Touch "Nashville"
+* MediaCow Touch "Nashville" (2020)
+
+Codenames must contain just the name of the city, town, village or CDP. Codenames that are of different places with the same name cannot be used, for example: If a project codenamed "Richmond" after Richmond, Virginia already exists, another project cannot use a codename named after Richmond, California as both would be "Richmond". 
 
 ### By Chipset
 
@@ -396,6 +387,7 @@ Potential codenames for these devices:
 - Clockville
 - Dewitt
 - Fayetteville
+- Homer
 - Lenox
 - Manlius
 - Minoa
@@ -421,11 +413,10 @@ Potential codenames for these devices:
 These codenames are reserved for special cases due to personal importance.
 
 #### Fort Myers Beach, Florida, US
-
 Any device, regardless to whatever series it belongs to, that is the first project that require designing with DDR2 or later memory generations receives the codename "Fort Myers Beach". This is due to how such project would be seen as a significant turning point like the 2022 business trip to Fort Myers Beach, Florida.
 
 #### Fort Myers, Florida, US
-The codename "Fort Myers" was used for the [MathPad](../mathpad/) project in 2022 as it was designed there, it was my first circuit design project with a processor which was the STMicroelectronics STM32G0 series. 
+The codename "Fort Myers" was used for the [MathPad](../mathpad/) project in 2022 as it was designed there. It was my first circuit design project with a processor, specifically a microcontroller part of the STM32 series.
 
 #### Generally Reserved Codenames
 
@@ -437,6 +428,7 @@ These codenames are reserved for general purpose
 - Curitiba, Paraná, Brazil
   - Planned to be used with a MediaCow Touch Mini device using the SP7021
 - Dresden, Saxony, Germany
+  - Likely would be used with something DRAM related
 - Jacksonville, Florida, US
 - Knoxville, Tennessee, US
   - May be used with a device similar to MediaCow Touch (1)
@@ -454,6 +446,7 @@ These codenames are reserved for general purpose
 Standalone software projects use the names of animals. Embedded software written for hardware projects do not receive their own codename. Software written for specific hardware not developed by CTCL may receive their own codename.
 
 ### Rust
+Rust projects use the names of various types of species
 
 #### Web Software
 
@@ -477,17 +470,14 @@ Codenames using the names of crustaceans under the infraorder **Brachyura**, com
 - Tiger Crab
 
 #### Chat Bots
-
-On February 23, 2024, I have decided to have software projects of chat bots, currently for Discord, be codenamed after the common names of animals under the **Mustela** genus, also known as weasels, polecats, ferrets and stoats. Specifically, the names of **ferrets** are used. This was inspired by [Aurorans Solis](https://auroranssolis.github.io/), who I met on Discord in February 2024 and was the main inspiration for me to start using Rust again.
+On February 23, 2024, I have decided to have software projects of chat bots, currently for Discord, be codenamed after the common names of animals under the **Mustela** genus, also known as weasels, polecats, ferrets and stoats. Specifically, the names of **ferrets** are used. This was inspired by [Aurorans Solis](https://auroranssolis.github.io/), who I met on Discord in February 2024 and was the main inspiration for me to start using Rust again during this time.
 
 - [Black-footed Ferret - SLAG (slag-rust)](../slag/)
 
 ### Python
-
 Starting January 30, 2024, codenames of fish would be used for any Python-based project as started with the trout theme for web applications.
 
 #### Web Software
-
 Projects using the codenames of **trout** are used for projects using the Django or Flask web framework and the Python programming language. The idea of using the names of trout for codenames started with CAMS in which was inspired by excursions to fish farms during summer camp in 2018 and 2019.
 
 - Adriatic Trout
@@ -509,7 +499,6 @@ Projects using the codenames of **trout** are used for projects using the Django
 - Tiger Trout
 
 #### Chat bots
-
 Starting January 30, 2024, projects using the codenames of **catfish** (Siluriformes/Nematognathi) are used for Python-based projects that are chat bots. The use of catfish for such codenames is a reference to the built-in user "Rocket.Cat" from the Rocket.Chat software and is a play on the term "catfishing".
 
 - [Channel Catfish - SLAG](../slag/) (Python version)

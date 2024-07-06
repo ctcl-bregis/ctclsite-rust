@@ -78,12 +78,12 @@ $linkmaxheight: 128pt;
 
 @mixin pix12_2 {
     font-family: "pix12x12";
-    font-size: 32px;
+    font-size: 40px;
 }
 
 @mixin pix12 {
     font-family: "pix12x12";
-    font-size: 16px;
+    font-size: 20px;
 }
 
 @mixin pix12-light {
@@ -152,7 +152,7 @@ $linkmaxheight: 128pt;
     @include pix8_2;
 }
 
-.content p strong, .content p code, .section p strong, .section p code, .content table tr th {
+.content p strong, .content p code, .content ul li strong, .section p strong, .section p code, .content table tr th {
     @include pix12;
     font-weight: normal;
 }
@@ -169,6 +169,8 @@ $linkmaxheight: 128pt;
     border-right: none;
     margin: 0;
     padding: 4px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 /* Base Tags */
