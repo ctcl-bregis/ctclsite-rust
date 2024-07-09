@@ -11,8 +11,9 @@ On June 24, 2024, development of MediaCow Touch 2 has started as part of the Lat
 The following is preliminary data and may change at any time during the development stage.
 
 ## Hardware
-
 MediaCow Touch 2's hardware plans has changed over time with the latest plan now using an x86-64 processor.
+
+For an in-depth history on MediaCow, see the [MediaCow page](../mediacow/).
 
 ### System on Module
 
@@ -20,29 +21,7 @@ For MediaCow Touch 2 "Paris", I did not plan to design around the SoC itself and
 
 The carrier board, that the System on Module connects to, would be designed by myself.
 
-#### Former ideas
-
-These are former plans on what System on Module to use.
-
-##### Rockchip RK3399
-
-In February 2022, I acquired the development board for [Shenzhen Graperain Technology's GR3399 "gold-finger" (MXM3.0 format) System on Module](https://www.graperain.com/ARM-Embedded-RK3399-Development-Board/). I used the GR3399 over the "Stamp hole" G3399 so during the assembly stage, I could just remove a couple screws to remove the module from the development kit and install the module into the prototype without having to desolder and risk damaging the module and/or development board.
-
-The SoC (System on a Chip) used by the GR3399 System on Module is the Rockchip RK3399 featuring four ARM Cortex-A53 cores and two ARM Cortex-A72 cores in a big.LITTLE configuration.
-
-Following the new plan to use the Intel N100, the development board from Graperain using the RK3399 SoC may be used for another project.
-
-##### Rockchip RK3588
-
-Later in 2022, I found out that Banana Pi has developed multiple System on Module devices utilizing the more recent Rockchip RK3588 SoC.
-
-It was more preferrable to use the RK3588 over the RK3399 for multiple reasons. The [system on module specifically is described](https://wiki.banana-pi.org/BPI-RK3588_Core_board_and_development_Kit) to use at least 2GB of LPDDR4X memory (typo as LPDDR4C on the wiki).
-
-#### Current: Intel N100
-
-In May 2024, I have found out about the [LattePanda Mu](https://www.lattepanda.com/lattepanda-mu) System on Module. This module uses an x86-64 processor instead of an ARM64 SoC. [According to Intel](https://ark.intel.com/content/www/us/en/ark/products/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz.html), the N100 is targeted towards use in mobile devices.
-
-Using an x86 processor has its benefits including better software support and laptop-like performance.
+Currently, the System on Module chosen for the project is the LattePanda Mu with the Intel N100.
 
 ### Carrier Board
 
@@ -92,7 +71,7 @@ A feature that I plan to have MediaCow Touch 2 unquie to off-the-shelf tablet de
 
 Summary:
 
-- 1x USB Type-C
+- 1x USB Type-C + PD
 - 4x USB Type-A 3.x
 - 4x USB Type-A 2.0
 - HDMI connector
@@ -102,8 +81,8 @@ Summary:
 
 Internal connectors include:
 
-- M.2 Key E 2230
-- M.2 Key M 2230, 2242, 2280
+- M.2 Key E 2230/2242
+- M.2 Key M 2230/2242/2260/2280
 
 ##### USB Type-C
 
@@ -141,16 +120,14 @@ Since 2022, I planned to use a 10.1 inch display with capacitive touch and a res
 In the diagram sent to the LattePanda team on June 20, 2024, the display mentioned is the [DFRobot 11.6" 1920x1080 eDP LCD](https://www.dfrobot.com/product-2794.html). Use of the DFRobot display would make development much easier and lower the implementation cost.
 
 ### Case
-
 The current plan is to use white 3D printed PETG for the case. With the size of the display, the case cannot be printed, at least in one piece, on the Ender V2 printer that I have currently.
+
+On July 8, 2024, I considered making the case out of plywood like I did with MediaCow Touch 1 due to the similar or better density of various species of wood. Wood would likely make the manufacture of the case parts more difficult.
 
 ## Software
 
 ### Operating System
-
-With the Intel N100 CPU, there is the possibility of having a dual-boot configuration.
-
-Custom drivers may be required for some hardware on the device.
+Custom drivers may be required for some hardware on the device. This may have a Linux distribution like Linux Mint be used on the device instead of Windows.
 
 ### BIOS
 Likely I would make the effort to port Coreboot to the LattePanda Mu as currently, the [BIOS images provided are closed source](https://github.com/LattePandaTeam/LattePanda-Mu/tree/main/Softwares/BIOS). The main concern with these BIOS images being closed source is that there would be no ability to have a customized boot splash image, custom hardware layouts and other features that I would have to tweak for use in a tablet device.

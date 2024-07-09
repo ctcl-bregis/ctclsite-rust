@@ -12,6 +12,7 @@
             "update": {"title": "Update", "theme": "gold"}
         },
         "menu": [
+            "wk27_2024",
             "wk26_2024",
             "wk25_2024",
             "wk24_2024",
@@ -43,6 +44,17 @@
             "sp7021_p1"
         ]
     },
+    "wk27_2024": {
+        "type": "content",
+        "content": "config/blog/content/weekly/week_27_2024.md",
+        "icon": "/static/blog/30/blog30_icon.webp",
+        "icontitle": "All coming together",
+        "theme": "gold",
+        "cat": "update",
+        "startdate": "July 8, 2024",
+        "title": "Week 27, 2024",
+        "desc": "The twenty-seventh week of 2024"
+    },
     "wk26_2024": {
         "type": "content",
         "content": "config/blog/content/weekly/week_26_2024.md",
@@ -50,7 +62,7 @@
         "icontitle": "Desktop MediaCow",
         "theme": "gold",
         "cat": "update",
-        "date": "July 1, 2024",
+        "startdate": "July 1, 2024",
         "title": "Week 26, 2024",
         "desc": "The twenty-sixth week of 2024"
     },
@@ -61,7 +73,7 @@
         "icontitle": "Key to the GPU",
         "theme": "gold",
         "cat": "update",
-        "date": "June 24, 2024",
+        "startdate": "June 24, 2024",
         "title": "Week 25, 2024",
         "desc": "The twenty-fifth week of 2024"
     },
@@ -72,7 +84,7 @@
         "icontitle": "Blåhaj",
         "theme": "gold",
         "cat": "update",
-        "date": "June 17, 2024",
+        "startdate": "June 17, 2024",
         "title": "Week 24, 2024",
         "desc": "The twenty-fourth week of 2024"
     },
@@ -83,7 +95,7 @@
         "icontitle": "push button receive bacon",
         "theme": "gold",
         "cat": "update",
-        "date": "June 10, 2024",
+        "startdate": "June 10, 2024",
         "title": "Week 23, 2024",
         "desc": "The twenty-third week of 2024"
     },
@@ -94,7 +106,7 @@
         "icontitle": "gm_lake",
         "theme": "gold",
         "cat": "update",
-        "date": "June 3, 2024",
+        "startdate": "June 3, 2024",
         "title": "Week 22, 2024",
         "desc": "The twenty-second week of 2024"
     },
@@ -105,7 +117,7 @@
         "icontitle": "Wild goose chase",
         "theme": "gold",
         "cat": "update",
-        "date": "May 27, 2024",
+        "startdate": "May 27, 2024",
         "title": "Week 21, 2024",
         "desc": "The twenty-first week of 2024"
     },
@@ -116,7 +128,7 @@
         "icontitle": "Southern",
         "theme": "gold",
         "cat": "update",
-        "date": "May 20, 2024",
+        "startdate": "May 20, 2024",
         "title": "Week 20, 2024",
         "desc": "The twentieth week of 2024"
     },
@@ -127,7 +139,7 @@
         "icontitle": "Flip the World!",
         "theme": "gold",
         "cat": "update",
-        "date": "May 13, 2024",
+        "startdate": "May 13, 2024",
         "title": "Week 19, 2024",
         "desc": "The nineteenth week of 2024"
     },
@@ -138,7 +150,7 @@
         "icontitle": ":put_litter_in_its_place:",
         "theme": "gold",
         "cat": "update",
-        "date": "May 6, 2024",
+        "startdate": "May 6, 2024",
         "title": "Week 18, 2024",
         "desc": "The eighteenth week of 2024"
     },
@@ -149,7 +161,7 @@
         "icontitle": "Project Overcomplicator",
         "theme": "gold",
         "cat": "update",
-        "date": "April 29, 2024",
+        "startdate": "April 29, 2024",
         "title": "Week 17, 2024",
         "desc": "The seventeenth week of 2024"
     },
@@ -160,7 +172,7 @@
         "icontitle": "Eclipsed",
         "theme": "gold",
         "cat": "update",
-        "date": "April 22, 2024",
+        "startdate": "April 22, 2024",
         "title": "Week 16, 2024",
         "desc": "The sixteenth week of 2024"
     },
@@ -171,7 +183,7 @@
         "icontitle": "Set in stone",
         "theme": "gold",
         "cat": "update",
-        "date": "April 15, 2024",
+        "startdate": "April 15, 2024",
         "title": "Week 15, 2024",
         "desc": "The fifteenth week of 2024"
     },
@@ -182,7 +194,7 @@
         "icontitle": "Key to the atrium",
         "theme": "gold",
         "cat": "update",
-        "date": "April 8, 2024",
+        "startdate": "April 8, 2024",
         "title": "Week 14, 2024",
         "desc": "The fourteenth week of 2024"
     },
@@ -193,7 +205,7 @@
         "icontitle": "Trust me, I'm an engineer",
         "theme": "gold",
         "cat": "update",
-        "date": "March 31, 2024",
+        "startdate": "March 31, 2024",
         "title": "Week 13, 2024",
         "desc": "The thirteenth week of 2024"
     },
@@ -204,7 +216,7 @@
         "icontitle": "Key to the world",
         "theme": "gold",
         "cat": "update",
-        "date": "March 24, 2024",
+        "startdate": "March 24, 2024",
         "title": "Week 12, 2024",
         "desc": "The twelfth week of 2024"
     },
@@ -215,7 +227,7 @@
         "icontitle": "What can I do for you, my effeminate fellow",
         "theme": "gold",
         "cat": "update",
-        "date": "March 17, 2024",
+        "startdate": "March 17, 2024",
         "title": "Week 11, 2024",
         "desc": "The eleventh week of 2024"
     },
@@ -226,7 +238,7 @@
         "icontitle": "Continuously Variable",
         "theme": "gold",
         "cat": "update",
-        "date": "March 10, 2024",
+        "startdate": "March 10, 2024",
         "title": "Week 10, 2024",
         "desc": "The tenth week of 2024"
     },
@@ -237,7 +249,7 @@
         "icontitle": "Yet another website backend rewrite",
         "theme": "gold",
         "cat": "update",
-        "date": "March 3, 2024",
+        "startdate": "March 3, 2024",
         "title": "Week 9, 2024",
         "desc": "The ninth week of 2024"
     },
@@ -248,7 +260,7 @@
         "icontitle": "In the datacenter, where I belong",
         "theme": "gold",
         "cat": "update",
-        "date": "February 25, 2024",
+        "startdate": "February 25, 2024",
         "title": "Week 8, 2024",
         "desc": "The eighth week of 2024"
     },
@@ -259,7 +271,7 @@
         "icontitle": "Nanya business",
         "theme": "99green",
         "cat": "software",
-        "date": "February 18, 2024",
+        "startdate": "February 18, 2024",
         "title": "A message about RAMList",
         "desc": "The status and plans for the RAMList section of the website."
     },
@@ -270,7 +282,7 @@
         "icontitle": "Solid as steel",
         "theme": "gold",
         "cat": "update",
-        "date": "February 18, 2024",
+        "startdate": "February 18, 2024",
         "title": "Week 7, 2024",
         "desc": "The seventh week of 2024"
     },
@@ -281,7 +293,7 @@
         "icontitle": "i forgor 💀",
         "theme": "gold",
         "cat": "update",
-        "date": "February 11, 2024",
+        "startdate": "February 11, 2024",
         "title": "Week 6, 2024",
         "desc": "The sixth week of 2024"
     },
@@ -292,7 +304,7 @@
         "icontitle": "MediaCow Touch in 2024",
         "theme": "gold",
         "cat": "update",
-        "date": "February 4, 2024",
+        "startdate": "February 4, 2024",
         "title": "Week 5, 2024",
         "desc": "The fifth week of 2024"
     },
@@ -303,7 +315,7 @@
         "icontitle": "Lisdexamfetamine shortage",
         "theme": "gold",
         "cat": "update",
-        "date": "January 27, 2024",
+        "startdate": "January 27, 2024",
         "title": "Week 4, 2024",
         "desc": "The fourth week of 2024"
     },
@@ -314,7 +326,7 @@
         "icontitle": "A familiar hallway",
         "theme": "gold",
         "cat": "update",
-        "date": "January 21, 2024",
+        "startdate": "January 21, 2024",
         "title": "Week 3, 2024",
         "desc": "The third week of 2024"
     },
@@ -325,7 +337,7 @@
         "icontitle": "Backrooms vacation",
         "theme": "gold",
         "cat": "update",
-        "date": "January 14, 2024",
+        "startdate": "January 14, 2024",
         "title": "Week 2, 2024",
         "desc": "The second week of 2024"
     },
@@ -336,7 +348,7 @@
         "icontitle": "Professional Minecraft player",
         "theme": "gold",
         "cat": "update",
-        "date": "January 7, 2024",
+        "startdate": "January 7, 2024",
         "title": "Week 1, 2024",
         "desc": "The first week of 2024"
     },
@@ -347,7 +359,7 @@
         "icontitle": "",
         "theme": "gold",
         "cat": "update",
-        "date": "December 22, 2023",
+        "startdate": "December 22, 2023",
         "title": "2023 In Review",
         "desc": "Overview of my experience during 2023 and yet another new version of the website"
     },
@@ -358,7 +370,7 @@
         "icontitle": "",
         "theme": "gold",
         "cat": "hardware",
-        "date": "July 11, 2023",
+        "startdate": "July 11, 2023",
         "title": "SP7021 Part 1",
         "desc": "My work with the SP7021 SIP"
     }

@@ -1,12 +1,18 @@
 {% include "header.html" %}
+{% if menugroupbycat %}
+{% for catname, cat in cats %}
+<section class="section-{{cat.theme}}">
+    <h2>{{ cat.title }}</h2>
 {% for entry in menu %}
-<a class="pagebutton section-{{ entry.theme }}" href="{{ entry.link }}">
-    <span class="pagebutton-title">{{ entry.title }}</span>
-    <span class="pagebutton-desc">{{ entry.desc }}</span>
-    <span class="pagebutton-date">{% if entry.date %}{{ entry.date }}{% endif %}{% if entry.cat %} <span class="category-{{ cats[entry.cat].theme }}">{{ cats[entry.cat].title }}</span>{% endif %}</span>
-    {% if entry.icon %}
-    <img class="pagebutton-img" src="{{ entry.icon }}" {% if entry.icontitle %} title="{{ entry.icontitle }}"{% endif %}>
-    {% endif %}
-</a>
+{% if entry.cat == catname %}
+{% include "pagebutton.html" %}
+{% endif %}
 {% endfor %}
+</section>
+{% endfor %}
+{% else %}
+{% for entry in menu %}
+{% include "pagebutton.html" %}
+{% endfor %}
+{% endif %}
 {% include "footer.html" %}

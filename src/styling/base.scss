@@ -448,10 +448,10 @@ section video {
     .category-#{$theme} {
         color: map.get($themedata, "fgcolor");
         background-color: map.get($themedata, "theme");
-        padding-top: 4px;
-        padding-left: 4px;
         padding-right: 2px;
+        padding-left: 4px;
         padding-bottom: 0;
+        padding-top: 0;
     }
 }
 

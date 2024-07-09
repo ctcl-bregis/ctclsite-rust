@@ -6,18 +6,23 @@ Still in progress...
 
 Changes:
 - Rewrite of configuration file loading
-- More text now uses the Pixel fonts
+- All fonts use the CTCL Pixel font series
 - Aesthetic improvments
+- Project and Blog pages use "linklist" page format
 
 Additions:
+- Blog and project categories
 - robots.txt
+- "menutype" for "linklist" page format that can either show everything as a list or in categories
 
 To-Do:
+- Replace SCSS
+- Debug log to console
+- Fix Discord embed...
 - Reimplement video pause/play button
 - Implement memcached
 - New logging system
 - URL query strings for disabling video load or pausing on load
-- Blog Categories
 - Blog Sort
 
 ## 1.8.0 - June 10, 2024

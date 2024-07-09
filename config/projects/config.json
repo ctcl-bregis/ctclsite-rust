@@ -20,8 +20,8 @@
             "contactlist",
             "todokiosk",
             "slag",
-            "mct_1",
-            "mct_2",
+            "mct1",
+            "mct2",
             "mcm",
             "mathpad",
             "fz",
@@ -34,7 +34,8 @@
             "nonmono",
             "codenames",
             "naming"
-        ]
+        ],
+        "menugroupbycat": true
     },
     "ctclsite": {
         "type": "content",
@@ -45,7 +46,8 @@
         "icon": "/static/projects/icons/blog12_icon.webp",
         "icontitle": "",
         "cat": "software",
-        "date": "2020-Present",
+        "startdate": "2020",
+        "enddate": "Present",
         "content": "config/projects/content/ctclsite.md"
     },
     "cams": {
@@ -57,7 +59,8 @@
         "icon": "",
         "icontitle": "",
         "cat": "software",
-        "date": "2021-Present",
+        "startdate": "2021",
+        "enddate": "Present",
         "content": "config/projects/content/cams.md"
     },
     "contactlist": {
@@ -69,7 +72,8 @@
         "icon": "",
         "icontitle": "",
         "cat": "software",
-        "date": "2023-Present",
+        "startdate": "2023",
+        "enddate": "Present",
         "content": "config/projects/content/contactlist.md"
     },
     "todokiosk": {
@@ -81,7 +85,8 @@
         "icon": "/static/projects/icons/tdk_rust.webp",
         "icontitle": "",
         "cat": "software",
-        "date": "2023-Present",
+        "startdate": "2023",
+        "enddate": "Present",
         "content": "config/projects/content/todokiosk.md"
     },
     "slag": {
@@ -93,31 +98,33 @@
         "icon": "/static/projects/icons/slag_icon_512.webp",
         "icontitle": "",
         "cat": "software",
-        "date": "2024-Present",
+        "startdate": "2024",
+        "enddate": "Present",
         "content": "config/projects/content/slag.md"
     },
-    "mct_1": {
+    "mct1": {
         "type": "content",
-        "link": "/projects/mct_1/",
+        "link": "/projects/mct1/",
         "theme": "mediacow", 
         "title": "MediaCow Touch (1)", 
         "desc": "MediaCow Touch \"Nashville\" - Android tablet experiment from 2020", 
         "icon": "/static/projects/icons/mct1_amogus.webp", 
         "icontitle": "This was the best photo I had of something running on the device.",
         "cat": "hardware",
-        "date": "2020",
+        "startdate": "2020",
         "content": "config/projects/content/mct_1.md"
     },
-    "mct_2": {
+    "mct2": {
         "type": "content",
-        "link": "/projects/mct_2/",
+        "link": "/projects/mct2/",
         "theme": "white", 
         "title": "MediaCow Touch 2", 
         "desc": "MediaCow Touch 2 \"Paris\"", 
         "icon": "", 
         "icontitle": "",
         "cat": "hardware",
-        "date": "2021-Present",
+        "startdate": "2021",
+        "enddate": "Present",
         "content": "config/projects/content/mct_2.md"
     },
     "mcm": {
@@ -129,7 +136,8 @@
         "icon": "", 
         "icontitle": "",
         "cat": "hardware",
-        "date": "2021-Present",
+        "startdate": "2021",
+        "enddate": "Present",
         "content": "config/projects/content/mcm.md"
     },
     "mathpad": {
@@ -141,7 +149,7 @@
         "icon": "/static/projects/icons/mathpad_512.webp",
         "icontitle": "",
         "cat": "hardware",
-        "date": "2022",
+        "startdate": "2022",
         "content": "config/projects/content/mathpad.md"
     },
     "fz": {
@@ -153,7 +161,8 @@
         "icon": "",
         "icontitle": "",
         "cat": "hardware",
-        "date": "2024-Present",
+        "startdate": "2024",
+        "enddate": "Present",
         "sections": {
             "fz_intro": {
                 "content": "config/projects/content/fz/fz_intro.md",
@@ -245,7 +254,8 @@
         "desc": "Series of server systems for use with service hosting",
         "introduction": "config/projects/content/svcs/svcs_intro.md",
         "cat": "pchardware",
-        "date": "2020-Present",
+        "startdate": "2020",
+        "enddate": "Present",
         "sections": {
             "svcs_lva": {
                 "content": "config/projects/content/svcs/svcs_lva.md", 
@@ -279,7 +289,8 @@
         "title": "Other Servers",
         "desc": "Other servers with various purposes",
         "cat": "pchardware",
-        "date": "2020-Present",
+        "startdate": "2020",
+        "enddate": "Present",
         "sections": {
             "srv_prm": {
                 "content": "config/projects/content/srv_prm.md", 
@@ -301,7 +312,8 @@
         "title": "NetKart", 
         "desc": "Upgrades and potential computerization of a Go Kart",
         "cat": "automotive",
-        "date": "2019-Present",
+        "startdate": "2019",
+        "enddate": "Present",
         "content": "config/projects/content/netkart.md"
     },
     "p2maps": {
@@ -311,7 +323,8 @@
         "content": "config/projects/content/p2maps.md", 
         "desc": "Custom community maps made for the 2011 puzzle game Portal 2", 
         "cat": "creative",
-        "date": "2022-Present",
+        "startdate": "2022",
+        "enddate": "Present",
         "icon": "/static/projects/icons/the_hall_preview.webp"
     },
     "nonmono": {
@@ -320,7 +333,8 @@
         "title": "nonmonolithic", 
         "cat": "creative",
         "desc": "Creative photography and video project",
-        "date": "2023-Present",
+        "startdate": "2023",
+        "enddate": "Present",
         "content": "config/projects/content/nonmono.md"
     },
     "codenames": {
@@ -328,13 +342,15 @@
         "content": "config/projects/content/codenames.md", 
         "theme": "gold", 
         "title": "Codename Guide", 
-        "desc": "Guide about the codenames used for software and hardware projects."
+        "desc": "Guide about the codenames used for software and hardware projects.",
+        "cat": "misc"
     },
     "naming": {
         "type": "content",
         "content": "config/projects/content/naming.md", 
         "theme": "gold", 
         "title": "Project Naming", 
-        "desc": "How names are chosen for projects."
+        "desc": "How names are chosen for projects.",
+        "cat": "misc"
     }
 }

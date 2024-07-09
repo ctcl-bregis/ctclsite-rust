@@ -2,7 +2,7 @@
 // File: src/lib.rs
 // Purpose: Module import and commonly used functions
 // Created: November 28, 2022
-// Modified: July 5, 2024
+// Modified: July 9, 2024
 
 pub mod routes;
 
@@ -17,6 +17,10 @@ use serde::{Serialize, Deserialize};
 
 fn true_default() -> bool {
     true
+}
+
+fn false_default() -> bool {
+    false
 }
 
 fn empty_string() -> String {
@@ -70,7 +74,8 @@ pub struct Page {
     #[serde(default = "empty_string")]
     icontitle: String,
     cat: Option<String>,
-    date: Option<String>,
+    startdate: Option<String>,
+    enddate: Option<String>,
     #[serde(default = "true_default")]
     shownavbar: bool,
     // Sections only
@@ -80,8 +85,9 @@ pub struct Page {
     // Linklist only
     // WARNING - This is much different from "cat"; "cats" stores what categories are available to a linklist page
     cats: Option<IndexMap<String, Category>>,
-    menu: Option<Vec<String>>
-
+    menu: Option<Vec<String>>,
+    #[serde(default = "false_default")]
+    menugroupbycat: bool
 }
 
 #[derive(Serialize, Deserialize, Clone)]
@@ -241,16 +247,14 @@ pub fn mkcontext(sitecfg: &CombinedCfg, page: &str, subpage: &str) -> Result<Con
     }
 
     if subpage.menu.is_some() {
-        let mut entries: Vec<Page> = Vec::new();
-        for entry in subpage.menu.as_ref().unwrap() {
-            match pagecfg.get(entry) {
-                Some(page) => entries.push(page.clone()),
-                None => return Err(Error::new(std::io::ErrorKind::NotFound, format!("Page {} not found", entry)))
-            }
+        let mut newmenu: Vec<Page> = Vec::new();
+        for page in subpage.menu.as_ref().unwrap() {
+            newmenu.push(pagecfg.get(&page.clone()).unwrap().clone());
         }
-
-        ctx.insert("menu", &entries)
+        ctx.insert("menu", &newmenu);
+        ctx.insert("menugroupbycat", &subpage.menugroupbycat);
     }
+
 
     Ok(ctx)
 }
