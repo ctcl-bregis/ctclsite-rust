@@ -1,176 +1,50 @@
-@use "sass:color";
-@use "sass:map";
-@use "sass:string";
-@use "src/styling/themes";
-
-/* Fonts */
+{% for name, path in fonts %}
 @font-face {
-    font-family: "pix14x14";
-    src: #{url(/static/Pixel-14x14-condensed.ttf) format("truetype")};
+    font-family: "{{ name }}";
+    src: url({{ path }}) format("truetype");
 }
-
-@font-face {
-    font-family: "pix12x12";
-    src: #{url(/static/Pixel-12x12-condensed.ttf) format("truetype")};
-}
-
-@font-face {
-    font-family: "pix12x12-mono";
-    src: #{url(/static/Pixel-12x12-condensed-mono.ttf) format("truetype")};
-}
-
-@font-face {
-    font-family: "pix11x11";
-    src: #{url(/static/Pixel-11x11-condensed.ttf) format("truetype")};
-}
-
-@font-face {
-    font-family: "pix12x12-light";
-    src: #{url(/static/Pixel-12x12-condensed-light.ttf) format("truetype")};
-}
-
-@font-face {
-    font-family: "pix10x10";
-    src: #{url(/static/Pixel-10x10-condensed.ttf) format("truetype")};
-}
-
-@font-face {
-    font-family: "pix9x9-light";
-    src: #{url(/static/Pixel-9x9-condensed-light.ttf) format("truetype")};
-}
-
-@font-face {
-    font-family: "pix8x8";
-    src: #{url(/static/Pixel-8x8-condensed.ttf) format("truetype")};
-}
-
-@font-face {
-    font-family: "pix7x7";
-    src: #{url(/static/Pixel-7x7-condensed.ttf) format("truetype")};
-}
-
-@font-face {
-    font-family: "play";
-    src: #{url(/static/Play-Regular.ttf) format("truetype")};
-}
-
-/* Variables */
-/* Margin around sections and page buttons */
-$sectionmargin: 8px;
-/* Border width of sections and page buttons */
-$sectionborder: 2px;
-/* Default height of blog post and project links */
-$linkheight: 128pt;
-/* Max height of blog post and project links */
-$linkmaxheight: 128pt;
-
-/* Font configurations */
-
-@mixin pix14_2 {
-    font-family: "pix14x14";
-    font-size: 40px;
-}
-
-@mixin pix14 {
-    font-family: "pix14x14";
-    font-size: 20px;
-}
-
-@mixin pix12_2 {
-    font-family: "pix12x12";
-    font-size: 40px;
-}
-
-@mixin pix12 {
-    font-family: "pix12x12";
-    font-size: 20px;
-}
-
-@mixin pix12-light {
-    font-family: "pix12x12-light";
-    font-size: 20px;
-}
-
-@mixin pix12-mono {
-    font-family: "pix12x12-mono";
-    font-size: 16px;
-}
-
-@mixin pix11_2 {
-    font-family: "pix11x11";
-    font-size: 30px;
-}
-
-@mixin pix11 {
-    font-family: "pix11x11";
-    font-size: 15px;
-}
-
-@mixin pix10_2 {
-    font-family: "pix10x10";
-    font-size: 28px;
-}
-
-@mixin pix8_2 {
-    font-family: "pix8x8";
-    font-size: 20px;
-}
-
-@mixin pix7 {
-    font-family: "pix7x7";
-    font-size: 9px;
-}
-
-@mixin play {
-    font-family: "play";
-    font-size: 12pt;
-}
+{% endfor %}
 
 /* Font use definitions */
 
 .content h1, header h1 {
-    @include pix12_2;
+    font-family: "pix12x12";
+    font-size: 40px;
 }
 
 .pagebutton-title, section h2, .content h2 {
-    @include pix12_2;
+    font-family: "pix12x12";
+    font-size: 40px;
 }
 
 .section p, .pagebutton-desc, .pagebutton-date, nav ul li a, footer p {
-    @include pix12;
+    font-family: "pix12x12";
+    font-size: 20px;
 }
 
 .content p code, .section p code {
-    @include pix12-mono;
+    font-family: "pix12x12-mono";
+    font-size: 40px;
 }
 
 .content h3 {
-    @include pix10_2;
+    font-family: "pix10x10";
+    font-size: 14px;
 }
 
 .content h4, .content h5, .content h6 {
-    @include pix8_2;
+    font-family: "pix8x8";
 }
 
 .content p strong, .content p code, .content ul li strong, .section p strong, .section p code, .content table tr th {
-    @include pix12;
+    font-family: "pix12x12-light";
+    font-size: 20px;
     font-weight: normal;
 }
 
 .content p, figure figcaption, .content ul li, td, th {
-    @include pix12_light;
-}
-
-
-/* Thing to use for having headers appear as the "tabs" on sections */
-@mixin tabify {
-    width: fit-content; 
-    height: fit-content;
-    border-right: none;
-    margin: 0;
-    padding: 4px;
-    padding-top: 0;
-    padding-bottom: 0;
+    font-family: "pix12x12-light";
+    font-size: 20px;
 }
 
 /* Base Tags */
@@ -254,7 +128,7 @@ nav ul li {
 }
 
 nav ul li a {
-    border-width: $sectionborder;
+    border-width: {{ sectionborder }};
     border-style: solid;
     padding: 4px;
     display: block;
@@ -263,7 +137,7 @@ nav ul li a {
 
 /* Content in sections and content pages */
 .content {
-    margin: $sectionmargin;
+    margin: {{ sectionmargin }};
 }
 
 .content p {
@@ -307,18 +181,24 @@ section {
     position: relative;
     width: auto;
     overflow: hidden;
-    border-width: $sectionborder;
+    border-width: {{ sectionborder }};
     border-style: solid;
-    margin: $sectionmargin;
+    margin: {{ sectionmargin }};
     background: rgba(0,0,0,.6);
 }
 
 section .content {
-    margin: $sectionmargin;
+    margin: {{ sectionmargin }};
 }
 
 section h2 {
-    @include tabify;
+    width: fit-content; 
+    height: fit-content;
+    border-right: none;
+    margin: 0;
+    padding: 4px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 section video {
@@ -337,10 +217,10 @@ section video {
 /* Section classes for Projects and Blog pages */
 
 .pagebutton {
-    height: $linkheight;
-    max-height: $linkmaxheight;
+    height: {{ linkheight }};
+    max-height: {{ linkmaxheight }};
     border-style: solid;
-    border-width: $sectionborder;
+    border-width: {{ sectionborder }};
     text-decoration: none;
     position: relative;
     display: grid;
@@ -351,11 +231,17 @@ section video {
       'desc  image'
       'date  image';
     overflow: hidden;
-    margin: $sectionmargin;
+    margin: {{ sectionmargin }};
 }
 
 .pagebutton-title {
-    @include tabify;
+    width: fit-content; 
+    height: fit-content;
+    border-right: none;
+    margin: 0;
+    padding: 4px;
+    padding-top: 0;
+    padding-bottom: 0;
     color: #000000;
     grid-area: title;
     display: flex;
@@ -364,7 +250,7 @@ section video {
 
 .pagebutton-desc {
     color: #FFFFFF;
-    margin: $sectionmargin;
+    margin: {{ sectionmargin }};
     grid-area: desc;
     background-clip: text;
     -webkit-background-clip: text;
@@ -377,12 +263,12 @@ section video {
     background-position: right;
     grid-area: image;
     border-left-style: solid;
-    border-left-width: $sectionborder;
+    border-left-width: {{ sectionborder }};
 }
 
 .pagebutton-date {
     color: #FFFFFF;
-    margin: $sectionmargin;
+    margin: {{ sectionmargin }};
     grid-area: date;
     margin-top: auto;
 }
@@ -412,47 +298,47 @@ section video {
 
 /* Section Color Scheme */
 /* This should be the only thing in base.scss that defines colors other than #000000 or #FFFFFF */
-@each $theme, $themedata in themes.$themes {
+{% for themename, themedata in themes %}
     /* The title should only be the only h2 text in a section */
-    .section-#{$theme} h2 {
-        color: map.get($themedata, "fgcolor");
-        background-color: map.get($themedata, "theme");
+    .section-{{ themename }} h2 {
+        color: {{ themedata.fgcolor }};
+        background-color: {{ themedata.color }};
     }
-    .pagebutton.section-#{$theme} .pagebutton-title {
-        color: map.get($themedata, "fgcolor");
-        background-color: map.get($themedata, "theme");
+    .pagebutton.section-{{ themename }} .pagebutton-title {
+        color: {{ themedata.fgcolor }};
+        background-color: {{ themedata.color }};
     }
-    .section-#{$theme} {
-        border-color: map.get($themedata, "theme");
+    .section-{{ themename }} {
+        border-color: {{ themedata.color }};
     }
-    .section-#{$theme} a {
-        color: map.get($themedata, "theme");
+    .section-{{ themename }} a {
+        color: {{ themedata.color }};
     }
-    .section-#{$theme} ::selection {
-        color: map.get($themedata, "fgcolor");
-        background-color: map.get($themedata, "theme");
+    .section-{{ themename }} ::selection {
+        color: {{ themedata.fgcolor }};
+        background-color: {{ themedata.color }};
     }
-    .section-#{$theme} ::-moz-selection {
-        color: map.get($themedata, "fgcolor");
-        background-color: map.get($themedata, "theme");
+    .section-{{ themename }} ::-moz-selection {
+        color: {{ themedata.fgcolor }};
+        background-color: {{ themedata.color }};
     }
-    .section-#{$theme} ul li::marker {
-        color: map.get($themedata, "theme");
+    .section-{{ themename }} ul li::marker {
+        color: {{ themedata.color }};
     }
-    .section-#{$theme}.pagebutton img {
-        border-color: map.get($themedata, "theme");
+    .section-{{ themename }}.pagebutton img {
+        border-color: {{ themedata.color }};
     }
-    .pagebutton-#{$theme} {
-        border-color: map.get($themedata, "theme");
+    .pagebutton-{{ themename }} {
+        border-color: {{ themedata.color }};
     }
-    .category-#{$theme} {
-        color: map.get($themedata, "fgcolor");
-        background-color: map.get($themedata, "theme");
+    .category-{{ themename }} {
+        color: {{ themedata.fgcolor }};
+        background-color: {{ themedata.color }};
         padding-right: 2px;
         padding-left: 4px;
         padding-bottom: 0;
         padding-top: 0;
     }
-}
+{% endfor %}
 
 

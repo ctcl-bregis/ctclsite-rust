@@ -9,6 +9,7 @@ Changes:
 - All fonts use the CTCL Pixel font series
 - Aesthetic improvments
 - Project and Blog pages use "linklist" page format
+- SCSS replaced with Tera CSS templates
 
 Additions:
 - Blog and project categories
@@ -16,7 +17,6 @@ Additions:
 - "menutype" for "linklist" page format that can either show everything as a list or in categories
 
 To-Do:
-- Replace SCSS
 - Debug log to console
 - Fix Discord embed...
 - Reimplement video pause/play button
