@@ -30,12 +30,14 @@
     },
     "styling": {
         "vars": {
-            "sectionmargin": "8px",
-            "sectionborder": "2px",
-            "linkheight": "128pt",
-            "linkmaxheight": "128pt"
+            "sectionmargin": {"value": "10px", "type": "string"},
+            "sectionborder": {"value": "2px", "type": "string"},
+            "sectionshadowcount": {"value": "2", "type": "number"},
+            "linkheight": {"value": "128pt", "type": "string"},
+            "linkmaxheight": {"value": "128pt", "type": "string"}
         },
         "fonts": {
+            "pix16x16-light": "/static/Pixel-16x16-condensed-light.ttf",
             "pix12x12": "/static/Pixel-12x12-condensed.ttf",
             "pix12x12-light": "/static/Pixel-12x12-condensed-light.ttf",
             "pix12x12-mono": "/static/Pixel-12x12-condensed-mono.ttf",

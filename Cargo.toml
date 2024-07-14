@@ -8,7 +8,7 @@ build = "src/build.rs"
 [build-dependencies]
 chrono = "0.4.35"
 gethostname = "0.4.3"
-tera = "1.19.1"
+tera = { version = "1.19.1", features = ["builtins"] }
 hex = "0.4.3"
 image = "0.24.9"
 minifier = "0.3.0"
@@ -25,16 +25,14 @@ chrono = "0.4.35"
 comrak = "0.21.0"
 csv = "1.3.0"
 futures-util = "0.3.30"
-html-minifier = "5.0.0"
 indexmap = { version = "2.2.5", features = ["serde"] }
 json-objects-to-csv = "0.1.3"
 lazy_static = "1.4.0"
 log = "0.4.20"
 memcache = "0.17.2"
-minify-html-onepass = "0.15.0"
 serde = { version = "1.0.197", features = ["derive"] }
 serde_json = { version = "1.0.114", features = ["preserve_order"] }
 serde-loader = { version = "0.2.0", features = ["json"] }
 sha256 = "1.5.0"
 simple-logging = "2.0.2"
-tera = "1.19.1"
+tera = { version = "1.19.1", features = ["builtins"] }

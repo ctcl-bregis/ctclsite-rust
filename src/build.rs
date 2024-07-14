@@ -2,7 +2,7 @@
 // File: src/build.rs
 // Purpose: Build needed files
 // Created: February 28, 2024
-// Modified: July 10, 2024
+// Modified: July 14, 2024
 
 use serde::{Serialize, Deserialize};
 use std::collections::HashMap;
@@ -16,17 +16,32 @@ use minifier::js::minify;
 extern crate image;
 use image::{Rgb, RgbImage};
 
+fn empty3u8() -> [u8; 3] {
+    [0u8; 3]
+}
+
 #[derive(Serialize, Deserialize, Clone)]
 pub struct Theme {
     // Main theme color
     color: String,
+    #[serde(default = "empty3u8")]
+    colorrgb: [u8; 3],
     // Text color on theme color
-    fgcolor: String
+    fgcolor: String,
+    #[serde(default = "empty3u8")]
+    fgcolorrgb: [u8; 3]
+}
+
+#[derive(Serialize, Deserialize, Clone)]
+pub struct Var {
+    value: String,
+    #[serde(alias = "type")]
+    vtype: String
 }
 
 #[derive(Serialize, Deserialize, Clone)]
 pub struct StylingCfg {
-    vars: HashMap<String, String>,
+    vars: HashMap<String, Var>,
     fonts: HashMap<String, String>,
 }
 
@@ -68,10 +83,33 @@ fn main() {
 
     // Step 1.1: Build base.css
     for (name, value) in sitecfg.styling.vars.iter() {
-        ctx.insert(name, value);
+        if value.vtype == "number" {
+            let newvalue = value.value.parse::<i32>().unwrap();
+            ctx.insert(name, &newvalue);
+        } else {
+            ctx.insert(name, &value.value);
+        }
     }
     ctx.insert("fonts", &sitecfg.styling.fonts);
-    ctx.insert("themes", &sitecfg.themes);
+
+    let mut themes: HashMap<String, Theme> = HashMap::new();
+    for (name, data) in &sitecfg.themes {
+        let mut fgcolorrgb = [0u8; 3];
+        hex::decode_to_slice(&data.fgcolor.replace('#', ""), &mut fgcolorrgb as &mut [u8]).unwrap();
+        let mut colorrgb = [0u8; 3];
+        hex::decode_to_slice(&data.color.replace('#', ""), &mut colorrgb as &mut [u8]).unwrap();
+
+        let newdata: Theme = Theme {
+            color: data.color.clone(),
+            colorrgb,
+            fgcolor: data.fgcolor.clone(),
+            fgcolorrgb
+        };
+
+        themes.insert(name.to_string(), newdata);
+    }
+
+    ctx.insert("themes", &themes);
 
     let base = tera.render("base.css", &ctx).unwrap();
     

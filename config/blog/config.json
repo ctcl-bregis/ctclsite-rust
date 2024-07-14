@@ -12,6 +12,7 @@
             "update": {"title": "Update", "theme": "gold"}
         },
         "menu": [
+            "mct2_p1",
             "wk27_2024",
             "wk26_2024",
             "wk25_2024",
@@ -44,11 +45,33 @@
             "sp7021_p1"
         ]
     },
+    "wk28_2024": {
+        "type": "content",
+        "content": "config/blog/content/weekly/week_27_2024.md",
+        "icon": "/static/blog/wk28_2024/wk28_2024_icon.webp",
+        "icontitle": "",
+        "theme": "gold",
+        "cat": "update",
+        "startdate": "July 15, 2024",
+        "title": "Week 28, 2024",
+        "desc": "The twenty-eighth week of 2024"
+    },
+    "mct2_p1": {
+        "type": "content",
+        "content": "config/blog/content/mct2_p1.md",
+        "icon": "/static/blog/mct2_p1/mct2_p1_icon.webp",
+        "icontitle": "All coming together",
+        "theme": "white",
+        "cat": "hardware",
+        "startdate": "July 14, 2024",
+        "title": "MediaCow Touch 2 - Part 1",
+        "desc": "The twenty-seventh week of 2024"
+    },
     "wk27_2024": {
         "type": "content",
         "content": "config/blog/content/weekly/week_27_2024.md",
         "icon": "/static/blog/30/blog30_icon.webp",
-        "icontitle": "All coming together",
+        "icontitle": "Small but Powerful",
         "theme": "gold",
         "cat": "update",
         "startdate": "July 8, 2024",
