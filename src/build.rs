@@ -2,7 +2,7 @@
 // File: src/build.rs
 // Purpose: Build needed files
 // Created: February 28, 2024
-// Modified: July 14, 2024
+// Modified: July 15, 2024
 
 use serde::{Serialize, Deserialize};
 use std::collections::HashMap;
@@ -20,6 +20,10 @@ fn empty3u8() -> [u8; 3] {
     [0u8; 3]
 }
 
+fn basestring() -> String {
+    "base".to_string()
+}
+
 #[derive(Serialize, Deserialize, Clone)]
 pub struct Theme {
     // Main theme color
@@ -29,7 +33,10 @@ pub struct Theme {
     // Text color on theme color
     fgcolor: String,
     #[serde(default = "empty3u8")]
-    fgcolorrgb: [u8; 3]
+    fgcolorrgb: [u8; 3],
+    // Theme-specific styling, "base" by default
+    #[serde(default = "basestring")]
+    css: String
 }
 
 #[derive(Serialize, Deserialize, Clone)]
@@ -40,15 +47,24 @@ pub struct Var {
 }
 
 #[derive(Serialize, Deserialize, Clone)]
+pub struct Font {
+    family: String,
+    path: String,
+    weight: String,
+    style: String
+}
+
+#[derive(Serialize, Deserialize, Clone)]
 pub struct StylingCfg {
     vars: HashMap<String, Var>,
-    fonts: HashMap<String, String>,
+    fonts: Vec<Font>,
+    css: HashMap<String, String>,
+    themes: HashMap<String, Theme>
 }
 
 #[derive(Serialize, Deserialize, Clone)]
 pub struct SiteCfg {
-    pub themes: HashMap<String, Theme>,
-    pub styling: StylingCfg,
+    styling: StylingCfg,
 }
 
 pub fn read_file(path: &str) -> Result<String, Error> {
@@ -79,10 +95,14 @@ fn main() {
     let tera = Tera::new("src/styling/**/*.css").unwrap();
     let mut ctx = Context::new();
 
-    mkdir("static/themes").unwrap();
+    mkdir("static/styling/").unwrap();
+    mkdir("static/styling/themes/").unwrap();
 
-    // Step 1.1: Build base.css
-    for (name, value) in sitecfg.styling.vars.iter() {
+    // Step 1.1: Build base stylesheets
+
+    // Iterate "vars" and insert each as a variable, this makes things much easier
+    for (name, value) in sitecfg.to_owned().styling.vars.iter() {
+        // ctx.insert() cannot insert untyped variables? Probably a better solution could be done for this.
         if value.vtype == "number" {
             let newvalue = value.value.parse::<i32>().unwrap();
             ctx.insert(name, &newvalue);
@@ -93,7 +113,7 @@ fn main() {
     ctx.insert("fonts", &sitecfg.styling.fonts);
 
     let mut themes: HashMap<String, Theme> = HashMap::new();
-    for (name, data) in &sitecfg.themes {
+    for (name, data) in sitecfg.to_owned().styling.themes {
         let mut fgcolorrgb = [0u8; 3];
         hex::decode_to_slice(&data.fgcolor.replace('#', ""), &mut fgcolorrgb as &mut [u8]).unwrap();
         let mut colorrgb = [0u8; 3];
@@ -103,26 +123,31 @@ fn main() {
             color: data.color.clone(),
             colorrgb,
             fgcolor: data.fgcolor.clone(),
-            fgcolorrgb
+            fgcolorrgb,
+            css: data.css.clone(),
         };
 
         themes.insert(name.to_string(), newdata);
     }
 
+
     ctx.insert("themes", &themes);
+    // This amount of "to_owned" is probably going to own RAM. Consider finding a better way to do this if it uses too much resources.
+    for (name, theme) in themes.iter() {
+        // CSS files starting with "_" should only be used by being included by other files
+        let cssfile = match sitecfg.styling.css.get(&theme.css) {
+            Some(css) => css,
+            None => return eprintln!("Invalid css name: {}", theme.css),
+        };
 
-    let base = tera.render("base.css", &ctx).unwrap();
-    
-    std::fs::write("static/base.css", base).unwrap();
+        let mut tempctx = ctx.clone();
+        tempctx.insert("color", &theme.color);
+        tempctx.insert("colorrgb", &theme.colorrgb);
+        tempctx.insert("fgcolor", &theme.fgcolor);
+        tempctx.insert("fgcolorrgb", &theme.fgcolorrgb);
 
-    // Step 1.2: Build themes
-    for (key, value) in sitecfg.themes.clone().iter() {
-        let mut ctx = Context::new();
-        ctx.insert("themecolor", &value.color);
-        ctx.insert("fgcolor", &value.fgcolor);
-        let theme = tera.render("theme.css", &ctx).unwrap();
-
-        std::fs::write(&format!("static/themes/{}.css", key), theme).unwrap();
+        let styling = tera.render(cssfile, &tempctx).unwrap();
+        std::fs::write(format!("static/styling/{}.css", name), styling).unwrap();
     }
 
     // Step 2: Minimize and move JavaScript
@@ -142,7 +167,7 @@ fn main() {
     // Step 3: Generate default favicons
     mkdir("static/favicons/").unwrap();
 
-    for (key, value) in sitecfg.themes.clone().iter() {
+    for (key, value) in sitecfg.to_owned().styling.themes.iter() {
         // It is unlikely that default favicons would change so to reduce build time and disk writes, generation is skipped if the favicon already exists.
         if !file_exists("static/favicons/default_{key}.ico") {
             let mut image = RgbImage::new(16, 16);

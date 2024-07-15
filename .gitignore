@@ -27,6 +27,6 @@ log/
 release.tar.gz
 static/*.js
 static/*.css
-static/themes/
-static/themes/*.css
+static/styling/
+static/styling/*.css
 static/favicons/default*

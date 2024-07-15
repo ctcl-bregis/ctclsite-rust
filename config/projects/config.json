@@ -117,7 +117,7 @@
     "mct2": {
         "type": "content",
         "link": "/projects/mct2/",
-        "theme": "white", 
+        "theme": "mct2", 
         "title": "MediaCow Touch 2", 
         "desc": "MediaCow Touch 2 \"Paris\"", 
         "icon": "", 

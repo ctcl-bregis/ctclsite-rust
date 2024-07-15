@@ -1,0 +1,8 @@
+{% for font in fonts %}
+@font-face {
+    font-family: "{{ font.family }}";
+    src: url({{ font.path }}) format("truetype");
+    font-weight: {{ font.weight }};
+    font-style: {{ font.style }};
+}
+{% endfor %}

@@ -2,7 +2,6 @@ I have experience with multiple jobs in different fields.
 So far I have been employed by these companies.
 
 - Resume (single-page): [Download](/static/resume.pdf)
-
 - Extended resume: [Download](/static/extresume.pdf)
 
 ### 2nd Life Inc.

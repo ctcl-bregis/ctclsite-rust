@@ -37,6 +37,8 @@ After some gaming, I decided to install Linux Mint 21.3 on the system to test it
 ## Challenges and Subsystems
 MediaCow Touch 2 is a highly ambitious project for someone with no formal education in the field and [minimal experience with circuit design](../../projects/mathpad/). 
 
+For more about each subsystem, see [the project page for MediaCow Touch 2](../../projects/mct2/).
+
 ### Circuit Design
 Circuit design will be the most complex part of the design by far and is what is expected to take the most amount of time.
 
@@ -44,7 +46,7 @@ Circuit design will be the most complex part of the design by far and is what is
 One thing I did not consider before going into the project is that I would have to work with many high-frequency differential connections. I do not have the equipment nor I would have any reasonable ability to access equipment that can debug such high frequency interfaces. This includes HDMI, DisplayPort, USB 3.0, PCIe 3.0 and MIPI CSI.
 
 ### Display
-As a size comparison, I looked at my Samsung XE500C13 Chromebook ("Chromium Sulfate") that also has an 11.6" display and determined that 11.6" is well suitable for the project. I have already used a 7" display in MediaCow Touch (1) "Nashville" and it seemed too small.
+As a size comparison, I looked at my Samsung XE500C13 Chromebook ("Chromium Sulfate") that also has an 11.6" display and determined that 11.6" is well sutable for the project. I have already used a 7" display in MediaCow Touch (1) "Nashville" and it seemed too small.i
 
 On July 5, 2024, I received the 11.6" display, this allowed me to be able to get the measurement of the distance between the eDP connector and the horizontal edge of the display. When I received the display, I found out that it came with an non-FPC (flat cable) eDP cable that had it so that the location of the connector on the display is not critical for the layout of the carrier PCB. However, this measurement was still required to be able to add a cutout in the LCD holder part for the eDP and touchscreen connector.
 
@@ -66,18 +68,22 @@ On July 9, 2024, I have tested the display for the first time. Under Linux Mint 
     <figcaption>Successful test of the LCD under Linux Mint - July 9, 2024</figcaption>
 </figure>
 
+The display looked better than I expected though colors are as not as good as on many of the LCDs that I have used before. It is similar to the Apple iPhone XR that I use exclusively for social media and research. Overall, the display is better than the one used in the former MediaCow Touch. 
+
+It appears to be an IPS panel made by BOE (presumed, there is no label though the part number is nearly the same) with a capacitive touch overlay. The glass part of the overlay slightly overhangs on the edges of the LCD panel itself, this may pose some design challenges. 
 
 ### Embedded Controllers
 The current plan includes two separate microcontrollers on the carrier board: IOEC and BMEC. 
 
 #### IOEC
-IOEC, also known as the *IO Embedded Controller*, manages load switches for all USB Type-A ports, controls the button pad, Wi-Fi/BT power switch, webcam power switch and LED indicators. 
+IOEC, also known as the **IO Embedded Controller**, manages load switches for all USB Type-A ports, controls most buttons, Wi-Fi/BT power switch, webcam power switch and LED indicators.
 
-#### BMEC
-BMEC, also known as the *Battery Management Embedded Controller*, reads data from and controls the battery charger, fuel gauge and USB PD controller ICs. 
+#### PMEC
+PMEC, also known as the **Power Management Embedded Controller**, reads data from and controls the battery charger, fuel gauge and USB PD controller ICs. The power and reset pins are connected to this microcontroller instead of IOEC.
 
 Unlike common laptop designs, the embedded controller is what reports battery state of charge, voltage and other data to the system (LattePanda Mu). This would certainly require custom drivers to be written in order to retrieve this data from the embedded controller.
 
+The former name of PMEC was BMEC, Battery Management Embedded Controller until July 15, 2024.
 
 ### Battery
 Since the original MediaCow idea in November 2018, figuring out safe battery management has held these projects back. Up to recently, I have not understood how batteries are charged, how fuel gauge ICs are used and how to use battery packs safely in a mobile device.

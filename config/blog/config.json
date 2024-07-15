@@ -61,7 +61,7 @@
         "content": "config/blog/content/mct2_p1.md",
         "icon": "/static/blog/mct2_p1/mct2_p1_icon.webp",
         "icontitle": "All coming together",
-        "theme": "white",
+        "theme": "mct2",
         "cat": "hardware",
         "startdate": "July 14, 2024",
         "title": "MediaCow Touch 2 - Part 1",

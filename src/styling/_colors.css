@@ -1,48 +1,48 @@
 /* Global */
 a {
-    color: {{ themecolor }};
+    color: {{ color }};
 }
 
 /* Theme color */
 hr {
-    color: {{ themecolor }};
-    border-color: {{ themecolor }};
-    fill: {{ themecolor }};
+    color: {{ color }};
+    border-color: {{ color }};
+    fill: {{ color }};
 }
 
 /* Navbar */
 nav ul {
-    background-color: {{ themecolor }};
+    background-color: {{ color }};
 }
 
 nav ul li a {
-    border-color: {{ themecolor }};
-    background-color: {{ themecolor }};
+    border-color: {{ color }};
+    background-color: {{ color }};
     color: {{ fgcolor }};
 
     &:hover {
         transition: 0.1s linear;
         background-color: {{ fgcolor }};
-        color: {{ themecolor }};
+        color: {{ color }};
     }
 }
 
 /* Play/Pause Button */
 .vidbtn-play {
-    background-color: {{ themecolor }};
+    background-color: {{ color }};
 }
 
 .vidbtn-pause {
-    background-color: {{ themecolor }};
+    background-color: {{ color }};
 }
 
 ::-moz-selection {
-    background-color: {{ themecolor }};
+    background-color: {{ color }};
     color: {{ fgcolor }};
 }
 
 ::selection {
-    background-color: {{ themecolor }};
+    background-color: {{ color }};
     color: {{ fgcolor }};
 }
 
@@ -58,17 +58,17 @@ nav ul li a {
     }
     
     ::-webkit-scrollbar-thumb {
-        background-color: {{ themecolor }};
+        background-color: {{ color }};
         background-clip: padding-box;
         border: 2px solid transparent;
     }
     
     ::-webkit-scrollbar-thumb:hover {
-        background-color: {{ themecolor }};
+        background-color: {{ color }};
     }
     
     ::-webkit-scrollbar-thumb:active {
-        background-color: {{ themecolor }};
+        background-color: {{ color }};
     }
     
     ::-webkit-scrollbar-button:single-button {
@@ -83,30 +83,30 @@ nav ul li a {
         height: 12px;
         width: 16px;
         background-position: center 4px;
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='" + {{ themecolor }}rgb + "'><polygon points='50,00 0,50 100,50'/></svg>");
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='" + {{ color }}rgb + "'><polygon points='50,00 0,50 100,50'/></svg>");
     }
     
     ::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='" + {{ themecolor }}rgb + "'><polygon points='50,00 0,50 100,50'/></svg>");
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='" + {{ color }}rgb + "'><polygon points='50,00 0,50 100,50'/></svg>");
     }
     
     ::-webkit-scrollbar-button:single-button:vertical:decrement:active {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='" + {{ themecolor }}rgb + "'><polygon points='50,00 0,50 100,50'/></svg>");
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='" + {{ color }}rgb + "'><polygon points='50,00 0,50 100,50'/></svg>");
     }
     
     ::-webkit-scrollbar-button:single-button:vertical:increment {
         height: 12px;
         width: 16px;
         background-position: center 2px;
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='" + {{ themecolor }}rgb + "'><polygon points='0,0 100,0 50,50'/></svg>");
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='" + {{ color }}rgb + "'><polygon points='0,0 100,0 50,50'/></svg>");
     }
     
     ::-webkit-scrollbar-button:single-button:vertical:increment:hover {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='" + {{ themecolor }}rgb + "'><polygon points='0,0 100,0 50,50'/></svg>");
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='" + {{ color }}rgb + "'><polygon points='0,0 100,0 50,50'/></svg>");
     }
     
     ::-webkit-scrollbar-button:single-button:vertical:increment:active {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='" + {{ themecolor }}rgb + "'><polygon points='0,0 100,0 50,50'/></svg>");
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='" + {{ color }}rgb + "'><polygon points='0,0 100,0 50,50'/></svg>");
     }
     
     ::-webkit-scrollbar-button:single-button:horizontal:decrement {
@@ -149,8 +149,60 @@ nav ul li a {
 /* scrollbar-color included in case the webkit method above is not supported */
 @supports (scrollbar-color: auto) {
     html {
-      scrollbar-color: {{ themecolor }} #000000;
+      scrollbar-color: {{ color }} #000000;
       scrollbar-width: 16px;
     }
 }
+
+{% for themename, themedata in themes %}
+/* The title should only be the only h2 text in a section */
+.section-{{ themename }} h2 {
+    color: {{ themedata.fgcolor }};
+    background-color: {{ themedata.color }};
+}
+.pagebutton.section-{{ themename }} .pagebutton-title {
+    color: {{ themedata.fgcolor }};
+    background-color: {{ themedata.color }};
+}
+.section-{{ themename }} {
+    border-color: {{ themedata.color }};
+    box-shadow: {% for i in range(start = 1, end = sectionshadowcount + 1) %}
+        {{ i }}px {{ i }}px rgb({{ themedata.colorrgb[0] * 0.9 | round(method="floor") }}, {{ themedata.colorrgb[1] * 0.9 | round(method="floor") }}, {{ themedata.colorrgb[2] * 0.9 | round(method="floor") }}){% if i < sectionshadowcount %},{% endif %}
+    {% endfor %}
+}
+.pagebutton.section-{{ themename }}:hover {
+    box-shadow: none;
+    transform: translate({{ sectionshadowcount }}px, {{ sectionshadowcount }}px);
+}
+.section-{{ themename }} a {
+    color: {{ themedata.color }};
+}
+.section-{{ themename }} ::selection {
+    color: {{ themedata.fgcolor }};
+    background-color: {{ themedata.color }};
+}
+.section-{{ themename }} ::-moz-selection {
+    color: {{ themedata.fgcolor }};
+    background-color: {{ themedata.color }};
+}
+.pagebutton.section-{{ themename }} ::selection {
+    color: {{ themedata.fgcolor }};
+    background-color: {{ themedata.color }};
+}
+.pagebutton.section-{{ themename }} ::-moz-selection {
+    color: {{ themedata.fgcolor }};
+    background-color: {{ themedata.color }};
+}
+.section-{{ themename }} ul li::marker {
+    color: {{ themedata.color }};
+}
+.section-{{ themename }}.pagebutton img {
+    border-color: {{ themedata.color }};
+}
+.category-{{ themename }} {
+    padding: 2pt;
+    color: {{ themedata.fgcolor }};
+    background-color: {{ themedata.color }};
+}
+{% endfor %}
 

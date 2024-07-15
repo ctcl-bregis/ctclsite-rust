@@ -78,7 +78,7 @@ Hydrochlorofluorocarbon/Hydrochlorofluoroolefin codenames are used for laptops
 - Dichlorotrifluoroethane - R123
 - Chlorotetrafluoroethane - R124
 - Trichlorofluoroethane - R131
-- Dichlorodifluoroehtane - R132
+- Dichlorodifluoroethane - R132
 - Chlorotrifluoroethane - R133
 - Dichlorofluoroethane - R141
 - Chlorodifluoroethane - R142

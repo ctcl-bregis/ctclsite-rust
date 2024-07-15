@@ -2,7 +2,7 @@
 // File: src/lib.rs
 // Purpose: Module import and commonly used functions
 // Created: November 28, 2022
-// Modified: July 9, 2024
+// Modified: July 15, 2024
 
 pub mod routes;
 
@@ -24,15 +24,54 @@ fn false_default() -> bool {
 }
 
 fn empty_string() -> String {
-    String::from("")
+    "".to_string()
+}
+
+
+fn empty3u8() -> [u8; 3] {
+    [0u8; 3]
+}
+
+fn basestring() -> String {
+    "base".to_string()
 }
 
 #[derive(Serialize, Deserialize, Clone)]
 pub struct Theme {
     // Main theme color
     color: String,
+    #[serde(default = "empty3u8")]
+    colorrgb: [u8; 3],
     // Text color on theme color
-    fgcolor: String
+    fgcolor: String,
+    #[serde(default = "empty3u8")]
+    fgcolorrgb: [u8; 3],
+    // Theme-specific styling, "base" by default
+    #[serde(default = "basestring")]
+    css: String
+}
+
+#[derive(Serialize, Deserialize, Clone)]
+pub struct Var {
+    value: String,
+    #[serde(alias = "type")]
+    vtype: String
+}
+
+#[derive(Serialize, Deserialize, Clone)]
+pub struct Font {
+    family: String,
+    path: String,
+    weight: String,
+    style: String
+}
+
+#[derive(Serialize, Deserialize, Clone)]
+pub struct StylingCfg {
+    vars: HashMap<String, Var>,
+    fonts: Vec<Font>,
+    css: HashMap<String, String>,
+    themes: HashMap<String, Theme>
 }
 
 #[derive(Deserialize, Serialize, Clone)]
@@ -106,7 +145,7 @@ pub struct SiteCfg {
     pub bindip: String,
     pub bindport: u16,
     pub siteurl: String,
-    pub themes: HashMap<String, Theme>,
+    pub styling: StylingCfg,
     pub pagecfgpaths: PageCfgPaths,
     pub redirects: HashMap<String, String>
 }
@@ -205,7 +244,7 @@ pub fn mkcontext(sitecfg: &CombinedCfg, page: &str, subpage: &str) -> Result<Con
         return Err(Error::new(std::io::ErrorKind::InvalidInput, "Page is a link and not a page"))
     }
 
-    let pagetheme = match sitecfg.sitecfg.themes.get(&subpage.theme) {
+    let pagetheme = match sitecfg.sitecfg.styling.themes.get(&subpage.theme) {
         Some(theme) => theme,
         None => return Err(Error::new(std::io::ErrorKind::NotFound, "Theme not found"))
     };

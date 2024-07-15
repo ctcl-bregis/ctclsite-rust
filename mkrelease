@@ -3,7 +3,7 @@
 # File: mkrelease
 # Purpose: Builds and gathers files
 # Created: March 4, 2024
-# Modified: April 15, 2024
+# Modified: July 15, 2024
 
 function showerror {
     echo "mkrelease: \"$1\" failed"
@@ -28,7 +28,7 @@ then
 else 
     rm target/release/ctclsite
     
-    if cargo build --profile release ; then
+    if cargo build -vv --profile release ; then
         cp target/release/ctclsite ./ctclsite
         tar -czvf release.tar.gz ctclsite config templates static
         rm ./ctclsite
