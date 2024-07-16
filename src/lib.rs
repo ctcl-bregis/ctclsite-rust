@@ -2,7 +2,7 @@
 // File: src/lib.rs
 // Purpose: Module import and commonly used functions
 // Created: November 28, 2022
-// Modified: July 15, 2024
+// Modified: July 16, 2024
 
 pub mod routes;
 
@@ -68,9 +68,7 @@ pub struct Font {
 
 #[derive(Serialize, Deserialize, Clone)]
 pub struct StylingCfg {
-    vars: HashMap<String, Var>,
-    fonts: Vec<Font>,
-    css: HashMap<String, String>,
+    // Only thing needed is theme data
     themes: HashMap<String, Theme>
 }
 

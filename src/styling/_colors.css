@@ -166,8 +166,8 @@ nav ul li a {
 }
 .section-{{ themename }} {
     border-color: {{ themedata.color }};
-    box-shadow: {% for i in range(start = 1, end = sectionshadowcount + 1) %}
-        {{ i }}px {{ i }}px rgb({{ themedata.colorrgb[0] * 0.9 | round(method="floor") }}, {{ themedata.colorrgb[1] * 0.9 | round(method="floor") }}, {{ themedata.colorrgb[2] * 0.9 | round(method="floor") }}){% if i < sectionshadowcount %},{% endif %}
+    box-shadow: {% for i in range(start = 1, end = (sectionshadowcount * 2) + 1) %}
+        {{ i * 0.5 }}px {{ i * 0.5 }}px rgb({{ themedata.colorrgb[0] * 0.6 | round(method="floor") }}, {{ themedata.colorrgb[1] * 0.6 | round(method="floor") }}, {{ themedata.colorrgb[2] * 0.6 | round(method="floor") }}){% if i < (sectionshadowcount * 2) %},{% endif %}
     {% endfor %}
 }
 .pagebutton.section-{{ themename }}:hover {

@@ -12,6 +12,7 @@
             "update": {"title": "Update", "theme": "gold"}
         },
         "menu": [
+            "wk28_2024",
             "mct2_p1",
             "wk27_2024",
             "wk26_2024",
@@ -48,8 +49,8 @@
     "wk28_2024": {
         "type": "content",
         "content": "config/blog/content/weekly/week_27_2024.md",
-        "icon": "/static/blog/wk28_2024/wk28_2024_icon.webp",
-        "icontitle": "",
+        "icon": "/static/blog/wk28_2024/wk282024_icon.webp",
+        "icontitle": "Going to have to redraw most of this at some point...",
         "theme": "gold",
         "cat": "update",
         "startdate": "July 15, 2024",
@@ -65,7 +66,7 @@
         "cat": "hardware",
         "startdate": "July 14, 2024",
         "title": "MediaCow Touch 2 - Part 1",
-        "desc": "The twenty-seventh week of 2024"
+        "desc": "What has been done so far"
     },
     "wk27_2024": {
         "type": "content",

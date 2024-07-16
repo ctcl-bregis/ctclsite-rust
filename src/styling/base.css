@@ -1,4 +1,5 @@
-{% include "_fontloader.css" %}
+{% include "_fonts.css" %}
+{% include "_common.css" %}
 
 /* Font use definitions */
 
@@ -8,65 +9,46 @@
 
 .content h1, header h1 {
     font-family: "play";
-    font-weight: bold;
-    font-size: 2em;
 }
 
 .pagebutton-title, section h2, .content h2 {
     font-family: "play";
-    font-weight: bold;
-    font-size: 1.5em;
 }
 
 .content h3 {
     font-family: "play";
-    font-weight: bold;
-    font-size: 1.17em;
 }
 
 .content h4  {
     font-family: "play";
-    font-weight: bold;
-    font-size: 1em;
 }
 
 .content h5 {
     font-family: "play";
-    font-weight: bold;
-    font-size: 0.83em;
 }
 
 .content h6 {
     font-family: "play";
-    font-weight: bold;
-    font-size: 0.67em;
 }
 
 .content p strong, .content ul li strong, .content table tr th {
     font-family: "play";
-    font-weight: bold;
-    font-size: 11pt;
 }
 
 .pagebutton-desc, .pagebutton-date, footer p {
     font-family: "play";
-    font-size: 11pt;
 }
 
 nav ul li a {
     font-family: "play";
-    font-weight: bold;
-    font-size: 14pt;
 }
 
 .content p code, .content p code {
     font-family: "hack";
-    font-size: 11pt;
 }
 
 .content p, figure figcaption, .content ul li, td, th {
     font-family: "play";
-    font-size: 11pt;
 }
 
 section h2 {
@@ -82,6 +64,4 @@ section h2 {
      padding-inline-start: 16pt;
 }
 
-
-{% include "_common.css" %}
 {% include "_colors.css" %}

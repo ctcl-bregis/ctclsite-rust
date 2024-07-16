@@ -20,7 +20,6 @@ When I booted up the LattePanda Mu, it was much more powerful than i expected it
     <img src="/static/blog/mct2_p1/mu_win11.webp">
 </figure>
 
-
 During this short period of time, I tested two games: ULTRAKILL and OneShot, which are realitively lightweight. Both games ran flawlessly at 60 FPS, ULTRAKILL ran better on the Intel N100 than the dual Intel Xeon X5670 and AMD Radeon RX 580 in ["Polyethylene"](../../projects/wbpc_pe/). OneShot's performance was not surprising since it is a top-down 2D game made with RPG Maker XP. This is great as all I originally expected out of MediaCow Touch 2 is a custom Android tablet that would just be used for messaging and web browsing. This is as a massive upgrade to the Rockchip RK3399 hardware I planned on using before.
 
 <figure>
@@ -83,7 +82,7 @@ PMEC, also known as the **Power Management Embedded Controller**, reads data fro
 
 Unlike common laptop designs, the embedded controller is what reports battery state of charge, voltage and other data to the system (LattePanda Mu). This would certainly require custom drivers to be written in order to retrieve this data from the embedded controller.
 
-The former name of PMEC was BMEC, Battery Management Embedded Controller until July 15, 2024.
+The former name of PMEC was BMEC, Battery Management Embedded Controller until July 15, 2024. The name change was done after I decided to have the Power and Reset buttons connect to PMEC instead of IOEC.
 
 ### Battery
 Since the original MediaCow idea in November 2018, figuring out safe battery management has held these projects back. Up to recently, I have not understood how batteries are charged, how fuel gauge ICs are used and how to use battery packs safely in a mobile device.

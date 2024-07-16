@@ -2,7 +2,7 @@
 // File: src/build.rs
 // Purpose: Build needed files
 // Created: February 28, 2024
-// Modified: July 15, 2024
+// Modified: July 16, 2024
 
 use serde::{Serialize, Deserialize};
 use std::collections::HashMap;
@@ -25,7 +25,7 @@ fn basestring() -> String {
 }
 
 #[derive(Serialize, Deserialize, Clone)]
-pub struct Theme {
+struct Theme {
     // Main theme color
     color: String,
     #[serde(default = "empty3u8")]
@@ -40,14 +40,18 @@ pub struct Theme {
 }
 
 #[derive(Serialize, Deserialize, Clone)]
-pub struct Var {
-    value: String,
-    #[serde(alias = "type")]
-    vtype: String
+#[serde(tag = "type")]
+enum VarType {
+    #[serde(rename = "string")]
+    String { value: String },
+    #[serde(rename = "number")]
+    Number { value: i32 },
+    #[serde(rename = "stringmap")]
+    StringMap { value: HashMap<String, String> }
 }
 
 #[derive(Serialize, Deserialize, Clone)]
-pub struct Font {
+struct Font {
     family: String,
     path: String,
     weight: String,
@@ -55,15 +59,15 @@ pub struct Font {
 }
 
 #[derive(Serialize, Deserialize, Clone)]
-pub struct StylingCfg {
-    vars: HashMap<String, Var>,
+struct StylingCfg {
+    vars: HashMap<String, VarType>,
     fonts: Vec<Font>,
     css: HashMap<String, String>,
     themes: HashMap<String, Theme>
 }
 
 #[derive(Serialize, Deserialize, Clone)]
-pub struct SiteCfg {
+struct SiteCfg {
     styling: StylingCfg,
 }
 
@@ -103,12 +107,11 @@ fn main() {
     // Iterate "vars" and insert each as a variable, this makes things much easier
     for (name, value) in sitecfg.to_owned().styling.vars.iter() {
         // ctx.insert() cannot insert untyped variables? Probably a better solution could be done for this.
-        if value.vtype == "number" {
-            let newvalue = value.value.parse::<i32>().unwrap();
-            ctx.insert(name, &newvalue);
-        } else {
-            ctx.insert(name, &value.value);
-        }
+        match value {
+            VarType::String { value } => ctx.insert(name, value),
+            VarType::Number { value } => ctx.insert(name, value),
+            VarType::StringMap { value } => ctx.insert(name, value),
+        };
     }
     ctx.insert("fonts", &sitecfg.styling.fonts);
 

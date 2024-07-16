@@ -125,7 +125,7 @@
         "cat": "hardware",
         "startdate": "2021",
         "enddate": "Present",
-        "content": "config/projects/content/mct_2.md"
+        "content": "config/projects/content/mct2.md"
     },
     "mcm": {
         "type": "content",

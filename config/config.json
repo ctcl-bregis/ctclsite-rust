@@ -8,11 +8,24 @@
             "mct2": "mct2.css"
         },
         "vars": {
-            "sectionmargin": {"value": "8pt", "type": "string"},
-            "sectionborder": {"value": "2px", "type": "string"},
-            "sectionshadowcount": {"value": "2", "type": "number"},
-            "linkheight": {"value": "128pt", "type": "string"},
-            "linkmaxheight": {"value": "128pt", "type": "string"}
+            "sectionmargin": {"type": "string", "value": "8pt"},
+            "sectionborder": {"type": "string", "value": "2px"},
+            "sectionshadowcount": {"type": "number", "value": 2},
+            "linkheight": {"type": "string", "value": "128pt"},
+            "linkmaxheight": {"type": "string", "value": "128pt"},
+            "textdefaultsizes": {
+                "type": "stringmap",
+                "value": {
+                    "h1": "36pt",
+                    "h2": "24pt",
+                    "h3": "20pt",
+                    "h4": "18pt",
+                    "h5": "16pt",
+                    "h6": "14pt",
+                    "nav": "14pt",
+                    "body": "11pt"
+                }
+            }
         },
         "fonts": [
             {"family": "pix16x16", "path": "/static/fonts/pixel/Pixel-16x16-condensed-light.ttf", "weight": "normal", "style": "normal"},
