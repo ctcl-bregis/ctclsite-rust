@@ -349,11 +349,6 @@ Exceptions to the requirement of the design requiring a processor of some sort a
 
 Codenames must contain just the name of the city, town, village or CDP. Codenames that are of different places with the same name cannot be used, for example: If a project codenamed "Richmond" after Richmond, Virginia already exists, another project cannot use a codename named after Richmond, California as both would be "Richmond". 
 
-### By Chipset
-
-#### SP7021
-Starting May 16, 2024, any project using the Sunplus/Tibbo SP7021 SoC or any other Sunplus ARM implementation are to use codenames of locations in **Brazil** starting with "Curitiba" because of its personal value.
-
 ### MediaCow
 
 MediaCow is a series of projects about the design and assembly of portable media players and tablet computers.
@@ -371,7 +366,7 @@ MediaCow Touch devices have received codenames relating to real persons that I h
 
 Currently, there is no theme for codenames used for MediaCow Touch Mini devices. A lot of these device ideas would receive special codenames.
 
-- MediaCow Touch Mini SP7021 - "Curitiba"
+- MediaCow Touch Mini SP7021 - "Floyds Knobs"
 
 #### MediaCow Micro
 
@@ -420,13 +415,15 @@ The codename "Fort Myers" was used for the [MathPad](../mathpad/) project in 202
 
 #### Generally Reserved Codenames
 
-These codenames are reserved for general purpose
+These codenames are reserved for special purposes due to the personal value
 
 - Canastota, New York, US
 - Clay, New York, US
   - Likely would be used with something DRAM related
 - Curitiba, Paraná, Brazil
-  - Planned to be used with a MediaCow Touch Mini device using the SP7021
+- Floyds Knobs, Indiana, US
+  - Would be used for the first device I design using the Sunplus SP7021 SiP
+  - Dedicated to Jason "Leinfors" Parker (1986-2023)
 - Dresden, Saxony, Germany
   - Likely would be used with something DRAM related
 - Jacksonville, Florida, US

@@ -20,6 +20,7 @@
             "contactlist",
             "todokiosk",
             "slag",
+            "mediacow",
             "mct1",
             "mct2",
             "mcm",
@@ -102,6 +103,19 @@
         "enddate": "Present",
         "content": "config/projects/content/slag.md"
     },
+    "mediacow": {
+        "type": "content",
+        "link": "/projects/mediacow/",
+        "theme": "mediacow", 
+        "title": "MediaCow", 
+        "desc": "All about the device series", 
+        "icon": "", 
+        "icontitle": "",
+        "cat": "hardware",
+        "startdate": "2018",
+        "enddate": "Present",
+        "content": "config/projects/content/mediacow.md"
+    },
     "mct1": {
         "type": "content",
         "link": "/projects/mct1/",
@@ -109,10 +123,10 @@
         "title": "MediaCow Touch (1)", 
         "desc": "MediaCow Touch \"Nashville\" - Android tablet experiment from 2020", 
         "icon": "/static/projects/icons/mct1_amogus.webp", 
-        "icontitle": "This was the best photo I had of something running on the device.",
+        "icontitle": "Among Us was the only game I had on here and mind that this was early 2021...",
         "cat": "hardware",
         "startdate": "2020",
-        "content": "config/projects/content/mct_1.md"
+        "content": "config/projects/content/mct1.md"
     },
     "mct2": {
         "type": "content",
@@ -249,36 +263,36 @@
     },
     "svcs": {
         "type": "sections",
-        "theme": "orange", 
+        "theme": "smyellow", 
         "title": "SVCS", 
         "desc": "Series of server systems for use with service hosting",
-        "introduction": "config/projects/content/svcs/svcs_intro.md",
         "cat": "pchardware",
-        "startdate": "2020",
-        "enddate": "Present",
+        "startdate": "",
+        "enddate": "",
         "sections": {
+            "svcs_intro": {
+                "content": "config/projects/content/svcs/svcs_intro.md",
+                "theme": "smyellow",
+                "title": "Introduction",
+                "boxed": false,
+                "fitscreen": false
+            },
             "svcs_lva": {
                 "content": "config/projects/content/svcs/svcs_lva.md", 
-                "theme": "orange", 
+                "theme": "smyellow", 
                 "title": "SVCS1 - \"Levoamphetamine\"",
                 "fitscreen": false
             },
             "svcs_ldx": {
                 "content": "config/projects/content/svcs/svcs_ldx.md", 
-                "theme": "orange", 
+                "theme": "smyellow", 
                 "title": "SVCS2 - \"Lisdexamfetamine\"",
                 "fitscreen": false
             },
             "svcs_dxa": {
                 "content": "config/projects/content/svcs/svcs_dxa.md", 
-                "theme": "orange", 
+                "theme": "smyellow", 
                 "title": "SVCS3 - \"Dextroamphetamine\"",
-                "fitscreen": false
-            },
-            "svcs_pe": {
-                "content": "config/projects/content/svcs/svcs_pe.md", 
-                "theme": "green", 
-                "title": "Former systems",
                 "fitscreen": false
             }
         }
@@ -289,8 +303,8 @@
         "title": "Other Servers",
         "desc": "Other servers with various purposes",
         "cat": "pchardware",
-        "startdate": "2020",
-        "enddate": "Present",
+        "startdate": "",
+        "enddate": "",
         "sections": {
             "srv_prm": {
                 "content": "config/projects/content/srv_prm.md", 

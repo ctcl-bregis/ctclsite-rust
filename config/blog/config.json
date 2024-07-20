@@ -46,9 +46,20 @@
             "sp7021_p1"
         ]
     },
+    "wk29_2024": {
+        "type": "content",
+        "content": "config/blog/content/weekly/week_29_2024.md",
+        "icon": "/static/blog/wk29_2024/wk292024_icon.webp",
+        "icontitle": "",
+        "theme": "gold",
+        "cat": "update",
+        "startdate": "July 22, 2024",
+        "title": "Week 29, 2024",
+        "desc": "The twenty-ninth week of 2024"
+    },
     "wk28_2024": {
         "type": "content",
-        "content": "config/blog/content/weekly/week_27_2024.md",
+        "content": "config/blog/content/weekly/week_28_2024.md",
         "icon": "/static/blog/wk28_2024/wk282024_icon.webp",
         "icontitle": "Going to have to redraw most of this at some point...",
         "theme": "gold",

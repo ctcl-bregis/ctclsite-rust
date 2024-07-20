@@ -1,6 +1,5 @@
-
-## Introduction 
-MediaCow Touch 2, codenamed "Paris", is a project idea about designing and building a tablet computer device. 
+## Introduction
+MediaCow Touch 2, codenamed "Paris", is a project idea about designing and building a tablet computer device.
 
 The theming and codename is inspired by a certain online friend that I met in late 2020.
 
@@ -13,11 +12,11 @@ For an in-depth history on MediaCow, see the [MediaCow page](../mediacow/).
 #### 2021-2022
 In March 2021, I came up with ideas to develop another tablet device after the success with MediaCow Touch "Nashville" in November 2020. At first, I had some overcomplicated, unrelastic ideas at the beginning. The initial idea at the time surrounded the use of a soldered-down Rockchip RK3588 SoC with ten DDR4 DRAM ICs, specifically Nanya NT5AD1024M8A3, for 8GB of memory with ECC. This would have been extremely difficult if not impossible for me to design at the time so I later decided to use a System on Module, a format of computers I just heard of recently at that time.
 
-Block diagrams and physical layout diagrams have been attempted throughout the rest of 2021. 
+Block diagrams and physical layout diagrams have been attempted throughout the rest of 2021.
 
 In late 2021 to early 2022, I decided to use the Graperain GR3399 System on Module with the Rockchip RK3399. In February 2022, I ordered the GR3399 Gold-Finger development kit from Graperain. The module was quite large and had 2GB of DDR3 RAM (4x Samsung K4B4G1649E-BCMA). I preferred to use the MXM3.0 ("Gold Finger") format of the System on Module over the "Stamp hole" G3399 so during the assembly stage, I could just remove a couple screws to remove the module from the development kit and install the module into the prototype without having to desolder and risk damaging the module and/or development board.
 
-I attempted to start working on the device's design in late 2021 to early 2022. The global chip shortage at the time made the project much more difficult to plan and develop. Along with difficulties with component sourcing, the project mainly suffered from my overestimation of my skills. Basically, when I tried to start working on the project, I had no idea what I was doing. 
+I attempted to start working on the device's design in late 2021 to early 2022. The global chip shortage at the time made the project much more difficult to plan and develop. Along with difficulties with component sourcing, the project mainly suffered from my overestimation of my skills. Basically, when I tried to start working on the project, I had no idea what I was doing.
 
 #### 2023
 In 2023, for the most part, I decided to stop working on hardware and focus on software development due to the failed attempts at the project in prior years and there being no need for the device.
@@ -25,134 +24,93 @@ In 2023, for the most part, I decided to stop working on hardware and focus on s
 #### 2024
 In May 2024, I heard about the LattePanda Mu Free Trial Event presumably through DFRobot on Discord. I signed up for the event with the idea being MediaCow Touch 2 with the idea that there was a+ tiny chance my idea would be accepted for receiving the development kit for free. On June 20, 2024, to my surprise, I received an email about interest in the project idea, asking for more information about how the module is used.
 
-## Feature Overview
-This section covers what features are available to the device.
+## Features
 
-### System
-The device makes use of the LattePanda Mu System on Module (SoM). The LattePanda Mu was released recently, in early-mid 2024 for US$139. The processor it makes use of, the Intel Processor N100, was released in Q1 2023.
+### Wired Connectivity
+A unique aspect of MediaCow Touch 2 is that it has connectors not commonly seen on tablets. 
 
-The specific unit that I received that is planned to be used in the first prototype has the following specifications:
+* 2x USB Type-C with PD and DisplayPort alternate mode
+* 2x USB 3.2 Type-A
+* 4x USB 2.0 Type-A
+* Full-size HDMI
+* 10/100/1000 Ethernet RJ-45
 
-- [Intel Processor N100](https://ark.intel.com/content/www/us/en/ark/products/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz.html) x86-64 CPU with 6MB of cache and integrated Intel UHD Graphics
-- 8GB of LPDDR5-4800 memory with what appears to be a single [Samsung K3KL3L30CM-BGCT](https://semiconductor.samsung.com/dram/lpddr/lpddr5x/k3kl3l30cm-bgct/) 64Gbit LPDDR5X-7500
-- 64GB of storage provided by a single Samsung eMMC flash memory IC
+### Buttons
 
-The system on module provides more than enough processing power for what I expect to use the device for. The module has markings stating that it was made during Week 9 of 2024.
+List:
+* Volume Up
+* Volume Down
+* Radio Kill Switch
+* Camera Kill Switch
+* Reserved/User Defined 1
+* Reserved/User Defined 2
+* Reserved/User Defined 3
+* Reserved/User Defined 4
+* **Power**
+* **Reset**
 
-### Display
-The current plan is to use an 11.6" 1920x1080 touchscreen display.
-
-### Storage
-Like many laptops and handhelds like the Valve Steam Deck, an M.2 SSD is used for storage. Unlike some laptops and handhelds there is support for SSD sizes up to 2280. One M.2 Key-M slot would be available for an NVMe SSD. The SSD would make use of four PCIe 3.0 lanes.
-
-The 64GB eMMC on the module may be left unused in most use cases.
-
-### Connectors
-Summary of external connectors:
-- 2x USB Type-A 2.0 connected directly to the SoM
-- 4x USB Type-A 3.0 5Gb (provided by a PCIe-USB3 host IC; not from the CPU)
-- 1x HDMI full-size port for external monitors
-- 1x RJ-45 port for 10/100/1000 Ethernet 
-- 1x USB Type-C PD charging port
-- 3.5mm audio output
-
-Though details are to be determined, there may be the addition of a USB Type-C port with DisplayPort alternate mode capability alongside the USB Type-A ports.
+**Bold**: Controlled by PMEC instead of SMEC
 
 ### Wireless Connectivity
-Wi-Fi and Bluetooth would be provided by an M.2 module just like many laptops.
+Like most tablet computers, MediaCow Touch 2 has Wi-Fi and Bluetooth capabilities. 
 
-The ability to remove this module and as result, have zero wireless connectivity, is a crucial privacy and security feature. Along with the ability to remove the module, there would be a switch to disable wireless connectivity during device operation.
+Wi-Fi and Bluetooth is provided through a M.2 module. This is an important security and privacy feature as wireless connectivity can be disabled altogether by removing the module. Along with modularity, there is a switch on the side of the device to shut off the module; a wireless kill switch.
 
-### Cameras and Microphone
-The device would have a front-facing camera in the form of a webcam and a back-facing camera likely using the on-module MIPI CSI interface. 
+### Cameras and Microphones
+MediaCow Touch 2 would contain up to two cameras. 
 
-Like wireless, a switch is provided to disable the webcam and microphone entirely.
+#### Front-Facing Camera
+The front-facing camera would be in the form of a laptop webcam pulled from either a Chromebook or a laptop. The front-facing camera along with the microphone would be useful in cases such as video chat, video logs and selfie photography (though the device would likely require two hands to hold).
 
-### Audio 
-A standard 3.5mm headphone jack would be provided. The addition of line-in and/or line-out would likely be determined by what audio IC is used. 
+Internally, the webcam module connects to the system through a USB 2.0 link though the microphone would have an output for a PDM signal that would be used by the audio CODEC IC on the carrier board.
 
-There may be the addition of two speakers in the device for cases where this would be useful such as video calls.
+#### Back-Facing Camera
+The back-facing camera would be in the form of a camera module with a MIPI CSI interface. I discovered that the pinout on the LattePanda Mu is the same as the 22-pin camera connector found on some Raspberry Pi single-board computers. As result, I would most likely use a camera module intended for such model of Raspberry Pi.
+
+Since the camera would be connected directly to the LattePanda Mu System on Module, it is most likely that the hardware kill switch for cameras and microphones would not effect the back-facing camera. This is done to simplify the design of the first carrier board revision. If the ability to disable the back-facing camera is needed in the future, there can be another board revision that uses the other MIPI CSI interface available to the carrier board.
+
+### Storage
+The device has a M.2 Key M slot with support for 2230, 2242, 2260 and 2280 size SSDs.
+
+### Display
+The display used in MediaCow Touch 2 is a 11.6" capacitive touchscreen with a resolution of 1920x1080. The display was provided by DFRobot and the panel itself likely manufactured by BOE. 
+
+The display connects directly to the LattePanda Mu with eDP (Embedded DisplayPort). 
 
 ### Power
-Like all tablet devices, MediaCow Touch 2 would use a battery.
+MediaCow Touch 2 makes use of an internal battery pack. The battery is charged through USB Type-C PD.
 
-## Hardware
-This section covers details about how hardware features described in the above section are implemented.
+The battery pack would likely be one meant for an existing laptop. Currently, the battery pack planned to be used is an HP FM08 16-pin battery pack that is meant for older versions of the HP Omen 17 laptop. 
 
-The PC-like hardware of the MediaCow Touch 2 has many features easy to implement as I can look at existing laptop and tablet PC designs while there are many ICs availble made specifically for what I am trying to achieve.
+### Case
+As part of the theme, the case would be made of white PET(G). The case would be 3D printed.
 
-### Embedded Controllers
-Like many laptops, including Chromebooks, MediaCow Touch 2 makes use of microcontrollers separate from the main CPU/SoC called an embedded controller.
+### Software
 
-#### IOEC
-IOEC, known as IO Embedded Controller, is a microcontroller that controls load switches for USB ports, reads from the button panel and controls power for wireless connectivity and the webcam.
+## Embedded Controllers
+The carrier board for MediaCow Touch 2 is expected to make use of two embedded controllers.
 
-As this microcontroller is expected to be online only when the rest of the system is online, power usage of the microcontroller is not much of a concern.
+### PMEC
+PMEC, formerly known as BMEC, is the Power Management Embedded Controller. 
 
-#### PMEC
-PMEC, known as Power Management Embedded Controller, is a microcontroller that directly manages the battery charger IC, reads data from the battery pack and manages power states of the system.
+Currently, the microcontroller chosen for PMEC is the STMicroelectronics STM32L4A6RGT.
 
-A requirement of the specific microcontroller part used as PMEC is very low power usage as the microcontroller is always online even when the device is powered off. An STMicroelectronics STM32L4-series microcontroller may be used for this purpose as it is known to support very low power states.
+Functions of PMEC:
+* Control battery charger IC; BQ25700A
+* Read from battery pack fuel gauge
+* Read states of Power and Reset buttons
+* Control RGB status LED
+* Control power to LattePanda Mu
+* Communicate with SMEC
 
-Two of the buttons, Power and Reset are connected to PMEC instead of the IO expander connected to IOEC. This is because PMEC must know the state of these buttons at all times.
+### SMEC
+SMEC, formerly known as IOEC, is the System Management Embedded Controller. 
 
-### External Connectivity
+## Development
+Development of MediaCow Touch 2 officially started on June 24, 2024.
 
-#### USB
-Every USB port has a load switch that is controlled and monitored by IOEC. 
-
-##### USB 3.0 Type-A
-Four USB 3.0 Type-A ports are made available with a [Renesas uPD720201 USB 3.0 Host Controller IC](https://www.renesas.com/us/en/products/interface/usb-switches-hubs/upd720201-usb-30-host-controller). I originally considered using the [Texas Instruments TUSB7340](https://www.ti.com/product/TUSB7340) though sourcing of that part is difficult and more costly. I likely have experience with the specific Renesas part with a USB 3.0 card used in the desktop PC, ["Polyethylene"](../wbpc_pe/), under a Linux environment where it was functional out-of-box without any concern about drivers. 
-
-### Internal Connectivity
-
-#### PCIe
-PCIe is the main connection standard used for high-speed connections between components on the carrier board. 
-
-This is the expected assignemnt of PCIe lanes:
-
-| Pin Names  | Lane   | Function |
-| ---------- | ------ | -------- |
-| HSIO2      | Lane 0 | NVMe     |
-| HSIO3      | Lane 1 | NVMe     |
-| HSIO5      | Lane 2 | NVMe     |
-| HSIO6      | Lane 3 | NVMe     |
-| HSIO7      | Lane 4 | Wi-Fi    |
-| HSIO8      | Lane 5 | USB 3    |
-| HSIO9      | Lane 6 | Ethernet |
-| HSIO10     | Lane 7 | N/A      |
-| HSIO11     | Lane 8 | N/A      |
-
-HSIO0-HSIO1 is used for USB 3.2 on the LattePanda Mu Lite Carrier Board while HSIO4 does not seem to exist.
-
-#### USB
-USB 2.0 connections are expected to be used for connections to some devices, namely the front-facing camera (webcam) and Bluetooth through the M.2 Key E slot.
-
-USB 3.0 is not expected to be used for connections between internal components.
-
-#### I2C and SMBus
-I2C and SMBus are expected to be used extensively for communication between embedded controllers and some devices.
-
-### Audio
-A separate audio CODEC IC would be used. As of July 15, 2024, the CODEC IC currently selected is the Tempo Semiconductor 92HD65C. The audio codec would make use of the HD Audio interface provided by the Intel CPU. 
-
-It is currently unknown if the CODEC would be connected with HD Audio or with USB. Many devices with similar hardware use HD Audio or I2S for connecting the audio CODEC, for example, the Valve Steam Deck uses the [Cirrus Logic CS35L41B I2S/TDM audio DSP/Amplifier](https://www.cirrus.com/products/cs35l41/) according to an [iFixit guide](https://www.ifixit.com/Guide/Steam+Deck+Chip+ID/147811).
-
-## Software
-This section covers software and firmware that the device would use.
-
-### BIOS
-As result of how module interfaces are used and the closed-source nature of the BIOS images provided by LattePanda, Coreboot is expected to be ported to the LattePanda Mu by myself.
-
-For easier flashing of the BIOS, a SOIC-8 socket would be on the carrier board making use of the external SPI flash interface of the module. This would make loading BIOS easier as the SPI flash IC can be removed without desoldering and be flashed with another device. 
-
-### Operating System
-Currently, the plan for the device is for it to use a customized Linux distribution.
-
-## Development Process
-Development of MediaCow Touch 2 officially started on June 24, 2024. H
-
-aving a proper order in how the device is developed is important for the success of the project.
+### Process
+Having a proper order in how the device is developed is important for the success of the project.
 
 On July 16, 2024, I realized that I was doing this project in the incorrect order by skipping directly to the case design and hardware block diagram while I should have been writing (typing) a plan for the project. As result, I came up with a process with the order of what is to be done.
 
@@ -177,5 +135,4 @@ This is the process in how I plan to design the device:
    5. Final software testing
 4. Completion
 
-It is cruical that I complete steps 1 through 2.6 by September 1, 2024, preferably by August 26, 2024. 
-
+It is cruical that I complete steps 1 through 2.6 by September 1, 2024, preferably by August 26, 2024.

@@ -2,7 +2,7 @@
 // File: src/build.rs
 // Purpose: Build needed files
 // Created: February 28, 2024
-// Modified: July 16, 2024
+// Modified: July 17, 2024
 
 use serde::{Serialize, Deserialize};
 use std::collections::HashMap;
@@ -36,7 +36,9 @@ struct Theme {
     fgcolorrgb: [u8; 3],
     // Theme-specific styling, "base" by default
     #[serde(default = "basestring")]
-    css: String
+    css: String,
+    // Font used to represent the theme, should be the name of a font family defined in "fonts" under "styling"
+    mainfont: String
 }
 
 #[derive(Serialize, Deserialize, Clone)]
@@ -128,6 +130,7 @@ fn main() {
             fgcolor: data.fgcolor.clone(),
             fgcolorrgb,
             css: data.css.clone(),
+            mainfont: data.mainfont.clone()
         };
 
         themes.insert(name.to_string(), newdata);
@@ -135,7 +138,7 @@ fn main() {
 
 
     ctx.insert("themes", &themes);
-    // This amount of "to_owned" is probably going to own RAM. Consider finding a better way to do this if it uses too much resources.
+    // This amount of "to_owned" is probably going to own RAM. This is just the build script so probably would not be a problem.
     for (name, theme) in themes.iter() {
         // CSS files starting with "_" should only be used by being included by other files
         let cssfile = match sitecfg.styling.css.get(&theme.css) {

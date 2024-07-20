@@ -18,19 +18,21 @@ When I booted up the LattePanda Mu, it was much more powerful than i expected it
 
 <figure>
     <img src="/static/blog/mct2_p1/mu_win11.webp">
+    <figcaption>Windows 11 - July 2, 2024</figcaption>
 </figure>
 
 During this short period of time, I tested two games: ULTRAKILL and OneShot, which are realitively lightweight. Both games ran flawlessly at 60 FPS, ULTRAKILL ran better on the Intel N100 than the dual Intel Xeon X5670 and AMD Radeon RX 580 in ["Polyethylene"](../../projects/wbpc_pe/). OneShot's performance was not surprising since it is a top-down 2D game made with RPG Maker XP. This is great as all I originally expected out of MediaCow Touch 2 is a custom Android tablet that would just be used for messaging and web browsing. This is as a massive upgrade to the Rockchip RK3399 hardware I planned on using before.
 
 <figure>
     <img src="/static/blog/mct2_p1/mu_ultrakill.webp">
+    <figcaption>Sufficient Firepower - July 2, 2024</figcaption>
 </figure>
 
 After some gaming, I decided to install Linux Mint 21.3 on the system to test its functionality under a Linux environment. In the live USB environment, the display resolution on HDMI was limited to 800x600, this is likely due to an older Linux kernel version on the live USB image. I presume it updated packages including the Linux kernel during the installation process since after rebooting, I could use a display resolution of 1920x1080. 
 
 <figure>
     <img src="/static/blog/mct2_p1/mu_mint_nodrivers.webp">
-    <figcaption>HDMI at 800x600 - July 2, 2024</figcaption>
+    <figcaption>Kernel update needed - July 2, 2024</figcaption>
 </figure>
 
 ## Challenges and Subsystems

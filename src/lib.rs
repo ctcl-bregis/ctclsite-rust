@@ -2,7 +2,7 @@
 // File: src/lib.rs
 // Purpose: Module import and commonly used functions
 // Created: November 28, 2022
-// Modified: July 16, 2024
+// Modified: July 17, 2024
 
 pub mod routes;
 
@@ -37,7 +37,7 @@ fn basestring() -> String {
 }
 
 #[derive(Serialize, Deserialize, Clone)]
-pub struct Theme {
+struct Theme {
     // Main theme color
     color: String,
     #[serde(default = "empty3u8")]
@@ -48,7 +48,9 @@ pub struct Theme {
     fgcolorrgb: [u8; 3],
     // Theme-specific styling, "base" by default
     #[serde(default = "basestring")]
-    css: String
+    css: String,
+    // Font used to represent the theme, should be the name of a font family defined in "fonts" under "styling"
+    mainfont: String
 }
 
 #[derive(Serialize, Deserialize, Clone)]
@@ -77,9 +79,12 @@ pub struct Section {
     theme: String,
     title: String,
     content: String,
+    #[serde(default = "true_default")]
+    boxed: bool,
     // Value that determines if the section should have the height of the viewport, defaults to true
     #[serde(default = "true_default")]
     fitscreen: bool,
+    // To be deprecated
     bgvid: Option<String>,
     bgimg: Option<String>
 }

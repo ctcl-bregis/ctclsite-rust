@@ -1,16 +1,16 @@
-/* Global */
+{# Global #}
 a {
     color: {{ color }};
 }
 
-/* Theme color */
+{# Theme color #}
 hr {
     color: {{ color }};
     border-color: {{ color }};
     fill: {{ color }};
 }
 
-/* Navbar */
+{# Navbar #}
 nav ul {
     background-color: {{ color }};
 }
@@ -27,7 +27,7 @@ nav ul li a {
     }
 }
 
-/* Play/Pause Button */
+{# Play/Pause Button #}
 .vidbtn-play {
     background-color: {{ color }};
 }
@@ -46,7 +46,7 @@ nav ul li a {
     color: {{ fgcolor }};
 }
 
-/* Scrollbar */
+{# Scrollbar #}
 @supports selector(::-webkit-scrollbar) {
     ::-webkit-scrollbar {
         width: 16px;
@@ -146,7 +146,7 @@ nav ul li a {
     }
 }
 
-/* scrollbar-color included in case the webkit method above is not supported */
+{# scrollbar-color included in case the webkit method above is not supported #}
 @supports (scrollbar-color: auto) {
     html {
       scrollbar-color: {{ color }} #000000;
@@ -154,55 +154,73 @@ nav ul li a {
     }
 }
 
-{% for themename, themedata in themes %}
-/* The title should only be the only h2 text in a section */
-.section-{{ themename }} h2 {
-    color: {{ themedata.fgcolor }};
-    background-color: {{ themedata.color }};
-}
-.pagebutton.section-{{ themename }} .pagebutton-title {
-    color: {{ themedata.fgcolor }};
-    background-color: {{ themedata.color }};
-}
-.section-{{ themename }} {
-    border-color: {{ themedata.color }};
-    box-shadow: {% for i in range(start = 1, end = (sectionshadowcount * 2) + 1) %}
-        {{ i * 0.5 }}px {{ i * 0.5 }}px rgb({{ themedata.colorrgb[0] * 0.6 | round(method="floor") }}, {{ themedata.colorrgb[1] * 0.6 | round(method="floor") }}, {{ themedata.colorrgb[2] * 0.6 | round(method="floor") }}){% if i < (sectionshadowcount * 2) %},{% endif %}
+{% for name, data in themes %}
+{% set sectionshadowcount = sectionshadowlength * sectionshadowresolution %}
+{# Section and pagebuttons all have the pseudo-3D effect by default #}
+.section-{{ name }}, .pagebutton.section-{{name}} {
+    border-color: {{ data.color }};
+    box-shadow: {% for i in range(start = 1, end = (sectionshadowcount) + 1) %}
+        {{ i * 0.5 }}px {{ i * 0.5 }}px rgb({{ data.colorrgb[0] * 0.6 | round(method="floor") }}, {{ data.colorrgb[1] * 0.6 | round(method="floor") }}, {{ data.colorrgb[2] * 0.6 | round(method="floor") }}){% if i < (sectionshadowcount) %},{% else %};{% endif %}
     {% endfor %}
+    transform: translate(-{{ sectionshadowlength }}px, -{{ sectionshadowlength }}px);
 }
-.pagebutton.section-{{ themename }}:hover {
+.pagebutton:hover, .pagebutton:focus, .pagebutton:active {
     box-shadow: none;
-    transform: translate({{ sectionshadowcount }}px, {{ sectionshadowcount }}px);
+    transform: translate(0px, 0px);
 }
-.section-{{ themename }} a {
-    color: {{ themedata.color }};
+
+{# Text #}
+.section-{{ name }} h2 {
+    color: {{ data.fgcolor }};
+    background-color: {{ data.color }};
+    font-family: {{ data.mainfont }};
 }
-.section-{{ themename }} ::selection {
-    color: {{ themedata.fgcolor }};
-    background-color: {{ themedata.color }};
+
+.pagebutton.section-{{ name }} .pagebutton-title {
+    color: {{ data.fgcolor }};
+    background-color: {{ data.color }};
+    font-family: {{ data.mainfont }};
 }
-.section-{{ themename }} ::-moz-selection {
-    color: {{ themedata.fgcolor }};
-    background-color: {{ themedata.color }};
+
+.pagebutton.section-{{ name }} .pagebutton-desc, .pagebutton.section-{{ name }} .pagebutton-date {
+    color: #ffffff;
+    background: none;
+    font-family: {{ data.mainfont }};
 }
-.pagebutton.section-{{ themename }} ::selection {
-    color: {{ themedata.fgcolor }};
-    background-color: {{ themedata.color }};
+
+.pagebutton.section-{{ name }} .pagebutton-img {
+    border-color: {{ data.color }}
 }
-.pagebutton.section-{{ themename }} ::-moz-selection {
-    color: {{ themedata.fgcolor }};
-    background-color: {{ themedata.color }};
+
+{# Link color #}
+.section-{{ name }} a {
+    color: {{ data.color }};
 }
-.section-{{ themename }} ul li::marker {
-    color: {{ themedata.color }};
+
+{# Selection colors #}
+.section-{{ name }} ::selection {
+    color: {{ data.fgcolor }};
+    background-color: {{ data.color }};
 }
-.section-{{ themename }}.pagebutton img {
-    border-color: {{ themedata.color }};
+.section-{{ name }} ::-moz-selection {
+    color: {{ data.fgcolor }};
+    background-color: {{ data.color }};
 }
-.category-{{ themename }} {
+.pagebutton.section-{{ name }} ::selection {
+    color: {{ data.fgcolor }};
+    background-color: {{ data.color }};
+}
+.pagebutton.section-{{ name }} ::-moz-selection {
+    color: {{ data.fgcolor }};
+    background-color: {{ data.color }};
+}
+
+{# Category box #}
+.category-{{ name }} {
     padding: 2pt;
-    color: {{ themedata.fgcolor }};
-    background-color: {{ themedata.color }};
+    padding-left: 4pt;
+    padding-right: 4pt;
+    color: {{ data.fgcolor }};
+    background-color: {{ data.color }};
 }
 {% endfor %}
-
