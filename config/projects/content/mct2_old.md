@@ -127,7 +127,7 @@ Every USB port has a load switch that is controlled and monitored by IOEC.
 
 ##### USB 3.0 Type-A
 
-Four USB 3.0 Type-A ports are made available with a [Renesas uPD720201 USB 3.0 Host Controller IC](https://www.renesas.com/us/en/products/interface/usb-switches-hubs/upd720201-usb-30-host-controller). I originally considered using the [Texas Instruments TUSB7340](https://www.ti.com/product/TUSB7340) though sourcing of that part is difficult and more costly. I likely have experience with the specific Renesas part with a USB 3.0 card used in the desktop PC, ["Polyethylene"](../wbpc_pe/), under a Linux environment where it was functional out-of-box without any concern about drivers.
+Four USB 3.0 Type-A ports are made available with a [Renesas uPD720201 USB 3.0 Host Controller IC](https://www.renesas.com/us/en/products/interface/usb-switches-hubs/upd720201-usb-30-host-controller). I originally considered using the [Texas Instruments TUSB7340](https://www.ti.com/product/TUSB7340) though sourcing of that part is difficult and more costly. I likely have experience with the specific Renesas part with a USB 3.0 card used in the desktop PC, ["Polyethylene"](../pc_pe/), under a Linux environment where it was functional out-of-box without any concern about drivers.
 
 ##### USB Type-C
 

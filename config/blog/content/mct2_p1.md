@@ -21,7 +21,7 @@ When I booted up the LattePanda Mu, it was much more powerful than i expected it
     <figcaption>Windows 11 - July 2, 2024</figcaption>
 </figure>
 
-During this short period of time, I tested two games: ULTRAKILL and OneShot, which are realitively lightweight. Both games ran flawlessly at 60 FPS, ULTRAKILL ran better on the Intel N100 than the dual Intel Xeon X5670 and AMD Radeon RX 580 in ["Polyethylene"](../../projects/wbpc_pe/). OneShot's performance was not surprising since it is a top-down 2D game made with RPG Maker XP. This is great as all I originally expected out of MediaCow Touch 2 is a custom Android tablet that would just be used for messaging and web browsing. This is as a massive upgrade to the Rockchip RK3399 hardware I planned on using before.
+During this short period of time, I tested two games: ULTRAKILL and OneShot, which are realitively lightweight. Both games ran flawlessly at 60 FPS, ULTRAKILL ran better on the Intel N100 than the dual Intel Xeon X5670 and AMD Radeon RX 580 in ["Polyethylene"](../../projects/pc_pe/). OneShot's performance was not surprising since it is a top-down 2D game made with RPG Maker XP. This is great as all I originally expected out of MediaCow Touch 2 is a custom Android tablet that would just be used for messaging and web browsing. This is as a massive upgrade to the Rockchip RK3399 hardware I planned on using before.
 
 <figure>
     <img src="/static/blog/mct2_p1/mu_ultrakill.webp">

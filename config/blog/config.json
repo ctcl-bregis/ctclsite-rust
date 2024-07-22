@@ -12,6 +12,8 @@
             "update": {"title": "Update", "theme": "gold"}
         },
         "menu": [
+            "wk29_2024",
+            "mct2_p2",
             "wk28_2024",
             "mct2_p1",
             "wk27_2024",
@@ -56,6 +58,17 @@
         "startdate": "July 22, 2024",
         "title": "Week 29, 2024",
         "desc": "The twenty-ninth week of 2024"
+    },
+    "mct2_p2": {
+        "type": "content",
+        "content": "config/blog/content/mct2_p2.md",
+        "icon": "/static/blog/mct2_p2/mct2_p2_icon.webp",
+        "icontitle": "Dual-Role Difficulty",
+        "theme": "mct2",
+        "cat": "hardware",
+        "startdate": "July 22, 2024",
+        "title": "MediaCow Touch 2 - Part 2",
+        "desc": "What I have been trying to get done so far..."
     },
     "wk28_2024": {
         "type": "content",
