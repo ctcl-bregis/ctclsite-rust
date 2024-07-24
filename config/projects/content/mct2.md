@@ -38,10 +38,10 @@ A unique aspect of MediaCow Touch 2 is that it has connectors not commonly seen 
 ### Buttons
 
 List:
-* Volume Up
-* Volume Down
 * Radio Kill Switch
 * Camera Kill Switch
+* Volume Up
+* Volume Down
 * Reserved/User Defined 1
 * Reserved/User Defined 2
 * Reserved/User Defined 3
@@ -96,7 +96,7 @@ PMEC, formerly known as BMEC, is the Power Management Embedded Controller.
 Currently, the microcontroller chosen for PMEC is the STMicroelectronics STM32L4A6RGT.
 
 Functions of PMEC:
-* Control battery charger IC; BQ25700A
+* Control battery charger IC
 * Read from battery pack fuel gauge
 * Read states of Power and Reset buttons
 * Control RGB status LED
