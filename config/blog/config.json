@@ -12,6 +12,7 @@
             "update": {"title": "Update", "theme": "gold"}
         },
         "menu": [
+            "mct2_p3",
             "wk29_2024",
             "mct2_p2",
             "wk28_2024",
@@ -47,6 +48,17 @@
             "2023_review",
             "sp7021_p1"
         ]
+    },
+    "mct2_p3": {
+        "type": "content",
+        "content": "config/blog/content/mct2_p3.md",
+        "icon": "/static/blog/mct2_p3/mct2_p3_icon.webp",
+        "icontitle": "Infinite Eon",
+        "theme": "mct2",
+        "cat": "hardware",
+        "startdate": "July 25, 2024",
+        "title": "MediaCow Touch 2 - Part 3",
+        "desc": "What I have been trying to get done so far..."
     },
     "wk29_2024": {
         "type": "content",

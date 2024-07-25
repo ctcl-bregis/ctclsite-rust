@@ -64,7 +64,7 @@
             "gold": {"color": "#f0d000", "fgcolor": "#000000", "css": "base", "mainfont": "play"},
             "green": {"color": "#00ff00", "fgcolor": "#000000", "css": "base", "mainfont": "play"},
             "insta": {"color": "#f400a7", "fgcolor": "#ffffff", "css": "base", "mainfont": "play"},
-            "mediacow": {"color": "#996633", "fgcolor": "#000000", "css": "mct2", "mainfont": "heuristica"},
+            "mediacow": {"color": "#996633", "fgcolor": "#000000", "css": "base", "mainfont": "play"},
             "nanblue": {"color": "#00b7d5", "fgcolor": "#000000", "css": "base", "mainfont": "play"},
             "netkart": {"color": "#006633", "fgcolor": "#ffffff", "css": "base", "mainfont": "play"},
             "orange": {"color": "#ff6600", "fgcolor": "#000000", "css": "base", "mainfont": "play"},
