@@ -2,7 +2,7 @@
 // File: src/routes/mod.rs
 // Purpose: Routes module
 // Created: February 26, 2024
-// Modified: June 29, 2024
+// Modified: July 28, 2024
 
 mod about;
 mod blog;

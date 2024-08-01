@@ -6,7 +6,7 @@ The theming and codename is inspired by a certain online friend that I met in la
 ### Disclaimer
 The following is preliminary data and may change at any time during development. This document is used both to showcase my ideas for the device along being used as the plan.
 
-### History
+### Brief History
 For an in-depth history on MediaCow, see the [MediaCow page](../mediacow/).
 
 #### 2021-2022
@@ -22,7 +22,7 @@ I attempted to start working on the device's design in late 2021 to early 2022. 
 In 2023, for the most part, I decided to stop working on hardware and focus on software development due to the failed attempts at the project in prior years and there being no need for the device.
 
 #### 2024
-In May 2024, I heard about the LattePanda Mu Free Trial Event presumably through DFRobot on Discord. I signed up for the event with the idea being MediaCow Touch 2 with the idea that there was a+ tiny chance my idea would be accepted for receiving the development kit for free. On June 20, 2024, to my surprise, I received an email about interest in the project idea, asking for more information about how the module is used.
+In May 2024, I heard about the LattePanda Mu Free Trial Event presumably through DFRobot on Discord. I signed up for the event with the idea being MediaCow Touch 2 with the idea that there was a tiny chance my idea would be accepted for receiving the development kit for free. On June 20, 2024, to my surprise, I received an email about interest in the project idea, asking for more information about how the module is used.
 
 ## Features
 
@@ -32,7 +32,7 @@ A unique aspect of MediaCow Touch 2 is that it has connectors not commonly seen 
 * 2x USB Type-C with PD and DisplayPort alternate mode
 * 2x USB 3.2 Type-A
 * 4x USB 2.0 Type-A
-* Full-size HDMI
+* Mini-HDMI
 * 10/100/1000 Ethernet RJ-45
 
 ### Buttons
@@ -82,32 +82,17 @@ MediaCow Touch 2 makes use of an internal battery pack. The battery is charged t
 
 The battery pack would likely be one meant for an existing laptop. Currently, the battery pack planned to be used is an HP FM08 16-pin battery pack that is meant for older versions of the HP Omen 17 laptop. 
 
+A goal for the power subsystem is for me to be sure that it is safe for air travel; I would have not brought MediaCow Touch 1 anywhere near an airport.
+
 ### Case
 As part of the theme, the case would be made of white PET(G). The case would be 3D printed.
 
 ### Software
 
-## Embedded Controllers
-The carrier board for MediaCow Touch 2 is expected to make use of two embedded controllers.
-
-### PMEC
-PMEC, formerly known as BMEC, is the Power Management Embedded Controller. 
-
-Currently, the microcontroller chosen for PMEC is the STMicroelectronics STM32L4A6RGT.
-
-Functions of PMEC:
-* Control battery charger IC
-* Read from battery pack fuel gauge
-* Read states of Power and Reset buttons
-* Control RGB status LED
-* Control power to LattePanda Mu
-* Communicate with SMEC
-
-### SMEC
-SMEC, formerly known as IOEC, is the System Management Embedded Controller. 
-
 ## Development
 Development of MediaCow Touch 2 officially started on June 24, 2024.
+
+MediaCow Touch 2 is the first hardware project that uses GitHub for peer review and syncing progress across devices. It is also the first device, with compute elements, that I would design in KiCAD instead of EasyEDA.
 
 ### Process
 Having a proper order in how the device is developed is important for the success of the project.
@@ -125,7 +110,7 @@ This is the process in how I plan to design the device:
    5. Peer review of schematic and PCB
    6. Hardware design publishing
    7. Part acquisition
-   8. Assembly
+   8. In-House Assembly
    9. Testing
 3. Software
    1. Embedded controller firmware development

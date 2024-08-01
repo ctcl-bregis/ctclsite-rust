@@ -1,0 +1,15 @@
+{% include "header.html" %}
+{% if pages -%}
+<div class="docpagelist">
+    <p class="docpagelisttitle">Links to other pages</p>
+    <ul>
+        {% for subpageid, subpage in pages -%}
+        <li><a href="{{subpageid}}/">{{ subpage.title }}</a></li>
+        {% endfor -%}
+    </ul>
+</div>
+{% endif -%}
+{% if content -%}
+{{ content|safe }}
+{% endif -%}
+{% include "footer.html" %}

@@ -2,13 +2,13 @@
 // File: src/routes/about/mod.rs
 // Purpose: About module
 // Created: February 26, 2024
-// Modified: June 30, 2024
+// Modified: July 28, 2024
 
 use actix_web::{web, Error, HttpResponse, Responder, Result};
 use crate::{mkcontext, CombinedCfg};
 
 pub async fn about_index(tmpl: web::Data<tera::Tera>, combinedcfg: web::Data<CombinedCfg>) -> Result<impl Responder, Error> {
-    let ctx = mkcontext(&combinedcfg, "about", "root").unwrap();
+    let ctx = mkcontext(&combinedcfg, "about", combinedcfg.about.get("root").unwrap()).unwrap();
 
     let s = match tmpl.render("sections.html", &ctx) {
         Ok(html) => HttpResponse::Ok().body(html),
@@ -19,7 +19,7 @@ pub async fn about_index(tmpl: web::Data<tera::Tera>, combinedcfg: web::Data<Com
 }
 
 pub async fn about_privacy(tmpl: web::Data<tera::Tera>, combinedcfg: web::Data<CombinedCfg>) -> Result<impl Responder, Error> {
-    let ctx = mkcontext(&combinedcfg, "about", "privacy").unwrap();
+    let ctx = mkcontext(&combinedcfg, "about", combinedcfg.about.get("privacy").unwrap()).unwrap();
     
     let s = match tmpl.render("content.html", &ctx) {
         Ok(html) => HttpResponse::Ok().body(html),
@@ -30,7 +30,7 @@ pub async fn about_privacy(tmpl: web::Data<tera::Tera>, combinedcfg: web::Data<C
 }
 
 pub async fn about_licensing(tmpl: web::Data<tera::Tera>, combinedcfg: web::Data<CombinedCfg>) -> Result<impl Responder, Error> {
-    let ctx = mkcontext(&combinedcfg, "about", "licensing").unwrap();
+    let ctx = mkcontext(&combinedcfg, "about", combinedcfg.about.get("licensing").unwrap()).unwrap();
 
     let s = match tmpl.render("content.html", &ctx) {
         Ok(html) => HttpResponse::Ok().body(html),

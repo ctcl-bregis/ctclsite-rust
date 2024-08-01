@@ -123,23 +123,46 @@
         "title": "MediaCow Touch (1)", 
         "desc": "MediaCow Touch \"Nashville\" - Android tablet experiment from 2020", 
         "icon": "/static/projects/icons/mct1_amogus.webp", 
-        "icontitle": "Among Us was the only game I had on here and mind that this was early 2021...",
+        "icontitle": "Mind that this was early 2021...",
         "cat": "hardware",
         "startdate": "2020",
         "content": "config/projects/content/mct1.md"
     },
     "mct2": {
-        "type": "content",
+        "type": "docs",
         "link": "/projects/mct2/",
         "theme": "mct2", 
         "title": "MediaCow Touch 2", 
-        "desc": "MediaCow Touch 2 \"Paris\"", 
+        "desc": "MediaCow Touch 2 \"Paris\" and its documentation", 
         "icon": "", 
         "icontitle": "",
         "cat": "hardware",
         "startdate": "2021",
         "enddate": "Present",
-        "content": "config/projects/content/mct2.md"
+        "content": "config/projects/content/mct2/mct2.md",
+        "pages": {
+            "battery": {
+                "type": "content",
+                "theme": "mct2",
+                "title": "Battery and Power Management",
+                "desc": "Details about the battery and power supply systems in MediaCow Touch 2",
+                "content": "config/projects/content/mct2/battery.md"
+            },
+            "ec": {
+                "type": "content",
+                "theme": "mct2",
+                "title": "Embedded Controllers",
+                "desc": "Details about the embedded controllers in MediaCow Touch 2",
+                "content": "config/projects/content/mct2/ec.md"
+            },
+            "case": {
+                "type": "content",
+                "theme": "mct2",
+                "title": "Case Design",
+                "desc": "Details about the case design of MediaCow Touch 2",
+                "content": "config/projects/content/mct2/case.md"
+            }
+        }
     },
     "mcm": {
         "type": "content",

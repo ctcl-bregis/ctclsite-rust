@@ -59,6 +59,7 @@ section h2, .content h2 {
 }
 
 .pagebutton-desc, .pagebutton-date, footer p {
+    font-weight: normal;
     font-size: {{ textdefaultsizes.body }};
 }
 
@@ -68,10 +69,12 @@ nav ul li a {
 }
 
 .content p code, .content p code {
+    font-weight: normal;
     font-size: {{ textdefaultsizes.body }};
 }
 
 .content p, figure figcaption, .content ul li, td, th {
+    font-weight: normal;
     font-size: {{ textdefaultsizes.body }};
 }
 
@@ -249,25 +252,28 @@ section {
     margin-top: auto;
 }
 
-/* Play/Pause Button */
-.vidbtn-play {
-    background-image: url("/static/icons/play.svg");
-    background-size: contain;
-    border: none;
-    padding: 0;
-    margin: 8px;
-    margin-bottom: 4px;
-    height: 36px;
-    width: 36px;
+.docpagelist {
+    margin: 8pt;
+    margin-right: 75%;
+    margin-left: 0;
+    clear: left;
+    padding: 4pt;
+    width: 50%;
+    max-width: 360pt;
+    background-color: #101010;
+    border-style: solid;
+    border-width: 1pt;
+    border-color: #999999;
+    align-items: center;
 }
 
-.vidbtn-pause {
-    background-image: url("/static/icons/pause.svg");
-    background-size: contain;
-    border: none;
-    padding: 0;
-    margin: 8px;
-    margin-bottom: 4px;
-    height: 36px;
-    width: 36px;
+.docpagelist .docpagelisttitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16pt;
+    margin: 0;
+}
+
+.docpagelist ul li {
+    list-style-type: square;
 }

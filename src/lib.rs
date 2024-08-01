@@ -2,7 +2,7 @@
 // File: src/lib.rs
 // Purpose: Module import and commonly used functions
 // Created: November 28, 2022
-// Modified: July 17, 2024
+// Modified: July 31, 2024
 
 pub mod routes;
 
@@ -74,7 +74,7 @@ pub struct StylingCfg {
     themes: HashMap<String, Theme>
 }
 
-#[derive(Deserialize, Serialize, Clone)]
+#[derive(Deserialize, Serialize, Clone, Debug)]
 pub struct Section {
     theme: String,
     title: String,
@@ -89,14 +89,14 @@ pub struct Section {
     bgimg: Option<String>
 }
 
-#[derive(Deserialize, Serialize, Clone)]
+#[derive(Deserialize, Serialize, Clone, Debug)]
 pub struct Category {
     title: String,
     theme: String
 }
 
 // Any page that is made up of sections, including About
-#[derive(Serialize, Deserialize, Clone)]
+#[derive(Serialize, Deserialize, Clone, Debug)]
 pub struct Page {
     // Base
     #[serde(rename = "type")]
@@ -122,14 +122,16 @@ pub struct Page {
     shownavbar: bool,
     // Sections only
     sections: Option<IndexMap<String, Section>>,
-    // Content only
+    // Content and Docs only
     content: Option<String>,
     // Linklist only
     // WARNING - This is much different from "cat"; "cats" stores what categories are available to a linklist page
     cats: Option<IndexMap<String, Category>>,
     menu: Option<Vec<String>>,
     #[serde(default = "false_default")]
-    menugroupbycat: bool
+    menugroupbycat: bool,
+    // Docs only
+    pages: Option<IndexMap<String, Page>>
 }
 
 #[derive(Serialize, Deserialize, Clone)]
@@ -156,12 +158,12 @@ pub struct SiteCfg {
 #[derive(Serialize, Deserialize, Clone)]
 pub struct CombinedCfg {
     pub sitecfg: SiteCfg,
-    pub about: HashMap<String, Page>,
-    pub linklist: HashMap<String, Page>,
-    pub blog: HashMap<String, Page>,
-    pub projects: HashMap<String, Page>,
-    pub services: HashMap<String, Page>,
-//    pub ramlist: HashMap<String, Page>
+    pub about: IndexMap<String, Page>,
+    pub linklist: IndexMap<String, Page>,
+    pub blog: IndexMap<String, Page>,
+    pub projects: IndexMap<String, Page>,
+    pub services: IndexMap<String, Page>,
+//    pub ramlist: IndexMap<String, Page>
 }
 
 // -------------------------------------
@@ -192,12 +194,25 @@ pub fn mdpath2html(path: &str, headerids: bool) -> Result<String, Error> {
     Ok(content)
 }
 
-pub fn fill_empty_links(map: HashMap<String, Page>) -> HashMap<String, Page> {
-    let mut newmap: HashMap<String, Page> = HashMap::new();
+pub fn fill_empty_links(page: &str, map: IndexMap<String, Page>) -> IndexMap<String, Page> {
+    let mut newmap: IndexMap<String, Page> = IndexMap::new();
     for (key, value) in map.into_iter() {
         let mut newpage: Page = value.clone();
         if newpage.link.is_empty() {
-            newpage.link.clone_from(&key);
+            newpage.link = format!("/{}/{}/", page, key);
+        }
+        // FIXME: This currently supports just one level and is a total hack
+        // Consider https://fasterthanli.me/articles/recursive-iterators-rust
+        if value.pages.is_some() {
+            let mut newsubpagemap: IndexMap<String, Page> = IndexMap::new();
+            for (pagekey, pagevalue) in value.pages.unwrap().into_iter() {
+                let mut newsubpage: Page = pagevalue.clone();
+                if pagevalue.link.is_empty() {
+                    newsubpage.link = format!("{}{}/", newpage.link, pagekey);
+                }
+                newsubpagemap.insert(pagekey, newsubpage);
+            }   
+            newpage.pages = Some(newsubpagemap);
         }
         newmap.insert(key, newpage);
     }
@@ -207,12 +222,12 @@ pub fn fill_empty_links(map: HashMap<String, Page>) -> HashMap<String, Page> {
 pub fn get_combined_cfg() -> Result<CombinedCfg, Error> {
     let sitecfg: SiteCfg = serde_json::from_str(&read_file("config/config.json").unwrap()).unwrap();
 
-    let about: HashMap<String, Page> = fill_empty_links(serde_json::from_str(&read_file(&sitecfg.pagecfgpaths.about).unwrap()).unwrap());
-    let blog: HashMap<String, Page> = fill_empty_links(serde_json::from_str(&read_file(&sitecfg.pagecfgpaths.blog).unwrap()).unwrap());
-    let linklist: HashMap<String, Page> = fill_empty_links(serde_json::from_str(&read_file(&sitecfg.pagecfgpaths.linklist).unwrap()).unwrap());
-    let projects: HashMap<String, Page> = fill_empty_links(serde_json::from_str(&read_file(&sitecfg.pagecfgpaths.projects).unwrap()).unwrap());
-    let services: HashMap<String, Page> = fill_empty_links(serde_json::from_str(&read_file(&sitecfg.pagecfgpaths.services).unwrap()).unwrap());
-//    let ramlist: HashMap<String, Page> = serde_json::from_str(&read_file(&sitecfg.pagecfgpaths.ramlist).unwrap()).unwrap();
+    let about: IndexMap<String, Page> = fill_empty_links("about", serde_json::from_str(&read_file(&sitecfg.pagecfgpaths.about).unwrap()).unwrap());
+    let blog: IndexMap<String, Page> = fill_empty_links("blog", serde_json::from_str(&read_file(&sitecfg.pagecfgpaths.blog).unwrap()).unwrap());
+    let linklist: IndexMap<String, Page> = fill_empty_links("linklist", serde_json::from_str(&read_file(&sitecfg.pagecfgpaths.linklist).unwrap()).unwrap());
+    let projects: IndexMap<String, Page> = fill_empty_links("projects", serde_json::from_str(&read_file(&sitecfg.pagecfgpaths.projects).unwrap()).unwrap());
+    let services: IndexMap<String, Page> = fill_empty_links("services", serde_json::from_str(&read_file(&sitecfg.pagecfgpaths.services).unwrap()).unwrap());
+//    let ramlist: IndexMap<String, Page> = serde_json::from_str(&read_file(&sitecfg.pagecfgpaths.ramlist).unwrap()).unwrap();
 
     Ok(CombinedCfg {
         sitecfg,
@@ -225,22 +240,19 @@ pub fn get_combined_cfg() -> Result<CombinedCfg, Error> {
     })
 }
 
-
-pub fn mkcontext(sitecfg: &CombinedCfg, page: &str, subpage: &str) -> Result<Context, Error> {
+// sitecfg: just CombinedCfg
+// page: The "page" like "about", "blog", etc.
+// subpage: The Page struct of the specific page
+pub fn mkcontext(sitecfg: &CombinedCfg, page: &str, subpage: &Page) -> Result<Context, Error> {
     let mut ctx = Context::new();
 
     let pagecfg = match page {
         "about" => &sitecfg.about,
         "blog" => &sitecfg.blog,
         "linklist" => &sitecfg.linklist,
-        "projects" => &sitecfg.projects,
+        "projects" => &sitecfg.projects,  
         "services" => &sitecfg.services,
-        _ => return Err(Error::new(std::io::ErrorKind::NotFound, format!("Page {} not found", page))),
-    };
-
-    let subpage = match pagecfg.get(subpage) {
-        Some(subpage) => subpage,
-        None => return Err(Error::new(std::io::ErrorKind::NotFound, format!("Page {} not found", page))),
+        _ => return Err(Error::new(std::io::ErrorKind::NotFound, "Page not found"))
     };
 
     if subpage.ptype == "link" {
@@ -256,6 +268,7 @@ pub fn mkcontext(sitecfg: &CombinedCfg, page: &str, subpage: &str) -> Result<Con
         Some(favicon) => favicon.clone(),
         None => format!("/static/favicons/default_{}.ico", &subpage.theme)
     };
+
 
     ctx.insert("link", &format!("{}{}", &sitecfg.sitecfg.siteurl, &subpage.link));
     ctx.insert("themename", &subpage.theme);
@@ -288,6 +301,7 @@ pub fn mkcontext(sitecfg: &CombinedCfg, page: &str, subpage: &str) -> Result<Con
         ctx.insert("cats", subpage.cats.as_ref().unwrap());
     }
 
+
     if subpage.menu.is_some() {
         let mut newmenu: Vec<Page> = Vec::new();
         for page in subpage.menu.as_ref().unwrap() {
@@ -297,6 +311,8 @@ pub fn mkcontext(sitecfg: &CombinedCfg, page: &str, subpage: &str) -> Result<Con
         ctx.insert("menugroupbycat", &subpage.menugroupbycat);
     }
 
-
+    if subpage.pages.is_some() {
+        ctx.insert("pages", &subpage.pages);
+    }
     Ok(ctx)
 }

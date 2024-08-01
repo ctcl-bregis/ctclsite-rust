@@ -2,13 +2,13 @@
 // File: src/routes/projects/mod.rs
 // Purpose: Projects module
 // Created: March 1, 2024
-// Modified: June 30, 2024
+// Modified: July 28, 2024
 
 use actix_web::{web, Error, HttpResponse, Responder, Result};
 use crate::{CombinedCfg, mkcontext};
 
 pub async fn projects_index(tmpl: web::Data<tera::Tera>, combinedcfg: web::Data<CombinedCfg>) -> Result<impl Responder, Error> {
-    let ctx = mkcontext(&combinedcfg, "projects", "root").unwrap();
+    let ctx = mkcontext(&combinedcfg, "projects", combinedcfg.projects.get("root").unwrap()).unwrap();
     
     let s = match tmpl.render("linklist.html", &ctx) {
         Ok(html) => HttpResponse::Ok().body(html),
@@ -23,22 +23,41 @@ pub async fn projects_page(page: web::Path<String>, tmpl: web::Data<tera::Tera>,
         Some(pagecfg) => match pagecfg.ptype.as_str() {
             "content" => "content.html",
             "sections" => "sections.html",
+            "docs" => "docs.html",
             _ => return Ok(HttpResponse::InternalServerError().body("Invalid page type"))
         }
         None => return Ok(HttpResponse::NotFound().body(format!("Page {} not found", page)))
     };
 
-    let ctx = match mkcontext(&combinedcfg, "projects", &page) {
+    let ctx = match mkcontext(&combinedcfg, "projects", combinedcfg.projects.get(page.as_ref()).unwrap()) {
         Ok(ctx) => ctx,
         Err(err) => match err.kind() {
             std::io::ErrorKind::InvalidInput => return Ok(HttpResponse::NotFound().body("Page not found")),
-            _ => return Ok(HttpResponse::InternalServerError().body(format!("{:?}", err)))
+            _ => return Ok(HttpResponse::InternalServerError().body(format!("Page load failed: {:?}", err)))
         }
     };
     
     let s = match tmpl.render(template, &ctx) {
         Ok(html) => HttpResponse::Ok().body(html),
-        Err(err) => return Ok(HttpResponse::InternalServerError().body(format!("{:?}", err)))
+        Err(err) => return Ok(HttpResponse::InternalServerError().body(format!("Template rendering failed: {:?}", err)))
+    };
+
+    Ok(s)
+}
+
+pub async fn projects_subpage(page: web::Path<(String, String)>, tmpl: web::Data<tera::Tera>, combinedcfg: web::Data<CombinedCfg>) -> Result<impl Responder, Error> {
+
+    let ctx = match mkcontext(&combinedcfg, "projects", combinedcfg.projects.get(&page.0).unwrap().pages.as_ref().unwrap().get(&page.1).unwrap()) {
+        Ok(ctx) => ctx,
+        Err(err) => match err.kind() {
+            std::io::ErrorKind::InvalidInput => return Ok(HttpResponse::NotFound().body("Page not found")),
+            _ => return Ok(HttpResponse::InternalServerError().body(format!("Page load failed: {:?}", err)))
+        }
+    };
+    
+    let s = match tmpl.render("content.html", &ctx) {
+        Ok(html) => HttpResponse::Ok().body(html),
+        Err(err) => return Ok(HttpResponse::InternalServerError().body(format!("Template rendering failed: {:?}", err)))
     };
 
     Ok(s)

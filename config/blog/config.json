@@ -12,6 +12,8 @@
             "update": {"title": "Update", "theme": "gold"}
         },
         "menu": [
+            "mct2_p4",
+            "wk30_2024",
             "mct2_p3",
             "wk29_2024",
             "mct2_p2",
@@ -49,6 +51,28 @@
             "sp7021_p1"
         ]
     },
+    "mct2_p4": {
+        "type": "content",
+        "content": "config/blog/content/mct2_p4.md",
+        "icon": "/static/blog/mct2_p4/mct2_p4_icon_alt.webp",
+        "icontitle": "From Chromebooks to Cars",
+        "theme": "mct2",
+        "cat": "hardware",
+        "startdate": "July 31, 2024",
+        "title": "MediaCow Touch 2 - Part 4",
+        "desc": "Too many ideas, too little time"
+    },
+    "wk30_2024": {
+        "type": "content",
+        "content": "config/blog/content/weekly/week_30_2024.md",
+        "icon": "/static/blog/wk30_2024/wk302024_icon.webp",
+        "icontitle": "Instance.AddBehaviour<ExplosiveBehaviour>();",
+        "theme": "gold",
+        "cat": "update",
+        "startdate": "July 29, 2024",
+        "title": "Week 30, 2024",
+        "desc": "The thirtieth week of 2024"
+    },
     "mct2_p3": {
         "type": "content",
         "content": "config/blog/content/mct2_p3.md",
@@ -64,7 +88,7 @@
         "type": "content",
         "content": "config/blog/content/weekly/week_29_2024.md",
         "icon": "/static/blog/wk29_2024/wk292024_icon.webp",
-        "icontitle": "",
+        "icontitle": "'To keep those luscious locks as gorgeous as ever'",
         "theme": "gold",
         "cat": "update",
         "startdate": "July 22, 2024",

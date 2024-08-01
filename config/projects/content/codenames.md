@@ -41,7 +41,6 @@ For example, with Serdexmethylphenidate, the IUPAC name `(2S)-3-hydroxy-2-[[1-[[
 
 Another example, with lisdexamfetamine, the INN name is used over L-lysine-dextroamphetamine or lisdexamphetamine because the lisdexamfetamine name is more common.
 
-
 ### Chlorofluorocarbons and Hydrochlorofluorocarbon
 
 Starting June 2, 2023, Chlorofluorocarbon and Hydrochlorofluorocarbon codenames are reserved for Intel systems without ECC memory support. This excludes devices originally classified as a Chromebook or Chromebox, as they may get a chromium compound codename. Intel systems with ECC memory support may get a plastics-related codename instead.
@@ -183,19 +182,7 @@ Stimulant codenames and related prodrugs in the methylphenidate family are reser
 
 Codenames of hallucinogenic compounds are generally for use with non-embedded network router/gateway devices. This specific theme started with some server codenemaes being based off the 2010 Far East Movement single, "Like a G6".
 
-##### Dissociatives
-
-Codenames of dissociative compounds are for use with routers using Intel x86-64 processors.
-
 - [Dextromethorphan](../srv_dxm/) - DXM
-
-##### Psychedelics
-
-Codenames of psychedelics that have an psychedelic effect are for use with routers using AMD x86-64 processors.
-
-##### Deliriants
-
-Codenames of deliriants are for use with routers using any ARM-based SoC.
 
 #### Sedatives
 

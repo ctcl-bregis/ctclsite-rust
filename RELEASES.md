@@ -15,6 +15,7 @@ Additions:
 - Blog and project categories
 - robots.txt
 - "menutype" for "linklist" page format that can either show everything as a list or in categories
+- "docs" page for displaying HTML documentation generated with Sphinx
 
 To-Do:
 - Debug log to console

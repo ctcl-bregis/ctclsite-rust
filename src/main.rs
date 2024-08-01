@@ -2,7 +2,7 @@
 // File: src/main.rs
 // Purpose: Main code
 // Created: November 28, 2022
-// Modified: June 30, 2024
+// Modified: July 28, 2024
 
 use actix_files as fs;
 use actix_web::web::Data;
@@ -72,6 +72,7 @@ async fn main() -> std::io::Result<()> {
             .service(web::resource("/links/{page}/").route(web::get().to(linklist)))
             .service(web::resource("/projects/").route(web::get().to(projects_index)))
             .service(web::resource("/projects/{page}/").route(web::get().to(projects_page)))
+            .service(web::resource("/projects/{page}/{subpage}/").route(web::get().to(projects_subpage)))
             .service(web::resource("/services/").route(web::get().to(services_index)))
     })
     .bind((bindip, bindport))?

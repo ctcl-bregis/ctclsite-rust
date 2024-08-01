@@ -2,7 +2,7 @@
 // File: src/routes/blog/mod.rs
 // Purpose: Blog module
 // Created: March 1, 2024
-// Modified: June 30, 2024
+// Modified: July 28, 2024
 
 use actix_web::{
     web, Error, HttpResponse, Responder, Result,
@@ -10,7 +10,7 @@ use actix_web::{
 use crate::{CombinedCfg, mkcontext};
 
 pub async fn blog_index(tmpl: web::Data<tera::Tera>, combinedcfg: web::Data<CombinedCfg>) -> Result<impl Responder, Error> {
-    let ctx = mkcontext(&combinedcfg, "blog", "root").unwrap();
+    let ctx = mkcontext(&combinedcfg, "blog", combinedcfg.blog.get("root").unwrap()).unwrap();
     
     let s = match tmpl.render("linklist.html", &ctx) {
         Ok(html) => HttpResponse::Ok().body(html),
@@ -30,7 +30,7 @@ pub async fn blog_post(page: web::Path<String>, tmpl: web::Data<tera::Tera>, com
         None => return Ok(HttpResponse::NotFound().body(format!("Page {} not found", page)))
     };
 
-    let ctx = match mkcontext(&combinedcfg, "blog", &page) {
+    let ctx = match mkcontext(&combinedcfg, "blog", combinedcfg.blog.get(&page.to_string()).unwrap()) {
         Ok(ctx) => ctx,
         Err(err) => match err.kind() {
             std::io::ErrorKind::InvalidInput => return Ok(HttpResponse::NotFound().body("Page not found")),
