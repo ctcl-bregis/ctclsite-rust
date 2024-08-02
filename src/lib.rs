@@ -2,7 +2,7 @@
 // File: src/lib.rs
 // Purpose: Module import and commonly used functions
 // Created: November 28, 2022
-// Modified: July 31, 2024
+// Modified: August 2, 2024
 
 pub mod routes;
 
@@ -135,6 +135,11 @@ pub struct Page {
 }
 
 #[derive(Serialize, Deserialize, Clone)]
+pub struct FileviewerCfg {
+    pub extensions: HashMap<String, String>
+}
+
+#[derive(Serialize, Deserialize, Clone)]
 // config/config.json
 pub struct PageCfgPaths {
     pub about: String,
@@ -150,6 +155,7 @@ pub struct SiteCfg {
     pub bindip: String,
     pub bindport: u16,
     pub siteurl: String,
+    pub fileviewer: FileviewerCfg,
     pub styling: StylingCfg,
     pub pagecfgpaths: PageCfgPaths,
     pub redirects: HashMap<String, String>
@@ -314,5 +320,8 @@ pub fn mkcontext(sitecfg: &CombinedCfg, page: &str, subpage: &Page) -> Result<Co
     if subpage.pages.is_some() {
         ctx.insert("pages", &subpage.pages);
     }
+
+    ctx.insert("scripts", &true);
+
     Ok(ctx)
 }

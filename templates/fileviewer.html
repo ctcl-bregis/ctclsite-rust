@@ -1,0 +1,12 @@
+{% include "header.html" %}
+
+{% if filetype == "plaintext" %}
+<pre class="fileviewer">
+{{ content }}
+</pre>
+{% elif filetype == "image" %}
+<img class="fileviewer" src=/{{ filepath }}>
+{% else %}
+{{ filepath }}: {{ filesize }}
+{% endif %}
+{% include "footer.html" %}

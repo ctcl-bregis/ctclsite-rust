@@ -148,19 +148,61 @@
                 "desc": "Details about the battery and power supply systems in MediaCow Touch 2",
                 "content": "config/projects/content/mct2/battery.md"
             },
-            "ec": {
+            "bios": {
                 "type": "content",
                 "theme": "mct2",
-                "title": "Embedded Controllers",
-                "desc": "Details about the embedded controllers in MediaCow Touch 2",
-                "content": "config/projects/content/mct2/ec.md"
+                "title": "System Firmware",
+                "desc": "Details about the system firmware",
+                "content": "config/projects/content/mct2/bios.md"
+            },
+            "cameras": {
+                "type": "content",
+                "theme": "mct2",
+                "title": "Cameras and Microphones",
+                "desc": "Details about the battery and power supply systems in MediaCow Touch 2",
+                "content": "config/projects/content/mct2/cameras.md"
             },
             "case": {
                 "type": "content",
                 "theme": "mct2",
-                "title": "Case Design",
-                "desc": "Details about the case design of MediaCow Touch 2",
+                "title": "Case",
+                "desc": "Details about the structure of MediaCow Touch 2",
                 "content": "config/projects/content/mct2/case.md"
+            },
+            "connectivity": {
+                "type": "content",
+                "theme": "mct2",
+                "title": "Connectivity",
+                "desc": "Details about wireless connectivity and connectors on MediaCow Touch 2",
+                "content": "config/projects/content/mct2/connectivity.md"
+            },
+            "display": {
+                "type": "content",
+                "theme": "mct2",
+                "title": "Display",
+                "desc": "Details about the display in MediaCow Touch 2",
+                "content": "config/projects/content/mct2/display.md"
+            },
+            "ec": {
+                "type": "content",
+                "theme": "mct2",
+                "title": "Embedded Controller",
+                "desc": "Details about the embedded controller in MediaCow Touch 2",
+                "content": "config/projects/content/mct2/ec.md"
+            },
+            "oled": {
+                "type": "content",
+                "theme": "mct2",
+                "title": "OLED Display and Button Panel",
+                "desc": "Details about the side OLED display and buttons on MediaCow Touch 2",
+                "content": "config/projects/content/mct2/oled.md"
+            },
+            "storage": {
+                "type": "content",
+                "theme": "mct2",
+                "title": "Storage",
+                "desc": "Details about storage on MediaCow Touch 2",
+                "content": "config/projects/content/mct2/storage.md"
             }
         }
     },

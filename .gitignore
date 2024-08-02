@@ -30,3 +30,6 @@ static/*.css
 static/styling/
 static/styling/*.css
 static/favicons/default*
+
+# should not be public yet
+config/about/myself.md

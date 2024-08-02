@@ -2,6 +2,24 @@
     "bindip": "0.0.0.0",
     "bindport": 8000,
     "siteurl": "https://ctcl.lgbt",
+    "fileviewer": {
+        "extensions": {
+            "jpeg": "image",
+            "jpg": "image",
+            "js": "plaintext",
+            "lua": "plaintext",
+            "md": "plaintext",
+            "mov": "video",
+            "mp4": "video",
+            "png": "image",
+            "py": "plaintext",
+            "rs": "plaintext",
+            "sh": "plaintext",
+            "txt": "plaintext",
+            "webm": "video",
+            "webp": "image"
+        }
+    },
     "styling": {
         "css": {
             "base": "base.css",

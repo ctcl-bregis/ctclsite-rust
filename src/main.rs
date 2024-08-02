@@ -2,7 +2,7 @@
 // File: src/main.rs
 // Purpose: Main code
 // Created: November 28, 2022
-// Modified: July 28, 2024
+// Modified: August 2, 2024
 
 use actix_files as fs;
 use actix_web::web::Data;
@@ -18,7 +18,7 @@ async fn redir(req: ServiceRequest, next: Next<actix_web::body::BoxBody>) -> Res
     let combinedcfg = req.app_data::<Data<CombinedCfg>>().unwrap();
     let requri = req.uri().clone().to_string();
 
-    if !requri.ends_with('/') && requri != "/robots.txt" {
+    if !requri.ends_with('/') && requri != "/robots.txt" && !requri.starts_with("/file/") && !requri.starts_with("/static/") {
         let url = format!("{}/", requri);
         return Ok(req.into_response(
             HttpResponse::MovedPermanently()
@@ -74,6 +74,7 @@ async fn main() -> std::io::Result<()> {
             .service(web::resource("/projects/{page}/").route(web::get().to(projects_page)))
             .service(web::resource("/projects/{page}/{subpage}/").route(web::get().to(projects_subpage)))
             .service(web::resource("/services/").route(web::get().to(services_index)))
+            .service(web::resource("/file/{page:.*}.{ext}").route(web::get().to(fileviewer)))
     })
     .bind((bindip, bindport))?
     .run()

@@ -134,6 +134,7 @@ header h1 {
     display: flex;
     justify-content: center;
     text-align: center;
+    overflow-wrap: break-word;
     margin: 6px;
 }
 
@@ -276,4 +277,23 @@ section {
 
 .docpagelist ul li {
     list-style-type: square;
+}
+
+pre.fileviewer {
+    overflow: scroll;
+    overflow-wrap: break-word;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #808080;
+    background-color: #202020;
+    margin: 8pt;
+}
+
+img.fileviewer {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #808080;
+    background-color: #202020;
+    margin: 8pt;
+    width: 100%;
 }

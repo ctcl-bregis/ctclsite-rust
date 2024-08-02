@@ -10,20 +10,30 @@
         <title>{{ title }}</title>
         <meta property="og:title" content="{{ title }}">
         <meta property="twitter:title" content="{{ title }}">
+        {% if desc %}
         <meta name="description" content="{{ desc }}">
         <meta name="og:description" content="{{ desc }}">
         <meta name="twitter:description" content="{{ desc }}">
+        {% endif %}
         <meta name="og:url" content="https://ctcl.lgbt/">
         <meta name="og:image" content="">
+        {% if keywords %}
         <meta name="keywords" content={{ keywords }}>
+        {% endif %}
         <link rel="stylesheet" href="/static/styling/{{ themename }}.css">
         <link rel="stylesheet" media="print" href="/static/print.css">
+        {% if favicon %}
         <link rel="icon" href="{{ favicon|safe }}" type="image/x-icon" sizes="any">
+        {% else %}
+        <link rel="icon" href="/static/favicons/default_{{ themename }}.ico" type="image/x-icon" sizes="any">
+        {% endif %}
         <script>
             console.log("Hello there!\n Want to learn more about how this website was made? Check out https://ctcl-tech.com/projects/ctclsite/");
         </script>
+        {% if scripts %}
         <script type="module" src="/static/common.js"></script>
         <script type="module" src="/static/clientinfo.js"></script>
+        {% endif %}
         {% if video %}<script src="/static/vids.js"></script>{% endif %}
     </head>
     <body>
@@ -31,7 +41,7 @@
             {% if shownavbar %}
             {% include "navbar.html" %}
             {% endif %}
-            <h1>{{ title }}</h1>
+            <h1{% if titlesizeoverride %} style="font-size: {{ titlesizeoverride }}"{% endif %}>{{ title }}</h1>
         </header>
         <hr>
 
