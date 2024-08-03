@@ -12,7 +12,7 @@ Currently, the battery pack that would be used is one that is compatible with th
 
 The layout is 4S2P; 4-serial, 2-parallel. This would likely yield a voltage range of 12v to 16.8v. The actual voltage range of the battery pack is unknown and I am unsure what target per-cell voltage the battery charger IC should be set to. I do not have any laptop that makes use of the battery pack so I am unable to measure the voltages myself. Due to the fact I do not have one of these battery packs on hand, the pinout and connector type is also unknown.
 
-### Battery Charger Subsystem
+### Battery Charger
 The battery charger IC selected is the LTC/Analog Devices LTC4162-LAD. 
 
 ## Power Management
@@ -20,11 +20,17 @@ The battery charger IC selected is the LTC/Analog Devices LTC4162-LAD.
 
 The carrier board makes extensive use of power load switches. 
 
+## Power Input
+External power is supplied through one of the two USB Type-C connectors. 
+
 ## Power Rails
 This section describes power distribution on the carrier board.
 
+
 ### VSYS
-VSYS is the name given to the direct power output of the battery charger IC. The voltage range of VSYS is 12v to 20v which is also the operating range of the LattePanda Mu. 
+VSYS is the name given to the power output of the battery charger IC. The voltage range of VSYS is 12v to 20v which is also the operating range of the LattePanda Mu.
+
+A load switch is used between the battery charger IC output and the rest of the system. 
 
 All voltages in the system is stepped down from VSYS. The following sections cover voltage rails that are stepped 
 
@@ -34,6 +40,21 @@ TCP_5V feeds into the `PP5V` pins of the TPS65994AD Type-C PD controller. This v
 If USB PD source mode is available during system shutdown is currently unknown.
 
 #### USB_5V
-USB_5V is shared by every USB load switch on the USB Type-A ports. 
+USB_5V is shared by every USB load switch on the USB Type-A ports.
 
-The requirements for the power regulator for USB as that it can supply more than 6 amps of continous power.
+The Texas Instruments TPS51386 buck converter is used to bring VSYS voltage down to ~5V to be switched individually for each port.
+
+### VSB
+VSB is always available even when the system is powered off; VSYS is switched off. Its purpose is to supply power to SMEC, the OLED display and the keypad which should be available when the system is powered off.
+
+It is the same voltage range as VSYS as it also directly feeds from the battery charger IC power output. The only difference is that it is not switched.
+
+#### SMEC_VDD
+This is the main supply voltage for SMEC. It should have a voltage of 3.3v.
+
+#### OLED_VOLED
+OLED supply voltage that is within the recommended range of 10-15v for the CFAL12832A-022W OLED display. The voltage is stepped down from VSB through a Richtek RT6200 buck converter.
+
+#### OLED_VDD
+OLED logic supply voltage of 3.3v. It is stepped down from VSB through an LDO linear regulator.
+

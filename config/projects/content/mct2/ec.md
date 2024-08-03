@@ -28,7 +28,8 @@ The button pad, outlined in the [OLED Display and Button Panel](../oled/) page.
   - Battery pack fuel gauge
   - LTC4162-LAD battery charge controller
   - TPS65994AD Type-C PD controller
-  - IO expander for USB load switch cont
+  - IO expander for USB load switch control
+  - IO expander or driver for charge indicator LED
 - I2C/SMBus Bus 3: Dedicated to SMLink communication between SMEC and the TCP (Type C) controllers on the Intel N100
   - TCPx controllers 
 
@@ -37,9 +38,16 @@ It is critical that SMEC uses very little power, especially when the system is p
 
 SMEC is powered from an LDO using system power.
 
+## System Communication
+It is expected that a custom daemon or Linux kernel driver would have to be written for the system to make use of SMEC. 
+
 ## Misc
 
 ### Clock Source
-Instead of using a conventional crystal oscillator, SMEC would make use of a MEMS oscillator. Likely a part from the SiTime SiT8008B or SiT1602B series would be selected.
+Instead of using a conventional crystal oscillator, SMEC would make use of MEMS oscillators. Using this kind of oscillator has the benefits of MEMS-based oscillators along with easier implementation.
 
-Using this kind of oscillator has the benefits of MEMS-based oscillators along with having the implementation of the oscillator easier.
+Internal clock generators HSI, MSI and LSI are left unused.
+
+Currently, there are two external oscillators used for SMEC:
+- HSE: 48MHz SiTime SiT1602BI-13-XXN-48.000000
+- LSE: 32.768KHz SiTime SiT1533AI-H4-DCC-32.768
