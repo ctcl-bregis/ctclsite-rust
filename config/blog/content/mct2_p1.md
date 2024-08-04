@@ -1,7 +1,9 @@
+<div style="margin: 8px; border: 2px solid #FFFFFF; padding: 8px;">
+<p style="margin: 16px; font-size: 16pt;">For actual project information, see <a href="../../projects/mct2/">MediaCow Touch 2 project page</a></p>
+</div>
+
 ## Introduction
 This is the first post of a series of blog posts about the development of MediaCow Touch 2 "Paris".
-
-Warning: The following may require a sufficient understanding of computer hardware to understand.
 
 ## Background
 MediaCow Touch 2 "Paris" is a project to build a tablet computer device using custom circuit design (PCBs). The idea existed since March 2021 with multiple attempts to design it in 2022. It was not until May-June 2024, I have made the commitment to the project. 
