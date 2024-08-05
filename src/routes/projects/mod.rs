@@ -2,7 +2,7 @@
 // File: src/routes/projects/mod.rs
 // Purpose: Projects module
 // Created: March 1, 2024
-// Modified: July 28, 2024
+// Modified: August 4, 2024
 
 use actix_web::{web, Error, HttpResponse, Responder, Result};
 use crate::{CombinedCfg, mkcontext};
@@ -47,7 +47,18 @@ pub async fn projects_page(page: web::Path<String>, tmpl: web::Data<tera::Tera>,
 
 pub async fn projects_subpage(page: web::Path<(String, String)>, tmpl: web::Data<tera::Tera>, combinedcfg: web::Data<CombinedCfg>) -> Result<impl Responder, Error> {
 
-    let ctx = match mkcontext(&combinedcfg, "projects", combinedcfg.projects.get(&page.0).unwrap().pages.as_ref().unwrap().get(&page.1).unwrap()) {
+    let pagecfg = match combinedcfg.projects.get(&page.0) {
+        None => return Ok(HttpResponse::NotFound().body(format!("Page \"{}\" not found in projects", &page.0))),
+        Some(projectpage) => match projectpage.pages.as_ref() {
+            None => return Ok(HttpResponse::NotFound().body(format!("Page {} does not have subpages", &page.0))),
+            Some(subpages) => match subpages.get(&page.1) {
+                None => return Ok(HttpResponse::NotFound().body(format!("Subpage {} not found in {}", &page.0, &page.1))),
+                Some(subpage) => subpage
+            }
+        }
+    };
+
+    let ctx = match mkcontext(&combinedcfg, "projects", pagecfg) {
         Ok(ctx) => ctx,
         Err(err) => match err.kind() {
             std::io::ErrorKind::InvalidInput => return Ok(HttpResponse::NotFound().body("Page not found")),

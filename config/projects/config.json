@@ -141,12 +141,19 @@
         "enddate": "Present",
         "content": "config/projects/content/mct2/mct2.md",
         "pages": {
-            "battery": {
+            "som": {
+                "type": "content",
+                "theme": "mct2",
+                "title": "System on Module",
+                "desc": "Details about the compute module that makes MediaCow Touch 2 possible",
+                "content": "config/projects/content/mct2/som.md"
+            },
+            "power": {
                 "type": "content",
                 "theme": "mct2",
                 "title": "Battery and Power Management",
                 "desc": "Details about the battery and power supply systems in MediaCow Touch 2",
-                "content": "config/projects/content/mct2/battery.md"
+                "content": "config/projects/content/mct2/power.md"
             },
             "bios": {
                 "type": "content",

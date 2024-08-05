@@ -254,13 +254,8 @@ section {
 }
 
 .docpagelist {
-    margin: 8pt;
-    margin-right: 75%;
-    margin-left: 0;
-    clear: left;
-    padding: 4pt;
-    width: 50%;
-    max-width: 360pt;
+    padding: 0;
+    width: 100%;
     background-color: #101010;
     border-style: solid;
     border-width: 1pt;
@@ -275,8 +270,25 @@ section {
     margin: 0;
 }
 
-.docpagelist ul li {
-    list-style-type: square;
+.docpagelist a {
+    text-decoration: none;
+}
+
+.docpagebutton {
+    border-style: solid;
+    border-width: 2px;
+    margin: 4pt;
+}
+
+p.docpagebuttontitle {
+    font-size: {{ textdefaultsizes.h5 }};
+    font-weight: bold;
+    margin: 0;
+    padding: 4pt;
+}
+
+.docpagebuttondesc {
+    margin: 8pt;
 }
 
 pre.fileviewer {

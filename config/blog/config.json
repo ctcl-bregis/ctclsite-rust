@@ -12,6 +12,8 @@
             "update": {"title": "Update", "theme": "gold"}
         },
         "menu": [
+            "mct2_p5",
+            "wk31_2024",
             "mct2_p4",
             "wk30_2024",
             "mct2_p3",
@@ -50,6 +52,28 @@
             "2023_review",
             "sp7021_p1"
         ]
+    },
+    "mct2_p5": {
+        "type": "content",
+        "content": "config/blog/content/mct2_p5.md",
+        "icon": "/static/blog/mct2_p5/mct2_p5_icon.webp",
+        "icontitle": "Push Every Button",
+        "theme": "mct2",
+        "cat": "hardware",
+        "startdate": "August 5, 2024",
+        "title": "MediaCow Touch 2 - Part 5",
+        "desc": "You know the drill"
+    },
+    "wk31_2024": {
+        "type": "content",
+        "content": "config/blog/content/weekly/week_31_2024.md",
+        "icon": "/static/blog/wk31_2024/wk312024_icon.webp",
+        "icontitle": "Cybertruckery",
+        "theme": "gold",
+        "cat": "update",
+        "startdate": "August 5, 2024",
+        "title": "Week 31, 2024",
+        "desc": "The thirty-first week of 2024"
     },
     "mct2_p4": {
         "type": "content",

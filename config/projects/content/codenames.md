@@ -336,71 +336,9 @@ Exceptions to the requirement of the design requiring a processor of some sort a
 
 Codenames must contain just the name of the city, town, village or CDP. Codenames that are of different places with the same name cannot be used, for example: If a project codenamed "Richmond" after Richmond, Virginia already exists, another project cannot use a codename named after Richmond, California as both would be "Richmond". 
 
-### MediaCow
+Starting August 4, 2024, codenames for hardware design projects will no longer have themes and projects would receive any codename seen fit.
 
-MediaCow is a series of projects about the design and assembly of portable media players and tablet computers.
-
-The first MediaCow in 2019 received the codename "Syracuse".
-
-#### MediaCow Touch
-
-MediaCow Touch devices have received codenames relating to real persons that I have met online. Codenames for these devices do not follow any theme. Though MediaCow Touch "Nashville" is considered to be codenamed after a real person, it is also inspired by the business trip in May 2020 to Nashville, Tennessee.
-
-- [MediaCow Touch (1) - "Nashville"](../mct_1/)
-- [MediaCow Touch 2 - "Paris"](../mct_2/)
-
-#### MediaCow Touch Mini
-
-Currently, there is no theme for codenames used for MediaCow Touch Mini devices. A lot of these device ideas would receive special codenames.
-
-- MediaCow Touch Mini SP7021 - "Floyds Knobs"
-
-#### MediaCow Micro
-
-Starting December 16, 2023, [MediaCow Micro](../mcm/) devices would use codenames of locations within Central New York State or nearby locations that were personally important in any way. This excludes any codenames under "Generally Reserved Codenames" such as Canastota, Oneida and Clay.
-
-Potential codenames for these devices:
-
-- Brewerton
-- Cazenovia
-- Camden
-- Chittenango
-- Cicero
-- Clockville
-- Dewitt
-- Fayetteville
-- Homer
-- Lenox
-- Manlius
-- Minoa
-- Old Forge
-- Oneida Castle
-- Onondaga
-- Rome
-- Sherill
-- Skaneateles
-- Sylvan Beach
-- Sullivan
-- Tully
-- Utica
-- Van Buren
-- Vernon
-- Verona
-- Wampsville
-- Watertown
-- Weedsport
-
-### Special Cases
-
-These codenames are reserved for special cases due to personal importance.
-
-#### Fort Myers Beach, Florida, US
-Any device, regardless to whatever series it belongs to, that is the first project that require designing with DDR2 or later memory generations receives the codename "Fort Myers Beach". This is due to how such project would be seen as a significant turning point like the 2022 business trip to Fort Myers Beach, Florida.
-
-#### Fort Myers, Florida, US
-The codename "Fort Myers" was used for the [MathPad](../mathpad/) project in 2022 as it was designed there. It was my first circuit design project with a processor, specifically a microcontroller part of the STM32 series.
-
-#### Generally Reserved Codenames
+### Generally Reserved Codenames
 
 These codenames are reserved for special purposes due to the personal value
 
@@ -409,7 +347,7 @@ These codenames are reserved for special purposes due to the personal value
   - Likely would be used with something DRAM related
 - Curitiba, Paraná, Brazil
 - Floyds Knobs, Indiana, US
-  - Would be used for the first device I design using the Sunplus SP7021 SiP
+  - **Will be used for MediaCow Touch Mini SP7021**
   - Dedicated to Jason "Leinfors" Parker (1986-2023)
 - Dresden, Saxony, Germany
   - Likely would be used with something DRAM related
@@ -424,16 +362,16 @@ These codenames are reserved for special purposes due to the personal value
 - Virginia Beach, Virginia, US
 - Whitelaw, New York, US
 - Solvay, New York, US
+- Fort Myers Beach, Florida
+  - Any device, regardless to whatever series it belongs to, that is the first project that require designing with DDR2 or later memory generations receives the codename "Fort Myers Beach". This is due to how such project would be seen as a significant turning point like the 2022 business trip to Fort Myers Beach, Florida.
 
 ## Software
-
-Standalone software projects use the names of animals. Embedded software written for hardware projects do not receive their own codename. Software written for specific hardware not developed by CTCL may receive their own codename.
+Standalone software projects use the names of animals. Embedded software written for hardware projects do not receive their own codename as such software is considered to be part of the hardware project. 
 
 ### Rust
 Rust projects use the names of various types of species
 
 #### Web Software
-
 Codenames using the names of crustaceans under the infraorder **Brachyura**, commonly known as **crabs**, are used for web software projects that utilize the Rust programming language. The inspiration of using crustaceans for Rust-based projects is from the term "Rustacean" and the unofficial mascot of Rust named Ferris.
 
 - [Atlantic Blue Crab - CTCL Website (ctclsite-rust)](../ctclsite/)

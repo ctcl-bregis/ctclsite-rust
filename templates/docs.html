@@ -3,11 +3,14 @@
 <div class="content"> 
     <div class="docpagelist">
         <p class="docpagelisttitle">Links to other pages</p>
-        <ul>
-            {% for subpageid, subpage in pages -%}
-            <li><a href="{{subpageid}}/">{{ subpage.title }}</a></li>
-            {% endfor -%}
-        </ul>
+        {% for pageid, page in pages %}
+        <a href="{{ page.link }}">
+            <div class="docpagebutton">
+                <p class="docpagebuttontitle">{{ page.title }}</p>
+                <p class="docpagebuttondesc">{{ page.desc }}</p>
+            </div>
+        </a>
+        {% endfor %}
     </div>
 {% endif -%}
 {% if content -%}

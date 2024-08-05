@@ -82,4 +82,10 @@ section h2 {
     padding: 4px;
 }
 
+{# compensate for Heuristica's font sizing #}
+.docpagebuttondesc {
+    margin: 8pt;
+    margin-top: 10pt;
+}
+
 {% include "_colors.css" %}

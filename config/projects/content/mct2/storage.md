@@ -1,4 +1,4 @@
-MediaCow Touch 2 would make use of M.2 NVMe format SSDs like many laptops.
+MediaCow Touch 2 would use a standard M.2 NVMe SSD like many laptops.
 
 ## NVMe
 Despite the small amount of board area to work with, there is still support for SSDs with sizes up to 2280 along with there being mounting holes for 2230, 2242, 2260 drives. This would allow for a larger variety of SSDs to be used, including higher performance ones.
@@ -7,3 +7,4 @@ The SSD would use the most amount of PCIe lanes with four going to the connector
 
 ## eMMC
 In production, the 64GB eMMC on the LattePanda Mu may be left unused.
+
