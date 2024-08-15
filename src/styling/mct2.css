@@ -84,8 +84,13 @@ section h2 {
 
 {# compensate for Heuristica's font sizing #}
 .docpagebuttondesc {
-    margin: 8pt;
-    margin-top: 10pt;
+    margin: 6pt;
+    margin-top: 8pt;
+}
+
+p.docpagelisttitle {
+    margin: 0;
+    margin-top: 2pt;
 }
 
 {% include "_colors.css" %}

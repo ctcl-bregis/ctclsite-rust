@@ -12,6 +12,8 @@
             "update": {"title": "Update", "theme": "gold"}
         },
         "menu": [
+            "mct2_p6",
+            "wk32_2024",
             "mct2_p5",
             "wk31_2024",
             "mct2_p4",
@@ -52,6 +54,28 @@
             "2023_review",
             "sp7021_p1"
         ]
+    },
+    "mct2_p6": {
+        "type": "content",
+        "content": "config/blog/content/mct2_p6.md",
+        "icon": "/static/blog/mct2_p6/mct2_p6_icon.webp",
+        "icontitle": "In the air",
+        "theme": "mct2",
+        "cat": "hardware",
+        "startdate": "August 14, 2024",
+        "title": "MediaCow Touch 2 - Part 6",
+        "desc": "Must not give up"
+    },
+    "wk32_2024": {
+        "type": "content",
+        "content": "config/blog/content/weekly/week_32_2024.md",
+        "icon": "/static/blog/wk32_2024/wk322024_icon.webp",
+        "icontitle": "Reconstruction",
+        "theme": "gold",
+        "cat": "update",
+        "startdate": "August 11, 2024",
+        "title": "Week 31, 2024",
+        "desc": "The thirty-first week of 2024"
     },
     "mct2_p5": {
         "type": "content",

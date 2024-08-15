@@ -255,7 +255,7 @@ section {
 
 .docpagelist {
     padding: 0;
-    width: 100%;
+    width: 50%;
     background-color: #101010;
     border-style: solid;
     border-width: 1pt;
@@ -263,7 +263,7 @@ section {
     align-items: center;
 }
 
-.docpagelist .docpagelisttitle {
+p.docpagelisttitle {
     text-align: center;
     font-weight: bold;
     font-size: 16pt;
@@ -276,19 +276,19 @@ section {
 
 .docpagebutton {
     border-style: solid;
-    border-width: 2px;
-    margin: 4pt;
+    border-width: 1px;
+    margin: 3pt;
 }
 
 p.docpagebuttontitle {
-    font-size: {{ textdefaultsizes.h5 }};
+    font-size: 12pt;
     font-weight: bold;
     margin: 0;
-    padding: 4pt;
+    padding: 3pt;
 }
 
 .docpagebuttondesc {
-    margin: 8pt;
+    margin: 6pt;
 }
 
 pre.fileviewer {

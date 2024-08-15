@@ -1,9 +1,9 @@
 This document covers general information about the MediaCow series of mobile hardware projects.
 
 ## Origin of the name
-The name "MediaCow" was first used in presumably November 2018 to describe a mobile portable media player device. Other ideas for the name were "MediaBarn" and "Digital Media Locker Portable (DMLP)". 
+The name "MediaCow" was first used in presumably November 2018 to describe a mobile portable media player device. The name evolved from "MediaBarn" after being originally named "Digital Media Locker Portable (DMLP)". 
 
-The name and theme of MediaCow is mostly inspired by my early childhood where I was still in Central New York within the Syracuse and Oneida areas. Cows were a common theme due to the dairy industry. A local business, Byrne Dairy had role in the theming of the device due to its prevalence in my early childhood. 
+The name and theme of MediaCow is mostly inspired by my early childhood where I was still in Central New York within the Syracuse and Oneida areas. Cows were a common theme due to the dairy industry. A local business, Byrne Dairy had role in the theming of the device due to its prevalence in my early childhood. The "Media" part of the name had some inspiration from MediaTek. 
 
 The design of the first device that used solid wood boards from 2018 to 2019 is likely inspired by a dream or part of a movie that I saw when I was between two (2006) and six years (2010) old where there was this device with the case made out of solid boards and nails and there was a picture of a pasture with Holstein cattle on screen.
 

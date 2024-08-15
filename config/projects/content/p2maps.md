@@ -25,5 +25,7 @@ These maps are currently in development and are slowly being added to.
 ### The Hall
 On December 23, 2023, I started developing a map completely in Hammer with the working title "The Hall". Unlike my past maps, this map is much more personal. It takes inspiration from a hallway in a school that I have not seen since early 2011 so this part of the map is completely designed from how I remember it. Because of being based off such a faint memory, the map takes on a Liminal Spaces aesthetic. This my first map with custom designed textures, specifically posters.
 
+As of August 11, 2024, this project still continues to be on hold for the time being. 
+
 # Services
 In March 2024, I have decided that I would no longer work on maps for others for the time being because of the other work I do and my knowledge on level design in the Valve Hammer software is still limited. This includes Portal Forbidden Testing Tracks which I have started to work on a map but I later decided to discontinue working on the project and the task was given to someone else.

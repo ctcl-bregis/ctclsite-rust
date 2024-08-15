@@ -1,10 +1,10 @@
 
 
 ## Cameras
-Like many tablets, MediaCow Touch 2 would include a front-facing camera and and a  back-facing camera.
+Like many tablets, MediaCow Touch 2 would include a front-facing camera and and a back-facing camera. Though important, I seem to constantly overlook this feature. 
 
 ### Front-Facing Camera
-The front-facing camera would be in the form of a laptop webcam pulled from either a Chromebook or a laptop. The front-facing camera along with the microphone would be useful in cases such as video chat, video logs and selfie photography (though the device would likely require two hands to hold).
+The front-facing camera, also known as the "selfie camera", would be in the form of a laptop webcam module pulled from either a Chromebook or a laptop. The front-facing camera along with the microphone would be useful in cases such as video chat, video logs and selfie photography (though the device would likely require two hands to hold).
 
 Internally, the webcam module connects to the system through a USB 2.0 link though the microphone would have an output for a PDM signal that would be used by the audio CODEC IC on the carrier board.
 

@@ -1,16 +1,16 @@
+## Disclaimer
+The following is preliminary data and may change at any time during development. This document is used both to showcase my ideas for the device along being used as the plan.
+
 ## Introduction
 MediaCow Touch 2, codenamed "Paris", is a project idea about designing and building a tablet computer device.
 
 The theming and codename is inspired by a certain online friend that I met in late 2020.
 
-### Disclaimer
-The following is preliminary data and may change at any time during development. This document is used both to showcase my ideas for the device along being used as the plan.
-
 ### Brief History
 For an in-depth history on MediaCow, see the [MediaCow page](../mediacow/).
 
 #### 2021-2022
-In March 2021, I came up with ideas to develop another tablet device after the success with MediaCow Touch "Nashville" in November 2020. At first, I had some overcomplicated, unrelastic ideas at the beginning. The initial idea at the time surrounded the use of a soldered-down Rockchip RK3588 SoC with ten DDR4 DRAM ICs, specifically Nanya NT5AD1024M8A3, for 8GB of memory with ECC. This would have been extremely difficult if not impossible for me to design at the time so I later decided to use a System on Module, a format of computers I just heard of recently at that time.
+In March 2021, I came up with ideas to develop another tablet device after the success with MediaCow Touch "Nashville" in November 2020. At first, I had some overcomplicated, unrealstic ideas at the beginning. The initial idea at the time surrounded the use of a soldered-down Rockchip RK3588 SoC with ten DDR4 DRAM ICs, specifically Nanya NT5AD1024M8A3, for 8GB of memory with ECC. This would have been extremely difficult if not impossible for me to design at the time so I later decided to use a System on Module, a format of computers I just heard of recently at that time.
 
 Block diagrams and physical layout diagrams have been attempted throughout the rest of 2021.
 
@@ -56,3 +56,20 @@ This is the process in how I plan to design the device:
 4. Completion
 
 It is cruical that I complete steps 1 through 2.6 by September 1, 2024, preferably by August 26, 2024.
+
+#### Schematic Process
+I realized that I must have an order of what I should implement certain parts of the schematic.
+
+
+- Audio
+- M.2 E slot
+- M.2 M slot
+- USB Type-A ports
+- USB Power Delivery
+- Ethernet
+- EC
+
+Done: 
+- Battery Charger
+- VSB-VSYS load switch
+- 

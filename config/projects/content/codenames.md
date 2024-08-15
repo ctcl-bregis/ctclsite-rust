@@ -336,34 +336,49 @@ Exceptions to the requirement of the design requiring a processor of some sort a
 
 Codenames must contain just the name of the city, town, village or CDP. Codenames that are of different places with the same name cannot be used, for example: If a project codenamed "Richmond" after Richmond, Virginia already exists, another project cannot use a codename named after Richmond, California as both would be "Richmond". 
 
-Starting August 4, 2024, codenames for hardware design projects will no longer have themes and projects would receive any codename seen fit.
+Starting August 4, 2024, codenames for hardware design projects will no longer have themes and projects would receive any codename seen fit. This is due to multiple reasons: for one, categorization has limited creativity in codename assignment. Categorization can overcomplicate assignemt of codenames (just look at how long this document is). Codenames for individual computer systems is planned to be phased out in favor for inventory IDs with the introduction of CAMS. However, software codenames will continue to have categorization.
 
 ### Generally Reserved Codenames
-
 These codenames are reserved for special purposes due to the personal value
 
 - Canastota, New York, US
 - Clay, New York, US
   - Likely would be used with something DRAM related
 - Curitiba, Paraná, Brazil
-- Floyds Knobs, Indiana, US
-  - **Will be used for MediaCow Touch Mini SP7021**
-  - Dedicated to Jason "Leinfors" Parker (1986-2023)
 - Dresden, Saxony, Germany
   - Likely would be used with something DRAM related
-- Jacksonville, Florida, US
-- Knoxville, Tennessee, US
-  - May be used with a device similar to MediaCow Touch (1)
-- Oneida, New York, US
-- Richmond, Virginia, US
-- Salisbury, Maryland, US
-- Sandston, Virginia, US
-  - Likely would be used with something DRAM related
-- Virginia Beach, Virginia, US
-- Whitelaw, New York, US
-- Solvay, New York, US
 - Fort Myers Beach, Florida
   - Any device, regardless to whatever series it belongs to, that is the first project that require designing with DDR2 or later memory generations receives the codename "Fort Myers Beach". This is due to how such project would be seen as a significant turning point like the 2022 business trip to Fort Myers Beach, Florida.
+- Graz, Austria
+- Jacksonville, Florida, US
+  - Residence from 2011 to 2012
+- Knoxville, Tennessee, US
+  - May be used with a device similar to MediaCow Touch (1)
+  - Some inspiration from the band Whitechapel
+- Midlothian, Virginia, US
+  - Residence from 2012 to present
+  - Was almost used for a school project in 2022 though currently remains unused.
+- Old Forge, New York, US
+- Oneida, New York, US
+  - Residence from 2004 to 2011
+- Richmond, Virginia, US
+- Salisbury, Maryland, US
+  - Importance during early 2023 with an initial business trip in mid-January 2023.
+- Sandston, Virginia, US
+  - Likely would be used with something DRAM related
+  - Former location of White Oak Semiconductor; Infineon Technologies Richmond; Qimonda North America
+- São Paulo (city), Brazil
+- Solvay, New York, US
+- Sylva, North Carolina, US
+- Virginia Beach, Virginia, US
+- Whitelaw, New York, US
+
+### Assigned
+
+- Floyds Knobs - MediaCow Touch Mini SP7021
+  - Dedicated to Jason "Leinfors" Parker (1986-2023)
+- Nashville - MediaCow Touch 1
+- Paris - MediaCow Touch 2
 
 ## Software
 Standalone software projects use the names of animals. Embedded software written for hardware projects do not receive their own codename as such software is considered to be part of the hardware project. 
@@ -422,5 +437,7 @@ Projects using the codenames of **trout** are used for projects using the Django
 
 #### Chat bots
 Starting January 30, 2024, projects using the codenames of **catfish** (Siluriformes/Nematognathi) are used for Python-based projects that are chat bots. The use of catfish for such codenames is a reference to the built-in user "Rocket.Cat" from the Rocket.Chat software and is a play on the term "catfishing".
+
+The Python version of SLAG was the first and likely the last of Python chat bot software that I develop (under CTCL).
 
 - [Channel Catfish - SLAG](../slag/) (Python version)
