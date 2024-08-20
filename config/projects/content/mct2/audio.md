@@ -10,6 +10,6 @@ MediaCow Touch 2 will include a standard 3.5mm audio jack that likely supports a
 The Audio CODEC would make use of the HD Audio interface exposed by the LattePanda Mu. This makes hardware design more simple in multiple ways. Notably there is no need for an I2C connection.
 
 ##### CODEC Selection
-A Tempo Semiconductor 92HD95B is used as the Audio CODEC IC. The reason why I do not use a Realtek CODEC like the LattePanda Mu Full Carrier board is because many Realtek components are nearly impossible to source and receive support for as a hobbyist, this includes audio CODEC ICs. Tempo appears to be one of the few options for HD Audio CODECs that I could easily find on retailers such as Mouser Electronics.
+A Tempo Semiconductor 92HD95B is used as the Audio CODEC IC. Tempo appears to be one of the few options for HD Audio CODECs that I could easily find on retailers such as Mouser Electronics. Realtek components seem to be highly difficult to source and and receive documentation for.
 
 It is likely that the 92HD95B uses IP from SigmaTel as IDT acquired SigmaTel's PC Audio division in 2006 then later in 2013, Tempo Semiconductor spun off from the resulting IDT PC Audio division. My experience with sound quality from SigmaTel CODECs was great, even with older components such as on a Creative SoundBlaster 32 that I used in ["Polyethylene Terephthalate"](/projects/pc_pet/) and now ["Polypropylene"](/projects/pc_pp/).

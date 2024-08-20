@@ -3,7 +3,6 @@
 ## HSIO Usage
 MediaCow Touch 2, like many other devices using the LattePanda Mu, makes extensive use of the Flexible High Speed I/O (HSIO) feature of the Intel Processor N-series.
 
-
 | Port    | Purpose    | PCIe Device |
 | ------- | ---------- | ----------- |
 | HSIO 0  | USB 3.2    | N/A         |
@@ -16,9 +15,7 @@ MediaCow Touch 2, like many other devices using the LattePanda Mu, makes extensi
 | HSIO 10 | M.2 Key M  | 3           |
 | HSIO 11 | M.2 Key M  | 3           |
 
-
 ## Wired Connectivity
-
 
 * 2x USB Type-C with PD and DisplayPort alternate mode (see [Battery and Power Management](../power/) page for details on system power management)
 * 2x USB 3.2 Type-A

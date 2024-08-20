@@ -1,4 +1,6 @@
-This document covers the how I style code, writing and other media. This document contains personal opinions. 
+This document covers the how I style code, writing and other media. This document contains personal opinions.
+
+Some inspiration for this document is taken from the style guides from [suckless](https://suckless.org/coding_style/) and [Google](https://google.github.io/styleguide/).
 
 ## Time and Date
 When possible, [ISO standard 8601](https://www.iso.org/iso-8601-date-and-time-format.html) is used.
@@ -44,76 +46,21 @@ Examples:
 - "Server backups would commence on August 11, 2024"
 - "Planning started in March 2021"
 
-
-## Code
-This section covers how I style code. Some inspiration is taken from the style guides from [suckless](https://suckless.org/coding_style/) and [Google](https://google.github.io/styleguide/cppguide.html#Punctuation,_Spelling_and_Grammar).
-
-This style guide covers the following languages and formats:
-- Bash
-- C/C++
-- C#
-- CSS
-- Lysine
-- HTML
-- JavaScript
-- JSON
-- Lua
-- OpenSCAD
-- Python
-- Rust
+## Common Code Guidelines
+This section covers conventions used across most programming languages. See the pages linked at the top of the page for styling for specific programming languages.
 
 ### Indentation
-If possible, I use four (4) spaces for indentation.
+When possible, indentation shall be done with **four spaces**.
 
-### Function Declaration
-The open curly bracket is always on the end of the function declaration and not on a new line. Due to how functions are defined in Python and Lua, this does not apply to Python and Lua.
-
-For example, in **Rust**:
-
-**Do**
-```rs
-pub fn read_file(path: &str) -> Result<String, Error> {
-    let mut file = match File::open(path) {
-        Ok(file) => file,
-        Err(e) => match e.kind() {
-            std::io::ErrorKind::NotFound => return Err(Error::new(std::io::ErrorKind::NotFound, format!("File {} not found", path))),
-            _ => panic!("Error reading from file {}: {}", path.to_owned(), e),
-        }
-    };
-    let mut buff = String::new();
-    file.read_to_string(&mut buff).unwrap();
-
-    Ok(buff)
-}
-```
-
-**Don't**
-```rs
-pub fn read_file(path: &str) -> Result<String, Error> 
-{
-    let mut file = match File::open(path) 
-    {
-        Ok(file) => file,
-        Err(e) => match e.kind() 
-        {
-            std::io::ErrorKind::NotFound => return Err(Error::new(std::io::ErrorKind::NotFound, format!("File {} not found", path))),
-            _ => panic!("Error reading from file {}: {}", path.to_owned(), e),
-        }
-    };
-    let mut buff = String::new();
-    file.read_to_string(&mut buff).unwrap();
-
-    Ok(buff)
-}
-```
+Many IDEs have the feature where the "Tab" key inserts four spaces. 
 
 ### Comments
-Within recent times; since 2023, I have been trying to have comments more useful and only present when they are needed. A lot of times I use comments to tell myself or another contributor that the code is not 
+In recent times, I have been trying to have comments more useful.
 
-If there must be documentation, the documentation can be done elsewhere outside of code. 
+Like what is stated in [Google's style guide for Python]((https://google.github.io/styleguide/), comments shall not describe the code; assume however is reading the code has extensive experience with the programming language. Comments are to be used to explain why a certain thing is done in a certain way. 
 
 ## UI and Messages
-Messages from the software to the user shall get to the point while being descriptive.
+Messages from the software to the user shall get to the point and be descriptive.
 
 ### Addressing the user
 The software shall not use first person terms or act as if it were to be sentient.
@@ -138,9 +85,29 @@ Following 2020, many organizations started to change terminology in documentatio
 The changes done to documents have been horribly inconsistent from one vendor to another. In some recent document revisions, especially those from Texas Instruments (see SLVSDV5B Revision B, August 2021), the terminology is inconsistent throughout the document with "Slave", "Peripheral", and "Secondary" being used to refer to the same thing.  
 
 ### Slave/Master
-I believe that the terms "Slave/Master" did not really make that much sense to begin with. For example, why is the chip or hard drive a "slave"? None of the components are paid anything. USB seemed to have used Host/Device well before the 2020s and that seems to be most suitable option though it only properly fits electronics engineering.
+I believe that the terms "Slave/Master" did not really make that much sense to begin with. It was never a US-specific issue. USB seemed to have used Host/Device well before the 2020s and that seems to be most suitable option though it only properly fits electronics engineering. Some cases, "device" is already used to describe a different part. 
 
 Master/Slave may continue to be used where it is to be consistent with existing documents. This includes the use of MISO/MOSI for SPI signal names.
 
 ### Whitelist/Blacklist
 Projects will continue to use the terminology "Whitelist/Blacklist".
+
+## Names
+
+### Software Names
+
+#### Lua
+I've seen Lua spelled as "LUA" like it is an acronym. It is not an acronym; it is the Portugese word for "moon".
+
+When referring to the language, only the "L" shall be capitalized.
+
+#### coreboot
+As stated in the [coreboot documentation](https://doc.coreboot.org), coreboot shall be referred to as "coreboot" without any capital letters or spaces.
+
+### Company Names
+
+#### SK hynix vs SK Hynix
+Technically both "SK Hynix" and "SK hynix" are correct spelling of the name however the latter is preferred. 
+
+#### Innolux vs InnoLux
+Though the company refers to itself by either as seen in datasheets. The spelling "Innolux" would be used. 

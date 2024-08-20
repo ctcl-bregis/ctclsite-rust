@@ -28,36 +28,26 @@ This is the IO used on SMEC.
 ### I2C
 Three I2C interfaces are used
 
-- I2C Bus 1: Dedicated to keypad controller and must be active at all times
+- I2C Bus 1: General Use
   - Keypad controller
-- I2C/SMBus Bus 2: General use
   - Battery pack fuel gauge
   - LTC4162-LAD battery charge controller
   - TPS65988 Type-C PD controller
   - 2x MP8859 Buck-Boost DC-DC converters
-  - I210 Ethernet transceiver
-- I2C/SMBus Bus 3: Dedicated to SMLink communication between SMEC and the TCP (Type C) controllers on the Intel N100
+- I2C/SMBus Bus 2: Dedicated to SMLink communication between SMEC and the TCP (Type C) controllers on the Intel N100
   - TCPx controllers 
-- I2C Bus 4: Communication between the SoM and SMEC
+- I2C Bus 3: Communication between the SoM and SMEC
 
 Following device addresses are 7-bit. 
 
 #### Bus 1
+Bus 1 shall always be online and is used for communicating with various SMBus devices.
 
 - SDA - SMB1_SDA
 - SCL - SMB1_SCL
 - SMBus Alert - SMB1_ALT
 
 - TCA8418 Keypad Controller - 0x34
-
-#### Bus 2
-
-Label names:
-- SDA - SMB2_SDA
-- SCL - SMB2_SCL
-- SMBus Alert - SMB2_ALT
-
-Addresses:
 - Battery pack fuel gauge - TBD
 - LTC4162-LAD battery charge controller - 0x68
 - TPS65988 Type-C PD controller - 0x20
@@ -65,55 +55,73 @@ Addresses:
 - MP8859 Buck-Boost converter for TCP1 source - 0x66
 - I210AT Ethernet Controller - 0x49
 
-#### Bus 3
+#### Bus 2
+Bus 2 is dedicated to communication between SMEC and the TCP controllers on the Intel N100. 
 
 Label names:
-- SDA - SMB3_SDA
-- SCL - SMB3_SCL
-- SMBus Alert - SMB3_ALT
+- SDA - SML_SDA
+- SCL - SML_SCL
+- SMBus Alert - SML_ALT
 
 Addresses:
 - TCP0 - 0x??
 - TCP1 - 0x??
 
-#### Bus 4
+#### Bus 3
+Bus 3 is dedicated to communication between the OS and SMEC.
 
 Label names:
 - SDA - SOM_SMB_SDA
 - SCL - SOM_SMB_SCL
-- SMBus Alert - SOM_SMB_ALT
+- SMBus Altert - SOM_SMB_ALT
 
 Addresses: 
 - LattePanda Mu SoM - TBD
 
 ### GPIO
 
-Total: 23
+Input: Input to SMEC from device
+Output: Output from SMEC to device
 
 - USB Load Switches
-  - 4 Input
-  - 4 Output
+  - EUSB0_EN - Output
+  - EUSB0_FLT - Input
+  - EUSB1_EN - Output
+  - EUSB1_FLT - Input
+  - EUSB2_EN - Output
+  - EUSB2_FLT - Input
+  - EUSB3_EN - Output
+  - EUSB3_FLT - Input
 - USB Power Enable
-  - 1 Output
+  - USB_5V_EN - Output
 - VSYS Power Switch
-  - 2 Output
-  - 1 Analog Input
+  - VSYS_SW_IN - Output
+  - VSYS_SW_DEN - Output
+  - VSYS_SW_IS - Analog Input
 - TCP_PPHV1 Regulator
-  - 1 Input
-  - 1 Output
+  - TCP_PPHV1_EN - Output
 - TCP_PPHV2 Regulator
-  - 1 Input
-  - 1 Output
-- Keypad Controller
-  - 1 Input
+  - TCP_PPHV2_EN - Output
+- VSYS_LV Regulator
+  - VSYS_LV_PG - Input
+- USB_5V Regulator
+  - USB_5V_PG - Input
+- Keypad
+  - KP_RST - Output
+  - KP_SW_RAD - Input
+  - KP_SW_CAM - Input
 - OLED_VDD Regulator
-  - 1 Output
+  - OLED_VDD_EN - Output
 - OLED_VOLED Regulator
-  - 1 Output
-- System sleep states
-  - 2 Inputs
+  - OLED_VOLED_EN - Output
+- System
+  - SLS_S0 - Input
+  - SLS_S3 - Input
+  - PWRBTN - Output
+  - RSTBTN - Output
 - HDMI Companion IC
-  - 2 Outputs
+  - HDMI_CT_HPD - Output
+  - HDMI_LS_OE - Output
 
 
 ### Flexible Memory Controller

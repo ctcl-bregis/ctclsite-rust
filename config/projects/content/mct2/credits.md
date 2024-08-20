@@ -23,10 +23,13 @@ The MediaCow Touch 2 hardware design and software files are hosted on GitHub for
 This website hosts this documentation while being a convenient method to showcase my ideas, progress and thought processes. 
 
 #### Discord
-Using a chat service in as a way to dump ideas into categories has returned from MediaCow Touch 1 where I used a self-hosted Rocket.Chat instance for that purpose. This time I used a private "server" on Discord to dump and brainstorm ideas. At the conclusion of the project, I would make a public release of the idea dump channels. 
+Using a chat service in as a way to dump ideas into categories has returned from MediaCow Touch 1 where I used a self-hosted Rocket.Chat instance for that purpose. This time I used a private "server" on Discord to dump and brainstorm ideas. At the conclusion of the project, I would make a public release of the channel logs. 
 
 #### MediaWiki
 A self-hosted MediaWiki instance is used for personal documentation. It's role in MediaCow Touch 2, however, is very limited. 
+
+#### STM32CubeMX
+STM32CubeMX was used to select the microcontroller used as the embedded controller (SMEC) and plan its pinout.
 
 ### Software Development
 This software was used to develop software for the project.
@@ -39,13 +42,23 @@ The 'Open Remote - SSH' extension played a crucial role during development as it
 ## Hardware Used
 Hardware used for development since May 2024:
 
-Format: Codename - Motherboard
+**Format: Codename - Motherboard**
+
+### Development Hardware
+"Cyclobutane" is the codename that refers to the system on module itself and is unrelated to the development carrier boards from LattePanda.
+
+- "Cyclobutane" - LattePanda Mu
+  - Experimentation
+  - Communications
+  - Used in the end product
+
+### Workstations
 
 - "Polybutylene Terephthalate" - ASRock B550M Pro4
   - Circuit and device design
   - Documentation
   - Software development
-- "Polymethylmethacrylate" - HP ZBook Studio G3 15 (Intel Xeon version)
+- "Polymethylmethacrylate" - HP ZBook Studio G3 15 (Xeon)
   - Circuit and device design
   - Documentation
   - Software development
@@ -59,16 +72,12 @@ Format: Codename - Motherboard
   - Social media promotion
   - Research
   - Communications
-- "Cyclobutane" - LattePanda Mu
-  - Experimentation
-  - Communications
-  - Used in the end product
 - "Tetrahydrocannabinol" - ASUS Zenfone 9
   - Documentation
   - Communications
   - Remote internet access
 
-Server stuff:
+### Servers
 
 - "Levoamphetamine" - HP ProLiant BL460c G8
   - File storage host (Nextcloud)
@@ -84,14 +93,17 @@ Server stuff:
 
 MediaCow Touch 2 was developed in the following locations:
 
+- Atlantic Beach, North Carolina, United States
 - Midlothian, Virginia, United States
 - Fort Myers, Florida, United States
 - Fort Myers Beach, Florida, United States
 - Orlando, Florida, United States
 
-90+% of development was done in Midlothian, Virginia.
+90+% of development was done in Midlothian, Virginia. 
 
-## People 
+This list excludes any work done from aircraft, which was an Airbus A320 for both the departing and return flights from Orlando, Florida during the August 2024 trip.
+
+## Individuals and Organizations 
 The project's codename and a major part of the theme is based off from L'Hommeblanc of Paris, France who I knew online since October 2020. He had this role in the project since its original planning stages in early 2021.
 
 This project was made possible by LattePanda where hardware and documentation was provided.
@@ -103,10 +115,12 @@ These organizations and individuals have provided hardware for me to use for dev
 - CrashSys
 
 ### Technical Support
-
 Organizations that provided guides, datasheets and other technical support documents:
+
+- Advantech
 - Altium
 - Analog Devices (including Linear Technology Corporation and Maxim Integrated)
+- Congatec
 - Crystalfontz
 - CTS
 - Diodes Incorporated
@@ -127,4 +141,4 @@ Organizations that provided guides, datasheets and other technical support docum
 - Toshiba
 - Vishay (including Siliconix and General Semiconductor)
 - Winbond Electronics
-
+- Xi'an Aerosemi Technology

@@ -33,6 +33,7 @@
             "netkart",
             "p2maps",
             "nonmono",
+            "styling",
             "codenames",
             "naming"
         ],
@@ -422,6 +423,42 @@
         "startdate": "2023",
         "enddate": "Present",
         "content": "config/projects/content/nonmono.md"
+    },
+    "styling": {
+        "type": "docs",
+        "link": "/projects/styling/",
+        "theme": "gold", 
+        "title": "Style Guides", 
+        "desc": "Style guides that I follow in the development of hardware and software", 
+        "icon": "", 
+        "icontitle": "",
+        "cat": "misc",
+        "startdate": "",
+        "enddate": "",
+        "content": "config/projects/content/styling/intro.md",
+        "pages": {
+            "python": {
+                "type": "content",
+                "theme": "gold",
+                "title": "Python Style Guide",
+                "desc": "Code styling specific to Python",
+                "content": "config/projects/content/styling/python.md"
+            },
+            "rust": {
+                "type": "content",
+                "theme": "gold",
+                "title": "Rust Style Guide",
+                "desc": "Code styling specific to Rust",
+                "content": "config/projects/content/styling/rust.md"
+            },
+            "electronics": {
+                "type": "content",
+                "theme": "gold",
+                "title": "Hardware Development Style Guide",
+                "desc": "Conventions specific to schematics and PCB design",
+                "content": "config/projects/content/styling/electronics.md"
+            }
+        }
     },
     "codenames": {
         "type": "content",
