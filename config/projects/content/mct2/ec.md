@@ -22,30 +22,28 @@ When the system is powered on or off, SMEC would constantly read data from the b
 ### USB PD management
 The critical functions of USB Power Delivery is handled by the TPS65988. SMEC communicates with this chip for port status and control. 
 
+SMEC controls the two buck-boost regulators for USB source power. The TPS65988 would communicate with SMEC to set the output voltages of the buck-boost regulators.
+
+
 ## IO Usage 
 This is the IO used on SMEC.
 
+### USB
+A USB link between SMEC and the module is provided. Implementing the USB interface is trivial as it requires just two pins on SMEC and one of the many USB 2.0 interfaces on the module. The maximum bus speed is 12Mbit/s.
+
+A possible use of the USB bus is to have SMEC act as an HID keyboard for sending keypresses with the programmable buttons on the keypad. Another use of the interface is for debugging and possibly flashing firmware.
+
 ### I2C
 Three I2C interfaces are used
-
-- I2C Bus 1: General Use
-  - Keypad controller
-  - Battery pack fuel gauge
-  - LTC4162-LAD battery charge controller
-  - TPS65988 Type-C PD controller
-  - 2x MP8859 Buck-Boost DC-DC converters
-- I2C/SMBus Bus 2: Dedicated to SMLink communication between SMEC and the TCP (Type C) controllers on the Intel N100
-  - TCPx controllers 
-- I2C Bus 3: Communication between the SoM and SMEC
 
 Following device addresses are 7-bit. 
 
 #### Bus 1
 Bus 1 shall always be online and is used for communicating with various SMBus devices.
 
-- SDA - SMB1_SDA
-- SCL - SMB1_SCL
-- SMBus Alert - SMB1_ALT
+- SDA - SYS_SMB_SDA
+- SCL - SYS_SMB_SCL
+- SMBus Alert - SYS_SMB_ALT
 
 - TCA8418 Keypad Controller - 0x34
 - Battery pack fuel gauge - TBD
@@ -54,6 +52,7 @@ Bus 1 shall always be online and is used for communicating with various SMBus de
 - MP8859 Buck-Boost converter for TCP0 source - 0x60
 - MP8859 Buck-Boost converter for TCP1 source - 0x66
 - I210AT Ethernet Controller - 0x49
+- BMP384 Digital pressure sensor - 0x76
 
 #### Bus 2
 Bus 2 is dedicated to communication between SMEC and the TCP controllers on the Intel N100. 
@@ -123,7 +122,6 @@ Output: Output from SMEC to device
   - HDMI_CT_HPD - Output
   - HDMI_LS_OE - Output
 
-
 ### Flexible Memory Controller
 The STM32 FMC interface is used by the OLED display on the side of the case. 
 
@@ -133,23 +131,31 @@ The STM32 FMC interface is used by the OLED display on the side of the case.
 It is critical that SMEC uses very little power, especially when the system is powered off. 
 
 ## System Communication
+As mentioned above, there are two interfaces that SMEC can use to communicate with the OS: SMBus and USB.
+
 It is expected that a custom daemon or Linux kernel module would have to be written for the system to make use of SMEC. I would not implement driver support for Microsoft Windows (but, of course, the project is open source so one can add support for Windows if they really wanted to).
 
 This daemon or driver would send ACPI events for other daemons such as [acpid](https://linux.die.net/man/8/acpid) to make use of. 
+
+## Software
+As of August 21, 2024, I have not decided if SMEC would use FreeRTOS or the firmware would run "bare metal".
 
 ## Misc
 This section covers miscellaneous details about the embedded controller.
 
 ### Clock Source
+
+#### Oscillators
 Instead of using a conventional crystal oscillator, SMEC would make use of MEMS oscillators. Using this kind of oscillator has the benefits of MEMS-based oscillators along with easier implementation since they just need a single passive component being the power supply decoupling capacitor. I have had an interest in MEMS oscillator technology since late 2018 and this is not the first time I have used them in a design.
 
 Currently, there are two external oscillators used for SMEC:
 - HSE: 48MHz SiTime SiT1602BI-13-XXN-48.000000
 - LSE: 32.768KHz SiTime SiT1533AI-H4-DCC-32.768
 
-#### STM32 Clock Configuration
 Internal clock generators HSI, MSI and LSI are left unused. 
 
+#### STM32 Clock Configuration
 The 48MHz clock input directly goes to the ARM core clock (SYSCLK), resulting in SMEC running at a clock speed of 48MHz instead of advertised maximum of 80MHz. As seen with the [Flipper Zero that runs its STM32WB55 at 64MHz (Cortex-M4 core)](https://docs.flipper.net/development/hardware/tech-specs), 48MHz should be plenty for what is planned to be done with SMEC.
 
 The 32.768KHz LSE clock input directly goes to the RTC (Real-Time Clock)
+

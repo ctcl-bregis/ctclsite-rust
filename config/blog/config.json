@@ -12,6 +12,7 @@
             "update": {"title": "Update", "theme": "gold"}
         },
         "menu": [
+            "mct2_p8",
             "mct2_p7",
             "wk33_2024",
             "mct2_p6",
@@ -56,6 +57,17 @@
             "2023_review",
             "sp7021_p1"
         ]
+    },
+    "mct2_p8": {
+        "type": "content",
+        "content": "config/blog/content/mct2_p8.md",
+        "icon": "/static/blog/mct2_p8/mct2_p8_icon.webp",
+        "icontitle": "Power all the things",
+        "theme": "mct2",
+        "cat": "hardware",
+        "startdate": "August 22, 2024",
+        "title": "MediaCow Touch 2 - Part 8",
+        "desc": "Quick update"
     },
     "mct2_p7": {
         "type": "content",
