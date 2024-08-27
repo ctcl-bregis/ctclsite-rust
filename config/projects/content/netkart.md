@@ -28,7 +28,7 @@ The centrifugal clutch and many of the chain driven parts of the transmission wo
 Along with the addition of a CVT, a gearbox for shifting into reverse, neutral and drive will be added. 
 
 ### Frame
-The frame will also go under significant modification. For extra strength and rigidity, the frame will be welded together as the frame was held together with nuts and bolts. This should help with vibration while having the vehicle more safe to drive. On April 2, 2024, we have started to work on the gfr
+The frame will also go under significant modification. For extra strength and rigidity, the frame will be welded together as the frame was held together with nuts and bolts. This should help with vibration while having the vehicle more safe to drive. On April 2, 2024, we have started to work on the frame.
 
 ## Phase 3
 Phase 3 is when I actually start computerizing the go kart.
