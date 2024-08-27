@@ -1,1 +1,1 @@
-2024 was as challenging of a year for me as 2023 though I was much more productive this year.
+Personally, 2024 was as challenging as 2023 though I was much more productive this year.

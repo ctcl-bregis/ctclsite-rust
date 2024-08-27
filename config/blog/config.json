@@ -12,6 +12,7 @@
             "update": {"title": "Update", "theme": "gold"}
         },
         "menu": [
+            "wk34_2024",
             "mct2_p8",
             "mct2_p7",
             "wk33_2024",
@@ -58,6 +59,17 @@
             "sp7021_p1"
         ]
     },
+    "wk34_2024": {
+        "type": "content",
+        "content": "config/blog/content/weekly/week_34_2024.md",
+        "icon": "/static/blog/wk34_2024/wk342024_icon.webp",
+        "icontitle": "Smelts 32 items",
+        "theme": "gold",
+        "cat": "update",
+        "startdate": "August 25, 2024",
+        "title": "Week 34, 2024",
+        "desc": "The thirty-fourth week of 2024"
+    },
     "mct2_p8": {
         "type": "content",
         "content": "config/blog/content/mct2_p8.md",
@@ -89,7 +101,7 @@
         "cat": "update",
         "startdate": "August 19, 2024",
         "title": "Week 33, 2024",
-        "desc": "The thirty-first week of 2024"
+        "desc": "The thirty-third week of 2024"
     },
     "mct2_p6": {
         "type": "content",
