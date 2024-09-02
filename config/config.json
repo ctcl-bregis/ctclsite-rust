@@ -23,7 +23,8 @@
     "styling": {
         "css": {
             "base": "base.css",
-            "mct2": "mct2.css"
+            "mct2": "mct2.css",
+            "bcctc": "bcctc.css"
         },
         "vars": {
             "sectionmargin": {"type": "string", "value": "8pt"},
@@ -47,6 +48,7 @@
             }
         },
         "fonts": [
+            {"family": "bebasneue", "path": "/static/fonts/BebasNeue-Regular.ttf", "weight": "normal", "style": "normal"},
             {"family": "hack", "path": "/static/fonts/hack/Hack-Bold.ttf", "weight": "bold", "style": "normal"},
             {"family": "hack", "path": "/static/fonts/hack/Hack-BoldItalic.ttf", "weight": "bold", "style": "italic"},
             {"family": "hack", "path": "/static/fonts/hack/Hack-Italic.ttf", "weight": "normal", "style": "italic"},
@@ -55,14 +57,7 @@
             {"family": "heuristica", "path": "/static/fonts/heuristica/Heuristica-BoldItalic.ttf", "weight": "bold", "style": "italic"},
             {"family": "heuristica", "path": "/static/fonts/heuristica/Heuristica-Italic.ttf", "weight": "normal", "style": "italic"},
             {"family": "heuristica", "path": "/static/fonts/heuristica/Heuristica-Regular.ttf", "weight": "normal", "style": "normal"},
-            {"family": "pix10x10", "path": "/static/fonts/pixel/Pixel-10x10-condensed.ttf", "weight": "normal", "style": "normal"},
-            {"family": "pix11x11", "path": "/static/fonts/pixel/Pixel-11x11-condensed.ttf", "weight": "normal", "style": "normal"},
-            {"family": "pix12x12-mono", "path": "/static/fonts/pixel/Pixel-12x12-condensed-mono.ttf", "weight": "normal", "style": "normal"},
-            {"family": "pix12x12", "path": "/static/fonts/pixel/Pixel-12x12-condensed-light.ttf", "weight": "normal", "style": "normal"},
             {"family": "pix12x12", "path": "/static/fonts/pixel/Pixel-12x12-condensed.ttf", "weight": "bold", "style": "normal"},
-            {"family": "pix16x16", "path": "/static/fonts/pixel/Pixel-16x16-condensed-light.ttf", "weight": "normal", "style": "normal"},
-            {"family": "pix7x7", "path": "/static/fonts/pixel/Pixel-7x7-condensed.ttf", "weight": "normal", "style": "normal"},
-            {"family": "pix8x8", "path": "/static/fonts/pixel/Pixel-8x8-condensed.ttf", "weight": "normal", "style": "normal"},
             {"family": "play", "path": "/static/fonts/play/Play-Bold.ttf", "weight": "bold", "style": "normal"},
             {"family": "play", "path": "/static/fonts/play/Play-Regular.ttf", "weight": "normal", "style": "normal"}
         ],
@@ -70,7 +65,7 @@
             "99gray": {"color": "#999999", "fgcolor": "#000000", "css": "base", "mainfont": "play"},
             "99green": {"color": "#009900", "fgcolor": "#000000", "css": "base", "mainfont": "play"},
             "99red": {"color": "#990000", "fgcolor": "#ffffff", "css": "base", "mainfont": "play"},
-            "bcc_green": {"color": "#00cc00", "fgcolor": "#ffffff", "css": "base", "mainfont": "play"},
+            "bcctc": {"color": "#d900ff", "fgcolor": "#ffffff", "css": "bcctc", "mainfont": "bebasneue"},
             "blue": {"color": "#0000ff", "fgcolor": "#000000", "css": "base", "mainfont": "play"},
             "ddr": {"color": "#000099", "fgcolor": "#000000", "css": "base", "mainfont": "play"},
             "ddr2": {"color": "#999900", "fgcolor": "#000000", "css": "base", "mainfont": "play"},
@@ -105,8 +100,10 @@
     },
     "redirects": {
         "/projects/nonmonolithic/": "/projects/nonmono/",
-        "/bcc_cc/": "/links/bcc_tc/",
-        "/bcc_tc/": "/links/bcc_tc/",
+        "/bcc_cc/": "/links/bcctc/",
+        "/bcc_tc/": "/links/bcctc/",
+        "/links/bcc_cc/": "/links/bcctc/",
+        "/links/bcc_tc/": "/links/bcctc/",
         "/projects/pc_pbt/": "/projects/wbpc/#pc_pbt",
         "/projects/pc_pc/": "/projects/wbpc/#pc_pc",
         "/projects/pc_pet/": "/projects/wbpc/#pc_pet",

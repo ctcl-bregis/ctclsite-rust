@@ -43,5 +43,5 @@
             {% endif %}
             <h1{% if titlesizeoverride %} style="font-size: {{ titlesizeoverride }}"{% endif %}>{{ title }}</h1>
         </header>
-        <hr>
+        {% if showhr %}<hr>{% endif %}
 

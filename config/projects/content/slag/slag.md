@@ -8,7 +8,7 @@ SLAG is a bot for the management of Discord guilds. SLAG is an initialism of "Se
 
 SLAG is the first project where I have written SQL statements for setting up databases. Its development has been a great learning experience.
 
-I am aware what "Slag" means in British English. That was not the original intention behind the name. However, there are no plans to change the name of the project (it's too funny).
+I am aware what "Slag" means in British English. That was not the original intention behind the name. There are no plans to change the name of the project (it's too funny).
 
 For privacy information about instances operated by myself, see the [Privacy Policy](../../privacy/).
 
@@ -23,3 +23,11 @@ I started the Rust version of the software on February 21, 2024 due to general d
 Development at first was too difficult so I ended up rewriting both [the website](../ctclsite/) and [ToDoKiosk](../todokiosk/) in Rust to better familiarize myself with the programming language before taking on SLAG. After the rewrite of both of those web applications, I now understand Rust enough to be able to start working on SLAG.
 
 Details of the Rust version can be found at its [repostitory](https://github.com/ctcl-bregis/slag-rust).
+
+
+## Notes
+
+### Micron Module
+SLAG and CTCL are not associated with Micron Technology or any of its subsidiaries.
+
+The Micron module is designed to have minimal amount of web requests sent to Micron servers for the sole purpose of retrieving part information associated with an FBGA code. 

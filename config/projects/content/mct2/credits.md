@@ -1,4 +1,5 @@
 ## Software Used
+Open Source software has been used whenever possible. 
 
 ### CAD and EDA
 
@@ -89,19 +90,27 @@ Hardware used for development since May 2024:
   - Router
   - Allows remote access to the local network
 
+### Other
+
+- [No Codename] - Texas Instruments TI-Nspire CX
+  - Formula calculation
+
 ## Locations
 
 MediaCow Touch 2 was developed in the following locations:
 
 - Atlantic Beach, North Carolina, United States
-- Midlothian, Virginia, United States
-- Fort Myers, Florida, United States
+- Bramwell, West Virginia, United States
 - Fort Myers Beach, Florida, United States
+- Fort Myers, Florida, United States
+- Midlothian, Virginia, United States - Including:
+  - Brightpoint Community College Midlothian Eliades and Trailblazer buildings
 - Orlando, Florida, United States
+- Pocahontas, West Virginia, United States
 
 90+% of development was done in Midlothian, Virginia. 
 
-This list excludes any work done from aircraft, which was an Airbus A320 for both the departing and return flights from Orlando, Florida during the August 2024 trip.
+This list excludes any work done from aircraft, which was an Airbus A320 for both the departing and return flights from Orlando, Florida during the August 2024 trip to the Fort Myers Beach area.
 
 ## Individuals and Organizations 
 The project's codename and a major part of the theme is based off from L'Hommeblanc of Paris, France who I knew online since October 2020. He had this role in the project since its original planning stages in early 2021.
@@ -115,7 +124,7 @@ These organizations and individuals have provided hardware for me to use for dev
 - CrashSys
 
 ### Technical Support
-Organizations that provided guides, datasheets and other technical support documents:
+Organizations that provided guides, datasheets and other technical support documents that were used in development:
 
 - Advantech
 - Altium
@@ -123,22 +132,49 @@ Organizations that provided guides, datasheets and other technical support docum
 - Congatec
 - Crystalfontz
 - CTS
+- Delta Electronics
 - Diodes Incorporated
 - ECS
+- Foxconn
 - Infineon Technologies (including Cypress Technology and Qimonda)
 - Innolux Display
 - Intel
+- JST
+- Lumissil
 - MediaTek
 - Micron Technology
+- Molex
 - Monolithic Power Systems
+- Nexperia
+- NXP
+- Onsemi
 - Richtek
 - Samsung Electro-Mechanics
+- Silergy
 - SiTime
 - STMicroelectronics
-- Tempo Semiconductor
+- Tempo Semiconductor (including SigmaTel)
 - Texas Instruments
 - Toradex
 - Toshiba
 - Vishay (including Siliconix and General Semiconductor)
 - Winbond Electronics
 - Xi'an Aerosemi Technology
+- YAGEO
+
+## Inspiration
+MediaCow Touch 2's design and hardware had some inspiration from the following products:
+
+- Ainol NOVO7 Paladin
+- ASUS Zenfone 9 AI2202
+- HP ZBook Studio G3 15
+- LattePanda Mu Full Carrier
+- LattePanda Mu Lite Carrier
+- Matterport Pro2 Camera
+- Microsoft Surface series
+- Microsoft Zune series
+- Nintendo Switch (2017)
+- Positivo BGH Y210
+- Samsung Chromebook XE500C13
+- Samsung Galaxy Tab3 10.1 P5210
+- Valve Steam Deck

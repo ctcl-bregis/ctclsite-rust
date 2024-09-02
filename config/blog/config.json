@@ -12,6 +12,7 @@
             "update": {"title": "Update", "theme": "gold"}
         },
         "menu": [
+            "wk35_2024",
             "wk34_2024",
             "mct2_p8",
             "mct2_p7",
@@ -59,6 +60,17 @@
             "sp7021_p1"
         ]
     },
+    "wk35_2024": {
+        "type": "content",
+        "content": "config/blog/content/weekly/week_35_2024.md",
+        "icon": "/static/blog/wk35_2024/wk352024_icon.webp",
+        "icontitle": "Dolphin Gunther",
+        "theme": "gold",
+        "cat": "update",
+        "startdate": "September 2, 2024",
+        "title": "Week 35, 2024",
+        "desc": "The thirty-fifth week of 2024"
+    },
     "wk34_2024": {
         "type": "content",
         "content": "config/blog/content/weekly/week_34_2024.md",
@@ -66,7 +78,7 @@
         "icontitle": "Smelts 32 items",
         "theme": "gold",
         "cat": "update",
-        "startdate": "August 25, 2024",
+        "startdate": "August 26, 2024",
         "title": "Week 34, 2024",
         "desc": "The thirty-fourth week of 2024"
     },
@@ -121,7 +133,7 @@
         "icontitle": "Reconstruction",
         "theme": "gold",
         "cat": "update",
-        "startdate": "August 11, 2024",
+        "startdate": "August 12, 2024",
         "title": "Week 32, 2024",
         "desc": "The thirty-second week of 2024"
     },
@@ -239,7 +251,7 @@
         "type": "content",
         "content": "config/blog/content/weekly/week_26_2024.md",
         "icon": "/static/blog/29/blog29_icon.webp",
-        "icontitle": "Desktop MediaCow",
+        "icontitle": "RINSE OUT",
         "theme": "gold",
         "cat": "update",
         "startdate": "July 1, 2024",

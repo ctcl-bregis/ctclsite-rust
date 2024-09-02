@@ -2,7 +2,7 @@
 // File: src/lib.rs
 // Purpose: Module import and commonly used functions
 // Created: November 28, 2022
-// Modified: August 2, 2024
+// Modified: September 2, 2024
 
 pub mod routes;
 
@@ -120,6 +120,10 @@ pub struct Page {
     enddate: Option<String>,
     #[serde(default = "true_default")]
     shownavbar: bool,
+    #[serde(default = "true_default")]
+    showfooter: bool,
+    #[serde(default = "true_default")]
+    showhr: bool,
     // Sections only
     sections: Option<IndexMap<String, Section>>,
     // Content and Docs only
@@ -284,7 +288,9 @@ pub fn mkcontext(sitecfg: &CombinedCfg, page: &str, subpage: &Page) -> Result<Co
     ctx.insert("keywords", &subpage.keywords);
     ctx.insert("favicon", &favicon);
     ctx.insert("shownavbar", &subpage.shownavbar);
-    
+    ctx.insert("showfooter", &subpage.showfooter);
+    ctx.insert("showhr", &subpage.showhr);
+
     if subpage.sections.is_some() {
         let mut sections: IndexMap<String, Section> = IndexMap::new();
         for (name, data) in &subpage.sections.clone().unwrap() {

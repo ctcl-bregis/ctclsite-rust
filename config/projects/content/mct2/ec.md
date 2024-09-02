@@ -45,14 +45,13 @@ Bus 1 shall always be online and is used for communicating with various SMBus de
 - SCL - SYS_SMB_SCL
 - SMBus Alert - SYS_SMB_ALT
 
-- TCA8418 Keypad Controller - 0x34
+Ordered by address, increasing:
+
 - Battery pack fuel gauge - TBD
-- LTC4162-LAD battery charge controller - 0x68
 - TPS65988 Type-C PD controller - 0x20
-- MP8859 Buck-Boost converter for TCP0 source - 0x60
-- MP8859 Buck-Boost converter for TCP1 source - 0x66
+- TCA8418 Keypad Controller - 0x34
 - I210AT Ethernet Controller - 0x49
-- BMP384 Digital pressure sensor - 0x76
+- LTC4162-LAD battery charge controller - 0x68
 
 #### Bus 2
 Bus 2 is dedicated to communication between SMEC and the TCP controllers on the Intel N100. 
@@ -72,15 +71,28 @@ Bus 3 is dedicated to communication between the OS and SMEC.
 Label names:
 - SDA - SOM_SMB_SDA
 - SCL - SOM_SMB_SCL
-- SMBus Altert - SOM_SMB_ALT
+- SMBus Alert - SOM_SMB_ALT
 
 Addresses: 
 - LattePanda Mu SoM - TBD
+
+#### Bus 4
+Bus 4 may be used for communication with I2C devices that do not support SMBus.
+
+- MP8859 Buck-Boost converter for TCP0 source - 0x60
+- MP8859 Buck-Boost converter for TCP1 source - 0x66
+- ICM-20948 ICM - 0x69
+- IS31FL3193 LED controller - 0x6B
+- BMP384 Digital pressure sensor - 0x76
 
 ### GPIO
 
 Input: Input to SMEC from device
 Output: Output from SMEC to device
+
+This section is split into subsections due to the amount of connections required
+
+#### Power Management Control
 
 - USB Load Switches
   - EUSB0_EN - Output
@@ -91,9 +103,10 @@ Output: Output from SMEC to device
   - EUSB2_FLT - Input
   - EUSB3_EN - Output
   - EUSB3_FLT - Input
-- USB Power Enable
+- USB_5V Regulator
   - USB_5V_EN - Output
-- VSYS Power Switch
+  - USB_5V_PG - Input
+- VSYS_SOM Power Switch
   - VSYS_SW_IN - Output
   - VSYS_SW_DEN - Output
   - VSYS_SW_IS - Analog Input
@@ -105,22 +118,40 @@ Output: Output from SMEC to device
   - VSYS_LV_PG - Input
 - USB_5V Regulator
   - USB_5V_PG - Input
-- Keypad
-  - KP_RST - Output
-  - KP_SW_RAD - Input
-  - KP_SW_CAM - Input
 - OLED_VDD Regulator
   - OLED_VDD_EN - Output
 - OLED_VOLED Regulator
   - OLED_VOLED_EN - Output
-- System
+
+#### Device Control
+
+- Keypad
+  - KP_RST - Output
+  - KP_SW_RAD - Input
+  - KP_SW_CAM - Input
+- HDMI Companion IC
+  - HDMI_CT_HPD - Output
+  - HDMI_LS_OE - Output
+- Audio CODEC 
+  - HDA_RST - Output
+  - HDA_PB - Output
+  - 
+- System on Module (LattePanda Mu)
   - SLS_S0 - Input
   - SLS_S3 - Input
   - PWRBTN - Output
   - RSTBTN - Output
-- HDMI Companion IC
-  - HDMI_CT_HPD - Output
-  - HDMI_LS_OE - Output
+- Ethernet
+  - LAN_EN - Output
+  - LAN_PG - Output
+- M.2 Key E
+  - M2E_WDISABLE1 - Output
+  - M2E_WDISABLE2 - Output
+- LED Indicator
+  - LED_VBM - Input
+  - LED_EN - Output
+
+
 
 ### Flexible Memory Controller
 The STM32 FMC interface is used by the OLED display on the side of the case. 

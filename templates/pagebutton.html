@@ -1,4 +1,7 @@
-<a class="pagebutton section-{{ entry.theme }}" href="{{ entry.link }}">
+{% if entry.type == "linktitle" %}
+<a class="titlebutton {% if entry.theme %}section-{{ entry.theme }}{% endif %}" href="{{ entry.link }}">{{ entry.title }}</a>
+{% else %}
+<a class="pagebutton {% if entry.theme %}section-{{ entry.theme }}{% endif %}" href="{{ entry.link }}">
     <span class="pagebutton-title">{{ entry.title }}</span>
     <span class="pagebutton-desc">{{ entry.desc|safe }}</span>
     <span class="pagebutton-date">{% if entry.startdate %}{{ entry.startdate }}{% if entry.enddate %} - {{ entry.enddate }}{% endif %}{% endif %}{% if entry.cat and not menugroupbycat %} <span class="category-{{ cats[entry.cat].theme }}">{{ cats[entry.cat].title }}</span>{% endif %}</span>
@@ -6,3 +9,4 @@
     <img class="pagebutton-img" src="{{ entry.icon }}" {% if entry.icontitle %} title="{{ entry.icontitle }}"{% endif %}>
     {% endif %}
 </a>
+{% endif %}

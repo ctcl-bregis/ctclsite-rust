@@ -1,6 +1,5 @@
 /* Common font values */
 .content h1, header h1 {
-    font-family: "play";
     font-size: {{ textdefaultsizes.h1 }};
 }
 
@@ -21,7 +20,7 @@ section h2, .content h2 {
     margin-bottom: 12pt;
 }
 
-.pagebutton-title, .content h3 {
+.pagebutton-title, .titlebutton, .content h3 {
     font-weight: bold;
     font-size: {{ textdefaultsizes.h3 }};
     margin: 0;
@@ -196,7 +195,18 @@ section {
     min-height: 100vh;
 }
 
-/* Section classes for Projects and Blog pages */
+/* Section classes for linklist-style pages */
+.titlebutton {
+    display: block;
+    border-style: solid;
+    border-width: {{ sectionborder }};
+    text-decoration: none;
+    height: fit-content;
+    border-right: none;
+    padding: 0pt;
+    color: #000000;
+    text-align: center;
+}
 
 .pagebutton {
     height: {{ linkheight }};

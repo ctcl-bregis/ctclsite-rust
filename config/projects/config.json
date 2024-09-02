@@ -92,17 +92,20 @@
         "content": "config/projects/content/todokiosk.md"
     },
     "slag": {
-        "type": "content",
+        "type": "docs",
         "link": "/projects/slag/",
         "theme": "99gray", 
         "title": "SLAG", 
-        "desc": "Custom Discord bot", 
-        "icon": "/static/projects/icons/slag_icon_512.webp",
+        "desc": "SLAG and its documentation", 
+        "icon": "", 
         "icontitle": "",
         "cat": "software",
         "startdate": "2024",
         "enddate": "Present",
-        "content": "config/projects/content/slag.md"
+        "content": "config/projects/content/slag/slag.md",
+        "pages": {
+
+        }
     },
     "mediacow": {
         "type": "content",
@@ -124,7 +127,7 @@
         "title": "MediaCow Touch (1)", 
         "desc": "MediaCow Touch \"Nashville\" - Android tablet experiment from 2020", 
         "icon": "/static/projects/icons/mct1_amogus.webp", 
-        "icontitle": "Mind that this was early 2021...",
+        "icontitle": "Mind that this photo was from early 2021...",
         "cat": "hardware",
         "startdate": "2020",
         "content": "config/projects/content/mct1.md"
@@ -474,6 +477,14 @@
         "theme": "gold", 
         "title": "Project Naming", 
         "desc": "How names are chosen for projects.",
+        "cat": "misc"
+    },
+    "ai": {
+        "type": "content",
+        "content": "config/projects/content/ai.md", 
+        "theme": "gold", 
+        "title": "Generative AI Usage Policy", 
+        "desc": "How I make use of AI",
         "cat": "misc"
     }
 }

@@ -6,7 +6,7 @@ On August 1, 2024, the current design for the button board PCB was completed whi
 
 Unlike example designs from TI with this IC, I added 1N4148 diodes on each button as one would commonly do when designing a mechanical computer keyboard. The diodes are there to prevent ghosting, which is mentioned in the datasheet for the TCA8418, where pressing multiple keys in a certain way would cause the IC to detect another key as pressed when it is not (the datasheet describes it better).
 
-It is most likely that under normal operating conditions, ghosting would not be a concern but it is there to prevent the possible circumstance that a certain key combination could have the keypad controller detect "Reset" or "Power" as being pressed when it is not and have the device shut off unexpectedly. 
+It is most likely that under normal operating conditions, ghosting would not be a concern but the diodes to prevent ghosting are there to prevent the possible circumstance that a certain key combination could have the keypad controller detect "Reset" or "Power" as being pressed when it is not and have the device shut off unexpectedly. 
 
 ### Mounting 
 Currently, the PCB is designed with three mounting holes for use with M2-sized bolts. There is no fourth bolt, on the top left (when facing the button panel from outside of the case, right side up) as having the mounting post extend for both bolts on the left side would have it be in the way of the FPC connector.
