@@ -44,6 +44,11 @@ VSYS_SOM is VSYS but switched using a load switch IC, specifically an Infineon B
 
 This supply is unique in that it uses an analog signal for reporting data to the embedded controller.
 
+##### SOM_IO_3V3
+SOM_IO_3V3 serves as a reference voltage for various interfaces including SMBus/SMLink, QSPI. It is also the suppply voltage for the external BIOS SPI flash memory IC.
+
+The external SPI flash IC for the BIOS is the only SPI flash IC that does not have a Schottky diode on its power input as it is socketed and is intended to be flashed off board.
+
 #### M2_3V3
 M2_3V3 is a 3.3v power supply shared between the M.2 Key E and M.2 Key M slots.
 
@@ -69,7 +74,7 @@ OLED_VOLED is a 12v power supply for the OLED display.
 This is the supply voltage for the keypad board that feeds directly to the FPC connector.
 
 #### SMEC_PREG
-This is the output of the SY21019 buck converter that is stepped down further by LDOs.
+This is the output of the SY21019 buck converter that is to be stepped down further by LDOs. The SY21019, in this case, is used as a pre-regulator.
 
 ##### SMEC_VDD
 This is the main supply voltage for the embedded controller, SMEC. The power supply is also used by the two external oscillators, an SiT1602B and SiT1533.

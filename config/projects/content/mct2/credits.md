@@ -32,6 +32,9 @@ A self-hosted MediaWiki instance is used for personal documentation. It's role i
 #### STM32CubeMX
 STM32CubeMX was used to select the microcontroller used as the embedded controller (SMEC) and plan its pinout.
 
+#### CircuitJS
+[CircuitJS](https://falstad.com/circuit/) has been used to test ideas such as using Schottky diodes on the power inputs of SPI flash memory and connecting the IS pin of the Infineon BTS7006 to a microcontroller.
+
 ### Software Development
 This software was used to develop software for the project.
 
@@ -163,18 +166,25 @@ Organizations that provided guides, datasheets and other technical support docum
 - YAGEO
 
 ## Inspiration
-MediaCow Touch 2's design and hardware had some inspiration from the following products:
+MediaCow Touch 2's design and hardware had inspiration from the following products:
 
 - Ainol NOVO7 Paladin
+- Apple iPhone 6S
+- Apple iPhone XR 
 - ASUS Zenfone 9 AI2202
+- Banana Pi BPI-F2P
 - HP ZBook Studio G3 15
 - LattePanda Mu Full Carrier
 - LattePanda Mu Lite Carrier
+- Lenovo ThinkPad T430s
+- Lenovo ThinkPad T450s
 - Matterport Pro2 Camera
 - Microsoft Surface series
 - Microsoft Zune series
 - Nintendo Switch (2017)
 - Positivo BGH Y210
 - Samsung Chromebook XE500C13
+- Samsung Galaxy S7 SM-G930F
 - Samsung Galaxy Tab3 10.1 P5210
+- Supermicro H13SAE-MF
 - Valve Steam Deck
