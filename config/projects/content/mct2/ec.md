@@ -28,11 +28,6 @@ SMEC controls the two buck-boost regulators for USB source power. The TPS65988 w
 ## IO Usage 
 This is the IO used on SMEC.
 
-### USB
-A USB link between SMEC and the module is provided. Implementing the USB interface is trivial as it requires just two pins on SMEC and one of the many USB 2.0 interfaces on the module. The maximum bus speed is 12Mbit/s.
-
-A possible use of the USB bus is to have SMEC act as an HID keyboard for sending keypresses with the programmable buttons on the keypad. Another use of the interface is for debugging and possibly flashing firmware.
-
 ### I2C
 Three I2C interfaces are used
 
@@ -137,10 +132,12 @@ This section is split into subsections due to the amount of connections required
   - HDA_PB - Output
   - 
 - System on Module (LattePanda Mu)
-  - SLS_S0 - Input
-  - SLS_S3 - Input
+  - PROCHOT - Input
   - PWRBTN - Output
   - RSTBTN - Output
+  - SLS_S0 - Input
+  - SLS_S3 - Input
+  - USB_OC (SOM_USB_OC) - Output
 - Ethernet
   - LAN_EN - Output
   - LAN_PG - Output
@@ -151,10 +148,14 @@ This section is split into subsections due to the amount of connections required
   - LED_VBM - Input
   - LED_EN - Output
 
-
-
 ### Flexible Memory Controller
 The STM32 FMC interface is used by the OLED display on the side of the case. 
+
+### UART
+One or more UART serial interfaces of SMEC may be used. 
+
+#### SIO_UART_RX/TX
+SIO_UART is the serial connection between SMEC and the LattePanda Mu's on-board Super IO controller.
 
 ## Power
 *See [Battery and Power Management](../power/) page for details on system power management*

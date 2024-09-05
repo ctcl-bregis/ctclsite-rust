@@ -56,20 +56,3 @@ This is the process in how I plan to design the device:
 4. Completion
 
 It is cruical that I complete steps 1 through 2.6 by September 1, 2024, preferably by August 26, 2024.
-
-#### Schematic Process
-I realized that I must have an order of what I should implement certain parts of the schematic.
-
-
-- Audio
-- M.2 E slot
-- M.2 M slot
-- USB Type-A ports
-- USB Power Delivery
-- Ethernet
-- EC
-
-Done: 
-- Battery Charger
-- VSB-VSYS load switch
-- 

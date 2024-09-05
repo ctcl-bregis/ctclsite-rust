@@ -8,4 +8,4 @@ With recent updates with my website, I have generally removed code related to RA
 
 If there is any interest in bringing back RAMList in a guide-like format, I may start working on it again.
 
-See [Contact](../../) for ways to contact me.
+See [Contact](/) for ways to contact me.
