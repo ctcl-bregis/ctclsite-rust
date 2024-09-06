@@ -3,7 +3,7 @@ name = "ctclsite"
 version = "1.9.0"
 license = "MIT"
 edition = "2021"
-build = "src/build.rs"
+#build = "src/build.rs"
 
 [build-dependencies]
 chrono = "0.4.35"
