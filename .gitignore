@@ -25,11 +25,6 @@ log/
 
 # Built files
 release.tar.gz
-static/*.js
-static/*.css
-static/styling/
-static/styling/*.css
-static/favicons/default*
-
+static/
 config
 config/
