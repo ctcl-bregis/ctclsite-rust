@@ -2,12 +2,12 @@
 // File: src/main.rs
 // Purpose: Main code
 // Created: November 28, 2022
-// Modified: September 19, 2024
+// Modified: September 20, 2024
 
 use actix_files as fs;
 use actix_web::web::Data;
 use actix_web::body::MessageBody;
-use actix_web::{http, web, App, Error, HttpResponse, HttpServer, Responder};
+use actix_web::{http, web, App, Error, HttpRequest, HttpResponse, HttpServer, Responder};
 use actix_web::dev::{ServiceRequest, ServiceResponse};
 use actix_web_lab::middleware::{from_fn, Next};
 use ctclsite::{loadconfig, read_file, PartialSiteConfig, SiteConfig};
@@ -75,7 +75,12 @@ pub async fn incominglog(logdata: web::Json<ClientLogEntry>, memclient: web::Dat
 
 }
 
-pub async fn routepage(page: web::Path<String>, tmpl: web::Data<tera::Tera>, sitecfg: web::Data<SiteConfig>, memclient: web::Data<Option<Client>>) -> Result<impl Responder, Error> {
+pub fn log2db(req: HttpRequest, memclient: &Client) {
+    dbg!(req.headers());
+    
+}
+
+pub async fn routepage(req: HttpRequest, page: web::Path<String>, tmpl: web::Data<tera::Tera>, sitecfg: web::Data<SiteConfig>, memclient: web::Data<Option<Client>>) -> Result<impl Responder, Error> {
     let mut ctx = Context::new();
 
     let pagecfg = match page.as_str() {
@@ -93,6 +98,8 @@ pub async fn routepage(page: web::Path<String>, tmpl: web::Data<tera::Tera>, sit
 
             ctx.insert("uuid", &uuid);
             debug!("UUID inserted into memcache: {uuid}");
+
+            log2db(req, memclient.get_ref().as_ref().unwrap());
         },
         None => ()
     };
