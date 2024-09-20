@@ -3,7 +3,6 @@ name = "ctclsite"
 version = "2.1.0"
 license = "MIT"
 edition = "2021"
-#build = "src/build.rs"
 
 [dependencies]
 actix-files = "0.6.5"
@@ -21,12 +20,15 @@ json-objects-to-csv = "0.1.3"
 lazy_static = "1.4.0"
 log = "0.4.22"
 memcache = "0.17.2"
-minifier = "0.3.0"
+minifier = "0.3.1"
+minify-html = "0.15.0"
 serde = { version = "1.0.197", features = ["derive"] }
 serde_json = { version = "1.0.114", features = ["preserve_order"] }
 serde-loader = { version = "0.2.0", features = ["json"] }
 sha256 = "1.5.0"
 simple-logging = "2.0.2"
 syn = "2.0.77"
-tera = { version = "1.19.1", features = ["builtins"] }
+tera = { version = "1.20.0", features = ["builtins"] }
+uuid = { version = "1.10.0", features = ["v4", "fast-rng", "macro-diagnostics"]}
 walkdir = "2.5"
+sqlite = "0.36.1"
