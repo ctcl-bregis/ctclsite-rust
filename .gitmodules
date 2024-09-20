@@ -1,0 +1,3 @@
+[submodule "ctclsite-config"]
+	path = ctclsite-config
+	url = git@github.com:ctcl-bregis/ctclsite-config.git
