@@ -2,7 +2,9 @@
 // File: src/main.rs
 // Purpose: Main code
 // Created: November 28, 2022
-// Modified: September 20, 2024
+// Modified: September 24, 2024
+
+//use std::collections::HashMap;
 
 use actix_files as fs;
 use actix_web::web::Data;
@@ -10,7 +12,8 @@ use actix_web::body::MessageBody;
 use actix_web::{http, web, App, Error, HttpRequest, HttpResponse, HttpServer, Responder};
 use actix_web::dev::{ServiceRequest, ServiceResponse};
 use actix_web_lab::middleware::{from_fn, Next};
-use ctclsite::{loadconfig, read_file, PartialSiteConfig, SiteConfig};
+use ctclsite::{loadconfig, logger::logaccess, loggersetup, read_file, PartialSiteConfig, SiteConfig};
+use indexmap::IndexMap;
 use memcache::Client;
 use minify_html::{minify, Cfg};
 use tera::{Context, Tera};
@@ -18,8 +21,7 @@ use tera::{Context, Tera};
 use log::{debug, info, warn, LevelFilter, SetLoggerError};
 use log::{Record, Level, Metadata};
 
-use ctclsite::*;
-use uuid::Uuid;
+//use uuid::Uuid;
 
 struct SimpleLogger;
 
@@ -70,15 +72,10 @@ async fn redir(req: ServiceRequest, next: Next<actix_web::body::BoxBody>) -> Res
     next.call(req).await
 }
 
-pub async fn incominglog(logdata: web::Json<ClientLogEntry>, memclient: web::Data<Option<Client>>) {
+//pub async fn incominglog(logdata: web::Json<ClientLogEntry>, memclient: web::Data<Option<Client>>) {
 
+//}
 
-}
-
-pub fn log2db(req: HttpRequest, memclient: &Client) {
-    dbg!(req.headers());
-    
-}
 
 pub async fn routepage(req: HttpRequest, page: web::Path<String>, tmpl: web::Data<tera::Tera>, sitecfg: web::Data<SiteConfig>, memclient: web::Data<Option<Client>>) -> Result<impl Responder, Error> {
     let mut ctx = Context::new();
@@ -93,13 +90,7 @@ pub async fn routepage(req: HttpRequest, page: web::Path<String>, tmpl: web::Dat
 
     match memclient.get_ref() {
         Some(m) => {
-            let uuid = Uuid::new_v4().to_string();
-            let _ = m.set(&uuid, false, 120);
-
-            ctx.insert("uuid", &uuid);
-            debug!("UUID inserted into memcache: {uuid}");
-
-            log2db(req, memclient.get_ref().as_ref().unwrap());
+            logaccess(&sitecfg, req, m)?;
         },
         None => ()
     };
@@ -141,6 +132,16 @@ pub async fn routepage(req: HttpRequest, page: web::Path<String>, tmpl: web::Dat
         None => ()
     }
 
+    // dir name, absolute path
+    let mut pathmap: IndexMap<String, String> = IndexMap::new();
+    let mut absolute = String::from("/");
+    for splitpath in page.split("/") {
+        if !splitpath.is_empty() {
+            absolute.push_str(&format!("{splitpath}/"));
+            pathmap.insert(splitpath.to_owned(), absolute.clone());
+        }
+    }
+    ctx.insert("path", &pathmap);
 
     let html = match tmpl.render("page.html", &ctx) {
         Ok(html) => html,
@@ -203,8 +204,12 @@ async fn main() -> std::io::Result<()> {
         info!("Themes loaded: {tcount}");
         info!("Fonts loaded: {fcount}");
 
-        let memclient = match sitecfg.enablememcache {
-            true => match Client::connect(&*sitecfg.memcache) {
+        if sitecfg.log.enable {
+            let _ = loggersetup(&sitecfg);
+        }
+
+        let memclient = match sitecfg.log.enable {
+            true => match Client::connect(&*sitecfg.log.memcache) {
                 Ok(m) => Some(m),
                 Err(e) => {
                     warn!("Error connecting to memcache: {e}");

@@ -20,11 +20,17 @@ Cargo.lock
 *.~lock*
 
 # Make sure website access logs are not uploaded
-logs/
-log/
+/logs/
+/log/
+*.db
+*.sqlite
+*.sqlite3
 
 # Built files
 release.tar.gz
 static/
 config
 config/
+
+# config
+ctclsite-config/
