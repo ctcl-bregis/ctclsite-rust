@@ -1,8 +1,34 @@
-# Changelog
-On February 18, 2024, a rewrite continuing to use Actix was started and the first release was on March 3, 2024.
 
-## 1.9.0 - [UNRELEASED]
-Still in progress...
+## 2.1.0 - [UNRELEASED]
+
+Changes:
+- Path to config.json is no longer hard-coded. The configuration path is now defined in config.txt
+- Code readability improvements
+- More descriptive error messages
+
+Additions:
+- Ability to set debug log level
+- robots.txt
+- Customizable URL parameter feature
+- "TitleText" Linklist entry type that displays text in a h3 tag with no link
+
+To-Do:
+- Finish access log feature
+- Fix Discord embed... still
+- URL query string options
+- RSS feed for blog posts
+
+## 2.1.0-pr1 - September 24, 2024
+This is not the actual release of v2. I uploaded the new version of the website, with logging disabled, in order to get new blog posts out with the new backend.
+
+Changes from v1.9.0:
+- No more hardcoded pages, styling, templates, static files. 
+  - This allows for others to make use of the backend code for their own websites as it is now fully customizeable
+  - Website-specific files were moved to a different repository mainly for licensing reasons
+  - The backend would no longer need to be compiled every time there is an update to any of the content
+- Semi-official switch to Lysine, which at this point is just Tera used for CSS
+
+## 1.9.0
 
 Changes:
 - Rewrite of configuration file loading

@@ -2,7 +2,7 @@
 // File: src/lib.rs
 // Purpose: Page-related types and functions
 // Created: September 21, 2024
-// Modified: September 23, 2024
+// Modified: September 28, 2024
 
 use std::collections::HashMap;
 use serde::{Serialize, Deserialize};
@@ -26,7 +26,6 @@ pub struct LinkFull {
     pub page: String
 }
 
-
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct LinkTitleOnlyCustom {
     pub title: String,
@@ -39,7 +38,11 @@ pub struct LinkTitleOnly {
     pub page: String
 }
 
-// To-Do: Have the ability to specifiy if a link uses data (theme, description, etc.) from a page configuration
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub struct LinkTitleText {
+    pub text: String
+}
+
 #[derive(Serialize, Deserialize, Debug, Clone)]
 #[serde(tag = "type")]
 pub enum LinkType {
@@ -50,7 +53,9 @@ pub enum LinkType {
     #[serde(rename(serialize = "titleonly", deserialize = "titleonly"))]
     TitleOnly(LinkTitleOnly),
     #[serde(rename(serialize = "titleonlycustom", deserialize = "titleonlycustom"))]
-    TitleOnlyCustom(LinkTitleOnlyCustom)
+    TitleOnlyCustom(LinkTitleOnlyCustom),
+    #[serde(rename(serialize = "titletext", deserialize = "titletext"))]
+    TitleText(LinkTitleText)
 }
 
 // Weird name, I know
@@ -144,7 +149,7 @@ pub struct Page {
 }
 
 // path arg is used to append the path to the content file
-pub fn loadcontent(pagemap: &HashMap<String, Page>, page: &Page, path: &str, tmpl: &tera::Tera) -> Result<IndexMap<String, Content>, Error> {
+pub fn loadcontent(pagemap: &HashMap<String, Page>, page: &Page, path: &str, tmpl: &lysine::Lysine) -> Result<IndexMap<String, Content>, Error> {
     let mut pagecontent: IndexMap<String, Content> = IndexMap::new();
 
     for (id, content) in page.content.clone().into_iter() {
@@ -168,7 +173,7 @@ pub fn loadcontent(pagemap: &HashMap<String, Page>, page: &Page, path: &str, tmp
             Content::Content(c) => {
                 let mut ctx = Context::new();
                 // &path should already end with "/" so there should not be another "/" between the path and file name
-                let content = match mdpath2html(&format!("{}{}", &path, &c.content), page.headerids) {
+                let content = match mdpath2html(&format!("{}{}", &path, &c.content)) {
                     Ok(c) => c,
                     Err(e) => return Err(Error::new(ErrorKind::Other, format!("Error when rendering page {path}: {e}")))
                 };
@@ -196,7 +201,7 @@ pub fn loadcontent(pagemap: &HashMap<String, Page>, page: &Page, path: &str, tmp
 pub fn loadpages(sitecfg: &SiteConfig) -> Result<HashMap<String, Page>, Error> {
     let mut pagemap: HashMap<String, Page> = HashMap::new();
 
-    let tmpl = Tera::new(&format!("{}/**/*.html", sitecfg.templatedir)).unwrap();
+    let tmpl = Lysine::new(&format!("{}/**/*.html", sitecfg.templatedir)).unwrap();
     
     for entry in WalkDir::new(&sitecfg.pagedir).into_iter().filter_map(|e| e.ok()) {
         if entry.path().is_dir() {

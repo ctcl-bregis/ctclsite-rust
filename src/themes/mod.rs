@@ -150,7 +150,7 @@ pub fn loadthemes(sitecfg: &SiteConfig) -> Result<HashMap<String, Theme>, Error>
     for (themename, theme) in themes.iter() {
 
         // For some reason, Tera does not register anything with the .lisc extension (or any unrecognized extension?) when using a glob so files must be added "manually"
-        let mut tmpl = Tera::default();
+        let mut tmpl = Lysine::default();
 
         let searchpath = if theme.css.is_empty() || theme.css == "defaults" {
             format!("{themeroot}_defaults/")

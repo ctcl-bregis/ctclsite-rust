@@ -2,21 +2,24 @@
 // File: src/main.rs
 // Purpose: Main code
 // Created: November 28, 2022
-// Modified: September 24, 2024
+// Modified: September 29, 2024
 
 //use std::collections::HashMap;
 
+use std::thread::available_parallelism;
+
 use actix_files as fs;
+use actix_web::http::StatusCode;
 use actix_web::web::Data;
 use actix_web::body::MessageBody;
-use actix_web::{http, web, App, Error, HttpRequest, HttpResponse, HttpServer, Responder};
+use actix_web::{http, web, App, Error, HttpRequest, HttpResponse, HttpResponseBuilder, HttpServer, Responder};
 use actix_web::dev::{ServiceRequest, ServiceResponse};
 use actix_web_lab::middleware::{from_fn, Next};
 use ctclsite::{loadconfig, logger::logaccess, loggersetup, read_file, PartialSiteConfig, SiteConfig};
 use indexmap::IndexMap;
 use memcache::Client;
 use minify_html::{minify, Cfg};
-use tera::{Context, Tera};
+use lysine::{Context, Lysine};
 
 use log::{debug, info, warn, LevelFilter, SetLoggerError};
 use log::{Record, Level, Metadata};
@@ -46,11 +49,19 @@ pub fn init() -> Result<(), SetLoggerError> {
         .map(|()| log::set_max_level(LevelFilter::Debug))
 }
 
-async fn redir(req: ServiceRequest, next: Next<actix_web::body::BoxBody>) -> Result<ServiceResponse<impl MessageBody>, Error> {
+async fn middleware(req: ServiceRequest, next: Next<actix_web::body::BoxBody>) -> Result<ServiceResponse<impl MessageBody>, Error> {
     let sitecfg = req.app_data::<Data<SiteConfig>>().unwrap();
     let requri = req.uri().clone().to_string();
 
-    if !requri.ends_with('/') && requri != "/robots.txt" && !requri.starts_with("/static/") {
+    if requri == "/robots.txt" {
+        return Ok(ServiceResponse::new(
+            req.request().clone(),
+            HttpResponseBuilder::new(StatusCode::from_u16(200).unwrap()).body(sitecfg.robots.clone()),
+        ));
+    }
+
+    // No need to check if the URI is "/robots.txt" as such is tested above
+    if !requri.ends_with('/') && !requri.starts_with("/static/") {
         let url = format!("{}/", requri);
         return Ok(req.into_response(
             HttpResponse::MovedPermanently()
@@ -77,7 +88,7 @@ async fn redir(req: ServiceRequest, next: Next<actix_web::body::BoxBody>) -> Res
 //}
 
 
-pub async fn routepage(req: HttpRequest, page: web::Path<String>, tmpl: web::Data<tera::Tera>, sitecfg: web::Data<SiteConfig>, memclient: web::Data<Option<Client>>) -> Result<impl Responder, Error> {
+pub async fn routepage(req: HttpRequest, page: web::Path<String>, tmpl: web::Data<lysine::Lysine>, sitecfg: web::Data<SiteConfig>, memclient: web::Data<Option<Client>>) -> Result<impl Responder, Error> {
     let mut ctx = Context::new();
 
     let pagecfg = match page.as_str() {
@@ -184,10 +195,22 @@ async fn main() -> std::io::Result<()> {
     let partialsiteconfig: PartialSiteConfig = serde_json::from_str(&read_file("ctclsite-config/config.json").unwrap()).unwrap();
     let bindip = partialsiteconfig.bindip;
     let bindport = partialsiteconfig.bindport;
-    let cpus = partialsiteconfig.cpus;
+
+    // Actix-Web already uses available_parallelism() to determine CPU thread count so using this function should be the same as using the default CPU count of Actix-Web
+    let syscpus = available_parallelism().unwrap().get();
+
+    // Let 0 default to system CPU count
+    let cpus = if partialsiteconfig.cpus == 0 {
+        syscpus
+    } else if partialsiteconfig.cpus > syscpus {
+        warn!("CPU count greater than available system CPU count. Using system CPU count.");
+        syscpus
+    } else {
+        partialsiteconfig.cpus
+    };
 
     HttpServer::new(|| {
-        let tera = Tera::new("ctclsite-config/templates/**/*.html").unwrap();
+        let lysine = Lysine::new("ctclsite-config/templates/**/*.html").unwrap();
         let sitecfg: SiteConfig = loadconfig().unwrap();
 
         debug!("Pages Loaded:");
@@ -221,10 +244,10 @@ async fn main() -> std::io::Result<()> {
 
         App::new()
             .service(fs::Files::new("/static", "static/"))
-            .app_data(web::Data::new(tera))
+            .app_data(web::Data::new(lysine))
             .app_data(web::Data::new(sitecfg))
             .app_data(web::Data::new(memclient))
-            .wrap(from_fn(redir))
+            .wrap(from_fn(middleware))
             .service(web::resource("/{page:.*}").route(web::get().to(routepage)))
     })
     .bind((bindip, bindport))?

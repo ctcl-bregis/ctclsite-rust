@@ -2,22 +2,23 @@
 // File: src/lib.rs
 // Purpose: Module import and commonly used functions
 // Created: November 28, 2022
-// Modified: September 20, 2024
+// Modified: September 30, 2024
 
-//use minifier::js;
+use minifier::js;
 //use minify_html::{minify, Cfg};
 use comrak::{markdown_to_html, Options};
 use image::{Rgb, RgbImage};
 use indexmap::IndexMap;
-use log::{error, info, warn};
+use log::{debug, error, info, warn};
 use serde_json::value::Value;
 use serde::{Serialize, Deserialize};
 use std::collections::HashMap;
-use std::fs::{self, File};
+use std::ffi::OsStr;
+use std::fs::{self, File, DirEntry};
 use std::io::{Error, ErrorKind, Read, Write};
 use std::path::Path;
 use std::result::Result;
-use tera::{Context, Tera};
+use lysine::{Context, Lysine};
 use walkdir::WalkDir;
 
 pub mod themes;
@@ -119,7 +120,7 @@ pub struct SiteConfig {
     pub bindport: u16,
     // Website domain, for example: "ctcl.lgbt". Currently used for the "link" meta tag.
     pub sitedomain: String,
-    // Directory to scan for font directories
+    // Directory to scan for font directories;
     pub fontdir: String,
     // Directory to scan for JavaScript files
     pub jsdir: String,
@@ -155,7 +156,11 @@ pub struct SiteConfig {
     #[serde(skip_deserializing, default = "emptythemehashmap")]
     pub themes: HashMap<String, Theme>,
     #[serde(skip_deserializing, default = "emptyfonthashmap")]
-    pub fonts: HashMap<String, FontFamily>
+    pub fonts: HashMap<String, FontFamily>,
+    // Contents of robots.txt 
+    #[serde(skip, default = "emptystring")]
+    pub robots: String
+
 }
 
 // Partial config that only has fields for things required to start the webserver to avoid loading all of the pages twice
@@ -189,21 +194,53 @@ pub fn mkfavicons(themes: &HashMap<String, Theme>) -> Result<(), Error> {
 }
 
 pub fn buildjs(sitecfg: &SiteConfig) -> Result<(), Error> {
-    mkdir("static/js/")?;
+    match mkdir("static/js/") {
+        Ok(_) => (),
+        Err(e) =>  return Err(Error::new(ErrorKind::Other, format!("buildjs: Error creating directory \"static/js/\" {e}")))
+    }
 
-    match fs::read_dir(&sitecfg.jsdir) {
-        Ok(d) => {
-            for entry in d {
-                match entry {
-                    Ok(rd) => match fs::copy(rd.path(), format!("static/{}", rd.path().to_string_lossy())) {
-                        Ok(_) => (),
-                        Err(ce) => return Err(Error::new(ErrorKind::Other, format!("{ce}")))
-                    }
-                    Err(re) => return Err(Error::new(ErrorKind::Other, format!("{re}")))
+    match fs::exists(&sitecfg.jsdir) {
+        Ok(_) => (),
+        Err(e) => match e.kind() {
+            ErrorKind::NotFound => return Err(Error::new(ErrorKind::NotFound, format!("buildjs: Directory {} not found", &sitecfg.jsdir))),
+            _ => return Err(Error::new(ErrorKind::Other, format!("buildjs: {e}")))
+        }
+    }
+
+    let iter = match fs::read_dir(&sitecfg.jsdir) {
+        Ok(d) => d,
+        Err(e) => return Err(Error::new(ErrorKind::Other, format!("buildjs: error reading {}: {e}", &sitecfg.jsdir)))
+    };
+
+    let mut dirs: Vec<DirEntry> = Vec::new();
+    for dir in iter {
+        match dir {
+            Ok(rd) => {
+                if rd.path().extension().unwrap_or(OsStr::new("")) == "js" {
+                    dirs.push(rd);
+                } else {
+                    // Possibly misleading since files without a ".js" extension could still be JavaScript
+                    warn!("buildjs: \"{}\" is not a JavaScript file. Skipping.", rd.path().to_string_lossy())
                 }
-            }
-        },
-        Err(e) => return Err(Error::new(ErrorKind::Other, format!("{e}")))
+            },
+            Err(_) => continue,
+        }
+    }
+
+    for dir in dirs {
+        let dirstring = dir.path().to_string_lossy().to_string();
+        let source = match read_file(&dirstring) {
+            Ok(s) => s,
+            Err(e) => return Err(Error::new(ErrorKind::Other, format!("buildjs: error reading file {dirstring}: {e}")))
+        };
+        let minified = js::minify(&source);
+
+        let targetpath = format!("static/js/{}", dir.path().file_name().unwrap().to_string_lossy());
+
+        match write_file(&targetpath, &minified.to_string()) {
+            Ok(_) => debug!("Minified JavaScript file written to {targetpath}"),
+            Err(e) => return Err(Error::new(ErrorKind::Other, format!("buildjs: error writing file {targetpath}: {e}")))
+        };
     }
 
     Ok(())
@@ -289,24 +326,24 @@ pub fn read_file<T: AsRef<Path>>(path: T) -> Result<String, Error> {
 }
 
 pub fn write_file<T: AsRef<Path>>(path: T, data: &str) -> Result<(), Error> {
-    let mut f = std::fs::OpenOptions::new()
-        .write(true)
-        .truncate(true)
-        .create(true)
-        .open(path)?;
+    let mut f = match std::fs::OpenOptions::new().write(true).truncate(true).create(true).open(path) {
+        Ok(f) => f,
+        Err(e) => match e.kind() {
+            ErrorKind::NotFound => return Err(Error::new(ErrorKind::Other, format!("write_file: error writing file: {e}"))),
+            _ => return Err(Error::new(ErrorKind::Other, format!("write_file: error writing file: {e}")))
+        }
+    };
     f.write_all(data.as_bytes())?;
     f.flush()?;
 
     Ok(())
 }
 
-pub fn mdpath2html(path: &str, headerids: bool) -> Result<String, Error> {
+pub fn mdpath2html(path: &str) -> Result<String, Error> {
     let mut comrak_options = Options::default();
     comrak_options.render.unsafe_ = true;
     comrak_options.extension.table = true;
-    if headerids {
-        comrak_options.extension.header_ids = Some("".to_string());
-    }
+    comrak_options.extension.header_ids = None;
     let markdown = match read_file(path) {
         Ok(c) => c,
         Err(e) => return Err(Error::new(ErrorKind::Other, format!("Failed to render markdown file {path}: {e}")))
@@ -317,21 +354,29 @@ pub fn mdpath2html(path: &str, headerids: bool) -> Result<String, Error> {
 }
 
 pub fn loadconfig() -> Result<SiteConfig, Error> {
-    let mut siteconfig: SiteConfig = serde_json::from_str(&read_file("ctclsite-config/config.json").unwrap()).unwrap();
+    let sitecfgdir: &str = &read_file("config.txt").expect("Failed to read from config.txt");
+    let mut siteconfig: SiteConfig = serde_json::from_str(&read_file(format!("{}config.json", sitecfgdir)).expect("Failed to read configuration file")).unwrap();
 
     mkdir("static/")?;
 
+    match buildjs(&siteconfig) {
+        Ok(t) => t,
+        Err(e) => return Err(Error::new(ErrorKind::Other, format!("loadconfig - buildjs: {e}")))
+    }
+
+    // Fonts must be loaded before themes are loaded
     siteconfig.fonts = match loadfonts(&siteconfig) {
         Ok(t) => t,
-        Err(e) => return Err(e)
+        Err(e) => return Err(Error::new(ErrorKind::Other, format!("loadconfig - loadfonts: {e}")))
     }; 
 
     // Themes must be loaded before pages are loaded
     siteconfig.themes = match loadthemes(&siteconfig) {
         Ok(t) => t,
-        Err(e) => return Err(e)
+        Err(e) => return Err(Error::new(ErrorKind::Other, format!("loadconfig - loadthemes: {e}")))
     };
 
+    // Themes must be loaded before favicons are generated
     mkfavicons(&siteconfig.themes)?;
     match collectstatic(&siteconfig) {
         Ok(_) => (),
@@ -349,6 +394,11 @@ pub fn loadconfig() -> Result<SiteConfig, Error> {
         error!("No themes found");
         return Err(Error::new(ErrorKind::NotFound, "No themes found"));
     }
+    
+    siteconfig.robots = match read_file(format!("{}robots.txt", sitecfgdir)) {
+        Ok(r) => r,
+        Err(e) => return Err(e)
+    };
 
     Ok(siteconfig)
 }

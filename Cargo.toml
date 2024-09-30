@@ -31,6 +31,6 @@ simple-logging = "2.0.2"
 sqlite = "0.36.1"
 syn = "2.0.77"
 tar = "0.4.41"
-tera = { version = "1.20.0", features = ["builtins"] }
+lysine = { git = "https://github.com/ctcl-bregis/lysine.git" }
 uuid = { version = "1.10.0", features = ["v4", "fast-rng", "macro-diagnostics"]}
 walkdir = "2.5"
