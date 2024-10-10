@@ -1,8 +1,8 @@
-// ctclsite-rust - CTCL 2020-2024
+// ctclsite - CTCL 2019-2024
 // File: src/lib.rs
-// Purpose: Module import and commonly used functions
+// Purpose: Commonly used functions and types
 // Created: November 28, 2022
-// Modified: September 30, 2024
+// Modified: October 9, 2024
 
 use minifier::js;
 //use minify_html::{minify, Cfg};
@@ -27,7 +27,7 @@ pub mod page;
 
 pub use themes::*;
 pub use logger::*;
-pub use page::*;
+pub use page::loader::*;
 
 // To-Do: This file is long, consider splitting some code into modules
 
@@ -112,6 +112,7 @@ pub enum ExtensionFileType {
     Video
 }
 
+
 #[derive(Deserialize, Serialize)]
 pub struct SiteConfig {
     // IP to bind to, usually either "0.0.0.0" or "127.0.0.1"
@@ -140,8 +141,10 @@ pub struct SiteConfig {
     pub redirects: HashMap<String, String>,
     // Links to make available in the navbar
     pub navbar: Vec<NavbarLink>,
-    // Log configuration data 
-    pub log: LogConfig,
+    // Maximum level to log to console
+    pub debugloglevel: String,
+    // Access log configuration data 
+    pub logger: LogConfig,
     // Exists solely for debugging purposes. It should be set to "true" in production.
     pub minimizehtml: bool,
     // Definition of file types by file extension, used by collectstatic to determine what files to copy and may be used for the upcoming file viewer feature
@@ -168,7 +171,9 @@ pub struct SiteConfig {
 pub struct PartialSiteConfig {
     pub bindip: String,
     pub bindport: u16,
-    pub cpus: usize
+    pub cpus: usize,
+    // Maximum level to log to console
+    pub debugloglevel: String
 }
 
 pub fn mkfavicons(themes: &HashMap<String, Theme>) -> Result<(), Error> {

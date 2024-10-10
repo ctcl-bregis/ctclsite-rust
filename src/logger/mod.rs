@@ -1,8 +1,8 @@
-// ctclsite-rust - CTCL 2020-2024
-// File: src/lib.rs
+// ctclsite - CTCL 2019-2024
+// File: src/logger/mod.rs
 // Purpose: Log-related types and functions
 // Created: September 21, 2024
-// Modified: September 24, 2024
+// Modified: October 9, 2024
 
 use std::{collections::HashMap, fs::{remove_file, rename, File}, io::Error};
 use actix_web::HttpRequest;
@@ -69,7 +69,7 @@ pub fn logaccess(sitecfg: &SiteConfig, req: HttpRequest, memclient: &Client) -> 
 
     dbg!(req.headers());
 
-    for (key, header) in &sitecfg.log.serverlog {
+    for (key, header) in &sitecfg.logger.serverlog {
         match header {
             ServerLogType::IPAddress => match req.peer_addr() {
                 Some(ip) => {
@@ -138,10 +138,10 @@ pub fn loggersetup(sitecfg: &SiteConfig) -> Result<(), Error> {
     let mut schema = String::new();
 
     schema.push_str("CREATE TABLE IF NOT EXISTS log (\n");
-    for field in sitecfg.log.serverlog.keys() {
+    for field in sitecfg.logger.serverlog.keys() {
         schema.push_str(&format!("    {field} TEXT,\n"));
     };
-    for field in sitecfg.log.clientlog.keys() {
+    for field in sitecfg.logger.clientlog.keys() {
         schema.push_str(&format!("    {field} TEXT,\n"));
     };
     schema = schema.strip_suffix(",\n").unwrap().to_string();

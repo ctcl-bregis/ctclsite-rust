@@ -11,6 +11,7 @@ Additions:
 - robots.txt
 - Customizable URL parameter feature
 - "TitleText" Linklist entry type that displays text in a h3 tag with no link
+- Ability to skip page directories with a ".placeholder" file
 
 To-Do:
 - Finish access log feature

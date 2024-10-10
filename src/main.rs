@@ -1,8 +1,8 @@
-// ctclsite-rust - CTCL 2020-2024
+// ctclsite - CTCL 2019-2024
 // File: src/main.rs
-// Purpose: Main code
+// Purpose: Webapp definition
 // Created: November 28, 2022
-// Modified: September 29, 2024
+// Modified: October 9, 2024
 
 //use std::collections::HashMap;
 
@@ -30,7 +30,7 @@ struct SimpleLogger;
 
 impl log::Log for SimpleLogger {
     fn enabled(&self, metadata: &Metadata) -> bool {
-        metadata.level() <= Level::Debug
+        metadata.level() <= Level::max()
     }
 
     fn log(&self, record: &Record) {
@@ -44,9 +44,21 @@ impl log::Log for SimpleLogger {
 
 static LOGGER: SimpleLogger = SimpleLogger;
 
-pub fn init() -> Result<(), SetLoggerError> {
+pub fn init(siteconfig: &PartialSiteConfig) -> Result<(), SetLoggerError> {
+    let levelfilter = match siteconfig.debugloglevel.as_str() {
+        "off" => LevelFilter::Off,
+        "error" => LevelFilter::Error,
+        "warn" => LevelFilter::Warn,
+        "info" => LevelFilter::Info,
+        "debug" => LevelFilter::Debug,
+        "trace" => LevelFilter::Trace,
+        _ => {
+            panic!("Invalid log level for debugloglevel in config.json")
+        }
+    };
+
     log::set_logger(&LOGGER)
-        .map(|()| log::set_max_level(LevelFilter::Debug))
+        .map(|()| log::set_max_level(levelfilter))
 }
 
 async fn middleware(req: ServiceRequest, next: Next<actix_web::body::BoxBody>) -> Result<ServiceResponse<impl MessageBody>, Error> {
@@ -86,7 +98,6 @@ async fn middleware(req: ServiceRequest, next: Next<actix_web::body::BoxBody>) -
 //pub async fn incominglog(logdata: web::Json<ClientLogEntry>, memclient: web::Data<Option<Client>>) {
 
 //}
-
 
 pub async fn routepage(req: HttpRequest, page: web::Path<String>, tmpl: web::Data<lysine::Lysine>, sitecfg: web::Data<SiteConfig>, memclient: web::Data<Option<Client>>) -> Result<impl Responder, Error> {
     let mut ctx = Context::new();
@@ -154,7 +165,7 @@ pub async fn routepage(req: HttpRequest, page: web::Path<String>, tmpl: web::Dat
     }
     ctx.insert("path", &pathmap);
 
-    let html = match tmpl.render("page.html", &ctx) {
+    let html = match tmpl.render("page.lish", &ctx) {
         Ok(html) => html,
         Err(err) => return Ok(HttpResponse::InternalServerError().body(format!("Failed to render template: {:?}", err)))
     };
@@ -189,12 +200,26 @@ pub async fn routepage(req: HttpRequest, page: web::Path<String>, tmpl: web::Dat
 }
 
 #[actix_web::main]
-async fn main() -> std::io::Result<()> {
-    let _ = init();
-    
-    let partialsiteconfig: PartialSiteConfig = serde_json::from_str(&read_file("ctclsite-config/config.json").unwrap()).unwrap();
-    let bindip = partialsiteconfig.bindip;
+async fn main() -> std::io::Result<()> {    
+    let siteconfigpath = match read_file("config.txt") {
+        Ok(t) => t.strip_suffix("\n").unwrap_or(&t).to_owned(),
+        Err(e) => return Err(e)
+    };
+
+    let siteconfigjson = match read_file(format!("{siteconfigpath}config.json")) {
+        Ok(t) => t.strip_suffix("\n").unwrap_or(&t).to_owned(),
+        Err(e) => return Err(e)
+    };
+
+    let partialsiteconfig: PartialSiteConfig = match serde_json::from_str::<PartialSiteConfig>(&siteconfigjson) {
+        Ok(t) => t,
+        Err(e) => return Err(e.into()),
+    };
+
+    let bindip = &partialsiteconfig.bindip;
     let bindport = partialsiteconfig.bindport;
+
+    let _ = init(&partialsiteconfig);
 
     // Actix-Web already uses available_parallelism() to determine CPU thread count so using this function should be the same as using the default CPU count of Actix-Web
     let syscpus = available_parallelism().unwrap().get();
@@ -210,8 +235,9 @@ async fn main() -> std::io::Result<()> {
     };
 
     HttpServer::new(|| {
-        let lysine = Lysine::new("ctclsite-config/templates/**/*.html").unwrap();
         let sitecfg: SiteConfig = loadconfig().unwrap();
+        let siteconfigpath = read_file("config.txt").unwrap();
+        let lysine = Lysine::new(&format!("{}/templates/**/*.lish", siteconfigpath)).unwrap();
 
         debug!("Pages Loaded:");
         for (pid, page) in &sitecfg.pages {
@@ -227,12 +253,12 @@ async fn main() -> std::io::Result<()> {
         info!("Themes loaded: {tcount}");
         info!("Fonts loaded: {fcount}");
 
-        if sitecfg.log.enable {
+        if sitecfg.logger.enable {
             let _ = loggersetup(&sitecfg);
         }
 
-        let memclient = match sitecfg.log.enable {
-            true => match Client::connect(&*sitecfg.log.memcache) {
+        let memclient = match sitecfg.logger.enable {
+            true => match Client::connect(&*sitecfg.logger.memcache) {
                 Ok(m) => Some(m),
                 Err(e) => {
                     warn!("Error connecting to memcache: {e}");
@@ -250,7 +276,7 @@ async fn main() -> std::io::Result<()> {
             .wrap(from_fn(middleware))
             .service(web::resource("/{page:.*}").route(web::get().to(routepage)))
     })
-    .bind((bindip, bindport))?
+    .bind((bindip.as_str(), bindport))?
     .workers(cpus)
     .run()
     .await
