@@ -2,9 +2,8 @@
 // File: src/themes/mod.rs
 // Purpose: Theme module
 // Created: September 21, 2024
-// Modified: October 9, 2024
+// Modified: October 13, 2024
 
-use std::collections::HashMap;
 use serde::{Serialize, Deserialize};
 
 use crate::*;
@@ -42,9 +41,10 @@ pub struct Theme {
     pub fgcolorrgb: [u8; 3],
     // Default font to be used in themes
     pub defaultfont: String,
-    // Styling to use
-    #[serde(default = "emptystring")]
-    pub css: String,
+    // Use CSS templates from _defaults or custom templates from the theme's directory
+    pub usedefaults: bool,
+    // If specified (Some), use the favicon from the URL specified; If not specified (None), generate a favicon using the theme color
+    pub favicon: Option<String>,
     // To be filled by loadthemes
     #[serde(skip_deserializing, default = "emptystring")]
     pub rendered: String
@@ -68,17 +68,20 @@ pub fn loadfonts(sitecfg: &SiteConfig) -> Result<HashMap<String, FontFamily>, Er
             .strip_prefix(&fontroot)
             .unwrap()
             .to_string();
-        let configpathstr = format!("{}/font.json", entry.path().display()).clone();
-        let configpath = Path::new(&configpathstr);
+
+        let configpath = entry.path().join("font.json");
 
         // Prevent "" from being added
-        if !name.is_empty() {
+        if name.is_empty() {
             continue
         }
 
-        let font: FontFamily = match configpath.exists() {
-            true => serde_json::from_str(&read_file(configpath).unwrap()).unwrap(),
-            false => continue
+        let font: FontFamily = match fs::exists(&configpath) {
+            Ok(b) => match b {
+                true => serde_json::from_str(&read_file(configpath).unwrap()).unwrap(),
+                false => continue
+            },
+            Err(e) => return Err(Error::new(ErrorKind::Other, e))
         };
 
         match mkdir(&format!("static/fonts/{}", font.name)) {
@@ -110,96 +113,95 @@ pub fn loadfonts(sitecfg: &SiteConfig) -> Result<HashMap<String, FontFamily>, Er
 }
 
 pub fn loadthemes(sitecfg: &SiteConfig) -> Result<HashMap<String, Theme>, Error> {
+    // One must imagine borrow checker happy
     let themeroot = &sitecfg.themedir.clone();
 
-    // At this point, static/ should exist
     mkdir("static/styles/")?;
 
-    let mut themes: HashMap<String, Theme> = HashMap::new();
+    let mut themeconfs: HashMap<String, Theme> = HashMap::new();
+
     for entry in WalkDir::new(themeroot).into_iter().filter_map(|e| e.ok()) {
         if !entry.path().is_dir() {
+            continue    
+        }
+
+        if entry.path().to_string_lossy() == *themeroot {
             continue
         }
-        let name = entry
-            .path()
-            .display()
-            .to_string()
-            .strip_prefix(themeroot)
-            .unwrap()
-            .to_string();
-        // Prevent "" and "_defaults" from being added
-        if !name.is_empty() && name != "_defaults" {            
-            let mut theme: Theme = serde_json::from_str(&read_file(format!("{}/theme.json", entry.path().display())).unwrap()).unwrap();
-            if !theme.enabled {
-                info!("loadthemes: theme \"{}\" is disabled from its configuration file", name);
-                continue
-            }
-            let mut colorrgb = [0u8; 3];
-            hex::decode_to_slice(theme.color.replace('#', ""), &mut colorrgb as &mut [u8]).unwrap();
-            let mut fgcolorrgb = [0u8; 3];
-            hex::decode_to_slice(theme.fgcolor.replace('#', ""), &mut fgcolorrgb as &mut [u8]).unwrap();
-    
-            theme.colorrgb = colorrgb;
-            theme.fgcolorrgb = fgcolorrgb;
 
-            themes.insert(name, theme);
+        let name = entry.path().file_name().unwrap().to_string_lossy();
+        
+        // Prevent "" and "_defaults" from being added
+        if name.is_empty() || name == "_defaults" {            
+            continue
         }
+
+        let themejson = &read_file(entry.path().join("theme.json"))?;
+        let mut themeconf: Theme = serde_json::from_str(themejson)?;
+
+        if !themeconf.enabled {
+            debug!("loadthemes: theme \"{}\" is disabled from its configuration file", name);
+            continue
+        }
+
+        let mut colorrgb = [0u8; 3];
+        hex::decode_to_slice(themeconf.color.replace('#', ""), &mut colorrgb as &mut [u8]).unwrap();
+        let mut fgcolorrgb = [0u8; 3];
+        hex::decode_to_slice(themeconf.fgcolor.replace('#', ""), &mut fgcolorrgb as &mut [u8]).unwrap();
+
+        themeconf.colorrgb = colorrgb;
+        themeconf.fgcolorrgb = fgcolorrgb;
+
+        themeconfs.insert(name.to_string(), themeconf);
     }
 
+    // Much of the data is shared across themes so ctx is defined once then modified
     let mut ctx = Context::new();
-    ctx.insert("themes", &themes);
+    // Variables that are constant across themes
+    // Themes need data about each other
+    ctx.insert("themes", &themeconfs);
     ctx.insert("fonts", &sitecfg.fonts);
 
     if sitecfg.themevars.is_some() {
-        for (key, value) in sitecfg.themevars.as_ref().unwrap() {
-            ctx.insert(key, &value);
-        }        
+        for (key, value) in sitecfg.themevars.clone().unwrap().iter() {
+            ctx.insert(key, value);
+        }
     }
 
-    let mut renderedthemes: HashMap<String, Theme> = HashMap::new();
-    for (themename, theme) in themes.iter() {
-        let mut tmpl = Lysine::default();
-
-        for entry in WalkDir::new(format!("{themeroot}_defaults/")).into_iter().filter_map(|e| e.ok()) {
-            if entry.path().is_file() && entry.path().extension().unwrap() == "lisc" {
-                // Have the name of the template just the file name
-                let _ = tmpl.add_template_file(entry.path(), entry.path().file_name().unwrap().to_str());
-            }
-        }
-
-        if !theme.css.is_empty() || theme.css != "defaults" {
-            for entry in WalkDir::new("{themeroot}{themename}/").into_iter().filter_map(|e| e.ok()) {
-                if entry.path().is_file() && entry.path().extension().unwrap() == "lisc" {
-                    // Have the name of the template just the file name
-                    let _ = tmpl.add_template_file(entry.path(), entry.path().file_name().unwrap().to_str());
-                }
-            }
-        }
+    let mut newthemes: HashMap<String, Theme> = HashMap::new();
+    
+    for (name, theme) in themeconfs.iter() {
+        let tmpl = match theme.usedefaults {
+            true => Lysine::new(&format!("{}/_defaults/**/*.lisc", &themeroot)).unwrap(),
+            false => Lysine::new(&format!("{}/{}/**/*.lisc", &themeroot, &name)).unwrap()
+        };
 
         ctx.insert("theme", theme);
         
         let rendered = match tmpl.render("dark.lisc", &ctx) {
             Ok(t) => t,
-            Err(e) => return Err(Error::new(ErrorKind::Other, e))
+            // TODO: somehow get a descriptive error from Lysine
+            Err(e) => return Err(Error::new(ErrorKind::Other, format!("when rendering theme {}: {:?}", name, e)))
         };
-        let csspath = format!("static/styles/{themename}.css");
+        let csspath = format!("static/styles/{name}.css");
 
-        write_file(&csspath, &rendered)?;
+        write_file(&csspath, &rendered)?; 
 
-        let renderedtheme: Theme = Theme {
+        let newtheme: Theme = Theme {
             enabled: true,
             color: theme.color.clone(),
             fgcolor: theme.fgcolor.clone(),
             colorrgb: theme.colorrgb,
             fgcolorrgb: theme.fgcolorrgb,
-            css: theme.css.clone(),
             defaultfont: theme.defaultfont.clone(),
+            usedefaults: theme.usedefaults,
+            favicon: theme.favicon.clone(),
             rendered: format!("/{csspath}"),
         };
 
-        renderedthemes.insert(themename.clone(), renderedtheme);
-        
+        newthemes.insert(name.clone(), newtheme);
     }
 
-    Ok(renderedthemes)
+    Ok(newthemes)
+
 }

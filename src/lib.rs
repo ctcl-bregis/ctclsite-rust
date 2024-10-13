@@ -2,7 +2,7 @@
 // File: src/lib.rs
 // Purpose: Commonly used functions and types
 // Created: November 28, 2022
-// Modified: October 9, 2024
+// Modified: October 13, 2024
 
 use minifier::js;
 //use minify_html::{minify, Cfg};
@@ -24,10 +24,12 @@ use walkdir::WalkDir;
 pub mod themes;
 pub mod logger;
 pub mod page;
+pub mod route;
 
 pub use themes::*;
 pub use logger::*;
 pub use page::loader::*;
+pub use route::*;
 
 // To-Do: This file is long, consider splitting some code into modules
 
@@ -112,6 +114,10 @@ pub enum ExtensionFileType {
     Video
 }
 
+#[derive(Deserialize, Serialize)]
+pub struct URLParameter {
+    allowedvalues: Vec<String>
+}
 
 #[derive(Deserialize, Serialize)]
 pub struct SiteConfig {
@@ -301,7 +307,7 @@ pub fn mkdir(path: &str) -> Result<(), Error> {
     match std::fs::create_dir(path) {
         Err(e) => match e.kind() {
             ErrorKind::AlreadyExists => {
-                info!("loadfonts: directory {path} already exists, continuing");
+                info!("mkdir: directory {path} already exists, continuing");
                 Ok(())
             }
             _ => {
@@ -374,7 +380,7 @@ pub fn loadconfig() -> Result<SiteConfig, Error> {
         Ok(t) => t,
         Err(e) => return Err(Error::new(ErrorKind::Other, format!("loadconfig - loadfonts: {e}")))
     }; 
-
+    
     // Themes must be loaded before pages are loaded
     siteconfig.themes = match loadthemes(&siteconfig) {
         Ok(t) => t,

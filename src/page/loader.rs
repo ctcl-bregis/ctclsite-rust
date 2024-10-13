@@ -2,7 +2,7 @@
 // File: src/page/loader.rs
 // Purpose: Page configuration loader
 // Created: October 1, 2024
-// Modified: October 10, 2024
+// Modified: October 13, 2024
 
 use std::collections::HashMap;
 use serde::{Serialize, Deserialize};
@@ -38,6 +38,7 @@ pub struct LinkTitleOnly {
     pub page: String
 }
 
+// Text-only
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct LinkTitleText {
     pub text: String
@@ -111,35 +112,35 @@ pub struct Page {
     // -- Commonly defined fields --
     // Title of the page that is displayed in the <title></title> tag, the page header and meta tags
     pub title: String,
-    //If not defined, this value is to be replaced with the default theme specified in <config root>/config.json
+    // If not defined, this value is to be replaced with the default theme specified in <config root>/config.json
     #[serde(default = "emptystring")]
     pub theme: String,
-    //Currently, this can be anything. For example: "2024", "????", "February 22, 2022"
+    // Currently, this can be anything. For example: "2024", "????", "February 22, 2022"
     #[serde(default = "emptystring")]
     pub startdate: String,
-    //Currently, this can be anything. For example: "2024", "????", "February 22, 2022"
+    // Currently, this can be anything. For example: "2024", "????", "February 22, 2022"
     // Unused if startdate is undefined or empty
     #[serde(default = "emptystring")]
     pub enddate: String,
-    //Description to show in meta tags and Linklist entries
+    // Description to show in meta tags and Linklist entries
     #[serde(default = "emptystring")]
     pub desc: String,
-    //Icon to show on Linklist entries; not the page favicon
+    // Icon to show on Linklist entries; not the page favicon
     #[serde(default = "emptystring")]
     pub icon: String,
-    //Mouseover text for icons. Unused if icon is not defined or empty.
+    // Mouseover text for icons. Unused if icon is not defined or empty.
     #[serde(default = "emptystring")]
     pub icontitle: String,
-    //Keywords for pages
+    // Keywords for pages
     #[serde(default = "emptystringvec")]
     pub keywords: Vec<String>,
     // Category that a page has in a Linklist entry
     #[serde(default = "emptystring")]
     pub cat: String,
-    //If not defined, the HTML template should use the default favicon that corresponds with the page theme
+    // If not defined, the HTML template should use the default favicon that corresponds with the page theme
     #[serde(default = "emptystring")]
     pub favicon: String,
-    //Should be set to "false" with pages like About and Services that are made up of boxed sections
+    // Should be set to "false" with pages like About and Services that are made up of boxed sections
     #[serde(default = "defaulttrue")]
     pub headerids: bool,
     #[serde(default = "defaulttrue")]
@@ -215,8 +216,9 @@ pub fn loadpages(sitecfg: &SiteConfig) -> Result<HashMap<String, Page>, Error> {
         if fs::exists(format!("{pagepath}.placeholder")).unwrap_or(false) {
             debug!("loadpages: directory {pagepath} has .placeholder, skipping.");
         } else if pagejsonpath.exists() {
-            if pagejsonpath.is_file() {
-
+            if !pagejsonpath.is_file() {
+                warn!("loadpages: {} is not a file", pagejsonpath.to_string_lossy());
+                continue;
             }
             let pageconfigraw = &read_file(&pagejson).unwrap();
             match serde_json::from_str::<Page>(pageconfigraw) {

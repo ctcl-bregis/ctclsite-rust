@@ -2,9 +2,7 @@
 // File: src/main.rs
 // Purpose: Webapp definition
 // Created: November 28, 2022
-// Modified: October 9, 2024
-
-//use std::collections::HashMap;
+// Modified: October 13, 2024
 
 use std::thread::available_parallelism;
 
@@ -12,14 +10,13 @@ use actix_files as fs;
 use actix_web::http::StatusCode;
 use actix_web::web::Data;
 use actix_web::body::MessageBody;
-use actix_web::{http, web, App, Error, HttpRequest, HttpResponse, HttpResponseBuilder, HttpServer, Responder};
+use actix_web::{http, web, App, Error, HttpResponse, HttpResponseBuilder, HttpServer};
 use actix_web::dev::{ServiceRequest, ServiceResponse};
 use actix_web_lab::middleware::{from_fn, Next};
-use ctclsite::{loadconfig, logger::logaccess, loggersetup, read_file, PartialSiteConfig, SiteConfig};
-use indexmap::IndexMap;
+use ctclsite::routepage;
+use ctclsite::{loadconfig, loggersetup, read_file, PartialSiteConfig, SiteConfig};
 use memcache::Client;
-use minify_html::{minify, Cfg};
-use lysine::{Context, Lysine};
+use lysine::Lysine;
 
 use log::{debug, info, warn, LevelFilter, SetLoggerError};
 use log::{Record, Level, Metadata};
@@ -95,110 +92,6 @@ async fn middleware(req: ServiceRequest, next: Next<actix_web::body::BoxBody>) -
     next.call(req).await
 }
 
-//pub async fn incominglog(logdata: web::Json<ClientLogEntry>, memclient: web::Data<Option<Client>>) {
-
-//}
-
-pub async fn routepage(req: HttpRequest, page: web::Path<String>, tmpl: web::Data<lysine::Lysine>, sitecfg: web::Data<SiteConfig>, memclient: web::Data<Option<Client>>) -> Result<impl Responder, Error> {
-    let mut ctx = Context::new();
-
-    let pagecfg = match page.as_str() {
-        "" => sitecfg.pages.get("/").unwrap(),
-        _ => match sitecfg.pages.get(page.as_str()) {
-            Some(p) => p,
-            None => return Ok(HttpResponse::NotFound().body(format!("Page {} not found", page)))
-        }
-    };
-
-    match memclient.get_ref() {
-        Some(m) => {
-            logaccess(&sitecfg, req, m)?;
-        },
-        None => ()
-    };
-
-    let theme = match sitecfg.themes.get(&pagecfg.theme) {
-        Some(t) => t,
-        None => sitecfg.themes.get(&sitecfg.defaulttheme).unwrap()
-    };
-
-    ctx.insert("sitedomain", &sitecfg.sitedomain);
-    if pagecfg.shownavbar {
-        ctx.insert("navbar", &sitecfg.navbar);   
-    }
-
-    ctx.insert("title", &pagecfg.title);
-    ctx.insert("theme", theme);
-    ctx.insert("desc", &pagecfg.desc);
-    ctx.insert("keywords", &pagecfg.keywords);
-    ctx.insert("favicon", &pagecfg.favicon);
-    ctx.insert("headerids", &pagecfg.headerids);
-    ctx.insert("rendered", &pagecfg.content);
-
-    match &sitecfg.uservars {
-        Some(p) => {
-            for (key, value) in p.iter() {
-                ctx.insert(key, value);
-            }
-        },
-        None => ()
-    }
-
-    // Page-specific variables have a higher precedence over site variables
-    match &pagecfg.uservars {
-        Some(p) => {
-            for (key, value) in p.iter() {
-                ctx.insert(key, value);
-            }
-        },
-        None => ()
-    }
-
-    // dir name, absolute path
-    let mut pathmap: IndexMap<String, String> = IndexMap::new();
-    let mut absolute = String::from("/");
-    for splitpath in page.split("/") {
-        if !splitpath.is_empty() {
-            absolute.push_str(&format!("{splitpath}/"));
-            pathmap.insert(splitpath.to_owned(), absolute.clone());
-        }
-    }
-    ctx.insert("path", &pathmap);
-
-    let html = match tmpl.render("page.lish", &ctx) {
-        Ok(html) => html,
-        Err(err) => return Ok(HttpResponse::InternalServerError().body(format!("Failed to render template: {:?}", err)))
-    };
-
-    let htmlbytes = html.as_bytes();
-
-    let cfg = Cfg {
-        do_not_minify_doctype: true,
-        ensure_spec_compliant_unquoted_attribute_values: true,
-        keep_closing_tags: true,
-        keep_html_and_head_opening_tags: true,
-        keep_spaces_between_attributes: true,
-        keep_comments: false,
-        keep_input_type_text_attr: true,
-        keep_ssi_comments: false,
-        // If any template-related syntax is still in the output, something is quite wrong. Keep for debugging purposes.
-        preserve_brace_template_syntax: true,
-        preserve_chevron_percent_template_syntax: true,
-        // Rendered HTML should have neither CSS or JS. If they do, it is most likely for debugging purposes.
-        minify_css: false,
-        minify_js: false,
-        remove_bangs: false,
-        remove_processing_instructions: true
-    };
-
-    let htmlmin = match sitecfg.minimizehtml {
-        true => minify(htmlbytes, &cfg),
-        false => htmlbytes.to_vec(),
-    };
-
-    Ok(HttpResponse::Ok().body(htmlmin))
-}
-
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {    
     let siteconfigpath = match read_file("config.txt") {
@@ -246,12 +139,10 @@ async fn main() -> std::io::Result<()> {
                 debug!("    {cid}")
             }
         }
-        let pcount = sitecfg.pages.len();
-        let tcount = sitecfg.themes.len();
-        let fcount = sitecfg.fonts.len();
-        info!("Pages loaded: {pcount}");
-        info!("Themes loaded: {tcount}");
-        info!("Fonts loaded: {fcount}");
+        
+        info!("Pages loaded: {}", sitecfg.pages.len());
+        info!("Themes loaded: {}", sitecfg.themes.len());
+        info!("Fonts loaded: {}", sitecfg.fonts.len());
 
         if sitecfg.logger.enable {
             let _ = loggersetup(&sitecfg);
