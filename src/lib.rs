@@ -2,10 +2,9 @@
 // File: src/lib.rs
 // Purpose: Commonly used functions and types
 // Created: November 28, 2022
-// Modified: October 13, 2024
+// Modified: October 15, 2024
 
 use minifier::js;
-//use minify_html::{minify, Cfg};
 use comrak::{markdown_to_html, Options};
 use image::{Rgb, RgbImage};
 use indexmap::IndexMap;
@@ -153,23 +152,24 @@ pub struct SiteConfig {
     pub logger: LogConfig,
     // Exists solely for debugging purposes. It should be set to "true" in production.
     pub minimizehtml: bool,
+    // Exists solely for debugging purposes. It should be set to "true" in production.
+    pub minimizecss: bool,
     // Definition of file types by file extension, used by collectstatic to determine what files to copy and may be used for the upcoming file viewer feature
     pub filetypes: HashMap<String, ExtensionFileType>,
     // Optional: Any extra parameters defined in config.json to be available in Lysine/Tera CSS templates
     pub themevars: Option<HashMap<String, Value>>,
     // Optional: Any extra parameters defined in config.json to be available in HTML templates
     pub uservars: Option<HashMap<String, Value>>,
+    // Theme definitions
+    pub themes: HashMap<String, Theme>,
     // Skip since pages, themes and fonts should not be defined in config.json
     #[serde(skip_deserializing, default = "emptypagehashmap")]
     pub pages: HashMap<String, Page>,
-    #[serde(skip_deserializing, default = "emptythemehashmap")]
-    pub themes: HashMap<String, Theme>,
     #[serde(skip_deserializing, default = "emptyfonthashmap")]
     pub fonts: HashMap<String, FontFamily>,
     // Contents of robots.txt 
     #[serde(skip, default = "emptystring")]
     pub robots: String
-
 }
 
 // Partial config that only has fields for things required to start the webserver to avoid loading all of the pages twice
@@ -180,28 +180,6 @@ pub struct PartialSiteConfig {
     pub cpus: usize,
     // Maximum level to log to console
     pub debugloglevel: String
-}
-
-pub fn mkfavicons(themes: &HashMap<String, Theme>) -> Result<(), Error> {
-    // At this point, static/ should exist
-    mkdir("static/favicons/")?;
-
-    for (key, value) in themes {
-        // It is unlikely that default favicons would change so to reduce build time and disk writes, generation is skipped if the favicon already exists.
-        if !fs::exists("static/favicons/default_{key}.ico").unwrap() {
-            let mut image = RgbImage::new(16, 16);
-            for x in 0..16 {
-                for y in 0..16 {
-                    let mut bytes = [0u8; 3];
-                    hex::decode_to_slice(value.color.replace('#', ""), &mut bytes as &mut [u8]).unwrap();
-                    image.put_pixel(x, y, Rgb(bytes));
-                }
-            }
-            image.save(format!("static/favicons/default_{key}.ico")).unwrap_or_else(|_| panic!("Error while saving file default_{key}.ico"))
-        }
-    }
-
-    Ok(())
 }
 
 pub fn buildjs(sitecfg: &SiteConfig) -> Result<(), Error> {
@@ -387,8 +365,6 @@ pub fn loadconfig() -> Result<SiteConfig, Error> {
         Err(e) => return Err(Error::new(ErrorKind::Other, format!("loadconfig - loadthemes: {e}")))
     };
 
-    // Themes must be loaded before favicons are generated
-    mkfavicons(&siteconfig.themes)?;
     match collectstatic(&siteconfig) {
         Ok(_) => (),
         Err(e) => return Err(Error::new(ErrorKind::Other, format!("collectstatic: {e}")))

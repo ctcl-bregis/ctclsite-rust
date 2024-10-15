@@ -2,6 +2,7 @@
 ## 2.1.0 - [UNRELEASED]
 
 Changes:
+- Themes are now defined in config.json. Themes that use "_defaults" no longer need a directory in "themes/".
 - Path to config.json is no longer hard-coded. The configuration path is now defined in config.txt
 - Code readability improvements
 - More descriptive error messages

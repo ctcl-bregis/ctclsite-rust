@@ -2,9 +2,10 @@
 // File: src/themes/mod.rs
 // Purpose: Theme module
 // Created: September 21, 2024
-// Modified: October 13, 2024
+// Modified: October 15, 2024
 
 use serde::{Serialize, Deserialize};
+use minifier::css;
 
 use crate::*;
 
@@ -21,11 +22,13 @@ pub struct FontFamily {
     pub name: String,
     // Display name
     pub dispname: String,
+    // Fallback font to use
+    pub fallback: String,
     // Font definitions
     pub styles: HashMap<String, FontVariant>
 }
 
-#[derive(Deserialize, Serialize, Debug)]
+#[derive(Deserialize, Serialize, Debug, Clone)]
 pub struct Theme {
     #[serde(default = "defaulttrue")]
     pub enabled: bool,
@@ -41,10 +44,11 @@ pub struct Theme {
     pub fgcolorrgb: [u8; 3],
     // Default font to be used in themes
     pub defaultfont: String,
-    // Use CSS templates from _defaults or custom templates from the theme's directory
-    pub usedefaults: bool,
-    // If specified (Some), use the favicon from the URL specified; If not specified (None), generate a favicon using the theme color
-    pub favicon: Option<String>,
+    // Use CSS templates from _defaults (true) or custom templates from the theme's directory (false)
+    pub defaults: bool,
+    // To be filled by loadthemes
+    #[serde(skip_deserializing, default = "emptystring")]
+    pub favicon: String,
     // To be filled by loadthemes
     #[serde(skip_deserializing, default = "emptystring")]
     pub rendered: String
@@ -61,28 +65,34 @@ pub fn loadfonts(sitecfg: &SiteConfig) -> Result<HashMap<String, FontFamily>, Er
             continue
         }
 
-        let name = entry
-            .path()
-            .display()
-            .to_string()
-            .strip_prefix(&fontroot)
-            .unwrap()
-            .to_string();
+        // Panic if the path does not have fontroot as a prefix as it always should have it
+        let name = entry.path().strip_prefix(&fontroot).unwrap();
 
         let configpath = entry.path().join("font.json");
 
         // Prevent "" from being added
-        if name.is_empty() {
+        if name.to_string_lossy().is_empty() {
             continue
         }
 
-        let font: FontFamily = match fs::exists(&configpath) {
+        match fs::exists(&configpath) {
             Ok(b) => match b {
-                true => serde_json::from_str(&read_file(configpath).unwrap()).unwrap(),
+                true => (),
                 false => continue
             },
             Err(e) => return Err(Error::new(ErrorKind::Other, e))
         };
+
+        let fontjson = match read_file(&configpath) {
+            Ok(c) => c,
+            Err(e) => return Err(Error::new(ErrorKind::Other, e))
+        };
+
+        let font: FontFamily = match serde_json::from_str(&fontjson) {
+            Ok(c) => c,
+            Err(e) => return Err(Error::new(ErrorKind::Other, format!("Error loading JSON file for font {}: {e}", name.to_string_lossy())))
+        };
+        
 
         match mkdir(&format!("static/fonts/{}", font.name)) {
             Ok(_) => (),
@@ -112,54 +122,65 @@ pub fn loadfonts(sitecfg: &SiteConfig) -> Result<HashMap<String, FontFamily>, Er
     Ok(fonts)
 }
 
+pub fn mkfavicons(themes: &HashMap<String, Theme>) -> Result<(), Error> {
+    // At this point, static/ should exist
+    mkdir("static/favicons/")?;
+
+    for (name, theme) in themes.iter() {
+        // It is unlikely that default favicons would change so to reduce build time and disk writes, generation is skipped if the favicon already exists.
+        if !fs::exists("static/favicons/default_{name}.ico").unwrap() {
+            let mut image = RgbImage::new(16, 16);
+            for x in 0..16 {
+                for y in 0..16 {
+                    let mut bytes = [0u8; 3];
+                    hex::decode_to_slice(theme.color.replace('#', ""), &mut bytes as &mut [u8]).unwrap();
+                    image.put_pixel(x, y, Rgb(bytes));
+                }
+            }
+            image.save(format!("static/favicons/default_{name}.ico")).unwrap_or_else(|_| panic!("Error while saving file default_{name}.ico"))
+        }
+    }
+
+    Ok(())
+}
+
 pub fn loadthemes(sitecfg: &SiteConfig) -> Result<HashMap<String, Theme>, Error> {
     // One must imagine borrow checker happy
     let themeroot = &sitecfg.themedir.clone();
 
     mkdir("static/styles/")?;
 
-    let mut themeconfs: HashMap<String, Theme> = HashMap::new();
+    let mut newthemes: HashMap<String, Theme> = HashMap::new();
 
-    for entry in WalkDir::new(themeroot).into_iter().filter_map(|e| e.ok()) {
-        if !entry.path().is_dir() {
-            continue    
-        }
+    for (name, theme) in sitecfg.themes.iter() {
+        let mut newtheme = theme.clone();
 
-        if entry.path().to_string_lossy() == *themeroot {
-            continue
-        }
-
-        let name = entry.path().file_name().unwrap().to_string_lossy();
+        // This is needed until a hex2rgb function is added to Lysine
+        hex::decode_to_slice(theme.color.replace('#', ""), &mut newtheme.colorrgb as &mut [u8]).unwrap();
+        hex::decode_to_slice(theme.fgcolor.replace('#', ""), &mut newtheme.fgcolorrgb as &mut [u8]).unwrap();
         
-        // Prevent "" and "_defaults" from being added
-        if name.is_empty() || name == "_defaults" {            
-            continue
-        }
+        let defaultfontfamily = sitecfg.fonts.get(&theme.defaultfont).unwrap();
+        let defaultfont = format!("{}; {}", defaultfontfamily.dispname, defaultfontfamily.fallback);
 
-        let themejson = &read_file(entry.path().join("theme.json"))?;
-        let mut themeconf: Theme = serde_json::from_str(themejson)?;
+        let newtheme: Theme = Theme {
+            enabled: true,
+            color: theme.color.clone(),
+            fgcolor: theme.fgcolor.clone(),
+            colorrgb: theme.colorrgb,
+            fgcolorrgb: theme.fgcolorrgb,
+            defaultfont,
+            defaults: theme.defaults,
+            favicon: theme.favicon.clone(),
+            rendered: String::from(""),
+        };
 
-        if !themeconf.enabled {
-            debug!("loadthemes: theme \"{}\" is disabled from its configuration file", name);
-            continue
-        }
-
-        let mut colorrgb = [0u8; 3];
-        hex::decode_to_slice(themeconf.color.replace('#', ""), &mut colorrgb as &mut [u8]).unwrap();
-        let mut fgcolorrgb = [0u8; 3];
-        hex::decode_to_slice(themeconf.fgcolor.replace('#', ""), &mut fgcolorrgb as &mut [u8]).unwrap();
-
-        themeconf.colorrgb = colorrgb;
-        themeconf.fgcolorrgb = fgcolorrgb;
-
-        themeconfs.insert(name.to_string(), themeconf);
+        newthemes.insert(name.clone(), newtheme);
     }
 
-    // Much of the data is shared across themes so ctx is defined once then modified
+    mkfavicons(&newthemes)?;
+
     let mut ctx = Context::new();
-    // Variables that are constant across themes
-    // Themes need data about each other
-    ctx.insert("themes", &themeconfs);
+    ctx.insert("themes", &newthemes);
     ctx.insert("fonts", &sitecfg.fonts);
 
     if sitecfg.themevars.is_some() {
@@ -168,40 +189,34 @@ pub fn loadthemes(sitecfg: &SiteConfig) -> Result<HashMap<String, Theme>, Error>
         }
     }
 
-    let mut newthemes: HashMap<String, Theme> = HashMap::new();
-    
-    for (name, theme) in themeconfs.iter() {
-        let tmpl = match theme.usedefaults {
+    // Due to the pagebutton theming, themes need to know the data of other themes. This requires the theme map to be iterated through again.
+    // TODO: Is there a way to do this while not cloning newthemes?
+    for (name, theme) in newthemes.clone() {
+        let tmpl = match theme.defaults {
             true => Lysine::new(&format!("{}/_defaults/**/*.lisc", &themeroot)).unwrap(),
             false => Lysine::new(&format!("{}/{}/**/*.lisc", &themeroot, &name)).unwrap()
         };
 
-        ctx.insert("theme", theme);
-        
-        let rendered = match tmpl.render("dark.lisc", &ctx) {
+        ctx.insert("theme", &theme);
+
+        // TODO: Have the theme select the template to use
+        let mut rendered = match tmpl.render("dark.lisc", &ctx) {
             Ok(t) => t,
             // TODO: somehow get a descriptive error from Lysine
             Err(e) => return Err(Error::new(ErrorKind::Other, format!("when rendering theme {}: {:?}", name, e)))
         };
-        let csspath = format!("static/styles/{name}.css");
 
-        write_file(&csspath, &rendered)?; 
+        if sitecfg.minimizecss {
+            rendered = minifier::css::minify(&rendered).unwrap().to_string();
+            write_file(format!("static/styles/{}.css", &name), &rendered)?;
+        } else {
+            write_file(format!("static/styles/{}.css", &name), &rendered)?;
+        }
 
-        let newtheme: Theme = Theme {
-            enabled: true,
-            color: theme.color.clone(),
-            fgcolor: theme.fgcolor.clone(),
-            colorrgb: theme.colorrgb,
-            fgcolorrgb: theme.fgcolorrgb,
-            defaultfont: theme.defaultfont.clone(),
-            usedefaults: theme.usedefaults,
-            favicon: theme.favicon.clone(),
-            rendered: format!("/{csspath}"),
-        };
+        
 
-        newthemes.insert(name.clone(), newtheme);
+        newthemes.get_mut(&name).unwrap().rendered = format!("/static/styles/{}.css", &name);
     }
 
     Ok(newthemes)
-
 }

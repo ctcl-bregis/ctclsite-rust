@@ -2,7 +2,7 @@
 // File: src/logger/mod.rs
 // Purpose: Log-related types and functions
 // Created: September 21, 2024
-// Modified: October 9, 2024
+// Modified: October 15, 2024
 
 use std::{collections::HashMap, fs::{remove_file, rename, File}, io::Error};
 use actix_web::HttpRequest;
@@ -66,8 +66,6 @@ pub fn logaccess(sitecfg: &SiteConfig, req: HttpRequest, memclient: &Client) -> 
     let _ = memclient.set(&uuid, false, 120);
 
     let mut logmap: HashMap<String, String> = HashMap::new();
-
-    dbg!(req.headers());
 
     for (key, header) in &sitecfg.logger.serverlog {
         match header {
@@ -175,7 +173,6 @@ pub fn loggersetup(sitecfg: &SiteConfig) -> Result<(), Error> {
     }
 
     let conn = sqlite::open("log/log.db").unwrap();
-    dbg!(&schema);
     conn.execute(schema).unwrap();
 
     Ok(())

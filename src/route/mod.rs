@@ -37,7 +37,10 @@ pub async fn routepage(req: HttpRequest, page: web::Path<String>, tmpl: web::Dat
 
     let theme = match sitecfg.themes.get(&pagecfg.theme) {
         Some(t) => t,
-        None => sitecfg.themes.get(&sitecfg.defaulttheme).unwrap()
+        None => {
+            warn!("Theme {} not found, using default", &pagecfg.theme);
+            sitecfg.themes.get(&sitecfg.defaulttheme).unwrap()
+        }
     };
 
     ctx.insert("sitedomain", &sitecfg.sitedomain);
@@ -91,7 +94,8 @@ pub async fn routepage(req: HttpRequest, page: web::Path<String>, tmpl: web::Dat
     let htmlbytes = html.as_bytes();
 
     let cfg = Cfg {
-        do_not_minify_doctype: false,
+        // This breaks the webpage when set to false
+        do_not_minify_doctype: true,
         ensure_spec_compliant_unquoted_attribute_values: true,
         keep_closing_tags: true,
         keep_html_and_head_opening_tags: true,
