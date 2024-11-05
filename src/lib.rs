@@ -2,7 +2,7 @@
 // File: src/lib.rs
 // Purpose: Commonly used functions and types
 // Created: November 28, 2022
-// Modified: October 15, 2024
+// Modified: November 4, 2024
 
 use minifier::js;
 use comrak::{markdown_to_html, Options};
@@ -154,6 +154,7 @@ pub struct SiteConfig {
     pub minimizehtml: bool,
     // Exists solely for debugging purposes. It should be set to "true" in production.
     pub minimizecss: bool,
+    pub dateformats: HashMap<String, String>,
     // Definition of file types by file extension, used by collectstatic to determine what files to copy and may be used for the upcoming file viewer feature
     pub filetypes: HashMap<String, ExtensionFileType>,
     // Optional: Any extra parameters defined in config.json to be available in Lysine/Tera CSS templates

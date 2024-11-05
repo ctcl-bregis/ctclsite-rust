@@ -13,7 +13,7 @@ actix-files = "0.6.5"
 actix-service = "2.0.2"
 actix-web = { version = "4.5.1", features = ["openssl"] }
 actix-web-lab = "0.20.2"
-chrono = "0.4.35"
+chrono = { version = "0.4.35", features = ["serde"] }
 comrak = "0.21.0"
 csv = "1.3.0"
 flate2 = "1.0.33"
@@ -24,7 +24,7 @@ indexmap = { version = "2.2.5", features = ["serde"] }
 json-objects-to-csv = "0.1.3"
 lazy_static = "1.4.0"
 log = "0.4.22"
-lysine = { git = "https://github.com/ctcl-bregis/lysine-rs.git" }
+lysine = { git = "https://github.com/ctcl-bregis/lysine.git"}
 memcache = "0.17.2"
 minifier = "0.3.1"
 minify-html = "0.15.0"

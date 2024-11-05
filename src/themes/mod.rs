@@ -130,10 +130,10 @@ pub fn mkfavicons(themes: &HashMap<String, Theme>) -> Result<(), Error> {
         // It is unlikely that default favicons would change so to reduce build time and disk writes, generation is skipped if the favicon already exists.
         if !fs::exists("static/favicons/default_{name}.ico").unwrap() {
             let mut image = RgbImage::new(16, 16);
+            let mut bytes = [0u8; 3];
+            hex::decode_to_slice(theme.color.replace('#', ""), &mut bytes as &mut [u8]).unwrap();
             for x in 0..16 {
                 for y in 0..16 {
-                    let mut bytes = [0u8; 3];
-                    hex::decode_to_slice(theme.color.replace('#', ""), &mut bytes as &mut [u8]).unwrap();
                     image.put_pixel(x, y, Rgb(bytes));
                 }
             }
@@ -190,7 +190,7 @@ pub fn loadthemes(sitecfg: &SiteConfig) -> Result<HashMap<String, Theme>, Error>
     }
 
     // Due to the pagebutton theming, themes need to know the data of other themes. This requires the theme map to be iterated through again.
-    // TODO: Is there a way to do this while not cloning newthemes?
+    // TODO: Is there a way to do this without cloning newthemes?
     for (name, theme) in newthemes.clone() {
         let tmpl = match theme.defaults {
             true => Lysine::new(&format!("{}/_defaults/**/*.lisc", &themeroot)).unwrap(),
@@ -212,8 +212,6 @@ pub fn loadthemes(sitecfg: &SiteConfig) -> Result<HashMap<String, Theme>, Error>
         } else {
             write_file(format!("static/styles/{}.css", &name), &rendered)?;
         }
-
-        
 
         newthemes.get_mut(&name).unwrap().rendered = format!("/static/styles/{}.css", &name);
     }

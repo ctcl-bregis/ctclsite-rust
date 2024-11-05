@@ -2,9 +2,10 @@
 // File: src/page/loader.rs
 // Purpose: Page configuration loader
 // Created: October 1, 2024
-// Modified: October 13, 2024
+// Modified: November 4, 2024
 
 use std::collections::HashMap;
+use chrono::{DateTime, Utc};
 use serde::{Serialize, Deserialize};
 use crate::*;
 
@@ -12,8 +13,13 @@ use crate::*;
 pub struct LinkFullCustom {
     pub link: String,
     pub theme: String,
-    pub startdate: String,
-    pub enddate: String,
+    // Unused if undefined
+    pub startdate: Option<DateTime<Utc>>,
+    // Unused if undefined
+    pub enddate: Option<DateTime<Utc>>,
+    #[serde(skip_deserializing, default = "emptystring")]
+    pub daterange: String,
+    pub dateprecision: String,
     pub title: String,
     pub desc: String,
     pub icon: String,
@@ -115,13 +121,13 @@ pub struct Page {
     // If not defined, this value is to be replaced with the default theme specified in <config root>/config.json
     #[serde(default = "emptystring")]
     pub theme: String,
-    // Currently, this can be anything. For example: "2024", "????", "February 22, 2022"
-    #[serde(default = "emptystring")]
-    pub startdate: String,
-    // Currently, this can be anything. For example: "2024", "????", "February 22, 2022"
-    // Unused if startdate is undefined or empty
-    #[serde(default = "emptystring")]
-    pub enddate: String,
+    // Unused if undefined
+    pub startdate: Option<DateTime<Utc>>,
+    // Unused if undefined
+    pub enddate: Option<DateTime<Utc>>,
+    #[serde(skip_deserializing, default = "emptystring")]
+    pub daterange: String,
+    pub dateprecision: String,
     // Description to show in meta tags and Linklist entries
     #[serde(default = "emptystring")]
     pub desc: String,
@@ -200,6 +206,26 @@ pub fn loadcontent(pagemap: &HashMap<String, Page>, page: &Page, path: &str, tmp
     Ok(pagecontent)
 }
 
+pub fn datefmt(sitecfg: &SiteConfig, pagecfg: &Page) -> String {
+    let precision = pagecfg.dateprecision.clone();
+
+    if pagecfg.startdate.is_some() && pagecfg.enddate.is_some() {
+        let startdate = pagecfg.startdate.unwrap().format(sitecfg.dateformats.get(&pagecfg.dateprecision).unwrap());
+        let enddate = pagecfg.enddate.unwrap().format(sitecfg.dateformats.get(&pagecfg.dateprecision).unwrap());
+
+        // This gives the ability to have just one date listed; not in a range which is important for pages like blog posts
+        if pagecfg.startdate != pagecfg.enddate {
+            return format!("{} - {}", startdate, enddate);
+        } else {
+            return startdate.to_string()
+        }
+    } else if pagecfg.startdate.is_some() && pagecfg.enddate.is_none() {
+        return format!("{} - Present", pagecfg.startdate.unwrap().format(sitecfg.dateformats.get(&pagecfg.dateprecision).unwrap()));
+    } else {
+        return "".to_string();
+    }
+}
+
 pub fn loadpages(sitecfg: &SiteConfig) -> Result<HashMap<String, Page>, Error> {
     let mut pagemap: HashMap<String, Page> = HashMap::new();
 
@@ -224,6 +250,8 @@ pub fn loadpages(sitecfg: &SiteConfig) -> Result<HashMap<String, Page>, Error> {
             match serde_json::from_str::<Page>(pageconfigraw) {
                 Ok(pageconfig) => {
                     let mut pagecfg = pageconfig.clone();
+
+                    pagecfg.daterange = datefmt(sitecfg, &pagecfg);
 
                     pagecfg.link = format!("https://{}/{}", sitecfg.sitedomain, pagepath);
 

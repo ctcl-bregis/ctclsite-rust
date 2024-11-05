@@ -2,7 +2,7 @@
 // File: src/page/rss.rs
 // Purpose: RSS feed generator module
 // Created: October 1, 2024
-// Modified: October 9, 2024
+// Modified: November 4, 2024
 
 use std::time::SystemTime;
 
@@ -53,13 +53,19 @@ pub fn page2rss(page: &Page) -> RSS {
 
     let items: Vec<RSSItem> = Vec::new();
     
+    let pubdate = if pagecfg.startdate.is_some() {
+        pagecfg.startdate.unwrap().to_string()
+    } else {
+        "".to_string()
+    };
+
 
     let channel = RSSChannel {
         title: pagecfg.title,
         link: pagecfg.link,
         description: pagecfg.desc,
         language: "en-US".to_owned(),
-        pubdate: pagecfg.startdate,
+        pubdate,
         lastbuilddate: time,
         generator: crateversion(),
         item: items,
