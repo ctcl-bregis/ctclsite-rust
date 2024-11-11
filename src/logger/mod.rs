@@ -2,7 +2,7 @@
 // File: src/logger/mod.rs
 // Purpose: Log-related types and functions
 // Created: September 21, 2024
-// Modified: October 15, 2024
+// Modified: November 11, 2024
 
 use std::{collections::HashMap, fs::{remove_file, rename, File}, io::Error};
 use actix_web::HttpRequest;

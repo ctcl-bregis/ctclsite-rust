@@ -2,7 +2,7 @@
 // File: src/main.rs
 // Purpose: Webapp definition
 // Created: November 28, 2022
-// Modified: October 13, 2024
+// Modified: November 6, 2024
 
 use std::thread::available_parallelism;
 
@@ -62,6 +62,7 @@ async fn middleware(req: ServiceRequest, next: Next<actix_web::body::BoxBody>) -
     let sitecfg = req.app_data::<Data<SiteConfig>>().unwrap();
     let requri = req.uri().clone().to_string();
 
+    // Quick hack to add robots.txt support
     if requri == "/robots.txt" {
         return Ok(ServiceResponse::new(
             req.request().clone(),
@@ -69,6 +70,7 @@ async fn middleware(req: ServiceRequest, next: Next<actix_web::body::BoxBody>) -
         ));
     }
 
+    // Redirect if the URL does not end with a trailing slash
     // No need to check if the URI is "/robots.txt" as such is tested above
     if !requri.ends_with('/') && !requri.starts_with("/static/") {
         let url = format!("{}/", requri);
