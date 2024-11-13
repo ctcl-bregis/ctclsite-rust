@@ -2,7 +2,7 @@
 // File: src/route/mod.rs
 // Purpose: Route module
 // Created: October 11, 2024
-// Modified: November 4, 2024
+// Modified: November 12, 2024
 
 use std::collections::HashMap;
 
@@ -55,6 +55,7 @@ pub async fn routepage(req: HttpRequest, page: web::Path<String>, tmpl: web::Dat
     ctx.insert("favicon", &pagecfg.favicon);
     ctx.insert("headerids", &pagecfg.headerids);
     ctx.insert("rendered", &pagecfg.content);
+    ctx.insert("icon", &pagecfg.icon);
 
     match &sitecfg.uservars {
         Some(p) => {
